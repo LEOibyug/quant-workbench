@@ -130,7 +130,9 @@ def test_gap_discards_pending_label_and_rebuilds_window(bars):
 
 
 def test_return_head_updates_only_after_label_and_cost_gate_can_veto(bars):
-    config = TimeSeriesConfig(enabled=True, k=5, max_iter=1, cost_aware=True)
+    config = TimeSeriesConfig(
+        enabled=True, k=5, max_iter=1, cost_aware=True, decision_mode="strict"
+    )
     model = train_model(bars, config)
     offline = model.regressor.coef_.copy()
     for index in range(5):

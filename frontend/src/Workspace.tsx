@@ -139,12 +139,19 @@ export function Workspace() {
                   {selected.model.horizon || 1} 分钟预测 ·{" "}
                   {selected.model.decision_mode === "risk_scaled"
                     ? "模型调节规则风险预算"
-                    : `严格概率门槛 ${selected.model.probability_threshold}`}
+                    : selected.model.decision_mode === "adaptive"
+                      ? "自适应分位门槛 + 仓位调节"
+                      : `严格概率门槛 ${selected.model.probability_threshold}`}
                 </p>
                 <p className="muted">
                   模型与规则共同决定入场；前 2k
                   个周期收集与适应，之后持续使用已揭晓标签更新。
                 </p>
+                {selected.model.decision_mode === "adaptive" && (
+                  <p>
+                    门槛取该股最近预测概率的滚动80%分位（下限0.5），通过后按置信度与边际缩放仓位，明显看空时否决；持续录取模型相对最自信的读数，避免长期空仓。
+                  </p>
+                )}
                 {selected.model.decision_mode === "risk_scaled" && (
                   <p>
                     规则控制成本空间与风险，模型决定预算内的25%—100%仓位，明显看空时否决。弱预测不再全部阻止交易；这不代表预测期望收益已覆盖成本。

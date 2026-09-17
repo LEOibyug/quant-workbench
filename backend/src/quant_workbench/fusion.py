@@ -2,6 +2,21 @@
 
 import math
 
+import numpy as np
+
+
+def quantile_threshold(probabilities, quantile=0.8, floor=0.5, min_samples=50):
+    """Adaptive gate over recent post-warmup probabilities.
+
+    Calibrated models concentrate near 0.5; a fixed 0.55-style threshold can reject
+    ~every candidate. Rolling top-quantile admission keeps only the model's
+    relatively confident readings and still requires above-neutral evidence.
+    Returns None until enough samples exist.
+    """
+    if probabilities is None or len(probabilities) < min_samples:
+        return None
+    return max(floor, float(np.quantile(list(probabilities), quantile)))
+
 
 def risk_overlay(probability, expected_bps, cost_bps):
     """Size a cost-screened rule opportunity; weak model evidence is not a hard veto.

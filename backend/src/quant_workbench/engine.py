@@ -65,7 +65,7 @@ def simulate(
         pending_model_fraction = 1.0
         risk_scaled = (
             getattr(getattr(model_filter, "config", None), "decision_mode", "strict")
-            == "risk_scaled"
+            in ("risk_scaled", "adaptive")
         )
         target = False
         exit_pending = False

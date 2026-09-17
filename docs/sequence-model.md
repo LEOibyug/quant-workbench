@@ -27,22 +27,23 @@ GRU隐藏状态在每次完整窗口内计算，在线权重变化后重新编�
 
 离线产物不包含在线运行状态。独立checkpoint包含在线权重、AdamW状态、回放、短长历史和待成熟样本。保存时所有权重/优化器张量转到CPU，换机器加载时重建网络并选择设备。
 
-## CUDA、MPS与CPU
+## CUDA与CPU
 
 ```sh
 uv sync --locked --extra neural --python 3.12
 uv run --extra neural uvicorn quant_workbench.api:app --host 127.0.0.1 --port 8000
 ```
 
-默认 `QUANT_TORCH_DEVICE=auto`，按 CUDA → MPS → CPU 选择实际可用后端。可显式指定：
+默认 `QUANT_TORCH_DEVICE=auto`，按 CUDA → CPU 选择实际可用后端；MPS支持已放弃，面向CUDA生态开发。可显式指定：
 
 ```sh
-QUANT_TORCH_DEVICE=mps uv run --extra neural quant-workbench study ...
 QUANT_TORCH_DEVICE=cuda uv run --extra neural quant-workbench study ...
 QUANT_TORCH_DEVICE=cpu uv run --extra neural quant-workbench study ...
 ```
 
-指定不可用设备时明确报错，不悄悄切换。模型训练元数据含`training_device`，运行统计含`runtime_device`。当前Mac已实测MPS前向、反向、离线训练和在线更新；CPU有回归测试。CUDA选择逻辑已测试，用户NVIDIA服务器硬件尚未实测，需安装驱动兼容的PyTorch CUDA发行版。CPU/CUDA/MPS数值与耗时可能不同，不能保证逐位一致或GPU必然更快。
+指定不可用设备时明确报错，不悄悄切换。模型训练元数据含`training_device`，运行统计含`runtime_device`。CUDA路径启用cudnn自动调优（形状固定）与TF32矩阵精度（Ampere及以后GPU），吞吐更高但与纯FP32数值不逐位一致；`QUANT_TORCH_DEVICE=cpu`保持标量路径。CPU与CUDA数值与耗时可能不同，不能保证逐位一致。
+
+离线训练后用训练段已成熟标签对最终网络logits做温度校准（网格搜索最小化NLL，平局偏向1.0），推理概率按 `sigmoid(logit/T)` 输出；在线更新仍以未缩放logits计算损失。元数据记录`temperature`，旧检查点缺省为1.0。校准只使用开发期数据，不触碰验证/测试段。
 
 PyTorch为可选依赖；基础安装仍能运行旧模型。GRU实验或产物缺少PyTorch时会给出安装提示。普通`uv sync`可能移除未选择的neural extra，因此后续同步与`uv run`都应保留`--extra neural`。模型产物记录PyTorch核心版本，跨设备可加载，同核心版本不同CUDA后缀允许；版本变化需重新训练或匹配原版本。
 

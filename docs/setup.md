@@ -49,7 +49,7 @@ uv run quant-workbench doctor
 
 ## 可选PyTorch与设备自适应
 
-GRU安装和启动必须带neural extra：`uv sync --locked --extra neural`、`uv run --extra neural uvicorn quant_workbench.api:app --host 127.0.0.1 --port 8000`。默认CUDA→MPS→CPU，`QUANT_TORCH_DEVICE`可手动指定auto/cuda/mps/cpu，模型跨设备保存为CPU权重。详见[序列网络](sequence-model.md)。
+GRU安装和启动必须带neural extra：`uv sync --locked --extra neural`、`uv run --extra neural uvicorn quant_workbench.api:app --host 127.0.0.1 --port 8000`。默认CUDA→CPU（MPS支持已放弃，面向CUDA生态开发），`QUANT_TORCH_DEVICE`可手动指定auto/cuda/cpu，模型跨设备保存为CPU权重。详见[序列网络](sequence-model.md)。
 
 ### NVIDIA服务器
 
@@ -72,7 +72,7 @@ uv pip install --python .venv-gpu/bin/python --no-deps -e .
 .venv-gpu/bin/python -c "import torch; print(torch.__version__, torch.version.cuda, torch.cuda.is_available())"
 ```
 
-只有`torch.cuda.is_available()`为真且小型训练基准通过后才能声明GPU可用。确认后把精确版本、CUDA index及驱动要求记录为服务器配置；项目已实现PyTorch双尺度GRU计算路径，支持CUDA/MPS/CPU自适应；基础依赖仍不要求GPU。GPU环境可通过`uv pip freeze --python .venv-gpu/bin/python`留存版本，但还需保存安装index和硬件环境，不能仅靠freeze声称完全可复现。
+只有`torch.cuda.is_available()`为真且小型训练基准通过后才能声明GPU可用。确认后把精确版本、CUDA index及驱动要求记录为服务器配置；项目已实现PyTorch双尺度GRU计算路径，CUDA→CPU自适应（MPS已放弃），CUDA下启用cudnn调优与TF32；基础依赖仍不要求GPU。GPU环境可通过`uv pip freeze --python .venv-gpu/bin/python`留存版本，但还需保存安装index和硬件环境，不能仅靠freeze声称完全可复现。
 
 ## 验证与Git管理
 

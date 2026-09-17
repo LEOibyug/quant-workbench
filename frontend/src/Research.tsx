@@ -737,7 +737,10 @@ export function Research() {
                 </label>
                 <label>
                   联合决策方式
-                  <select name="decision_mode" defaultValue="strict">
+                  <select name="decision_mode" defaultValue="adaptive">
+                    <option value="adaptive">
+                      规则 + 自适应分位门槛 + 仓位调节（默认）
+                    </option>
                     <option value="risk_scaled">
                       规则 + 模型仓位调节（需增强规则）
                     </option>

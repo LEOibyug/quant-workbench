@@ -59,9 +59,10 @@ def main() -> None:
             "architecture": platform.machine(),
             "data_directory": str(data_dir),
             "disk_free_gib": round(shutil.disk_usage(existing).free / 2**30, 2),
-            "default_compute": "rules/legacy: cpu; GRU: auto cuda > mps > cpu",
+            "default_compute": "rules/legacy: cpu; GRU: auto cuda > cpu (MPS dropped)",
             "nvidia_smi_on_path": shutil.which("nvidia-smi") is not None,
-            "gpu_note": "GRU requires neural extra; QUANT_TORCH_DEVICE=auto/cuda/mps/cpu. "
+            "gpu_note": "GRU requires neural extra; QUANT_TORCH_DEVICE=auto/cuda/cpu. "
+            "CUDA path enables cudnn autotuning and TF32 matmul. "
             "Executable presence alone does not establish CUDA availability.",
         }
     else:

@@ -15,7 +15,7 @@ from sklearn.neural_network import MLPClassifier, MLPRegressor
 from sklearn.preprocessing import StandardScaler
 from threadpoolctl import threadpool_limits
 
-from quant_workbench.fusion import risk_overlay
+from quant_workbench.fusion import quantile_threshold, risk_overlay
 from quant_workbench.market_data import normalize_bars
 
 MODEL_VERSION = "online-v3-multiscale-feedback"
@@ -38,8 +38,8 @@ class TimeSeriesConfig(BaseModel):
     k: int = Field(default=30, ge=5, le=120)
     horizon: Literal[1, 5, 15] = 1
     architecture: Literal["linear", "rbf", "mlp", "gru"] = "linear"
-    decision_mode: Literal["strict", "risk_scaled"] = "strict"
-    return_normalization: bool = False
+    decision_mode: Literal["strict", "risk_scaled", "adaptive"] = "adaptive"
+    return_normalization: bool = True
     neural_learning_rate: float = Field(default=0.0003, ge=0.000001, le=0.01)
     neural_online_learning_rate: float = Field(default=0.00003, ge=0.000001, le=0.001)
     online_batch_size: int = Field(default=16, ge=1, le=64)
@@ -358,6 +358,7 @@ class TimeSeriesModel:
                     "last_time": None,
                     "count": 0,
                     "pending": deque(),
+                    "probability_history": deque(maxlen=2000),
                     "feedback": np.zeros((1, 6)),
                     "stats": _new_stats(),
                 }
@@ -455,10 +456,22 @@ class TimeSeriesModel:
             warmup = state["count"] <= 2 * self.config.k or probability is None
             if warmup:
                 count("warmup_bars")
-            allow = not warmup and probability >= self.config.probability_threshold
             estimated_cost = context.get("round_trip_cost_bps")
+            allow = not warmup and probability >= self.config.probability_threshold
             risk_fraction = 1.0
-            if self.config.decision_mode == "risk_scaled" and not warmup:
+            adaptive_gate = None
+            gate_blocked = False
+            if self.config.decision_mode == "adaptive" and not warmup:
+                adaptive_gate = quantile_threshold(state["probability_history"])
+                allow = probability >= (0.5 if adaptive_gate is None else adaptive_gate)
+                if allow:
+                    allow, risk_fraction = risk_overlay(
+                        probability, expected_return_bps, estimated_cost
+                    )
+                else:
+                    gate_blocked = True
+                    risk_fraction = 0.0
+            elif self.config.decision_mode == "risk_scaled" and not warmup:
                 allow, risk_fraction = risk_overlay(
                     probability, expected_return_bps, estimated_cost
                 )
@@ -479,6 +492,9 @@ class TimeSeriesModel:
                 if allow and cost_veto:
                     count("cost_vetoes")
                 allow = allow and not cost_veto
+            if not warmup:
+                # 决策后追加：当前分位门槛只由更早的已成熟预测构成，不含当根bar。
+                state["probability_history"].append(probability)
             if not allow:
                 count("vetoes")
             reason = (
@@ -490,11 +506,15 @@ class TimeSeriesModel:
                     else ("时序概率达到门槛" if allow else "时序概率低于门槛")
                 )
             )
-            if self.config.decision_mode == "risk_scaled" and not warmup:
+            if self.config.decision_mode in ("risk_scaled", "adaptive") and not warmup:
                 reason = (
                     "规则机会通过，模型按置信度缩放仓位"
                     if allow
-                    else "模型明显看空或输入无效，否决入场"
+                    else (
+                        "时序概率低于自适应分位门槛"
+                        if gate_blocked
+                        else "模型明显看空或输入无效，否决入场"
+                    )
                 )
             return self._record(
                 symbol,
@@ -505,6 +525,7 @@ class TimeSeriesModel:
                 expected_return_bps=None if warmup else expected_return_bps,
                 round_trip_cost_bps=estimated_cost,
                 required_edge_bps=required_edge,
+                adaptive_threshold=adaptive_gate,
                 observed_count=state["count"],
                 warmup=warmup,
                 updated=updated,

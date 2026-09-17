@@ -69,12 +69,9 @@ def test_device_selection_and_causal_network_masks_padding(monkeypatch):
 
     monkeypatch.setenv("QUANT_TORCH_DEVICE", "auto")
     monkeypatch.setattr(torch.cuda, "is_available", lambda: True)
-    monkeypatch.setattr(torch.backends.mps, "is_available", lambda: True)
     assert select_device() == "cuda"
     monkeypatch.setattr(torch.cuda, "is_available", lambda: False)
-    assert select_device() == "mps"
-    monkeypatch.setattr(torch.backends.mps, "is_available", lambda: False)
-    assert select_device() == "cpu"
+    assert select_device() == "cpu"  # MPS support dropped; CUDA ecosystem only.
     monkeypatch.setenv("QUANT_TORCH_DEVICE", "cuda")
     with pytest.raises(ValueError, match="不可用"):
         select_device()

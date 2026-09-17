@@ -27,16 +27,32 @@ MAX_SEQUENCE_SAMPLES = 50000
 
 def select_device():
     requested = os.environ.get("QUANT_TORCH_DEVICE", "auto").lower()
-    available = {
-        "cpu": True,
-        "cuda": torch.cuda.is_available(),
-        "mps": torch.backends.mps.is_available(),
-    }
+    available = {"cpu": True, "cuda": torch.cuda.is_available()}
     if requested == "auto":
-        return next(name for name in ("cuda", "mps", "cpu") if available[name])
+        return next(name for name in ("cuda", "cpu") if available[name])
     if requested not in available or not available[requested]:
-        raise ValueError(f"设备 {requested} 不可用；可指定 auto/cpu/cuda/mps")
+        raise ValueError(f"设备 {requested} 不可用；已放弃MPS，面向CUDA，可指定 auto/cuda/cpu")
     return requested
+
+
+def _best_temperature(labels, logits):
+    """Grid-search the sigmoid temperature minimizing NLL; fitted on training-period labels only.
+
+    Ties resolve towards 1.0 (no rescaling), so signal-free logits keep the identity.
+    """
+    labels = np.asarray(labels, dtype=np.float64)
+    z = np.asarray(logits, dtype=np.float64)
+
+    def nll(temperature):
+        p = np.clip(1.0 / (1.0 + np.exp(-z / temperature)), 1e-12, 1 - 1e-12)
+        return float(-(labels * np.log(p) + (1 - labels) * np.log1p(-p)).mean())
+
+    best_temperature, best_nll = 1.0, nll(1.0)
+    for temperature in np.geomspace(0.05, 4.0, 80):
+        score = nll(temperature)
+        if score < best_nll:
+            best_temperature, best_nll = float(temperature), score
+    return best_temperature
 
 
 class SequenceNetwork(nn.Module):
@@ -92,12 +108,22 @@ class SequenceEstimator:
         self.return_scale = float(return_scale)
         self.device = select_device()
         torch.set_num_threads(1)
+        if self.device == "cuda":
+            # 形状固定（batch=1在线/128离线），cudnn自动调优与TF32矩阵精度面向CUDA加速。
+            torch.backends.cudnn.benchmark = True
+            torch.set_float32_matmul_precision("high")
+        self.temperature = 1.0
         with torch.random.fork_rng(devices=[]):
             torch.manual_seed(17)
             self.network = SequenceNetwork()
         if weights is not None:
             self.network.load_state_dict(weights)
         self.network.to(self.device)
+        # 在线每根bar都要缩放特征；绕开StandardScaler.transform的输入校验开销，
+        # 用等价的numpy广播运算（与sklearn逐位一致，见测试）。
+        self._scale_params = {
+            key: (scaler.mean_, scaler.scale_) for key, scaler in scalers.items()
+        }
         self.optimizer = torch.optim.AdamW(
             self.network.parameters(), lr=config.neural_online_learning_rate, weight_decay=0.01
         )
@@ -113,6 +139,7 @@ class SequenceEstimator:
             optimizer=cpu_tree(self.optimizer.state_dict()),
             replay=copy.deepcopy(self.replay),
             matured=self.matured,
+            temperature=self.temperature,
         )
 
     def __setstate__(self, state):
@@ -121,19 +148,26 @@ class SequenceEstimator:
         )
         self.optimizer.load_state_dict(state["optimizer"])
         self.replay, self.matured = state["replay"], state["matured"]
+        self.temperature = float(state.get("temperature", 1.0))
 
     def prepare(self, batch):
         result = {}
         for key in ("short", "long"):
-            shape = batch[key].shape
-            scaled = self.scalers[key].transform(batch[key].reshape(-1, 7)).reshape(shape)
-            scaled = np.clip(scaled, -8, 8).astype(np.float32)
+            raw = batch[key]
+            mean, scale = self._scale_params[key]
+            scaled = (raw - mean.astype(raw.dtype)) / scale.astype(raw.dtype)
+            scaled = np.clip(scaled, -8, 8)
+            if scaled.dtype != np.float32:
+                scaled = scaled.astype(np.float32)
             if key == "long":
-                mask = np.arange(shape[1])[None, :] >= batch["length"][:, None]
+                mask = np.arange(raw.shape[1])[None, :] >= batch["length"][:, None]
                 scaled[mask] = 0
             result[key] = torch.from_numpy(scaled).to(self.device)
         context = batch["context"].copy()
-        context[:, :6] = np.clip(self.scalers["context"].transform(context[:, :6]), -8, 8)
+        mean, scale = self._scale_params["context"]
+        context[:, :6] = np.clip(
+            (context[:, :6] - mean.astype(context.dtype)) / scale.astype(context.dtype), -8, 8
+        )
         result["context"] = torch.from_numpy(context.astype(np.float32)).to(self.device)
         result["length"] = torch.from_numpy(batch["length"]).to(self.device)
         return result
@@ -142,10 +176,27 @@ class SequenceEstimator:
         self.network.eval()
         with torch.no_grad():
             logits, returns = self.network(**self.prepare(batch))
-            return torch.sigmoid(logits).cpu().numpy(), returns.cpu().numpy() * self.return_scale
+            # 温度校准只在推理端生效；在线训练仍以未缩放logits计算损失。
+            return (
+                torch.sigmoid(logits / self.temperature).cpu().numpy(),
+                returns.cpu().numpy() * self.return_scale,
+            )
+
+    def eval_logits(self, batch):
+        self.network.eval()
+        with torch.no_grad():
+            logits, _ = self.network(**self.prepare(batch))
+        return logits.cpu().numpy()
 
     def predict(self, features):
-        probability, returns = self.predict_batch(stack_samples([features]))
+        # 单样本快路径：视图加一维，避免stack_samples逐键np.stack复制。
+        batch = {
+            "short": features["short"][None],
+            "long": features["long"][None],
+            "length": features["length"][None],
+            "context": features["context"][None],
+        }
+        probability, returns = self.predict_batch(batch)
         return float(probability[0]), float(returns[0])
 
     def fit_batch(self, batch, labels, returns, optimizer):
@@ -168,7 +219,17 @@ class SequenceEstimator:
         optimizer.step()
 
     def update(self, features, label, returns):
-        self.replay.append((copy.deepcopy(features), label, returns))
+        # 快照各数组替代deepcopy；样本入队后不再被就地修改，内容与deepcopy一致。
+        self.replay.append(
+            (
+                {
+                    key: (value.copy() if isinstance(value, np.ndarray) else copy.deepcopy(value))
+                    for key, value in features.items()
+                },
+                label,
+                returns,
+            )
+        )
         self.matured += 1
         if self.matured % self.config.online_batch_size:
             return False
@@ -346,10 +407,21 @@ def train_sequence_model(frame, config, progress=None):
         queue.append(i)
         last_segment[row.symbol] = row.segment
     fit(feedback_ids, "GRU 反馈阶段训练")
+    if progress:
+        progress("开发期温度校准", 0, None, "")
+    # 校准只用训练段已成熟标签：对最终网络的logits网格搜索温度，推理时概率更贴合经验频率。
+    calibration_logits = np.zeros(len(info))
+    for start in range(0, len(feedback_ids), 256):
+        ids = feedback_ids[start : start + 256]
+        calibration_logits[ids] = estimator.eval_logits({k: v[ids] for k, v in values.items()})
+    estimator.temperature = _best_temperature(
+        labels[feedback_ids], calibration_logits[feedback_ids]
+    )
     metadata = dict(
         model_version=SEQUENCE_VERSION
         + ("-scaled-return-v2" if config.return_normalization else ""),
         return_scale_bps=return_scale,
+        temperature=estimator.temperature,
         sklearn_version=sklearn_version,
         torch_version=torch.__version__.split("+")[0],
         training_device=estimator.device,
