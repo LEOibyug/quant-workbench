@@ -36,7 +36,11 @@ class TimeSeriesConfig(BaseModel):
     enabled: bool = False
     k: int = Field(default=30, ge=5, le=120)
     horizon: Literal[1, 5, 15] = 1
-    architecture: Literal["linear", "rbf", "mlp"] = "linear"
+    architecture: Literal["linear", "rbf", "mlp", "gru"] = "linear"
+    neural_learning_rate: float = Field(default=0.0003, ge=0.000001, le=0.01)
+    neural_online_learning_rate: float = Field(default=0.00003, ge=0.000001, le=0.001)
+    online_batch_size: int = Field(default=16, ge=1, le=64)
+    replay_size: int = Field(default=512, ge=64, le=2048)
     rbf_components: int = Field(default=64, ge=16, le=256)
     probability_threshold: float = Field(default=0.55, ge=0.5, le=0.95)
     min_training_samples: int = Field(default=200, ge=50, le=10_000)
@@ -275,6 +279,37 @@ class TimeSeriesModel:
             return scaled
         return np.concatenate([scaled, self.mapper.transform(scaled)], axis=1)
 
+    def _observe_features(self, state, bar, ts, symbol):
+        pass
+
+    def _build_features(self, state, memory):
+        raw = _window_features(list(state["bars"]), self.config.k)
+        if self.config.architecture != "linear":
+            raw = np.concatenate([raw, memory.features()], axis=1)
+        features = self._transform(raw)
+        if self.config.architecture == "mlp":
+            features = np.concatenate([features, state["feedback"]], axis=1)
+        return features
+
+    def _predict_heads(self, state, features):
+        with threadpool_limits(limits=1):
+            probability = float(state["estimator"].predict_proba(features)[0, 1])
+            expected = (
+                float(state["regressor"].predict(features)[0] * 100)
+                if state["regressor"] is not None
+                else None
+            )
+        return probability, expected
+
+    def _update_heads(self, state, features, label, actual_return_bps):
+        with threadpool_limits(limits=1):
+            state["estimator"].partial_fit(features, [label])
+            if state["regressor"] is not None:
+                state["regressor"].partial_fit(
+                    features, [np.clip(actual_return_bps / 100, -10, 10)]
+                )
+        return True
+
     def _record(self, symbol, timestamp, allow, probability, reason, **extra):
         result = {"allow_entry": bool(allow), "probability": probability, "reason": reason, **extra}
         self.audit.append({"symbol": symbol, "timestamp": str(timestamp), **result})
@@ -384,13 +419,9 @@ class TimeSeriesModel:
                 state["feedback"] = feedback_features(
                     probability, pending.get("expected_return_bps") or 0, label, actual_return_bps
                 )
-                if self.config.adapt:
-                    with threadpool_limits(limits=1):
-                        state["estimator"].partial_fit(pending["features"], [label])
-                        if state["regressor"] is not None:
-                            state["regressor"].partial_fit(
-                                pending["features"], [np.clip(actual_return_bps / 100, -10, 10)]
-                            )
+                if self.config.adapt and self._update_heads(
+                    state, pending["features"], label, actual_return_bps
+                ):
                     count("updates")
                     updated = True
             state["last_time"] = ts
@@ -398,21 +429,14 @@ class TimeSeriesModel:
             state["bars"].append(bar)
             memory = self._history.setdefault(symbol, HistoricalContext())
             memory.observe(bar, ts)
+            self._observe_features(state, bar, ts, symbol)
             probability = None
             expected_return_bps = None
             if len(state["bars"]) >= self.config.k:
-                raw = _window_features(list(state["bars"]), self.config.k)
-                if self.config.architecture != "linear":
-                    raw = np.concatenate([raw, memory.features()], axis=1)
-                features = self._transform(raw)
-                if self.config.architecture == "mlp":
-                    features = np.concatenate([features, state["feedback"]], axis=1)
-                with threadpool_limits(limits=1):
-                    probability = float(state["estimator"].predict_proba(features)[0, 1])
-                    if state["regressor"] is not None:
-                        expected_return_bps = float(state["regressor"].predict(features)[0] * 100)
-                        if not math.isfinite(expected_return_bps):
-                            raise ValueError("invalid model return")
+                features = self._build_features(state, memory)
+                probability, expected_return_bps = self._predict_heads(state, features)
+                if expected_return_bps is not None and not math.isfinite(expected_return_bps):
+                    raise ValueError("invalid model return")
                 if not math.isfinite(probability):
                     raise ValueError("invalid model probability")
                 state["pending"].append(
@@ -507,6 +531,12 @@ def _fit_heads(estimator, regressor, values, labels, targets, iterations):
 
 
 def train_model(frame, config):
+    if config.architecture == "gru":
+        try:
+            from quant_workbench.sequence_model import train_sequence_model
+        except ImportError as exc:
+            raise ValueError("GRU需要PyTorch，请运行 uv sync --extra neural") from exc
+        return train_sequence_model(frame, config)
     features, labels, info = _training_samples(frame, config)
     eligible = len(features)
     if eligible < config.min_training_samples:

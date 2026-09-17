@@ -7,8 +7,8 @@
 Python 3.12，Node.js 22.12+ 或 24。macOS / Linux 原生运行，无容器。
 
 ```sh
-uv sync --locked --python 3.12
-uv run uvicorn quant_workbench.api:app --host 127.0.0.1 --port 8000
+uv sync --locked --extra neural --python 3.12
+uv run --extra neural uvicorn quant_workbench.api:app --host 127.0.0.1 --port 8000
 ```
 
 另一个终端：
@@ -45,7 +45,7 @@ npm run dev
 
 首版用于分钟级研究，不是交易所级高频逐笔撮合，也没有实盘下单。常规时段、只做多、无杠杆、等额独立资金、禁止隔夜；缺失分钟会明确拒绝回测，尾盘无法在参与率内清仓则该次结果无效。基准是每日开盘买入、收盘卖出的无成本日内持有，跨日复利，不将拆股价格跳变计入隔夜收益。
 
-上涨概率不等于扣费盈利概率；线性模型为基线，非线性模型仍需以独立区间检验真实市场优势。其运行使用CPU，Linux NVIDIA机器可运行但当前不会调用GPU。主流供应商已接入两家，其他供应商通过同一适配器接口扩展。
+上涨概率不等于扣费盈利概率；线性模型为基线，非线性模型仍需以独立区间检验真实市场优势。线性/RBF/MLP使用CPU；双尺度GRU使用PyTorch，默认CUDA→MPS→CPU自动选择。主流供应商已接入两家，其他供应商通过同一适配器接口扩展。
 
 文档：[环境与Linux兼容性](docs/setup.md)、[API与数据格式](docs/data-api.md)、[在线学习协议](docs/timeseries.md)、[存储估算](docs/storage-estimate.md)。原课件只保留本机，不上传GitHub。
 
@@ -69,3 +69,5 @@ uv run quant-workbench study --dataset 数据集ID \
 增强研究添加 `--suite enhanced`，固定比较11个候选并保留旧规则对照。规则与新测试协议见[增强策略](docs/refined-strategies.md)。
 
 本轮真实数据结果见[增强规则与反馈模型评估](docs/research-results/2026-09-18-feedback-model.md)：新模型尚未优于简单基线，未自动发布。
+
+序列网络升级：因果卷积＋双尺度GRU＋注意力，结合成熟误差反馈和小批次回放；新增趋势回调与状态组合规则。使用 `--suite sequence` 进行分段稳定性验证，见[网络、设备与研究协议](docs/sequence-model.md)。

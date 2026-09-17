@@ -71,6 +71,21 @@ def run_study(
     progress=print,
     suite="legacy",
 ):
+    if suite == "sequence":
+        from quant_workbench.sequence_study import run_sequence_study
+
+        return run_sequence_study(
+            repo,
+            dataset_id,
+            start,
+            train_end,
+            validation_end,
+            end,
+            symbols,
+            output,
+            include_test,
+            progress,
+        )
     dataset = repo.get("datasets", dataset_id)
     symbols = symbols or dataset["symbols"]
     frame = repo.load_dataset(dataset_id)

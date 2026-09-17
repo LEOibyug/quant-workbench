@@ -27,7 +27,7 @@ def main() -> None:
     study.add_argument("--symbols", nargs="+")
     study.add_argument("--output")
     study.add_argument("--include-test", action="store_true")
-    study.add_argument("--suite", choices=["legacy", "enhanced"], default="legacy")
+    study.add_argument("--suite", choices=["legacy", "enhanced", "sequence"], default="legacy")
     args = parser.parse_args()
     if args.command == "study":
         from quant_workbench.repository import Repository
@@ -59,9 +59,10 @@ def main() -> None:
             "architecture": platform.machine(),
             "data_directory": str(data_dir),
             "disk_free_gib": round(shutil.disk_usage(existing).free / 2**30, 2),
-            "default_compute": "cpu",
+            "default_compute": "rules/legacy: cpu; GRU: auto cuda > mps > cpu",
             "nvidia_smi_on_path": shutil.which("nvidia-smi") is not None,
-            "gpu_note": "Executable presence does not establish CUDA availability or acceleration.",
+            "gpu_note": "GRU requires neural extra; QUANT_TORCH_DEVICE=auto/cuda/mps/cpu. "
+            "Executable presence alone does not establish CUDA availability.",
         }
     else:
         try:

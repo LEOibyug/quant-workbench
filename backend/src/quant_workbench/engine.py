@@ -11,7 +11,7 @@ from quant_workbench.market_data import require_complete, schedule
 from quant_workbench.models import StrategyConfig
 from quant_workbench.strategies import REFINED_STRATEGIES, IntradayRules
 
-ENGINE_VERSION = "minute-v4-refined-risk"
+ENGINE_VERSION = "minute-v5-regime-sequence"
 
 
 def simulate(

@@ -2,12 +2,24 @@
 
 import os
 import re
+import time
 
 import httpx
 import pandas as pd
 
 from quant_workbench.market_data import MAX_ROWS, session_minutes
 from quant_workbench.models import AlpacaInput
+
+
+def _get(client, url, **kwargs):
+    # Retry only transient transport failures, never authentication/permission responses.
+    for attempt in range(3):
+        try:
+            return client.get(url, **kwargs)
+        except httpx.TransportError:
+            if attempt == 2:
+                raise
+            time.sleep(0.25 * 2**attempt)
 
 
 def fetch_alpaca(request: AlpacaInput) -> pd.DataFrame:
@@ -36,7 +48,8 @@ def fetch_alpaca(request: AlpacaInput) -> pd.DataFrame:
     with httpx.Client(timeout=30, follow_redirects=False) as client:
         for _ in range(500):
             try:
-                response = client.get(
+                response = _get(
+                    client,
                     "https://data.alpaca.markets/v2/stocks/bars",
                     params=params,
                     headers={"APCA-API-KEY-ID": key, "APCA-API-SECRET-KEY": secret},
@@ -106,8 +119,8 @@ def fetch_massive(request: AlpacaInput) -> pd.DataFrame:
                     raise ValueError("供应商分页URL重复，未保存不完整数据")
                 visited.add(url)
                 try:
-                    response = client.get(
-                        url, params=params, headers={"Authorization": f"Bearer {key}"}
+                    response = _get(
+                        client, url, params=params, headers={"Authorization": f"Bearer {key}"}
                     )
                     response.raise_for_status()
                     payload = response.json()

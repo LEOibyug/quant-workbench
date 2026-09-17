@@ -153,10 +153,21 @@ class Repository:
         joblib.dump(model, temporary, compress=3)
         digest = hashlib.sha256(temporary.read_bytes()).hexdigest()
         temporary.replace(path)
-        return {"sha256": digest, "sklearn_version": sklearn_version}
+        artifact = {"sha256": digest, "sklearn_version": sklearn_version}
+        metadata = getattr(model, "metadata", {})
+        if metadata.get("torch_version"):
+            artifact["torch_version"] = metadata["torch_version"]
+        return artifact
 
     def load_model(self, identifier: str, artifact: dict):
         path = self.path("models", identifier, ".joblib")
+        if artifact.get("torch_version"):
+            try:
+                import torch
+            except ImportError as exc:
+                raise ValueError("此模型需要PyTorch，请运行 uv sync --extra neural") from exc
+            if torch.__version__.split("+")[0] != artifact["torch_version"]:
+                raise ValueError("PyTorch版本变化，请重新训练或使用模型对应版本")
         if artifact["sklearn_version"] != sklearn_version:
             raise ValueError("模型依赖版本变化，请用当前版本重新创建实验")
         if hashlib.sha256(path.read_bytes()).hexdigest() != artifact["sha256"]:

@@ -41,6 +41,10 @@ def publish(repo: Repository, experiment_id: str) -> dict:
                     "k",
                     "horizon",
                     "architecture",
+                    "neural_learning_rate",
+                    "neural_online_learning_rate",
+                    "online_batch_size",
+                    "replay_size",
                     "rbf_components",
                     "probability_threshold",
                     "online_learning_rate",
@@ -62,6 +66,9 @@ def publish(repo: Repository, experiment_id: str) -> dict:
                 if key
                 in {
                     "model_version",
+                    "torch_version",
+                    "architecture",
+                    "parameter_count",
                     "feature_names",
                     "sklearn_version",
                     "class_balance",

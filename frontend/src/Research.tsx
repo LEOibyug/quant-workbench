@@ -98,6 +98,8 @@ export function Research() {
               k: n("k"),
               horizon: n("horizon"),
               architecture: f.get("architecture"),
+              neural_online_learning_rate: n("neural_lr"),
+              online_batch_size: n("online_batch"),
               probability_threshold: n("threshold"),
               online_learning_rate: n("learning_rate"),
               cost_aware: f.get("cost_aware") === "on",
@@ -285,7 +287,7 @@ export function Research() {
               </label>
               <label>
                 策略
-                <select name="strategy" defaultValue="trend_breakout">
+                <select name="strategy" defaultValue="regime_adaptive">
                   {Object.entries(strategyNames).map(([k, v]) => (
                     <option key={k} value={k}>
                       {v}
@@ -391,7 +393,7 @@ export function Research() {
               </label>
             </div>
             <details open>
-              <summary>增强策略风控（趋势过滤突破 / 止跌确认回归）</summary>
+              <summary>增强策略风控（含趋势回调 / 状态组合）</summary>
               <p className="muted">参考过去20个交易日的波动背景，使用已结束分钟确认信号。每天最多4次入场，日亏损1%后停止入场；风险预算不保证限制跳空损失。</p>
               <div className="form-grid">
                 <label>最长持仓 分钟<input name="max_hold" type="number" min={5} max={120} defaultValue={30} /></label>
@@ -479,13 +481,14 @@ export function Research() {
             <p>
               模型综合过去 k 根分钟线与约1/5/20交易日的历史背景，输出指定跨度的上涨概率与收益。首 k
               根积累窗口，k—2k 为适应期，前 2k
-              根不参与交易；标签在预测跨度到期后才用于更新。MLP同时接收最近已成熟预测、真实值和误差。
+              根不参与交易；标签在预测跨度到期后才用于更新。GRU/MLP同时接收最近已成熟预测、真实值和误差。
             </p>
             {enabled && (
               <div className="form-grid">
                 <label>
                   模型结构
-                  <select name="architecture" defaultValue="mlp">
+                  <select name="architecture" defaultValue="gru">
+                    <option value="gru">因果卷积 + 双尺度 GRU + 注意力</option>
                     <option value="mlp">双头 MLP · 64→32 · 误差反馈</option>
                     <option value="rbf">RBF非线性 + 在线双头</option>
                     <option value="linear">线性双头基线</option>
@@ -545,7 +548,15 @@ export function Research() {
                   />
                 </label>
                 <label>
-                  在线学习率
+                  序列网络在线学习率
+                  <input name="neural_lr" type="number" min={0.000001} max={0.001} step={0.000001} defaultValue={0.00003} />
+                </label>
+                <label>
+                  序列网络更新间隔（成熟样本）
+                  <input name="online_batch" type="number" min={1} max={64} defaultValue={16} />
+                </label>
+                <label>
+                  线性/MLP在线学习率
                   <input
                     name="learning_rate"
                     type="number"
@@ -558,7 +569,7 @@ export function Research() {
               </div>
             )}
             <p className="muted">
-              MLP采用两个64→32隐藏层网络，分别输出概率与收益；线性/RBF版本使用逻辑分类与Huber回归。每股独立更新；跨日保留模型权重和历史背景，重建短窗口与误差反馈，不生成隔夜标签。上涨概率不等同于净盈利概率。成本过滤要求：预测收益
+              GRU直接编码分钟与已完成5分钟序列，保留长历史与误差反馈，使用近期成熟样本回放；默认设备自动选择 CUDA → MPS → CPU，元数据与运行结果记录实际设备。MLP采用两个64→32隐藏层网络，分别输出概率与收益；线性/RBF版本使用逻辑分类与Huber回归。每股独立更新；跨日保留模型权重和历史背景，重建短窗口与误差反馈，不生成隔夜标签。上涨概率不等同于净盈利概率。成本过滤要求：预测收益
               bps 大于估计往返成本 × 安全倍数 + 最低额外优势。
             </p>
             <button className="primary" disabled={busy || !symbols.length}>

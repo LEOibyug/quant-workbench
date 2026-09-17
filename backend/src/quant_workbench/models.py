@@ -7,7 +7,14 @@ from pydantic import BaseModel, ConfigDict, Field, model_validator
 class StrategyConfig(BaseModel):
     model_config = ConfigDict(frozen=True, extra="forbid", allow_inf_nan=False)
     strategy: Literal[
-        "sma", "opening_breakout", "vwap_reversion", "adaptive", "trend_breakout", "range_reversion"
+        "sma",
+        "opening_breakout",
+        "vwap_reversion",
+        "adaptive",
+        "trend_breakout",
+        "range_reversion",
+        "trend_pullback",
+        "regime_adaptive",
     ] = "adaptive"
     fast: int = Field(default=5, ge=2, le=60)
     slow: int = Field(default=20, ge=3, le=120)
@@ -15,6 +22,8 @@ class StrategyConfig(BaseModel):
     opening_minutes: int = Field(default=15, ge=5, le=60)
     reversion_bps: float = Field(default=30, gt=0, le=500)
     stop_loss_bps: float = Field(default=100, gt=0, le=2000)
+    regime_window: int = Field(default=60, ge=30, le=120)
+    min_reward_risk: float = Field(default=1.2, ge=0.5, le=5)
     atr_window: int = Field(default=14, ge=5, le=60)
     stop_atr: float = Field(default=2, ge=0.5, le=5)
     take_atr: float = Field(default=3, ge=1, le=10)

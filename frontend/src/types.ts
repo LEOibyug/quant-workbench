@@ -5,6 +5,8 @@ export const phaseNames = {
   test: "最终测试",
 };
 export const strategyNames: Record<string, string> = {
+  trend_pullback: "趋势回调再入场",
+  regime_adaptive: "趋势/震荡状态组合",
   trend_breakout: "趋势过滤突破 · ATR风控",
   range_reversion: "止跌确认回归 · ATR风控",
   adaptive: "按开发期特征匹配",

@@ -84,3 +84,29 @@ def test_provider_errors_are_sanitized(monkeypatch):
     with pytest.raises(ValueError, match="调用频率") as exc:
         providers.fetch_provider(request("massive"))
     assert "never-display-this" not in str(exc.value)
+
+
+def test_transient_transport_retries_same_page_without_duplicate_bars(monkeypatch):
+    monkeypatch.setenv("APCA_API_KEY_ID", "test-id")
+    monkeypatch.setenv("APCA_API_SECRET_KEY", "test-secret")
+    monkeypatch.setattr(providers.time, "sleep", lambda _: None)
+    calls = []
+
+    def handler(req):
+        calls.append(req.url)
+        if len(calls) < 3:
+            raise httpx.ConnectError("transient TLS failure", request=req)
+        return httpx.Response(
+            200,
+            json={
+                "bars": {
+                    "AAPL": [
+                        {"t": "2024-01-03T14:30Z", "o": 100, "h": 101, "l": 99, "c": 100, "v": 50}
+                    ]
+                }
+            },
+        )
+
+    mock_client(monkeypatch, handler)
+    frame = providers.fetch_provider(request("alpaca"))
+    assert len(calls) == 3 and len(set(calls)) == 1 and len(frame) == 1

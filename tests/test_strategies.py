@@ -102,3 +102,24 @@ def test_engine_refined_entry_next_bar_risk_sizing_and_partial_exit_latch():
     assert sum(t["quantity"] for t in sells) == trades[0]["quantity"]
     assert all(t["reason"] == "atr_stop" for t in sells)
     assert result["positions"][0]["position"] == 0
+
+
+def test_regime_pullback_recovery_and_falling_market_rejection():
+    import numpy as np
+
+    config = StrategyConfig(strategy="trend_pullback", fast=8, slow=21)
+    rules = IntradayRules(config, "trend_pullback")
+    prices = np.r_[np.linspace(100, 101.15, 57), 101.08, 101.02, 100.98, 101.13]
+    observations = [bar(i, price) for i, price in enumerate(prices)]
+    signal, target, mode = rules.regime_signal(observations, prices, 0.2, 100.8)
+    assert signal and mode == "trend" and np.isclose(target, 0.6)
+    falling = np.r_[np.linspace(101, 99, 60), 99.15]
+    observations = [bar(i, price) for i, price in enumerate(falling)]
+    rules.strategy = "regime_adaptive"
+    assert rules.regime_signal(observations, falling, 0.2, 100)[0] is False
+    # Exit mode is captured by the fill, not changed by later regime classification.
+    rules.pending_mode = "range"
+    rules.pending_distance, rules.pending_take = 1, 3
+    rules.filled("buy", 100, 10)
+    rules.pending_mode = "trend"
+    assert rules.entry_mode == "range"

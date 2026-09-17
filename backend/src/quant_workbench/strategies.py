@@ -7,7 +7,8 @@ import pandas as pd
 
 from quant_workbench.costs import estimate_round_trip
 
-REFINED_STRATEGIES = {"trend_breakout", "range_reversion"}
+REGIME_STRATEGIES = {"trend_pullback", "regime_adaptive"}
+REFINED_STRATEGIES = {"trend_breakout", "range_reversion"} | REGIME_STRATEGIES
 
 
 class IntradayRules:
@@ -23,7 +24,13 @@ class IntradayRules:
     def reset(self, cash):
         if hasattr(self, "ranges") and self.ranges:
             self.daily_noise.append(float(np.mean(self.ranges)))
-        self.bars = deque(maxlen=max(self.config.slow + 1, self.config.atr_window + 1))
+        self.bars = deque(
+            maxlen=max(
+                self.config.slow + 1,
+                self.config.atr_window + 1,
+                self.config.regime_window + 1 if self.strategy in REGIME_STRATEGIES else 0,
+            )
+        )
         self.ranges = []
         self.pv = self.volume = self.opening_high = 0.0
         self.count = self.entries = 0
@@ -34,10 +41,12 @@ class IntradayRules:
         self.peak = self.stop_distance = self.take_distance = 0.0
         self.pending_distance = self.pending_take = 0.0
         self.max_quantity = None
+        self.pending_mode = self.entry_mode = self.strategy
 
     def filled(self, side, price, remaining):
         if side == "buy":
             self.entries += 1
+            self.entry_mode = self.pending_mode
             self.entry_bar = self.count + 1
             self.peak = price
             self.stop_distance = self.pending_distance
@@ -74,9 +83,9 @@ class IntradayRules:
                 reason = "atr_trailing"
             elif self.count - self.entry_bar + 1 >= cfg.max_hold_minutes:
                 reason = "time_exit"
-            elif self.strategy == "range_reversion" and bar.close >= vwap:
+            elif self.entry_mode in {"range_reversion", "range"} and bar.close >= vwap:
                 reason = "vwap_target"
-            elif self.strategy == "trend_breakout" and bar.close < vwap:
+            elif self.entry_mode in {"trend_breakout", "trend"} and bar.close < vwap:
                 reason = "trend_failed"
             return reason is None, reason
         self.max_quantity = None
@@ -115,7 +124,13 @@ class IntradayRules:
         )
         fast, slow = close[-cfg.fast :].mean(), close[-cfg.slow :].mean()
         relative_volume = bar.volume / max(np.mean([b.volume for b in bars[:-1]]), 1)
-        if self.strategy == "trend_breakout":
+        if self.strategy in REGIME_STRATEGIES:
+            signal, target_distance, mode = self.regime_signal(bars, close, atr, vwap)
+            self.pending_mode = mode
+            signal = signal and min(target_distance, cfg.take_atr * atr) >= (
+                cfg.min_reward_risk * stop
+            )
+        elif self.strategy == "trend_breakout":
             barrier = max(self.opening_high, max(b.high for b in bars[-cfg.slow : -1]))
             target_distance = cfg.take_atr * atr
             signal = (
@@ -146,3 +161,37 @@ class IntradayRules:
             self.pending_distance = stop
             self.pending_take = min(target_distance, cfg.take_atr * atr)
         return bool(signal), None
+
+    def regime_signal(self, bars, close, atr, vwap):
+        cfg, bar = self.config, bars[-1]
+        if len(close) < cfg.regime_window + 1:
+            return False, 0, "flat"
+        slow = close[-cfg.slow :].mean()
+        fast = close[-cfg.fast :].mean()
+        previous_fast = close[-cfg.fast - 1 : -1].mean()
+        width = cfg.regime_window // 3
+        slope = (
+            close[-width:].mean() - close[-cfg.regime_window : -cfg.regime_window + width].mean()
+        ) / atr
+        efficiency = abs(close[-1] - close[-cfg.regime_window]) / max(
+            np.abs(np.diff(close[-cfg.regime_window :])).sum(), 1e-12
+        )
+        if slope >= 1 and bar.close > vwap and fast > slow:
+            touched = min(b.low for b in bars[-6:-1]) <= previous_fast + 0.25 * atr
+            recovering = bar.close > bars[-2].high and bar.close > fast
+            not_extended = bar.close - slow <= 2 * atr and bar.close - vwap <= 3 * atr
+            return bool(touched and recovering and not_extended), cfg.take_atr * atr, "trend"
+        if self.strategy == "regime_adaptive" and abs(slope) <= 1 and efficiency <= 0.25:
+            deviation = max(
+                cfg.reversion_bps * bar.close / 10000,
+                cfg.reversion_atr * atr,
+                1.5 * close[-cfg.regime_window :].std(),
+            )
+            recovering = (
+                bar.close > bars[-2].close
+                and bar.low > bars[-2].low
+                and bar.close > bar.open
+                and bar.close >= bar.low + 0.6 * (bar.high - bar.low)
+            )
+            return bool(vwap - bar.close >= deviation and recovering), vwap - bar.close, "range"
+        return False, 0, "flat"
