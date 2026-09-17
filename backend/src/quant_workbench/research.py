@@ -3,6 +3,7 @@
 import hashlib
 import json
 import threading
+import time
 import uuid
 from datetime import UTC, datetime
 
@@ -17,7 +18,9 @@ WORKER_GATE = threading.BoundedSemaphore(1)
 PHASES = {"train", "validation", "test"}
 
 
-def create_experiment(repo: Repository, request: ExperimentInput) -> dict:
+def create_experiment(repo: Repository, request: ExperimentInput, progress=None) -> dict:
+    if progress:
+        progress("读取数据与校验时间隔离", 0, None, "")
     dataset = repo.get("datasets", request.dataset_id)
     if not set(request.symbols).issubset(dataset["symbols"]):
         raise ValueError("所选股票不在数据集中")
@@ -51,9 +54,11 @@ def create_experiment(repo: Repository, request: ExperimentInput) -> dict:
         }
     )
     if model.enabled:
-        trained = train_model(train, model)
+        trained = train_model(train, model, progress=progress)
         info["model_metadata"] = trained.metadata
         info["model_artifact"] = repo.save_model(info["id"], trained)
+    if progress:
+        progress("保存冻结实验与模型", 0, None, "")
     info["config_sha256"] = hashlib.sha256(json.dumps(info, sort_keys=True).encode()).hexdigest()
     repo.save_experiment(info)
     return info
@@ -112,12 +117,46 @@ def begin_run(repo: Repository, identifier: str, phase: str) -> dict:
             "ON CONFLICT(experiment_id,phase) DO UPDATE SET status='running',error=NULL",
             (identifier, phase, int(phase == "test")),
         )
+    repo.set_run_progress(
+        identifier,
+        phase,
+        {
+            "stage": "等待计算资源",
+            "done": 0,
+            "total": None,
+            "started_at": datetime.now(UTC).isoformat(),
+        },
+    )
     return {"status": "running", "launch": True, "prior_test_exposure": prior_exposure}
 
 
 def execute_run(repo: Repository, identifier: str, phase: str, exposure=False):
+    started = datetime.now(UTC).isoformat()
+    last_saved = 0.0
+
+    def report(stage, done=0, total=None, unit="分钟·股票"):
+        nonlocal last_saved
+        if done not in {0, total} and time.monotonic() - last_saved < 0.5:
+            return
+        repo.set_run_progress(
+            identifier,
+            phase,
+            {
+                "stage": stage,
+                "done": done,
+                "total": total,
+                "unit": unit,
+                "started_at": started,
+                "finished_at": datetime.now(UTC).isoformat()
+                if stage in {"运行完成", "运行失败"}
+                else None,
+            },
+        )
+        last_saved = time.monotonic()
+
     try:
         with WORKER_GATE:
+            report("加载行情与模型")
             info = repo.get("experiments", identifier)
             boundaries = {
                 "train": (info["start"], info["train_end"]),
@@ -140,6 +179,7 @@ def execute_run(repo: Repository, identifier: str, phase: str, exposure=False):
                 end,
                 info["strategies"],
                 filter_instance,
+                progress=lambda done, total, *_: report("策略与模型回测", done, total),
             )
             result.update(
                 {
@@ -159,7 +199,12 @@ def execute_run(repo: Repository, identifier: str, phase: str, exposure=False):
             )
             if model_config.enabled:
                 result["rule_baseline"] = simulate(
-                    frame, StrategyConfig(**info["config"]), start, end, info["strategies"]
+                    frame,
+                    StrategyConfig(**info["config"]),
+                    start,
+                    end,
+                    info["strategies"],
+                    progress=lambda done, total, *_: report("纯规则对照回测", done, total),
                 )["metrics"]
                 result["model_checkpoint"] = repo.save_model(
                     identifier, filter_instance.checkpoint_state(), phase
@@ -174,8 +219,11 @@ def execute_run(repo: Repository, identifier: str, phase: str, exposure=False):
                 )
                 if phase == "train":
                     result["assumptions"].append("开发期回放属于样本内结果，离线训练已见该阶段数据")
+            report("保存结果与检查点")
             repo.save_result(identifier, phase, result)
+            report("运行完成", 1, 1, "任务")
     except Exception as exc:
+        report("运行失败")
         message = (
             str(exc)[:500]
             if isinstance(exc, ValueError)

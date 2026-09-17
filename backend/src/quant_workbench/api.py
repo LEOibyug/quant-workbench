@@ -7,6 +7,7 @@ from typing import Annotated
 from fastapi import FastAPI, HTTPException, Query
 from fastapi.responses import JSONResponse
 
+from quant_workbench.operations import router as operations_router
 from quant_workbench.repository import Repository
 from quant_workbench.research_api import router
 from quant_workbench.simulation_api import router as simulation_router
@@ -21,6 +22,7 @@ async def lifespan(app):
 
 app = FastAPI(title="Quant Workbench", version="0.2.0", lifespan=lifespan)
 app.include_router(router)
+app.include_router(operations_router)
 app.include_router(simulation_router)
 
 

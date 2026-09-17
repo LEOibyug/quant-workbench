@@ -1,6 +1,13 @@
 import { useEffect, useState } from "react";
 import { ExperimentRunner } from "./ExperimentRunner";
 import { api, post } from "./api";
+import {
+  ProgressNotice,
+  runOperation,
+  pendingOperation,
+  observeOperation,
+  type ProgressState,
+} from "./ProgressNotice";
 import { strategyNames } from "./types";
 import type { Dataset, Experiment } from "./types";
 const tomorrow = (day: string) =>
@@ -12,6 +19,9 @@ export function Research() {
     [dates, setDates] = useState(["", "", "", ""]);
   const [busy, setBusy] = useState(false),
     [error, setError] = useState("");
+  const [reconnect, setReconnect] = useState(0);
+  const [activity, setActivity] = useState<"data" | "train">("data");
+  const [progress, setProgress] = useState<ProgressState | null>(null);
   const [created, setCreated] = useState<Experiment | null>(null);
   const [provider, setProvider] = useState("alpaca");
   const [providers, setProviders] = useState<
@@ -42,15 +52,73 @@ export function Research() {
       .then(setDatasets)
       .catch((e) => setError(e.message));
   }, []);
-  async function loadData(work: () => Promise<Dataset>) {
+  useEffect(() => {
+    const saved = pendingOperation();
+    if (!saved) return;
+    let active = true;
+    setBusy(true);
+    setError("");
+    setActivity(saved.kind === "train" ? "train" : "data");
+    setProgress({ status: "running", stage: "恢复后台任务进度" });
+    observeOperation<Dataset | Experiment>(saved.id, (p) => {
+      if (active) setProgress(p);
+    })
+      .then((result) => {
+        if (!active) return;
+        if (saved.kind === "train") setCreated(result as Experiment);
+        else {
+          const d = result as Dataset;
+          setDatasets((prev) => [d, ...prev.filter((x) => x.id !== d.id)]);
+          choose(d);
+        }
+      })
+      .catch((e) => {
+        if (active) {
+          setError(e.message);
+          setProgress({
+            status: "failed",
+            stage: "进度观察中断",
+            error: e.message,
+          });
+        }
+      })
+      .finally(() => {
+        if (active) setBusy(false);
+      });
+    return () => {
+      active = false;
+    };
+  }, [reconnect]);
+  async function loadData(
+    work: () => Promise<Dataset>,
+    stage = "加载并校验行情数据",
+  ) {
+    setActivity("data");
+    const started_at = new Date().toISOString();
+    setProgress({ status: "running", stage, started_at });
     setBusy(true);
     setError("");
     try {
       const d = await work();
       setDatasets((prev) => [d, ...prev.filter((x) => x.id !== d.id)]);
       choose(d);
+      setProgress({
+        status: "completed",
+        stage: "行情已保存",
+        done: d.rows,
+        unit: "条",
+        started_at,
+        finished_at: new Date().toISOString(),
+      });
     } catch (e) {
       setError((e as Error).message);
+      setProgress((p) => ({
+        ...p,
+        status: "failed",
+        stage: "任务失败",
+        error: (e as Error).message,
+        finished_at: new Date().toISOString(),
+      }));
     } finally {
       setBusy(false);
     }
@@ -58,63 +126,80 @@ export function Research() {
   async function create(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     const f = new FormData(e.currentTarget);
+    setActivity("train");
+    setProgress({
+      status: "running",
+      stage: "提交训练任务",
+      started_at: new Date().toISOString(),
+    });
     setBusy(true);
     setError("");
     const n = (key: string) => Number(f.get(key));
     try {
-      const result = await post<Experiment>("/experiments", {
-        name: f.get("name"),
-        dataset_id: selected,
-        symbols,
-        start: dates[0],
-        train_end: dates[1],
-        validation_end: dates[2],
-        end: dates[3],
-        config: {
-          strategy: f.get("strategy"),
-          fast: n("fast"),
-          slow: n("slow"),
-          initial_cash: n("cash"),
-          spread_bps: n("spread"),
-          slippage_bps: n("slippage"),
-          commission_per_share: n("commission"),
-          minimum_commission: n("minimum"),
-          sell_fee_bps: n("sell_fee"),
-          participation: n("participation") / 100,
-          stop_loss_bps: n("stop_loss"),
-          opening_minutes: n("opening"),
-          flatten_minutes: n("flatten"),
-          reversion_bps: n("reversion"),
-          max_hold_minutes: n("max_hold"),
-          cooldown_minutes: n("cooldown"),
-          stop_atr: n("stop_atr"),
-          take_atr: n("take_atr"),
-          risk_per_trade_bps: n("risk_budget"),
-          rule_cost_multiplier: n("rule_cost"),
-          regime_window: n("regime_window"),
-          min_reward_risk: n("reward_risk"),
-          reversion_atr: n("reversion_atr"),
+      const result = await runOperation<Experiment>(
+        "train",
+        {
+          name: f.get("name"),
+          dataset_id: selected,
+          symbols,
+          start: dates[0],
+          train_end: dates[1],
+          validation_end: dates[2],
+          end: dates[3],
+          config: {
+            strategy: f.get("strategy"),
+            fast: n("fast"),
+            slow: n("slow"),
+            initial_cash: n("cash"),
+            spread_bps: n("spread"),
+            slippage_bps: n("slippage"),
+            commission_per_share: n("commission"),
+            minimum_commission: n("minimum"),
+            sell_fee_bps: n("sell_fee"),
+            participation: n("participation") / 100,
+            stop_loss_bps: n("stop_loss"),
+            opening_minutes: n("opening"),
+            flatten_minutes: n("flatten"),
+            reversion_bps: n("reversion"),
+            max_hold_minutes: n("max_hold"),
+            cooldown_minutes: n("cooldown"),
+            stop_atr: n("stop_atr"),
+            take_atr: n("take_atr"),
+            risk_per_trade_bps: n("risk_budget"),
+            rule_cost_multiplier: n("rule_cost"),
+            regime_window: n("regime_window"),
+            min_reward_risk: n("reward_risk"),
+            reversion_atr: n("reversion_atr"),
+          },
+          model: enabled
+            ? {
+                enabled: true,
+                k: n("k"),
+                max_iter: n("max_iter"),
+                horizon: n("horizon"),
+                architecture: f.get("architecture"),
+                neural_online_learning_rate: n("neural_lr"),
+                online_batch_size: n("online_batch"),
+                probability_threshold: n("threshold"),
+                online_learning_rate: n("learning_rate"),
+                cost_aware: f.get("cost_aware") === "on",
+                cost_multiplier: n("cost_multiplier"),
+                min_edge_bps: n("min_edge"),
+              }
+            : { enabled: false },
         },
-        model: enabled
-          ? {
-              enabled: true,
-              k: n("k"),
-              max_iter: n("max_iter"),
-              horizon: n("horizon"),
-              architecture: f.get("architecture"),
-              neural_online_learning_rate: n("neural_lr"),
-              online_batch_size: n("online_batch"),
-              probability_threshold: n("threshold"),
-              online_learning_rate: n("learning_rate"),
-              cost_aware: f.get("cost_aware") === "on",
-              cost_multiplier: n("cost_multiplier"),
-              min_edge_bps: n("min_edge"),
-            }
-          : { enabled: false },
-      });
+        setProgress,
+      );
       setCreated(result);
     } catch (e) {
       setError((e as Error).message);
+      setProgress((p) => ({
+        ...p,
+        status: "failed",
+        stage: "任务失败",
+        error: (e as Error).message,
+        finished_at: new Date().toISOString(),
+      }));
     } finally {
       setBusy(false);
     }
@@ -134,6 +219,10 @@ export function Research() {
           {error}
         </div>
       )}
+      {!busy && pendingOperation() && (
+        <button onClick={() => setReconnect((n) => n + 1)}>重新连接任务</button>
+      )}
+      {activity === "train" && !dataset && <ProgressNotice value={progress} />}
       <section className="card">
         <div className="section-heading">
           <h2>01 / 行情数据</h2>
@@ -141,7 +230,7 @@ export function Research() {
             disabled={busy}
             onClick={() => loadData(() => post<Dataset>("/datasets/demo"))}
           >
-            使用合成示例
+            {busy && activity === "data" ? "处理中…" : "使用合成示例"}
           </button>
         </div>
         <p className="muted">
@@ -207,15 +296,19 @@ export function Research() {
               e.preventDefault();
               const f = new FormData(e.currentTarget);
               loadData(() =>
-                post<Dataset>("/datasets/fetch", {
-                  provider,
-                  symbols: String(f.get("symbols"))
-                    .split(",")
-                    .map((x) => x.trim().toUpperCase()),
-                  start: f.get("start"),
-                  end: f.get("end"),
-                  feed: f.get("feed") || "iex",
-                }),
+                runOperation<Dataset>(
+                  "download",
+                  {
+                    provider,
+                    symbols: String(f.get("symbols"))
+                      .split(",")
+                      .map((x) => x.trim().toUpperCase()),
+                    start: f.get("start"),
+                    end: f.get("end"),
+                    feed: f.get("feed") || "iex",
+                  },
+                  setProgress,
+                ),
               );
             }}
           >
@@ -254,7 +347,11 @@ export function Research() {
                 </select>
               </label>
             )}
-            <button disabled={busy}>通过 API 下载</button>
+            <button disabled={busy}>
+              {busy && activity === "data"
+                ? "下载 / 处理数据中…"
+                : "通过 API 下载"}
+            </button>
           </form>
           <p className="muted">
             {providers.find((p) => p.id === provider)?.configured
@@ -268,6 +365,7 @@ export function Research() {
               : "后端环境变量：MASSIVE_API_KEY（兼容 POLYGON_API_KEY）"}
           </small>
         </div>
+        {activity === "data" && <ProgressNotice value={progress} />}
         {dataset && (
           <div className="notice">
             {dataset.synthetic ? "合成数据" : dataset.source} ·{" "}
@@ -398,17 +496,105 @@ export function Research() {
             </div>
             <details open>
               <summary>增强策略风控（含趋势回调 / 状态组合）</summary>
-              <p className="muted">参考过去20个交易日的波动背景，使用已结束分钟确认信号。每天最多4次入场，日亏损1%后停止入场；风险预算不保证限制跳空损失。</p>
+              <p className="muted">
+                参考过去20个交易日的波动背景，使用已结束分钟确认信号。每天最多4次入场，日亏损1%后停止入场；风险预算不保证限制跳空损失。
+              </p>
               <div className="form-grid">
-                <label>状态判断窗口 分钟<input name="regime_window" type="number" min={30} max={120} defaultValue={60} /></label>
-                <label>最低目标/风险比<input name="reward_risk" type="number" min={0.5} max={5} step={0.1} defaultValue={1.2} /></label>
-                <label>回归偏离 ATR倍数<input name="reversion_atr" type="number" min={0.5} max={5} step={0.1} defaultValue={1.5} /></label>
-                <label>最长持仓 分钟<input name="max_hold" type="number" min={5} max={120} defaultValue={45} /></label>
-                <label>平仓后冷却 分钟<input name="cooldown" type="number" min={0} max={60} defaultValue={10} /></label>
-                <label>止损 ATR倍数<input name="stop_atr" type="number" min={0.5} max={5} step={0.1} defaultValue={2} /></label>
-                <label>止盈 ATR倍数<input name="take_atr" type="number" min={1} max={10} step={0.1} defaultValue={4} /></label>
-                <label>单笔风险预算 bps<input name="risk_budget" type="number" min={1} max={100} defaultValue={25} /></label>
-                <label>规则目标 / 成本倍数<input name="rule_cost" type="number" min={1} max={5} step={0.1} defaultValue={1.5} /></label>
+                <label>
+                  状态判断窗口 分钟
+                  <input
+                    name="regime_window"
+                    type="number"
+                    min={30}
+                    max={120}
+                    defaultValue={60}
+                  />
+                </label>
+                <label>
+                  最低目标/风险比
+                  <input
+                    name="reward_risk"
+                    type="number"
+                    min={0.5}
+                    max={5}
+                    step={0.1}
+                    defaultValue={1.2}
+                  />
+                </label>
+                <label>
+                  回归偏离 ATR倍数
+                  <input
+                    name="reversion_atr"
+                    type="number"
+                    min={0.5}
+                    max={5}
+                    step={0.1}
+                    defaultValue={1.5}
+                  />
+                </label>
+                <label>
+                  最长持仓 分钟
+                  <input
+                    name="max_hold"
+                    type="number"
+                    min={5}
+                    max={120}
+                    defaultValue={45}
+                  />
+                </label>
+                <label>
+                  平仓后冷却 分钟
+                  <input
+                    name="cooldown"
+                    type="number"
+                    min={0}
+                    max={60}
+                    defaultValue={10}
+                  />
+                </label>
+                <label>
+                  止损 ATR倍数
+                  <input
+                    name="stop_atr"
+                    type="number"
+                    min={0.5}
+                    max={5}
+                    step={0.1}
+                    defaultValue={2}
+                  />
+                </label>
+                <label>
+                  止盈 ATR倍数
+                  <input
+                    name="take_atr"
+                    type="number"
+                    min={1}
+                    max={10}
+                    step={0.1}
+                    defaultValue={4}
+                  />
+                </label>
+                <label>
+                  单笔风险预算 bps
+                  <input
+                    name="risk_budget"
+                    type="number"
+                    min={1}
+                    max={100}
+                    defaultValue={25}
+                  />
+                </label>
+                <label>
+                  规则目标 / 成本倍数
+                  <input
+                    name="rule_cost"
+                    type="number"
+                    min={1}
+                    max={5}
+                    step={0.1}
+                    defaultValue={1.5}
+                  />
+                </label>
               </div>
             </details>
             <details open>
@@ -486,8 +672,9 @@ export function Research() {
               </label>
             </div>
             <p>
-              模型综合过去 k 根分钟线与约1/5/20交易日的历史背景，输出指定跨度的上涨概率与收益。首 k
-              根积累窗口，k—2k 为适应期，前 2k
+              模型综合过去 k
+              根分钟线与约1/5/20交易日的历史背景，输出指定跨度的上涨概率与收益。首
+              k 根积累窗口，k—2k 为适应期，前 2k
               根不参与交易；标签在预测跨度到期后才用于更新。GRU/MLP同时接收最近已成熟预测、真实值和误差。
             </p>
             {enabled && (
@@ -504,7 +691,9 @@ export function Research() {
                 <label>
                   预测跨度 分钟
                   <select name="horizon" defaultValue="5">
-                    <option value="1">1</option><option value="5">5</option><option value="15">15</option>
+                    <option value="1">1</option>
+                    <option value="5">5</option>
+                    <option value="15">15</option>
                   </select>
                 </label>
                 <label>
@@ -556,15 +745,34 @@ export function Research() {
                 </label>
                 <label>
                   离线训练轮数
-                  <input name="max_iter" type="number" min={1} max={20} defaultValue={3} />
+                  <input
+                    name="max_iter"
+                    type="number"
+                    min={1}
+                    max={20}
+                    defaultValue={3}
+                  />
                 </label>
                 <label>
                   序列网络在线学习率
-                  <input name="neural_lr" type="number" min={0.000001} max={0.001} step={0.000001} defaultValue={0.00003} />
+                  <input
+                    name="neural_lr"
+                    type="number"
+                    min={0.000001}
+                    max={0.001}
+                    step={0.000001}
+                    defaultValue={0.00003}
+                  />
                 </label>
                 <label>
                   序列网络更新间隔（成熟样本）
-                  <input name="online_batch" type="number" min={1} max={64} defaultValue={16} />
+                  <input
+                    name="online_batch"
+                    type="number"
+                    min={1}
+                    max={64}
+                    defaultValue={16}
+                  />
                 </label>
                 <label>
                   线性/MLP在线学习率
@@ -580,12 +788,15 @@ export function Research() {
               </div>
             )}
             <p className="muted">
-              GRU直接编码分钟与已完成5分钟序列，保留长历史与误差反馈，使用近期成熟样本回放；默认设备自动选择 CUDA → MPS → CPU，元数据与运行结果记录实际设备。MLP采用两个64→32隐藏层网络，分别输出概率与收益；线性/RBF版本使用逻辑分类与Huber回归。每股独立更新；跨日保留模型权重和历史背景，重建短窗口与误差反馈，不生成隔夜标签。上涨概率不等同于净盈利概率。成本过滤要求：预测收益
+              GRU直接编码分钟与已完成5分钟序列，保留长历史与误差反馈，使用近期成熟样本回放；默认设备自动选择
+              CUDA → MPS →
+              CPU，元数据与运行结果记录实际设备。MLP采用两个64→32隐藏层网络，分别输出概率与收益；线性/RBF版本使用逻辑分类与Huber回归。每股独立更新；跨日保留模型权重和历史背景，重建短窗口与误差反馈，不生成隔夜标签。上涨概率不等同于净盈利概率。成本过滤要求：预测收益
               bps 大于估计往返成本 × 安全倍数 + 最低额外优势。
             </p>
             <button className="primary" disabled={busy || !symbols.length}>
-              {busy ? "正在处理…" : "训练并冻结实验"}
+              {busy && activity === "train" ? "训练进行中…" : "训练并冻结实验"}
             </button>
+            {activity === "train" && <ProgressNotice value={progress} />}
           </section>
         </form>
       )}

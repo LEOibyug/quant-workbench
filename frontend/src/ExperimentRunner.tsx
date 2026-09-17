@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { api, post } from "./api";
 import { SimulationPanel } from "./SimulationPanel";
+import { ProgressNotice, type ProgressState } from "./ProgressNotice";
 import { Results } from "./Results";
 import { phaseNames } from "./types";
 import type { Experiment, Phase, Result } from "./types";
@@ -11,6 +12,10 @@ export function ExperimentRunner({ selectedId }: { selectedId?: string }) {
     [result, setResult] = useState<Result | null>(null),
     [error, setError] = useState("");
   const [pending, setPending] = useState(false);
+  const [action, setAction] = useState<"run" | "publish">("run");
+  const [actionProgress, setActionProgress] = useState<ProgressState | null>(
+    null,
+  );
   const [published, setPublished] = useState<{
     id: string;
     experimentId: string;
@@ -20,15 +25,35 @@ export function ExperimentRunner({ selectedId }: { selectedId?: string }) {
   }, [selectedId]);
   useEffect(() => {
     setPublished(null);
+    setActionProgress(null);
   }, [id]);
   async function publish() {
+    setAction("publish");
+    setActionProgress({
+      status: "running",
+      stage: "发布独立策略与模型快照",
+      started_at: new Date().toISOString(),
+    });
     setPending(true);
     setError("");
     try {
       const result = await post<{ id: string }>(`/experiments/${id}/publish`);
       setPublished({ id: result.id, experimentId: id });
+      setActionProgress((p) => ({
+        ...p,
+        status: "completed",
+        stage: "发布完成",
+        finished_at: new Date().toISOString(),
+      }));
     } catch (e) {
       setError((e as Error).message);
+      setActionProgress((p) => ({
+        ...p,
+        status: "failed",
+        stage: "操作失败",
+        error: (e as Error).message,
+        finished_at: new Date().toISOString(),
+      }));
     } finally {
       setPending(false);
     }
@@ -79,13 +104,27 @@ export function ExperimentRunner({ selectedId }: { selectedId?: string }) {
       (r) => r.phase === "validation" && r.status === "completed",
     );
   async function launch() {
+    setAction("run");
+    setActionProgress({
+      status: "running",
+      stage: "提交回测任务",
+      started_at: new Date().toISOString(),
+    });
     setPending(true);
     setError("");
     try {
       await post(`/experiments/${id}/run/${phase}`);
       setExperiments(await api<Experiment[]>("/experiments"));
+      setActionProgress(null);
     } catch (e) {
       setError((e as Error).message);
+      setActionProgress((p) => ({
+        ...p,
+        status: "failed",
+        stage: "操作失败",
+        error: (e as Error).message,
+        finished_at: new Date().toISOString(),
+      }));
     } finally {
       setPending(false);
     }
@@ -168,8 +207,26 @@ export function ExperimentRunner({ selectedId }: { selectedId?: string }) {
                 ? "已完成 · 结果已固定"
                 : run?.status === "running"
                   ? "计算中…"
-                  : `运行${phaseNames[phase]}`}
+                  : pending && action === "run"
+                    ? "正在提交…"
+                    : `运行${phaseNames[phase]}`}
             </button>
+            {run && (
+              <ProgressNotice
+                value={{
+                  ...run.progress,
+                  status: run.status,
+                  error: run.error,
+                  stage:
+                    run.status === "completed"
+                      ? `${phaseNames[phase]}运行完成`
+                      : run.status === "failed"
+                        ? "运行失败"
+                        : run.progress?.stage || "计算中，等待进度",
+                }}
+              />
+            )}
+            {action === "run" && <ProgressNotice value={actionProgress} />}
             <div className="publication">
               <button
                 disabled={
@@ -180,8 +237,13 @@ export function ExperimentRunner({ selectedId }: { selectedId?: string }) {
                 }
                 onClick={publish}
               >
-                发布策略与模型到展示页
+                {pending && action === "publish"
+                  ? "正在发布…"
+                  : "发布策略与模型到展示页"}
               </button>
+              {action === "publish" && (
+                <ProgressNotice value={actionProgress} />
+              )}
               {published?.experimentId === id && (
                 <a
                   className="button primary"

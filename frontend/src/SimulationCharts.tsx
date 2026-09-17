@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useState } from "react";
+import { DownloadButton } from "./ProgressNotice";
 import type { SimulationJob } from "./SimulationPanel";
 
 export interface MarketPoint {
@@ -21,6 +22,9 @@ export interface MarketPoint {
   probability: number | null;
   expected_return_bps: number | null;
   required_edge_bps: number | null;
+  rule_candidate?: boolean;
+  model_allow_entry?: boolean | null;
+  decision_reason?: string | null;
 }
 interface Fill {
   timestamp: string;
@@ -38,6 +42,7 @@ export interface SimulationData {
   trades: Fill[];
   metrics?: Record<string, number | null>;
   assumptions?: string[];
+  model_statistics?: Record<string, unknown>;
 }
 interface Series {
   key: keyof MarketPoint;
@@ -123,7 +128,14 @@ function LineChart({
     195 - ((v - geometry.low) / (geometry.high - geometry.low)) * 169;
   const at =
     selected === null ? current : points[Math.min(selected, points.length - 1)];
-  const activeTrade = chosen && trades.includes(chosen) ? chosen : null;
+  const activeTrade = chosen
+    ? trades.find(
+        (t) =>
+          t.timestamp === chosen.timestamp &&
+          t.position_id === chosen.position_id &&
+          t.side === chosen.side,
+      )
+    : null;
   const pnlForEntry = (trade: Fill) =>
     trades
       .filter((t) => t.position_id === trade.position_id && t.side === "sell")
@@ -142,132 +154,155 @@ function LineChart({
           </span>
         ))}
       </div>
-      <svg
-        viewBox="0 0 960 235"
-        role="img"
-        aria-label={title}
-        onPointerMove={(e) => {
-          const rect = e.currentTarget.getBoundingClientRect();
-          const fraction = Math.min(
-            1,
-            Math.max(
-              0,
-              (((e.clientX - rect.left) / rect.width) * 960 - 78) / 854,
-            ),
-          );
-          onSelect(Math.round(fraction * (points.length - 1)));
-        }}
-        onPointerLeave={() => onSelect(null)}
-      >
-        {[0, 1, 2, 3].map((i) => {
-          const value = geometry.low + ((geometry.high - geometry.low) * i) / 3;
-          return (
-            <g key={i}>
-              <line
-                x1="78"
-                x2="932"
-                y1={y(value)}
-                y2={y(value)}
-                stroke="#e4e9ef"
-              />
-              <text x="70" y={y(value) + 4} textAnchor="end">
-                {value.toLocaleString("en-US", { maximumFractionDigits: 2 })}
-              </text>
-            </g>
-          );
-        })}
-        {series.map((s) => {
-          let connected = false;
-          const path = geometry.samples
-            .map((i) => {
-              const v = points[i][s.key];
-              if (v === null || !Number.isFinite(Number(v))) {
-                connected = false;
-                return "";
-              }
-              const command = connected ? "L" : "M";
-              connected = true;
-              return `${command}${x(i).toFixed(1)},${y(Number(v)).toFixed(1)}`;
-            })
-            .join(" ");
-          return (
-            <path
-              key={s.key}
-              d={path}
-              stroke={s.color}
-              fill="none"
-              strokeWidth="1.8"
-            />
-          );
-        })}
-        {trades.slice(-400).map((t, i) => {
-          const time =
-            Math.ceil(new Date(t.timestamp).getTime() / 60000) * 60000;
-          let lo = 0,
-            hi = points.length - 1;
-          while (lo < hi) {
-            const mid = (lo + hi) >> 1;
-            if (new Date(points[mid].timestamp).getTime() < time) lo = mid + 1;
-            else hi = mid;
-          }
-          const px = x(lo),
-            py = y(t.price),
-            buy = t.side === "buy";
-          const label = `${buy ? "买入" : "卖出"} ${stamp(t.timestamp)} · ${t.quantity}股 @ $${money(t.price)} · 费用 $${money(t.fee)} · ${buy ? "此笔截至回放时刻净盈亏" : "本次卖出净盈亏"} $${money(buy ? pnlForEntry(t) : t.realized_pnl || 0)}`;
-          return (
-            <g
-              key={`${t.timestamp}-${i}`}
-              className="trade-marker"
-              tabIndex={0}
-              role="button"
-              aria-label={label}
-              onClick={() => setChosen(t)}
-              onKeyDown={(e) => {
-                if (e.key === "Enter" || e.key === " ") {
-                  e.preventDefault();
-                  setChosen(t);
+      <div className="chart-scroll">
+        <svg
+          viewBox="0 0 960 235"
+          role="img"
+          aria-label={title}
+          onPointerMove={(e) => {
+            const rect = e.currentTarget.getBoundingClientRect();
+            const fraction = Math.min(
+              1,
+              Math.max(
+                0,
+                (((e.clientX - rect.left) / rect.width) * 960 - 78) / 854,
+              ),
+            );
+            onSelect(Math.round(fraction * (points.length - 1)));
+          }}
+          onPointerLeave={() => onSelect(null)}
+        >
+          {[0, 1, 2, 3].map((i) => {
+            const value =
+              geometry.low + ((geometry.high - geometry.low) * i) / 3;
+            return (
+              <g key={i}>
+                <line
+                  x1="78"
+                  x2="932"
+                  y1={y(value)}
+                  y2={y(value)}
+                  stroke="#e4e9ef"
+                />
+                <text x="70" y={y(value) + 4} textAnchor="end">
+                  {value.toLocaleString("en-US", { maximumFractionDigits: 2 })}
+                </text>
+              </g>
+            );
+          })}
+          {series.map((s) => {
+            let connected = false;
+            const path = geometry.samples
+              .map((i) => {
+                const v = points[i][s.key];
+                if (v === null || !Number.isFinite(Number(v))) {
+                  connected = false;
+                  return "";
                 }
-              }}
-            >
-              <title>{label}</title>
-              <circle cx={px} cy={py} r="10" fill="transparent" />
+                const command = connected ? "L" : "M";
+                connected = true;
+                return `${command}${x(i).toFixed(1)},${y(Number(v)).toFixed(1)}`;
+              })
+              .join(" ");
+            return (
               <path
-                d={
-                  buy
-                    ? `M${px},${py - 7}l-5,10h10Z`
-                    : `M${px},${py + 7}l-5,-10h10Z`
-                }
-                fill={buy ? colors.green : colors.red}
-                stroke="white"
-                strokeWidth="1"
+                key={s.key}
+                d={path}
+                stroke={s.color}
+                fill="none"
+                strokeWidth="1.8"
               />
-            </g>
-          );
-        })}
-        {selected !== null && (
-          <line
-            x1={x(selected)}
-            x2={x(selected)}
-            y1="20"
-            y2="198"
-            stroke="#8696a7"
-            strokeDasharray="4 4"
-          />
-        )}
-        <text x="78" y="222">
-          {stamp(points[0].timestamp)}
-        </text>
-        <text x="932" y="222" textAnchor="end">
-          {stamp(current.timestamp)}
-        </text>
-      </svg>
+            );
+          })}
+          {trades.slice(-400).map((t, i) => {
+            const time =
+              Math.ceil(new Date(t.timestamp).getTime() / 60000) * 60000;
+            let lo = 0,
+              hi = points.length - 1;
+            while (lo < hi) {
+              const mid = (lo + hi) >> 1;
+              if (new Date(points[mid].timestamp).getTime() < time)
+                lo = mid + 1;
+              else hi = mid;
+            }
+            const px = x(lo),
+              py = y(t.price),
+              buy = t.side === "buy";
+            const label = `${buy ? "买入" : "卖出"} ${stamp(t.timestamp)} · ${t.quantity}股 @ $${money(t.price)} · 费用 $${money(t.fee)} · ${buy ? "此笔截至回放时刻净盈亏" : "本次卖出净盈亏"} $${money(buy ? pnlForEntry(t) : t.realized_pnl || 0)}`;
+            return (
+              <g
+                key={`${t.timestamp}-${i}`}
+                className="trade-marker"
+                tabIndex={0}
+                role="button"
+                aria-label={label}
+                onClick={() => setChosen(t)}
+                onKeyDown={(e) => {
+                  if (e.key === "Enter" || e.key === " ") {
+                    e.preventDefault();
+                    setChosen(t);
+                  }
+                }}
+              >
+                <title>{label}</title>
+                <line
+                  x1={px}
+                  x2={px}
+                  y1={py}
+                  y2={py + (buy ? 16 : -16)}
+                  stroke={buy ? colors.green : colors.red}
+                  strokeWidth="2"
+                />
+                <circle
+                  cx={px}
+                  cy={py}
+                  r="3"
+                  fill={buy ? colors.green : colors.red}
+                />
+                <circle
+                  cx={px}
+                  cy={py + (buy ? 16 : -16)}
+                  r="10"
+                  fill={buy ? colors.green : colors.red}
+                  stroke="white"
+                  strokeWidth="1.5"
+                />
+                <text
+                  className="trade-label"
+                  x={px}
+                  y={py + (buy ? 16 : -16) + 4}
+                  textAnchor="middle"
+                >
+                  {buy ? "买" : "卖"}
+                </text>
+              </g>
+            );
+          })}
+          {selected !== null && (
+            <line
+              x1={x(selected)}
+              x2={x(selected)}
+              y1="20"
+              y2="198"
+              stroke="#8696a7"
+              strokeDasharray="4 4"
+            />
+          )}
+          <text x="78" y="222">
+            {stamp(points[0].timestamp)}
+          </text>
+          <text x="932" y="222" textAnchor="end">
+            {stamp(current.timestamp)}
+          </text>
+        </svg>
+      </div>
       <small className="muted">
         {stamp(at.timestamp)} 美东时间 · 按交易分钟连续排列，跳过休市
         {points.length > 700 ? " · 长区间保留极值抽样绘图" : ""}
       </small>
       {trades.length > 0 && (
         <p className="muted">
-          ▲ 买入　▼ 卖出 · 点击标记查看成交与盈亏
+          绿色「买」为买入，红色「卖」为卖出 · 点击标记查看成交与盈亏
           {trades.length > 400 ? "（图中显示最近 400 次成交）" : ""}
         </p>
       )}
@@ -375,6 +410,31 @@ export function SimulationCharts({
     onSelect: setHover,
     current,
   };
+  const buys = trades.filter((t) => t.side === "buy").length;
+  const sells = trades.length - buys;
+  const hasDiagnostics = points.some(
+    (p) => typeof p.rule_candidate === "boolean",
+  );
+  const candidates = points.filter((p) => p.rule_candidate);
+  const blocked = candidates.filter((p) => p.model_allow_entry === false);
+  const oldCostVetoes = completed
+    ? Number(data.model_statistics?.cost_vetoes || 0)
+    : 0;
+  function seekTrade(first = false) {
+    const next = first
+      ? data.trades[0]
+      : data.trades.find((t) => t.timestamp > current.timestamp);
+    if (!next) return;
+    const index = data.market_curve.findIndex(
+      (p) => p.timestamp >= next.timestamp,
+    );
+    if (index >= 0) {
+      setFollow(false);
+      setPlaying(false);
+      setCursor(index + 1);
+      setHover(null);
+    }
+  }
   const dailyMax = Math.max(0.01, ...daily.map((d) => Math.abs(d.pct)));
   const metrics = [
     ["股票价格", `$${money(current.close)}`],
@@ -388,7 +448,11 @@ export function SimulationCharts({
       "已实现 / 浮动盈亏",
       `$${money(current.realized_pnl)} / $${money(current.unrealized_pnl)}`,
     ],
-    ["持仓", `${current.shares} 股`],
+    [
+      "持仓",
+      `${current.shares} 股${current.shares === 0 && trades.length ? "（已清仓）" : ""}`,
+    ],
+    ["累计成交", `${trades.length} 次 · 买 ${buys} / 卖 ${sells}`],
     ["累计佣金与规费", `$${money(current.fees)}`],
     ["价差与滑点成本（已含成交价）", `$${money(current.impact_cost)}`],
   ];
@@ -404,7 +468,9 @@ export function SimulationCharts({
               ? "历史回放中"
               : follow && job.status === "running"
                 ? "跟随计算进度"
-                : "已暂停"}
+                : completed
+                  ? "回放结束"
+                  : "已暂停"}
           </span>
         </div>
         <div className="replay-buttons">
@@ -435,6 +501,8 @@ export function SimulationCharts({
           >
             显示已计算全部
           </button>
+          <button onClick={() => seekTrade(true)}>定位首笔成交</button>
+          <button onClick={() => seekTrade()}>下一笔成交</button>
           <label>
             回放速度
             <select
@@ -466,6 +534,58 @@ export function SimulationCharts({
           {shown.toLocaleString()} / {count.toLocaleString()}{" "}
           个已计算分钟。图表、盈亏与成交列表仅展示回放时刻之前的信息。
         </small>
+      </section>
+      <section className="card trading-summary" role="status">
+        <h3>
+          {completed ? "模拟结果" : "截至当前回放时刻"} · 买入 {buys} 次 / 卖出{" "}
+          {sells} 次
+        </h3>
+        {!trades.length ? (
+          <>
+            <p>
+              尚无成交，因此没有买卖点；净资产仍为初始资金，收益、费用、持仓为
+              0。行情曲线显示的是股票价格变化，并不表示策略已买入。
+            </p>
+            {hasDiagnostics && (
+              <p>
+                规则入场候选 {candidates.length} 个分钟，其中模型未放行{" "}
+                {blocked.length} 个分钟。
+                {candidates.length === 0
+                  ? "当前区间尚未满足规则入场条件。"
+                  : "放行后还需在下一分钟满足资金和成交量约束才会成交。"}
+              </p>
+            )}
+            {oldCostVetoes > 0 && (
+              <p>
+                模型统计：{oldCostVetoes}{" "}
+                个分钟周期未通过预期收益覆盖成本的条件（模型评估次数，不等于被拒订单数）。
+              </p>
+            )}
+          </>
+        ) : (
+          <p>
+            买卖点已绘于下方价格图；可点击标记查看成交价、费用及对应净盈亏。
+            {current.shares === 0
+              ? `当前已经清仓，持仓和浮动盈亏为 0；累计已实现净盈亏为 $${money(current.realized_pnl)}，不会因清仓清零。`
+              : `当前持仓 ${current.shares} 股，浮动盈亏为 $${money(current.unrealized_pnl)}。`}
+          </p>
+        )}
+        {current.decision_reason && (
+          <p className="muted">当前模型判断：{current.decision_reason}</p>
+        )}
+        {completed && (
+          <p>
+            最终净资产 ${money(current.equity)} · 累计净收益 $
+            {money(current.equity - job.initial_cash)} · 胜率{" "}
+            {data.metrics?.win_rate_pct == null
+              ? "不适用（无完整往返交易）"
+              : `${money(data.metrics.win_rate_pct)}%`}{" "}
+            · 日收益 Sharpe{" "}
+            {data.metrics?.daily_sharpe == null
+              ? "不适用（交易日不足或收益无波动）"
+              : money(data.metrics.daily_sharpe)}
+          </p>
+        )}
       </section>
       <div className="simulation-metrics">
         {metrics.map(([label, value]) => (
@@ -606,9 +726,15 @@ export function SimulationCharts({
         {completed && (
           <>
             <div className="replay-buttons">
-              <a href={`${exportBase}/trades`}>导出全部成交 CSV</a>
-              <a href={`${exportBase}/market_curve`}>导出分钟曲线 CSV</a>
-              <a href={`${exportBase}/daily_returns`}>导出日收益 CSV</a>
+              <DownloadButton href={`${exportBase}/trades`}>
+                导出全部成交 CSV
+              </DownloadButton>
+              <DownloadButton href={`${exportBase}/market_curve`}>
+                导出分钟曲线 CSV
+              </DownloadButton>
+              <DownloadButton href={`${exportBase}/daily_returns`}>
+                导出日收益 CSV
+              </DownloadButton>
             </div>
             <details>
               <summary>完整模拟指标与假设</summary>

@@ -40,7 +40,7 @@ def simulate(
     market_curve = []
     fee_total, impact_total = 0.0, 0.0
     strategies = strategies or {}
-    for symbol in symbols:
+    for symbol_index, symbol in enumerate(symbols):
         bars = frame[frame.symbol == symbol].sort_values("timestamp")
         cash = config.initial_cash / len(symbols)
         initial = cash
@@ -227,6 +227,7 @@ def simulate(
                     "volume": int(row.volume),
                 }
             )
+            rule_candidate = bool(target and not shares)
             if model_filter is not None:
                 estimated_cost = estimate_round_trip(
                     row.close,
@@ -275,10 +276,20 @@ def simulate(
                         "probability": model_decision.get("probability"),
                         "expected_return_bps": model_decision.get("expected_return_bps"),
                         "required_edge_bps": model_decision.get("required_edge_bps"),
+                        "rule_candidate": rule_candidate,
+                        "model_allow_entry": model_decision.get("allow_entry")
+                        if model_filter
+                        else None,
+                        "decision_reason": model_decision.get("reason") if model_filter else None,
                     }
                 )
-                if progress is not None and (i % 20 == 0 or i == len(bars) - 1):
-                    progress(i + 1, len(bars), market_curve, trades)
+            if progress is not None and (i % 20 == 0 or i == len(bars) - 1):
+                progress(
+                    symbol_index * len(times) + i + 1,
+                    len(times) * len(symbols),
+                    market_curve,
+                    trades,
+                )
             signal_time, previous_volume = ts, row.volume
         positions.append({"symbol": symbol, "position": shares, "cash": float(cash)})
         contributions.append(

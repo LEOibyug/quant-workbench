@@ -518,9 +518,11 @@ def feedback_features(probability, predicted_bps, label, actual_bps):
     )
 
 
-def _fit_heads(estimator, regressor, values, labels, targets, iterations):
+def _fit_heads(
+    estimator, regressor, values, labels, targets, iterations, progress=None, stage="离线训练"
+):
     with threadpool_limits(limits=1):
-        for _ in range(iterations):
+        for epoch in range(iterations):
             for start in range(0, len(values), 256):
                 estimator.partial_fit(
                     values[start : start + 256],
@@ -528,15 +530,24 @@ def _fit_heads(estimator, regressor, values, labels, targets, iterations):
                     classes=np.array([0, 1]),
                 )
                 regressor.partial_fit(values[start : start + 256], targets[start : start + 256])
+                if progress:
+                    progress(
+                        stage,
+                        epoch * len(values) + min(start + 256, len(values)),
+                        iterations * len(values),
+                        "样本步",
+                    )
 
 
-def train_model(frame, config):
+def train_model(frame, config, progress=None):
+    if progress:
+        progress("构建因果特征与训练样本", 0, None, "")
     if config.architecture == "gru":
         try:
             from quant_workbench.sequence_model import train_sequence_model
         except ImportError as exc:
             raise ValueError("GRU需要PyTorch，请运行 uv sync --extra neural") from exc
-        return train_sequence_model(frame, config)
+        return train_sequence_model(frame, config, progress=progress)
     features, labels, info = _training_samples(frame, config)
     eligible = len(features)
     if eligible < config.min_training_samples:
@@ -593,11 +604,19 @@ def train_model(frame, config):
         )
     targets = np.clip(info.return_bps.to_numpy() / 100, -10, 10)
     _fit_heads(
-        estimator, regressor, values[:split], labels[:split], targets[:split], config.max_iter
+        estimator,
+        regressor,
+        values[:split],
+        labels[:split],
+        targets[:split],
+        config.max_iter,
+        progress,
     )
     feedback_samples = 0
     if config.architecture == "mlp":
         # Purge boundary rows: teacher training labels must mature before any teacher input.
+        if progress:
+            progress("构建已成熟预测误差反馈", 0, None, "")
         eligible_feedback = np.flatnonzero((info.timestamp >= boundary).to_numpy())
         pending, feedback = {}, {}
         with threadpool_limits(limits=1):
@@ -635,6 +654,8 @@ def train_model(frame, config):
                 labels[eligible_feedback],
                 targets[eligible_feedback],
                 config.max_iter,
+                progress,
+                "反馈阶段训练",
             )
         feedback_samples = len(eligible_feedback)
     timestamps = pd.to_datetime(frame.timestamp, utc=True, format="mixed")

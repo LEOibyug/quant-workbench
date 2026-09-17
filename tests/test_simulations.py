@@ -137,7 +137,7 @@ def test_workspace_downloads_independent_data_without_research(research, monkeyp
         db.execute("DELETE FROM datasets")
     calls = []
 
-    def fetch(params):
+    def fetch(params, progress=None):
         calls.append(params)
         return frame
 
@@ -202,7 +202,7 @@ def test_failed_download_has_no_fabricated_result(research, monkeypatch):
     validate(repo, exp)
     dep = publish(repo, exp["id"])
 
-    def fail(_):
+    def fail(_, progress=None):
         raise RuntimeError("private transport details must not leak")
 
     monkeypatch.setattr("quant_workbench.simulations.fetch_provider", fail)

@@ -22,7 +22,7 @@ def _get(client, url, **kwargs):
             time.sleep(0.25 * 2**attempt)
 
 
-def fetch_alpaca(request: AlpacaInput) -> pd.DataFrame:
+def fetch_alpaca(request: AlpacaInput, progress=None) -> pd.DataFrame:
     key, secret = os.environ.get("APCA_API_KEY_ID"), os.environ.get("APCA_API_SECRET_KEY")
     if not key or not secret:
         raise ValueError("请在后端环境设置APCA_API_KEY_ID和APCA_API_SECRET_KEY，勿上传凭证")
@@ -75,6 +75,8 @@ def fetch_alpaca(request: AlpacaInput) -> pd.DataFrame:
                     )
             if len(records) > MAX_ROWS * 3:
                 raise ValueError("供应商数据超过安全上限，未保存截断数据，请缩小范围")
+            if progress:
+                progress("Alpaca 分页下载", len(records), None, "条原始行情")
             token = payload.get("next_page_token")
             if not token:
                 break
@@ -91,7 +93,7 @@ def fetch_alpaca(request: AlpacaInput) -> pd.DataFrame:
     return frame[frame.timestamp.isin(expected)].reset_index(drop=True)
 
 
-def fetch_massive(request: AlpacaInput) -> pd.DataFrame:
+def fetch_massive(request: AlpacaInput, progress=None) -> pd.DataFrame:
     """Massive (formerly Polygon) custom aggregates, raw minute-start bars."""
     from urllib.parse import urlsplit
 
@@ -145,6 +147,8 @@ def fetch_massive(request: AlpacaInput) -> pd.DataFrame:
                     ) from exc
                 if len(records) > MAX_ROWS * 3:
                     raise ValueError("供应商数据超过上限，请缩小范围；未保存截断结果")
+                if progress:
+                    progress(f"Massive 下载 {symbol}", len(records), None, "条原始行情")
                 next_url = payload.get("next_url")
                 if not next_url:
                     break
@@ -195,9 +199,9 @@ def provider_catalog() -> list[dict]:
     ]
 
 
-def fetch_provider(request) -> pd.DataFrame:
+def fetch_provider(request, progress=None) -> pd.DataFrame:
     adapters = {"alpaca": fetch_alpaca, "massive": fetch_massive}
-    frame = adapters[request.provider](request)
+    frame = adapters[request.provider](request, progress=progress)
     wanted = {s.strip().upper() for s in request.symbols}
     missing = wanted - set(frame.symbol)
     if missing:

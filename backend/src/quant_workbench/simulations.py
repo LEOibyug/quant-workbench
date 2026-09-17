@@ -157,6 +157,13 @@ def execute_simulation(repo: Repository, scope: Scope, identifier: str):
         with WORKER_GATE:
             job.update(status="running", stage="加载行情")
             save_job(repo, job)
+
+            def fetching(stage, done=0, total=None, unit=""):
+                job.update(
+                    stage=stage, download_progress={"done": done, "total": total, "unit": unit}
+                )
+                save_job(repo, job)
+
             source = repo.get(
                 "experiments" if scope == "research" else "deployments", job["source_id"]
             )
@@ -184,7 +191,8 @@ def execute_simulation(repo: Repository, scope: Scope, identifier: str):
                                 symbols=[job["symbol"]],
                                 start=since,
                                 end=job["end"],
-                            )
+                            ),
+                            progress=fetching,
                         )
                     )
                     frame = normalize_bars(frame[frame.symbol == job["symbol"]])

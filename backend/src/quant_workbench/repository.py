@@ -32,6 +32,10 @@ class Repository:
                     id TEXT PRIMARY KEY, experiment_id TEXT UNIQUE NOT NULL, body TEXT NOT NULL);
                 CREATE TABLE IF NOT EXISTS simulations(
                     id TEXT PRIMARY KEY, scope TEXT NOT NULL, body TEXT NOT NULL);
+                CREATE TABLE IF NOT EXISTS operations(id TEXT PRIMARY KEY, body TEXT NOT NULL);
+                CREATE TABLE IF NOT EXISTS run_progress(
+                    experiment_id TEXT, phase TEXT, body TEXT NOT NULL,
+                    PRIMARY KEY(experiment_id, phase));
                 CREATE TABLE IF NOT EXISTS runs(
                     experiment_id TEXT, phase TEXT, status TEXT, error TEXT,
                     exposed INTEGER DEFAULT 0,
@@ -117,9 +121,25 @@ class Repository:
         self.get("experiments", identifier)
         with self.connect() as db:
             return [
-                dict(r)
+                {**dict(r), "progress": self.run_progress(identifier, r["phase"])}
                 for r in db.execute("SELECT * FROM runs WHERE experiment_id=?", (identifier,))
             ]
+
+    def set_run_progress(self, identifier, phase, body):
+        with self.connect() as db:
+            db.execute(
+                "INSERT INTO run_progress VALUES (?,?,?) ON CONFLICT(experiment_id,phase) "
+                "DO UPDATE SET body=excluded.body",
+                (identifier, phase, json.dumps(body)),
+            )
+
+    def run_progress(self, identifier, phase):
+        with self.connect() as db:
+            row = db.execute(
+                "SELECT body FROM run_progress WHERE experiment_id=? AND phase=?",
+                (identifier, phase),
+            ).fetchone()
+        return json.loads(row[0]) if row else None
 
     def save_result(self, identifier: str, phase: str, result: dict):
         path = self.path("results", f"{identifier}-{phase}", ".json")
@@ -143,6 +163,17 @@ class Repository:
 
     def recover(self):
         with self.connect() as db:
+            for row in db.execute("SELECT id,body FROM operations").fetchall():
+                body = json.loads(row["body"])
+                if body["status"] in {"queued", "running"}:
+                    body.update(
+                        status="failed",
+                        error="服务重启中断，请重新提交",
+                        finished_at=datetime.now(UTC).isoformat(),
+                    )
+                    db.execute(
+                        "UPDATE operations SET body=? WHERE id=?", (json.dumps(body), row["id"])
+                    )
             for row in db.execute("SELECT id,body FROM simulations").fetchall():
                 body = json.loads(row["body"])
                 if body["status"] in {"queued", "running"}:

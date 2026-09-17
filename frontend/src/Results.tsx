@@ -1,3 +1,4 @@
+import { DownloadButton } from "./ProgressNotice";
 import type { Result } from "./types";
 const number = (n: number | null | undefined, d = 2) =>
   n == null
@@ -191,12 +192,12 @@ export function Results({ result: r, id }: { result: Result; id: string }) {
           <h2>成交记录</h2>
           <div className="exports">
             {["trades", "curve", "daily_returns"].map((kind, i) => (
-              <a
+              <DownloadButton
                 key={kind}
                 href={`/api/experiments/${id}/export/${r.phase}/${kind}`}
               >
                 {["成交", "曲线", "日收益"][i]} CSV ↗
-              </a>
+              </DownloadButton>
             ))}
           </div>
         </div>

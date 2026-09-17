@@ -29,6 +29,7 @@ export interface Run {
   phase: Phase;
   status: string;
   error: string | null;
+  progress?: import("./ProgressNotice").ProgressState;
 }
 export interface Profile {
   symbol: string;

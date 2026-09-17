@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import { ProgressNotice } from "./ProgressNotice";
 import { api, post } from "./api";
 import { phaseNames, type Phase } from "./types";
 import { SimulationCharts, type SimulationData } from "./SimulationCharts";
@@ -16,6 +17,9 @@ export interface SimulationJob {
   warnings: string[];
   error: string | null;
   data_source?: string;
+  created_at?: string;
+  completed_at?: string;
+  download_progress?: { done: number; total: number | null; unit: string };
   config: Record<string, number | string>;
 }
 interface Props {
@@ -280,6 +284,11 @@ export function SimulationPanel({
         >
           {pending ? "提交中…" : running ? "模拟进行中…" : "开始单股模拟"}
         </button>
+        {pending && (
+          <ProgressNotice
+            value={{ status: "running", stage: "提交或加载模拟结果" }}
+          />
+        )}
         <label className="simulation-history">
           本页模拟记录
           <select
@@ -313,7 +322,19 @@ export function SimulationPanel({
               {job.total_bars ? job.total_bars.toLocaleString() : "—"} 分钟
             </span>
           </div>
-          <progress max={job.total_bars || 1} value={job.completed_bars} />
+          <ProgressNotice
+            value={{
+              status: job.status,
+              stage: job.stage,
+              done: job.total_bars
+                ? job.completed_bars
+                : job.download_progress?.done,
+              total: job.total_bars || null,
+              unit: job.total_bars ? "分钟" : job.download_progress?.unit,
+              started_at: job.created_at,
+              finished_at: job.completed_at,
+            }}
+          />
           <p className="muted">
             {job.start} — {job.end} · 初始资金 $
             {job.initial_cash.toLocaleString()} · {job.data_source || "加载中"}

@@ -266,7 +266,7 @@ def training_sequences(frame, config):
     return stack_samples([samples[i] for i in order]), info.loc[order].reset_index(drop=True)
 
 
-def train_sequence_model(frame, config):
+def train_sequence_model(frame, config, progress=None):
     values, info = training_sequences(frame, config)
     boundary = info.iloc[int(len(info) * 0.6)].timestamp
     bootstrap = np.flatnonzero((info.target_timestamp < boundary).to_numpy())
@@ -286,8 +286,8 @@ def train_sequence_model(frame, config):
         estimator.network.parameters(), lr=config.neural_learning_rate, weight_decay=0.01
     )
 
-    def fit(indices):
-        for _ in range(config.max_iter):
+    def fit(indices, stage):
+        for epoch in range(config.max_iter):
             for start in range(0, len(indices), 128):
                 ids = indices[start : start + 128]
                 estimator.fit_batch(
@@ -296,8 +296,17 @@ def train_sequence_model(frame, config):
                     returns[ids],
                     offline_optimizer,
                 )
+                if progress:
+                    progress(
+                        stage,
+                        epoch * len(indices) + min(start + 128, len(indices)),
+                        config.max_iter * len(indices),
+                        "样本步",
+                    )
 
-    fit(bootstrap)
+    fit(bootstrap, "GRU 初始阶段训练")
+    if progress:
+        progress("生成教师预测与成熟误差反馈", 0, None, "")
     probabilities, predictions = np.zeros(len(info)), np.zeros(len(info))
     # The frozen teacher sees no feedback-period labels; batching does not cross sample windows.
     for start in range(0, len(feedback_ids), 256):
@@ -320,7 +329,7 @@ def train_sequence_model(frame, config):
         values["context"][i, -6:] = latest[row.symbol][0]
         queue.append(i)
         last_segment[row.symbol] = row.segment
-    fit(feedback_ids)
+    fit(feedback_ids, "GRU 反馈阶段训练")
     metadata = dict(
         model_version=SEQUENCE_VERSION,
         sklearn_version=sklearn_version,
