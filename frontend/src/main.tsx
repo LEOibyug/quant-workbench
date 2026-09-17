@@ -26,7 +26,7 @@ function App() {
         <nav aria-label="工作区导航">
           {research && (
             <a href="/research" aria-current="page">
-              01　策略研究
+              策略研究
             </a>
           )}
           <a

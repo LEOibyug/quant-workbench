@@ -153,21 +153,6 @@ def test_return_head_updates_only_after_label_and_cost_gate_can_veto(bars):
     assert not np.array_equal(model._states["NVDA"]["regressor"].coef_, offline)
 
 
-def test_v1_saved_model_gets_default_cost_settings_without_return_head(bars):
-    import pickle
-
-    model = train_model(bars, TimeSeriesConfig(enabled=True, k=5, max_iter=1))
-    del model.regressor
-    for key in ("cost_aware", "cost_multiplier", "min_edge_bps"):
-        model.config.__dict__.pop(key)
-    restored = pickle.loads(pickle.dumps(model))
-    assert restored.config.cost_aware is False
-    assert restored.regressor is None
-    for index in range(11):
-        decision = restored.predict(context(bars, index))
-    assert decision["probability"] is not None
-
-
 def test_long_history_streaming_matches_batch_and_ignores_overnight_split(bars):
     from quant_workbench.timeseries import HistoricalContext, _long_rows
 

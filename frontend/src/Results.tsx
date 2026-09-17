@@ -46,15 +46,24 @@ export function Results({ result: r, id }: { result: Result; id: string }) {
           ["成交次数", "trade_count", ""],
           ["佣金及规费", "fees", " USD"],
           ["价差及滑点", "impact_cost", " USD"],
-        ].map(([label, key, unit]) => (
-          <div className="metric" key={key}>
-            <span>{label}</span>
-            <strong>
-              {number(r.metrics[key])}
-              {unit}
-            </strong>
-          </div>
-        ))}
+        ].map(([label, key, unit]) => {
+          const value = r.metrics[key];
+          const signed = key === "return_pct" || key === "daily_sharpe";
+          return (
+            <div className="metric" key={key}>
+              <span>{label}</span>
+              <strong
+                className={
+                  signed && value != null ? (value >= 0 ? "pos" : "neg") : ""
+                }
+              >
+                {signed && value != null && value >= 0 ? "+" : ""}
+                {number(value)}
+                {unit}
+              </strong>
+            </div>
+          );
+        })}
       </div>
       <section className="card">
         <div className="section-heading">
@@ -141,7 +150,10 @@ export function Results({ result: r, id }: { result: Result; id: string }) {
                 <tr key={c.symbol}>
                   <td>{c.symbol}</td>
                   <td>{c.strategy}</td>
-                  <td>{number(c.net_profit)}</td>
+                  <td className={c.net_profit >= 0 ? "pos" : "neg"}>
+                    {c.net_profit >= 0 ? "+" : ""}
+                    {number(c.net_profit)}
+                  </td>
                 </tr>
               ))}
             </tbody>
@@ -167,10 +179,13 @@ export function Results({ result: r, id }: { result: Result; id: string }) {
                   ["纯规则", r.rule_baseline],
                 ].map(([label, m]) => {
                   const metrics = m as Record<string, number | null>;
+                  const net = metrics.return_pct;
                   return (
                     <tr key={String(label)}>
                       <td>{String(label)}</td>
-                      <td>{number(metrics.return_pct)}%</td>
+                      <td className={net != null && net >= 0 ? "pos" : "neg"}>
+                        {number(net)}%
+                      </td>
                       <td>{number(metrics.max_drawdown_pct)}%</td>
                       <td>{number(metrics.trade_count, 0)}</td>
                     </tr>
@@ -202,7 +217,7 @@ export function Results({ result: r, id }: { result: Result; id: string }) {
           </div>
         </div>
         <p className="muted">
-          共 {r.total_trades} 笔，页面最多显示 300 笔。时间为 UTC。
+          共 {r.total_trades} 笔，页面最多显示 300 笔。时间为 UTC；卖出行的盈亏为该次平仓的已实现净盈亏。
         </p>
         <div className="table-wrap trades">
           <table>
@@ -214,6 +229,7 @@ export function Results({ result: r, id }: { result: Result; id: string }) {
                 <th>数量</th>
                 <th>价格</th>
                 <th>费用</th>
+                <th>已实现盈亏</th>
                 <th>原因</th>
               </tr>
             </thead>
@@ -222,10 +238,23 @@ export function Results({ result: r, id }: { result: Result; id: string }) {
                 <tr key={i}>
                   <td>{t.timestamp.replace("T", " ").slice(0, 19)}</td>
                   <td>{t.symbol}</td>
-                  <td>{t.side === "buy" ? "买入" : "卖出"}</td>
+                  <td className={t.side === "buy" ? "side-buy" : "side-sell"}>
+                    {t.side === "buy" ? "买入" : "卖出"}
+                    {t.position_id ? ` · ${t.position_id}` : ""}
+                  </td>
                   <td>{t.quantity}</td>
                   <td>{number(t.price)}</td>
                   <td>{number(t.fee)}</td>
+                  <td>
+                    {t.realized_pnl == null ? (
+                      <span className="muted">持仓中</span>
+                    ) : (
+                      <span className={t.realized_pnl >= 0 ? "pos" : "neg"}>
+                        {t.realized_pnl >= 0 ? "+" : ""}
+                        {number(t.realized_pnl)}
+                      </span>
+                    )}
+                  </td>
                   <td>{t.reason}</td>
                 </tr>
               ))}

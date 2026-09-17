@@ -220,6 +220,20 @@ export function Research() {
         </div>
         <span className="badge">1 MIN · LONG ONLY</span>
       </div>
+      <nav className="anchor-nav" aria-label="页面分区导航">
+        {[
+          ["#data", "行情数据"],
+          ["#setup", "冻结实验"],
+          ["#model", "时序模型"],
+          ["#evaluation", "实验验证"],
+          ["#simulation", "单股模拟"],
+          ["#results", "结果明细"],
+        ].map(([href, label]) => (
+          <a key={href} href={href}>
+            {label}
+          </a>
+        ))}
+      </nav>
       {error && (
         <div className="notice error" role="alert">
           {error}
@@ -229,7 +243,7 @@ export function Research() {
         <button onClick={() => setReconnect((n) => n + 1)}>重新连接任务</button>
       )}
       {activity === "train" && !dataset && <ProgressNotice value={progress} />}
-      <section className="card">
+      <section className="card" id="data">
         <div className="section-heading">
           <h2>01 / 行情数据</h2>
           <button
@@ -381,7 +395,7 @@ export function Research() {
       </section>
       {dataset && (
         <form onSubmit={create}>
-          <section className="card">
+          <section className="card" id="setup">
             <h2>02 / 冻结实验范围</h2>
             <div className="form-grid">
               <label>
@@ -706,7 +720,7 @@ export function Research() {
               </div>
             </details>
           </section>
-          <section className="card">
+          <section className="card" id="model">
             <div className="section-heading">
               <h2>03 / 在线时序模型</h2>
               <label className="inline">
@@ -859,8 +873,8 @@ export function Research() {
             </p>
             <p className="muted">
               GRU直接编码分钟与已完成5分钟序列，保留长历史与误差反馈，使用近期成熟样本回放；默认设备自动选择
-              CUDA → MPS →
-              CPU，元数据与运行结果记录实际设备。MLP采用两个64→32隐藏层网络，分别输出概率与收益；线性/RBF版本使用逻辑分类与Huber回归。每股独立更新；跨日保留模型权重和历史背景，重建短窗口与误差反馈，不生成隔夜标签。上涨概率不等同于净盈利概率。成本过滤要求：预测收益
+              CUDA →
+              CPU（已面向CUDA生态，MPS不再支持），元数据与运行结果记录实际设备。MLP采用两个64→32隐藏层网络，分别输出概率与收益；线性/RBF版本使用逻辑分类与Huber回归。每股独立更新；跨日保留模型权重和历史背景，重建短窗口与误差反馈，不生成隔夜标签。上涨概率不等同于净盈利概率；严格模式的成本过滤要求预测收益
               bps 大于估计往返成本 × 安全倍数 + 最低额外优势。
             </p>
             <button className="primary" disabled={busy || !symbols.length}>

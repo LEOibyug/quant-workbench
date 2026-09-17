@@ -79,6 +79,8 @@ export interface Trade {
   fee: number;
   impact_cost: number;
   reason: string;
+  position_id?: string;
+  realized_pnl?: number | null;
 }
 export interface Result {
   phase: Phase;

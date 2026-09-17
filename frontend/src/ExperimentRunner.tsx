@@ -162,19 +162,39 @@ export function ExperimentRunner({ selectedId }: { selectedId?: string }) {
         {experiment && (
           <>
             <div className="tabs">
-              {(Object.keys(phaseNames) as Phase[]).map((p) => (
-                <button
-                  key={p}
-                  className={p === phase ? "active" : ""}
-                  onClick={() => setPhase(p)}
-                >
-                  {phaseNames[p]}
-                  <small>
-                    {experiment.runs.find((r) => r.phase === p)?.status ||
-                      "未运行"}
-                  </small>
-                </button>
-              ))}
+              {(Object.keys(phaseNames) as Phase[]).map((p) => {
+                const status =
+                  experiment.runs.find((r) => r.phase === p)?.status || "未运行";
+                return (
+                  <button
+                    key={p}
+                    className={p === phase ? "active" : ""}
+                    onClick={() => setPhase(p)}
+                  >
+                    {phaseNames[p]}
+                    <small>
+                      <span
+                        className={`status-dot status-${
+                          status === "completed"
+                            ? "completed"
+                            : status === "running"
+                              ? "running"
+                              : status === "failed"
+                                ? "failed"
+                                : "pending"
+                        }`}
+                      />
+                      {status === "completed"
+                        ? "已完成 · 结果已固定"
+                        : status === "running"
+                          ? "计算中"
+                          : status === "failed"
+                            ? "失败"
+                            : "未运行"}
+                    </small>
+                  </button>
+                );
+              })}
             </div>
             <p>
               {experiment.symbols.join(" / ")} · {experiment.start} —{" "}
@@ -270,23 +290,29 @@ export function ExperimentRunner({ selectedId }: { selectedId?: string }) {
         )}
       </section>
       {experiment && (
-        <SimulationPanel
-          key={experiment.id}
-          scope="research"
-          sourceId={experiment.id}
-          symbols={experiment.symbols}
-          cash={experiment.config.initial_cash}
-          validated={experiment.runs.some(
-            (r) => r.phase === "validation" && r.status === "completed",
-          )}
-          bounds={{
-            train: [experiment.start, experiment.train_end],
-            validation: [experiment.train_end, experiment.validation_end],
-            test: [experiment.validation_end, experiment.end],
-          }}
-        />
+        <div id="simulation">
+          <SimulationPanel
+            key={experiment.id}
+            scope="research"
+            sourceId={experiment.id}
+            symbols={experiment.symbols}
+            cash={experiment.config.initial_cash}
+            validated={experiment.runs.some(
+              (r) => r.phase === "validation" && r.status === "completed",
+            )}
+            bounds={{
+              train: [experiment.start, experiment.train_end],
+              validation: [experiment.train_end, experiment.validation_end],
+              test: [experiment.validation_end, experiment.end],
+            }}
+          />
+        </div>
       )}
-      {result && <Results result={result} id={id} />}
+      {result && (
+        <div id="results">
+          <Results result={result} id={id} />
+        </div>
+      )}
     </>
   );
 }

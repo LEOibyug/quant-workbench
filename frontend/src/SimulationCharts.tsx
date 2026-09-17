@@ -129,6 +129,33 @@ function LineChart({
   const x = (i: number) => 78 + (i / Math.max(1, points.length - 1)) * 854;
   const y = (v: number) =>
     195 - ((v - geometry.low) / (geometry.high - geometry.low)) * 169;
+  const indexFor = (ts: string) => {
+    const time = Math.ceil(new Date(ts).getTime() / 60000) * 60000;
+    let lo = 0,
+      hi = points.length - 1;
+    while (lo < hi) {
+      const mid = (lo + hi) >> 1;
+      if (new Date(points[mid].timestamp).getTime() < time) lo = mid + 1;
+      else hi = mid;
+    }
+    return lo;
+  };
+  const roundTrips = useMemo(() => {
+    const byPosition = new Map<string, Fill[]>();
+    for (const t of trades)
+      byPosition.set(t.position_id, [...(byPosition.get(t.position_id) || []), t]);
+    return [...byPosition.values()]
+      .map((group) => {
+        const buy = group.find((t) => t.side === "buy");
+        const sells = group.filter((t) => t.side === "sell");
+        const last = sells[sells.length - 1];
+        if (!buy || !last) return null;
+        const pnl = sells.reduce((sum, t) => sum + (t.realized_pnl || 0), 0);
+        return { buy, last, pnl };
+      })
+      .filter(Boolean)
+      .slice(-120) as { buy: Fill; last: Fill; pnl: number }[];
+  }, [trades]);
   const at =
     selected === null ? current : points[Math.min(selected, points.length - 1)];
   const activeTrade = chosen
@@ -217,18 +244,28 @@ function LineChart({
               />
             );
           })}
+          {roundTrips.map((rt, i) => {
+            const x1 = x(indexFor(rt.buy.timestamp)),
+              x2 = x(indexFor(rt.last.timestamp));
+            if (x2 - x1 < 2) return null;
+            return (
+              <line
+                key={`rt-${i}`}
+                className="trade-link"
+                x1={x1}
+                x2={x2}
+                y1={y(rt.buy.price)}
+                y2={y(rt.last.price)}
+                stroke={rt.pnl >= 0 ? colors.green : colors.red}
+                strokeWidth="1.4"
+                strokeDasharray="5 4"
+                opacity="0.75"
+              />
+            );
+          })}
           {trades.slice(-400).map((t, i) => {
-            const time =
-              Math.ceil(new Date(t.timestamp).getTime() / 60000) * 60000;
-            let lo = 0,
-              hi = points.length - 1;
-            while (lo < hi) {
-              const mid = (lo + hi) >> 1;
-              if (new Date(points[mid].timestamp).getTime() < time)
-                lo = mid + 1;
-              else hi = mid;
-            }
-            const px = x(lo),
+            const lo = indexFor(t.timestamp),
+              px = x(lo),
               py = y(t.price),
               buy = t.side === "buy";
             const label = `${buy ? "买入" : "卖出"} ${stamp(t.timestamp)} · ${t.quantity}股 @ $${money(t.price)} · 费用 $${money(t.fee)} · ${buy ? "此笔截至回放时刻净盈亏" : "本次卖出净盈亏"} $${money(buy ? pnlForEntry(t) : t.realized_pnl || 0)}`;
@@ -305,24 +342,37 @@ function LineChart({
       </small>
       {trades.length > 0 && (
         <p className="muted">
-          绿色「买」为买入，红色「卖」为卖出 · 点击标记查看成交与盈亏
+          绿色「买」/红色「卖」为买卖点，虚线连接同一持仓的买入与最后一次卖出（绿盈红亏）·
+          点击标记查看成交与盈亏
           {trades.length > 400 ? "（图中显示最近 400 次成交）" : ""}
         </p>
       )}
       {activeTrade && (
         <p className="trade-detail">
-          {activeTrade.side === "buy" ? "买入" : "卖出"} ·{" "}
-          {stamp(activeTrade.timestamp)} · {activeTrade.quantity} 股 @ $
+          <span className={activeTrade.side === "buy" ? "side-buy" : "side-sell"}>
+            {activeTrade.side === "buy" ? "买入" : "卖出"}
+          </span>{" "}
+          · {stamp(activeTrade.timestamp)} · {activeTrade.quantity} 股 @ $
           {money(activeTrade.price)} · 费用 ${money(activeTrade.fee)} ·{" "}
           {activeTrade.side === "buy"
             ? "此笔截至回放时刻净盈亏（含浮盈亏）"
             : "此次卖出净盈亏"}{" "}
-          $
-          {money(
-            activeTrade.side === "buy"
-              ? pnlForEntry(activeTrade)
-              : activeTrade.realized_pnl || 0,
-          )}
+          <span
+            className={
+              (activeTrade.side === "buy"
+                ? pnlForEntry(activeTrade)
+                : activeTrade.realized_pnl || 0) >= 0
+                ? "pos"
+                : "neg"
+            }
+          >
+            $
+            {money(
+              activeTrade.side === "buy"
+                ? pnlForEntry(activeTrade)
+                : activeTrade.realized_pnl || 0,
+            )}
+          </span>
         </p>
       )}
     </section>
@@ -439,17 +489,20 @@ export function SimulationCharts({
     }
   }
   const dailyMax = Math.max(0.01, ...daily.map((d) => Math.abs(d.pct)));
-  const metrics = [
+  const net = current.equity - job.initial_cash;
+  const metrics: [string, string, string?][] = [
     ["股票价格", `$${money(current.close)}`],
     ["净资产", `$${money(current.equity)}`],
     [
       "累计净收益",
-      `$${money(current.equity - job.initial_cash)} (${money((current.equity / job.initial_cash - 1) * 100)}%)`,
+      `${net >= 0 ? "+" : "-"}$${money(Math.abs(net))} (${money((current.equity / job.initial_cash - 1) * 100)}%)`,
+      net >= 0 ? "pos" : "neg",
     ],
     ["可用现金", `$${money(current.cash)}`],
     [
       "已实现 / 浮动盈亏",
       `$${money(current.realized_pnl)} / $${money(current.unrealized_pnl)}`,
+      current.realized_pnl + current.unrealized_pnl >= 0 ? "pos" : "neg",
     ],
     [
       "持仓",
@@ -605,10 +658,10 @@ export function SimulationCharts({
         )}
       </section>
       <div className="simulation-metrics">
-        {metrics.map(([label, value]) => (
+        {metrics.map(([label, value, tone]) => (
           <div className="card" key={label}>
             <small>{label}</small>
-            <strong>{value}</strong>
+            <strong className={tone || ""}>{value}</strong>
           </div>
         ))}
       </div>
@@ -718,16 +771,22 @@ export function SimulationCharts({
                 .map((t, i) => (
                   <tr key={`${t.timestamp}-${i}`}>
                     <td>{stamp(t.timestamp)}</td>
-                    <td>
-                      {t.side === "buy" ? "买入" : "卖出"} · {t.position_id}
+                    <td className={t.side === "buy" ? "side-buy" : "side-sell"}>
+                      {t.side === "buy" ? "买入" : "卖出"}
+                      {t.position_id ? ` · ${t.position_id}` : ""}
                     </td>
                     <td>{t.quantity}</td>
                     <td>${money(t.price)}</td>
                     <td>${money(t.fee)}</td>
                     <td>
-                      {t.realized_pnl === null
-                        ? "待卖出"
-                        : `$${money(t.realized_pnl)}`}
+                      {t.realized_pnl === null ? (
+                        <span className="muted">待卖出</span>
+                      ) : (
+                        <span className={t.realized_pnl >= 0 ? "pos" : "neg"}>
+                          {t.realized_pnl >= 0 ? "+" : "-"}$
+                          {money(Math.abs(t.realized_pnl))}
+                        </span>
+                      )}
                     </td>
                     <td>{t.reason}</td>
                   </tr>

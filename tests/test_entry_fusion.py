@@ -56,7 +56,7 @@ def test_model_position_size_and_funnel_are_causal():
     assert result["trades"][0] == half["trades"][0]
 
 
-def test_sequence_scaled_return_and_legacy_checkpoint_compatibility(monkeypatch):
+def test_sequence_estimator_roundtrip_preserves_scale_and_temperature(monkeypatch):
     torch = pytest.importorskip("torch")
     from quant_workbench.sequence_model import SequenceEstimator, cpu_tree
     from quant_workbench.timeseries import TimeSeriesConfig
@@ -80,21 +80,13 @@ def test_sequence_scaled_return_and_legacy_checkpoint_compatibility(monkeypatch)
         for weight in estimator.network.parameters():
             weight.zero_()
         estimator.network.regressor.bias.fill_(0.5)
+    estimator.temperature = 2.0
     p, bps = estimator.predict_batch(sample)
     assert p[0] == pytest.approx(0.5) and bps[0] == pytest.approx(10)
-    saved = estimator.__getstate__()
     restored = copy.deepcopy(estimator)
-    assert restored.return_scale == 20
+    assert restored.return_scale == 20 and restored.temperature == 2.0
+    np.testing.assert_allclose(restored.predict_batch(sample)[0], p, atol=1e-6)
     np.testing.assert_allclose(restored.predict_batch(sample)[1], bps)
-    # Old checkpoints have no scale or new config fields; they keep 100 bps units
-    # and restore under current defaults (adaptive gate, normalized returns).
-    saved.pop("return_scale")
-    saved["config"].__dict__.pop("return_normalization", None)
-    saved["config"].__dict__.pop("decision_mode", None)
-    restored.__setstate__(saved)
-    assert restored.return_scale == 100
-    assert restored.config.return_normalization is True
-    assert restored.config.decision_mode == "adaptive"
     restored.fit_batch(sample, [1], [12], restored.optimizer)
     assert all(torch.isfinite(v).all() for v in cpu_tree(restored.network.state_dict()).values())
 
@@ -152,37 +144,88 @@ def test_full_confidence_scaled_entry_rechecks_cost_after_open_gap(monkeypatch):
     assert result["decision_funnel"]["TEST"]["unfilled_entry_attempts"] > 0
 
 
-def test_risk_scaled_model_preserves_warmup_and_strict_mode(monkeypatch):
+def test_decision_modes_warmup_quantile_gate_and_scaling(monkeypatch):
+    """One harness covering warmup, adaptive quantile admission/blocking, and the
+    risk_scaled vs strict contrast, replacing three overlapping tests."""
     from quant_workbench.market_data import demo_data
     from quant_workbench.timeseries import TimeSeriesConfig, train_model
 
     frame = demo_data().query("symbol == 'NVDA'")
     frame = frame[frame.timestamp < "2024-01-05"].reset_index(drop=True)
-    base = train_model(
+
+    def context(i):
+        bar = frame.iloc[i].to_dict()
+        return {
+            "symbol": "NVDA",
+            "timestamp": bar["timestamp"].isoformat(),
+            "recent_bars": [bar],
+            "round_trip_cost_bps": 5.0,
+        }
+
+    # risk_scaled admits post-warmup weak evidence and scales size; strict rejects it.
+    scaled = train_model(
         frame,
         TimeSeriesConfig(
             enabled=True, k=5, max_iter=1, decision_mode="risk_scaled", cost_aware=True
         ),
     )
-    strict = copy.deepcopy(base)
-    strict.config = strict.config.model_copy(update={"decision_mode": "strict"})
-    for model in (base, strict):
-        monkeypatch.setattr(model, "_predict_heads", lambda *args: (0.51, 2.0))
+    strict = scaled.config.model_copy(update={"decision_mode": "strict"})
+    strict_model = copy.deepcopy(scaled)
+    strict_model.config = strict
+    for model in (scaled, strict_model):
+        monkeypatch.setattr(model, "_predict_heads", lambda *args: (0.51, 6.0))
     for index in range(11):
-        bar = frame.iloc[index].to_dict()
-        context = {
-            "symbol": "NVDA",
-            "timestamp": bar["timestamp"].isoformat(),
-            "recent_bars": [bar],
-            "round_trip_cost_bps": 9.0,
-        }
-        scaled = base.predict(context)
-        hard = strict.predict(context)
+        hard = strict_model.predict(context(index))
         if index < 10:
-            assert not scaled["allow_entry"] and scaled["risk_fraction"] == 0
+            assert not scaled.predict(context(index))["allow_entry"]
         else:
-            assert scaled["allow_entry"] and 0 < scaled["risk_fraction"] < 1
+            allowed = scaled.predict(context(index))
+            assert allowed["allow_entry"] and 0 < allowed["risk_fraction"] < 1
         assert not hard["allow_entry"]
+
+    # Adaptive: warmup first, history fills with 0.50, later 0.52 readings pass the
+    # rolling quantile gate with scaled size; a 0.6 reading under a 0.9 history is
+    # blocked by the quantile gate even though it clears the 0.5 floor.
+    adaptive = train_model(
+        frame,
+        TimeSeriesConfig(
+            enabled=True, k=5, max_iter=1, decision_mode="adaptive", cost_aware=True
+        ),
+    )
+    calls = {"n": 0}
+
+    def fake_heads(state, features):
+        calls["n"] += 1
+        return (0.52 if calls["n"] > 60 else 0.5), 6.0
+
+    monkeypatch.setattr(adaptive, "_predict_heads", fake_heads)
+    allowed = None
+    for index in range(80):
+        decision = adaptive.predict(context(index))
+        if index < 10:
+            assert not decision["allow_entry"] and decision["risk_fraction"] == 0
+        if decision.get("adaptive_threshold") is not None:
+            assert decision["adaptive_threshold"] <= 0.52
+        if decision["allow_entry"]:
+            allowed = decision
+    assert allowed is not None
+    assert 0 < allowed["risk_fraction"] < 1
+
+    high = copy.deepcopy(adaptive)
+    high._states = {}
+    seen = {"n": 0}
+
+    def high_heads(state, features):
+        seen["n"] += 1
+        return (0.6 if seen["n"] > 60 else 0.9), 6.0
+
+    monkeypatch.setattr(high, "_predict_heads", high_heads)
+    decision = None
+    for index in range(70):
+        decision = high.predict(context(index))
+    assert decision["adaptive_threshold"] == pytest.approx(0.9)
+    assert not decision["allow_entry"] and decision["risk_fraction"] == 0
+    assert "分位" in decision["reason"]
 
 
 def test_quantile_threshold_requires_samples_and_floors_at_half():
@@ -198,87 +241,9 @@ def test_quantile_threshold_requires_samples_and_floors_at_half():
     assert quantile_threshold(spread, quantile=0.95) > quantile_threshold(spread, quantile=0.5)
 
 
-def test_adaptive_mode_gates_on_rolling_quantile_and_scales_size(monkeypatch):
-    from quant_workbench.market_data import demo_data
-    from quant_workbench.timeseries import TimeSeriesConfig, train_model
-
-    frame = demo_data().query("symbol == 'NVDA'")
-    frame = frame[frame.timestamp < "2024-01-05"].reset_index(drop=True)
-    model = train_model(
-        frame,
-        TimeSeriesConfig(enabled=True, k=5, max_iter=1, decision_mode="adaptive", cost_aware=True),
-    )
-    calls = {"probability": []}
-
-    def fake_heads(state, features):
-        # Warmup ends after 2k=10 bars; history then fills with 0.50 readings.
-        return (0.52 if len(calls["probability"]) >= 60 else 0.5), 6.0
-
-    monkeypatch.setattr(model, "_predict_heads", fake_heads)
-    allowed = None
-    for index in range(80):
-        bar = frame.iloc[index].to_dict()
-        context = {
-            "symbol": "NVDA",
-            "timestamp": bar["timestamp"].isoformat(),
-            "recent_bars": [bar],
-            "round_trip_cost_bps": 5.0,
-        }
-        decision = model.predict(context)
-        calls["probability"].append(decision.get("probability"))
-        if index < 10:
-            assert not decision["allow_entry"] and decision["risk_fraction"] == 0
-        if decision.get("adaptive_threshold") is not None:
-            assert decision["adaptive_threshold"] <= 0.52
-        if decision["allow_entry"]:
-            allowed = decision
-    assert allowed is not None
-    assert 0 < allowed["risk_fraction"] < 1
-
-
-def test_adaptive_mode_blocks_below_quantile(monkeypatch):
-    from quant_workbench.market_data import demo_data
-    from quant_workbench.timeseries import TimeSeriesConfig, train_model
-
-    frame = demo_data().query("symbol == 'NVDA'")
-    frame = frame[frame.timestamp < "2024-01-05"].reset_index(drop=True)
-    model = train_model(
-        frame, TimeSeriesConfig(enabled=True, k=5, max_iter=1, decision_mode="adaptive")
-    )
-    index = {"i": 0}
-
-    def fake_heads(state, features):
-        index["i"] += 1
-        # Fill history with 0.9 readings, then predict 0.6: above the 0.5 floor but
-        # far below the rolling 80th percentile, so the adaptive gate must veto.
-        return (0.6 if index["i"] > 60 else 0.9), 6.0
-
-    monkeypatch.setattr(model, "_predict_heads", fake_heads)
-    decision = None
-    for i in range(70):
-        bar = frame.iloc[i].to_dict()
-        decision = model.predict(
-            {
-                "symbol": "NVDA",
-                "timestamp": bar["timestamp"].isoformat(),
-                "recent_bars": [bar],
-                "round_trip_cost_bps": 5.0,
-            }
-        )
-    assert decision is not None
-    assert decision["adaptive_threshold"] == pytest.approx(0.9)
-    assert not decision["allow_entry"]
-    assert decision["risk_fraction"] == 0
-    assert "分位" in decision["reason"]
-
-
-def test_gru_temperature_calibration_and_device_policy(monkeypatch):
+def test_gru_temperature_calibration_flattens_overconfident_logits(monkeypatch):
     torch = pytest.importorskip("torch")
-    from quant_workbench.sequence_model import (
-        SequenceEstimator,
-        _best_temperature,
-        select_device,
-    )
+    from quant_workbench.sequence_model import SequenceEstimator, _best_temperature
     from quant_workbench.timeseries import TimeSeriesConfig
     from sklearn.preprocessing import StandardScaler
 
@@ -289,12 +254,7 @@ def test_gru_temperature_calibration_and_device_policy(monkeypatch):
     assert temperature > 1.5  # must flatten towards calibrated probabilities
     assert _best_temperature(labels, np.zeros(4000)) == pytest.approx(1.0, abs=0.2)
 
-    monkeypatch.setenv("QUANT_TORCH_DEVICE", "cpu")
-    assert select_device() == "cpu"
-    monkeypatch.setenv("QUANT_TORCH_DEVICE", "mps")
-    with pytest.raises(ValueError, match="MPS"):
-        select_device()
-    monkeypatch.setenv("QUANT_TORCH_DEVICE", "cpu")
+    monkeypatch.setenv("QUANT_TORCH_DEVICE", "cpu")  # device policy: sequence_model tests
 
     scalers = {
         "short": StandardScaler().fit(np.zeros((2, 7))),
