@@ -30,3 +30,6 @@ build/
 *.sqlite*
 *.db
 /需求/*.docx
+
+# Local credential notes
+/keys/
