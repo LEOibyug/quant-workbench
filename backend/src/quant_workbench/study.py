@@ -395,8 +395,13 @@ def render_report(report):
             ]
         control = item.get("legacy_test")
         if control:
-            control_return = control.get("metrics", {}).get("return_pct", control.get("return_pct"))
-            lines += [f"旧规则对照测试净收益：{control_return}%。"]
+            if control.get("error"):
+                lines += [f"旧规则对照测试失败：{control['error']}。"]
+            else:
+                control_return = control.get("metrics", {}).get(
+                    "return_pct", control.get("return_pct")
+                )
+                lines += [f"旧规则对照测试净收益：{control_return}%。"]
         test = item["test"]
         if test and "metrics" in test:
             lines += [

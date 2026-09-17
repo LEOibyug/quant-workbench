@@ -67,3 +67,5 @@ uv run quant-workbench study --dataset 数据集ID \
 合成数据报告仅用于验证流程，不能据此给NVDA等真实股票选择实盘策略。真实分析需要先配置供应商密钥并下载有适当市场覆盖的数据，见[密钥获取步骤](docs/provider-keys.md)。
 
 增强研究添加 `--suite enhanced`，固定比较11个候选并保留旧规则对照。规则与新测试协议见[增强策略](docs/refined-strategies.md)。
+
+本轮真实数据结果见[增强规则与反馈模型评估](docs/research-results/2026-09-18-feedback-model.md)：新模型尚未优于简单基线，未自动发布。
