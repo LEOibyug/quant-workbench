@@ -1,26 +1,50 @@
 # Quant Workbench
 
-本地美股日内策略研究工作台。当前交付为工程基础、存储估算和两个独立前端入口，历史回测、真实行情及实时交易尚未实现。
+本地美股日内策略研究工作台：供应商 API 下载 → 离线训练与冻结实验 → 验证／最终测试 → 收益与成交复盘。前后端分离，研究面板与运行面板分开。
 
-Python 3.12，Node.js 22或24，macOS Apple Silicon / Linux x86_64。无容器要求，默认CPU可运行。安装、验证、GPU扩展及数据开销见 `docs/setup.md` 和 `docs/storage-estimate.md`。
+## 启动
+
+Python 3.12，Node.js 22.12+ 或 24。macOS / Linux 原生运行，无容器。
 
 ```sh
-uv sync --locked
-uv run quant-workbench doctor
-uv run quant-workbench estimate
+uv sync --locked --python 3.12
 uv run uvicorn quant_workbench.api:app --host 127.0.0.1 --port 8000
 ```
 
-另一个终端运行前端：
+另一个终端：
 
 ```sh
 cd frontend
-npm ci
+npm ci --cache ../tmp/npm-cache
 npm run dev
 ```
 
-浏览器打开 `http://127.0.0.1:5173/research` 或 `http://127.0.0.1:5173/workspace`。
+打开 [研究面板](http://127.0.0.1:5173/research) 或 [运行与展示](http://127.0.0.1:5173/workspace)。
 
-默认研究假设：NVDA、TSLA、AAPL、AMD、SOFI，SPY/QQQ作为基准；1分钟数据、常规时段、只做多、不加杠杆、当日清仓。数据周期暂按24个月估算。这里是研究配置，不表示已验证收益。
+## 直接获取行情
 
-源码和依赖锁文件可以拉取到Linux服务器；虚拟环境、行情、模型、账户凭证与参考课件不进入Git。不要复制Mac的`.venv`到Linux。原始课程材料仅保留在本机 `参考/`。
+研究面板选择 Alpaca 或 Massive（原 Polygon）、股票和日期，调用供应商 API 下载，不需要 CSV 中转。后端启动前在本地环境配置凭证：
+
+- Alpaca：`APCA_API_KEY_ID`、`APCA_API_SECRET_KEY`；支持 IEX / SIP。
+- Massive：`MASSIVE_API_KEY`，兼容 `POLYGON_API_KEY`。
+
+密钥只在后端读取；页面显示是否配置，不显示内容。可用历史范围、分钟权限、调用频率由套餐决定，软件不会代购订阅。下载自动分页，转为 UTC 分钟结束时间，仅保留常规交易时段并保存 Parquet 快照。实际账户连接需有效凭证；测试覆盖模拟 HTTP 合约，不代表真实订阅已验证。CSV仅为可选导入工具。
+
+无需密钥可使用明确标注的合成示例，走完整个实验流程。示例不代表实际股票表现。
+
+## 已实现
+
+- SMA趋势、开盘突破、VWAP偏离回归；依据训练期特征逐股匹配研究假设。
+- k窗口时序分类器，输出下一分钟上涨概率；离线训练 + 在线SGD持续更新。前2k周期不参与交易，每次只学习已揭晓标签，每股独立状态。
+- 训练、验证、测试按日期隔离；离线训练模型固定保存，验证／测试分别重新加载并适应。最终测试暴露记录、重复结果复用。
+- 次分钟开盘近似成交、价差、滑点、佣金、卖出规费、参与率限制、止损和日内清仓。
+- 资金曲线、回撤、日收益Sharpe、逐股贡献、成交记录、纯规则对照、在线概率评分与CSV导出。
+- SQLite目录、Parquet行情、JSON结果、独立离线模型及在线检查点；数据和模型均不进入Git。
+
+## 边界
+
+首版用于分钟级研究，不是交易所级高频逐笔撮合，也没有实盘下单。常规时段、只做多、无杠杆、等额独立资金、禁止隔夜；缺失分钟会明确拒绝回测，尾盘无法在参与率内清仓则该次结果无效。基准是每日开盘买入、收盘卖出的无成本日内持有，跨日复利，不将拆股价格跳变计入隔夜收益。
+
+上涨概率不等于扣费盈利概率；线性在线分类器是可解释基线，尚未验证真实市场优势。其运行使用CPU，Linux NVIDIA机器可运行但当前不会调用GPU。主流供应商已接入两家，其他供应商通过同一适配器接口扩展。
+
+文档：[环境与Linux兼容性](docs/setup.md)、[API与数据格式](docs/data-api.md)、[在线学习协议](docs/timeseries.md)、[存储估算](docs/storage-estimate.md)。原课件只保留本机，不上传GitHub。

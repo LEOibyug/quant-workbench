@@ -4,17 +4,22 @@ build-backend = "hatchling.build"
 
 [project]
 name = "quant-workbench"
-version = "0.1.0"
+version = "0.2.0"
 description = "Local-first US equity strategy research workbench"
 readme = "README.md"
 requires-python = ">=3.12,<3.13"
 dependencies = [
   "fastapi>=0.115,<1",
   "uvicorn>=0.34,<1",
-  "numpy>=2.2,<3",
+  "numpy>=2.2,<2.5",
   "pandas>=2.2,<3",
   "pyarrow>=19,<24",
   "duckdb>=1.2,<2",
+  "exchange-calendars>=4.5,<5",
+  "httpx>=0.28,<1",
+  "python-multipart>=0.0.20,<1",
+  "scikit-learn>=1.6,<2",
+  "joblib>=1.4,<2",
 ]
 
 [dependency-groups]

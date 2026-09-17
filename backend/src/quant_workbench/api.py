@@ -1,22 +1,44 @@
 """Loopback-only development API. Trading capabilities are not implemented."""
 
+from contextlib import asynccontextmanager
 from dataclasses import asdict
 from typing import Annotated
 
 from fastapi import FastAPI, HTTPException, Query
+from fastapi.responses import JSONResponse
 
+from quant_workbench.repository import Repository
+from quant_workbench.research_api import router
 from quant_workbench.storage import estimate_storage
 
-app = FastAPI(title="Quant Workbench", version="0.1.0")
+
+@asynccontextmanager
+async def lifespan(app):
+    Repository().recover()
+    yield
+
+
+app = FastAPI(title="Quant Workbench", version="0.2.0", lifespan=lifespan)
+app.include_router(router)
+
+
+@app.exception_handler(ValueError)
+async def value_error(request, exc):
+    return JSONResponse(status_code=422, content={"detail": str(exc)[:500]})
+
+
+@app.exception_handler(KeyError)
+async def missing(request, exc):
+    return JSONResponse(status_code=404, content={"detail": str(exc)[:200]})
 
 
 @app.get("/api/health")
 def health() -> dict:
     return {
         "status": "ok",
-        "stage": "project-foundation",
+        "stage": "historical-research",
         "market_data_connected": False,
-        "backtest_available": False,
+        "backtest_available": True,
         "live_trading_enabled": False,
     }
 

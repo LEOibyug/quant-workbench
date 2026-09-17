@@ -18,6 +18,8 @@ quant-workbench doctor
 
 当前Mac的既有npm全局缓存存在权限问题。本项目安装已使用 `npm ci --cache ../tmp/npm-cache`（在frontend目录执行）绕开，无需修改全局目录权限；其他机器可正常使用`npm ci`。
 
+在后端启动前配置供应商API密钥。可复制`.env.example`为被Git忽略的`.env`，填入自己的密钥，然后在当前终端执行`set -a; source .env; set +a`。应用读取环境变量，不自动读取.env文件。
+
 后端与前端分别运行：
 
 ```sh
@@ -32,7 +34,7 @@ npm run dev
 
 前端地址为`http://127.0.0.1:5173`，研究和使用面板分别为`/research`、`/workspace`。Vite把`/api`转发到本机8000端口，不必放宽CORS。API文档位于`http://127.0.0.1:8000/docs`。这是本地开发服务，不直接暴露公网。
 
-当前初始化版本提供健康检查、环境诊断、OHLCV存储估算和两个面板骨架。数据源同步、策略执行、回测、时间隔离和交易网关尚未实现。两面板只属于界面分工，不提供安全隔离。
+当前提供供应商API直连下载、策略回测、离线／在线时序模型、冻结实验与结果展示。交易网关尚未实现。两面板属于界面分工，不提供安全隔离。后端只使用单进程，勿开启多个worker。
 
 ## 数据位置
 
@@ -43,7 +45,7 @@ export QUANT_DATA_DIR=/srv/quant-data
 uv run quant-workbench doctor
 ```
 
-当前该变量由环境诊断读取；后续数据接入统一遵守此路径。配置与路径使用`pathlib`和环境变量，不在代码中写入个人的Mac路径。日期存储约定UTC，市场规则使用`America/New_York`；数据格式优先Parquet/JSON，避免将不可信pickle作为交换格式。
+该变量控制环境诊断、行情、模型、实验及结果保存根目录。配置与路径使用`pathlib`和环境变量，不在代码中写入个人的Mac路径。日期存储约定UTC，市场规则使用`America/New_York`；数据格式优先Parquet/JSON，避免将不可信pickle作为交换格式。
 
 ## 可选NVIDIA加速
 

@@ -28,3 +28,37 @@ def test_storage_estimate_and_validation_over_http():
     assert get("/api/storage-estimate?symbols=0").status_code == 422
     assert get("/api/storage-estimate?years=nan").status_code == 422
     assert get("/api/storage-estimate?interval_seconds=7").status_code == 422
+
+
+def test_provider_catalog_missing_credentials_and_csv_validation(monkeypatch, tmp_path):
+    monkeypatch.setenv("QUANT_DATA_DIR", str(tmp_path))
+    for key in ("APCA_API_KEY_ID", "APCA_API_SECRET_KEY", "MASSIVE_API_KEY", "POLYGON_API_KEY"):
+        monkeypatch.delenv(key, raising=False)
+
+    async def run():
+        async with httpx.AsyncClient(
+            transport=httpx.ASGITransport(app=app), base_url="http://test"
+        ) as client:
+            catalog = (await client.get("/api/providers")).json()
+            assert {p["id"] for p in catalog} == {"alpaca", "massive"}
+            assert not any(p["configured"] for p in catalog)
+            for provider in ("alpaca", "massive"):
+                response = await client.post(
+                    "/api/datasets/fetch",
+                    json={
+                        "provider": provider,
+                        "symbols": ["AAPL"],
+                        "start": "2024-01-03",
+                        "end": "2024-01-04",
+                    },
+                )
+                assert response.status_code == 422
+                assert "后端环境" in response.json()["detail"]
+            response = await client.post(
+                "/api/datasets/import",
+                files={"file": ("invalid.csv", b"symbol,close\nAAPL,100\n", "text/csv")},
+            )
+            assert response.status_code == 422
+            assert (await client.get("/api/datasets")).json() == []
+
+    asyncio.run(run())
