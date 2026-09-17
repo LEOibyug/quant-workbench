@@ -12,7 +12,7 @@ def test_doctor_runs_from_another_directory_without_optional_gpu_packages(tmp_pa
         text=True,
     )
     diagnostic = json.loads(output.stdout)
-    assert diagnostic["default_compute"] == "cpu"
+    assert diagnostic["default_compute"] == "rules/legacy: cpu; GRU: auto cuda > mps > cpu"
     assert diagnostic["data_directory"] == str(tmp_path / "data")
     assert diagnostic["disk_free_gib"] >= 0
 

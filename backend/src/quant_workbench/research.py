@@ -59,6 +59,30 @@ def create_experiment(repo: Repository, request: ExperimentInput) -> dict:
     return info
 
 
+def has_prior_exposure(db, symbols, start, end):
+    for row in db.execute(
+        "SELECT e.body FROM experiments e JOIN runs r ON e.id=r.experiment_id "
+        "WHERE r.phase='test' AND r.exposed=1"
+    ):
+        previous = json.loads(row[0])
+        if (
+            set(previous["symbols"]) & set(symbols)
+            and previous["validation_end"] < end
+            and start < previous["end"]
+        ):
+            return True
+    for row in db.execute("SELECT body FROM simulations"):
+        previous = json.loads(row[0])
+        if (
+            (previous["scope"] == "workspace" or previous["phase"] == "test")
+            and previous["symbol"] in symbols
+            and previous["start"] < end
+            and start < previous["end"]
+        ):
+            return True
+    return False
+
+
 def begin_run(repo: Repository, identifier: str, phase: str) -> dict:
     if phase not in PHASES:
         raise ValueError("未知运行阶段")
@@ -79,18 +103,9 @@ def begin_run(repo: Repository, identifier: str, phase: str) -> dict:
                 raise ValueError("最终测试之前必须先完成验证阶段；参数和股票策略已冻结")
         if db.execute("SELECT 1 FROM runs WHERE status='running'").fetchone():
             raise ValueError("已有任务在运行，请等待完成后再启动")
-        prior_exposure = False
-        for row in db.execute(
-            "SELECT e.body FROM experiments e JOIN runs r ON e.id=r.experiment_id "
-            "WHERE r.phase='test' AND r.exposed=1"
-        ):
-            previous = json.loads(row[0])
-            if (
-                set(previous["symbols"]) & set(experiment["symbols"])
-                and previous["validation_end"] < experiment["end"]
-                and experiment["start"] < previous["end"]
-            ):
-                prior_exposure = True
+        prior_exposure = has_prior_exposure(
+            db, experiment["symbols"], experiment["start"], experiment["end"]
+        )
         db.execute(
             "INSERT INTO runs(experiment_id,phase,status,error,exposed) "
             "VALUES(?,?,'running',NULL,?) "

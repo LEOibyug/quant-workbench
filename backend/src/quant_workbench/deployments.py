@@ -32,6 +32,7 @@ def publish(repo: Repository, experiment_id: str) -> dict:
             "strategies": experiment["strategies"],
             "strategy_config": experiment["config"],
             "synthetic": experiment["synthetic"],
+            "model_valid_from": experiment["train_end"] if experiment["model"]["enabled"] else None,
             "model": {
                 key: value
                 for key, value in experiment["model"].items()
@@ -98,6 +99,7 @@ def public_deployment(body: dict) -> dict:
         "synthetic",
         "model",
         "model_version",
+        "model_valid_from",
         "version",
         "engine_version",
     }

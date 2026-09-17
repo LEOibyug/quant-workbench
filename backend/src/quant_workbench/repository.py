@@ -30,6 +30,8 @@ class Repository:
                 CREATE TABLE IF NOT EXISTS experiments(id TEXT PRIMARY KEY, body TEXT NOT NULL);
                 CREATE TABLE IF NOT EXISTS deployments(
                     id TEXT PRIMARY KEY, experiment_id TEXT UNIQUE NOT NULL, body TEXT NOT NULL);
+                CREATE TABLE IF NOT EXISTS simulations(
+                    id TEXT PRIMARY KEY, scope TEXT NOT NULL, body TEXT NOT NULL);
                 CREATE TABLE IF NOT EXISTS runs(
                     experiment_id TEXT, phase TEXT, status TEXT, error TEXT,
                     exposed INTEGER DEFAULT 0,
@@ -141,6 +143,13 @@ class Repository:
 
     def recover(self):
         with self.connect() as db:
+            for row in db.execute("SELECT id,body FROM simulations").fetchall():
+                body = json.loads(row["body"])
+                if body["status"] in {"queued", "running"}:
+                    body.update(status="failed", error="服务重启中断，请重新模拟")
+                    db.execute(
+                        "UPDATE simulations SET body=? WHERE id=?", (json.dumps(body), row["id"])
+                    )
             db.execute(
                 "UPDATE runs SET status='failed',error='服务重启中断，可重试' "
                 "WHERE status='running'"

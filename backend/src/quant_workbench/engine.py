@@ -21,6 +21,8 @@ def simulate(
     end: str,
     strategies: dict[str, str] | None = None,
     model_filter=None,
+    record_market=False,
+    progress=None,
 ) -> dict:
     cutoff = pd.Timestamp(start, tz="America/New_York").tz_convert("UTC")
     past = frame[frame.timestamp < cutoff].sort_values(["symbol", "timestamp"])
@@ -35,6 +37,7 @@ def simulate(
     equity = np.zeros(len(times))
     benchmark = np.zeros(len(times))
     trades, positions, roundtrips, contributions = [], [], [], []
+    market_curve = []
     fee_total, impact_total = 0.0, 0.0
     strategies = strategies or {}
     for symbol in symbols:
@@ -45,6 +48,10 @@ def simulate(
         basis = 0.0
         realized = 0.0
         entry_price = 0.0
+        entry_quantity = position_id = 0
+        realized_pnl = 0.0
+        symbol_fees = symbol_impact = 0.0
+        equity_peak = initial
         target = False
         exit_pending = False
         exit_reason = None
@@ -119,6 +126,9 @@ def simulate(
                 regulatory = notional * config.sell_fee_bps / 10000 if side == "sell" else 0
                 fee = commission + regulatory
                 impact = qty * abs(price - row.open)
+                symbol_fees += fee
+                symbol_impact += impact
+                trade_pnl = None
                 fee_total += fee
                 impact_total += impact
                 if side == "buy":
@@ -126,8 +136,12 @@ def simulate(
                     shares += qty
                     basis = notional + fee
                     entry_price = price
+                    entry_quantity = qty
+                    position_id += 1
                     realized = 0.0
                 else:
+                    trade_pnl = notional - fee - basis * qty / entry_quantity
+                    realized_pnl += trade_pnl
                     cash += notional - fee
                     realized += notional - fee
                     shares -= qty
@@ -150,6 +164,9 @@ def simulate(
                         "impact_cost": float(impact),
                         "reason": fill_reason,
                         "cash_after": float(cash),
+                        "position_id": f"{symbol}-{position_id}",
+                        "position_after": shares,
+                        "realized_pnl": trade_pnl,
                     }
                 )
             if flatten and shares:
@@ -229,6 +246,39 @@ def simulate(
                 # The model gates entries; risk/rule exits never need model approval.
                 if target and not shares:
                     target = model_decision["allow_entry"]
+            if record_market:
+                value = float(cash + shares * row.close)
+                equity_peak = max(equity_peak, value)
+                market_curve.append(
+                    {
+                        "timestamp": ts.isoformat(),
+                        "symbol": symbol,
+                        "open": float(row.open),
+                        "high": float(row.high),
+                        "low": float(row.low),
+                        "close": float(row.close),
+                        "volume": int(row.volume),
+                        "shares": shares,
+                        "cash": float(cash),
+                        "equity": value,
+                        "benchmark": float(benchmark_value),
+                        "drawdown_pct": float((1 - value / equity_peak) * 100),
+                        "realized_pnl": float(realized_pnl),
+                        "unrealized_pnl": float(
+                            shares * row.close - basis * shares / entry_quantity
+                        )
+                        if shares
+                        else 0.0,
+                        "position_id": f"{symbol}-{position_id}" if shares else None,
+                        "fees": symbol_fees,
+                        "impact_cost": symbol_impact,
+                        "probability": model_decision.get("probability"),
+                        "expected_return_bps": model_decision.get("expected_return_bps"),
+                        "required_edge_bps": model_decision.get("required_edge_bps"),
+                    }
+                )
+                if progress is not None and (i % 20 == 0 or i == len(bars) - 1):
+                    progress(i + 1, len(bars), market_curve, trades)
             signal_time, previous_volume = ts, row.volume
         positions.append({"symbol": symbol, "position": shares, "cash": float(cash)})
         contributions.append(
@@ -273,6 +323,7 @@ def simulate(
             }
             for t, e, b, d in zip(times, equity, benchmark, drawdown, strict=True)
         ],
+        "market_curve": market_curve,
         "trades": trades,
         "positions": positions,
         "contributions": contributions,

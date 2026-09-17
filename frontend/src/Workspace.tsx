@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { SimulationPanel } from "./SimulationPanel";
 import { api } from "./api";
 import { strategyNames } from "./types";
 interface Deployment {
@@ -20,6 +21,7 @@ interface Deployment {
     min_edge_bps?: number;
   };
   model_version?: string;
+  model_valid_from?: string | null;
   strategy_config: Record<string, string | number>;
 }
 export function Workspace() {
@@ -58,7 +60,7 @@ export function Workspace() {
         <div>
           <div className="eyebrow">STRATEGY & MODEL LIBRARY</div>
           <h1>策略与模型展示</h1>
-          <p>查看已发布的策略与模型版本。</p>
+          <p>选择已发布的策略与模型，独立获取行情并进行单股模拟。</p>
         </div>
         <span className="badge">已发布版本</span>
       </div>
@@ -119,13 +121,22 @@ export function Workspace() {
       </section>
       {selected && (
         <>
+          <SimulationPanel
+            key={selected.id}
+            scope="workspace"
+            sourceId={selected.id}
+            symbols={selected.symbols}
+            cash={Number(selected.strategy_config.initial_cash)}
+            validFrom={selected.model_valid_from}
+          />
           <section className="card">
             <h2>时序模型</h2>
             {selected.model.enabled ? (
               <>
                 <p>
-                  {selected.model_version} · 窗口 {selected.model.k} ·
-                  未来 {selected.model.horizon || 1} 分钟上涨概率门槛 {selected.model.probability_threshold}
+                  {selected.model_version} · 窗口 {selected.model.k} · 未来{" "}
+                  {selected.model.horizon || 1} 分钟上涨概率门槛{" "}
+                  {selected.model.probability_threshold}
                 </p>
                 <p className="muted">
                   模型与规则共同决定入场；前 2k
@@ -133,9 +144,9 @@ export function Workspace() {
                 </p>
                 {selected.model.cost_aware && (
                   <p>
-                    收益过滤：预测未来 {selected.model.horizon || 1} 分钟收益需覆盖往返成本的{" "}
-                    {selected.model.cost_multiplier} 倍，另加{" "}
-                    {selected.model.min_edge_bps} bps。
+                    收益过滤：预测未来 {selected.model.horizon || 1}{" "}
+                    分钟收益需覆盖往返成本的 {selected.model.cost_multiplier}{" "}
+                    倍，另加 {selected.model.min_edge_bps} bps。
                   </p>
                 )}
               </>

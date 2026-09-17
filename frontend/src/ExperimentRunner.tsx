@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { api, post } from "./api";
+import { SimulationPanel } from "./SimulationPanel";
 import { Results } from "./Results";
 import { phaseNames } from "./types";
 import type { Experiment, Phase, Result } from "./types";
@@ -202,6 +203,23 @@ export function ExperimentRunner({ selectedId }: { selectedId?: string }) {
           <p className="muted">还没有实验。请先获取行情并创建实验。</p>
         )}
       </section>
+      {experiment && (
+        <SimulationPanel
+          key={experiment.id}
+          scope="research"
+          sourceId={experiment.id}
+          symbols={experiment.symbols}
+          cash={experiment.config.initial_cash}
+          validated={experiment.runs.some(
+            (r) => r.phase === "validation" && r.status === "completed",
+          )}
+          bounds={{
+            train: [experiment.start, experiment.train_end],
+            validation: [experiment.train_end, experiment.validation_end],
+            test: [experiment.validation_end, experiment.end],
+          }}
+        />
+      )}
       {result && <Results result={result} id={id} />}
     </>
   );
