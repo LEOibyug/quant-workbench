@@ -123,3 +123,48 @@ def test_regime_pullback_recovery_and_falling_market_rejection():
     rules.filled("buy", 100, 10)
     rules.pending_mode = "trend"
     assert rules.entry_mode == "range"
+
+
+def test_intraday_momentum_enters_once_daily_inside_tail_window():
+    from quant_workbench.engine import simulate
+    from quant_workbench.market_data import session_minutes
+
+    times = session_minutes("2024-01-03", "2024-01-05")
+    # 无震荡上行：每天动量恒为正，唯一的入场约束应来自尾盘窗口与每日一次。
+    # 足够的 bar 振幅让 ATR 成本门槛可被通过。
+    values = [100 + i * 0.02 for i in range(len(times))]
+    frame = pd.DataFrame(
+        dict(
+            timestamp=times,
+            symbol="TEST",
+            open=[v - 0.01 for v in values],
+            high=[v + 0.5 for v in values],
+            low=[v - 0.5 for v in values],
+            close=values,
+            volume=100_000,
+        )
+    )
+    result = simulate(
+        frame,
+        StrategyConfig(
+            strategy="intraday_momentum",
+            momentum_threshold_bps=10,
+            take_atr=2,
+            stop_atr=2,
+            max_daily_entries=1,
+            cooldown_minutes=0,
+            flatten_minutes=5,
+            opening_minutes=15,
+            max_hold_minutes=25,
+        ),
+        "2024-01-03",
+        "2024-01-05",
+    )
+    buys = [trade for trade in result["trades"] if trade["side"] == "buy"]
+    assert len(buys) == 2  # 每个交易日恰好一次
+    for trade in buys:
+        local = pd.Timestamp(trade["signal_time"]).tz_convert("America/New_York")
+        assert local.hour == 15 and local.minute >= 30
+    sells = [trade for trade in result["trades"] if trade["side"] == "sell"]
+    assert len(sells) == 2  # 收盘强制平仓，不做提前退出
+    assert all(sell["reason"] == "session_flatten" for sell in sells)

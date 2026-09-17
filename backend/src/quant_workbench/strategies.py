@@ -8,7 +8,9 @@ import pandas as pd
 from quant_workbench.costs import estimate_round_trip
 
 REGIME_STRATEGIES = {"trend_pullback", "regime_adaptive", "adaptive_intraday"}
-REFINED_STRATEGIES = {"trend_breakout", "range_reversion"} | REGIME_STRATEGIES
+REFINED_STRATEGIES = (
+    {"trend_breakout", "range_reversion", "intraday_momentum"} | REGIME_STRATEGIES
+)
 
 
 class IntradayRules:
@@ -76,28 +78,33 @@ class IntradayRules:
                 reason = "daily_loss_limit"
             elif bar.close <= entry_price - self.stop_distance:
                 reason = "atr_stop"
-            elif bar.close >= entry_price + self.take_distance:
-                reason = "atr_take_profit"
-            elif self.peak >= entry_price + self.stop_distance and (
-                bar.close <= self.peak - self.stop_distance
-            ):
-                reason = "atr_trailing"
-            elif self.count - self.entry_bar + 1 >= cfg.max_hold_minutes:
-                reason = "time_exit"
-            elif self.entry_mode in {"range_reversion", "range"} and bar.close >= vwap:
-                reason = "vwap_target"
-            elif self.entry_mode in {"trend_breakout", "trend"} and bar.close < vwap:
-                reason = "trend_failed"
+            elif self.entry_mode != "momentum":
+                # 尾盘动量持仓到收盘强制平仓，不做止盈/追踪/时间退出。
+                if bar.close >= entry_price + self.take_distance:
+                    reason = "atr_take_profit"
+                elif self.peak >= entry_price + self.stop_distance and (
+                    bar.close <= self.peak - self.stop_distance
+                ):
+                    reason = "atr_trailing"
+                elif self.count - self.entry_bar + 1 >= cfg.max_hold_minutes:
+                    reason = "time_exit"
+                elif self.entry_mode in {"range_reversion", "range"} and bar.close >= vwap:
+                    reason = "vwap_target"
+                elif self.entry_mode in {"trend_breakout", "trend"} and bar.close < vwap:
+                    reason = "trend_failed"
             return reason is None, reason
         self.max_quantity = None
         self.entry_diagnostic = "风控/冷却/窗口/尾盘限制"
+        momentum_window = self.strategy == "intraday_momentum"
+        guard_minutes = cfg.flatten_minutes + 1 if momentum_window else max(
+            cfg.flatten_minutes + 1, cfg.max_hold_minutes
+        )
         if (
             self.day_halted
             or self.entries >= cfg.max_daily_entries
             or self.count - self.last_exit <= cfg.cooldown_minutes
             or len(self.bars) < max(cfg.slow + 1, cfg.atr_window + 1)
-            or bar.timestamp
-            >= close_time - pd.Timedelta(minutes=max(cfg.flatten_minutes + 1, cfg.max_hold_minutes))
+            or bar.timestamp >= close_time - pd.Timedelta(minutes=guard_minutes)
         ):
             return False, None
         bars = list(self.bars)
@@ -136,6 +143,14 @@ class IntradayRules:
             signal = signal and min(target_distance, cfg.take_atr * atr) >= (
                 cfg.min_reward_risk * stop
             )
+        elif self.strategy == "intraday_momentum":
+            # Gao-Han-Li-Zhou (2018): 当日已实现动量延续到尾盘；仅尾盘窗口入场，持有到收盘。
+            day_open = bars[0].open
+            momentum_bps = (bar.close / day_open - 1) * 10000
+            self.pending_mode = "momentum"
+            target_distance = cfg.take_atr * atr
+            in_window = bar.timestamp >= close_time - pd.Timedelta(minutes=30)
+            signal = in_window and momentum_bps >= cfg.momentum_threshold_bps
         elif self.strategy == "trend_breakout":
             barrier = max(self.opening_high, max(b.high for b in bars[-cfg.slow : -1]))
             target_distance = cfg.take_atr * atr

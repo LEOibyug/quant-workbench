@@ -75,4 +75,6 @@ uv run quant-workbench study --dataset 数据集ID \
 
 最新[序列网络与设备评估](docs/research-results/2026-09-18-sequence-network.md)：GRU验证评分优于MLP，但尚未超过简单基线；研究命令使用 `uv run --extra neural quant-workbench study --suite sequence ...`。
 
+盈利策略搜索日志（vwap回归参数搜索、自适应门控对照与尾盘动量策略）：验证期最优+3.40%未通过一次性最终测试（-3.11%），样本外盈利未成立，全部尝试见[搜索日志](docs/research-results/2026-09-18-profitable-strategy-log.md)。
+
 [入场稀疏与三组佣金对照](docs/research-results/2026-09-18-entry-and-commissions.md)：旧严格模型换佣金仍仅3笔；新规则与标准化GRU仓位调节有241—243笔，保守费用下仍亏损，作为研究候选保留。
