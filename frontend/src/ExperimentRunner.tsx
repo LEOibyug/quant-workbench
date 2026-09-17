@@ -7,7 +7,11 @@ import { phaseNames } from "./types";
 import type { Experiment, Phase, Result } from "./types";
 export function ExperimentRunner({ selectedId }: { selectedId?: string }) {
   const [experiments, setExperiments] = useState<Experiment[]>([]),
-    [id, setId] = useState(selectedId || "");
+    [id, setId] = useState(
+      selectedId ||
+        new URLSearchParams(location.search).get("experiment") ||
+        "",
+    );
   const [phase, setPhase] = useState<Phase>("validation"),
     [result, setResult] = useState<Result | null>(null),
     [error, setError] = useState("");

@@ -15,6 +15,7 @@ from sklearn.neural_network import MLPClassifier, MLPRegressor
 from sklearn.preprocessing import StandardScaler
 from threadpoolctl import threadpool_limits
 
+from quant_workbench.fusion import risk_overlay
 from quant_workbench.market_data import normalize_bars
 
 MODEL_VERSION = "online-v3-multiscale-feedback"
@@ -37,6 +38,8 @@ class TimeSeriesConfig(BaseModel):
     k: int = Field(default=30, ge=5, le=120)
     horizon: Literal[1, 5, 15] = 1
     architecture: Literal["linear", "rbf", "mlp", "gru"] = "linear"
+    decision_mode: Literal["strict", "risk_scaled"] = "strict"
+    return_normalization: bool = False
     neural_learning_rate: float = Field(default=0.0003, ge=0.000001, le=0.01)
     neural_online_learning_rate: float = Field(default=0.00003, ge=0.000001, le=0.001)
     online_batch_size: int = Field(default=16, ge=1, le=64)
@@ -454,9 +457,14 @@ class TimeSeriesModel:
                 count("warmup_bars")
             allow = not warmup and probability >= self.config.probability_threshold
             estimated_cost = context.get("round_trip_cost_bps")
+            risk_fraction = 1.0
+            if self.config.decision_mode == "risk_scaled" and not warmup:
+                allow, risk_fraction = risk_overlay(
+                    probability, expected_return_bps, estimated_cost
+                )
             required_edge = None
             cost_veto = False
-            if self.config.cost_aware and not warmup:
+            if self.config.cost_aware and self.config.decision_mode == "strict" and not warmup:
                 if (
                     estimated_cost is None
                     or not math.isfinite(estimated_cost)
@@ -482,6 +490,12 @@ class TimeSeriesModel:
                     else ("时序概率达到门槛" if allow else "时序概率低于门槛")
                 )
             )
+            if self.config.decision_mode == "risk_scaled" and not warmup:
+                reason = (
+                    "规则机会通过，模型按置信度缩放仓位"
+                    if allow
+                    else "模型明显看空或输入无效，否决入场"
+                )
             return self._record(
                 symbol,
                 ts,
@@ -495,6 +509,7 @@ class TimeSeriesModel:
                 warmup=warmup,
                 updated=updated,
                 horizon=self.config.horizon,
+                risk_fraction=risk_fraction if not warmup else 0.0,
                 feedback=state["feedback"].ravel().tolist(),
             )
         except (ValueError, TypeError, KeyError, IndexError, OverflowError):

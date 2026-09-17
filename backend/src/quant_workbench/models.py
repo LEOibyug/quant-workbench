@@ -15,6 +15,7 @@ class StrategyConfig(BaseModel):
         "range_reversion",
         "trend_pullback",
         "regime_adaptive",
+        "adaptive_intraday",
     ] = "adaptive"
     fast: int = Field(default=5, ge=2, le=60)
     slow: int = Field(default=20, ge=3, le=120)

@@ -17,6 +17,7 @@ interface Deployment {
     horizon?: number;
     architecture?: string;
     cost_aware?: boolean;
+    decision_mode?: string;
     cost_multiplier?: number;
     min_edge_bps?: number;
   };
@@ -135,20 +136,28 @@ export function Workspace() {
               <>
                 <p>
                   {selected.model_version} · 窗口 {selected.model.k} · 未来{" "}
-                  {selected.model.horizon || 1} 分钟上涨概率门槛{" "}
-                  {selected.model.probability_threshold}
+                  {selected.model.horizon || 1} 分钟预测 ·{" "}
+                  {selected.model.decision_mode === "risk_scaled"
+                    ? "模型调节规则风险预算"
+                    : `严格概率门槛 ${selected.model.probability_threshold}`}
                 </p>
                 <p className="muted">
                   模型与规则共同决定入场；前 2k
                   个周期收集与适应，之后持续使用已揭晓标签更新。
                 </p>
-                {selected.model.cost_aware && (
+                {selected.model.decision_mode === "risk_scaled" && (
                   <p>
-                    收益过滤：预测未来 {selected.model.horizon || 1}{" "}
-                    分钟收益需覆盖往返成本的 {selected.model.cost_multiplier}{" "}
-                    倍，另加 {selected.model.min_edge_bps} bps。
+                    规则控制成本空间与风险，模型决定预算内的25%—100%仓位，明显看空时否决。弱预测不再全部阻止交易；这不代表预测期望收益已覆盖成本。
                   </p>
                 )}
+                {selected.model.cost_aware &&
+                  selected.model.decision_mode !== "risk_scaled" && (
+                    <p>
+                      收益过滤：预测未来 {selected.model.horizon || 1}{" "}
+                      分钟收益需覆盖往返成本的 {selected.model.cost_multiplier}{" "}
+                      倍，另加 {selected.model.min_edge_bps} bps。
+                    </p>
+                  )}
               </>
             ) : (
               <p>此版本使用纯规则策略。</p>

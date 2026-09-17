@@ -14,7 +14,12 @@ from torch.nn import functional as F
 
 from quant_workbench.market_data import normalize_bars
 from quant_workbench.sequence_features import SequenceHistory, stack_samples
-from quant_workbench.timeseries import HistoricalContext, TimeSeriesModel, feedback_features
+from quant_workbench.timeseries import (
+    HistoricalContext,
+    TimeSeriesConfig,
+    TimeSeriesModel,
+    feedback_features,
+)
 
 SEQUENCE_VERSION = "causal-conv-dual-gru-v1"
 MAX_SEQUENCE_SAMPLES = 50000
@@ -81,8 +86,10 @@ def cpu_tree(value):
 class SequenceEstimator:
     """A joint classifier/regressor; replay stores only fully matured causal samples."""
 
-    def __init__(self, config, scalers, weights=None):
-        self.config, self.scalers = config, scalers
+    def __init__(self, config, scalers, weights=None, return_scale=100.0):
+        self.config = TimeSeriesConfig.model_validate(config.model_dump())
+        self.scalers = scalers
+        self.return_scale = float(return_scale)
         self.device = select_device()
         torch.set_num_threads(1)
         with torch.random.fork_rng(devices=[]):
@@ -100,6 +107,7 @@ class SequenceEstimator:
     def __getstate__(self):
         return dict(
             config=self.config,
+            return_scale=self.return_scale,
             scalers=self.scalers,
             weights=cpu_tree(self.network.state_dict()),
             optimizer=cpu_tree(self.optimizer.state_dict()),
@@ -108,7 +116,9 @@ class SequenceEstimator:
         )
 
     def __setstate__(self, state):
-        self.__init__(state["config"], state["scalers"], state["weights"])
+        self.__init__(
+            state["config"], state["scalers"], state["weights"], state.get("return_scale", 100.0)
+        )
         self.optimizer.load_state_dict(state["optimizer"])
         self.replay, self.matured = state["replay"], state["matured"]
 
@@ -132,7 +142,7 @@ class SequenceEstimator:
         self.network.eval()
         with torch.no_grad():
             logits, returns = self.network(**self.prepare(batch))
-            return torch.sigmoid(logits).cpu().numpy(), returns.cpu().numpy() * 100
+            return torch.sigmoid(logits).cpu().numpy(), returns.cpu().numpy() * self.return_scale
 
     def predict(self, features):
         probability, returns = self.predict_batch(stack_samples([features]))
@@ -144,10 +154,12 @@ class SequenceEstimator:
         logits, predicted = self.network(**self.prepare(batch))
         labels = torch.as_tensor(labels, dtype=torch.float32, device=self.device)
         target = torch.as_tensor(
-            np.clip(np.asarray(returns) / 100, -10, 10), dtype=torch.float32, device=self.device
+            np.clip(np.asarray(returns) / self.return_scale, -10, 10),
+            dtype=torch.float32,
+            device=self.device,
         )
         loss = F.binary_cross_entropy_with_logits(logits, labels) + F.huber_loss(
-            predicted, target, delta=0.1
+            predicted, target, delta=1.0 if self.config.return_normalization else 0.1
         )
         if not torch.isfinite(loss):
             raise ValueError("时序网络损失非有限数，停止本次训练")
@@ -281,7 +293,11 @@ def train_sequence_model(frame, config, progress=None):
         "long": StandardScaler().fit(long_values[valid_long]),
         "context": StandardScaler().fit(values["context"][bootstrap, :6]),
     }
-    estimator = SequenceEstimator(config, scalers)
+    # Fit scaling exclusively before the purged teacher boundary, never validation/test.
+    return_scale = (
+        float(np.clip(np.std(returns[bootstrap]), 5, 200)) if config.return_normalization else 100.0
+    )
+    estimator = SequenceEstimator(config, scalers, return_scale=return_scale)
     offline_optimizer = torch.optim.AdamW(
         estimator.network.parameters(), lr=config.neural_learning_rate, weight_decay=0.01
     )
@@ -331,7 +347,9 @@ def train_sequence_model(frame, config, progress=None):
         last_segment[row.symbol] = row.segment
     fit(feedback_ids, "GRU 反馈阶段训练")
     metadata = dict(
-        model_version=SEQUENCE_VERSION,
+        model_version=SEQUENCE_VERSION
+        + ("-scaled-return-v2" if config.return_normalization else ""),
+        return_scale_bps=return_scale,
         sklearn_version=sklearn_version,
         torch_version=torch.__version__.split("+")[0],
         training_device=estimator.device,

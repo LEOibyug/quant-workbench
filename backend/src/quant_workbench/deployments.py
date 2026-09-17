@@ -39,6 +39,8 @@ def publish(repo: Repository, experiment_id: str) -> dict:
                 if key
                 in {
                     "enabled",
+                    "decision_mode",
+                    "return_normalization",
                     "k",
                     "horizon",
                     "architecture",

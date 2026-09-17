@@ -52,7 +52,7 @@ npm run dev
 
 ## 数据分析与成本约束选型
 
-研究页可启用收益幅度模型与成本过滤。策略入场须同时满足规则、上涨概率和预期收益覆盖成本的门槛；无足够优势允许不交易。费用默认固定，可配置价差、滑点、佣金、规费；额外调节成本安全倍数和最低净优势。
+研究页可启用收益幅度模型与成本过滤。严格模式下入场须满足规则、上涨概率和可选的预期收益成本门槛；另提供模型调节规则风险仓位的研究模式，见[入场融合说明](docs/entry-fusion.md)。无规则机会允许不交易。可配置价差、滑点、佣金、规费，并提供Alpaca免佣、IBKR阶梯首档及保守基础佣金情景；它们不等同于完整券商账单。
 
 批量研究命令直接使用API下载的本地快照：
 
@@ -74,3 +74,5 @@ uv run quant-workbench study --dataset 数据集ID \
 序列网络升级：因果卷积＋双尺度GRU＋注意力，结合成熟误差反馈和小批次回放；新增趋势回调与状态组合规则。使用 `--suite sequence` 进行分段稳定性验证，见[网络、设备与研究协议](docs/sequence-model.md)。
 
 最新[序列网络与设备评估](docs/research-results/2026-09-18-sequence-network.md)：GRU验证评分优于MLP，但尚未超过简单基线；研究命令使用 `uv run --extra neural quant-workbench study --suite sequence ...`。
+
+[入场稀疏与三组佣金对照](docs/research-results/2026-09-18-entry-and-commissions.md)：旧严格模型换佣金仍仅3笔；新规则与标准化GRU仓位调节有241—243笔，保守费用下仍亏损，作为研究候选保留。

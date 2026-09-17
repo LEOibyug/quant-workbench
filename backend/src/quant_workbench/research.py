@@ -38,6 +38,11 @@ def create_experiment(repo: Repository, request: ExperimentInput, progress=None)
         for p in profiles
     }
     model = TimeSeriesConfig.model_validate(request.model)
+    if model.decision_mode == "risk_scaled":
+        from quant_workbench.strategies import REFINED_STRATEGIES
+
+        if not set(strategies.values()).issubset(REFINED_STRATEGIES):
+            raise ValueError("模型仓位调节需搭配具有成本与风险预算的增强规则")
     info = request.model_dump(mode="json")
     info["model"] = model.model_dump()
     info.update(
@@ -217,6 +222,11 @@ def execute_run(repo: Repository, identifier: str, phase: str, exposure=False):
                         "模型学习与推理延迟未另行计入；需在实盘接入前测量延迟和真实成交成本",
                     ]
                 )
+                if model_config.decision_mode == "risk_scaled":
+                    result["assumptions"].append(
+                        "仓位调节模式由规则检查成本空间，模型缩放风险预算并否决明显不利预测；"
+                        "不要求每次预测均值覆盖成本，不等同于正期望收益保证"
+                    )
                 if phase == "train":
                     result["assumptions"].append("开发期回放属于样本内结果，离线训练已见该阶段数据")
             report("保存结果与检查点")

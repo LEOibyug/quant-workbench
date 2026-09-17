@@ -7,6 +7,7 @@ export const phaseNames = {
 export const strategyNames: Record<string, string> = {
   trend_pullback: "趋势回调再入场",
   regime_adaptive: "趋势/震荡状态组合",
+  adaptive_intraday: "局部均价回归 / 趋势恢复",
   trend_breakout: "趋势过滤突破 · ATR风控",
   range_reversion: "止跌确认回归 · ATR风控",
   adaptive: "按开发期特征匹配",
@@ -96,4 +97,5 @@ export interface Result {
   rule_baseline?: Record<string, number | null>;
   contributions: { symbol: string; net_profit: number; strategy: string }[];
   model_statistics?: Record<string, unknown>;
+  decision_funnel?: Record<string, unknown>;
 }

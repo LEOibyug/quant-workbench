@@ -236,6 +236,39 @@ export function Results({ result: r, id }: { result: Result; id: string }) {
           <p>本阶段未产生交易；检查规则条件、概率门槛和数据范围。</p>
         )}
       </section>
+      {r.decision_funnel && (
+        <section className="card">
+          <h2>逐股入场机会诊断</h2>
+          <div className="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>股票</th>
+                  <th>规则候选分钟</th>
+                  <th>模型拦截分钟</th>
+                  <th>实际买入次数</th>
+                  <th>资金/流动性/成本未成交</th>
+                </tr>
+              </thead>
+              <tbody>
+                {Object.entries(r.decision_funnel).map(([symbol, raw]) => {
+                  const f = raw as Record<string, number>;
+                  return (
+                    <tr key={symbol}>
+                      <td>{symbol}</td>
+                      <td>{f.rule_candidates}</td>
+                      <td>{f.model_blocked_candidates}</td>
+                      <td>{f.entry_fills}</td>
+                      <td>{f.unfilled_entry_attempts}</td>
+                    </tr>
+                  );
+                })}
+              </tbody>
+            </table>
+          </div>
+          <small>候选按分钟计数，不等于独立订单数。</small>
+        </section>
+      )}
       <section className="card">
         <h2>模拟约定</h2>
         <ul>

@@ -88,6 +88,8 @@ def begin_simulation(repo: Repository, scope: Scope, request: SimulationInput):
         raise ValueError("股票不在此策略/模型的支持范围内")
     start, end = str(request.start), str(request.end)
     warnings = []
+    if source["model"].get("decision_mode") == "risk_scaled":
+        warnings.append("模型调节风险预算；规则检查成本空间，不代表模型预测期望收益已覆盖成本")
     if scope == "research":
         bounds = {
             "train": (source["start"], source["train_end"]),

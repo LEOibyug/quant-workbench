@@ -23,6 +23,8 @@ export interface MarketPoint {
   expected_return_bps: number | null;
   required_edge_bps: number | null;
   rule_candidate?: boolean;
+  rule_reason?: string | null;
+  model_risk_fraction?: number | null;
   model_allow_entry?: boolean | null;
   decision_reason?: string | null;
 }
@@ -43,6 +45,7 @@ export interface SimulationData {
   metrics?: Record<string, number | null>;
   assumptions?: string[];
   model_statistics?: Record<string, unknown>;
+  decision_funnel?: Record<string, unknown>;
 }
 interface Series {
   key: keyof MarketPoint;
@@ -572,6 +575,20 @@ export function SimulationCharts({
         )}
         {current.decision_reason && (
           <p className="muted">当前模型判断：{current.decision_reason}</p>
+        )}
+        {current.rule_reason && (
+          <p className="muted">
+            当前规则状态：{current.rule_reason}
+            {current.model_risk_fraction != null
+              ? ` · 模型风险预算比例 ${(current.model_risk_fraction * 100).toFixed(0)}%`
+              : ""}
+          </p>
+        )}
+        {completed && data.decision_funnel && (
+          <details>
+            <summary>入场机会与拦截统计</summary>
+            <pre>{JSON.stringify(data.decision_funnel, null, 2)}</pre>
+          </details>
         )}
         {completed && (
           <p>

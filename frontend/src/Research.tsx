@@ -28,6 +28,8 @@ export function Research() {
     { id: string; name: string; configured: boolean; note: string }[]
   >([]);
   const [enabled, setEnabled] = useState(true);
+  const [commission, setCommission] = useState("0.005");
+  const [minimum, setMinimum] = useState("1");
   const dataset = datasets.find((d) => d.id === selected);
   const choose = (d: Dataset) => {
     setSelected(d.id);
@@ -178,6 +180,10 @@ export function Research() {
                 max_iter: n("max_iter"),
                 horizon: n("horizon"),
                 architecture: f.get("architecture"),
+                decision_mode: f.get("decision_mode"),
+                return_normalization:
+                  f.get("architecture") === "gru" &&
+                  f.get("return_normalization") === "on",
                 neural_online_learning_rate: n("neural_lr"),
                 online_batch_size: n("online_batch"),
                 probability_threshold: n("threshold"),
@@ -599,6 +605,43 @@ export function Research() {
             </details>
             <details open>
               <summary>交易成本与成交限制</summary>
+              <p className="muted">
+                佣金对照仅替换以下两项，点差、滑点与卖出规费保持原值。 Alpaca
+                需符合免佣账户条件；IBKR 为首档基础佣金，未另计交易所与清算费。
+                当前引擎按每次成交收最低佣金，分批成交可能高于券商按订单计费。
+              </p>
+              <div className="button-row">
+                <button
+                  type="button"
+                  className="secondary"
+                  onClick={() => {
+                    setCommission("0.005");
+                    setMinimum("1");
+                  }}
+                >
+                  保守佣金 · $0.005 / 最低 $1
+                </button>
+                <button
+                  type="button"
+                  className="secondary"
+                  onClick={() => {
+                    setCommission("0");
+                    setMinimum("0");
+                  }}
+                >
+                  Alpaca 免佣情景
+                </button>
+                <button
+                  type="button"
+                  className="secondary"
+                  onClick={() => {
+                    setCommission("0.0035");
+                    setMinimum("0.35");
+                  }}
+                >
+                  IBKR 阶梯首档 · $0.0035 / 最低 $0.35
+                </button>
+              </div>
               <div className="form-grid four">
                 <label>
                   完整价差 bps
@@ -623,21 +666,25 @@ export function Research() {
                   <input
                     name="commission"
                     type="number"
-                    step="0.001"
-                    defaultValue={0.005}
+                    min={0}
+                    step="0.0001"
+                    value={commission}
+                    onChange={(e) => setCommission(e.target.value)}
                   />
                 </label>
                 <label>
-                  最低佣金 USD/笔
+                  最低佣金 USD/次成交
                   <input
                     name="minimum"
                     type="number"
-                    step="0.1"
-                    defaultValue={1}
+                    min={0}
+                    step="0.01"
+                    value={minimum}
+                    onChange={(e) => setMinimum(e.target.value)}
                   />
                 </label>
                 <label>
-                  卖出规费 bps
+                  卖出规费近似 bps
                   <input
                     name="sell_fee"
                     type="number"
@@ -689,6 +736,23 @@ export function Research() {
                   </select>
                 </label>
                 <label>
+                  联合决策方式
+                  <select name="decision_mode" defaultValue="strict">
+                    <option value="risk_scaled">
+                      规则 + 模型仓位调节（需增强规则）
+                    </option>
+                    <option value="strict">严格概率 + 收益门槛</option>
+                  </select>
+                </label>
+                <label className="inline">
+                  <input
+                    name="return_normalization"
+                    type="checkbox"
+                    defaultChecked
+                  />
+                  GRU 收益目标按开发期波动率标准化
+                </label>
+                <label>
                   预测跨度 分钟
                   <select name="horizon" defaultValue="5">
                     <option value="1">1</option>
@@ -707,7 +771,7 @@ export function Research() {
                   />
                 </label>
                 <label>
-                  上涨概率门槛
+                  严格模式上涨概率门槛
                   <input
                     name="threshold"
                     type="number"
@@ -719,7 +783,7 @@ export function Research() {
                 </label>
                 <label className="inline">
                   <input name="cost_aware" type="checkbox" defaultChecked />
-                  预期收益必须覆盖成本
+                  严格模式：预期收益必须覆盖成本
                 </label>
                 <label>
                   成本安全倍数
@@ -787,6 +851,9 @@ export function Research() {
                 </label>
               </div>
             )}
+            <p className="muted">
+              仓位调节模式：规则负责成本空间与风险预算，模型在预算内决定25%—100%仓位，明显看空时否决；低置信度不再一律禁买。严格模式继续要求概率与预测收益双门槛。仓位调节不代表模型预测的期望收益已覆盖成本，仍需验证。
+            </p>
             <p className="muted">
               GRU直接编码分钟与已完成5分钟序列，保留长历史与误差反馈，使用近期成熟样本回放；默认设备自动选择
               CUDA → MPS →

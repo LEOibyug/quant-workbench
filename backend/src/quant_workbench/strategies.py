@@ -7,7 +7,7 @@ import pandas as pd
 
 from quant_workbench.costs import estimate_round_trip
 
-REGIME_STRATEGIES = {"trend_pullback", "regime_adaptive"}
+REGIME_STRATEGIES = {"trend_pullback", "regime_adaptive", "adaptive_intraday"}
 REFINED_STRATEGIES = {"trend_breakout", "range_reversion"} | REGIME_STRATEGIES
 
 
@@ -42,6 +42,7 @@ class IntradayRules:
         self.pending_distance = self.pending_take = 0.0
         self.max_quantity = None
         self.pending_mode = self.entry_mode = self.strategy
+        self.entry_diagnostic = "等待规则观察"
 
     def filled(self, side, price, remaining):
         if side == "buy":
@@ -89,6 +90,7 @@ class IntradayRules:
                 reason = "trend_failed"
             return reason is None, reason
         self.max_quantity = None
+        self.entry_diagnostic = "风控/冷却/窗口/尾盘限制"
         if (
             self.day_halted
             or self.entries >= cfg.max_daily_entries
@@ -107,16 +109,19 @@ class IntradayRules:
             ]
         )
         atr = float(true_range[-cfg.atr_window :].mean())
+        self.entry_diagnostic = "波动率不足"
         if atr <= 0:
             return False, None
         # Historical volatility regime is based on completed prior sessions only.
         normal = float(np.mean(self.daily_noise)) if self.daily_noise else atr / bar.close
+        self.entry_diagnostic = "波动率偏离历史范围"
         if not 0.5 * normal <= atr / bar.close <= 3 * normal:
             return False, None
         stop = min(cfg.stop_atr * atr, bar.close * cfg.stop_loss_bps / 10000)
         self.max_quantity = max(0, int(cash * cfg.risk_per_trade_bps / 10000 / stop))
         cost = estimate_round_trip(bar.close, bar.volume, cash, cfg, self.max_quantity)
         cost_bps = cost["round_trip_bps"]
+        self.entry_diagnostic = "资金或成交量不足"
         if cost_bps is None:
             return False, None
         efficiency = abs(close[-1] - close[-cfg.slow]) / max(
@@ -124,6 +129,7 @@ class IntradayRules:
         )
         fast, slow = close[-cfg.fast :].mean(), close[-cfg.slow :].mean()
         relative_volume = bar.volume / max(np.mean([b.volume for b in bars[:-1]]), 1)
+        self.entry_diagnostic = "形态条件未满足"
         if self.strategy in REGIME_STRATEGIES:
             signal, target_distance, mode = self.regime_signal(bars, close, atr, vwap)
             self.pending_mode = mode
@@ -153,11 +159,14 @@ class IntradayRules:
                 and bar.close > bar.open
                 and bar.close >= bar.low + 0.6 * (bar.high - bar.low)
             )
+        if signal:
+            self.entry_diagnostic = "目标空间不足以覆盖交易成本"
         # This is opportunity distance, not a forecast of expected profit.
         signal = signal and min(target_distance, cfg.take_atr * atr) / bar.close * 10000 > (
             cfg.rule_cost_multiplier * cost_bps + 1
         )
         if signal:
+            self.entry_diagnostic = "规则入场候选"
             self.pending_distance = stop
             self.pending_take = min(target_distance, cfg.take_atr * atr)
         return bool(signal), None
@@ -176,6 +185,37 @@ class IntradayRules:
         efficiency = abs(close[-1] - close[-cfg.regime_window]) / max(
             np.abs(np.diff(close[-cfg.regime_window :])).sum(), 1e-12
         )
+        if self.strategy == "adaptive_intraday":
+            # Local fair value responds to intraday shifts; never assume the opening VWAP
+            # remains a reachable target after a persistent selloff.
+            local = bars[-cfg.slow :]
+            weights = np.array([b.volume for b in local], dtype=float)
+            typical = np.array([(b.high + b.low + b.close) / 3 for b in local])
+            fair = float(np.average(typical, weights=weights)) if weights.sum() else slow
+            recovering = bar.close > close[-2] and bar.close > bar.open
+            if slope >= 0.5 and fast > slow and bar.close > vwap:
+                touched = min(b.low for b in bars[-5:-1]) <= previous_fast + 0.5 * atr
+                return (
+                    bool(
+                        touched
+                        and recovering
+                        and bar.close > fast
+                        and bar.close - fast <= 1.5 * atr
+                    ),
+                    cfg.take_atr * atr,
+                    "trend",
+                )
+            # Block strong downtrends; require recovery and a real local mean-reversion gap.
+            gap = fair - bar.close
+            deviation = max(cfg.reversion_bps * bar.close / 10000, cfg.reversion_atr * atr)
+            signal = (
+                slope > -2
+                and efficiency < 0.45
+                and gap >= deviation
+                and recovering
+                and bar.close >= bar.low + 0.5 * (bar.high - bar.low)
+            )
+            return bool(signal), gap, "local_range"
         if slope >= 1 and bar.close > vwap and fast > slow:
             touched = min(b.low for b in bars[-6:-1]) <= previous_fast + 0.25 * atr
             recovering = bar.close > bars[-2].high and bar.close > fast

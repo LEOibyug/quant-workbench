@@ -38,10 +38,20 @@ def simulate(
     benchmark = np.zeros(len(times))
     trades, positions, roundtrips, contributions = [], [], [], []
     market_curve = []
+    decision_funnel = {}
     fee_total, impact_total = 0.0, 0.0
     strategies = strategies or {}
     for symbol_index, symbol in enumerate(symbols):
         bars = frame[frame.symbol == symbol].sort_values("timestamp")
+        funnel = {
+            "bars": 0,
+            "rule_candidates": 0,
+            "model_blocked_candidates": 0,
+            "entry_fills": 0,
+            "unfilled_entry_attempts": 0,
+            "rule_rejections": {},
+        }
+        decision_funnel[symbol] = funnel
         cash = config.initial_cash / len(symbols)
         initial = cash
         shares = 0
@@ -52,6 +62,11 @@ def simulate(
         realized_pnl = 0.0
         symbol_fees = symbol_impact = 0.0
         equity_peak = initial
+        pending_model_fraction = 1.0
+        risk_scaled = (
+            getattr(getattr(model_filter, "config", None), "decision_mode", "strict")
+            == "risk_scaled"
+        )
         target = False
         exit_pending = False
         exit_reason = None
@@ -109,6 +124,18 @@ def simulate(
                     qty = max(0, min(cap, math.floor(cash / price)))
                     if rules is not None and rules.max_quantity is not None:
                         qty = min(qty, rules.max_quantity)
+                    qty = math.floor(qty * pending_model_fraction)
+                    if rules is not None and risk_scaled and qty:
+                        # Minimum commissions rise per share at reduced size. Recheck the
+                        # rule's actual frozen target distance before allowing the fill.
+                        scaled_cost = estimate_round_trip(
+                            row.open, previous_volume, cash, config, qty
+                        )
+                        if scaled_cost["round_trip_bps"] is None or (
+                            rules.pending_take / row.open * 10000
+                            <= config.rule_cost_multiplier * scaled_cost["round_trip_bps"] + 1
+                        ):
+                            qty = 0
                     while (
                         qty
                         and qty * price
@@ -116,6 +143,8 @@ def simulate(
                         > cash
                     ):
                         qty -= 1
+            if side == "buy" and not qty:
+                funnel["unfilled_entry_attempts"] += 1
             if qty:
                 direction = 1 if side == "buy" else -1
                 price = row.open * (
@@ -132,6 +161,7 @@ def simulate(
                 fee_total += fee
                 impact_total += impact
                 if side == "buy":
+                    funnel["entry_fills"] += 1
                     cash -= notional + fee
                     shares += qty
                     basis = notional + fee
@@ -167,6 +197,7 @@ def simulate(
                         "position_id": f"{symbol}-{position_id}",
                         "position_after": shares,
                         "realized_pnl": trade_pnl,
+                        "model_risk_fraction": pending_model_fraction if side == "buy" else None,
                     }
                 )
             if flatten and shares:
@@ -247,6 +278,15 @@ def simulate(
                 # The model gates entries; risk/rule exits never need model approval.
                 if target and not shares:
                     target = model_decision["allow_entry"]
+                    pending_model_fraction = model_decision.get("risk_fraction", 1.0)
+            funnel["bars"] += 1
+            if rule_candidate:
+                funnel["rule_candidates"] += 1
+                if model_filter is not None and not model_decision["allow_entry"]:
+                    funnel["model_blocked_candidates"] += 1
+            elif not shares and rules is not None:
+                reason = rules.entry_diagnostic
+                funnel["rule_rejections"][reason] = funnel["rule_rejections"].get(reason, 0) + 1
             if record_market:
                 value = float(cash + shares * row.close)
                 equity_peak = max(equity_peak, value)
@@ -277,6 +317,8 @@ def simulate(
                         "expected_return_bps": model_decision.get("expected_return_bps"),
                         "required_edge_bps": model_decision.get("required_edge_bps"),
                         "rule_candidate": rule_candidate,
+                        "rule_reason": rules.entry_diagnostic if rules else None,
+                        "model_risk_fraction": model_decision.get("risk_fraction"),
                         "model_allow_entry": model_decision.get("allow_entry")
                         if model_filter
                         else None,
@@ -335,6 +377,7 @@ def simulate(
             for t, e, b, d in zip(times, equity, benchmark, drawdown, strict=True)
         ],
         "market_curve": market_curve,
+        "decision_funnel": decision_funnel,
         "trades": trades,
         "positions": positions,
         "contributions": contributions,
