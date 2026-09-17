@@ -35,7 +35,7 @@ npm run dev
 ## 已实现
 
 - 原版SMA、开盘突破、VWAP回归，以及趋势过滤突破/止跌确认回归：ATR风控、仓位风险预算、冷却、日损失限制。
-- 线性/RBF/双头MLP模型，输出未来1/5/15分钟上涨概率及收益；MLP融合短长程历史与已成熟预测/GT/误差反馈。前2k周期不参与交易，每股独立持续适应。
+- 因果卷积＋双尺度GRU/线性/RBF/双头MLP模型，输出未来1/5/15分钟上涨概率及收益；MLP融合短长程历史与已成熟预测/GT/误差反馈。前2k周期不参与交易，每股独立持续适应。
 - 训练、验证、测试按日期隔离；离线训练模型固定保存，验证／测试分别重新加载并适应。最终测试暴露记录、重复结果复用。
 - 次分钟开盘近似成交、价差、滑点、佣金、卖出规费、参与率限制、止损和日内清仓。
 - 资金曲线、回撤、日收益Sharpe、逐股贡献、成交记录、纯规则对照、在线概率评分与CSV导出。
@@ -68,6 +68,8 @@ uv run quant-workbench study --dataset 数据集ID \
 
 增强研究添加 `--suite enhanced`，固定比较11个候选并保留旧规则对照。规则与新测试协议见[增强策略](docs/refined-strategies.md)。
 
-本轮真实数据结果见[增强规则与反馈模型评估](docs/research-results/2026-09-18-feedback-model.md)：新模型尚未优于简单基线，未自动发布。
+上一轮真实数据结果见[增强规则与反馈模型评估](docs/research-results/2026-09-18-feedback-model.md)：新模型尚未优于简单基线，未自动发布。
 
 序列网络升级：因果卷积＋双尺度GRU＋注意力，结合成熟误差反馈和小批次回放；新增趋势回调与状态组合规则。使用 `--suite sequence` 进行分段稳定性验证，见[网络、设备与研究协议](docs/sequence-model.md)。
+
+最新[序列网络与设备评估](docs/research-results/2026-09-18-sequence-network.md)：GRU验证评分优于MLP，但尚未超过简单基线；研究命令使用 `uv run --extra neural quant-workbench study --suite sequence ...`。

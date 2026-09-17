@@ -91,11 +91,15 @@ export function Research() {
           take_atr: n("take_atr"),
           risk_per_trade_bps: n("risk_budget"),
           rule_cost_multiplier: n("rule_cost"),
+          regime_window: n("regime_window"),
+          min_reward_risk: n("reward_risk"),
+          reversion_atr: n("reversion_atr"),
         },
         model: enabled
           ? {
               enabled: true,
               k: n("k"),
+              max_iter: n("max_iter"),
               horizon: n("horizon"),
               architecture: f.get("architecture"),
               neural_online_learning_rate: n("neural_lr"),
@@ -354,7 +358,7 @@ export function Research() {
                 <input
                   name="fast"
                   type="number"
-                  defaultValue={5}
+                  defaultValue={8}
                   min={2}
                   max={60}
                 />
@@ -364,7 +368,7 @@ export function Research() {
                 <input
                   name="slow"
                   type="number"
-                  defaultValue={20}
+                  defaultValue={21}
                   min={3}
                   max={120}
                 />
@@ -389,17 +393,20 @@ export function Research() {
               </label>
               <label>
                 VWAP 偏离 bps
-                <input name="reversion" type="number" defaultValue={30} />
+                <input name="reversion" type="number" defaultValue={15} />
               </label>
             </div>
             <details open>
               <summary>增强策略风控（含趋势回调 / 状态组合）</summary>
               <p className="muted">参考过去20个交易日的波动背景，使用已结束分钟确认信号。每天最多4次入场，日亏损1%后停止入场；风险预算不保证限制跳空损失。</p>
               <div className="form-grid">
-                <label>最长持仓 分钟<input name="max_hold" type="number" min={5} max={120} defaultValue={30} /></label>
+                <label>状态判断窗口 分钟<input name="regime_window" type="number" min={30} max={120} defaultValue={60} /></label>
+                <label>最低目标/风险比<input name="reward_risk" type="number" min={0.5} max={5} step={0.1} defaultValue={1.2} /></label>
+                <label>回归偏离 ATR倍数<input name="reversion_atr" type="number" min={0.5} max={5} step={0.1} defaultValue={1.5} /></label>
+                <label>最长持仓 分钟<input name="max_hold" type="number" min={5} max={120} defaultValue={45} /></label>
                 <label>平仓后冷却 分钟<input name="cooldown" type="number" min={0} max={60} defaultValue={10} /></label>
                 <label>止损 ATR倍数<input name="stop_atr" type="number" min={0.5} max={5} step={0.1} defaultValue={2} /></label>
-                <label>止盈 ATR倍数<input name="take_atr" type="number" min={1} max={10} step={0.1} defaultValue={3} /></label>
+                <label>止盈 ATR倍数<input name="take_atr" type="number" min={1} max={10} step={0.1} defaultValue={4} /></label>
                 <label>单笔风险预算 bps<input name="risk_budget" type="number" min={1} max={100} defaultValue={25} /></label>
                 <label>规则目标 / 成本倍数<input name="rule_cost" type="number" min={1} max={5} step={0.1} defaultValue={1.5} /></label>
               </div>
@@ -546,6 +553,10 @@ export function Research() {
                     step={0.1}
                     defaultValue={1}
                   />
+                </label>
+                <label>
+                  离线训练轮数
+                  <input name="max_iter" type="number" min={1} max={20} defaultValue={3} />
                 </label>
                 <label>
                   序列网络在线学习率
