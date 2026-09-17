@@ -16,6 +16,8 @@ quant-workbench doctor
 
 `uv sync`会在项目根目录创建`.venv`。Linux拉取代码后执行同一命令；不要同步Mac的虚拟环境。`uv.lock`锁定跨平台版本和包校验信息，各系统自动使用对应wheel。修改依赖后执行`uv lock`，将锁文件和依赖声明一起提交。
 
+当前Mac的既有npm全局缓存存在权限问题。本项目安装已使用 `npm ci --cache ../tmp/npm-cache`（在frontend目录执行）绕开，无需修改全局目录权限；其他机器可正常使用`npm ci`。
+
 后端与前端分别运行：
 
 ```sh

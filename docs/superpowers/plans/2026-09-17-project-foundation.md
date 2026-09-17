@@ -58,5 +58,9 @@ Files: `docs/{storage-estimate,setup}.md`, `.github/workflows/ci.yml`, `scripts/
 
 - [x] Initialize local Git, review staged file list and verify excluded materials with `git check-ignore`.
 - [x] Run tests, lint, build and dependency sync verification; commit only project source and textual planning docs.
-- [ ] Create `LEOibyug/quant-workbench` private via `gh repo create --private --source . --remote origin --push`.
-- [ ] Verify remote URL, visibility, matching commit and CI outcome. Report failures truthfully and fix compatibility failures when reproducible.
+- [x] Create `LEOibyug/quant-workbench` private via `gh repo create --private --source . --remote origin --push`.
+- [x] Verify remote URL, visibility, matching commit and CI outcome. Report failures truthfully and fix compatibility failures when reproducible.
+
+## Verification record
+
+Local: 16 pytest cases passed, Ruff passed, uv dependency check passed, clean npm install and frontend build passed. Browser checked both routes, API connection and estimate update. GitHub Actions run 35220404787 completed successfully for the initial source commit, including macOS/Linux CPU and Node22/24. NVIDIA hardware execution remains unverified.
