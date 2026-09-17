@@ -25,6 +25,11 @@ dependencies = [
 [project.optional-dependencies]
 neural = ["torch>=2.6,<3"]
 
+# 服务器 NVIDIA 驱动为 CUDA 12.4（550.54.14），PyPI 上 torch 2.6.0 的 Linux wheel
+# 为 cu124 构建；更高版本的默认 wheel 需要 CUDA 13.0 驱动，无法初始化 GPU。
+[tool.uv]
+constraint-dependencies = ["torch==2.6.0"]
+
 [dependency-groups]
 dev = ["pytest>=8.3,<10", "httpx>=0.28,<1", "ruff>=0.11,<1"]
 
