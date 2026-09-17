@@ -93,6 +93,9 @@ export function Research() {
               horizon: 1,
               probability_threshold: n("threshold"),
               online_learning_rate: n("learning_rate"),
+              cost_aware: f.get("cost_aware") === "on",
+              cost_multiplier: n("cost_multiplier"),
+              min_edge_bps: n("min_edge"),
             }
           : { enabled: false },
       });
@@ -482,6 +485,32 @@ export function Research() {
                     defaultValue={0.55}
                   />
                 </label>
+                <label className="inline">
+                  <input name="cost_aware" type="checkbox" defaultChecked />
+                  预期收益必须覆盖成本
+                </label>
+                <label>
+                  成本安全倍数
+                  <input
+                    name="cost_multiplier"
+                    type="number"
+                    min={1}
+                    max={10}
+                    step={0.1}
+                    defaultValue={1.5}
+                  />
+                </label>
+                <label>
+                  最低额外优势 bps
+                  <input
+                    name="min_edge"
+                    type="number"
+                    min={0}
+                    max={100}
+                    step={0.1}
+                    defaultValue={1}
+                  />
+                </label>
                 <label>
                   在线学习率
                   <input
@@ -496,8 +525,9 @@ export function Research() {
               </div>
             )}
             <p className="muted">
-              首版：SGD 概率分类器 +
-              时序滞后特征。每股独立更新；跨日保留模型权重，重建窗口，不生成隔夜标签。上涨概率不等同于净盈利概率。
+              双输出：SGD 上涨概率 + Huber 收益回归，使用
+              时序滞后特征。每股独立更新；跨日保留模型权重，重建窗口，不生成隔夜标签。上涨概率不等同于净盈利概率。成本过滤要求：预测收益
+              bps 大于估计往返成本 × 安全倍数 + 最低额外优势。
             </p>
             <button className="primary" disabled={busy || !symbols.length}>
               {busy ? "正在处理…" : "训练并冻结实验"}

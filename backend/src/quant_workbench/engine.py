@@ -6,10 +6,11 @@ from collections import deque
 import numpy as np
 import pandas as pd
 
+from quant_workbench.costs import estimate_round_trip
 from quant_workbench.market_data import require_complete, schedule
 from quant_workbench.models import StrategyConfig
 
-ENGINE_VERSION = "minute-v2-online"
+ENGINE_VERSION = "minute-v3-cost-edge"
 
 
 def simulate(
@@ -186,11 +187,13 @@ def simulate(
                 }
             )
             if model_filter is not None:
+                estimated_cost = estimate_round_trip(row.close, row.volume, cash, config)
                 model_decision = model_filter.predict(
                     {
                         "symbol": symbol,
                         "timestamp": ts.isoformat(),
                         "recent_bars": [history[-1]],
+                        "round_trip_cost_bps": estimated_cost["round_trip_bps"],
                     }
                 )
                 # The model gates entries; risk/rule exits never need model approval.
@@ -255,6 +258,8 @@ def simulate(
             "VWAP使用典型价格×分钟成交量近似；基准为每日开盘买入、收盘卖出的无成本持有，日间复利、不隔夜",
             "未复权行情不计算跨日价差收益；当前未支持公司行动总回报或隔夜持仓",
             "成本前损益是同一成交路径费用加回，不是重新模拟的无成本策略",
+            "入场成本预估按当前收盘与拟下单股数计算一买一卖；碎单退出和跳空可使真实成本更高",
+            "模型预测下一分钟收盘收益；多分钟持仓的收益仍以实际模拟出场计算，预测不是利润保证",
         ],
         "model_audit": model_filter.audit if model_filter is not None else [],
         "model_statistics": model_filter.stats if model_filter is not None else {},

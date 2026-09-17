@@ -14,6 +14,9 @@ interface Deployment {
     k?: number;
     probability_threshold?: number;
     horizon?: number;
+    cost_aware?: boolean;
+    cost_multiplier?: number;
+    min_edge_bps?: number;
   };
   model_version?: string;
   strategy_config: Record<string, string | number>;
@@ -127,6 +130,13 @@ export function Workspace() {
                   模型与规则共同决定入场；前 2k
                   个周期收集与适应，之后持续使用已揭晓标签更新。
                 </p>
+                {selected.model.cost_aware && (
+                  <p>
+                    收益过滤：预测下一周期收益需覆盖往返成本的{" "}
+                    {selected.model.cost_multiplier} 倍，另加{" "}
+                    {selected.model.min_edge_bps} bps。
+                  </p>
+                )}
               </>
             ) : (
               <p>此版本使用纯规则策略。</p>

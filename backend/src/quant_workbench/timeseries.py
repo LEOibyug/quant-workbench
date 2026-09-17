@@ -9,13 +9,13 @@ import numpy as np
 import pandas as pd
 from pydantic import BaseModel, ConfigDict, Field
 from sklearn import __version__ as sklearn_version
-from sklearn.linear_model import SGDClassifier
+from sklearn.linear_model import SGDClassifier, SGDRegressor
 from sklearn.preprocessing import StandardScaler
 from threadpoolctl import threadpool_limits
 
 from quant_workbench.market_data import normalize_bars
 
-MODEL_VERSION = "online-sgd-v1"
+MODEL_VERSION = "online-sgd-v2-dual"
 MAX_TRAINING_SAMPLES = 100_000
 FEATURE_NAMES = [
     "return_1",
@@ -40,6 +40,9 @@ class TimeSeriesConfig(BaseModel):
     min_return_bps: float = Field(default=0, ge=0, le=1000)
     online_learning_rate: float = Field(default=0.001, ge=0.000001, le=0.01)
     adapt: bool = True
+    cost_aware: bool = False
+    cost_multiplier: float = Field(default=1.5, ge=1, le=10)
+    min_edge_bps: float = Field(default=1, ge=0, le=100)
 
 
 def _segments(frame):
@@ -77,6 +80,7 @@ def _training_samples(frame, config):
     labels = (future_close / frame.close - 1 > config.min_return_bps / 10_000).astype(int)
     info = frame[["symbol", "timestamp"]].copy()
     info["target_timestamp"] = future_time
+    info["return_bps"] = (future_close / frame.close - 1) * 10000
     indices = info.loc[valid].sort_values(["timestamp", "symbol"]).index
     return (
         features.loc[indices].reset_index(drop=True),
@@ -114,13 +118,17 @@ def _new_stats():
         "baseline_accuracy": None,
         "baseline_brier_score": None,
         "baseline_log_loss": None,
+        "return_mae_bps": None,
+        "zero_return_mae_bps": None,
+        "cost_vetoes": 0,
     }
 
 
 class TimeSeriesModel:
-    def __init__(self, config, estimator=None, scaler=None, metadata=None):
+    def __init__(self, config, estimator=None, scaler=None, metadata=None, regressor=None):
         self.config = config
         self.estimator = estimator
+        self.regressor = regressor
         self.scaler = scaler
         self.metadata = metadata or {}
         self._states = {}
@@ -136,7 +144,13 @@ class TimeSeriesModel:
         return state
 
     def __setstate__(self, state):
-        self.__init__(state["config"], state["estimator"], state["scaler"], state["metadata"])
+        self.__init__(
+            TimeSeriesConfig.model_validate(state["config"].model_dump()),
+            state["estimator"],
+            state["scaler"],
+            state["metadata"],
+            state.get("regressor"),
+        )
 
     def checkpoint_state(self):
         """Explicit trusted-local checkpoint, including adapted weights and pending labels.
@@ -150,6 +164,7 @@ class TimeSeriesModel:
                 "config": self.config.model_dump(),
                 "metadata": self.metadata,
                 "offline_estimator": self.estimator,
+                "offline_regressor": self.regressor,
                 "scaler": self.scaler,
                 "states": self._states,
                 "stats": self.stats,
@@ -197,6 +212,7 @@ class TimeSeriesModel:
             if state is None:
                 state = {
                     "estimator": copy.deepcopy(self.estimator),
+                    "regressor": copy.deepcopy(self.regressor),
                     "bars": deque(maxlen=self.config.k),
                     "last_time": None,
                     "count": 0,
@@ -227,6 +243,7 @@ class TimeSeriesModel:
             pending = state["pending"]
             updated = False
             if pending is not None:
+                actual_return_bps = (bar["close"] / pending["close"] - 1) * 10000
                 label = int(
                     bar["close"] / pending["close"] - 1 > self.config.min_return_bps / 10000
                 )
@@ -248,6 +265,11 @@ class TimeSeriesModel:
                     "baseline_brier_score": (baseline - label) ** 2,
                     "baseline_log_loss": loss(baseline),
                 }
+                if pending.get("expected_return_bps") is not None:
+                    scores["return_mae_bps"] = abs(
+                        pending["expected_return_bps"] - actual_return_bps
+                    )
+                    scores["zero_return_mae_bps"] = abs(actual_return_bps)
                 for tracker in (self.stats, state["stats"]):
                     n = tracker["evaluated_predictions"]
                     tracker["accuracy"] = tracker["correct_predictions"] / n
@@ -257,6 +279,10 @@ class TimeSeriesModel:
                 if self.config.adapt:
                     with threadpool_limits(limits=1):
                         state["estimator"].partial_fit(pending["features"], [label])
+                        if state["regressor"] is not None:
+                            state["regressor"].partial_fit(
+                                pending["features"], [np.clip(actual_return_bps / 100, -10, 10)]
+                            )
                     count("updates")
                     updated = True
             state["last_time"] = ts
@@ -264,6 +290,7 @@ class TimeSeriesModel:
             state["bars"].append(bar)
             state["pending"] = None
             probability = None
+            expected_return_bps = None
             if len(state["bars"]) >= self.config.k:
                 features = self.scaler.transform(
                     _window_features(list(state["bars"]), self.config.k)
@@ -271,24 +298,51 @@ class TimeSeriesModel:
                 features = np.clip(features, -10, 10)
                 with threadpool_limits(limits=1):
                     probability = float(state["estimator"].predict_proba(features)[0, 1])
+                    if state["regressor"] is not None:
+                        expected_return_bps = float(state["regressor"].predict(features)[0] * 100)
+                        if not math.isfinite(expected_return_bps):
+                            raise ValueError("invalid model return")
                 if not math.isfinite(probability):
                     raise ValueError("invalid model probability")
                 state["pending"] = {
                     "features": features,
                     "close": bar["close"],
                     "probability": probability,
+                    "expected_return_bps": expected_return_bps,
                 }
                 count("predictions")
             warmup = state["count"] <= 2 * self.config.k or probability is None
             if warmup:
                 count("warmup_bars")
             allow = not warmup and probability >= self.config.probability_threshold
+            estimated_cost = context.get("round_trip_cost_bps")
+            required_edge = None
+            cost_veto = False
+            if self.config.cost_aware and not warmup:
+                if (
+                    estimated_cost is None
+                    or not math.isfinite(estimated_cost)
+                    or estimated_cost < 0
+                ):
+                    cost_veto = True
+                else:
+                    required_edge = (
+                        estimated_cost * self.config.cost_multiplier + self.config.min_edge_bps
+                    )
+                    cost_veto = expected_return_bps is None or expected_return_bps <= required_edge
+                if allow and cost_veto:
+                    count("cost_vetoes")
+                allow = allow and not cost_veto
             if not allow:
                 count("vetoes")
             reason = (
                 "前2k周期适应/窗口收集，禁止模型交易"
                 if warmup
-                else ("时序概率达到门槛" if allow else "时序概率低于门槛")
+                else (
+                    "预期收益未覆盖成本门槛"
+                    if cost_veto
+                    else ("时序概率达到门槛" if allow else "时序概率低于门槛")
+                )
             )
             return self._record(
                 symbol,
@@ -296,6 +350,9 @@ class TimeSeriesModel:
                 allow,
                 None if warmup else probability,
                 reason,
+                expected_return_bps=None if warmup else expected_return_bps,
+                round_trip_cost_bps=estimated_cost,
+                required_edge_bps=required_edge,
                 observed_count=state["count"],
                 warmup=warmup,
                 updated=updated,
@@ -331,6 +388,19 @@ def train_model(frame, config):
                     labels.iloc[start : start + 256],
                     classes=np.array([0, 1]),
                 )
+    regressor = SGDRegressor(
+        loss="huber",
+        epsilon=0.1,
+        learning_rate="constant",
+        eta0=config.online_learning_rate,
+        random_state=17,
+        shuffle=False,
+    )
+    targets = np.clip(info.return_bps.to_numpy() / 100, -10, 10)
+    with threadpool_limits(limits=1):
+        for _ in range(config.max_iter):
+            for start in range(0, len(values), 256):
+                regressor.partial_fit(values[start : start + 256], targets[start : start + 256])
     timestamps = pd.to_datetime(frame.timestamp, utc=True, format="mixed")
     metadata = {
         "train_start": timestamps.min().isoformat(),
@@ -350,4 +420,4 @@ def train_model(frame, config):
         "mechanism": "offline frozen scaler; per-symbol online SGD; "
         "matured next-minute labels only; first 2k observations veto; gap resets window",
     }
-    return TimeSeriesModel(config, estimator, scaler, metadata)
+    return TimeSeriesModel(config, estimator, scaler, metadata, regressor)

@@ -127,3 +127,40 @@ def test_gap_discards_pending_label_and_rebuilds_window(bars):
     assert model.stats["updates"] == updates + 1
     with pytest.raises(ValueError, match="有效训练样本不足"):
         train_model(bars.iloc[:60], TimeSeriesConfig())
+
+
+def test_return_head_updates_only_after_label_and_cost_gate_can_veto(bars):
+    config = TimeSeriesConfig(enabled=True, k=5, max_iter=1, cost_aware=True)
+    model = train_model(bars, config)
+    offline = model.regressor.coef_.copy()
+    for index in range(5):
+        ctx = context(bars, index)
+        ctx["round_trip_cost_bps"] = 10000
+        model.predict(ctx)
+    np.testing.assert_array_equal(model._states["NVDA"]["regressor"].coef_, offline)
+    for index in range(5, 12):
+        ctx = context(bars, index)
+        ctx["round_trip_cost_bps"] = 10000
+        decision = model.predict(ctx)
+    assert decision["expected_return_bps"] is not None
+    assert decision["required_edge_bps"] == 15001
+    assert decision["allow_entry"] is False
+    assert model.stats["return_mae_bps"] >= 0
+    assert model.stats["zero_return_mae_bps"] >= 0
+    np.testing.assert_array_equal(model.regressor.coef_, offline)
+    assert not np.array_equal(model._states["NVDA"]["regressor"].coef_, offline)
+
+
+def test_v1_saved_model_gets_default_cost_settings_without_return_head(bars):
+    import pickle
+
+    model = train_model(bars, TimeSeriesConfig(enabled=True, k=5, max_iter=1))
+    del model.regressor
+    for key in ("cost_aware", "cost_multiplier", "min_edge_bps"):
+        model.config.__dict__.pop(key)
+    restored = pickle.loads(pickle.dumps(model))
+    assert restored.config.cost_aware is False
+    assert restored.regressor is None
+    for index in range(11):
+        decision = restored.predict(context(bars, index))
+    assert decision["probability"] is not None

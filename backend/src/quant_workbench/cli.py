@@ -20,7 +20,31 @@ def main() -> None:
     estimate.add_argument("--symbols", type=int, default=7)
     estimate.add_argument("--years", type=float, default=2)
     estimate.add_argument("--interval-seconds", type=int, default=60)
+    study = sub.add_parser("study", help="Train-only diagnostics and cost-aware validation search")
+    study.add_argument("--dataset", required=True)
+    for name in ("start", "train-end", "validation-end", "end"):
+        study.add_argument("--" + name, required=True)
+    study.add_argument("--symbols", nargs="+")
+    study.add_argument("--output")
+    study.add_argument("--include-test", action="store_true")
     args = parser.parse_args()
+    if args.command == "study":
+        from quant_workbench.repository import Repository
+        from quant_workbench.study import run_study
+
+        output = run_study(
+            Repository(),
+            args.dataset,
+            args.start,
+            args.train_end,
+            args.validation_end,
+            args.end,
+            args.symbols,
+            args.output,
+            args.include_test,
+        )
+        print(output / "report.md")
+        return
     if args.command == "doctor":
         data_dir = Path(os.environ.get("QUANT_DATA_DIR", "data")).expanduser().resolve()
         existing = data_dir

@@ -44,6 +44,9 @@ def publish(repo: Repository, experiment_id: str) -> dict:
                     "online_learning_rate",
                     "min_return_bps",
                     "adapt",
+                    "cost_aware",
+                    "cost_multiplier",
+                    "min_edge_bps",
                 }
             },
             "engine_version": experiment["engine_version"],
