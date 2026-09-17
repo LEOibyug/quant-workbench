@@ -1,0 +1,51 @@
+"""Portable diagnostic and planning commands; no automatic GPU installation."""
+
+import argparse
+import json
+import os
+import platform
+import shutil
+import sys
+from dataclasses import asdict
+from pathlib import Path
+
+from quant_workbench.storage import estimate_storage
+
+
+def main() -> None:
+    parser = argparse.ArgumentParser(description="Local quant workbench tools")
+    sub = parser.add_subparsers(dest="command", required=True)
+    sub.add_parser("doctor", help="Report environment without loading optional GPU packages")
+    estimate = sub.add_parser("estimate", help="Estimate compressed OHLCV storage")
+    estimate.add_argument("--symbols", type=int, default=7)
+    estimate.add_argument("--years", type=float, default=2)
+    estimate.add_argument("--interval-seconds", type=int, default=60)
+    args = parser.parse_args()
+    if args.command == "doctor":
+        data_dir = Path(os.environ.get("QUANT_DATA_DIR", "data")).expanduser().resolve()
+        existing = data_dir
+        while not existing.exists():
+            existing = existing.parent
+        result = {
+            "python": platform.python_version(),
+            "executable": sys.executable,
+            "os": platform.system(),
+            "architecture": platform.machine(),
+            "data_directory": str(data_dir),
+            "disk_free_gib": round(shutil.disk_usage(existing).free / 2**30, 2),
+            "default_compute": "cpu",
+            "nvidia_smi_on_path": shutil.which("nvidia-smi") is not None,
+            "gpu_note": "Executable presence does not establish CUDA availability or acceleration.",
+        }
+    else:
+        try:
+            result = asdict(
+                estimate_storage(args.symbols, args.years, interval_seconds=args.interval_seconds)
+            )
+        except ValueError as exc:
+            parser.error(str(exc))
+    print(json.dumps(result, ensure_ascii=False, indent=2))
+
+
+if __name__ == "__main__":
+    main()

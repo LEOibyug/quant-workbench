@@ -1,0 +1,32 @@
+# Local environments and caches
+.venv/
+.venv-*/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+.uv-cache/
+node_modules/
+dist/
+build/
+.DS_Store
+.worktrees/
+
+# Credentials, datasets, experiment artifacts and reference course material
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+/data/
+/artifacts/
+/logs/
+/tmp/
+/参考/
+*.sqlite*
+*.db
+/需求/*.docx
