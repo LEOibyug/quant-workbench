@@ -40,6 +40,8 @@ def publish(repo: Repository, experiment_id: str) -> dict:
                     "enabled",
                     "k",
                     "horizon",
+                    "architecture",
+                    "rbf_components",
                     "probability_threshold",
                     "online_learning_rate",
                     "min_return_bps",
@@ -57,7 +59,15 @@ def publish(repo: Repository, experiment_id: str) -> dict:
             model.metadata = {
                 key: value
                 for key, value in model.metadata.items()
-                if key in {"model_version", "feature_names", "sklearn_version", "class_balance"}
+                if key
+                in {
+                    "model_version",
+                    "feature_names",
+                    "sklearn_version",
+                    "class_balance",
+                    "feedback_features",
+                    "transformed_features",
+                }
             }
             body["model_artifact"] = repo.save_model(identifier, model)
             body["model_version"] = model.metadata["model_version"]

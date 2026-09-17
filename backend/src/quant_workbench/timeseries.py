@@ -9,13 +9,15 @@ import numpy as np
 import pandas as pd
 from pydantic import BaseModel, ConfigDict, Field
 from sklearn import __version__ as sklearn_version
+from sklearn.kernel_approximation import RBFSampler
 from sklearn.linear_model import SGDClassifier, SGDRegressor
+from sklearn.neural_network import MLPClassifier, MLPRegressor
 from sklearn.preprocessing import StandardScaler
 from threadpoolctl import threadpool_limits
 
 from quant_workbench.market_data import normalize_bars
 
-MODEL_VERSION = "online-sgd-v2-dual"
+MODEL_VERSION = "online-v3-multiscale-feedback"
 MAX_TRAINING_SAMPLES = 100_000
 FEATURE_NAMES = [
     "return_1",
@@ -33,7 +35,9 @@ class TimeSeriesConfig(BaseModel):
     model_config = ConfigDict(extra="forbid", frozen=True, allow_inf_nan=False)
     enabled: bool = False
     k: int = Field(default=30, ge=5, le=120)
-    horizon: Literal[1] = 1
+    horizon: Literal[1, 5, 15] = 1
+    architecture: Literal["linear", "rbf", "mlp"] = "linear"
+    rbf_components: int = Field(default=64, ge=16, le=256)
     probability_threshold: float = Field(default=0.55, ge=0.5, le=0.95)
     min_training_samples: int = Field(default=200, ge=50, le=10_000)
     max_iter: int = Field(default=5, ge=1, le=20)
@@ -71,11 +75,83 @@ def _feature_rows(frame, k=30):
     return features[FEATURE_NAMES]
 
 
+LONG_FEATURE_NAMES = [
+    "session_return_1d",
+    "session_return_5d",
+    "session_return_20d",
+    "volatility_1d",
+    "volatility_5d",
+    "volume_ratio_1d",
+]
+
+
+def _long_rows(frame):
+    # Chain within-session returns, excluding overnight gaps and split jumps.
+    previous = frame.groupby(_segments(frame), sort=False).close.shift(1)
+    returns = np.log(frame.close / previous.fillna(frame.open))
+    output = pd.DataFrame(index=frame.index)
+    for name, width in zip(LONG_FEATURE_NAMES[:3], (390, 1950, 7800), strict=True):
+        output[name] = returns.groupby(frame.symbol).transform(
+            lambda values, width=width: values.rolling(width, min_periods=1).sum()
+        )
+    for name, width in zip(LONG_FEATURE_NAMES[3:5], (390, 1950), strict=True):
+        output[name] = returns.groupby(frame.symbol).transform(
+            lambda values, width=width: values.rolling(width, min_periods=1).std(ddof=0)
+        )
+    volume_mean = frame.groupby("symbol").volume.transform(
+        lambda values: values.rolling(390, min_periods=1).mean()
+    )
+    output[LONG_FEATURE_NAMES[-1]] = frame.volume / volume_mean.where(volume_mean > 0, 1)
+    return output
+
+
+class HistoricalContext:
+    """Bounded causal memory, shared feature definition for warm start and streaming."""
+
+    def __init__(self):
+        self.returns = deque(maxlen=7800)
+        self.volumes = deque(maxlen=390)
+        self.last_time = None
+        self.last_close = None
+
+    def observe(self, bar, timestamp):
+        ts = pd.Timestamp(timestamp)
+        if self.last_time is not None and ts <= self.last_time:
+            raise ValueError("historical context must precede observation")
+        contiguous = (
+            self.last_time is not None
+            and ts - self.last_time == pd.Timedelta(minutes=1)
+            and ts.tz_convert("America/New_York").date()
+            == self.last_time.tz_convert("America/New_York").date()
+        )
+        base = self.last_close if contiguous else bar["open"]
+        self.returns.append(math.log(bar["close"] / base))
+        self.volumes.append(bar["volume"])
+        self.last_time, self.last_close = ts, bar["close"]
+
+    def features(self):
+        values = np.asarray(self.returns)
+        volumes = np.asarray(self.volumes)
+        return np.array(
+            [
+                [
+                    *(values[-n:].sum() for n in (390, 1950, 7800)),
+                    values[-390:].std(),
+                    values[-1950:].std(),
+                    volumes[-1] / volumes.mean() if volumes.mean() > 0 else 0,
+                ]
+            ]
+        )
+
+
 def _training_samples(frame, config):
     frame = normalize_bars(frame).sort_values(["symbol", "timestamp"]).reset_index(drop=True)
     features = _feature_rows(frame, config.k)
+    if config.architecture != "linear":
+        features = pd.concat([features, _long_rows(frame)], axis=1)
     groups = frame.groupby(_segments(frame), sort=False)
-    future_close, future_time = groups.close.shift(-1), groups.timestamp.shift(-1)
+    future_close = groups.close.shift(-config.horizon)
+    future_time = groups.timestamp.shift(-config.horizon)
     valid = np.isfinite(features.to_numpy()).all(axis=1) & future_close.notna()
     labels = (future_close / frame.close - 1 > config.min_return_bps / 10_000).astype(int)
     info = frame[["symbol", "timestamp"]].copy()
@@ -125,7 +201,11 @@ def _new_stats():
 
 
 class TimeSeriesModel:
-    def __init__(self, config, estimator=None, scaler=None, metadata=None, regressor=None):
+    def __init__(
+        self, config, estimator=None, scaler=None, metadata=None, regressor=None, mapper=None
+    ):
+        self.mapper = mapper
+        self._history = {}
         self.config = config
         self.estimator = estimator
         self.regressor = regressor
@@ -139,6 +219,7 @@ class TimeSeriesModel:
         # A persisted model is always an offline initialization, never deployment memory.
         state = self.__dict__.copy()
         state["_states"] = {}
+        state["_history"] = {}
         state["audit"] = []
         state["stats"] = {**_new_stats(), "per_symbol": {}}
         return state
@@ -150,6 +231,7 @@ class TimeSeriesModel:
             state["scaler"],
             state["metadata"],
             state.get("regressor"),
+            state.get("mapper"),
         )
 
     def checkpoint_state(self):
@@ -166,11 +248,32 @@ class TimeSeriesModel:
                 "offline_estimator": self.estimator,
                 "offline_regressor": self.regressor,
                 "scaler": self.scaler,
+                "mapper": self.mapper,
+                "history": self._history,
                 "states": self._states,
                 "stats": self.stats,
                 "audit": self.audit,
             }
         )
+
+    def seed_history(self, frame, before):
+        """Read only pre-phase prices; never update weights or consume runtime warmup."""
+        cutoff = pd.Timestamp(before, tz="America/New_York").tz_convert("UTC")
+        if self._states:
+            raise ValueError("seed history before runtime only")
+        self._history = {}
+        history = frame[frame.timestamp < cutoff].sort_values(["symbol", "timestamp"])
+        for symbol, group in history.groupby("symbol"):
+            memory = HistoricalContext()
+            for bar in group.tail(7801).to_dict("records"):
+                memory.observe(bar, bar["timestamp"])
+            self._history[symbol] = memory
+
+    def _transform(self, features):
+        scaled = np.clip(self.scaler.transform(features), -10, 10)
+        if self.mapper is None:
+            return scaled
+        return np.concatenate([scaled, self.mapper.transform(scaled)], axis=1)
 
     def _record(self, symbol, timestamp, allow, probability, reason, **extra):
         result = {"allow_entry": bool(allow), "probability": probability, "reason": reason, **extra}
@@ -179,7 +282,7 @@ class TimeSeriesModel:
         return result
 
     def predict(self, context):
-        """Observe each completed minute once, learn matured labels, then predict next minute."""
+        """Observe once, learn matured labels, then predict the configured horizon."""
         symbol, timestamp = context.get("symbol"), context.get("timestamp")
         if not self.config.enabled:
             return self._record(symbol, timestamp, True, None, "时序模型关闭")
@@ -216,7 +319,8 @@ class TimeSeriesModel:
                     "bars": deque(maxlen=self.config.k),
                     "last_time": None,
                     "count": 0,
-                    "pending": None,
+                    "pending": deque(),
+                    "feedback": np.zeros((1, 6)),
                     "stats": _new_stats(),
                 }
                 self._states[symbol] = state
@@ -234,15 +338,16 @@ class TimeSeriesModel:
             )
             if not contiguous:
                 state["bars"].clear()
-                state["pending"] = None
+                state["pending"].clear()
+                state["feedback"] = np.zeros((1, 6))
 
             def count(name):
                 self.stats[name] += 1
                 state["stats"][name] += 1
 
-            pending = state["pending"]
             updated = False
-            if pending is not None:
+            while state["pending"] and state["pending"][0]["due"] <= ts:
+                pending = state["pending"].popleft()
                 actual_return_bps = (bar["close"] / pending["close"] - 1) * 10000
                 label = int(
                     bar["close"] / pending["close"] - 1 > self.config.min_return_bps / 10000
@@ -254,7 +359,7 @@ class TimeSeriesModel:
                 baseline = balance["1"] / (balance["0"] + balance["1"])
                 probability = pending["probability"]
 
-                def loss(prob):
+                def loss(prob, label=label):
                     prob = min(1 - 1e-15, max(1e-15, prob))
                     return -label * math.log(prob) - (1 - label) * math.log1p(-prob)
 
@@ -276,6 +381,9 @@ class TimeSeriesModel:
                     for name, score in scores.items():
                         average = tracker[name] or 0
                         tracker[name] = average + (score - average) / n
+                state["feedback"] = feedback_features(
+                    probability, pending.get("expected_return_bps") or 0, label, actual_return_bps
+                )
                 if self.config.adapt:
                     with threadpool_limits(limits=1):
                         state["estimator"].partial_fit(pending["features"], [label])
@@ -288,14 +396,17 @@ class TimeSeriesModel:
             state["last_time"] = ts
             state["count"] += 1
             state["bars"].append(bar)
-            state["pending"] = None
+            memory = self._history.setdefault(symbol, HistoricalContext())
+            memory.observe(bar, ts)
             probability = None
             expected_return_bps = None
             if len(state["bars"]) >= self.config.k:
-                features = self.scaler.transform(
-                    _window_features(list(state["bars"]), self.config.k)
-                )
-                features = np.clip(features, -10, 10)
+                raw = _window_features(list(state["bars"]), self.config.k)
+                if self.config.architecture != "linear":
+                    raw = np.concatenate([raw, memory.features()], axis=1)
+                features = self._transform(raw)
+                if self.config.architecture == "mlp":
+                    features = np.concatenate([features, state["feedback"]], axis=1)
                 with threadpool_limits(limits=1):
                     probability = float(state["estimator"].predict_proba(features)[0, 1])
                     if state["regressor"] is not None:
@@ -304,12 +415,15 @@ class TimeSeriesModel:
                             raise ValueError("invalid model return")
                 if not math.isfinite(probability):
                     raise ValueError("invalid model probability")
-                state["pending"] = {
-                    "features": features,
-                    "close": bar["close"],
-                    "probability": probability,
-                    "expected_return_bps": expected_return_bps,
-                }
+                state["pending"].append(
+                    {
+                        "due": ts + pd.Timedelta(minutes=self.config.horizon),
+                        "features": features,
+                        "close": bar["close"],
+                        "probability": probability,
+                        "expected_return_bps": expected_return_bps,
+                    }
+                )
                 count("predictions")
             warmup = state["count"] <= 2 * self.config.k or probability is None
             if warmup:
@@ -356,9 +470,40 @@ class TimeSeriesModel:
                 observed_count=state["count"],
                 warmup=warmup,
                 updated=updated,
+                horizon=self.config.horizon,
+                feedback=state["feedback"].ravel().tolist(),
             )
         except (ValueError, TypeError, KeyError, IndexError, OverflowError):
             return self._record(symbol, timestamp, False, None, "时间边界、顺序或行情无效")
+
+
+def feedback_features(probability, predicted_bps, label, actual_bps):
+    return np.clip(
+        [
+            [
+                probability - 0.5,
+                label - 0.5,
+                predicted_bps / 100,
+                actual_bps / 100,
+                (actual_bps - predicted_bps) / 100,
+                1,
+            ]
+        ],
+        -10,
+        10,
+    )
+
+
+def _fit_heads(estimator, regressor, values, labels, targets, iterations):
+    with threadpool_limits(limits=1):
+        for _ in range(iterations):
+            for start in range(0, len(values), 256):
+                estimator.partial_fit(
+                    values[start : start + 256],
+                    labels[start : start + 256],
+                    classes=np.array([0, 1]),
+                )
+                regressor.partial_fit(values[start : start + 256], targets[start : start + 256])
 
 
 def train_model(frame, config):
@@ -368,56 +513,129 @@ def train_model(frame, config):
         raise ValueError(f"有效训练样本不足：{eligible}，至少需要{config.min_training_samples}")
     stride = max(1, math.ceil(eligible / MAX_TRAINING_SAMPLES))
     features, labels, info = features.iloc[::stride], labels.iloc[::stride], info.iloc[::stride]
+    labels = labels.to_numpy()
     balance = {str(label): int((labels == label).sum()) for label in (0, 1)}
     if min(balance.values()) < 20:
         raise ValueError("正负两类各需至少20条训练标签")
-    scaler = StandardScaler().fit(features.to_numpy())
+    # MLP feedback comes from a chronological teacher fitted only before the split.
+    split = len(features)
+    if config.architecture == "mlp":
+        boundary = info.iloc[int(len(info) * 0.6)].timestamp
+        bootstrap_mask = info.target_timestamp < boundary
+        split = int(bootstrap_mask.sum())
+        if split < 50 or min(int((labels[:split] == c).sum()) for c in (0, 1)) < 20:
+            raise ValueError("MLP早期训练段正负标签各需20条")
+    scaler = StandardScaler().fit(features.iloc[:split].to_numpy())
     values = np.clip(scaler.transform(features.to_numpy()), -10, 10)
-    estimator = SGDClassifier(
-        loss="log_loss",
-        learning_rate="constant",
-        eta0=config.online_learning_rate,
-        random_state=17,
-        shuffle=False,
-    )
-    with threadpool_limits(limits=1):
-        for _ in range(config.max_iter):
-            for start in range(0, len(values), 256):
-                estimator.partial_fit(
-                    values[start : start + 256],
-                    labels.iloc[start : start + 256],
-                    classes=np.array([0, 1]),
-                )
-    regressor = SGDRegressor(
-        loss="huber",
-        epsilon=0.1,
-        learning_rate="constant",
-        eta0=config.online_learning_rate,
-        random_state=17,
-        shuffle=False,
-    )
+    mapper = None
+    if config.architecture == "rbf":
+        mapper = RBFSampler(
+            gamma=1 / values.shape[1], n_components=config.rbf_components, random_state=17
+        ).fit(values)
+        values = np.concatenate([values, mapper.transform(values)], axis=1)
+    if config.architecture == "mlp":
+        options = dict(
+            hidden_layer_sizes=(64, 32),
+            activation="tanh",
+            alpha=0.01,
+            learning_rate_init=config.online_learning_rate,
+            random_state=17,
+            shuffle=False,
+            batch_size="auto",
+        )
+        estimator, regressor = MLPClassifier(**options), MLPRegressor(**options)
+        values = np.concatenate([values, np.zeros((len(values), 6))], axis=1)
+    else:
+        estimator = SGDClassifier(
+            loss="log_loss",
+            learning_rate="constant",
+            eta0=config.online_learning_rate,
+            random_state=17,
+            shuffle=False,
+        )
+        regressor = SGDRegressor(
+            loss="huber",
+            epsilon=0.1,
+            learning_rate="constant",
+            eta0=config.online_learning_rate,
+            random_state=17,
+            shuffle=False,
+        )
     targets = np.clip(info.return_bps.to_numpy() / 100, -10, 10)
-    with threadpool_limits(limits=1):
-        for _ in range(config.max_iter):
-            for start in range(0, len(values), 256):
-                regressor.partial_fit(values[start : start + 256], targets[start : start + 256])
+    _fit_heads(
+        estimator, regressor, values[:split], labels[:split], targets[:split], config.max_iter
+    )
+    feedback_samples = 0
+    if config.architecture == "mlp":
+        # Purge boundary rows: teacher training labels must mature before any teacher input.
+        eligible_feedback = np.flatnonzero((info.timestamp >= boundary).to_numpy())
+        pending, feedback = {}, {}
+        with threadpool_limits(limits=1):
+            for i in eligible_feedback:
+                row = info.iloc[i]
+                queue = pending.setdefault(row.symbol, deque())
+                prior = feedback.get(row.symbol, (None, np.zeros((1, 6))))
+                day = row.timestamp.tz_convert("America/New_York").date()
+                if prior[0] != day:
+                    queue.clear()
+                    prior = (day, np.zeros((1, 6)))
+                while queue and queue[0]["due"] <= row.timestamp:
+                    old = queue.popleft()
+                    prior = (
+                        day,
+                        feedback_features(old["p"], old["r"], old["label"], old["actual"]),
+                    )
+                feedback[row.symbol] = prior
+                values[i, -6:] = prior[1][0]
+                p = float(estimator.predict_proba(values[i : i + 1])[0, 1])
+                r = float(regressor.predict(values[i : i + 1])[0] * 100)
+                queue.append(
+                    dict(
+                        due=row.target_timestamp,
+                        p=p,
+                        r=r,
+                        label=labels[i],
+                        actual=info.iloc[i].return_bps,
+                    )
+                )
+            _fit_heads(
+                estimator,
+                regressor,
+                values[eligible_feedback],
+                labels[eligible_feedback],
+                targets[eligible_feedback],
+                config.max_iter,
+            )
+        feedback_samples = len(eligible_feedback)
     timestamps = pd.to_datetime(frame.timestamp, utc=True, format="mixed")
     metadata = {
         "train_start": timestamps.min().isoformat(),
         "train_end": timestamps.max().isoformat(),
-        "sample_count": len(features),
+        "sample_count": split + feedback_samples,
         "eligible_sample_count": eligible,
         "sampling_stride": stride,
         "class_balance": balance,
         "symbols": sorted(frame.symbol.astype(str).str.upper().unique().tolist()),
-        "feature_names": FEATURE_NAMES.copy(),
+        "feature_names": list(features.columns),
+        "feedback_features": [
+            "predicted_probability_centered",
+            "realized_label_centered",
+            "predicted_return_100bps",
+            "realized_return_100bps",
+            "error_100bps",
+            "available",
+        ]
+        if config.architecture == "mlp"
+        else [],
+        "feedback_training_samples": feedback_samples,
+        "transformed_features": values.shape[1],
         "model_version": MODEL_VERSION,
         "sklearn_version": sklearn_version,
         "config": config.model_dump(),
         "last_sample_time": info.timestamp.max().isoformat(),
         "last_target_time": info.target_timestamp.max().isoformat(),
         "training_only": True,
-        "mechanism": "offline frozen scaler; per-symbol online SGD; "
-        "matured next-minute labels only; first 2k observations veto; gap resets window",
+        "mechanism": "frozen training scaler; per-symbol online dual heads; "
+        "matured horizon labels and error feedback; first 2k observations veto; gap resets window",
     }
-    return TimeSeriesModel(config, estimator, scaler, metadata, regressor)
+    return TimeSeriesModel(config, estimator, scaler, metadata, regressor, mapper)

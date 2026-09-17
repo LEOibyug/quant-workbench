@@ -6,13 +6,27 @@ from pydantic import BaseModel, ConfigDict, Field, model_validator
 
 class StrategyConfig(BaseModel):
     model_config = ConfigDict(frozen=True, extra="forbid", allow_inf_nan=False)
-    strategy: Literal["sma", "opening_breakout", "vwap_reversion", "adaptive"] = "adaptive"
+    strategy: Literal[
+        "sma", "opening_breakout", "vwap_reversion", "adaptive", "trend_breakout", "range_reversion"
+    ] = "adaptive"
     fast: int = Field(default=5, ge=2, le=60)
     slow: int = Field(default=20, ge=3, le=120)
     flatten_minutes: int = Field(default=5, ge=1, le=30)
     opening_minutes: int = Field(default=15, ge=5, le=60)
     reversion_bps: float = Field(default=30, gt=0, le=500)
     stop_loss_bps: float = Field(default=100, gt=0, le=2000)
+    atr_window: int = Field(default=14, ge=5, le=60)
+    stop_atr: float = Field(default=2, ge=0.5, le=5)
+    take_atr: float = Field(default=3, ge=1, le=10)
+    breakout_buffer_atr: float = Field(default=0.1, ge=0, le=1)
+    reversion_atr: float = Field(default=2, ge=0.5, le=5)
+    min_relative_volume: float = Field(default=1.2, ge=0.5, le=5)
+    max_hold_minutes: int = Field(default=30, ge=5, le=120)
+    cooldown_minutes: int = Field(default=10, ge=0, le=60)
+    max_daily_entries: int = Field(default=4, ge=1, le=20)
+    daily_loss_bps: float = Field(default=100, ge=10, le=1000)
+    risk_per_trade_bps: float = Field(default=25, ge=1, le=100)
+    rule_cost_multiplier: float = Field(default=1.5, ge=1, le=5)
     initial_cash: float = Field(default=100_000, ge=100, le=100_000_000)
     spread_bps: float = Field(default=2, ge=0, le=100)
     slippage_bps: float = Field(default=2, ge=0, le=100)

@@ -5,10 +5,18 @@ import math
 from quant_workbench.models import StrategyConfig
 
 
-def estimate_round_trip(price: float, volume: float, cash: float, config: StrategyConfig) -> dict:
+def estimate_round_trip(
+    price: float,
+    volume: float,
+    cash: float,
+    config: StrategyConfig,
+    max_quantity: int | None = None,
+) -> dict:
     impact = (config.spread_bps / 2 + config.slippage_bps) / 10000
     buy_price, sell_price = price * (1 + impact), price * (1 - impact)
     quantity = min(math.floor(volume * config.participation), math.floor(cash / buy_price))
+    if max_quantity is not None:
+        quantity = min(quantity, max_quantity)
     while quantity > 0:
         commission = max(config.minimum_commission, quantity * config.commission_per_share)
         if quantity * buy_price + commission <= cash:

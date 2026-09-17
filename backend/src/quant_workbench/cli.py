@@ -27,6 +27,7 @@ def main() -> None:
     study.add_argument("--symbols", nargs="+")
     study.add_argument("--output")
     study.add_argument("--include-test", action="store_true")
+    study.add_argument("--suite", choices=["legacy", "enhanced"], default="legacy")
     args = parser.parse_args()
     if args.command == "study":
         from quant_workbench.repository import Repository
@@ -42,6 +43,7 @@ def main() -> None:
             args.symbols,
             args.output,
             args.include_test,
+            suite=args.suite,
         )
         print(output / "report.md")
         return

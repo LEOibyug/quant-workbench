@@ -69,6 +69,7 @@ def run_study(
     output=None,
     include_test=False,
     progress=print,
+    suite="legacy",
 ):
     dataset = repo.get("datasets", dataset_id)
     symbols = symbols or dataset["symbols"]
@@ -99,20 +100,46 @@ def run_study(
             "validation return_pct - 0.5 * max_drawdown_pct; >=5 roundtrips; cash if score<=0"
         ),
         "diagnostics": training_diagnostics(train, config),
+        "suite": suite,
         "symbols": {},
     }
     dest = Path(output) if output else repo.root / "studies" / report["id"]
     dest.mkdir(parents=True, exist_ok=True)
-    # Fixed grid declared before evaluating: 3 rule families, 4 prediction variants.
-    grid = [
-        (strategy, mode, multiplier)
-        for strategy in ("sma", "opening_breakout", "vwap_reversion")
-        for mode, multiplier in (("rule", 1.5), ("probability", 1.5), ("cost", 1.0), ("cost", 1.5))
-    ]
+    # Declare architecture and horizon before evaluating any candidate.
+    if suite == "enhanced":
+        grid = [
+            (strategy, "rule", 1.5, "linear", 1)
+            for strategy in ("sma", "opening_breakout", "vwap_reversion")
+        ]
+        grid += [
+            (strategy, mode, 1.5, architecture, horizon)
+            for strategy in ("trend_breakout", "range_reversion")
+            for mode, architecture, horizon in (
+                ("rule", "linear", 1),
+                ("cost", "linear", 5),
+                ("cost", "mlp", 5),
+                ("cost", "mlp", 15),
+            )
+        ]
+    elif suite == "legacy":
+        grid = [
+            (strategy, mode, multiplier, "linear", 1)
+            for strategy in ("sma", "opening_breakout", "vwap_reversion")
+            for mode, multiplier in (
+                ("rule", 1.5),
+                ("probability", 1.5),
+                ("cost", 1.0),
+                ("cost", 1.5),
+            )
+        ]
+    else:
+        raise ValueError("未知研究候选集")
+    report["candidate_grid"] = grid
+    (dest / "protocol.json").write_text(json.dumps(report, ensure_ascii=False, indent=2))
     for symbol in symbols:
         candidates = []
-        for strategy, mode, multiplier in grid:
-            name = f"{symbol}/{strategy}/{mode}/{multiplier:g}"
+        for strategy, mode, multiplier, architecture, horizon in grid:
+            name = f"{symbol}/{strategy}/{mode}/{multiplier:g}/{architecture}/h{horizon}"
             request = ExperimentInput(
                 name=name,
                 dataset_id=dataset_id,
@@ -125,6 +152,8 @@ def run_study(
                 model={
                     "enabled": mode != "rule",
                     "k": 30,
+                    "architecture": architecture,
+                    "horizon": horizon,
                     "cost_aware": mode == "cost",
                     "cost_multiplier": multiplier,
                     "min_edge_bps": 1,
@@ -135,6 +164,8 @@ def run_study(
                 "experiment_id": None,
                 "mode": mode,
                 "strategy": strategy,
+                "architecture": architecture,
+                "horizon": horizon,
                 "cost_multiplier": multiplier,
                 "status": "failed",
                 "error": None,
@@ -164,7 +195,19 @@ def run_study(
             )
             progress(f"{name}: {candidate['status']}", flush=True)
         selected = select_candidate(candidates)
-        report["symbols"][symbol] = {"candidates": candidates, "selected": selected, "test": None}
+        report["symbols"][symbol] = {
+            "candidates": candidates,
+            "selected": selected,
+            "test": None,
+            "legacy_selected": select_candidate(
+                [
+                    c
+                    for c in candidates
+                    if c["strategy"] in {"sma", "opening_breakout", "vwap_reversion"}
+                ]
+            ),
+            "legacy_test": None,
+        }
         (dest / "study.json").write_text(
             json.dumps(report, ensure_ascii=False, indent=2), encoding="utf-8"
         )
@@ -175,6 +218,21 @@ def run_study(
     validation_cost_stress(repo, report, progress)
     if include_test:
         for symbol, item in report["symbols"].items():
+            if suite == "enhanced":
+                legacy = item["legacy_selected"]
+                if legacy is None:
+                    item["legacy_test"] = {"policy": "cash", "return_pct": 0}
+                else:
+                    legacy_id = legacy["experiment_id"]
+                    status = begin_run(repo, legacy_id, "test")
+                    if status.get("launch"):
+                        execute_run(repo, legacy_id, "test", status["prior_test_exposure"])
+                    legacy_run = next(r for r in repo.runs(legacy_id) if r["phase"] == "test")
+                    item["legacy_test"] = (
+                        {"metrics": repo.result(legacy_id, "test")["metrics"]}
+                        if legacy_run["status"] == "completed"
+                        else {"error": legacy_run["error"]}
+                    )
             if item["selected"] is None:
                 item["test"] = {
                     "policy": "cash",
@@ -184,7 +242,8 @@ def run_study(
                 continue
             identifier = item["selected"]["experiment_id"]
             status = begin_run(repo, identifier, "test")
-            execute_run(repo, identifier, "test", status["prior_test_exposure"])
+            if status.get("launch"):
+                execute_run(repo, identifier, "test", status["prior_test_exposure"])
             run = next(r for r in repo.runs(identifier) if r["phase"] == "test")
             if run["status"] == "completed":
                 result = repo.result(identifier, "test")
@@ -260,7 +319,7 @@ def render_report(report):
         f"时间分段：{report['split']}（右端不含）。",
         "",
         "成本假设固定：完整价差2bps、单边滑点2bps、佣金0.005美元/股、最低1美元/笔、卖出规费0.3bps。",
-        "可调决策参数：成本安全倍数1或1.5，额外净优势1bps；k=30、上涨概率门槛0.55。",
+        "固定候选集合见protocol.json；k=30、上涨概率门槛0.55、成本安全倍数与跨度在验证前冻结。",
         "每股独立资金；仅验证区间选型，净收益率－0.5×最大回撤为评分，至少5个完整交易，无正评分则持币。",
         "所有标的选择先写入selection.json，再允许最终测试；已有测试暴露会单独标识。",
         "",
@@ -291,8 +350,8 @@ def render_report(report):
         lines += [
             "",
             "**本轮所有成本过滤候选均无交易：收益幅度预测不足以覆盖设置的费用门槛。**",
-            "这表示当前一步预测方案没有找到满足成本约束的入场机会，不能解释为真实市场没有机会。",
-            "以下验证选中的概率/规则方案虽计入实际费用，但并未通过上述一步收益门槛，须分别理解。",
+            "这表示当前收益预测方案没有找到满足成本约束的入场机会，不能解释为真实市场没有机会。",
+            "以下验证选中的概率/规则方案虽计入实际费用，但并未通过上述收益门槛，须分别理解。",
         ]
     for symbol, item in report["symbols"].items():
         lines += [
@@ -334,6 +393,10 @@ def render_report(report):
                 f"{scores['return_mae_bps']:.3f}bps，零收益基线 "
                 f"{scores['zero_return_mae_bps']:.3f}bps。"
             ]
+        control = item.get("legacy_test")
+        if control:
+            control_return = control.get("metrics", {}).get("return_pct", control.get("return_pct"))
+            lines += [f"旧规则对照测试净收益：{control_return}%。"]
         test = item["test"]
         if test and "metrics" in test:
             lines += [
@@ -347,9 +410,9 @@ def render_report(report):
         "",
         "## 解释限制",
         "",
-        "收益模型是在线Huber线性回归，上涨概率是在线逻辑分类；均使用相同的k窗口特征。",
-        "首2k周期不入场，逐股独立在线更新，标准化仅开发期拟合。预测下一分钟收益不等于多分钟持仓净利润。",
+        "线性/RBF双头使用逻辑分类与Huber回归；MLP使用两个64→32网络与延迟成熟的预测/真实值/误差反馈。",
+        "首2k周期不入场，逐股独立在线更新，标准化仅开发期拟合。h分钟收盘预测不等于实际成交净利润。",
         "成本门槛采用当前已结束分钟的价格/成交量估算，实际成交仍在下一分钟；碎单最低佣金和跳空会增加成本。",
-        "12候选的重复验证仍可能过拟合；没有通过真实市场数据和新未见区间之前，不据此发布实盘策略。",
+        "多个候选重复验证仍可能过拟合；单次新测试不能证明持续盈利，不据此自动发布实盘策略。",
     ]
     return "\n".join(lines) + "\n"

@@ -14,6 +14,7 @@ interface Deployment {
     k?: number;
     probability_threshold?: number;
     horizon?: number;
+    architecture?: string;
     cost_aware?: boolean;
     cost_multiplier?: number;
     min_edge_bps?: number;
@@ -124,7 +125,7 @@ export function Workspace() {
               <>
                 <p>
                   {selected.model_version} · 窗口 {selected.model.k} ·
-                  下一周期上涨概率门槛 {selected.model.probability_threshold}
+                  未来 {selected.model.horizon || 1} 分钟上涨概率门槛 {selected.model.probability_threshold}
                 </p>
                 <p className="muted">
                   模型与规则共同决定入场；前 2k
@@ -132,7 +133,7 @@ export function Workspace() {
                 </p>
                 {selected.model.cost_aware && (
                   <p>
-                    收益过滤：预测下一周期收益需覆盖往返成本的{" "}
+                    收益过滤：预测未来 {selected.model.horizon || 1} 分钟收益需覆盖往返成本的{" "}
                     {selected.model.cost_multiplier} 倍，另加{" "}
                     {selected.model.min_edge_bps} bps。
                   </p>

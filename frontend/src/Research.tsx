@@ -85,12 +85,19 @@ export function Research() {
           opening_minutes: n("opening"),
           flatten_minutes: n("flatten"),
           reversion_bps: n("reversion"),
+          max_hold_minutes: n("max_hold"),
+          cooldown_minutes: n("cooldown"),
+          stop_atr: n("stop_atr"),
+          take_atr: n("take_atr"),
+          risk_per_trade_bps: n("risk_budget"),
+          rule_cost_multiplier: n("rule_cost"),
         },
         model: enabled
           ? {
               enabled: true,
               k: n("k"),
-              horizon: 1,
+              horizon: n("horizon"),
+              architecture: f.get("architecture"),
               probability_threshold: n("threshold"),
               online_learning_rate: n("learning_rate"),
               cost_aware: f.get("cost_aware") === "on",
@@ -278,7 +285,7 @@ export function Research() {
               </label>
               <label>
                 策略
-                <select name="strategy" defaultValue="adaptive">
+                <select name="strategy" defaultValue="trend_breakout">
                   {Object.entries(strategyNames).map(([k, v]) => (
                     <option key={k} value={k}>
                       {v}
@@ -384,6 +391,18 @@ export function Research() {
               </label>
             </div>
             <details open>
+              <summary>增强策略风控（趋势过滤突破 / 止跌确认回归）</summary>
+              <p className="muted">参考过去20个交易日的波动背景，使用已结束分钟确认信号。每天最多4次入场，日亏损1%后停止入场；风险预算不保证限制跳空损失。</p>
+              <div className="form-grid">
+                <label>最长持仓 分钟<input name="max_hold" type="number" min={5} max={120} defaultValue={30} /></label>
+                <label>平仓后冷却 分钟<input name="cooldown" type="number" min={0} max={60} defaultValue={10} /></label>
+                <label>止损 ATR倍数<input name="stop_atr" type="number" min={0.5} max={5} step={0.1} defaultValue={2} /></label>
+                <label>止盈 ATR倍数<input name="take_atr" type="number" min={1} max={10} step={0.1} defaultValue={3} /></label>
+                <label>单笔风险预算 bps<input name="risk_budget" type="number" min={1} max={100} defaultValue={25} /></label>
+                <label>规则目标 / 成本倍数<input name="rule_cost" type="number" min={1} max={5} step={0.1} defaultValue={1.5} /></label>
+              </div>
+            </details>
+            <details open>
               <summary>交易成本与成交限制</summary>
               <div className="form-grid four">
                 <label>
@@ -458,12 +477,26 @@ export function Research() {
               </label>
             </div>
             <p>
-              模型读取过去 k 根分钟线，输出下一周期上涨概率。首 k
+              模型综合过去 k 根分钟线与约1/5/20交易日的历史背景，输出指定跨度的上涨概率与收益。首 k
               根积累窗口，k—2k 为适应期，前 2k
-              根不参与交易；之后每个周期用刚揭晓的标签更新，再作下一次判断。
+              根不参与交易；标签在预测跨度到期后才用于更新。MLP同时接收最近已成熟预测、真实值和误差。
             </p>
             {enabled && (
               <div className="form-grid">
+                <label>
+                  模型结构
+                  <select name="architecture" defaultValue="mlp">
+                    <option value="mlp">双头 MLP · 64→32 · 误差反馈</option>
+                    <option value="rbf">RBF非线性 + 在线双头</option>
+                    <option value="linear">线性双头基线</option>
+                  </select>
+                </label>
+                <label>
+                  预测跨度 分钟
+                  <select name="horizon" defaultValue="5">
+                    <option value="1">1</option><option value="5">5</option><option value="15">15</option>
+                  </select>
+                </label>
                 <label>
                   窗口 k
                   <input
@@ -525,8 +558,7 @@ export function Research() {
               </div>
             )}
             <p className="muted">
-              双输出：SGD 上涨概率 + Huber 收益回归，使用
-              时序滞后特征。每股独立更新；跨日保留模型权重，重建窗口，不生成隔夜标签。上涨概率不等同于净盈利概率。成本过滤要求：预测收益
+              MLP采用两个64→32隐藏层网络，分别输出概率与收益；线性/RBF版本使用逻辑分类与Huber回归。每股独立更新；跨日保留模型权重和历史背景，重建短窗口与误差反馈，不生成隔夜标签。上涨概率不等同于净盈利概率。成本过滤要求：预测收益
               bps 大于估计往返成本 × 安全倍数 + 最低额外优势。
             </p>
             <button className="primary" disabled={busy || !symbols.length}>

@@ -64,9 +64,9 @@ def test_online_warmup_matured_labels_and_scaler_frozen(bars):
     observed_probabilities, revealed_labels = [], []
     for index in range(11):
         pending = model._states.get("NVDA", {}).get("pending")
-        if pending is not None:
-            observed_probabilities.append(pending["probability"])
-            revealed_labels.append(int(bars.iloc[index].close > pending["close"]))
+        if pending:
+            observed_probabilities.append(pending[0]["probability"])
+            revealed_labels.append(int(bars.iloc[index].close > pending[0]["close"]))
         decision = model.predict(context(bars, index))
         assert decision["warmup"] == (index < 10)
         if index < 10:
@@ -164,3 +164,94 @@ def test_v1_saved_model_gets_default_cost_settings_without_return_head(bars):
     for index in range(11):
         decision = restored.predict(context(bars, index))
     assert decision["probability"] is not None
+
+
+def test_long_history_streaming_matches_batch_and_ignores_overnight_split(bars):
+    from quant_workbench.timeseries import HistoricalContext, _long_rows
+
+    tomorrow = bars.copy()
+    tomorrow["timestamp"] += pd.Timedelta(days=1)
+    tomorrow[["open", "high", "low", "close"]] /= 10
+    joined = pd.concat([bars, tomorrow], ignore_index=True)
+    expected = _long_rows(joined)
+    history = HistoricalContext()
+    for i, bar in enumerate(joined.to_dict("records")):
+        history.observe(bar, bar["timestamp"])
+        np.testing.assert_allclose(history.features()[0], expected.iloc[i], atol=1e-12)
+
+
+def test_mlp_feedback_is_delayed_and_future_suffix_cannot_change_decisions(bars):
+    import pickle
+
+    config = TimeSeriesConfig(enabled=True, k=5, horizon=5, architecture="mlp", max_iter=1)
+    model = train_model(bars, config)
+    independent = pickle.loads(pickle.dumps(model))
+    mutated = bars.copy()
+    mutated.loc[21:, ["open", "high", "low", "close"]] *= 2
+    initial = [x.copy() for x in model.estimator.coefs_]
+    for index in range(21):
+        decision = model.predict(context(bars, index))
+        assert decision == independent.predict(context(mutated, index))
+        assert model.stats["updates"] == max(0, index - 8)
+        if index < 9:
+            assert decision["feedback"] == [0] * 6
+        if index == 9:
+            expected_return = (bars.iloc[9].close / bars.iloc[4].close - 1) * 100
+            assert decision["feedback"][3] == pytest.approx(expected_return)
+            assert decision["feedback"][4] == pytest.approx(
+                expected_return - decision["feedback"][2]
+            )
+    for a, b in zip(initial, model.estimator.coefs_, strict=True):
+        np.testing.assert_array_equal(a, b)
+    assert any(
+        not np.array_equal(a, b)
+        for a, b in zip(initial, model._states["NVDA"]["estimator"].coefs_, strict=True)
+    )
+    _, _, info = _training_samples(bars, config)
+    assert ((info.target_timestamp - info.timestamp) == pd.Timedelta(minutes=5)).all()
+    # All pending horizons are discarded after a data gap, along with stale error feedback.
+    updates = model.stats["updates"]
+    decision = model.predict(context(bars, 22))
+    assert decision["feedback"] == [0] * 6
+    assert model.stats["updates"] == updates
+
+
+def test_history_seed_reads_only_prefix_and_does_not_consume_adaptation(bars):
+    from quant_workbench.timeseries import _long_rows
+
+    model = train_model(bars, TimeSeriesConfig(enabled=True, k=5, architecture="rbf", max_iter=1))
+    next_day = bars.copy()
+    next_day["timestamp"] += pd.Timedelta(days=1)
+    model.seed_history(pd.concat([bars, next_day]), "2024-01-04")
+    np.testing.assert_allclose(
+        model._history["NVDA"].features()[0], _long_rows(bars).iloc[-1], atol=1e-12
+    )
+    assert model._states == {}
+    assert model.stats["updates"] == 0
+    decision = model.predict(context(next_day, 0))
+    assert decision["observed_count"] == 1 and decision["warmup"]
+
+
+@pytest.mark.parametrize("architecture", ["mlp", "rbf"])
+def test_horizon15_multisymbol_serialization_and_overnight_reset(bars, architecture):
+    import pickle
+
+    other = bars.assign(symbol="AAPL")
+    training = pd.concat([bars, other], ignore_index=True)
+    config = TimeSeriesConfig(enabled=True, k=5, horizon=15, architecture=architecture, max_iter=1)
+    model = train_model(training, config)
+    restored = pickle.loads(pickle.dumps(model))
+    for i in range(25):
+        for symbol in ("NVDA", "AAPL"):
+            left = model.predict(context(bars, i, symbol))
+            right = restored.predict(context(bars, i, symbol))
+            assert left == right
+    assert model.stats["updates"] == 2 * 6
+    updates = model.stats["updates"]
+    tomorrow = bars.copy()
+    tomorrow["timestamp"] += pd.Timedelta(days=1)
+    decision = model.predict(context(tomorrow, 0))
+    assert decision["feedback"] == [0] * 6
+    assert model.stats["updates"] == updates
+    assert not model._states["NVDA"]["pending"]
+    assert len(model._history["NVDA"].returns) == 26

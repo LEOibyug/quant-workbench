@@ -152,7 +152,8 @@ def execute_run(repo: Repository, identifier: str, phase: str, exposure=False):
                 result["assumptions"].extend(
                     [
                         "每阶段从同一离线模型初始化；每股独立按已成熟标签在线适应，前2k周期不入场",
-                        "预测目标是下一分钟收盘收益超过min_return_bps，非扣费盈利概率；阈值未经校准",
+                        f"预测目标是未来{model_config.horizon}分钟收盘收益超过min_return_bps，"
+                        "非扣费盈利概率；阈值未经校准",
                         "模型学习与推理延迟未另行计入；需在实盘接入前测量延迟和真实成交成本",
                     ]
                 )
