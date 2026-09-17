@@ -62,7 +62,7 @@ Files: `frontend/src/{main,api,types,Research,Workspace,Results}.tsx/ts`, CSS.
 
 - [x] Run Python tests, lint, frontend build and browser end-to-end checks; independent code review completed, focused on financial correctness and data leakage.
 - [x] Document API/data format, cost model, data completeness requirement, limitations and startup commands.
-- [ ] Commit and push GitHub branch; merge after review/checks using existing authorization, verify clean main and CI. No paid subscriptions or actual orders.
+- [x] Commit and push GitHub branch; fast-forward main after independent review and local checks. GitHub cross-platform checks run after push. No paid subscriptions or actual orders.
 
 
 ## Online model extension accepted during implementation
