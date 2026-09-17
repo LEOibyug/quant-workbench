@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { ExperimentRunner } from "./ExperimentRunner";
 import { api, post } from "./api";
 import { strategyNames } from "./types";
 import type { Dataset, Experiment } from "./types";
@@ -508,8 +509,8 @@ export function Research() {
         <section className="card">
           <div className="section-heading">
             <h2>实验已冻结</h2>
-            <a className="button primary" href={`/workspace?id=${created.id}`}>
-              进入运行面板 →
+            <a className="button primary" href="#evaluation">
+              进入实验验证 ↓
             </a>
           </div>
           <p>
@@ -547,6 +548,9 @@ export function Research() {
           </p>
         </section>
       )}
+      <div id="evaluation">
+        <ExperimentRunner selectedId={created?.id} />
+      </div>
     </>
   );
 }

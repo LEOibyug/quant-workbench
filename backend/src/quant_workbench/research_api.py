@@ -6,6 +6,7 @@ import pandas as pd
 from fastapi import APIRouter, BackgroundTasks, File, HTTPException, UploadFile
 from fastapi.responses import Response
 
+from quant_workbench.deployments import public_deployment, publish
 from quant_workbench.market_data import demo_data
 from quant_workbench.models import AlpacaInput, ExperimentInput, ProviderInput
 from quant_workbench.providers import fetch_alpaca, fetch_provider, provider_catalog
@@ -128,3 +129,13 @@ def export(identifier: str, phase: Phase, kind: Literal["trades", "curve", "dail
         media_type="text/csv",
         headers={"Content-Disposition": f'attachment; filename="{identifier}-{phase}-{kind}.csv"'},
     )
+
+
+@router.post("/experiments/{identifier}/publish")
+def publish_experiment(identifier: str):
+    return publish(Repository(), identifier)
+
+
+@router.get("/deployments")
+def deployments():
+    return [public_deployment(d) for d in Repository().list_records("deployments")]

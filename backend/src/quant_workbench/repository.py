@@ -28,6 +28,8 @@ class Repository:
             db.executescript("""
                 CREATE TABLE IF NOT EXISTS datasets(id TEXT PRIMARY KEY, body TEXT NOT NULL);
                 CREATE TABLE IF NOT EXISTS experiments(id TEXT PRIMARY KEY, body TEXT NOT NULL);
+                CREATE TABLE IF NOT EXISTS deployments(
+                    id TEXT PRIMARY KEY, experiment_id TEXT UNIQUE NOT NULL, body TEXT NOT NULL);
                 CREATE TABLE IF NOT EXISTS runs(
                     experiment_id TEXT, phase TEXT, status TEXT, error TEXT,
                     exposed INTEGER DEFAULT 0,
@@ -81,7 +83,7 @@ class Repository:
         return info
 
     def list_records(self, table: str) -> list[dict]:
-        if table not in {"datasets", "experiments"}:
+        if table not in {"datasets", "experiments", "deployments"}:
             raise ValueError("invalid table")
         with self.connect() as db:
             return [
@@ -90,7 +92,7 @@ class Repository:
             ]
 
     def get(self, table: str, identifier: str) -> dict:
-        if table not in {"datasets", "experiments"}:
+        if table not in {"datasets", "experiments", "deployments"}:
             raise ValueError("invalid table")
         with self.connect() as db:
             row = db.execute(f"SELECT body FROM {table} WHERE id=?", (identifier,)).fetchone()

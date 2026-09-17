@@ -32,7 +32,7 @@ npm ci
 npm run dev
 ```
 
-前端地址为`http://127.0.0.1:5173`，研究和使用面板分别为`/research`、`/workspace`。Vite把`/api`转发到本机8000端口，不必放宽CORS。HTTP客户端包含SOCKS代理依赖，读取标准HTTP_PROXY / HTTPS_PROXY / ALL_PROXY环境配置。API文档位于`http://127.0.0.1:8000/docs`。这是本地开发服务，不直接暴露公网。
+前端地址为`http://127.0.0.1:5173`，研究页与策略／模型展示页分别为`/research`、`/workspace`；实验回测在研究页，展示页仅接受发布的策略模型且无反向研究导航。Vite把`/api`转发到本机8000端口，不必放宽CORS。HTTP客户端包含SOCKS代理依赖，读取标准HTTP_PROXY / HTTPS_PROXY / ALL_PROXY环境配置。API文档位于`http://127.0.0.1:8000/docs`。这是本地开发服务，不直接暴露公网。
 
 当前提供供应商API直连下载、策略回测、离线／在线时序模型、冻结实验与结果展示。交易网关尚未实现。两面板属于界面分工，不提供安全隔离。后端只使用单进程，勿开启多个worker。
 

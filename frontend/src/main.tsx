@@ -1,6 +1,8 @@
-import { useEffect, useState } from "react";
+import { lazy, Suspense, useEffect, useState } from "react";
 import { createRoot } from "react-dom/client";
-import { Research } from "./Research";
+const Research = lazy(() =>
+  import("./Research").then((m) => ({ default: m.Research })),
+);
 import { Workspace } from "./Workspace";
 import { api } from "./api";
 import "./style.css";
@@ -18,13 +20,22 @@ function App() {
         <div className="brand">
           Q<span> / </span>WORKBENCH
         </div>
-        <div className="local">本地美股研究</div>
+        <div className="local">
+          {research ? "本地美股研究" : "策略与模型展示"}
+        </div>
         <nav aria-label="工作区导航">
-          <a href="/research" aria-current={research ? "page" : undefined}>
-            01　策略研究
-          </a>
-          <a href="/workspace" aria-current={!research ? "page" : undefined}>
-            02　运行与展示
+          {research && (
+            <a href="/research" aria-current="page">
+              01　策略研究
+            </a>
+          )}
+          <a
+            href="/workspace"
+            target={research ? "_blank" : undefined}
+            rel="noopener noreferrer"
+            aria-current={!research ? "page" : undefined}
+          >
+            策略与模型展示
           </a>
         </nav>
         <div className="aside-footer">
@@ -42,7 +53,9 @@ function App() {
             {connected ? "● 本地 API 已连接" : "○ 正在连接本地 API"}
           </span>
         </header>
-        {research ? <Research /> : <Workspace />}
+        <Suspense fallback={<p>加载研究面板…</p>}>
+          {research ? <Research /> : <Workspace />}
+        </Suspense>
       </main>
     </div>
   );
