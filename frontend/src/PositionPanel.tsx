@@ -26,6 +26,7 @@ export interface PositionDeployment {
   symbols: string[];
   position_config: {
     model: string; lookback: number; horizon: number; rebalance_days: number;
+    portfolio_policy?: "legacy" | "cost_aware";
     capital_mode?: "signal_budget" | "risk_budget"; entry_band?: number | null;
     confidence: number; tranche_weight: number; costs: { initial_cash: number };
     allocation?: AllocationConfig;
@@ -38,6 +39,9 @@ export function PositionPanel({ datasets, modelEnabled = true, deployment, selec
   const pendingKey = deployment ? `quant.pending.position.${deployment.id}` : "quant.pending.position.operation";
   const lastKey = deployment ? `quant.last.position.${deployment.id}` : "quant.last.position.operation";
   const config = deployment?.position_config;
+  const [generatedModel, setGeneratedModel] = useState<{trained: boolean; version?: string; metrics?: {accuracy: number; majority_accuracy: number}} | null>(null);
+  useEffect(() => { api<typeof generatedModel>("/position/generated-model").then(setGeneratedModel).catch(() => setGeneratedModel(null)); }, []);
+  const [portfolioPolicy, setPortfolioPolicy] = useState(config?.portfolio_policy || "legacy");
   const [marketMode, setMarketMode] = useState("daily");
   const [provider, setProvider] = useState("alpaca");
   const [feed, setFeed] = useState("sip");
@@ -64,7 +68,7 @@ export function PositionPanel({ datasets, modelEnabled = true, deployment, selec
     }
     localStorage.removeItem(lastKey);
     setJobId(""); setResult(null); setProgress(null); setError(""); setPublished("");
-    setResearchSelections({});
+    setResearchSelections({}); setPortfolioPolicy(config?.portfolio_policy || "legacy");
     setDraftVersion((value) => value + 1);
   }
   async function observe(id: string) {
@@ -106,6 +110,7 @@ export function PositionPanel({ datasets, modelEnabled = true, deployment, selec
         start: f.get("start"), end: f.get("end"),
         config: {
           allocation: readAllocation(f),
+          portfolio_policy: f.get("portfolio_policy"),
           capital_mode: f.get("capital_mode"), entry_band: f.get("entry_band") === "" ? null : n("entry_band") / 100,
           model: modelEnabled ? f.get("model") : "equal_weight", lookback: n("lookback"), horizon: n("horizon"),
           rebalance_days: n("rebalance"), confidence: n("confidence"),
@@ -125,6 +130,9 @@ export function PositionPanel({ datasets, modelEnabled = true, deployment, selec
     <p>独立日线模型，持仓数日至数周；收盘形成目标仓位，次日开盘分批执行。
       与短期策略分别核算资金，研究结果不会提交真实订单。</p>
     {error && <p className="notice error" role="alert">{error}</p>}
+    {generatedModel?.trained && <details><summary>生成策略模型已训练 · {generatedModel.version}</summary>
+      <p className="muted">独立合成样本准确率 {(generatedModel.metrics!.accuracy*100).toFixed(2)}%，多数类基线 {(generatedModel.metrics!.majority_accuracy*100).toFixed(2)}%。尚未超过分类基线；在下方模型中选择“生成网络训练分类器 · 策略混合”运行端到端研究。预测概率不等于盈利概率。</p>
+    </details>}
     <label>{deployment ? "模拟记录" : "长期实验记录"}<select value={jobId} disabled={busy || publishing}
       onChange={(e) => { if (e.target.value) { localStorage.setItem(lastKey, e.target.value); void observe(e.target.value); } else if (!deployment) newExperiment(); }}>
       <option value="">{deployment ? "选择已有记录" : "新建长期实验"}</option>
@@ -185,24 +193,30 @@ export function PositionPanel({ datasets, modelEnabled = true, deployment, selec
       <div className="form-grid">
         <label>{modelEnabled || deployment ? "长期模型 / 策略" : "规则策略"}<select key={String(modelEnabled)} name="model" defaultValue={config?.model || (modelEnabled ? "trend" : "equal_weight")} required>
           {(modelEnabled || deployment) && <><option value="trend">统计趋势 + 波动率仓位</option>
-          <option value="bayesian">贝叶斯多日收益回归</option></>}
+          <option value="bayesian">贝叶斯多日收益回归</option>
+          {["cross_momentum", "channel_trend", "residual_reversal", "minimum_variance", "fixed_ensemble", "adaptive_specialist", "synthetic_regime", "generated_policy"].map((model) => <option key={model} value={model}>{strategyNames[model]}（研究候选）</option>)}</>}
           {(!modelEnabled || deployment) && <option value="equal_weight">等权分批再平衡（无预测模型）</option>}
         </select></label>
 
+        <label>共享资金执行政策<select name="portfolio_policy" value={portfolioPolicy} onChange={(e) => setPortfolioPolicy(e.target.value as "legacy" | "cost_aware")}>
+          <option value="legacy">共享资金 · 基础执行</option>
+          <option value="cost_aware">共享资金 · 成本感知执行</option>
+        </select></label>
         <label>组合资金预算<select name="capital_mode" defaultValue={config?.capital_mode || "signal_budget"}>
           <option value="signal_budget">原信号预算 · 按候选股票数限制投入</option>
           <option value="risk_budget">风险预算 · 按单股风险额度投入</option>
         </select></label>
         <label>首次建仓门槛 净值%<input name="entry_band" type="number" min={0} max={20} step={0.1} placeholder="留空沿用最小调仓差额" defaultValue={config?.entry_band == null ? "" : config.entry_band * 100} /></label>
-        <label>独立资金 USD<input name="cash" type="number" min={100} defaultValue={config?.costs.initial_cash ?? 100000} required /></label>
+        <label>组合共享初始资金 USD<input name="cash" type="number" min={100} defaultValue={config?.costs.initial_cash ?? 100000} required /></label>
         <label>历史窗口 交易日<input name="lookback" type="number" min={10} max={60} defaultValue={config?.lookback ?? 20} required /></label>
         <label>预测跨度 交易日<input name="horizon" type="number" min={1} max={20} defaultValue={config?.horizon ?? 5} required /></label>
         <label>调仓间隔 交易日<input name="rebalance" type="number" min={1} max={20} defaultValue={config?.rebalance_days ?? 5} required /></label>
         <label>不确定性扣减倍数<input name="confidence" type="number" min={0} max={3} step={0.1} defaultValue={config?.confidence ?? 0.5} required /></label>
         <label>每日单股最大调整 资金%<input name="tranche" type="number" min={0.1} max={20} step={0.1} defaultValue={config ? config.tranche_weight * 100 : 5} required /></label>
       </div>
+      <p className="muted">生成网络分类器已在合成序列上训练，使用64点观察窗口输出现金/趋势/反转权重；它是研究候选，尚未超过等权收益基线。每股专家选择需至少127日历史预热，按63日已揭晓影子净收益选择，每21日更新，不足时持币。研究候选使用固定公式：63 日风险估计、10% 年化目标波动、最多95%总投入与20%单股目标；“历史窗口、预测跨度、置信扣减、组合资金预算”不改变这些公式。调仓间隔和分批执行仍有效。固定方法比较时关闭下方额外轮换优化，避免改变信号定义。成本感知执行政策使用下方换手预算和调仓门槛，即使额外轮换关闭也生效；建议先查看研究报告中的失败结果与风险。</p>
       <AllocationControls key={dataset?.id || deployment?.id} symbols={deployment?.symbols || researchSymbols}
-        initial={config?.allocation} long />
+        initial={config?.allocation} long executionEnabled={portfolioPolicy === "cost_aware"} />
       </fieldset>
       <p className="muted">{tradingSymbols.join(" / ")}。原信号预算按股票池大小限制投入；风险预算提高合格信号资金额度，仅在启用共享资金时生效。首次建仓门槛可独立于已有持仓调仓门槛。默认单股目标上限20%、止损10%、组合回撤10%后熔断。
         价差2bps、滑点2bps，佣金每股$0.005、每次最低$1。模型历史不足时持币；已有数据已参与研究，不能视为新的样本外验证。</p>

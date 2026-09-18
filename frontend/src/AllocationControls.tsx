@@ -18,8 +18,8 @@ export function readAllocation(form: FormData): AllocationConfig {
     rebalance_minutes: n("rebalance_minutes"),
   };
 }
-export function AllocationControls({ symbols, initial, long = false }: {
-  symbols: string[]; initial?: AllocationConfig; long?: boolean;
+export function AllocationControls({ symbols, initial, long = false, executionEnabled = false }: {
+  symbols: string[]; initial?: AllocationConfig; long?: boolean; executionEnabled?: boolean;
 }) {
   const [enabled, setEnabled] = useState(initial?.enabled || false);
   const fields: [keyof AllocationConfig, string, number, number, number, number][] = [
@@ -36,7 +36,8 @@ export function AllocationControls({ symbols, initial, long = false }: {
   return <section className="allocation-controls">
     <h3>组合资金分配与轮换</h3>
     <label className="inline"><input name="allocation_enabled" type="checkbox" checked={enabled}
-      onChange={(e) => setEnabled(e.target.checked)} />启用共享资金与风险成本分配</label>
+      onChange={(e) => setEnabled(e.target.checked)} />{long ? "启用额外的风险成本轮换优化" : "启用共享资金与风险成本分配"}</label>
+    {long && <p className="notice">所有交易股票默认共享同一个资金池，先卖后买，不透支现金。此开关仅控制额外的轮换优化，关闭也不会按股票拆分独立账户。</p>}
     <p className="muted">与原策略共同作用：先筛选可交易股票，再按风险、相关性和换仓成本分配资金。
       启用股票使用组合单股上限；止损与清仓优先，不保证满仓或盈利。</p>
     <div hidden={!enabled}>
@@ -47,7 +48,8 @@ export function AllocationControls({ symbols, initial, long = false }: {
       <p className="muted">此处仅选择资金轮换参与范围，不是交易开关：取消勾选仍可能按原策略买卖。要排除股票，请在实验 / 模拟的交易股票选择中取消。全部不勾选表示全部参与。
         {long ? "按上方交易日调仓间隔重新分配。" : "同一分钟先卖后买；尾盘清仓，不隔夜。"}</p>
     </div>
-    <div className="form-grid" hidden={!enabled}>
+    {executionEnabled && !enabled && <p className="muted">成本感知执行已启用：下面的最小调仓差额和每日成交总额上限仍生效；其余字段仅供额外轮换优化使用。</p>}
+    <div className="form-grid" hidden={!enabled && !executionEnabled}>
       {fields.map(([key, label, fallback, min, max, step]) => {
         const percent = ["max_weight", "cash_reserve", "rebalance_band", "max_daily_turnover"].includes(key);
         const value = initial?.[key];

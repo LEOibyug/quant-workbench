@@ -1,11 +1,12 @@
 import { useEffect, useId, useMemo, useState } from "react";
+import { strategyNames } from "./types";
 import { DownloadButton } from "./ProgressNotice";
 
 export interface PortfolioAsset {
   open: number; high: number; low: number; close: number; volume: number; shares: number;
   market_value: number; weight: number; target_weight: number; realized_pnl: number;
   unrealized_pnl: number; fees: number; impact_cost: number;
-  forecast?: Record<string, number | string | null> | null;
+  forecast?: Record<string, number | string | boolean | null> | null;
 }
 export interface PortfolioPoint {
   date?: string; timestamp?: string; equity: number; cash: number; cash_weight: number;
@@ -179,6 +180,25 @@ export function PortfolioCharts({ curve, trades, initialCash, allocationEnabled,
         <PriceLine title={`${s} · 成交量`} {...chart} value={(p) => p.assets[s].volume} />
       </div>
       <p className="muted">开 / 高 / 低 / 收：{[at.assets[s].open, at.assets[s].high, at.assets[s].low, at.assets[s].close].map(amount).join(" / ")}</p>
+      {at.assets[s].forecast?.classifier_version != null && <p className="notice">
+        分类器 {String(at.assets[s].forecast!.classifier_version)} · 趋势 {(Number(at.assets[s].forecast!.trend_probability)*100).toFixed(1)}%
+        {" · 反转 "}{(Number(at.assets[s].forecast!.reversion_probability)*100).toFixed(1)}%
+        {" · 现金/噪声 "}{(Number(at.assets[s].forecast!.cash_probability ?? at.assets[s].forecast!.noise_probability)*100).toFixed(1)}%
+        。合成数据训练的策略混合权重，不是未来盈利概率。
+      </p>}
+      {at.assets[s].forecast?.selected_expert != null && <p className="notice">
+        观察期选择的专家（按调仓日执行）：{strategyNames[String(at.assets[s].forecast!.selected_expert)] || (at.assets[s].forecast!.selected_expert === "cash" ? "现金 / 观察" : String(at.assets[s].forecast!.selected_expert))}
+        {" · 已揭晓观察期："}{String(at.assets[s].forecast!.observation_start)} — {String(at.assets[s].forecast!.observation_end)}
+      </p>}
+      {at.assets[s].forecast?.selected_expert != null && <details><summary>{s} · 专家选择与切换记录</summary>
+        <p className="muted">仅使用当时已揭晓的观察期；选择变化在后续调仓执行，不代表当日已经买入。</p>
+        <table><thead><tr><th>日期</th><th>选择策略</th><th>观察起点</th><th>观察终点</th></tr></thead><tbody>
+          {points.filter((p,i) => p.assets[s].forecast?.selected_expert != null && (i === 0 || p.assets[s].forecast?.selected_expert !== points[i-1].assets[s].forecast?.selected_expert)).map((p) => <tr key={stamp(p)}>
+            <td>{stamp(p)}</td><td>{strategyNames[String(p.assets[s].forecast!.selected_expert)] || "现金 / 观察"}</td>
+            <td>{String(p.assets[s].forecast!.observation_start)}</td><td>{String(p.assets[s].forecast!.observation_end)}</td>
+          </tr>)}
+        </tbody></table>
+      </details>}
       <details><summary>{s} · 模型预测曲线（非实际收益）</summary>
       {[{ key: "probability", title: "上涨概率" }, { key: "mean_bps", title: "多日预测收益 bps" }, { key: "expected_return_bps", title: "分钟预测收益 bps" }].map(({ key, title }) => {
         const forecasts = points.filter((p) => typeof p.assets[s].forecast?.[key] === "number");

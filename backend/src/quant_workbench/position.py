@@ -10,6 +10,13 @@ from sklearn.linear_model import BayesianRidge
 from sklearn.preprocessing import StandardScaler
 
 from quant_workbench.allocation import AllocationConfig, allocate
+from quant_workbench.daily_strategies import (
+    MODELS as DAILY_RULE_MODELS,
+)
+from quant_workbench.daily_strategies import (
+    cost_aware_targets,
+    rule_forecasts,
+)
 from quant_workbench.market_data import require_complete, schedule
 from quant_workbench.models import StrategyConfig
 
@@ -17,7 +24,19 @@ from quant_workbench.models import StrategyConfig
 class PositionConfig(BaseModel):
     allocation: AllocationConfig = Field(default_factory=AllocationConfig)
     model_config = ConfigDict(extra="forbid", frozen=True, allow_inf_nan=False)
-    model: Literal["trend", "bayesian", "equal_weight"] = "bayesian"
+    model: Literal[
+        "trend",
+        "bayesian",
+        "equal_weight",
+        "cross_momentum",
+        "channel_trend",
+        "residual_reversal",
+        "minimum_variance",
+        "fixed_ensemble",
+        "adaptive_specialist",
+        "synthetic_regime",
+        "generated_policy",
+    ] = "bayesian"
     lookback: int = Field(default=20, ge=10, le=60)
     horizon: int = Field(default=5, ge=1, le=20)
     rebalance_days: int = Field(default=5, ge=1, le=20)
@@ -25,6 +44,8 @@ class PositionConfig(BaseModel):
     tranche_weight: float = Field(default=0.05, gt=0, le=0.2)
     max_weight: float = Field(default=0.2, gt=0, le=0.5)
     capital_mode: Literal["signal_budget", "risk_budget"] = "signal_budget"
+    classifier_sha256: str | None = Field(default=None, pattern=r"^[a-f0-9]{64}$")
+    portfolio_policy: Literal["legacy", "cost_aware"] = "legacy"
     entry_band: float | None = Field(default=None, ge=0, le=0.2)
     daily_vol_target: float = Field(default=0.015, gt=0, le=0.05)
     stop_loss_pct: float = Field(default=10, ge=2, le=30)
@@ -56,6 +77,8 @@ def daily_inputs(frame):
 
 def daily_forecasts(daily, config):
     """Each forecast fits only labels whose target day has already closed."""
+    if config.model in DAILY_RULE_MODELS:
+        return rule_forecasts(daily, config)
     symbols = sorted(daily.symbol.unique())
     days = sorted(daily.day.unique())
     rows = []
@@ -132,6 +155,13 @@ def daily_forecasts(daily, config):
 
 
 def simulate_positions(frame, config, start, end, progress=None, *, daily_bars=False):
+    if config.model == "generated_policy":
+        from quant_workbench.generated_policy import artifact_digest
+
+        digest = artifact_digest()
+        if config.classifier_sha256 and digest != config.classifier_sha256:
+            raise ValueError("分类器文件已改变，与冻结版本不一致；请恢复原模型或新建研究")
+        config = config.model_copy(update={"classifier_sha256": digest})
     if daily_bars:
         daily = frame[frame.day < end].copy()
         sessions = schedule(start, end)
@@ -173,6 +203,7 @@ def simulate_positions(frame, config, start, end, progress=None, *, daily_bars=F
     pivot = {day: group.set_index("symbol") for day, group in daily.groupby("day")}
     days = sorted(day for day in pivot if start <= day < end)
     costs = config.costs
+    pooled_execution = config.allocation.enabled or config.portfolio_policy == "cost_aware"
     cash = peak = costs.initial_cash
     shares = {s: 0 for s in symbols}
     basis = {s: 0.0 for s in symbols}
@@ -219,20 +250,35 @@ def simulate_positions(frame, config, start, end, progress=None, *, daily_bars=F
                     float(pivot[previous].loc[symbol, "last_volume"]) * costs.participation
                 )
                 quantity = min(abs(delta), step, cap)
-                if config.allocation.enabled and desired > 0 and not forced_exit[symbol]:
-                    band = (config.entry_band if shares[symbol] == 0 and delta > 0
-                            and config.entry_band is not None else config.allocation.rebalance_band)
+                if pooled_execution and desired > 0 and not forced_exit[symbol]:
+                    band = (
+                        config.entry_band
+                        if shares[symbol] == 0 and delta > 0 and config.entry_band is not None
+                        else config.allocation.rebalance_band
+                    )
                     if abs(delta) * price / opening_equity < band:
                         quantity = 0
                 if quantity:
                     orders.append((delta > 0, symbol, quantity))
             funding_ratio = None
+            sale_ratio = 1.0
+            if config.portfolio_policy == "cost_aware":
+                sale_value = sum(
+                    q * float(prices.loc[s, "open"])
+                    for buying, s, q in orders
+                    if not buying and not (halted or forced_exit[s])
+                )
+                sale_ratio = min(
+                    1, opening_equity * config.allocation.max_daily_turnover / max(sale_value, 1e-9)
+                )
             for buying, symbol, quantity in sorted(orders):
                 raw = float(prices.loc[symbol, "open"])
                 impact = raw * (costs.spread_bps / 2 + costs.slippage_bps) / 10000
                 price = raw + impact if buying else raw - impact
                 risk_exit = halted or forced_exit[symbol]
-                if config.allocation.enabled and not risk_exit and not buying:
+                if config.portfolio_policy == "cost_aware" and not buying and not risk_exit:
+                    quantity = math.floor(quantity * sale_ratio)
+                if pooled_execution and not risk_exit and not buying:
                     remaining = max(
                         0, opening_equity * config.allocation.max_daily_turnover - daily_turnover
                     )
@@ -252,8 +298,21 @@ def simulate_positions(frame, config, start, end, progress=None, *, daily_bars=F
                             opening_equity * config.allocation.max_daily_turnover - daily_turnover,
                         )
                         funding_ratio = (
-                            min(1, cash / max(needed, 1e-9), turnover_room / max(needed, 1e-9))
-                            if config.allocation.enabled
+                            min(
+                                1,
+                                max(
+                                    0,
+                                    cash
+                                    - (
+                                        opening_equity * 0.05
+                                        if config.portfolio_policy == "cost_aware"
+                                        else 0
+                                    ),
+                                )
+                                / max(needed, 1e-9),
+                                turnover_room / max(needed, 1e-9),
+                            )
+                            if pooled_execution
                             else 1
                         )
                     quantity = min(
@@ -329,13 +388,17 @@ def simulate_positions(frame, config, start, end, progress=None, *, daily_bars=F
                     * 10000
                 )
                 edge = (
-                    forecast["mean_bps"] - config.confidence * forecast["uncertainty_bps"]
+                    forecast.get("mean_bps", 0)
+                    - config.confidence * forecast.get("uncertainty_bps", 0)
                     if forecast
                     else -math.inf
                 )
                 weight = (
-                    (config.max_weight if config.capital_mode == "risk_budget"
-                     and config.allocation.enabled else min(config.max_weight, 1 / len(symbols)))
+                    (
+                        config.max_weight
+                        if config.capital_mode == "risk_budget" and config.allocation.enabled
+                        else min(config.max_weight, 1 / len(symbols))
+                    )
                     * min(
                         1,
                         config.daily_vol_target / forecast["volatility"],
@@ -343,6 +406,8 @@ def simulate_positions(frame, config, start, end, progress=None, *, daily_bars=F
                     if forecast and edge > 1.5 * cost_bps
                     else 0.0
                 )
+                if config.model in DAILY_RULE_MODELS:
+                    weight = forecast["target_weight"] if forecast else 0.0
                 if config.model == "equal_weight":
                     weight = min(config.max_weight, 1 / len(symbols))
                 targets[symbol] = weight
@@ -355,8 +420,8 @@ def simulate_positions(frame, config, start, end, progress=None, *, daily_bars=F
                 current = {s: shares[s] * float(prices.loc[s, "close"]) / equity for s in symbols}
                 expected = {
                     s: (
-                        forecasts[(day, s)]["mean_bps"]
-                        - config.confidence * forecasts[(day, s)]["uncertainty_bps"]
+                        forecasts[(day, s)].get("mean_bps", 0)
+                        - config.confidence * forecasts[(day, s)].get("uncertainty_bps", 0)
                     )
                     / 10000
                     if (day, s) in forecasts
@@ -384,6 +449,36 @@ def simulate_positions(frame, config, start, end, progress=None, *, daily_bars=F
                     expected,
                     cost_rates,
                     config.horizon,
+                )
+                decision["date"] = day
+                allocation_decisions.append(decision)
+                for s in symbols:
+                    target_shares[s] = math.floor(
+                        equity * targets[s] / float(prices.loc[s, "close"])
+                    )
+
+            if config.portfolio_policy == "cost_aware":
+                current = {s: shares[s] * float(prices.loc[s, "close"]) / equity for s in symbols}
+                rates = {
+                    s: (costs.spread_bps / 2 + costs.slippage_bps + costs.sell_fee_bps) / 10000
+                    + max(
+                        costs.minimum_commission,
+                        costs.commission_per_share
+                        * equity
+                        * config.tranche_weight
+                        / float(prices.loc[s, "close"]),
+                    )
+                    / max(equity * config.tranche_weight, 1)
+                    for s in symbols
+                }
+                targets, decision = cost_aware_targets(
+                    symbols,
+                    allocation_returns.loc[:day],
+                    {s: 0.0 if halted or forced_exit[s] else targets[s] for s in symbols},
+                    current,
+                    rates,
+                    min(config.max_weight, 0.2),
+                    config.rebalance_days,
                 )
                 decision["date"] = day
                 allocation_decisions.append(decision)
@@ -464,10 +559,16 @@ def simulate_positions(frame, config, start, end, progress=None, *, daily_bars=F
         start=start,
         end=end,
         allocation_decisions=allocation_decisions,
-        portfolio_enabled=config.allocation.enabled,
+        portfolio_enabled=pooled_execution,
         engine_version=("daily-position-v3-daily" if daily_bars else "daily-position-v2")
         + ("-portfolio-v1" if config.allocation.enabled else "")
-        + ("-budget-v2" if config.capital_mode != "signal_budget" or config.entry_band is not None else ""),
+        + ("-rules-v1" if config.model in DAILY_RULE_MODELS else "")
+        + ("-cost-aware-v1" if config.portfolio_policy == "cost_aware" else "")
+        + (
+            "-budget-v2"
+            if config.capital_mode != "signal_budget" or config.entry_band is not None
+            else ""
+        ),
         metrics=dict(
             return_pct=(final / costs.initial_cash - 1) * 100,
             final_equity=final,

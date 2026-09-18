@@ -21,6 +21,17 @@ from quant_workbench.research import WORKER_GATE
 router = APIRouter(prefix="/api/position")
 
 
+@router.get("/generated-model")
+def generated_model_status():
+    from quant_workbench.generated_policy import ARTIFACT, artifact_digest
+    metadata = ARTIFACT.parent / "training.json"
+    if not ARTIFACT.is_file() or not metadata.is_file():
+        return {"trained": False}
+    report = json.loads(metadata.read_text())
+    return {"trained": True, "version": report["version"], "metrics": report["metrics"],
+            "classifier_sha256": artifact_digest()}
+
+
 class PositionRequest(BaseModel):
     model_config = ConfigDict(extra="forbid")
     dataset_id: str | None = Field(default=None, pattern=r"^[a-f0-9]{32}$")
@@ -107,6 +118,10 @@ def launch(request: PositionRequest, tasks: BackgroundTasks):
         raise ValueError("长期研究需日线数据集，请下载长期日线")
     if not set(request.symbols).issubset(dataset["symbols"]):
         raise ValueError("股票不在所选数据集中")
+    if request.config.model == "generated_policy":
+        from quant_workbench.generated_policy import artifact_digest
+        request = request.model_copy(update={"config": request.config.model_copy(
+            update={"classifier_sha256": artifact_digest()})})
     job = begin_operation(repo, "position")
     job["request"] = request.model_dump(mode="json")
     save_operation(repo, job)

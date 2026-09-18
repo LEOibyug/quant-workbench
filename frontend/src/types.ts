@@ -5,6 +5,14 @@ export const phaseNames = {
   test: "最终测试",
 };
 export const strategyNames: Record<string, string> = {
+  generated_policy: "生成网络训练分类器 · 策略混合",
+  synthetic_regime: "合成状态分类器 · 概率策略混合",
+  adaptive_specialist: "每股观察期专家选择",
+  cross_momentum: "横截面动量 · 固定季度规则",
+  channel_trend: "通道趋势 · 55/20 日",
+  residual_reversal: "市场残差反转 · 周度",
+  minimum_variance: "收缩最小方差组合",
+  fixed_ensemble: "固定三策略组合",
   trend: "统计趋势 + 波动率仓位",
   bayesian: "贝叶斯多日收益回归",
   equal_weight: "等权分批再平衡（无预测模型）",

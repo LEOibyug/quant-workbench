@@ -121,3 +121,18 @@ uv run quant-workbench study --dataset 数据集ID \
 Alpaca 分钟线和日线请求按最多 3 个自然月分段，各段继续使用供应商分页，按不含右端点的连续区间拼接。进度显示区间序号与累计记录数；完全相同的重复行去重，冲突记录或任一区间失败均不保存半成品。分段不绕过账户历史权限、单数据集 200 万行及现有 10 年范围限制。
 
 长期共享资金可选“风险预算”以避免无信号候选股稀释合格股票的投入，首次建仓门槛也可独立设置。默认保留原预算及调仓行为；这些选项改变资金利用与风险，不代表已证明更高收益。研究与局限见 `docs/research-results/2026-09-18-daily-mechanisms.md`。
+
+### 原理驱动策略与合成训练链路
+
+长期研究支持横截面动量、通道趋势、残差反转、收缩最小方差、固定组合、每股观察期专家和合成分类器。所有长期股票默认共享现金账户；额外轮换优化与共享账户本身是不同概念。专家可按已揭晓观察期更新，展示页记录切换与分类概率。
+
+训练生成网络及简单分类器（只用合成序列，不读取真实行情）：
+
+```bash
+uv run --locked --extra neural python scripts/train_generated_policy.py
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 uv run --locked python scripts/evaluate_generated_policy.py
+```
+
+模型、样本和训练日志存于 `artifacts/models/generated-policy-v1/`，不会提交到 Git。网页选择“生成网络训练分类器 · 策略混合”，使用已有日线数据集运行、发布及展示。未训练时会明确报错，不静默替代模型。生成器使用可微策略代理奖励，完整真实交易能力由日线执行引擎评价；合成准确率与回测盈利不是未来收益保证。
+
+研究报告：`docs/research-results/2026-09-18-principled-strategies.md` 和 `docs/research-results/2026-09-18-generated-policy.md`。本轮分类器尚未超越多数类分类基线或等权收益基线，保持研究候选。

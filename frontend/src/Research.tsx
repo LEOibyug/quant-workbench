@@ -454,7 +454,7 @@ export function Research() {
                 <select name="strategy" defaultValue="regime_adaptive" onChange={(e) => {
                   if (["ou_reversion", "ou_scaling", "kalman_trend", "bayesian_session"].includes(e.target.value)) setEnabled(false);
                 }}>
-                  {Object.entries(strategyNames).map(([k, v]) => (
+                  {Object.entries(strategyNames).filter(([k]) => !["cross_momentum", "channel_trend", "residual_reversal", "minimum_variance", "fixed_ensemble", "adaptive_specialist", "synthetic_regime", "generated_policy"].includes(k)).map(([k, v]) => (
                     <option key={k} value={k}>
                       {v}
                     </option>
