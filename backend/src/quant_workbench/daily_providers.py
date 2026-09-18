@@ -12,6 +12,13 @@ from quant_workbench.providers import _get
 
 
 def fetch_daily(request, progress=None):
+    if request.provider == "alpaca":
+        from quant_workbench.provider_windows import fetch_windows
+        return fetch_windows(request, _fetch_daily_window, daily=True, progress=progress)
+    return _fetch_daily_window(request, progress=progress)
+
+
+def _fetch_daily_window(request, progress=None):
     sessions = schedule(str(request.start), str(request.end))
     if sessions.empty:
         raise ValueError("区间内没有交易日")

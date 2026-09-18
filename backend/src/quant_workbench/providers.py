@@ -23,6 +23,11 @@ def _get(client, url, **kwargs):
 
 
 def fetch_alpaca(request: AlpacaInput, progress=None) -> pd.DataFrame:
+    from quant_workbench.provider_windows import fetch_windows
+    return fetch_windows(request, _fetch_alpaca_window, progress=progress)
+
+
+def _fetch_alpaca_window(request: AlpacaInput, progress=None) -> pd.DataFrame:
     key, secret = os.environ.get("APCA_API_KEY_ID"), os.environ.get("APCA_API_SECRET_KEY")
     if not key or not secret:
         raise ValueError("请在后端环境设置APCA_API_KEY_ID和APCA_API_SECRET_KEY，勿上传凭证")

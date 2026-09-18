@@ -323,7 +323,7 @@ export function Research() {
         <div className="provider-form">
           <h3>API 直连行情</h3>
           <p className="muted">
-            密钥在工作台运行环境中配置。下载后存为可复现快照，研究时直接选择该数据集。当前不自动补齐缺失分钟。
+            密钥在工作台运行环境中配置。Alpaca 按最多 3 个自然月分段下载并合并，进度显示当前区间；结束日期不含。下载后保存快照，不自动补造缺失行情。单数据集仍受行数上限和历史权限限制。
           </p>
           <form
             className="form-grid"
