@@ -1,3 +1,4 @@
+from collections import deque
 from types import SimpleNamespace
 
 import pandas as pd
@@ -256,3 +257,93 @@ def test_regime_gate_blocks_entries_but_not_exits():
         "2024-01-05",
     )
     assert any(t["side"] == "buy" for t in ungated["trades"])
+
+
+def _lot_rules(lot_breakeven_hold=True, **override):
+    cfg = StrategyConfig(
+        strategy="scaled_reversion",
+        lot_breakeven_hold=lot_breakeven_hold,
+        lot_patience_minutes=30,
+        lot_hard_stop_atr=4.0,
+        max_hold_minutes=120,
+        fast=5,
+        slow=10,
+        **override,
+    )
+    rules = IntradayRules(cfg, "scaled_reversion")
+    rules.reset(100000.0)
+    return rules
+
+
+def test_lot_breakeven_hold_blocks_then_admits_loss_exit():
+    rules = _lot_rules()
+    rules.lots = [
+        dict(
+            qty=10,
+            entry_bar=1,
+            stop_price=95.0,
+            take_price=110.0,
+            breakeven_price=100.6,
+            hard_stop_price=92.0,
+        )
+    ]
+    dip = SimpleNamespace(close=97.0, high=98.0, low=96.0, open=97.5, volume=1000)
+    rules.count = 10  # 持有10分钟 < 耐心30：低于盈亏平衡也不卖
+    assert rules.lot_exits(dip) == []
+    rules.count = 40  # 耐心耗尽，但日内趋势未转弱：仍不卖
+    assert rules.lot_exits(dip) == []
+    # 快均线低于慢均线且跌破当日开盘 → 期望转差，允许认赔
+    falling = deque(
+        SimpleNamespace(close=99.0 - i * 0.5, open=99.5 - i * 0.5, high=100.0, low=98.0)
+        for i in range(12)
+    )
+    rules.bars = falling
+    assert rules.lot_exits(dip) == [(0, 10, "lot_patience_exit")]
+    # 灾难止损不受耐心约束
+    crash = SimpleNamespace(close=91.0, high=92.0, low=90.0, open=92.0, volume=1000)
+    assert rules.lot_exits(crash) == [(0, 10, "lot_hard_stop")]
+    # 关闭盈亏平衡持有时恢复常规止损
+    plain = _lot_rules(lot_breakeven_hold=False)
+    plain.lots = [dict(rules.lots[0], qty=10)]
+    plain.count = 10
+    deeper = SimpleNamespace(close=94.0, high=95.0, low=93.5, open=94.5, volume=1000)
+    assert plain.lot_exits(deeper) == [(0, 10, "lot_stop")]
+
+
+def test_tranche_uptrend_requirement_blocks_falling_day_entries():
+    from quant_workbench.engine import simulate
+    from quant_workbench.market_data import session_minutes
+
+    times = session_minutes("2024-01-03", "2024-01-04")
+    rank = range(len(times))
+    values = [100 - 0.05 * i for i in rank]  # 持续下跌：日内无看涨趋势
+    frame = pd.DataFrame(
+        dict(
+            timestamp=times,
+            symbol="TEST",
+            open=[v + 0.01 for v in values],
+            high=[v + 0.6 for v in values],
+            low=[v - 0.6 for v in values],
+            close=values,
+            volume=100_000,
+        )
+    )
+    common = dict(
+        strategy="scaled_reversion",
+        reversion_bps=30,
+        reversion_atr=1.0,
+        stop_atr=2.0,
+        max_scaling_lots=3,
+        max_daily_entries=3,
+        max_hold_minutes=120,
+    )
+    bullish_only = simulate(
+        frame, StrategyConfig(**common, tranche_requires_uptrend=True),
+        "2024-01-03", "2024-01-04",
+    )
+    assert not [t for t in bullish_only["trades"] if t["side"] == "buy"]
+    unrestricted = simulate(
+        frame, StrategyConfig(**common, tranche_requires_uptrend=False),
+        "2024-01-03", "2024-01-04",
+    )
+    assert any(t["side"] == "buy" for t in unrestricted["trades"])

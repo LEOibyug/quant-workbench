@@ -42,6 +42,12 @@ class StrategyConfig(BaseModel):
     regime_max_efficiency: float = Field(default=0.35, ge=0.05, le=1)
     # 分批波动收割：偏离加深逐档加仓，各批独立目标/止损。
     max_scaling_lots: int = Field(default=3, ge=1, le=5)
+    # 盈亏平衡持有：低于成交价+成本时耐心窗口内不卖，趋势转弱才认赔；灾难止损仍生效。
+    lot_breakeven_hold: bool = False
+    lot_patience_minutes: int = Field(default=45, ge=5, le=240)
+    lot_hard_stop_atr: float = Field(default=4, ge=1, le=10)
+    # 新增批次要求日内看涨趋势（上涨趋势中买回调，不逆势加仓）。
+    tranche_requires_uptrend: bool = False
     min_relative_volume: float = Field(default=1.2, ge=0.5, le=5)
     max_hold_minutes: int = Field(default=30, ge=5, le=120)
     cooldown_minutes: int = Field(default=10, ge=0, le=60)

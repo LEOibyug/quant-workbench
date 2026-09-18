@@ -108,6 +108,8 @@ class IntradayRules:
         self.pending_mode = self.entry_mode = self.strategy
         self.entry_diagnostic = "等待规则观察"
         self.lots = []
+        self.pending_atr = 0.0
+        self.pending_cost_bps = 0.0
 
     def filled(self, side, price, remaining, qty=None):
         if side == "buy":
@@ -123,6 +125,9 @@ class IntradayRules:
                     entry_bar=self.count + 1,
                     stop_price=price - self.pending_distance,
                     take_price=price + self.pending_take,
+                    breakeven_price=price * (1 + self.pending_cost_bps / 10000),
+                    hard_stop_price=price
+                    - self.config.lot_hard_stop_atr * max(self.pending_atr, 1e-9),
                 )
             )
         elif remaining == 0:
@@ -139,16 +144,41 @@ class IntradayRules:
             if not self.lots:
                 self.last_exit = self.count + 1
 
+    def _intraday_adverse(self):
+        """短线趋势转弱：均值回归的期望变差（快均线低于慢均线且跌破当日开盘）。"""
+        cfg = self.config
+        closes = [b.close for b in self.bars]
+        if len(closes) < cfg.slow:
+            return False
+        return float(np.mean(closes[-cfg.fast :])) < float(np.mean(closes[-cfg.slow :])) and (
+            closes[-1] < self.bars[0].open
+        )
+
     def lot_exits(self, bar):
-        """触发退出条件的批次：(下标, 数量, 原因)；各批独立目标/止损/时间退出。"""
+        """触发退出条件的批次：(下标, 数量, 原因)；各批独立目标/止损/时间退出。
+
+        盈亏平衡持有开启时，常规止损被替换：低于成交价+成本时先由耐心窗口
+        与日内趋势期望决定是否认赔；灾难止损与收盘清仓始终生效。
+        """
+        cfg = self.config
         out = []
         for index, lot in enumerate(self.lots):
-            if bar.close <= lot["stop_price"]:
-                out.append((index, lot["qty"], "lot_stop"))
+            held = self.count - lot["entry_bar"] + 1
+            if bar.close <= lot["hard_stop_price"]:
+                out.append((index, lot["qty"], "lot_hard_stop"))
             elif bar.close >= lot["take_price"]:
                 out.append((index, lot["qty"], "lot_take"))
-            elif self.count - lot["entry_bar"] + 1 >= self.config.max_hold_minutes:
+            elif held >= cfg.max_hold_minutes:
                 out.append((index, lot["qty"], "lot_time"))
+            elif not cfg.lot_breakeven_hold and bar.close <= lot["stop_price"]:
+                out.append((index, lot["qty"], "lot_stop"))
+            elif (
+                cfg.lot_breakeven_hold
+                and bar.close < lot["breakeven_price"]
+                and held >= cfg.lot_patience_minutes
+                and self._intraday_adverse()
+            ):
+                out.append((index, lot["qty"], "lot_patience_exit"))
         return out
 
     def _scaled_signal(self, bar, shares, cash, close_time, vwap):
@@ -199,6 +229,14 @@ class IntradayRules:
         level = self.entries + 1
         target_distance = vwap - bar.close
         stabilized = bar.close >= bar.low + 0.25 * (bar.high - bar.low)
+        if cfg.tranche_requires_uptrend:
+            closes = [b.close for b in bars]
+            fast_avg = float(np.mean(closes[-cfg.fast :]))
+            slow_avg = float(np.mean(closes[-cfg.slow :]))
+            if not (fast_avg > slow_avg and bar.close > bars[0].open):
+                # 只在日内看涨趋势中买回调，不逆势加仓。
+                self.entry_diagnostic = "加仓需要日内看涨趋势"
+                return shares > 0, None
         signal = (
             deviation_bps >= level * band_bps
             and deviation_bps <= 6 * band_bps  # 过深偏离视为结构性下跌，不接飞刀
@@ -213,6 +251,8 @@ class IntradayRules:
             self.pending_distance = stop
             self.pending_take = min(target_distance, cfg.take_atr * atr)
             self.pending_mode = "scaled"
+            self.pending_atr = atr
+            self.pending_cost_bps = cost_bps
             return True, None
         self.entry_diagnostic = (
             "偏离未达下一档"
