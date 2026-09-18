@@ -27,7 +27,19 @@ uv run --extra neural quant-workbench serve-compute --host 0.0.0.0 --port 8001
 
 在服务器配置供应商密钥，`QUANT_DATA_DIR` 指向数据目录（默认 `data`）。已有数据目录可直接沿用，无须迁移格式。单个数据目录只启动一个计算进程，不使用多 worker 或热重载。
 
-**本地机器**只需轻量 Python 网关和前端，无须安装 PyTorch 或复制模型、行情：
+**本地机器**只需轻量 Python 网关和前端，无须安装 PyTorch 或复制模型、行情。
+
+一键启动（先安装 `uv` 和 Node.js 22.12+ 或 24）：
+
+```sh
+./scripts/start-local.sh
+```
+
+自动创建 `.venv-local`、安装轻量 Python 依赖和锁定的前端依赖，同时启动网关与网页。打开脚本打印的工作台地址，在网页填写计算服务器和端口即可；计算服务器未启动也能打开连接配置。Ctrl+C 会同时停止两个本地进程，不会停止远程计算任务。
+
+默认仅监听 `127.0.0.1`，网关端口 8000、网页端口 5173。端口被占用时明确退出，不终止其他进程；可使用 `./scripts/start-local.sh --api-port 0 --web-port 5174` 自动分配网关端口并指定网页端口，前端代理会自动匹配。
+
+手动分开启动：
 
 ```sh
 uv venv .venv-local --python 3.12
