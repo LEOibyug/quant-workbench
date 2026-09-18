@@ -50,6 +50,16 @@ export function PositionPanel({ datasets, modelEnabled = true, deployment }: {
   const [result, setResult] = useState<PositionResult | null>(null);
   const [jobId, setJobId] = useState("");
   const [error, setError] = useState("");
+  const [draftVersion, setDraftVersion] = useState(0);
+  function newExperiment() {
+    if (busy || publishing) return;
+    if (localStorage.getItem(pendingKey)) {
+      setError("先恢复尚未确认完成的长期任务，再新建实验"); return;
+    }
+    localStorage.removeItem(lastKey);
+    setJobId(""); setResult(null); setProgress(null); setError(""); setPublished("");
+    setDraftVersion((value) => value + 1);
+  }
   async function observe(id: string) {
     setBusy(true); setError(""); setJobId(id); setPublished(""); setResult(null);
     try {
@@ -107,10 +117,14 @@ export function PositionPanel({ datasets, modelEnabled = true, deployment }: {
       与短期策略分别核算资金，研究结果不会提交真实订单。</p>
     {error && <p className="notice error" role="alert">{error}</p>}
     <label>{deployment ? "模拟记录" : "长期实验记录"}<select value={jobId} disabled={busy || publishing}
-      onChange={(e) => { if (e.target.value) { localStorage.setItem(lastKey, e.target.value); void observe(e.target.value); } }}>
-      <option value="">选择已有记录</option>
+      onChange={(e) => { if (e.target.value) { localStorage.setItem(lastKey, e.target.value); void observe(e.target.value); } else if (!deployment) newExperiment(); }}>
+      <option value="">{deployment ? "选择已有记录" : "新建长期实验"}</option>
       {jobs.map((job) => <option key={job.id} value={job.id}>{job.request.name || "长期策略"} · {job.request.start}—{job.request.end} · {job.status}</option>)}
     </select></label>
+    {!deployment && <div className="section-heading">
+      <p className="muted">{jobId ? "正在查看历史记录；新建实验将清空当前结果并重置下方配置，历史记录仍保留。" : "新实验：选择行情数据集、填写名称与参数，再点击下方“创建并运行长期实验”。"}</p>
+      <button type="button" disabled={busy || publishing} onClick={newExperiment}>新建长期实验</button>
+    </div>}
     <ProgressNotice value={progress} />
     {!busy && localStorage.getItem(pendingKey) && <button onClick={() => void observe(localStorage.getItem(pendingKey)!)}>恢复长期任务</button>}
     {deployment && <>
@@ -141,7 +155,7 @@ export function PositionPanel({ datasets, modelEnabled = true, deployment }: {
       {datasets.map((d) => <option key={d.id} value={d.id}>{d.name}</option>)}
     </select></label>}
     {!dataset && (!deployment || marketMode === "dataset") && <p className="notice">暂无行情数据集，可切换在线日线或先在策略开发页获取行情。</p>}
-    {(dataset || (deployment && marketMode === "daily")) && <form key={dataset?.id || "online"} onSubmit={launch}>
+    {(dataset || (deployment && marketMode === "daily")) && <form key={`${dataset?.id || "online"}-${draftVersion}`} onSubmit={launch}>
       {!deployment && <label>实验名称<input name="name" required maxLength={120} defaultValue="长期统计趋势研究" /></label>}
       <div className="form-grid">
         <label>开始日期<input name="start" type="date" required defaultValue={dataset?.start || "2025-01-02"} /></label>
@@ -168,7 +182,7 @@ export function PositionPanel({ datasets, modelEnabled = true, deployment }: {
       </fieldset>
       <p className="muted">{(deployment ? selectedSymbols : dataset!.symbols).join(" / ")}。默认单股目标上限20%、止损10%、组合回撤10%后熔断。
         价差2bps、滑点2bps，佣金每股$0.005、每次最低$1。模型历史不足时持币；已有数据已参与研究，不能视为新的样本外验证。</p>
-      <button className="primary" disabled={busy || publishing || (!!deployment && !selectedSymbols.length)}>{busy ? "计算中…" : deployment ? "运行已发布策略模拟" : "运行长期策略验证"}</button>
+      <button className="primary" disabled={busy || publishing || (!!deployment && !selectedSymbols.length)}>{busy ? "计算中…" : deployment ? "运行已发布策略模拟" : "创建并运行长期实验"}</button>
     </form>}
     {result && <>
       <p className="muted">本次模拟股票：{Object.keys(result.positions).join(" / ")} · 数据来源：{result.source}</p>
