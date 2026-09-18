@@ -44,7 +44,7 @@ export function AllocationControls({ symbols, initial, long = false }: {
         <input type="checkbox" name="allocation_symbols" value={symbol}
           defaultChecked={!initial?.symbols.length || initial.symbols.includes(symbol)} />{symbol}
       </label>)}</div>
-      <p className="muted">勾选参与轮换的股票；全部不勾选表示全部参与。其他股票沿用原策略目标并占用组合资金。
+      <p className="muted">此处仅选择资金轮换参与范围，不是交易开关：取消勾选仍可能按原策略买卖。要排除股票，请在实验 / 模拟的交易股票选择中取消。全部不勾选表示全部参与。
         {long ? "按上方交易日调仓间隔重新分配。" : "同一分钟先卖后买；尾盘清仓，不隔夜。"}</p>
     </div>
     <div className="form-grid" hidden={!enabled}>
