@@ -1,5 +1,4 @@
-import { useEffect, useMemo, useState } from "react";
-import { DailyCandles } from "./DailyCandles";
+import { useEffect, useId, useMemo, useState } from "react";
 import { DownloadButton } from "./ProgressNotice";
 
 export interface PortfolioAsset {
@@ -29,13 +28,14 @@ const amount = (v: number | undefined) => (v ?? 0).toLocaleString(undefined, { m
 const stamp = (p: { date?: string; timestamp?: string }) => p.timestamp || p.date || "";
 const label = (t: string) => t.length <= 10 ? t : new Date(t).toLocaleString("zh-CN", { timeZone: "America/New_York", hour12: false });
 const sample = <T,>(items: T[], max = 1000) => items.filter((_, i) => i % Math.max(1, Math.ceil(items.length / max)) === 0 || i === items.length - 1);
-function PriceLine({ title, points, value, trades = [], secondary, onTrade, seek }: {
+function PriceLine({ title, points, value, trades = [], secondary, pnl = false, onTrade, seek }: {
   title: string; points: PortfolioPoint[]; value: (p: PortfolioPoint) => number;
-  secondary?: (p: PortfolioPoint) => number; trades?: PortfolioTrade[];
+  secondary?: (p: PortfolioPoint) => number; trades?: PortfolioTrade[]; pnl?: boolean;
   onTrade: (t: PortfolioTrade) => void; seek: (index: number) => void;
 }) {
+  const clipId = useId().replace(/:/g, "");
   const plotted = sample(points);
-  const values = plotted.flatMap((p) => secondary ? [value(p), secondary(p)] : [value(p)]).concat(trades.slice(-500).map((t) => t.price));
+  const values = plotted.flatMap((p) => secondary ? [value(p), secondary(p)] : [value(p)]).concat(trades.slice(-500).map((t) => t.price), pnl ? [0] : []);
   const low = Math.min(...values), high = Math.max(...values), pad = Math.max((high - low) * .08, Math.abs(high) * .0001, .01);
   const y = (v: number) => 155 - (v - low + pad) / (high - low + pad * 2) * 130;
   const x = (index: number) => 65 + index / Math.max(points.length - 1, 1) * 780;
@@ -55,15 +55,24 @@ function PriceLine({ title, points, value, trades = [], secondary, onTrade, seek
       <text x="5" y="25">{amount(high)}</text><text x="5" y="155">{amount(low)}</text>
       <line x1="65" x2="845" y1="160" y2="160" stroke="#cbd5dc" />
       {secondary && <polyline fill="none" stroke="#9ca8b2" strokeWidth="1.5" strokeDasharray="5 3" points={line(secondary)} />}
-      <polyline fill="none" stroke="#397bd5" strokeWidth="1.8" points={line(value)} />
-      {trades.slice(-500).map((t, i) => <circle key={i} className="trade-marker" data-side={t.side}
-        cx={x(tradeIndex(stamp(t)))} cy={y(t.price)} r="4.5" fill={t.side === "buy" ? buyColor : sellColor}
+      {pnl && values.some((v) => v !== 0) ? <>
+        <defs>
+          <clipPath id={`${clipId}-profit`}><rect width="900" height={y(0)} /></clipPath>
+          <clipPath id={`${clipId}-loss`}><rect y={y(0)} width="900" height={195-y(0)} /></clipPath>
+        </defs>
+        <line x1="65" x2="845" y1={y(0)} y2={y(0)} stroke="#9ca8b2" strokeDasharray="4 3" />
+        <polyline fill="none" stroke={profitColor} strokeWidth="1.8" points={line(value)} clipPath={`url(#${clipId}-profit)`} />
+        <polyline fill="none" stroke={lossColor} strokeWidth="1.8" points={line(value)} clipPath={`url(#${clipId}-loss)`} />
+      </> : <polyline fill="none" stroke={pnl ? "#8f9ca8" : "#397bd5"} strokeWidth="1.8" points={line(value)} /> }
+      {trades.slice(-500).map((t, i) => <path key={i} className="trade-marker" data-side={t.side}
+        d="M -2 -17 H 2 V -8 H 6 L 0 0 L -6 -8 H -2 Z"
+        transform={`translate(${x(tradeIndex(stamp(t)))},${y(t.price)})`} fill={t.side === "buy" ? buyColor : sellColor}
         stroke="white" strokeWidth="1" tabIndex={0} role="button"
         aria-label={`${t.side.toUpperCase()} ${t.symbol} ${stamp(t)} ${t.quantity} @ ${t.price}`}
         onClick={(e) => { e.stopPropagation(); onTrade(t); }}
         onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); onTrade(t); } }}>
         <title>{t.side.toUpperCase()} {label(stamp(t))} · {t.quantity} @ ${amount(t.price)}</title>
-      </circle>)}
+      </path>)}
       <text x="65" y="184">{label(stamp(points[0]))}</text>
       <text x="845" y="184" textAnchor="end">{label(stamp(points[points.length - 1]))}</text>
     </svg>
@@ -159,21 +168,25 @@ export function PortfolioCharts({ curve, trades, initialCash, allocationEnabled,
       <tbody>{symbols.map((s, i) => { const a = at.assets[s]; return <tr key={s}><td style={{ color: palette[i % palette.length] }}>{s}</td><td>{amount(a.weight * 100)}%</td><td>{amount(a.target_weight * 100)}%</td><td>{a.shares}</td><td>${amount(a.market_value)}</td><td><Pnl value={a.realized_pnl} /></td><td><Pnl value={a.unrealized_pnl} /></td><td>${amount(a.fees)}</td></tr>; })}
       <tr><td>现金</td><td>{amount(at.cash_weight * 100)}%</td><td colSpan={6}>${amount(at.cash)}</td></tr></tbody></table></div>
     <h3>各股价格、成交与持仓</h3>
-    <p className="muted"><span style={{ color: buyColor }}>●</span> 买入 · <span style={{ color: sellColor }}>●</span> 卖出。{at.date ? "日 K 线红涨绿跌；向下箭头尖端为成交价，绿色买入、红色卖出。悬停查看开高低收和成交量。" : "蓝线为收盘价，圆点为成交价，每股显示最近500笔。"} 点击标记查看成交详情。</p>
+    <p className="muted"><span style={{ color: buyColor }}>↓</span> 买入 · <span style={{ color: sellColor }}>↓</span> 卖出。蓝线为收盘价，向下箭头尖端为成交价；每股显示截至当前的最近500笔，点击查看详情。</p>
+    <p className="muted">单股累计净收益 = 已实现盈亏 + 浮动盈亏，包含成交费用，红盈绿亏；共享资金持续变化，使用 USD 金额展示，不把股价涨幅当作策略收益。</p>
     {shownTrade && <p className="trade-detail"><span style={{ color: shownTrade.side === "buy" ? buyColor : sellColor }}>●</span> {shownTrade.symbol} · {label(stamp(shownTrade))} · {shownTrade.quantity} 股 @ ${amount(shownTrade.price)} · 费用 ${amount(shownTrade.fee)} · 已实现盈亏 {shownTrade.realized_pnl == null ? "—" : <Pnl value={shownTrade.realized_pnl} />}</p>}
     {symbols.map((s) => <div key={s}>
-      {at.date ? <DailyCandles symbol={s} {...chart} trades={visibleTrades.filter((t) => t.symbol === s)} /> : <PriceLine title={`${s} · 价格与买卖点 USD`} {...chart} value={(p) => p.assets[s].close} trades={visibleTrades.filter((t) => t.symbol === s)} />}
+      <PriceLine title={`${s} · 价格与买卖点 USD`} {...chart} value={(p) => p.assets[s].close} trades={visibleTrades.filter((t) => t.symbol === s)} />
+      <PriceLine title={`${s} · 累计净收益 USD`} {...chart} pnl value={(p) => p.assets[s].realized_pnl + p.assets[s].unrealized_pnl} />
       <div className="simulation-grid">
         <PriceLine title={`${s} · 持仓股数`} {...chart} value={(p) => p.assets[s].shares} />
         <PriceLine title={`${s} · 成交量`} {...chart} value={(p) => p.assets[s].volume} />
       </div>
       <p className="muted">开 / 高 / 低 / 收：{[at.assets[s].open, at.assets[s].high, at.assets[s].low, at.assets[s].close].map(amount).join(" / ")}</p>
+      <details><summary>{s} · 模型预测曲线（非实际收益）</summary>
       {[{ key: "probability", title: "上涨概率" }, { key: "mean_bps", title: "多日预测收益 bps" }, { key: "expected_return_bps", title: "分钟预测收益 bps" }].map(({ key, title }) => {
         const forecasts = points.filter((p) => typeof p.assets[s].forecast?.[key] === "number");
         return forecasts.length ? <PriceLine key={key} title={`${s} · ${title}（仅已有预测时点）`}
           points={forecasts} value={(p) => Number(p.assets[s].forecast![key])} onTrade={setChosen}
           seek={(i) => seek(points.findIndex((p) => stamp(p) === stamp(forecasts[i])))} /> : null;
       })}
+      </details>
       {at.assets[s].forecast && <details><summary>{s} · 当前模型输出</summary><pre>{JSON.stringify(at.assets[s].forecast, null, 2)}</pre></details>}
     </div>)}
     <h3>逐日收益</h3>
