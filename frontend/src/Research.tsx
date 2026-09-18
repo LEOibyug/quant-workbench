@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { ExperimentRunner } from "./ExperimentRunner";
 import { AllocationControls, readAllocation } from "./AllocationControls";
 import { PositionPanel } from "./PositionPanel";
+import { StockPicker } from "./StockPicker";
 import { api, post } from "./api";
 import {
   ProgressNotice,
@@ -354,14 +355,7 @@ export function Research() {
                 <option value="massive">Massive / Polygon</option>
               </select>
             </label>
-            <label>
-              股票代码
-              <input
-                name="symbols"
-                defaultValue="NVDA,TSLA,AAPL,AMD,SOFI"
-                required
-              />
-            </label>
+            <StockPicker disabled={busy} />
             <label>
               起始日期
               <input name="start" type="date" required />

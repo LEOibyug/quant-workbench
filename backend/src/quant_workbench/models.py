@@ -86,7 +86,7 @@ class ExperimentInput(BaseModel):
     model_config = ConfigDict(extra="forbid", allow_inf_nan=False)
     name: str = Field(default="日内策略实验", min_length=1, max_length=80)
     dataset_id: str = Field(pattern=r"^[a-f0-9]{32}$")
-    symbols: list[str] = Field(min_length=1, max_length=10)
+    symbols: list[str] = Field(min_length=1, max_length=20)
     start: date
     train_end: date
     validation_end: date
@@ -103,7 +103,7 @@ class ExperimentInput(BaseModel):
 
 
 class AlpacaInput(BaseModel):
-    symbols: list[str] = Field(default=["NVDA", "TSLA", "AAPL"], min_length=1, max_length=10)
+    symbols: list[str] = Field(default=["NVDA", "TSLA", "AAPL"], min_length=1, max_length=20)
     start: date
     end: date
     feed: Literal["iex", "sip"] = "iex"

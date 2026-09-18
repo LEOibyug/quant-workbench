@@ -9,7 +9,7 @@ from sklearn.covariance import LedoitWolf
 class AllocationConfig(BaseModel):
     model_config = ConfigDict(extra="forbid", frozen=True, allow_inf_nan=False)
     enabled: bool = False
-    symbols: list[str] = Field(default_factory=list, max_length=10)
+    symbols: list[str] = Field(default_factory=list, max_length=20)
     lookback: int = Field(default=60, ge=20, le=252)
     max_positions: int = Field(default=3, ge=1, le=10)
     max_weight: float = Field(default=0.35, gt=0, le=0.5)

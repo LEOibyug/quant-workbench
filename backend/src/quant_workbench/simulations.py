@@ -22,7 +22,7 @@ class SimulationInput(BaseModel):
     model_config = ConfigDict(extra="forbid", allow_inf_nan=False)
     source_id: str = Field(pattern=r"^[a-f0-9]{32}$")
     symbol: str = Field(pattern=r"^[A-Z][A-Z0-9.\-]{0,14}$")
-    symbols: list[str] | None = Field(default=None, min_length=1, max_length=10)
+    symbols: list[str] | None = Field(default=None, min_length=1, max_length=20)
     start: date
     end: date
     initial_cash: float = Field(default=100_000, ge=100, le=100_000_000)

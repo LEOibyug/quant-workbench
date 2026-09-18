@@ -24,7 +24,7 @@ router = APIRouter(prefix="/api/position")
 class PositionRequest(BaseModel):
     model_config = ConfigDict(extra="forbid")
     dataset_id: str | None = Field(default=None, pattern=r"^[a-f0-9]{32}$")
-    symbols: list[str] = Field(min_length=1, max_length=10)
+    symbols: list[str] = Field(min_length=1, max_length=20)
     start: date
     end: date
     config: PositionConfig = Field(default_factory=PositionConfig)
@@ -129,7 +129,7 @@ def history(deployment_id: str | None = None):
 
 class PositionSimulationRequest(BaseModel):
     model_config = ConfigDict(extra="forbid")
-    symbols: list[str] | None = Field(default=None, min_length=1, max_length=10)
+    symbols: list[str] | None = Field(default=None, min_length=1, max_length=20)
     provider: Literal["alpaca", "massive"] = "alpaca"
     feed: Literal["iex", "sip"] = "sip"
     dataset_id: str | None = Field(default=None, pattern=r"^[a-f0-9]{32}$")

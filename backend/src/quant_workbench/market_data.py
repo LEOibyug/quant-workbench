@@ -46,8 +46,8 @@ def normalize_bars(frame: pd.DataFrame) -> pd.DataFrame:
     df["symbol"] = df.symbol.astype(str).str.strip().str.upper()
     if not df.symbol.str.fullmatch(r"[A-Z][A-Z0-9.\-]{0,14}").all():
         raise ValueError("股票代码格式无效")
-    if df.symbol.nunique() > 10:
-        raise ValueError("首版单数据集最多10个标的")
+    if df.symbol.nunique() > 20:
+        raise ValueError("单数据集最多20个标的")
     if df.duplicated(["symbol", "timestamp"]).any():
         raise ValueError("发现重复的股票/分钟记录，请先核实数据来源")
     values = df[COLUMNS[2:]].apply(pd.to_numeric, errors="raise")
