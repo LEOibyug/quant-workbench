@@ -85,6 +85,33 @@ def test_position_job_progress_result_and_export(bars, tmp_path, monkeypatch):
             assert job["result"]["positions"]["TEST"] > 0
             export = await client.get(f"/api/position/{identifier}/export")
             assert export.status_code == 200 and "staged_rebalance" in export.text
+            published = await client.post(f"/api/position/{identifier}/publish")
+            assert published.status_code == 200, published.text
+            deployment = published.json()
+            assert deployment["horizon_type"] == "long"
+            assert deployment["model"]["enabled"] is False
+            assert not {"dataset_id", "trades", "curve", "metrics"} & deployment.keys()
+            assert (await client.post(f"/api/position/{identifier}/publish")).json() == deployment
+            assert deployment in (await client.get("/api/deployments")).json()
+            history = (await client.get("/api/position/history")).json()
+            assert history[0]["id"] == identifier
+            endpoint = f"/api/position/deployments/{deployment['id']}/simulate"
+            request = dict(dataset_id=dataset["id"], start="2024-01-02", end="2024-01-10")
+            rejected = await client.post(endpoint, json={**request, "config": {"model": "trend"}})
+            assert rejected.status_code == 422
+            simulation = await client.post(endpoint, json=request)
+            assert simulation.status_code == 200, simulation.text
+            simulation_id = simulation.json()["id"]
+            sim = (await client.get(f"/api/research/operations/{simulation_id}")).json()
+            assert sim["status"] == "completed", sim
+            assert sim["result"]["config"] == deployment["position_config"]
+            assert sim["result"]["trades"] == job["result"]["trades"]
+            assert (await client.post(f"/api/position/{simulation_id}/publish")).status_code == 422
+            assert (await client.get(f"/api/position/{simulation_id}/export")).status_code == 200
+            sim_history = (await client.get(
+                f"/api/position/history?deployment_id={deployment['id']}",
+            )).json()
+            assert [j["id"] for j in sim_history] == [simulation_id]
             from quant_workbench.research import has_prior_exposure
 
             with Repository().connect() as db:

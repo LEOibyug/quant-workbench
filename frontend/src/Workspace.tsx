@@ -1,8 +1,12 @@
 import { useEffect, useState } from "react";
+import { PositionPanel, type PositionDeployment } from "./PositionPanel";
+import type { Dataset } from "./types";
 import { SimulationPanel } from "./SimulationPanel";
 import { api } from "./api";
 import { strategyNames } from "./types";
 interface Deployment {
+  horizon_type?: "short" | "long";
+  position_config?: PositionDeployment["position_config"];
   id: string;
   name: string;
   version: string;
@@ -26,6 +30,7 @@ interface Deployment {
   strategy_config: Record<string, string | number>;
 }
 export function Workspace() {
+  const [datasets, setDatasets] = useState<Dataset[]>([]);
   const [items, setItems] = useState<Deployment[]>([]);
   const [id, setId] = useState(
     new URLSearchParams(location.search).get("deployment") || "",
@@ -33,8 +38,10 @@ export function Workspace() {
   const [error, setError] = useState("");
   useEffect(() => {
     let active = true;
-    const refresh = () =>
-      api<Deployment[]>("/deployments")
+    const refresh = () => {
+      api<Dataset[]>("/datasets").then((data) => { if (active) setDatasets(data); })
+        .catch((e) => { if (active) setError(e.message); });
+      return api<Deployment[]>("/deployments")
         .then((data) => {
           if (active) {
             setItems(data);
@@ -47,6 +54,7 @@ export function Workspace() {
         .catch((e) => {
           if (active) setError(e.message);
         });
+    };
     refresh();
     const timer = setInterval(refresh, 5000);
     return () => {
@@ -61,7 +69,7 @@ export function Workspace() {
         <div>
           <div className="eyebrow">STRATEGY & MODEL LIBRARY</div>
           <h1>策略与模型展示</h1>
-          <p>选择已发布的策略与模型，独立获取行情并进行单股模拟。</p>
+          <p>选择已发布的短期或长期策略，进行日内模拟或隔夜组合模拟。</p>
         </div>
         <span className="badge">已发布版本</span>
       </div>
@@ -77,7 +85,7 @@ export function Workspace() {
             <option value="">选择已发布版本</option>
             {items.map((d) => (
               <option key={d.id} value={d.id}>
-                {d.name} · {d.version}
+                {d.horizon_type === "long" ? "长期" : "短期"} · {d.name} · {d.version}
               </option>
             ))}
           </select>
@@ -120,7 +128,22 @@ export function Workspace() {
           </>
         )}
       </section>
-      {selected && (
+      {selected?.horizon_type === "long" && selected.position_config && <>
+        <PositionPanel key={selected.id} datasets={datasets.filter((d) => selected.symbols.every((s) => d.symbols.includes(s)))}
+          deployment={{ id: selected.id, name: selected.name, symbols: selected.symbols, position_config: selected.position_config }} />
+        <section className="card"><h2>已发布长期策略参数</h2>
+          <p>{selected.model.enabled ? "统计模型参与决策" : "规则策略 · 无预测模型"} · 持仓数日至数周 · 分批执行</p>
+          <details><summary>查看冻结参数与交易成本</summary>
+          <pre>{JSON.stringify({ ...selected.position_config, costs: Object.fromEntries(
+            Object.entries(selected.position_config.costs).filter(([key]) => [
+              "initial_cash", "spread_bps", "slippage_bps", "commission_per_share",
+              "minimum_commission", "sell_fee_bps", "participation",
+            ].includes(key)),
+          ) }, null, 2)}</pre></details>
+          <p className="muted">发布的是固定估计方法与风险参数；模拟仅用当时可用历史重新拟合。实时运行和实盘下单尚未启用。</p>
+        </section>
+      </>}
+      {selected && selected.horizon_type !== "long" && (
         <>
           <SimulationPanel
             key={selected.id}

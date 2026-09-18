@@ -5,6 +5,9 @@ export const phaseNames = {
   test: "最终测试",
 };
 export const strategyNames: Record<string, string> = {
+  trend: "统计趋势 + 波动率仓位",
+  bayesian: "贝叶斯多日收益回归",
+  equal_weight: "等权分批再平衡（无预测模型）",
   ou_reversion: "OU / AR(1) 统计均值回复",
   ou_scaling: "OU 统计分批交易（各批独立退出）",
   kalman_trend: "Kalman 局部趋势预测",

@@ -104,5 +104,46 @@ def public_deployment(body: dict) -> dict:
         "model_valid_from",
         "version",
         "engine_version",
+        "horizon_type",
+        "position_config",
     }
     return {key: value for key, value in body.items() if key in fields}
+
+
+def publish_position(repo: Repository, operation_id: str) -> dict:
+    from quant_workbench.operations import get_operation
+    from quant_workbench.position import PositionConfig
+
+    job = get_operation(repo, operation_id)
+    if job["kind"] != "position" or job["status"] != "completed":
+        raise ValueError("先完成长期研究，再发布冻结配置")
+    request = job["request"]
+    config = PositionConfig(**request["config"]).model_dump(mode="json")
+    with repo.connect() as db:
+        db.execute("BEGIN IMMEDIATE")
+        existing = db.execute(
+            "SELECT body FROM deployments WHERE experiment_id=?", (operation_id,),
+        ).fetchone()
+        if existing:
+            return public_deployment(json.loads(existing[0]))
+        identifier = uuid.uuid4().hex
+        body = {
+            "id": identifier,
+            "name": request.get("name", "长期持仓策略"),
+            "published_at": datetime.now(UTC).isoformat(),
+            "horizon_type": "long",
+            "symbols": request["symbols"],
+            "strategies": {s: config["model"] for s in request["symbols"]},
+            "position_config": config,
+            "strategy_config": config["costs"],
+            "synthetic": job["result"]["synthetic"],
+            "model": {"enabled": config["model"] != "equal_weight",
+                      "architecture": config["model"], "horizon": config["horizon"]},
+            "engine_version": "daily-position-v2",
+        }
+        body["version"] = hashlib.sha256(
+            json.dumps(body, sort_keys=True).encode(),
+        ).hexdigest()[:12]
+        db.execute("INSERT INTO deployments VALUES (?,?,?)",
+                   (identifier, operation_id, json.dumps(body)))
+    return public_deployment(body)

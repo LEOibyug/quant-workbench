@@ -75,7 +75,7 @@ def has_prior_exposure(db, symbols, start, end):
         operation = json.loads(row[0])
         previous = operation.get("request", {})
         if (
-            operation.get("kind") == "position"
+            operation.get("kind") in {"position", "position_simulation"}
             and set(previous.get("symbols", [])) & set(symbols)
             and previous.get("start", end) < end
             and start < previous.get("end", start)

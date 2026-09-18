@@ -84,6 +84,8 @@ def snapshot(repo, scope, identifier):
 
 def begin_simulation(repo: Repository, scope: Scope, request: SimulationInput):
     source = repo.get("experiments" if scope == "research" else "deployments", request.source_id)
+    if source.get("horizon_type") == "long":
+        raise ValueError("长期版本请使用长期组合模拟入口")
     if request.symbol not in source["symbols"]:
         raise ValueError("股票不在此策略/模型的支持范围内")
     start, end = str(request.start), str(request.end)

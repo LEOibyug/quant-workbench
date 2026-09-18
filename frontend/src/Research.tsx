@@ -29,6 +29,8 @@ export function Research() {
     { id: string; name: string; configured: boolean; note: string }[]
   >([]);
   const [enabled, setEnabled] = useState(true);
+  const [horizonType, setHorizonType] = useState("short");
+  const [longEnabled, setLongEnabled] = useState(true);
   const [commission, setCommission] = useState("0.005");
   const [minimum, setMinimum] = useState("1");
   const dataset = datasets.find((d) => d.id === selected);
@@ -225,18 +227,18 @@ export function Research() {
           <h1>从数据到可复现的策略</h1>
           <p>先冻结开发范围、策略与成本，再依次验证。在当前工作台完成训练、回测与复盘。</p>
         </div>
-        <span className="badge">1 MIN · LONG ONLY</span>
+        <span className="badge">INTRADAY / MULTI-DAY · LONG ONLY</span>
       </div>
       <nav className="anchor-nav" aria-label="页面分区导航">
-        {[
+        {(horizonType === "long" ? [
+          ["#data", "行情数据"], ["#strategy-mode", "策略配置"], ["#position", "验证与发布"],
+        ] : [
           ["#data", "行情数据"],
-          ["#setup", "短期实验"],
-          ["#position", "长期持仓"],
-          ["#model", "时序模型"],
+          ["#strategy-mode", "策略配置"],
           ["#evaluation", "实验验证"],
           ["#simulation", "单股模拟"],
           ["#results", "结果明细"],
-        ].map(([href, label]) => (
+        ]).map(([href, label]) => (
           <a key={href} href={href}>
             {label}
           </a>
@@ -401,6 +403,22 @@ export function Research() {
           </div>
         )}
       </section>
+      <section className="card" id="strategy-mode">
+        <h2>策略开发</h2>
+        <div className="form-grid">
+          <label>交易周期<select aria-label="交易周期" value={horizonType} onChange={(e) => setHorizonType(e.target.value)}>
+            <option value="short">短期 · 日内交易</option>
+            <option value="long">长期 · 隔夜持仓与分批调仓</option>
+          </select></label>
+          <label>模型介入<select aria-label="模型介入" value={String(horizonType === "short" ? enabled : longEnabled)}
+            onChange={(e) => (horizonType === "short" ? setEnabled : setLongEnabled)(e.target.value === "true")}>
+            <option value="false">{horizonType === "short" ? "关闭 · 不叠加时序模型" : "关闭 · 等权规则"}</option>
+            <option value="true">开启 · 模型参与决策</option>
+          </select></label>
+        </div>
+        <p className="muted">两种周期均可配置、验证、发布并在展示页模拟。短期开关控制额外的时序模型，OU等统计策略仍保留内置估计；长期模型生成目标仓位，关闭后使用等权分批再平衡。</p>
+      </section>
+      <div hidden={horizonType !== "short"}>
       {dataset && (
         <form onSubmit={create}>
           <section className="card" id="setup">
@@ -748,17 +766,11 @@ export function Research() {
           </section>
           <section className="card" id="model">
             <div className="section-heading">
-              <h2>03 / 在线时序模型</h2>
-              <label className="inline">
-                <input
-                  type="checkbox"
-                  checked={enabled}
-                  onChange={(e) => setEnabled(e.target.checked)}
-                />
-                共同决定入场
-              </label>
+              <h2>03 / 模型介入与执行</h2>
+              <span className="badge">{enabled ? "时序模型参与决策" : "不叠加时序模型"}</span>
             </div>
-            <p>
+            {!enabled && <p className="muted">使用所选策略及其内置估计，按已配置的成本和风控执行。</p>}
+            <p hidden={!enabled}>
               模型综合过去 k
               根分钟线与约1/5/20交易日的历史背景，输出指定跨度的上涨概率与收益。首
               k 根积累窗口，k—2k 为适应期，前 2k
@@ -894,10 +906,10 @@ export function Research() {
                 </label>
               </div>
             )}
-            <p className="muted">
+            <p className="muted" hidden={!enabled}>
               仓位调节模式：规则负责成本空间与风险预算，模型在预算内决定25%—100%仓位，明显看空时否决；低置信度不再一律禁买。严格模式继续要求概率与预测收益双门槛。仓位调节不代表模型预测的期望收益已覆盖成本，仍需验证。
             </p>
-            <p className="muted">
+            <p className="muted" hidden={!enabled}>
               GRU直接编码分钟与已完成5分钟序列，保留长历史与误差反馈，使用近期成熟样本回放；默认设备自动选择
               CUDA →
               CPU（已面向CUDA生态，MPS不再支持），元数据与运行结果记录实际设备。MLP采用两个64→32隐藏层网络，分别输出概率与收益；线性/RBF版本使用逻辑分类与Huber回归。每股独立更新；跨日保留模型权重和历史背景，重建短窗口与误差反馈，不生成隔夜标签。上涨概率不等同于净盈利概率；严格模式的成本过滤要求预测收益
@@ -956,8 +968,9 @@ export function Research() {
       <div id="evaluation">
         <ExperimentRunner selectedId={created?.id} />
       </div>
-      <div id="position">
-        <PositionPanel datasets={datasets} />
+      </div>
+      <div id="position" hidden={horizonType !== "long"}>
+        <PositionPanel datasets={datasets} modelEnabled={longEnabled} />
       </div>
     </>
   );
