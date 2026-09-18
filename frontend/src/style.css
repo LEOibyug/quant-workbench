@@ -745,3 +745,16 @@ pre {
 .portfolio-chart svg, .portfolio-review > svg { width: 100%; display: block; }
 .portfolio-review svg text { font-size: 11px; fill: var(--muted); }
 .portfolio-review .trade-marker { cursor: pointer; }
+
+.report-export { display: flex; align-items: center; flex-wrap: wrap; gap: 10px; padding: 16px 0; }
+.report-export small { color: var(--muted); }
+@media print {
+  @page { size: A3 portrait; margin: 10mm; }
+  html, body { print-color-adjust: exact; -webkit-print-color-adjust: exact; }
+  .shell { display: block; }
+  .shell > aside, [data-report-exclude] { display: none !important; }
+  #workbench-report { width: 100%; max-width: none; padding: 0; }
+  .portfolio-chart, .simulation-chart, .simulation-metrics .card, tr { break-inside: avoid; }
+  .table-wrap, .chart-scroll { overflow: visible; }
+  svg { max-width: 100%; }
+}

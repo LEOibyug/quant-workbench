@@ -3,6 +3,7 @@ import { createRoot } from "react-dom/client";
 const Research = lazy(() =>
   import("./Research").then((m) => ({ default: m.Research })),
 );
+import { ReportExport } from "./ReportExport";
 import { Workspace } from "./Workspace";
 import "./style.css";
 function App() {
@@ -48,11 +49,12 @@ function App() {
           统一工作台 · 无实盘下单
         </div>
       </aside>
-      <main>
+      <main id="workbench-report">
         <header>
           <span>QUANT WORKBENCH / US EQUITIES</span>
           <span>策略开发与展示</span>
         </header>
+        {!research && <ReportExport />}
         <Suspense fallback={<p>加载面板…</p>}>
           <div hidden={!research}>{visitedResearch && <Research />}</div>
           <div hidden={research}>{visitedWorkspace && <Workspace />}</div>

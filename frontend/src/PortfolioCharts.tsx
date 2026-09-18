@@ -18,6 +18,11 @@ export interface PortfolioTrade {
   position_after: number; reason: string;
 }
 const palette = ["#147d72", "#397bd5", "#9a63b8", "#bb861b", "#e17654", "#52918a", "#724d91", "#ae647e", "#386a9a", "#637d32"];
+const profitColor = "#d04b4b", lossColor = "#148565";
+const pnlColor = (value: number) => value > 0 ? profitColor : value < 0 ? lossColor : undefined;
+function Pnl({ value, percent }: { value: number; percent?: number }) {
+  return <span style={{ color: pnlColor(value) }}>${amount(value)}{percent == null ? "" : ` (${amount(percent)}%)`}</span>;
+}
 const buyColor = "#148565", sellColor = "#d04b4b";
 const amount = (v: number | undefined) => (v ?? 0).toLocaleString(undefined, { maximumFractionDigits: 2 });
 const stamp = (p: { date?: string; timestamp?: string }) => p.timestamp || p.date || "";
@@ -72,6 +77,11 @@ export function PortfolioCharts({ curve, trades, initialCash, allocationEnabled,
   const [chosen, setChosen] = useState<PortfolioTrade | null>(null);
   useEffect(() => { setCursor(curve.length); setPlaying(false); setChosen(null); }, [curve]);
   useEffect(() => {
+    const pause = () => setPlaying(false);
+    window.addEventListener("quant:pause-replay", pause);
+    return () => window.removeEventListener("quant:pause-replay", pause);
+  }, []);
+  useEffect(() => {
     if (!playing) return;
     const timer = setInterval(() => setCursor((i) => Math.min(curve.length, i + speed)), 1000);
     return () => clearInterval(timer);
@@ -109,16 +119,16 @@ export function PortfolioCharts({ curve, trades, initialCash, allocationEnabled,
     <p>{label(stamp(at))} · {shown} / {curve.length} {at.date ? "交易日" : "分钟"}。图表与成交只显示至回放时刻；点击曲线可定位。</p>
     <div className="simulation-metrics">
       {[
-        ["净资产", `$${amount(at.equity)}`], ["净收益", `$${amount(at.equity - initialCash)} (${amount((at.equity / initialCash - 1) * 100)}%)`],
+        ["净资产", `$${amount(at.equity)}`], ["净收益", <Pnl value={at.equity - initialCash} percent={(at.equity / initialCash - 1) * 100} />],
         ["可用现金", `$${amount(at.cash)} (${amount(at.cash_weight * 100)}%)`],
-        ["已实现 / 浮动盈亏", `$${amount(at.realized_pnl)} / $${amount(at.unrealized_pnl)}`],
+        ["已实现 / 浮动盈亏", <><Pnl value={at.realized_pnl} /> / <Pnl value={at.unrealized_pnl} /></>],
         ["当前回撤", `${amount(at.drawdown_pct)}%`], ["累计成交", `${visibleTrades.length} · 买 ${visibleTrades.filter((t) => t.side === "buy").length} / 卖 ${visibleTrades.filter((t) => t.side === "sell").length}`],
         ["截至当前最大回撤", `${amount(points.reduce((max, p) => Math.max(max, p.drawdown_pct), 0))}%`],
         ["日收益 Sharpe", dailyStd > 1e-10 ? amount(dailyMean / dailyStd * Math.sqrt(252)) : "—"],
         ["卖出成交胜率", sales.length ? `${amount(sales.filter((t) => (t.realized_pnl || 0) > 0).length / sales.length * 100)}%` : "—"],
         ["累计成交额", `$${amount(visibleTrades.reduce((sum, t) => sum + t.quantity * t.price, 0))}`],
         ["佣金与规费", `$${amount(at.fees)}`], ["价差与滑点成本", `$${amount(at.impact_cost)}`],
-      ].map(([name, value]) => <div className="card" key={name}><small>{name}</small><strong>{value}</strong></div>)}
+      ].map(([name, value]) => <div className="card" key={String(name)}><small>{name}</small><strong>{value}</strong></div>)}
     </div>
     <PriceLine title="组合净值 USD" {...chart} value={(p) => p.equity} secondary={at.benchmark == null ? undefined : (p) => p.benchmark!} />
     {at.benchmark != null && <p className="muted">灰色虚线：日内等权无成本持有基准。</p>}
@@ -145,11 +155,11 @@ export function PortfolioCharts({ curve, trades, initialCash, allocationEnabled,
       <text x="50" y="185">{label(stamp(points[0]))}</text><text x="850" y="185" textAnchor="end">{label(stamp(at))}</text>
     </svg>
     <div className="table-wrap"><table><thead><tr><th>股票</th><th>实际占比</th><th>目标占比</th><th>股数</th><th>市值</th><th>已实现</th><th>浮动盈亏</th><th>费用</th></tr></thead>
-      <tbody>{symbols.map((s, i) => { const a = at.assets[s]; return <tr key={s}><td style={{ color: palette[i % palette.length] }}>{s}</td><td>{amount(a.weight * 100)}%</td><td>{amount(a.target_weight * 100)}%</td><td>{a.shares}</td><td>${amount(a.market_value)}</td><td>${amount(a.realized_pnl)}</td><td>${amount(a.unrealized_pnl)}</td><td>${amount(a.fees)}</td></tr>; })}
+      <tbody>{symbols.map((s, i) => { const a = at.assets[s]; return <tr key={s}><td style={{ color: palette[i % palette.length] }}>{s}</td><td>{amount(a.weight * 100)}%</td><td>{amount(a.target_weight * 100)}%</td><td>{a.shares}</td><td>${amount(a.market_value)}</td><td><Pnl value={a.realized_pnl} /></td><td><Pnl value={a.unrealized_pnl} /></td><td>${amount(a.fees)}</td></tr>; })}
       <tr><td>现金</td><td>{amount(at.cash_weight * 100)}%</td><td colSpan={6}>${amount(at.cash)}</td></tr></tbody></table></div>
     <h3>各股价格、成交与持仓</h3>
     <p className="muted"><span style={{ color: buyColor }}>●</span> 买入 · <span style={{ color: sellColor }}>●</span> 卖出。蓝线为收盘价，圆点为成交价。点上仅显示颜色；点击查看成交详情，每股显示截至当前的最近500笔。</p>
-    {shownTrade && <p className="trade-detail"><span style={{ color: shownTrade.side === "buy" ? buyColor : sellColor }}>●</span> {shownTrade.symbol} · {label(stamp(shownTrade))} · {shownTrade.quantity} 股 @ ${amount(shownTrade.price)} · 费用 ${amount(shownTrade.fee)} · 已实现盈亏 {shownTrade.realized_pnl == null ? "—" : `$${amount(shownTrade.realized_pnl)}`}</p>}
+    {shownTrade && <p className="trade-detail"><span style={{ color: shownTrade.side === "buy" ? buyColor : sellColor }}>●</span> {shownTrade.symbol} · {label(stamp(shownTrade))} · {shownTrade.quantity} 股 @ ${amount(shownTrade.price)} · 费用 ${amount(shownTrade.fee)} · 已实现盈亏 {shownTrade.realized_pnl == null ? "—" : <Pnl value={shownTrade.realized_pnl} />}</p>}
     {symbols.map((s) => <div key={s}>
       <PriceLine title={`${s} · 价格与买卖点 USD`} {...chart} value={(p) => p.assets[s].close} trades={visibleTrades.filter((t) => t.symbol === s)} />
       <div className="simulation-grid">
@@ -167,13 +177,13 @@ export function PortfolioCharts({ curve, trades, initialCash, allocationEnabled,
     </div>)}
     <h3>逐日收益</h3>
     <svg viewBox="0 0 900 180" role="img" aria-label="组合逐日收益">
-      {daily.map((d, i) => { const h = Math.abs(d.pct) / dailyMax * 70; return <rect key={d.date} x={50 + i / daily.length * 800} y={d.pct >= 0 ? 85 - h : 85} width={Math.max(.5, 800 / daily.length - 1)} height={Math.max(.5, h)} fill={d.pct >= 0 ? buyColor : sellColor}><title>{d.date} {amount(d.pct)}%</title></rect>; })}
+      {daily.map((d, i) => { const h = Math.abs(d.pct) / dailyMax * 70; return <rect key={d.date} x={50 + i / daily.length * 800} y={d.pct >= 0 ? 85 - h : 85} width={Math.max(.5, 800 / daily.length - 1)} height={Math.max(.5, h)} fill={pnlColor(d.pct) || "#8f9ca8"}><title>{d.date} {amount(d.pct)}%</title></rect>; })}
       <line x1="50" x2="850" y1="85" y2="85" stroke="#9ba8b4" />
       <text x="50" y="175">{daily[0]?.date}</text><text x="850" y="175" textAnchor="end">{daily[daily.length - 1]?.date}</text>
     </svg>
     <h3>成交明细 · 最近300笔</h3>
     <div className="table-wrap"><table><thead><tr><th>时间</th><th>股票</th><th>方向</th><th>股数</th><th>成交价</th><th>费用</th><th>已实现盈亏</th><th>剩余股数</th><th>原因</th></tr></thead><tbody>
-      {visibleTrades.slice(-300).reverse().map((t, i) => <tr key={i}><td>{label(stamp(t))}</td><td>{t.symbol}</td><td><span aria-label={t.side} style={{ color: t.side === "buy" ? buyColor : sellColor }}>●</span></td><td>{t.quantity}</td><td>{amount(t.price)}</td><td>{amount(t.fee)}</td><td>{t.realized_pnl == null ? "—" : amount(t.realized_pnl)}</td><td>{t.position_after}</td><td>{t.reason}</td></tr>)}
+      {visibleTrades.slice(-300).reverse().map((t, i) => <tr key={i}><td>{label(stamp(t))}</td><td>{t.symbol}</td><td><span aria-label={t.side} style={{ color: t.side === "buy" ? buyColor : sellColor }}>●</span></td><td>{t.quantity}</td><td>{amount(t.price)}</td><td>{amount(t.fee)}</td><td>{t.realized_pnl == null ? "—" : <Pnl value={t.realized_pnl} />}</td><td>{t.position_after}</td><td>{t.reason}</td></tr>)}
     </tbody></table></div>
     {!visibleTrades.length && <p className="notice">截至当前回放时刻没有成交，价格走势不代表已持仓。</p>}
     {shown === curve.length && <div className="replay-buttons"><DownloadButton href={tradesExport}>全部成交 CSV</DownloadButton><DownloadButton href={curveExport}>资金与各股持仓 CSV</DownloadButton>{decisionsExport && <DownloadButton href={decisionsExport}>资金分配决策 CSV</DownloadButton>}</div>}

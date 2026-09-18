@@ -417,6 +417,11 @@ export function SimulationCharts({
   const count = data.market_curve.length;
   const shown = Math.min(count, Math.max(1, follow ? count : cursor));
   useEffect(() => {
+    const pause = () => setPlaying(false);
+    window.addEventListener("quant:pause-replay", pause);
+    return () => window.removeEventListener("quant:pause-replay", pause);
+  }, []);
+  useEffect(() => {
     if (!playing) return;
     const timer = setInterval(
       () =>
