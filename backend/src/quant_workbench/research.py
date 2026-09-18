@@ -22,6 +22,8 @@ def create_experiment(repo: Repository, request: ExperimentInput, progress=None)
     if progress:
         progress("读取数据与校验时间隔离", 0, None, "")
     dataset = repo.get("datasets", request.dataset_id)
+    if dataset.get("timeframe", "1Min") != "1Min":
+        raise ValueError("短期实验需分钟线数据集")
     if not set(request.symbols).issubset(dataset["symbols"]):
         raise ValueError("所选股票不在数据集中")
     frame = repo.load_dataset(request.dataset_id)

@@ -35,9 +35,11 @@ export function Research() {
   const [longEnabled, setLongEnabled] = useState(true);
   const [commission, setCommission] = useState("0.005");
   const [minimum, setMinimum] = useState("1");
-  const dataset = datasets.find((d) => d.id === selected);
+  const dataset = datasets.find((d) => d.id === selected && (d.timeframe || "1Min") === "1Min");
+  const [downloadTimeframe, setDownloadTimeframe] = useState("1Min");
   const choose = (d: Dataset) => {
     setSelected(d.id);
+    if (d.timeframe === "1Day") setHorizonType("long");
     setSymbols(d.symbols);
     setDates([
       d.start,
@@ -272,7 +274,7 @@ export function Research() {
         </p>
         <div className="form-grid">
           <label>
-            行情数据集
+            短期分钟线数据集
             <select
               value={selected}
               onChange={(e) => {
@@ -281,7 +283,7 @@ export function Research() {
               }}
             >
               <option value="">选择数据集</option>
-              {datasets.map((d) => (
+              {datasets.filter((d) => (d.timeframe || "1Min") === "1Min").map((d) => (
                 <option key={d.id} value={d.id}>
                   {d.name}
                 </option>
@@ -333,6 +335,7 @@ export function Research() {
                   "download",
                   {
                     provider,
+                    timeframe: downloadTimeframe,
                     symbols: String(f.get("symbols"))
                       .split(",")
                       .map((x) => x.trim().toUpperCase()),
@@ -355,6 +358,11 @@ export function Research() {
                 <option value="massive">Massive / Polygon</option>
               </select>
             </label>
+            <label>数据周期<select value={downloadTimeframe} onChange={(e) => setDownloadTimeframe(e.target.value)} disabled={busy}>
+              <option value="1Min">短期 · 1 分钟 K 线</option>
+              <option value="1Day">长期 · 日 K 线（OHLCV）</option>
+            </select></label>
+            <p className="muted">{downloadTimeframe === "1Day" ? "长期使用供应商原生日线，每个交易日一根 K 线，包含开高低收及成交量。建议下载日期比实验开始提前至少 240 个自然日，以供模型预热。" : "短期使用常规交易时段分钟线，回测要求逐分钟完整；缺失记录不会自动补造。"}</p>
             <StockPicker disabled={busy} />
             <label>
               起始日期

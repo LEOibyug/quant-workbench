@@ -51,7 +51,9 @@ def execute(repo, job, request):
                 dataset = repo.get("datasets", request.dataset_id)
                 frame = repo.load_dataset(request.dataset_id)
                 frame = frame[frame.symbol.isin(request.symbols)]
-                daily_bars = False
+                if dataset.get("timeframe", "1Min") != "1Day":
+                    raise ValueError("长期策略统一使用日线，请在数据下载中选择长期日线后重新运行")
+                daily_bars = True
                 source = dataset["source"]
             else:
                 since = request.start - timedelta(days=240)
@@ -78,7 +80,7 @@ def execute(repo, job, request):
                 frame, request.config, str(request.start), str(request.end), progress=report,
                 daily_bars=daily_bars,
             )
-            if daily_bars:
+            if not request.dataset_id:
                 # Only cache validated data; do not retain partial provider responses.
                 temporary = cache_path.with_suffix(".tmp.parquet")
                 frame.to_parquet(temporary, index=False)
@@ -101,6 +103,8 @@ def launch(request: PositionRequest, tasks: BackgroundTasks):
     if request.dataset_id is None:
         raise ValueError("长期研究请选择行情数据集")
     dataset = repo.get("datasets", request.dataset_id)
+    if dataset.get("timeframe", "1Min") != "1Day":
+        raise ValueError("长期研究需日线数据集，请下载长期日线")
     if not set(request.symbols).issubset(dataset["symbols"]):
         raise ValueError("股票不在所选数据集中")
     job = begin_operation(repo, "position")
@@ -154,6 +158,8 @@ def simulate_deployment(
     )
     if request.dataset_id:
         dataset = repo.get("datasets", request.dataset_id)
+        if dataset.get("timeframe", "1Min") != "1Day":
+            raise ValueError("长期模拟需日线数据集，请下载长期日线")
         if not set(frozen.symbols).issubset(dataset["symbols"]):
             raise ValueError("行情数据集必须包含所选股票")
     job = begin_operation(repo, "position_simulation")

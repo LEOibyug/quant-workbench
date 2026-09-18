@@ -58,8 +58,11 @@ class Repository:
             raise KeyError("记录ID无效")
         return self.root / collection / (identifier + suffix)
 
-    def save_dataset(self, frame: pd.DataFrame, name: str, source: str, synthetic=False):
-        frame = normalize_bars(frame)
+    def save_dataset(self, frame: pd.DataFrame, name: str, source: str, synthetic=False, timeframe="1Min"):
+        from quant_workbench.daily_data import normalize_daily
+        if timeframe not in {"1Min", "1Day"}:
+            raise ValueError("不支持的数据周期")
+        frame = normalize_daily(frame) if timeframe == "1Day" else normalize_bars(frame)
         identifier = uuid.uuid4().hex
         dest = self.path("datasets", identifier, ".parquet")
         temporary = dest.with_suffix(".tmp")
@@ -67,7 +70,7 @@ class Repository:
         digest = hashlib.sha256(temporary.read_bytes()).hexdigest()
         temporary.replace(dest)
         dates = sorted(
-            set(frame.timestamp.dt.tz_convert("America/New_York").dt.strftime("%Y-%m-%d"))
+            set(frame.day) if timeframe == "1Day" else set(frame.timestamp.dt.tz_convert("America/New_York").dt.strftime("%Y-%m-%d"))
         )
         info = {
             "id": identifier,
@@ -82,7 +85,8 @@ class Repository:
             "end": dates[-1],
             "bytes": dest.stat().st_size,
             "created_at": datetime.now(UTC).isoformat(),
-            "timestamp_convention": "minute_end",
+            "timeframe": timeframe,
+            "timestamp_convention": "session_date" if timeframe == "1Day" else "minute_end",
         }
         with self.connect() as db:
             db.execute("INSERT INTO datasets VALUES (?,?)", (identifier, json.dumps(info)))

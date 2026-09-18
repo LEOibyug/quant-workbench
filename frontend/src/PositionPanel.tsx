@@ -44,7 +44,8 @@ export function PositionPanel({ datasets, modelEnabled = true, deployment }: {
   const [published, setPublished] = useState("");
   const [publishing, setPublishing] = useState(false);
   const [datasetId, setDatasetId] = useState("");
-  const dataset = datasets.find((d) => d.id === datasetId) || datasets[0];
+  const dailyDatasets = datasets.filter((d) => d.timeframe === "1Day");
+  const dataset = dailyDatasets.find((d) => d.id === datasetId) || dailyDatasets[0];
   const [busy, setBusy] = useState(false);
   const [progress, setProgress] = useState<ProgressState | null>(null);
   const [result, setResult] = useState<PositionResult | null>(null);
@@ -138,7 +139,7 @@ export function PositionPanel({ datasets, modelEnabled = true, deployment }: {
       <div className="form-grid">
         <label>行情获取方式<select value={marketMode} disabled={busy} onChange={(e) => setMarketMode(e.target.value)}>
           <option value="daily">在线日线 · 自动获取及缓存</option>
-          <option value="dataset">已有分钟数据集 · 沿用原成交量口径</option>
+          <option value="dataset">已有日线数据集</option>
         </select></label>
         {marketMode === "daily" && <>
           <label>日线供应商<select value={provider} disabled={busy} onChange={(e) => setProvider(e.target.value)}>
@@ -149,12 +150,12 @@ export function PositionPanel({ datasets, modelEnabled = true, deployment }: {
           </select></label>}
         </>}
       </div>
-      {marketMode === "daily" && <p className="notice">直接获取日线和预热历史，无需预先下载分钟数据。流动性按前一交易日总成交量 / 常规交易分钟数估算；与分钟数据模拟的成交结果可能不同。</p>}
+      {marketMode === "daily" && <p className="notice">直接获取日线和预热历史，无需预先下载分钟数据。流动性按前一交易日总成交量 / 常规交易分钟数估算；不代表真实开盘可成交量。</p>}
     </>}
-    {(!deployment || marketMode === "dataset") && <label>行情数据集<select value={dataset?.id || ""} disabled={busy} onChange={(e) => setDatasetId(e.target.value)}>
-      {datasets.map((d) => <option key={d.id} value={d.id}>{d.name}</option>)}
+    {(!deployment || marketMode === "dataset") && <label>日线数据集<select value={dataset?.id || ""} disabled={busy} onChange={(e) => setDatasetId(e.target.value)}>
+      {dailyDatasets.map((d) => <option key={d.id} value={d.id}>{d.name}</option>)}
     </select></label>}
-    {!dataset && (!deployment || marketMode === "dataset") && <p className="notice">暂无行情数据集，可切换在线日线或先在策略开发页获取行情。</p>}
+    {!dataset && (!deployment || marketMode === "dataset") && <p className="notice">暂无日线数据集，请在上方 API 直连行情中选择“长期 · 日 K 线”并下载；已有分钟线不用于长期实验。</p>}
     {(dataset || (deployment && marketMode === "daily")) && <form key={`${dataset?.id || "online"}-${draftVersion}`} onSubmit={launch}>
       {!deployment && <label>实验名称<input name="name" required maxLength={120} defaultValue="长期统计趋势研究" /></label>}
       <div className="form-grid">

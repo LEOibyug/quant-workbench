@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useState } from "react";
+import { DailyCandles } from "./DailyCandles";
 import { DownloadButton } from "./ProgressNotice";
 
 export interface PortfolioAsset {
@@ -158,10 +159,10 @@ export function PortfolioCharts({ curve, trades, initialCash, allocationEnabled,
       <tbody>{symbols.map((s, i) => { const a = at.assets[s]; return <tr key={s}><td style={{ color: palette[i % palette.length] }}>{s}</td><td>{amount(a.weight * 100)}%</td><td>{amount(a.target_weight * 100)}%</td><td>{a.shares}</td><td>${amount(a.market_value)}</td><td><Pnl value={a.realized_pnl} /></td><td><Pnl value={a.unrealized_pnl} /></td><td>${amount(a.fees)}</td></tr>; })}
       <tr><td>现金</td><td>{amount(at.cash_weight * 100)}%</td><td colSpan={6}>${amount(at.cash)}</td></tr></tbody></table></div>
     <h3>各股价格、成交与持仓</h3>
-    <p className="muted"><span style={{ color: buyColor }}>●</span> 买入 · <span style={{ color: sellColor }}>●</span> 卖出。蓝线为收盘价，圆点为成交价。点上仅显示颜色；点击查看成交详情，每股显示截至当前的最近500笔。</p>
+    <p className="muted"><span style={{ color: buyColor }}>●</span> 买入 · <span style={{ color: sellColor }}>●</span> 卖出。{at.date ? "日 K 线红涨绿跌；向下箭头尖端为成交价，绿色买入、红色卖出。悬停查看开高低收和成交量。" : "蓝线为收盘价，圆点为成交价，每股显示最近500笔。"} 点击标记查看成交详情。</p>
     {shownTrade && <p className="trade-detail"><span style={{ color: shownTrade.side === "buy" ? buyColor : sellColor }}>●</span> {shownTrade.symbol} · {label(stamp(shownTrade))} · {shownTrade.quantity} 股 @ ${amount(shownTrade.price)} · 费用 ${amount(shownTrade.fee)} · 已实现盈亏 {shownTrade.realized_pnl == null ? "—" : <Pnl value={shownTrade.realized_pnl} />}</p>}
     {symbols.map((s) => <div key={s}>
-      <PriceLine title={`${s} · 价格与买卖点 USD`} {...chart} value={(p) => p.assets[s].close} trades={visibleTrades.filter((t) => t.symbol === s)} />
+      {at.date ? <DailyCandles symbol={s} {...chart} trades={visibleTrades.filter((t) => t.symbol === s)} /> : <PriceLine title={`${s} · 价格与买卖点 USD`} {...chart} value={(p) => p.assets[s].close} trades={visibleTrades.filter((t) => t.symbol === s)} />}
       <div className="simulation-grid">
         <PriceLine title={`${s} · 持仓股数`} {...chart} value={(p) => p.assets[s].shares} />
         <PriceLine title={`${s} · 成交量`} {...chart} value={(p) => p.assets[s].volume} />

@@ -110,4 +110,5 @@ class AlpacaInput(BaseModel):
 
 
 class ProviderInput(AlpacaInput):
+    timeframe: Literal["1Min", "1Day"] = "1Min"
     provider: Literal["alpaca", "massive"] = "alpaca"

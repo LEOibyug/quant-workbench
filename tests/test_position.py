@@ -68,8 +68,10 @@ def test_hard_exit_overrides_tranche_limit(bars):
 
 def test_position_job_progress_result_and_export(bars, tmp_path, monkeypatch):
     monkeypatch.setenv("QUANT_DATA_DIR", str(tmp_path))
+    from quant_workbench.position import daily_inputs
     dataset = Repository().save_dataset(
-        pd.concat([bars, bars.assign(symbol="OTHER")]), "synthetic", "test", True,
+        daily_inputs(pd.concat([bars, bars.assign(symbol="OTHER")])),
+        "synthetic daily", "test", True, timeframe="1Day",
     )
 
     async def run():

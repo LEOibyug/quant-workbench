@@ -25,6 +25,7 @@ export const strategyNames: Record<string, string> = {
   vwap_reversion: "VWAP偏离回归",
 };
 export interface Dataset {
+  timeframe?: "1Min" | "1Day";
   id: string;
   name: string;
   source: string;

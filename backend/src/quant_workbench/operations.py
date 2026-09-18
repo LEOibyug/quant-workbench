@@ -66,13 +66,16 @@ def execute_operation(repo, job, request):
     try:
         if job["kind"] == "download":
             report("连接供应商，等待第一页行情")
-            frame = fetch_provider(request, progress=report)
+            from quant_workbench.daily_providers import fetch_daily
+            frame = (fetch_daily(request, progress=report) if request.timeframe == "1Day"
+                     else fetch_provider(request, progress=report))
             report("校验并保存本地行情快照")
             suffix = f"-{request.feed}" if request.provider == "alpaca" else ""
             result = repo.save_dataset(
                 frame,
-                f"{request.provider}{suffix} {request.start}—{request.end}",
+                f"{request.provider}{suffix} {request.timeframe} {request.start}—{request.end}",
                 f"{request.provider}{suffix}-raw",
+                timeframe=request.timeframe,
             )
         else:
             report("等待模型计算资源")
