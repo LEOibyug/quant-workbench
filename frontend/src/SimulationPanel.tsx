@@ -269,8 +269,7 @@ export function SimulationPanel({
           )}
         </div>
         <p className="muted">
-          沿用此版本的策略、模型与交易成本。单次最多 92
-          天；分钟缺失将拒绝模拟。每次从离线模型重新初始化在线适应。
+          沿用此版本的策略、模型与交易成本，不限制为三个月以内。日内模拟仍需完整分钟行情；每次从离线模型重新初始化在线适应。
         </p>
         <button
           className="primary"

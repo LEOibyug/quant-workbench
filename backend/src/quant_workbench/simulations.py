@@ -31,8 +31,8 @@ class SimulationInput(BaseModel):
 
     @model_validator(mode="after")
     def dates(self):
-        if not 0 < (self.end - self.start).days <= 92:
-            raise ValueError("模拟区间需为1—92个日历日，结束日期不含在内")
+        if self.start >= self.end:
+            raise ValueError("开始日期必须早于结束日期，结束日期不含在内")
         return self
 
 

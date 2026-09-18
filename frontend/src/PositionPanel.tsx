@@ -5,6 +5,8 @@ import { strategyNames, type Dataset } from "./types";
 
 interface PositionResult {
   synthetic?: boolean;
+  source?: string;
+  engine_version?: string;
   start: string;
   end: string;
   config: { model: string; lookback: number; horizon: number; rebalance_days: number; tranche_weight: number };
@@ -30,6 +32,10 @@ export function PositionPanel({ datasets, modelEnabled = true, deployment }: {
   const pendingKey = deployment ? `quant.pending.position.${deployment.id}` : "quant.pending.position.operation";
   const lastKey = deployment ? `quant.last.position.${deployment.id}` : "quant.last.position.operation";
   const config = deployment?.position_config;
+  const [marketMode, setMarketMode] = useState("daily");
+  const [provider, setProvider] = useState("alpaca");
+  const [feed, setFeed] = useState("sip");
+  const [selectedSymbols, setSelectedSymbols] = useState(deployment?.symbols || []);
   const [jobs, setJobs] = useState<{ id: string; status: string; started_at: string; request: { name?: string; start: string; end: string } }[]>([]);
   const [published, setPublished] = useState("");
   const [publishing, setPublishing] = useState(false);
@@ -60,7 +66,7 @@ export function PositionPanel({ datasets, modelEnabled = true, deployment }: {
   }, [deployment?.id, busy]);
   async function launch(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    if (!dataset || busy) return;
+    if (busy || (!dataset && (!deployment || marketMode === "dataset"))) return;
     if (localStorage.getItem(pendingKey)) {
       setError("先恢复尚未确认完成的长期任务"); return;
     }
@@ -70,10 +76,11 @@ export function PositionPanel({ datasets, modelEnabled = true, deployment }: {
     try {
       const job = await post<{ id: string }>(deployment
         ? `/position/deployments/${deployment.id}/simulate` : "/position/run", deployment ? {
-          dataset_id: dataset.id, start: f.get("start"), end: f.get("end"),
+          dataset_id: marketMode === "dataset" ? dataset?.id : null,
+          symbols: selectedSymbols, provider, feed, start: f.get("start"), end: f.get("end"),
         } : {
         name: f.get("name"),
-        dataset_id: dataset.id, symbols: dataset.symbols,
+        dataset_id: dataset!.id, symbols: dataset!.symbols,
         start: f.get("start"), end: f.get("end"),
         config: {
           model: modelEnabled ? f.get("model") : "equal_weight", lookback: n("lookback"), horizon: n("horizon"),
@@ -101,15 +108,39 @@ export function PositionPanel({ datasets, modelEnabled = true, deployment }: {
     </select></label>
     <ProgressNotice value={progress} />
     {!busy && localStorage.getItem(pendingKey) && <button onClick={() => void observe(localStorage.getItem(pendingKey)!)}>恢复长期任务</button>}
-    <label>行情数据集<select value={dataset?.id || ""} disabled={busy} onChange={(e) => setDatasetId(e.target.value)}>
+    {deployment && <>
+      <fieldset disabled={busy}><legend>模拟股票</legend>
+        <div className="checks">{deployment.symbols.map((symbol) => <label key={symbol}>
+          <input type="checkbox" checked={selectedSymbols.includes(symbol)} onChange={(e) => setSelectedSymbols(
+            (current) => e.target.checked ? [...current, symbol] : current.filter((s) => s !== symbol),
+          )} />{symbol}</label>)}</div>
+        <p className="muted">可选择单股或多股；保留已发布的单股仓位上限，不把单股自动放大为满仓。</p>
+      </fieldset>
+      <div className="form-grid">
+        <label>行情获取方式<select value={marketMode} disabled={busy} onChange={(e) => setMarketMode(e.target.value)}>
+          <option value="daily">在线日线 · 自动获取及缓存</option>
+          <option value="dataset">已有分钟数据集 · 沿用原成交量口径</option>
+        </select></label>
+        {marketMode === "daily" && <>
+          <label>日线供应商<select value={provider} disabled={busy} onChange={(e) => setProvider(e.target.value)}>
+            <option value="alpaca">Alpaca</option><option value="massive">Massive / Polygon</option>
+          </select></label>
+          {provider === "alpaca" && <label>行情源<select value={feed} disabled={busy} onChange={(e) => setFeed(e.target.value)}>
+            <option value="sip">SIP 综合行情</option><option value="iex">IEX 单所行情</option>
+          </select></label>}
+        </>}
+      </div>
+      {marketMode === "daily" && <p className="notice">直接获取日线和预热历史，无需预先下载分钟数据。流动性按前一交易日总成交量 / 常规交易分钟数估算；与分钟数据模拟的成交结果可能不同。</p>}
+    </>}
+    {(!deployment || marketMode === "dataset") && <label>行情数据集<select value={dataset?.id || ""} disabled={busy} onChange={(e) => setDatasetId(e.target.value)}>
       {datasets.map((d) => <option key={d.id} value={d.id}>{d.name}</option>)}
-    </select></label>
-    {!dataset && <p className="notice">暂无包含策略全部股票的行情数据，请先在策略开发页获取行情。</p>}
-    {dataset && <form key={dataset.id} onSubmit={launch}>
+    </select></label>}
+    {!dataset && (!deployment || marketMode === "dataset") && <p className="notice">暂无行情数据集，可切换在线日线或先在策略开发页获取行情。</p>}
+    {(dataset || (deployment && marketMode === "daily")) && <form key={dataset?.id || "online"} onSubmit={launch}>
       {!deployment && <label>实验名称<input name="name" required maxLength={120} defaultValue="长期统计趋势研究" /></label>}
       <div className="form-grid">
-        <label>开始日期<input name="start" type="date" required defaultValue={dataset.start} /></label>
-        <label>结束日期（不含）<input name="end" type="date" required defaultValue={new Date(Date.parse(dataset.end) + 86400000).toISOString().slice(0, 10)} /></label>
+        <label>开始日期<input name="start" type="date" required defaultValue={dataset?.start || "2025-01-02"} /></label>
+        <label>结束日期（不含）<input name="end" type="date" required defaultValue={dataset ? new Date(Date.parse(dataset.end) + 86400000).toISOString().slice(0, 10) : new Date().toISOString().slice(0, 10)} /></label>
       </div>
       {deployment && <p className="muted">策略参数来自已发布版本，模拟时保持冻结。统计模型按当时可用历史重新估计，不携带研究期的未来信息。</p>}
       <fieldset disabled={!!deployment || busy}>
@@ -128,11 +159,13 @@ export function PositionPanel({ datasets, modelEnabled = true, deployment }: {
         <label>每日单股最大调整 资金%<input name="tranche" type="number" min={0.1} max={20} step={0.1} defaultValue={config ? config.tranche_weight * 100 : 5} required /></label>
       </div>
       </fieldset>
-      <p className="muted">{(deployment?.symbols || dataset.symbols).join(" / ")}。默认单股目标上限20%、止损10%、组合回撤10%后熔断。
+      <p className="muted">{(deployment ? selectedSymbols : dataset!.symbols).join(" / ")}。默认单股目标上限20%、止损10%、组合回撤10%后熔断。
         价差2bps、滑点2bps，佣金每股$0.005、每次最低$1。模型历史不足时持币；已有数据已参与研究，不能视为新的样本外验证。</p>
-      <button className="primary" disabled={busy || publishing}>{busy ? "计算中…" : deployment ? "运行已发布策略模拟" : "运行长期策略验证"}</button>
+      <button className="primary" disabled={busy || publishing || (!!deployment && !selectedSymbols.length)}>{busy ? "计算中…" : deployment ? "运行已发布策略模拟" : "运行长期策略验证"}</button>
     </form>}
     {result && <>
+      <p className="muted">本次模拟股票：{Object.keys(result.positions).join(" / ")} · 数据来源：{result.source}</p>
+      {result.engine_version === "daily-position-v3-daily" && <p className="notice">日线成交量估算模式：使用前日平均分钟量限制成交，不代表真实开盘可成交量。</p>}
       {result.synthetic && <p className="notice">本次使用合成行情，仅作功能演示。</p>}
       {!deployment && <div className="section-heading">
         <p>已完成长期验证，可发布本次冻结参数到展示页；发布不代表已证明盈利。</p>

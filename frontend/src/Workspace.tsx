@@ -129,7 +129,7 @@ export function Workspace() {
         )}
       </section>
       {selected?.horizon_type === "long" && selected.position_config && <>
-        <PositionPanel key={selected.id} datasets={datasets.filter((d) => selected.symbols.every((s) => d.symbols.includes(s)))}
+        <PositionPanel key={selected.id} datasets={datasets}
           deployment={{ id: selected.id, name: selected.name, symbols: selected.symbols, position_config: selected.position_config }} />
         <section className="card"><h2>已发布长期策略参数</h2>
           <p>{selected.model.enabled ? "统计模型参与决策" : "规则策略 · 无预测模型"} · 持仓数日至数周 · 分批执行</p>

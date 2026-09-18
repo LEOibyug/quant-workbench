@@ -68,14 +68,17 @@ def test_hard_exit_overrides_tranche_limit(bars):
 
 def test_position_job_progress_result_and_export(bars, tmp_path, monkeypatch):
     monkeypatch.setenv("QUANT_DATA_DIR", str(tmp_path))
-    dataset = Repository().save_dataset(bars, "synthetic", "test", True)
+    dataset = Repository().save_dataset(
+        pd.concat([bars, bars.assign(symbol="OTHER")]), "synthetic", "test", True,
+    )
 
     async def run():
         async with httpx.AsyncClient(
             transport=httpx.ASGITransport(app=app), base_url="http://test",
         ) as client:
             response = await client.post("/api/position/run", json=dict(
-                dataset_id=dataset["id"], symbols=["TEST"], start="2024-01-02", end="2024-01-10",
+                dataset_id=dataset["id"], symbols=["TEST", "OTHER"],
+                start="2024-01-02", end="2024-01-10",
                 config=dict(model="equal_weight"),
             ))
             assert response.status_code == 200, response.text
@@ -112,10 +115,39 @@ def test_position_job_progress_result_and_export(bars, tmp_path, monkeypatch):
                 f"/api/position/history?deployment_id={deployment['id']}",
             )).json()
             assert [j["id"] for j in sim_history] == [simulation_id]
+            from quant_workbench.market_data import schedule
+
+            calls = []
+
+            def fake_daily(market_request, progress=None):
+                calls.append(market_request)
+                return pd.DataFrame(dict(
+                    day=schedule(str(market_request.start), str(market_request.end)).index.strftime(
+                        "%Y-%m-%d",
+                    ), symbol="TEST", open=100.0, high=101.0, low=99.0, close=100.0,
+                    volume=39_000_000.0,
+                ))
+
+            monkeypatch.setattr("quant_workbench.position_api.fetch_daily", fake_daily)
+            daily_request = dict(symbols=["TEST"], start="2024-01-02", end="2024-07-01")
+            rejected = await client.post(endpoint, json={**daily_request, "symbols": ["UNKNOWN"]})
+            assert rejected.status_code == 422
+            for _ in range(2):
+                response = await client.post(endpoint, json=daily_request)
+                assert response.status_code == 200, response.text
+                daily_job = (await client.get(
+                    f"/api/research/operations/{response.json()['id']}",
+                )).json()
+                assert daily_job["status"] == "completed", daily_job
+                assert set(daily_job["result"]["positions"]) == {"TEST"}
+                assert len(daily_job["result"]["curve"]) > 97
+                assert daily_job["result"]["engine_version"] == "daily-position-v3-daily"
+            assert len(calls) == 1  # Independent daily cache, without any minute data.
+            assert calls[0].symbols == ["TEST"]
             from quant_workbench.research import has_prior_exposure
 
             with Repository().connect() as db:
                 assert has_prior_exposure(db, ["TEST"], "2024-01-05", "2024-01-10")
-                assert not has_prior_exposure(db, ["OTHER"], "2024-01-05", "2024-01-10")
+                assert not has_prior_exposure(db, ["UNSEEN"], "2024-01-05", "2024-01-10")
 
     asyncio.run(run())

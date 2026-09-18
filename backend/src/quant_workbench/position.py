@@ -9,7 +9,7 @@ from pydantic import BaseModel, ConfigDict, Field
 from sklearn.linear_model import BayesianRidge
 from sklearn.preprocessing import StandardScaler
 
-from quant_workbench.market_data import require_complete
+from quant_workbench.market_data import require_complete, schedule
 from quant_workbench.models import StrategyConfig
 
 
@@ -99,11 +99,40 @@ def daily_forecasts(daily, config):
     return output
 
 
-def simulate_positions(frame, config, start, end, progress=None):
-    require_complete(frame, start, end)
-    # Do not let post-evaluation observations enter this experiment at all.
-    cutoff = pd.Timestamp(end, tz="America/New_York").tz_convert("UTC")
-    daily = daily_inputs(frame[frame.timestamp < cutoff])
+def simulate_positions(frame, config, start, end, progress=None, *, daily_bars=False):
+    if daily_bars:
+        daily = frame[frame.day < end].copy()
+        sessions = schedule(start, end)
+        expected = set(sessions.index.strftime("%Y-%m-%d"))
+        if not expected or daily.empty:
+            raise ValueError("区间内没有日线行情")
+        if daily.duplicated(["day", "symbol"]).any():
+            raise ValueError("日线行情存在重复日期")
+        values = daily[["open", "high", "low", "close", "volume"]].to_numpy(dtype=float)
+        if (not np.isfinite(values).all() or (values[:, :4] <= 0).any()
+                or (values[:, 4] < 0).any()
+                or (daily.high < daily[["open", "close", "low"]].max(axis=1)).any()
+                or (daily.low > daily[["open", "close", "high"]].min(axis=1)).any()):
+            raise ValueError("日线价格或成交量无效")
+        daily = daily.sort_values(["day", "symbol"])
+        for symbol, group in daily.groupby("symbol"):
+            if not expected.issubset(set(group.day)):
+                raise ValueError(f"{symbol}在所选区间缺少交易日日线，请检查上市日期或数据权限")
+            gap = group.open.to_numpy()[1:] / group.close.to_numpy()[:-1]
+            if np.any((gap < 0.65) | (gap > 1.5)):
+                raise ValueError("检测到疑似拆股或极端隔夜跳变；跨日回测需先核验公司行动数据")
+        all_sessions = schedule(str(daily.day.min()), end)
+        minutes = ((all_sessions.close - all_sessions.open).dt.total_seconds() / 60)
+        durations = dict(zip(all_sessions.index.strftime("%Y-%m-%d"), minutes, strict=True))
+        # This is an explicit daily-volume proxy, never the current day's future volume.
+        daily["last_volume"] = daily.volume / daily.day.map(durations)
+        if daily.last_volume.isna().any():
+            raise ValueError("日线日期不属于交易日")
+    else:
+        require_complete(frame, start, end)
+        # Do not let post-evaluation observations enter this experiment at all.
+        cutoff = pd.Timestamp(end, tz="America/New_York").tz_convert("UTC")
+        daily = daily_inputs(frame[frame.timestamp < cutoff])
     forecasts = daily_forecasts(daily, config) if config.model != "equal_weight" else {}
     symbols = sorted(daily.symbol.unique())
     pivot = {day: group.set_index("symbol") for day, group in daily.groupby("day")}
@@ -236,7 +265,8 @@ def simulate_positions(frame, config, start, end, progress=None):
         costs.initial_cash, [row["equity"] for row in curve[:-1]],
     ]
     return dict(
-        config=config.model_dump(), start=start, end=end, engine_version="daily-position-v2",
+        config=config.model_dump(), start=start, end=end,
+        engine_version="daily-position-v3-daily" if daily_bars else "daily-position-v2",
         metrics=dict(return_pct=(final/costs.initial_cash-1)*100, final_equity=final,
                      max_drawdown_pct=max(row["drawdown_pct"] for row in curve),
                      fees=fees, impact_cost=impact_total, trade_count=len(trades), halted=halted,
@@ -253,7 +283,10 @@ def simulate_positions(frame, config, start, end, progress=None):
         daily_returns=[dict(date=d, return_pct=float(r*100))
                        for d, r in zip(days, returns, strict=True)],
         assumptions=["独立长期账户；仅做多无杠杆；持仓可隔夜，期末按收盘市值计价并保留未平仓头寸",
-                     "收盘信号在次日开盘执行；每日按固定资金比例分批调整，受前日最后一分钟成交量限制",
+                     ("供应商日线模拟；前日总成交量除以该日常规交易分钟数作为流动性估算，"
+                      "不是实际开盘或尾盘分钟成交量；供应商日线与常规时段分钟聚合可能存在口径差异"
+                      if daily_bars else
+                      "收盘信号在次日开盘执行；每日按固定资金比例分批调整，受前日最后一分钟成交量限制"),
                      "单股止损与组合回撤熔断优先；隔夜跳空可能穿透止损，熔断后本次回测不重启买入",
                      "风险仅在开盘和收盘检查，非盘中实时止损；报告回撤为日终口径，可能低于盘中最大回撤",
                      "当前为原始价格快照，未计股息；疑似拆股/极端跳变会拒绝回测，非总回报口径",
