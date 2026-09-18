@@ -64,6 +64,25 @@ def test_sequence_prefix_invariance_completed_candles_and_gap(bars):
     assert len(history.long) == 1  # incomplete 5-minute group discarded
 
 
+def test_offline_background_matches_streaming_across_symbols_and_gaps(bars):
+    from quant_workbench.timeseries import HistoricalContext
+
+    frame = pd.concat([
+        bars.iloc[:150], bars.iloc[160:300],
+        bars.assign(timestamp=bars.timestamp + pd.Timedelta(days=1)),
+        bars.assign(symbol="AAPL"),
+    ], ignore_index=True)
+    values, info = training_sequences(frame, TimeSeriesConfig(k=5, horizon=5))
+    expected = {}
+    for symbol, group in frame.groupby("symbol"):
+        memory = HistoricalContext()
+        for bar in group.sort_values("timestamp").to_dict("records"):
+            memory.observe(bar, bar["timestamp"])
+            expected[(symbol, bar["timestamp"])] = memory.features().ravel()
+    reference = np.array([expected[(row.symbol, row.timestamp)] for row in info.itertuples()])
+    np.testing.assert_allclose(values["context"][:, :6], reference, rtol=1e-6, atol=1e-7)
+
+
 def test_device_selection_and_causal_network_masks_padding(monkeypatch):
     import torch
 
@@ -171,3 +190,63 @@ def test_subsampling_keeps_all_stocks_and_stable_selector_does_not_use_test(bars
         name="unstable", status="completed", metrics={"roundtrips": 10}, test_return=100, **metrics
     )
     assert stable_select([candidate]) is None
+
+
+def test_cuda_graph_reads_updated_weights_and_is_not_serialized(monkeypatch):
+    import torch
+    from quant_workbench.sequence_model import SequenceEstimator
+    from sklearn.preprocessing import StandardScaler
+
+    if not torch.cuda.is_available():
+        pytest.skip("requires CUDA")
+    monkeypatch.setenv("QUANT_TORCH_DEVICE", "cuda")
+    monkeypatch.setenv("QUANT_CUDA_GRAPHS", "1")
+    rng = np.random.default_rng(12)
+    scalers = {
+        key: StandardScaler().fit(rng.normal(size=(50, width)))
+        for key, width in (("short", 7), ("long", 7), ("context", 6))
+    }
+    estimator = SequenceEstimator(TimeSeriesConfig(architecture="gru", k=5), scalers)
+    batch = {
+        "short": rng.normal(size=(1, 5, 7)).astype(np.float32),
+        "long": rng.normal(size=(1, 78, 7)).astype(np.float32),
+        "length": np.array([12]),
+        "context": rng.normal(size=(1, 12)).astype(np.float32),
+    }
+    initial = estimator.predict_batch(batch)
+    assert estimator._cuda_prediction is not None
+    for step in range(3):
+        estimator.fit_batch(batch, [step % 2], [20.0], estimator.optimizer)
+        batch["context"] += 0.1
+        batch["length"][:] += 3
+        estimator.temperature = 0.7 + step / 10
+        actual = estimator.predict_batch(batch)
+        estimator._cuda_graph_enabled = False
+        expected = estimator.predict_batch(batch)
+        estimator._cuda_graph_enabled = True
+        for left, right in zip(actual, expected, strict=True):
+            np.testing.assert_allclose(left, right, rtol=1e-5, atol=1e-5)
+    assert not np.array_equal(initial[0], actual[0])
+    restored = pickle.loads(pickle.dumps(estimator))
+    assert restored._cuda_prediction is None
+    for left, right in zip(restored.predict_batch(batch), expected, strict=True):
+        np.testing.assert_allclose(left, right, rtol=1e-5, atol=1e-5)
+
+
+def test_cuda_training_cache_preserves_weights_and_feedback(bars, monkeypatch):
+    import torch
+
+    if not torch.cuda.is_available():
+        pytest.skip("requires CUDA")
+    monkeypatch.setenv("QUANT_TORCH_DEVICE", "cuda")
+    config = TimeSeriesConfig(enabled=True, architecture="gru", k=5, max_iter=2)
+    monkeypatch.setenv("QUANT_TRAIN_CACHE_MIB", "0")
+    reference = train_model(bars, config)
+    monkeypatch.setenv("QUANT_TRAIN_CACHE_MIB", "256")
+    cached = train_model(bars, config)
+    assert cached.metadata["feedback_nonzero_samples"] == reference.metadata[
+        "feedback_nonzero_samples"
+    ]
+    assert cached.estimator.temperature == reference.estimator.temperature
+    for name, weight in reference.estimator.network.state_dict().items():
+        torch.testing.assert_close(weight, cached.estimator.network.state_dict()[name])

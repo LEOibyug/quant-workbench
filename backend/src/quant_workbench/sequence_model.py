@@ -2,6 +2,7 @@
 
 import copy
 import os
+import warnings
 from collections import deque
 
 import numpy as np
@@ -15,14 +16,36 @@ from torch.nn import functional as F
 from quant_workbench.market_data import normalize_bars
 from quant_workbench.sequence_features import SequenceHistory, stack_samples
 from quant_workbench.timeseries import (
-    HistoricalContext,
     TimeSeriesConfig,
     TimeSeriesModel,
+    _long_rows,
     feedback_features,
 )
 
 SEQUENCE_VERSION = "causal-conv-dual-gru-v1"
 MAX_SEQUENCE_SAMPLES = 50000
+
+
+class _CudaPrediction:
+    """Replay fixed-shape inference kernels while reading the current network weights."""
+
+    def __init__(self, network, inputs):
+        self.inputs = {key: value.clone() for key, value in inputs.items()}
+        stream = torch.cuda.Stream()
+        stream.wait_stream(torch.cuda.current_stream())
+        with torch.cuda.stream(stream):
+            for _ in range(3):
+                network(**self.inputs)
+        torch.cuda.current_stream().wait_stream(stream)
+        self.graph = torch.cuda.CUDAGraph()
+        with torch.cuda.graph(self.graph):
+            self.outputs = network(**self.inputs)
+
+    def __call__(self, inputs):
+        for key, value in inputs.items():
+            self.inputs[key].copy_(value)
+        self.graph.replay()
+        return self.outputs
 
 
 def select_device():
@@ -129,6 +152,11 @@ class SequenceEstimator:
         )
         self.replay = deque(maxlen=config.replay_size)
         self.matured = 0
+        # Runtime-only cache: never serialize CUDA graphs or their device buffers.
+        self._cuda_prediction = None
+        self._cuda_graph_enabled = (
+            self.device == "cuda" and os.environ.get("QUANT_CUDA_GRAPHS", "1") != "0"
+        )
 
     def __getstate__(self):
         return dict(
@@ -173,14 +201,29 @@ class SequenceEstimator:
         return result
 
     def predict_batch(self, batch):
-        self.network.eval()
+        if self.network.training:
+            self.network.eval()
         with torch.no_grad():
-            logits, returns = self.network(**self.prepare(batch))
+            inputs = self.prepare(batch)
+            if self._cuda_graph_enabled and len(batch["short"]) == 1:
+                # k is fixed per estimator. Updated AdamW weights keep the same storage,
+                # so replay uses the latest online model, never stale predictions.
+                if self._cuda_prediction is None:
+                    try:
+                        self._cuda_prediction = _CudaPrediction(self.network, inputs)
+                    except RuntimeError as exc:
+                        self._cuda_graph_enabled = False
+                        warnings.warn(f"CUDA Graph 不可用，使用普通推理：{exc}", stacklevel=2)
+                if self._cuda_prediction is not None:
+                    logits, returns = self._cuda_prediction(inputs)
+                else:
+                    logits, returns = self.network(**inputs)
+            else:
+                logits, returns = self.network(**inputs)
             # 温度校准只在推理端生效；在线训练仍以未缩放logits计算损失。
-            return (
-                torch.sigmoid(logits / self.temperature).cpu().numpy(),
-                returns.cpu().numpy() * self.return_scale,
-            )
+            # Transfer both heads together rather than synchronizing twice per bar.
+            heads = torch.stack((torch.sigmoid(logits / self.temperature), returns)).cpu().numpy()
+            return heads[0], heads[1] * self.return_scale
 
     def eval_logits(self, batch):
         self.network.eval()
@@ -200,15 +243,24 @@ class SequenceEstimator:
         return float(probability[0]), float(returns[0])
 
     def fit_batch(self, batch, labels, returns, optimizer):
-        self.network.train()
-        optimizer.zero_grad(set_to_none=True)
-        logits, predicted = self.network(**self.prepare(batch))
+        prepared = self.prepare(batch)
+        labels, target = self.prepare_targets(labels, returns)
+        self.fit_prepared(prepared, labels, target, optimizer)
+
+    def prepare_targets(self, labels, returns):
         labels = torch.as_tensor(labels, dtype=torch.float32, device=self.device)
         target = torch.as_tensor(
             np.clip(np.asarray(returns) / self.return_scale, -10, 10),
             dtype=torch.float32,
             device=self.device,
         )
+        return labels, target
+
+    def fit_prepared(self, batch, labels, target, optimizer):
+        if not self.network.training:
+            self.network.train()
+        optimizer.zero_grad(set_to_none=True)
+        logits, predicted = self.network(**batch)
         loss = F.binary_cross_entropy_with_logits(logits, labels) + F.huber_loss(
             predicted, target, delta=1.0 if self.config.return_normalization else 0.1
         )
@@ -283,16 +335,21 @@ class SequenceModel(TimeSeriesModel):
 
 
 def training_sequences(frame, config):
-    frame = normalize_bars(frame).sort_values(["symbol", "timestamp"])
+    frame = normalize_bars(frame).sort_values(["symbol", "timestamp"]).reset_index(drop=True)
+    # The same causal rolling background as streaming HistoricalContext, computed
+    # once in pandas instead of copying up to 7,800 returns for every training bar.
+    background = _long_rows(frame)
     samples, info = [], []
     stride = max(1, int(np.ceil(len(frame) / MAX_SEQUENCE_SAMPLES)))
     observed = 0
     for symbol, group in frame.groupby("symbol", sort=True):
-        memory, sequence = HistoricalContext(), SequenceHistory(config.k)
+        sequence = SequenceHistory(config.k)
         pending = deque()
         last = None
         segment = 0
-        for bar in group.to_dict("records"):
+        for bar, context in zip(
+            group.to_dict("records"), background.loc[group.index].to_numpy(), strict=True
+        ):
             ts = bar["timestamp"]
             if (
                 last is None
@@ -318,7 +375,6 @@ def training_sequences(frame, config):
                         label=int(returns > config.min_return_bps),
                     )
                 )
-            memory.observe(bar, ts)
             sequence.observe(bar, ts)
             observed += 1
             if len(sequence.short) == config.k and observed % stride == 0:
@@ -328,7 +384,7 @@ def training_sequences(frame, config):
                         segment=segment,
                         due=ts + pd.Timedelta(minutes=config.horizon),
                         close=bar["close"],
-                        sample=sequence.snapshot(memory.features(), np.zeros((1, 6))),
+                        sample=sequence.snapshot(context, np.zeros((1, 6))),
                     )
                 )
             last = ts
@@ -364,15 +420,33 @@ def train_sequence_model(frame, config, progress=None):
     )
 
     def fit(indices, stage):
+        # Reuse normalized device tensors across epochs, bounded by both a user cap
+        # and available VRAM. Build afresh for the feedback stage after context changes.
+        cache = None
+        if estimator.device == "cuda" and config.max_iter > 1:
+            budget = max(0, int(os.environ.get("QUANT_TRAIN_CACHE_MIB", "256"))) * 2**20
+            budget = min(budget, torch.cuda.mem_get_info()[0] // 5)
+            required = len(indices) * (
+                sum(v[0].nbytes for v in values.values()) + 8
+            )
+            if required <= budget:
+                cache = []
+                for start in range(0, len(indices), 128):
+                    ids = indices[start : start + 128]
+                    cache.append((
+                        estimator.prepare({k: v[ids] for k, v in values.items()}),
+                        *estimator.prepare_targets(labels[ids], returns[ids]),
+                    ))
         for epoch in range(config.max_iter):
             for start in range(0, len(indices), 128):
                 ids = indices[start : start + 128]
-                estimator.fit_batch(
-                    {k: v[ids] for k, v in values.items()},
-                    labels[ids],
-                    returns[ids],
-                    offline_optimizer,
-                )
+                if cache is None:
+                    estimator.fit_batch(
+                        {k: v[ids] for k, v in values.items()},
+                        labels[ids], returns[ids], offline_optimizer,
+                    )
+                else:
+                    estimator.fit_prepared(*cache[start // 128], offline_optimizer)
                 if progress:
                     progress(
                         stage,
@@ -392,13 +466,15 @@ def train_sequence_model(frame, config, progress=None):
             {k: v[ids] for k, v in values.items()}
         )
     pending, latest, last_segment = {}, {}, {}
+    # Avoid constructing pandas Series twice per sample in this causal CPU loop.
+    rows = list(info.itertuples(index=False))
     for i in feedback_ids:
-        row = info.iloc[i]
+        row = rows[i]
         queue = pending.setdefault(row.symbol, deque())
         if last_segment.get(row.symbol) != row.segment:
             queue.clear()
             latest[row.symbol] = np.zeros((1, 6))
-        while queue and info.iloc[queue[0]].target_timestamp <= row.timestamp:
+        while queue and rows[queue[0]].target_timestamp <= row.timestamp:
             old = queue.popleft()
             latest[row.symbol] = feedback_features(
                 probabilities[old], predictions[old], labels[old], returns[old]

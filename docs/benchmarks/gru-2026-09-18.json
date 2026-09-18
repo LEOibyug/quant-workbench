@@ -1,0 +1,239 @@
+{
+  "baseline_commit": "5d0fd2c",
+  "date": "2026-09-18",
+  "notes": "Synthetic data; idle GPU 7, shared host CPU; warmup excluded, three repeats per variant. Training includes features, teacher feedback and calibration; online includes causal adaptation. No real research results used.",
+  "small": {
+    "before": {
+      "synthetic": true,
+      "bars": 1950,
+      "symbols": 1,
+      "device": "cuda",
+      "gpu": "NVIDIA GeForce RTX 4090",
+      "torch": "2.6.0+cu124",
+      "config": {
+        "enabled": true,
+        "k": 30,
+        "horizon": 5,
+        "architecture": "gru",
+        "decision_mode": "adaptive",
+        "return_normalization": true,
+        "neural_learning_rate": 0.0003,
+        "neural_online_learning_rate": 3e-05,
+        "online_batch_size": 16,
+        "replay_size": 256,
+        "rbf_components": 64,
+        "probability_threshold": 0.55,
+        "min_training_samples": 200,
+        "max_iter": 5,
+        "min_return_bps": 0,
+        "online_learning_rate": 0.001,
+        "adapt": true,
+        "cost_aware": false,
+        "cost_multiplier": 1.5,
+        "min_edge_bps": 1
+      },
+      "cuda_graphs": "0",
+      "train_cache_mib": "0",
+      "trials": [
+        {
+          "training_s": 1.430832251906395,
+          "online_s": 4.5427285097539425,
+          "online_bars_per_s": 429.2574376419475,
+          "predictions": 1805,
+          "updates": 111
+        },
+        {
+          "training_s": 1.5972391217947006,
+          "online_s": 4.595389522612095,
+          "online_bars_per_s": 424.3383483390953,
+          "predictions": 1805,
+          "updates": 111
+        },
+        {
+          "training_s": 1.3927874155342579,
+          "online_s": 4.673552330583334,
+          "online_bars_per_s": 417.2415032649498,
+          "predictions": 1805,
+          "updates": 111
+        }
+      ],
+      "median_training_s": 1.430832251906395,
+      "median_online_s": 4.595389522612095
+    },
+    "after": {
+      "synthetic": true,
+      "bars": 1950,
+      "symbols": 1,
+      "device": "cuda",
+      "gpu": "NVIDIA GeForce RTX 4090",
+      "torch": "2.6.0+cu124",
+      "config": {
+        "enabled": true,
+        "k": 30,
+        "horizon": 5,
+        "architecture": "gru",
+        "decision_mode": "adaptive",
+        "return_normalization": true,
+        "neural_learning_rate": 0.0003,
+        "neural_online_learning_rate": 3e-05,
+        "online_batch_size": 16,
+        "replay_size": 256,
+        "rbf_components": 64,
+        "probability_threshold": 0.55,
+        "min_training_samples": 200,
+        "max_iter": 5,
+        "min_return_bps": 0,
+        "online_learning_rate": 0.001,
+        "adapt": true,
+        "cost_aware": false,
+        "cost_multiplier": 1.5,
+        "min_edge_bps": 1
+      },
+      "cuda_graphs": "1",
+      "train_cache_mib": "256",
+      "trials": [
+        {
+          "training_s": 1.7098501957952976,
+          "online_s": 2.6547490172088146,
+          "online_bars_per_s": 734.5327137742825,
+          "predictions": 1805,
+          "updates": 111
+        },
+        {
+          "training_s": 1.0284326151013374,
+          "online_s": 3.1049029268324375,
+          "online_bars_per_s": 628.0389583674852,
+          "predictions": 1805,
+          "updates": 111
+        },
+        {
+          "training_s": 1.4871771559119225,
+          "online_s": 3.018279369920492,
+          "online_bars_per_s": 646.0634557003804,
+          "predictions": 1805,
+          "updates": 111
+        }
+      ],
+      "median_training_s": 1.4871771559119225,
+      "median_online_s": 3.018279369920492
+    }
+  },
+  "medium": {
+    "before": {
+      "synthetic": true,
+      "bars": 7800,
+      "online_bars": 1950,
+      "symbols": 1,
+      "device": "cuda",
+      "gpu": "NVIDIA GeForce RTX 4090",
+      "torch": "2.6.0+cu124",
+      "config": {
+        "enabled": true,
+        "k": 30,
+        "horizon": 5,
+        "architecture": "gru",
+        "decision_mode": "adaptive",
+        "return_normalization": true,
+        "neural_learning_rate": 0.0003,
+        "neural_online_learning_rate": 3e-05,
+        "online_batch_size": 16,
+        "replay_size": 256,
+        "rbf_components": 64,
+        "probability_threshold": 0.55,
+        "min_training_samples": 200,
+        "max_iter": 5,
+        "min_return_bps": 0,
+        "online_learning_rate": 0.001,
+        "adapt": true,
+        "cost_aware": false,
+        "cost_multiplier": 1.5,
+        "min_edge_bps": 1
+      },
+      "cuda_graphs": "0",
+      "train_cache_mib": "0",
+      "trials": [
+        {
+          "training_s": 8.21024688333273,
+          "online_s": 4.841237887740135,
+          "online_bars_per_s": 402.78954375246576,
+          "predictions": 1805,
+          "updates": 111
+        },
+        {
+          "training_s": 6.746966641396284,
+          "online_s": 4.566134221851826,
+          "online_bars_per_s": 427.0570914599976,
+          "predictions": 1805,
+          "updates": 111
+        },
+        {
+          "training_s": 6.441361952573061,
+          "online_s": 4.232462625950575,
+          "online_bars_per_s": 460.72468261005537,
+          "predictions": 1805,
+          "updates": 111
+        }
+      ],
+      "median_training_s": 6.746966641396284,
+      "median_online_s": 4.566134221851826
+    },
+    "after": {
+      "synthetic": true,
+      "bars": 7800,
+      "online_bars": 1950,
+      "symbols": 1,
+      "device": "cuda",
+      "gpu": "NVIDIA GeForce RTX 4090",
+      "torch": "2.6.0+cu124",
+      "config": {
+        "enabled": true,
+        "k": 30,
+        "horizon": 5,
+        "architecture": "gru",
+        "decision_mode": "adaptive",
+        "return_normalization": true,
+        "neural_learning_rate": 0.0003,
+        "neural_online_learning_rate": 3e-05,
+        "online_batch_size": 16,
+        "replay_size": 256,
+        "rbf_components": 64,
+        "probability_threshold": 0.55,
+        "min_training_samples": 200,
+        "max_iter": 5,
+        "min_return_bps": 0,
+        "online_learning_rate": 0.001,
+        "adapt": true,
+        "cost_aware": false,
+        "cost_multiplier": 1.5,
+        "min_edge_bps": 1
+      },
+      "cuda_graphs": "1",
+      "train_cache_mib": "256",
+      "trials": [
+        {
+          "training_s": 5.817299246788025,
+          "online_s": 2.6684094332158566,
+          "online_bars_per_s": 730.7724128564262,
+          "predictions": 1805,
+          "updates": 111
+        },
+        {
+          "training_s": 5.007230918854475,
+          "online_s": 2.735307700932026,
+          "online_bars_per_s": 712.8996855949914,
+          "predictions": 1805,
+          "updates": 111
+        },
+        {
+          "training_s": 3.6394468806684017,
+          "online_s": 2.984206635504961,
+          "online_bars_per_s": 653.4400053936072,
+          "predictions": 1805,
+          "updates": 111
+        }
+      ],
+      "median_training_s": 5.007230918854475,
+      "median_online_s": 2.735307700932026
+    }
+  }
+}
