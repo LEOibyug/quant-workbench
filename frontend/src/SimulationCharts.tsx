@@ -1,3 +1,4 @@
+import type { PortfolioPoint, PortfolioTrade } from "./PortfolioCharts";
 import { useEffect, useMemo, useState } from "react";
 import { DownloadButton } from "./ProgressNotice";
 import type { SimulationJob } from "./SimulationPanel";
@@ -40,6 +41,9 @@ interface Fill {
   reason: string;
 }
 export interface SimulationData {
+  portfolio_enabled?: boolean;
+  portfolio_curve?: PortfolioPoint[];
+  portfolio_trades?: PortfolioTrade[];
   market_curve: MarketPoint[];
   trades: Fill[];
   metrics?: Record<string, number | null>;
@@ -307,14 +311,7 @@ function LineChart({
                   stroke="white"
                   strokeWidth="1.5"
                 />
-                <text
-                  className="trade-label"
-                  x={px}
-                  y={py + (buy ? 16 : -16) + 4}
-                  textAnchor="middle"
-                >
-                  {buy ? "买" : "卖"}
-                </text>
+
               </g>
             );
           })}
@@ -342,7 +339,7 @@ function LineChart({
       </small>
       {trades.length > 0 && (
         <p className="muted">
-          绿色「买」/红色「卖」为买卖点，虚线连接同一持仓的买入与最后一次卖出（绿盈红亏）·
+          绿色圆点为买入、红色圆点为卖出，虚线连接同一持仓的买入与最后一次卖出（绿盈红亏）·
           点击标记查看成交与盈亏
           {trades.length > 400 ? "（图中显示最近 400 次成交）" : ""}
         </p>

@@ -27,7 +27,7 @@ interface Deployment {
   };
   model_version?: string;
   model_valid_from?: string | null;
-  strategy_config: Record<string, string | number>;
+  strategy_config: { initial_cash: number; allocation?: { enabled: boolean }; [key: string]: unknown };
 }
 export function Workspace() {
   const [datasets, setDatasets] = useState<Dataset[]>([]);
@@ -152,6 +152,7 @@ export function Workspace() {
             symbols={selected.symbols}
             cash={Number(selected.strategy_config.initial_cash)}
             validFrom={selected.model_valid_from}
+            portfolio={selected.strategy_config.allocation?.enabled}
           />
           <section className="card">
             <h2>时序模型</h2>

@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { ExperimentRunner } from "./ExperimentRunner";
+import { AllocationControls, readAllocation } from "./AllocationControls";
 import { PositionPanel } from "./PositionPanel";
 import { api, post } from "./api";
 import {
@@ -152,6 +153,7 @@ export function Research() {
           validation_end: dates[2],
           end: dates[3],
           config: {
+            allocation: readAllocation(f),
             strategy: f.get("strategy"),
             fast: n("fast"),
             slow: n("slow"),
@@ -764,6 +766,7 @@ export function Research() {
               </div>
             </details>
           </section>
+          <section className="card"><AllocationControls key={selected} symbols={symbols} /></section>
           <section className="card" id="model">
             <div className="section-heading">
               <h2>03 / 模型介入与执行</h2>

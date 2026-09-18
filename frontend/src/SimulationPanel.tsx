@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import { PortfolioCharts, type PortfolioTrade } from "./PortfolioCharts";
 import { ProgressNotice } from "./ProgressNotice";
 import { api, post } from "./api";
 import { phaseNames, type Phase } from "./types";
@@ -7,6 +8,7 @@ import { SimulationCharts, type SimulationData } from "./SimulationCharts";
 export interface SimulationJob {
   id: string;
   symbol: string;
+  symbols?: string[];
   start: string;
   end: string;
   initial_cash: number;
@@ -30,6 +32,7 @@ interface Props {
   bounds?: Record<Phase, [string, string]>;
   validated?: boolean;
   validFrom?: string | null;
+  portfolio?: boolean;
 }
 export function SimulationPanel({
   scope,
@@ -39,7 +42,9 @@ export function SimulationPanel({
   bounds,
   validated,
   validFrom,
+  portfolio = false,
 }: Props) {
+  const [selectedSymbols, setSelectedSymbols] = useState(symbols);
   const [symbol, setSymbol] = useState(symbols[0] || "");
   const [phase, setPhase] = useState<Phase>("validation");
   const [start, setStart] = useState(
@@ -126,7 +131,8 @@ export function SimulationPanel({
     try {
       const next = await post<SimulationJob>(base, {
         source_id: sourceId,
-        symbol,
+        symbol: portfolio ? selectedSymbols[0] : symbol,
+        ...(portfolio ? { symbols: selectedSymbols } : {}),
         start,
         end,
         initial_cash: capital,
@@ -173,19 +179,22 @@ export function SimulationPanel({
     <section className="simulation-panel">
       <div className="card">
         <div className="eyebrow">MINUTE BY MINUTE</div>
-        <h2>单股交易模拟</h2>
+        <h2>{portfolio ? "日内共享资金组合模拟" : "单股交易模拟"}</h2>
         <p className="muted">
-          选择股票与日期，计算时持续更新曲线；完成后可暂停、调速或拖动回放。历史分钟行情模拟，非实时交易。
+          {portfolio ? "选择多只股票与日期，查看组合计算进度；完成后可暂停、调速或拖动详细回放。" : "选择股票与日期，计算时持续更新曲线；完成后可暂停、调速或拖动回放。"}历史分钟行情模拟，非实时交易。
         </p>
         <div className="form-grid">
-          <label>
+          {portfolio ? <fieldset><legend>模拟股票</legend><div className="checks">
+            {symbols.map((s) => <label key={s}><input type="checkbox" checked={selectedSymbols.includes(s)}
+              onChange={(e) => setSelectedSymbols((prev) => e.target.checked ? [...prev, s] : prev.filter((v) => v !== s))} />{s}</label>)}
+          </div></fieldset> : <label>
             股票
             <select value={symbol} onChange={(e) => setSymbol(e.target.value)}>
               {symbols.map((s) => (
                 <option key={s}>{s}</option>
               ))}
             </select>
-          </label>
+          </label>}
           {bounds && (
             <label>
               数据阶段
@@ -274,7 +283,7 @@ export function SimulationPanel({
         <button
           className="primary"
           disabled={
-            pending ||
+            (portfolio && !selectedSymbols.length) || pending ||
             !!running ||
             !symbol ||
             (phase === "test" && !!bounds && !validated)
@@ -298,7 +307,7 @@ export function SimulationPanel({
             <option value="">选择一次模拟</option>
             {jobs.map((j) => (
               <option value={j.id} key={j.id}>
-                {j.symbol} · {j.start} — {j.end} · {j.status} ·{" "}
+                {(j.symbols || [j.symbol]).join(" / ")} · {j.start} — {j.end} · {j.status} ·{" "}
                 {j.id.slice(0, 6)}
               </option>
             ))}
@@ -314,7 +323,7 @@ export function SimulationPanel({
         <div className="card">
           <div className="simulation-status">
             <strong>
-              {job.symbol} · {job.stage}
+              {(job.symbols || [job.symbol]).join(" / ")} · {job.stage}
             </strong>
             <span>
               {job.completed_bars.toLocaleString()} /{" "}
@@ -361,7 +370,13 @@ export function SimulationPanel({
           </details>
         </div>
       )}
-      {job && data && data.market_curve.length > 0 && (
+      {job && data?.portfolio_curve?.length ? <PortfolioCharts key={job.id}
+        curve={data.portfolio_curve} trades={data.trades as unknown as PortfolioTrade[]}
+        initialCash={job.initial_cash} allocationEnabled
+        curveExport={`/api${base}/${job.id}/export/portfolio_curve`}
+        tradesExport={`/api${base}/${job.id}/export/trades`}
+        decisionsExport={`/api${base}/${job.id}/export/allocation_decisions`} /> : null}
+      {job && data && !data.portfolio_curve?.length && data.market_curve.length > 0 && (
         <SimulationCharts
           key={job.id}
           data={data}

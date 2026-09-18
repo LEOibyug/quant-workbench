@@ -31,6 +31,12 @@ def simulate(
     record_market=False,
     progress=None,
 ) -> dict:
+    if config.allocation.enabled:
+        from quant_workbench.portfolio_engine import simulate_portfolio
+
+        return simulate_portfolio(
+            frame, config, start, end, strategies, model_filter, record_market, progress,
+        )
     cutoff = pd.Timestamp(start, tz="America/New_York").tz_convert("UTC")
     past = frame[frame.timestamp < cutoff].sort_values(["symbol", "timestamp"])
     if model_filter is not None and hasattr(model_filter, "seed_history"):

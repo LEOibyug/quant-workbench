@@ -175,3 +175,19 @@ def export(identifier: str):
         media_type="text/csv",
         headers={"Content-Disposition": f'attachment; filename="position-{identifier}.csv"'},
     )
+
+
+@router.get("/{identifier}/export/{kind}")
+def export_details(identifier: str, kind: Literal["curve", "allocations"]):
+    from quant_workbench.portfolio_export import portfolio_rows
+
+    job = get_operation(Repository(), identifier)
+    if job["kind"] not in {"position", "position_simulation"} or job["status"] != "completed":
+        raise ValueError("请等待长期任务完成再导出")
+    result = job["result"]
+    rows = (list(portfolio_rows(result["curve"])) if kind == "curve" else
+            result.get("allocation_decisions", []))
+    return Response(
+        pd.DataFrame(rows).to_csv(index=False).encode("utf-8-sig"), media_type="text/csv",
+        headers={"Content-Disposition": f'attachment; filename="position-{identifier}-{kind}.csv"'},
+    )

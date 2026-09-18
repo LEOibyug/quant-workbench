@@ -738,3 +738,10 @@ pre {
 }
 
 [hidden] { display: none !important; }
+
+.allocation-controls { margin-top: 1rem; }
+.portfolio-review { margin-top: 1.5rem; }
+.portfolio-chart { padding: 1rem 0; min-width: 0; }
+.portfolio-chart svg, .portfolio-review > svg { width: 100%; display: block; }
+.portfolio-review svg text { font-size: 11px; fill: var(--muted); }
+.portfolio-review .trade-marker { cursor: pointer; }

@@ -1,4 +1,6 @@
 import { useEffect, useState } from "react";
+import { PortfolioCharts, type PortfolioPoint } from "./PortfolioCharts";
+import { AllocationControls, readAllocation, type AllocationConfig } from "./AllocationControls";
 import { api, post } from "./api";
 import { DownloadButton, observeOperation, ProgressNotice, type ProgressState } from "./ProgressNotice";
 import { strategyNames, type Dataset } from "./types";
@@ -9,10 +11,11 @@ interface PositionResult {
   engine_version?: string;
   start: string;
   end: string;
-  config: { model: string; lookback: number; horizon: number; rebalance_days: number; tranche_weight: number };
+  config: { model: string; lookback: number; horizon: number; rebalance_days: number; tranche_weight: number; costs?: { initial_cash: number } };
   metrics: { return_pct: number; max_drawdown_pct: number; trade_count: number; halted: boolean };
-  curve: { date: string; equity: number; gross_exposure: number }[];
-  trades: { date: string; symbol: string; side: string; quantity: number; price: number; position_after: number; reason: string }[];
+  portfolio_enabled?: boolean;
+  curve: PortfolioPoint[];
+  trades: { date: string; symbol: string; side: string; quantity: number; price: number; fee: number; impact_cost?: number; realized_pnl?: number | null; position_after: number; reason: string }[];
   positions: Record<string, number>;
   assumptions: string[];
 }
@@ -24,6 +27,7 @@ export interface PositionDeployment {
   position_config: {
     model: string; lookback: number; horizon: number; rebalance_days: number;
     confidence: number; tranche_weight: number; costs: { initial_cash: number };
+    allocation?: AllocationConfig;
   };
 }
 export function PositionPanel({ datasets, modelEnabled = true, deployment }: {
@@ -83,6 +87,7 @@ export function PositionPanel({ datasets, modelEnabled = true, deployment }: {
         dataset_id: dataset!.id, symbols: dataset!.symbols,
         start: f.get("start"), end: f.get("end"),
         config: {
+          allocation: readAllocation(f),
           model: modelEnabled ? f.get("model") : "equal_weight", lookback: n("lookback"), horizon: n("horizon"),
           rebalance_days: n("rebalance"), confidence: n("confidence"),
           tranche_weight: n("tranche") / 100,
@@ -158,6 +163,8 @@ export function PositionPanel({ datasets, modelEnabled = true, deployment }: {
         <label>不确定性扣减倍数<input name="confidence" type="number" min={0} max={3} step={0.1} defaultValue={config?.confidence ?? 0.5} required /></label>
         <label>每日单股最大调整 资金%<input name="tranche" type="number" min={0.1} max={20} step={0.1} defaultValue={config ? config.tranche_weight * 100 : 5} required /></label>
       </div>
+      <AllocationControls key={dataset?.id || deployment?.id} symbols={deployment?.symbols || dataset?.symbols || []}
+        initial={config?.allocation} long />
       </fieldset>
       <p className="muted">{(deployment ? selectedSymbols : dataset!.symbols).join(" / ")}。默认单股目标上限20%、止损10%、组合回撤10%后熔断。
         价差2bps、滑点2bps，佣金每股$0.005、每次最低$1。模型历史不足时持币；已有数据已参与研究，不能视为新的样本外验证。</p>
@@ -165,7 +172,7 @@ export function PositionPanel({ datasets, modelEnabled = true, deployment }: {
     </form>}
     {result && <>
       <p className="muted">本次模拟股票：{Object.keys(result.positions).join(" / ")} · 数据来源：{result.source}</p>
-      {result.engine_version === "daily-position-v3-daily" && <p className="notice">日线成交量估算模式：使用前日平均分钟量限制成交，不代表真实开盘可成交量。</p>}
+      {result.engine_version?.startsWith("daily-position-v3-daily") && <p className="notice">日线成交量估算模式：使用前日平均分钟量限制成交，不代表真实开盘可成交量。</p>}
       {result.synthetic && <p className="notice">本次使用合成行情，仅作功能演示。</p>}
       {!deployment && <div className="section-heading">
         <p>已完成长期验证，可发布本次冻结参数到展示页；发布不代表已证明盈利。</p>
@@ -182,16 +189,19 @@ export function PositionPanel({ datasets, modelEnabled = true, deployment }: {
       <p className="muted">本次结果：{strategyNames[result.config.model] || result.config.model} · {result.start} — {result.end}（不含）· 窗口 {result.config.lookback} 日 · 预测 {result.config.horizon} 日 · 每 {result.config.rebalance_days} 日调仓 · 每批资金 {(result.config.tranche_weight * 100).toFixed(1)}%</p>
       <p>净值收益 <strong>{result.metrics.return_pct.toFixed(2)}%</strong> · 日终最大回撤 {result.metrics.max_drawdown_pct.toFixed(2)}% · {result.metrics.trade_count} 次分批成交
         {result.metrics.halted && " · 已触发风险熔断"}</p>
+      {result.curve[0]?.assets ? <PortfolioCharts key={jobId} curve={result.curve} trades={result.trades}
+        initialCash={result.config.costs?.initial_cash || result.curve[0].equity}
+        allocationEnabled={result.portfolio_enabled}
+        curveExport={`/api/position/${jobId}/export/curve`}
+        tradesExport={`/api/position/${jobId}/export`}
+        decisionsExport={`/api/position/${jobId}/export/allocations`} /> : <>
+      <p className="notice">此历史记录未保存逐股复盘数据，重新运行可生成详细曲线。</p>
       <svg viewBox="0 0 800 180" role="img" aria-label="长期账户日终净值曲线" style={{ width: "100%", maxHeight: 240 }}>
         <polyline fill="none" stroke="var(--accent)" strokeWidth="2" points={result.curve.map((p, i) => `${10 + i / Math.max(result.curve.length - 1, 1) * 780},${170 - (p.equity - min) / Math.max(max - min, 1) * 160}`).join(" ")} />
-        <text x="10" y="15" fontSize="12">${max.toFixed(0)}</text>
-        <text x="10" y="178" fontSize="12">${min.toFixed(0)}</text>
-      </svg>
+      </svg></>}
       <p>期末持仓：{Object.entries(result.positions).map(([s, q]) => `${s} ${q}股`).join(" / ")}。净值包含未平仓头寸。</p>
       <DownloadButton href={`/api/position/${jobId}/export`}>导出全部分批成交 CSV</DownloadButton>
-      <details><summary>查看最近100次成交及假设</summary>
-        <div className="table-wrap"><table><thead><tr><th>日期</th><th>股票</th><th>方向</th><th>股数</th><th>价格</th><th>剩余持仓</th></tr></thead>
-          <tbody>{result.trades.slice(-100).map((t, i) => <tr key={i}><td>{t.date}</td><td>{t.symbol}</td><td>{t.side === "buy" ? "买入" : "卖出"}</td><td>{t.quantity}</td><td>{t.price.toFixed(2)}</td><td>{t.position_after}</td></tr>)}</tbody></table></div>
+      <details><summary>完整执行假设</summary>
         {result.assumptions.map((a) => <p className="muted" key={a}>{a}</p>)}
       </details>
     </>}

@@ -139,7 +139,7 @@ def publish_position(repo: Repository, operation_id: str) -> dict:
             "synthetic": job["result"]["synthetic"],
             "model": {"enabled": config["model"] != "equal_weight",
                       "architecture": config["model"], "horizon": config["horizon"]},
-            "engine_version": "daily-position-v2",
+            "engine_version": job["result"].get("engine_version", "daily-position-v2"),
         }
         body["version"] = hashlib.sha256(
             json.dumps(body, sort_keys=True).encode(),

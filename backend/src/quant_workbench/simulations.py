@@ -22,6 +22,7 @@ class SimulationInput(BaseModel):
     model_config = ConfigDict(extra="forbid", allow_inf_nan=False)
     source_id: str = Field(pattern=r"^[a-f0-9]{32}$")
     symbol: str = Field(pattern=r"^[A-Z][A-Z0-9.\-]{0,14}$")
+    symbols: list[str] | None = Field(default=None, min_length=1, max_length=10)
     start: date
     end: date
     initial_cash: float = Field(default=100_000, ge=100, le=100_000_000)
@@ -86,8 +87,12 @@ def begin_simulation(repo: Repository, scope: Scope, request: SimulationInput):
     source = repo.get("experiments" if scope == "research" else "deployments", request.source_id)
     if source.get("horizon_type") == "long":
         raise ValueError("长期版本请使用长期组合模拟入口")
-    if request.symbol not in source["symbols"]:
+    symbols = sorted(set(request.symbols or [request.symbol]))
+    if not set(symbols).issubset(source["symbols"]):
         raise ValueError("股票不在此策略/模型的支持范围内")
+    frozen_config = source.get("strategy_config", source.get("config", {}))
+    if len(symbols) > 1 and not frozen_config.get("allocation", {}).get("enabled"):
+        raise ValueError("此版本未启用组合资金分配，请先在开发页配置并重新发布")
     start, end = str(request.start), str(request.end)
     warnings = []
     if source["model"].get("decision_mode") == "risk_scaled":
@@ -124,6 +129,7 @@ def begin_simulation(repo: Repository, scope: Scope, request: SimulationInput):
     job = {
         **request.model_dump(mode="json"),
         "id": uuid.uuid4().hex,
+        "symbols": symbols,
         "scope": scope,
         "status": "queued",
         "stage": "等待计算",
@@ -133,7 +139,9 @@ def begin_simulation(repo: Repository, scope: Scope, request: SimulationInput):
         "error": None,
         "synthetic": synthetic,
         "warnings": warnings,
-        "engine_version": ENGINE_VERSION,
+        "engine_version": "minute-portfolio-v1" if frozen_config.get(
+            "allocation", {},
+        ).get("enabled") else ENGINE_VERSION,
         "source_version": source.get("version", source.get("config_sha256")),
         "config": {
             **source.get("strategy_config", source.get("config", {})),
@@ -146,7 +154,7 @@ def begin_simulation(repo: Repository, scope: Scope, request: SimulationInput):
         for row in db.execute("SELECT body FROM simulations"):
             if json.loads(row[0])["status"] in {"queued", "running"}:
                 raise ValueError("已有单股模拟正在运行，请完成后再提交")
-        if scope == "research" and has_prior_exposure(db, [request.symbol], start, end):
+        if scope == "research" and has_prior_exposure(db, symbols, start, end):
             job["warnings"].append("此股票区间与已暴露的测试/展示模拟重叠，不可再视为未见数据")
             job["prior_test_exposure"] = True
         db.execute(
@@ -171,6 +179,7 @@ def execute_simulation(repo: Repository, scope: Scope, identifier: str):
             source = repo.get(
                 "experiments" if scope == "research" else "deployments", job["source_id"]
             )
+            selected_symbols = job.get("symbols") or [job["symbol"]]
             if scope == "research":
                 frame = repo.load_dataset(source["dataset_id"])
                 job["data_source"] = source["source"]
@@ -178,7 +187,8 @@ def execute_simulation(repo: Repository, scope: Scope, identifier: str):
                 # Independent provider download/cache; never read a research dataset/result.
                 cache = Repository(repo.root / "workspace")
                 since = date.fromisoformat(job["start"]) - timedelta(days=45)
-                cache_key = f"{job['provider']}:{job['feed']}:{job['symbol']}:{since}:{job['end']}"
+                cache_key = (f"{job['provider']}:{job['feed']}:{','.join(selected_symbols)}:"
+                             f"{since}:{job['end']}")
                 cached = next(
                     (d for d in cache.list_records("datasets") if d["name"] == cache_key), None
                 )
@@ -192,17 +202,19 @@ def execute_simulation(repo: Repository, scope: Scope, identifier: str):
                             ProviderInput(
                                 provider=job["provider"],
                                 feed=job["feed"],
-                                symbols=[job["symbol"]],
+                                symbols=selected_symbols,
                                 start=since,
                                 end=job["end"],
                             ),
                             progress=fetching,
                         )
                     )
-                    frame = normalize_bars(frame[frame.symbol == job["symbol"]])
+                    frame = normalize_bars(frame[frame.symbol.isin(selected_symbols)])
                     cache.save_dataset(frame, cache_key, job["provider"], job["synthetic"])
                 job["data_source"] = f"{job['provider']}/{job['feed']}"
-            frame = frame[frame.symbol == job["symbol"]]
+            frame = frame[frame.symbol.isin(selected_symbols)]
+            if not set(selected_symbols).issubset(set(frame.symbol)):
+                raise ValueError("行情未包含所选全部股票")
             model = (
                 repo.load_model(source["id"], source["model_artifact"])
                 if source["model"]["enabled"]
@@ -226,7 +238,7 @@ def execute_simulation(repo: Repository, scope: Scope, identifier: str):
                 StrategyConfig(**job["config"]),
                 job["start"],
                 job["end"],
-                {job["symbol"]: source["strategies"][job["symbol"]]},
+                {s: source["strategies"][s] for s in selected_symbols},
                 model,
                 record_market=True,
                 progress=progress,

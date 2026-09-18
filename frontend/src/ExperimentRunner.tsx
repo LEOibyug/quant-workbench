@@ -295,6 +295,7 @@ export function ExperimentRunner({ selectedId }: { selectedId?: string }) {
             sourceId={experiment.id}
             symbols={experiment.symbols}
             cash={experiment.config.initial_cash}
+            portfolio={experiment.config.allocation?.enabled}
             validated={experiment.runs.some(
               (r) => r.phase === "validation" && r.status === "completed",
             )}

@@ -592,6 +592,7 @@ dependencies = [
     { name = "pyarrow" },
     { name = "python-multipart" },
     { name = "scikit-learn" },
+    { name = "scipy" },
     { name = "uvicorn" },
 ]
 
@@ -619,6 +620,7 @@ requires-dist = [
     { name = "pyarrow", specifier = ">=19,<24" },
     { name = "python-multipart", specifier = ">=0.0.20,<1" },
     { name = "scikit-learn", specifier = ">=1.6,<2" },
+    { name = "scipy", specifier = ">=1.15,<2" },
     { name = "torch", marker = "extra == 'neural'", specifier = ">=2.6,<3" },
     { name = "uvicorn", specifier = ">=0.34,<1" },
 ]

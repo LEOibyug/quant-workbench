@@ -1,0 +1,1717 @@
+{
+  "fresh_holdout": false,
+  "results": [
+    {
+      "horizon": "long",
+      "model": "trend",
+      "start": "2025-03-03",
+      "end": "2025-10-31",
+      "dataset_id": "68df84185f274ab78eae6cd08a0c19a8",
+      "enabled": false,
+      "cost_multiplier": 1,
+      "metrics": {
+        "return_pct": 8.925355187432093,
+        "final_equity": 108925.35518743208,
+        "max_drawdown_pct": 2.213878803478253,
+        "fees": 141.473242467935,
+        "impact_cost": 134.17457010000004,
+        "trade_count": 130,
+        "halted": false,
+        "turnover": 4.2429076512177994,
+        "realized_pnl": 8117.641523795701,
+        "unrealized_pnl": 807.7136636363639,
+        "trading_days": 169,
+        "daily_sharpe": 1.6660368677246908,
+        "average_gross_exposure_pct": 20.72744448905284,
+        "estimated_liquidation_return_pct": 8.92267284743209
+      },
+      "contributions": [
+        {
+          "symbol": "AAPL",
+          "net_profit": -744.4589332706935
+        },
+        {
+          "symbol": "AMD",
+          "net_profit": 3353.0847350154027
+        },
+        {
+          "symbol": "NVDA",
+          "net_profit": 3245.9807479374213
+        },
+        {
+          "symbol": "SOFI",
+          "net_profit": 3849.227585680229
+        },
+        {
+          "symbol": "TSLA",
+          "net_profit": -778.478947930289
+        }
+      ],
+      "average_cash_pct": 79.27255551094716,
+      "allocation_statuses": {}
+    },
+    {
+      "horizon": "long",
+      "model": "trend",
+      "start": "2025-03-03",
+      "end": "2025-10-31",
+      "dataset_id": "68df84185f274ab78eae6cd08a0c19a8",
+      "enabled": false,
+      "cost_multiplier": 2,
+      "metrics": {
+        "return_pct": 7.611320094357832,
+        "final_equity": 107611.32009435784,
+        "max_drawdown_pct": 2.2143550741614004,
+        "fees": 263.15917644215995,
+        "impact_cost": 245.5187292000001,
+        "trade_count": 121,
+        "halted": false,
+        "turnover": 3.9349536008146075,
+        "realized_pnl": 6805.892594357832,
+        "unrealized_pnl": 805.4275000000007,
+        "trading_days": 169,
+        "daily_sharpe": 1.510812357806129,
+        "average_gross_exposure_pct": 18.636496488855013,
+        "estimated_liquidation_return_pct": 7.605955414357846
+      },
+      "contributions": [
+        {
+          "symbol": "AAPL",
+          "net_profit": -1271.4122242273338
+        },
+        {
+          "symbol": "AMD",
+          "net_profit": 3261.288399540579
+        },
+        {
+          "symbol": "NVDA",
+          "net_profit": 3652.7919614452844
+        },
+        {
+          "symbol": "SOFI",
+          "net_profit": 2800.3598309204813
+        },
+        {
+          "symbol": "TSLA",
+          "net_profit": -831.7078733211602
+        }
+      ],
+      "average_cash_pct": 81.36350351114498,
+      "allocation_statuses": {}
+    },
+    {
+      "horizon": "long",
+      "model": "trend",
+      "start": "2025-03-03",
+      "end": "2025-10-31",
+      "dataset_id": "68df84185f274ab78eae6cd08a0c19a8",
+      "enabled": true,
+      "cost_multiplier": 1,
+      "metrics": {
+        "return_pct": 11.385673330846057,
+        "final_equity": 111385.67333084605,
+        "max_drawdown_pct": 2.810248688572281,
+        "fees": 155.39342315398508,
+        "impact_cost": 190.98324600000007,
+        "trade_count": 131,
+        "halted": false,
+        "turnover": 5.954688686458161,
+        "realized_pnl": 10666.933520846018,
+        "unrealized_pnl": 718.7398099999998,
+        "trading_days": 169,
+        "daily_sharpe": 1.617061611917432,
+        "average_gross_exposure_pct": 20.51769935040159,
+        "estimated_liquidation_return_pct": 11.38315922484605
+      },
+      "contributions": [
+        {
+          "symbol": "AAPL",
+          "net_profit": -817.7610572831918
+        },
+        {
+          "symbol": "AMD",
+          "net_profit": 880.1054414556143
+        },
+        {
+          "symbol": "NVDA",
+          "net_profit": 3460.2486045515925
+        },
+        {
+          "symbol": "SOFI",
+          "net_profit": 6446.604522183297
+        },
+        {
+          "symbol": "TSLA",
+          "net_profit": 1416.4758199387056
+        }
+      ],
+      "average_cash_pct": 79.48230064959841,
+      "allocation_statuses": {
+        "optimized": 25,
+        "cash": 9
+      }
+    },
+    {
+      "horizon": "long",
+      "model": "trend",
+      "start": "2025-03-03",
+      "end": "2025-10-31",
+      "dataset_id": "68df84185f274ab78eae6cd08a0c19a8",
+      "enabled": true,
+      "cost_multiplier": 2,
+      "metrics": {
+        "return_pct": 9.412777755894153,
+        "final_equity": 109412.77775589415,
+        "max_drawdown_pct": 3.2551052657382673,
+        "fees": 309.2570671058799,
+        "impact_cost": 377.3101770000001,
+        "trade_count": 131,
+        "halted": false,
+        "turnover": 5.967612294193929,
+        "realized_pnl": 8736.11922589412,
+        "unrealized_pnl": 676.6585300000007,
+        "trading_days": 169,
+        "daily_sharpe": 1.4164650132704406,
+        "average_gross_exposure_pct": 19.115161299433584,
+        "estimated_liquidation_return_pct": 9.40791777789416
+      },
+      "contributions": [
+        {
+          "symbol": "AAPL",
+          "net_profit": -799.9654842848777
+        },
+        {
+          "symbol": "AMD",
+          "net_profit": 227.78885920455832
+        },
+        {
+          "symbol": "NVDA",
+          "net_profit": 3387.208580472638
+        },
+        {
+          "symbol": "SOFI",
+          "net_profit": 4991.128387977565
+        },
+        {
+          "symbol": "TSLA",
+          "net_profit": 1606.6174125242414
+        }
+      ],
+      "average_cash_pct": 80.88483870056642,
+      "allocation_statuses": {
+        "optimized": 23,
+        "cash": 11
+      }
+    },
+    {
+      "horizon": "long",
+      "model": "equal_weight",
+      "start": "2025-03-03",
+      "end": "2025-10-31",
+      "dataset_id": "68df84185f274ab78eae6cd08a0c19a8",
+      "enabled": false,
+      "cost_multiplier": 1,
+      "metrics": {
+        "return_pct": -8.55373394120984,
+        "final_equity": 91446.26605879016,
+        "max_drawdown_pct": 11.659807722979231,
+        "fees": 76.29864120983999,
+        "impact_cost": 90.91529999999999,
+        "trade_count": 52,
+        "halted": true,
+        "turnover": 3.1964122228833363,
+        "realized_pnl": -8553.73394120984,
+        "unrealized_pnl": 0.0,
+        "trading_days": 169,
+        "daily_sharpe": -0.7906469165529336,
+        "average_gross_exposure_pct": 8.358716107483573,
+        "estimated_liquidation_return_pct": -8.55373394120984
+      },
+      "contributions": [
+        {
+          "symbol": "AAPL",
+          "net_profit": -1727.7425598604568
+        },
+        {
+          "symbol": "AMD",
+          "net_profit": 289.64385504904203
+        },
+        {
+          "symbol": "NVDA",
+          "net_profit": -1428.2142323967964
+        },
+        {
+          "symbol": "SOFI",
+          "net_profit": -4171.1877974278395
+        },
+        {
+          "symbol": "TSLA",
+          "net_profit": -1516.2332065737937
+        }
+      ],
+      "average_cash_pct": 91.64128389251644,
+      "allocation_statuses": {}
+    },
+    {
+      "horizon": "long",
+      "model": "equal_weight",
+      "start": "2025-03-03",
+      "end": "2025-10-31",
+      "dataset_id": "68df84185f274ab78eae6cd08a0c19a8",
+      "enabled": false,
+      "cost_multiplier": 2,
+      "metrics": {
+        "return_pct": -8.71780215675978,
+        "final_equity": 91282.19784324022,
+        "max_drawdown_pct": 11.709992880732878,
+        "fees": 152.56409675976002,
+        "impact_cost": 181.81806,
+        "trade_count": 52,
+        "halted": true,
+        "turnover": 3.1987602701964843,
+        "realized_pnl": -8717.802156759766,
+        "unrealized_pnl": 0.0,
+        "trading_days": 169,
+        "daily_sharpe": -0.8066433656327912,
+        "average_gross_exposure_pct": 8.365784088985793,
+        "estimated_liquidation_return_pct": -8.71780215675978
+      },
+      "contributions": [
+        {
+          "symbol": "AAPL",
+          "net_profit": -1765.044439841844
+        },
+        {
+          "symbol": "AMD",
+          "net_profit": 268.93807579615896
+        },
+        {
+          "symbol": "NVDA",
+          "net_profit": -1449.1381075871977
+        },
+        {
+          "symbol": "SOFI",
+          "net_profit": -4222.401914231723
+        },
+        {
+          "symbol": "TSLA",
+          "net_profit": -1550.1557708951623
+        }
+      ],
+      "average_cash_pct": 91.63421591101421,
+      "allocation_statuses": {}
+    },
+    {
+      "horizon": "long",
+      "model": "equal_weight",
+      "start": "2025-03-03",
+      "end": "2025-10-31",
+      "dataset_id": "68df84185f274ab78eae6cd08a0c19a8",
+      "enabled": true,
+      "cost_multiplier": 1,
+      "metrics": {
+        "return_pct": -10.213079075136744,
+        "final_equity": 89786.92092486325,
+        "max_drawdown_pct": 12.645303926918427,
+        "fees": 47.19191513675,
+        "impact_cost": 67.18716,
+        "trade_count": 30,
+        "halted": true,
+        "turnover": 2.3689842323123855,
+        "realized_pnl": -10213.079075136742,
+        "unrealized_pnl": 0.0,
+        "trading_days": 169,
+        "daily_sharpe": -1.0581143572504979,
+        "average_gross_exposure_pct": 9.633690473151065,
+        "estimated_liquidation_return_pct": -10.213079075136744
+      },
+      "contributions": [
+        {
+          "symbol": "AAPL",
+          "net_profit": -3773.1620518358795
+        },
+        {
+          "symbol": "AMD",
+          "net_profit": -241.35271623030349
+        },
+        {
+          "symbol": "NVDA",
+          "net_profit": 0.0
+        },
+        {
+          "symbol": "SOFI",
+          "net_profit": -2633.0208552961194
+        },
+        {
+          "symbol": "TSLA",
+          "net_profit": -3565.5434517744434
+        }
+      ],
+      "average_cash_pct": 90.36630952684894,
+      "allocation_statuses": {
+        "optimized": 5,
+        "cash": 29
+      }
+    },
+    {
+      "horizon": "long",
+      "model": "equal_weight",
+      "start": "2025-03-03",
+      "end": "2025-10-31",
+      "dataset_id": "68df84185f274ab78eae6cd08a0c19a8",
+      "enabled": true,
+      "cost_multiplier": 2,
+      "metrics": {
+        "return_pct": -10.325921289548035,
+        "final_equity": 89674.07871045197,
+        "max_drawdown_pct": 12.69146434777344,
+        "fees": 94.36123754804,
+        "impact_cost": 134.360052,
+        "trade_count": 30,
+        "halted": true,
+        "turnover": 2.3699686787047556,
+        "realized_pnl": -10325.921289548038,
+        "unrealized_pnl": 0.0,
+        "trading_days": 169,
+        "daily_sharpe": -1.0678534960256394,
+        "average_gross_exposure_pct": 9.639030690498085,
+        "estimated_liquidation_return_pct": -10.325921289548035
+      },
+      "contributions": [
+        {
+          "symbol": "AAPL",
+          "net_profit": -3803.483526543525
+        },
+        {
+          "symbol": "AMD",
+          "net_profit": -272.23482632123705
+        },
+        {
+          "symbol": "NVDA",
+          "net_profit": 0.0
+        },
+        {
+          "symbol": "SOFI",
+          "net_profit": -2665.2463859855197
+        },
+        {
+          "symbol": "TSLA",
+          "net_profit": -3584.9565506977597
+        }
+      ],
+      "average_cash_pct": 90.36096930950193,
+      "allocation_statuses": {
+        "optimized": 5,
+        "cash": 29
+      }
+    },
+    {
+      "horizon": "short",
+      "model": "sma",
+      "start": "2025-09-01",
+      "end": "2025-10-31",
+      "dataset_id": "68df84185f274ab78eae6cd08a0c19a8",
+      "enabled": false,
+      "cost_multiplier": 1,
+      "metrics": {
+        "initial_cash": 100000.0,
+        "final_equity": 68349.7164299993,
+        "net_profit": -31650.283570000698,
+        "return_pct": -31.6502835700007,
+        "max_drawdown_pct": 31.86150646657667,
+        "daily_sharpe": -22.198201110174818,
+        "fees": 8552.83602140361,
+        "impact_cost": 26278.14994859704,
+        "pnl_before_modeled_costs": 3180.702399999951,
+        "trade_count": 5404,
+        "roundtrips": 2670,
+        "win_rate_pct": 26.217228464419474,
+        "mean_trade_pnl": -11.854038790262427,
+        "trading_days": 43,
+        "intraday_benchmark_return_pct": 0.5682531032211502
+      },
+      "contributions": [
+        {
+          "symbol": "AAPL",
+          "net_profit": -6955.910451280393,
+          "strategy": "sma"
+        },
+        {
+          "symbol": "AMD",
+          "net_profit": -5014.110651272029,
+          "strategy": "sma"
+        },
+        {
+          "symbol": "NVDA",
+          "net_profit": -6551.177881484504,
+          "strategy": "sma"
+        },
+        {
+          "symbol": "SOFI",
+          "net_profit": -8317.706436118204,
+          "strategy": "sma"
+        },
+        {
+          "symbol": "TSLA",
+          "net_profit": -4811.37814984557,
+          "strategy": "sma"
+        }
+      ],
+      "average_cash_pct": null,
+      "allocation_statuses": {}
+    },
+    {
+      "horizon": "short",
+      "model": "sma",
+      "start": "2025-09-01",
+      "end": "2025-10-31",
+      "dataset_id": "68df84185f274ab78eae6cd08a0c19a8",
+      "enabled": false,
+      "cost_multiplier": 2,
+      "metrics": {
+        "initial_cash": 100000.0,
+        "final_equity": 43839.402392270626,
+        "net_profit": -56160.597607729374,
+        "return_pct": -56.16059760772938,
+        "max_drawdown_pct": 56.279551119360136,
+        "daily_sharpe": -46.70831938930028,
+        "fees": 15506.533690670263,
+        "impact_cost": 43335.46721705899,
+        "pnl_before_modeled_costs": 2681.4032999998817,
+        "trade_count": 5381,
+        "roundtrips": 2671,
+        "win_rate_pct": 19.505803070011233,
+        "mean_trade_pnl": -21.026056760662442,
+        "trading_days": 43,
+        "intraday_benchmark_return_pct": 0.5682531032211502
+      },
+      "contributions": [
+        {
+          "symbol": "AAPL",
+          "net_profit": -11728.313332229543,
+          "strategy": "sma"
+        },
+        {
+          "symbol": "AMD",
+          "net_profit": -10063.326284388133,
+          "strategy": "sma"
+        },
+        {
+          "symbol": "NVDA",
+          "net_profit": -11268.387856320354,
+          "strategy": "sma"
+        },
+        {
+          "symbol": "SOFI",
+          "net_profit": -13123.636903591774,
+          "strategy": "sma"
+        },
+        {
+          "symbol": "TSLA",
+          "net_profit": -9976.933231199571,
+          "strategy": "sma"
+        }
+      ],
+      "average_cash_pct": null,
+      "allocation_statuses": {}
+    },
+    {
+      "horizon": "short",
+      "model": "sma",
+      "start": "2025-09-01",
+      "end": "2025-10-31",
+      "dataset_id": "68df84185f274ab78eae6cd08a0c19a8",
+      "enabled": true,
+      "cost_multiplier": 1,
+      "metrics": {
+        "initial_cash": 100000.0,
+        "final_equity": 98528.33896857336,
+        "net_profit": -1471.6610314266436,
+        "return_pct": -1.4716610314266436,
+        "max_drawdown_pct": 1.5922996710414528,
+        "fees": 370.16828635680827,
+        "impact_cost": 1880.4962450697797,
+        "trade_count": 268,
+        "turnover": 63.05719509959787,
+        "trading_days": 43,
+        "pnl_before_modeled_costs": 779.0034999999443,
+        "daily_sharpe": -2.5438269775785347,
+        "win_rate_pct": 28.35820895522388,
+        "mean_trade_pnl": -10.982545010646119,
+        "intraday_benchmark_return_pct": 1.1941556907737017
+      },
+      "contributions": [
+        {
+          "symbol": "AAPL",
+          "net_profit": -427.5916234924807,
+          "strategy": "sma"
+        },
+        {
+          "symbol": "AMD",
+          "net_profit": -729.4836221055011,
+          "strategy": "sma"
+        },
+        {
+          "symbol": "NVDA",
+          "net_profit": -24.957483297202998,
+          "strategy": "sma"
+        },
+        {
+          "symbol": "SOFI",
+          "net_profit": -286.5656958578611,
+          "strategy": "sma"
+        },
+        {
+          "symbol": "TSLA",
+          "net_profit": -3.0626066735421773,
+          "strategy": "sma"
+        }
+      ],
+      "average_cash_pct": 97.40559654483796,
+      "allocation_statuses": {
+        "optimized": 466,
+        "cash": 93
+      }
+    },
+    {
+      "horizon": "short",
+      "model": "sma",
+      "start": "2025-09-01",
+      "end": "2025-10-31",
+      "dataset_id": "68df84185f274ab78eae6cd08a0c19a8",
+      "enabled": true,
+      "cost_multiplier": 2,
+      "metrics": {
+        "initial_cash": 100000.0,
+        "final_equity": 96342.26121574179,
+        "net_profit": -3657.73878425821,
+        "return_pct": -3.6577387842582105,
+        "max_drawdown_pct": 3.725978950770026,
+        "fees": 737.9353673182817,
+        "impact_cost": 3721.2595169399274,
+        "trade_count": 268,
+        "turnover": 63.087614859863365,
+        "trading_days": 43,
+        "pnl_before_modeled_costs": 801.456099999999,
+        "daily_sharpe": -6.4034187625451935,
+        "win_rate_pct": 23.134328358208954,
+        "mean_trade_pnl": -27.296558091479024,
+        "intraday_benchmark_return_pct": 1.1941556907737017
+      },
+      "contributions": [
+        {
+          "symbol": "AAPL",
+          "net_profit": -1132.9727605575827,
+          "strategy": "sma"
+        },
+        {
+          "symbol": "AMD",
+          "net_profit": -1025.8975893214738,
+          "strategy": "sma"
+        },
+        {
+          "symbol": "NVDA",
+          "net_profit": -586.1000908684546,
+          "strategy": "sma"
+        },
+        {
+          "symbol": "SOFI",
+          "net_profit": -327.93963940781214,
+          "strategy": "sma"
+        },
+        {
+          "symbol": "TSLA",
+          "net_profit": -584.8287041028816,
+          "strategy": "sma"
+        }
+      ],
+      "average_cash_pct": 97.39743506753423,
+      "allocation_statuses": {
+        "optimized": 466,
+        "cash": 93
+      }
+    },
+    {
+      "horizon": "short",
+      "model": "regime_adaptive",
+      "start": "2025-09-01",
+      "end": "2025-10-31",
+      "dataset_id": "68df84185f274ab78eae6cd08a0c19a8",
+      "enabled": false,
+      "cost_multiplier": 1,
+      "metrics": {
+        "initial_cash": 100000.0,
+        "final_equity": 96185.13441783449,
+        "net_profit": -3814.865582165512,
+        "return_pct": -3.8148655821655124,
+        "max_drawdown_pct": 4.435816345274091,
+        "daily_sharpe": -7.117029468871107,
+        "fees": 1218.280718746011,
+        "impact_cost": 3852.5934634195632,
+        "pnl_before_modeled_costs": 1256.0086000000624,
+        "trade_count": 783,
+        "roundtrips": 389,
+        "win_rate_pct": 34.96143958868895,
+        "mean_trade_pnl": -9.806852396312504,
+        "trading_days": 43,
+        "intraday_benchmark_return_pct": 0.5682531032211502
+      },
+      "contributions": [
+        {
+          "symbol": "AAPL",
+          "net_profit": -879.207030971218,
+          "strategy": "regime_adaptive"
+        },
+        {
+          "symbol": "AMD",
+          "net_profit": -567.8121347924607,
+          "strategy": "regime_adaptive"
+        },
+        {
+          "symbol": "NVDA",
+          "net_profit": -1031.0055034158759,
+          "strategy": "regime_adaptive"
+        },
+        {
+          "symbol": "SOFI",
+          "net_profit": 20.985191764859337,
+          "strategy": "regime_adaptive"
+        },
+        {
+          "symbol": "TSLA",
+          "net_profit": -1357.826104750824,
+          "strategy": "regime_adaptive"
+        }
+      ],
+      "average_cash_pct": null,
+      "allocation_statuses": {}
+    },
+    {
+      "horizon": "short",
+      "model": "regime_adaptive",
+      "start": "2025-09-01",
+      "end": "2025-10-31",
+      "dataset_id": "68df84185f274ab78eae6cd08a0c19a8",
+      "enabled": false,
+      "cost_multiplier": 2,
+      "metrics": {
+        "initial_cash": 100000.0,
+        "final_equity": 93858.53912621563,
+        "net_profit": -6141.460873784366,
+        "return_pct": -6.141460873784366,
+        "max_drawdown_pct": 6.457007123651182,
+        "daily_sharpe": -11.47987908231003,
+        "fees": 2034.6228398044786,
+        "impact_cost": 5870.9215339798975,
+        "pnl_before_modeled_costs": 1764.0835000000097,
+        "trade_count": 635,
+        "roundtrips": 315,
+        "win_rate_pct": 32.06349206349206,
+        "mean_trade_pnl": -19.496701186616985,
+        "trading_days": 43,
+        "intraday_benchmark_return_pct": 0.5682531032211502
+      },
+      "contributions": [
+        {
+          "symbol": "AAPL",
+          "net_profit": -194.00507475837003,
+          "strategy": "regime_adaptive"
+        },
+        {
+          "symbol": "AMD",
+          "net_profit": -1331.0652691954747,
+          "strategy": "regime_adaptive"
+        },
+        {
+          "symbol": "NVDA",
+          "net_profit": -1300.236652932217,
+          "strategy": "regime_adaptive"
+        },
+        {
+          "symbol": "SOFI",
+          "net_profit": -994.5942509577108,
+          "strategy": "regime_adaptive"
+        },
+        {
+          "symbol": "TSLA",
+          "net_profit": -2321.559625940583,
+          "strategy": "regime_adaptive"
+        }
+      ],
+      "average_cash_pct": null,
+      "allocation_statuses": {}
+    },
+    {
+      "horizon": "short",
+      "model": "regime_adaptive",
+      "start": "2025-09-01",
+      "end": "2025-10-31",
+      "dataset_id": "68df84185f274ab78eae6cd08a0c19a8",
+      "enabled": true,
+      "cost_multiplier": 1,
+      "metrics": {
+        "initial_cash": 100000.0,
+        "final_equity": 99368.86475398317,
+        "net_profit": -631.1352460168273,
+        "return_pct": -0.6311352460168274,
+        "max_drawdown_pct": 0.8882634748565654,
+        "fees": 121.5553706769081,
+        "impact_cost": 374.46027533995436,
+        "trade_count": 68,
+        "turnover": 12.517477905449358,
+        "trading_days": 43,
+        "pnl_before_modeled_costs": -135.11959999996486,
+        "daily_sharpe": -3.335087527715899,
+        "win_rate_pct": 27.27272727272727,
+        "mean_trade_pnl": -19.12531048536,
+        "intraday_benchmark_return_pct": 1.1941556907737017
+      },
+      "contributions": [
+        {
+          "symbol": "AAPL",
+          "net_profit": -303.2692095021921,
+          "strategy": "regime_adaptive"
+        },
+        {
+          "symbol": "AMD",
+          "net_profit": 93.92130971304414,
+          "strategy": "regime_adaptive"
+        },
+        {
+          "symbol": "NVDA",
+          "net_profit": -145.49911393578077,
+          "strategy": "regime_adaptive"
+        },
+        {
+          "symbol": "SOFI",
+          "net_profit": -75.24298915564214,
+          "strategy": "regime_adaptive"
+        },
+        {
+          "symbol": "TSLA",
+          "net_profit": -201.04524313630463,
+          "strategy": "regime_adaptive"
+        }
+      ],
+      "average_cash_pct": 99.48153863381222,
+      "allocation_statuses": {
+        "optimized": 29,
+        "cash": 530
+      }
+    },
+    {
+      "horizon": "short",
+      "model": "regime_adaptive",
+      "start": "2025-09-01",
+      "end": "2025-10-31",
+      "dataset_id": "68df84185f274ab78eae6cd08a0c19a8",
+      "enabled": true,
+      "cost_multiplier": 2,
+      "metrics": {
+        "initial_cash": 100000.0,
+        "final_equity": 99241.50654097523,
+        "net_profit": -758.4934590247722,
+        "return_pct": -0.7584934590247722,
+        "max_drawdown_pct": 0.987153766994131,
+        "fees": 196.492160084808,
+        "impact_cost": 552.1803989399893,
+        "trade_count": 51,
+        "turnover": 9.241699646486854,
+        "trading_days": 43,
+        "pnl_before_modeled_costs": -9.820899999974813,
+        "daily_sharpe": -4.238831836682144,
+        "win_rate_pct": 30.76923076923077,
+        "mean_trade_pnl": -29.172825347107697,
+        "intraday_benchmark_return_pct": 1.1941556907737017
+      },
+      "contributions": [
+        {
+          "symbol": "AAPL",
+          "net_profit": 0.0,
+          "strategy": "regime_adaptive"
+        },
+        {
+          "symbol": "AMD",
+          "net_profit": -4.699973896877054,
+          "strategy": "regime_adaptive"
+        },
+        {
+          "symbol": "NVDA",
+          "net_profit": -95.54382713064115,
+          "strategy": "regime_adaptive"
+        },
+        {
+          "symbol": "SOFI",
+          "net_profit": -292.5703879559478,
+          "strategy": "regime_adaptive"
+        },
+        {
+          "symbol": "TSLA",
+          "net_profit": -365.6792700413316,
+          "strategy": "regime_adaptive"
+        }
+      ],
+      "average_cash_pct": 99.64027308846268,
+      "allocation_statuses": {
+        "optimized": 23,
+        "cash": 536
+      }
+    },
+    {
+      "horizon": "long",
+      "model": "trend",
+      "start": "2026-04-01",
+      "end": "2026-07-01",
+      "dataset_id": "bb9c03c89e0c4415b9b0f141eae22d65",
+      "enabled": false,
+      "cost_multiplier": 1,
+      "metrics": {
+        "return_pct": 5.990491646356966,
+        "final_equity": 105990.49164635697,
+        "max_drawdown_pct": 2.5350012311327608,
+        "fees": 52.89808674307101,
+        "impact_cost": 56.1492669,
+        "trade_count": 50,
+        "halted": false,
+        "turnover": 1.7858456762777104,
+        "realized_pnl": 5990.491646356927,
+        "unrealized_pnl": 0.0,
+        "trading_days": 62,
+        "daily_sharpe": 2.6426426828358935,
+        "average_gross_exposure_pct": 20.57637750265517,
+        "estimated_liquidation_return_pct": 5.990491646356966
+      },
+      "contributions": [
+        {
+          "symbol": "AAPL",
+          "net_profit": 985.0743604617628
+        },
+        {
+          "symbol": "AMD",
+          "net_profit": 4650.307764818549
+        },
+        {
+          "symbol": "NVDA",
+          "net_profit": 838.9775839891752
+        },
+        {
+          "symbol": "SOFI",
+          "net_profit": 0.0
+        },
+        {
+          "symbol": "TSLA",
+          "net_profit": -483.8680629125615
+        }
+      ],
+      "average_cash_pct": 79.42362249734482,
+      "allocation_statuses": {}
+    },
+    {
+      "horizon": "long",
+      "model": "trend",
+      "start": "2026-04-01",
+      "end": "2026-07-01",
+      "dataset_id": "bb9c03c89e0c4415b9b0f141eae22d65",
+      "enabled": false,
+      "cost_multiplier": 2,
+      "metrics": {
+        "return_pct": 5.278814556093825,
+        "final_equity": 105278.81455609383,
+        "max_drawdown_pct": 2.5185704320873525,
+        "fees": 88.596996506184,
+        "impact_cost": 88.72144739999999,
+        "trade_count": 42,
+        "halted": false,
+        "turnover": 1.4099495624680172,
+        "realized_pnl": 5278.81455609381,
+        "unrealized_pnl": 0.0,
+        "trading_days": 62,
+        "daily_sharpe": 2.3469267319341847,
+        "average_gross_exposure_pct": 19.03384428969081,
+        "estimated_liquidation_return_pct": 5.278814556093825
+      },
+      "contributions": [
+        {
+          "symbol": "AAPL",
+          "net_profit": 327.20429385195985
+        },
+        {
+          "symbol": "AMD",
+          "net_profit": 4634.145774274199
+        },
+        {
+          "symbol": "NVDA",
+          "net_profit": 803.590511713332
+        },
+        {
+          "symbol": "SOFI",
+          "net_profit": 0.0
+        },
+        {
+          "symbol": "TSLA",
+          "net_profit": -486.12602374567973
+        }
+      ],
+      "average_cash_pct": 80.96615571030918,
+      "allocation_statuses": {}
+    },
+    {
+      "horizon": "long",
+      "model": "trend",
+      "start": "2026-04-01",
+      "end": "2026-07-01",
+      "dataset_id": "bb9c03c89e0c4415b9b0f141eae22d65",
+      "enabled": true,
+      "cost_multiplier": 1,
+      "metrics": {
+        "return_pct": 13.49750210034335,
+        "final_equity": 113497.50210034335,
+        "max_drawdown_pct": 4.413948374865228,
+        "fees": 46.36380165667,
+        "impact_cost": 63.214098000000014,
+        "trade_count": 43,
+        "halted": false,
+        "turnover": 1.9330958691272786,
+        "realized_pnl": 13497.502100343338,
+        "unrealized_pnl": 0.0,
+        "trading_days": 62,
+        "daily_sharpe": 3.0900647523343774,
+        "average_gross_exposure_pct": 21.150639029347257,
+        "estimated_liquidation_return_pct": 13.49750210034335
+      },
+      "contributions": [
+        {
+          "symbol": "AAPL",
+          "net_profit": -201.95291111963525
+        },
+        {
+          "symbol": "AMD",
+          "net_profit": 14026.502909362145
+        },
+        {
+          "symbol": "NVDA",
+          "net_profit": 0.0
+        },
+        {
+          "symbol": "SOFI",
+          "net_profit": 0.0
+        },
+        {
+          "symbol": "TSLA",
+          "net_profit": -327.0478978991803
+        }
+      ],
+      "average_cash_pct": 78.84936097065274,
+      "allocation_statuses": {
+        "optimized": 8,
+        "cash": 5
+      }
+    },
+    {
+      "horizon": "long",
+      "model": "trend",
+      "start": "2026-04-01",
+      "end": "2026-07-01",
+      "dataset_id": "bb9c03c89e0c4415b9b0f141eae22d65",
+      "enabled": true,
+      "cost_multiplier": 2,
+      "metrics": {
+        "return_pct": 12.258005210765255,
+        "final_equity": 112258.00521076526,
+        "max_drawdown_pct": 4.3946130203789675,
+        "fees": 79.69918723472,
+        "impact_cost": 106.585602,
+        "trade_count": 37,
+        "halted": false,
+        "turnover": 1.6241152701507842,
+        "realized_pnl": 12258.005210765281,
+        "unrealized_pnl": 0.0,
+        "trading_days": 62,
+        "daily_sharpe": 2.8627350713264765,
+        "average_gross_exposure_pct": 20.207803511634978,
+        "estimated_liquidation_return_pct": 12.258005210765255
+      },
+      "contributions": [
+        {
+          "symbol": "AAPL",
+          "net_profit": -405.88359278800044
+        },
+        {
+          "symbol": "AMD",
+          "net_profit": 12996.645427023599
+        },
+        {
+          "symbol": "NVDA",
+          "net_profit": 0.0
+        },
+        {
+          "symbol": "SOFI",
+          "net_profit": 0.0
+        },
+        {
+          "symbol": "TSLA",
+          "net_profit": -332.75662347032176
+        }
+      ],
+      "average_cash_pct": 79.79219648836502,
+      "allocation_statuses": {
+        "optimized": 8,
+        "cash": 5
+      }
+    },
+    {
+      "horizon": "long",
+      "model": "equal_weight",
+      "start": "2026-04-01",
+      "end": "2026-07-01",
+      "dataset_id": "bb9c03c89e0c4415b9b0f141eae22d65",
+      "enabled": false,
+      "cost_multiplier": 1,
+      "metrics": {
+        "return_pct": 25.340731688365636,
+        "final_equity": 125340.73168836565,
+        "max_drawdown_pct": 10.187329410420109,
+        "fees": 84.728031134365,
+        "impact_cost": 82.63528050000001,
+        "trade_count": 71,
+        "halted": true,
+        "turnover": 2.3955684852548367,
+        "realized_pnl": 25340.731688365628,
+        "unrealized_pnl": 0.0,
+        "trading_days": 62,
+        "daily_sharpe": 3.208178891202875,
+        "average_gross_exposure_pct": 74.56556746074925,
+        "estimated_liquidation_return_pct": 25.340731688365636
+      },
+      "contributions": [
+        {
+          "symbol": "AAPL",
+          "net_profit": 3126.9018588729996
+        },
+        {
+          "symbol": "AMD",
+          "net_profit": 18150.46961338861
+        },
+        {
+          "symbol": "NVDA",
+          "net_profit": 2572.821343356649
+        },
+        {
+          "symbol": "SOFI",
+          "net_profit": -233.5585271070413
+        },
+        {
+          "symbol": "TSLA",
+          "net_profit": 1724.0973998544032
+        }
+      ],
+      "average_cash_pct": 25.43443253925075,
+      "allocation_statuses": {}
+    },
+    {
+      "horizon": "long",
+      "model": "equal_weight",
+      "start": "2026-04-01",
+      "end": "2026-07-01",
+      "dataset_id": "bb9c03c89e0c4415b9b0f141eae22d65",
+      "enabled": false,
+      "cost_multiplier": 2,
+      "metrics": {
+        "return_pct": 25.15672305576637,
+        "final_equity": 125156.72305576637,
+        "max_drawdown_pct": 10.20014156027812,
+        "fees": 169.43135523362,
+        "impact_cost": 165.440589,
+        "trade_count": 71,
+        "halted": true,
+        "turnover": 2.399707536287358,
+        "realized_pnl": 25156.72305576635,
+        "unrealized_pnl": 0.0,
+        "trading_days": 62,
+        "daily_sharpe": 3.187733106882697,
+        "average_gross_exposure_pct": 74.59717873712063,
+        "estimated_liquidation_return_pct": 25.15672305576637
+      },
+      "contributions": [
+        {
+          "symbol": "AAPL",
+          "net_profit": 3096.4042161920224
+        },
+        {
+          "symbol": "AMD",
+          "net_profit": 18116.069936954438
+        },
+        {
+          "symbol": "NVDA",
+          "net_profit": 2526.2816084617516
+        },
+        {
+          "symbol": "SOFI",
+          "net_profit": -276.9929816594813
+        },
+        {
+          "symbol": "TSLA",
+          "net_profit": 1694.9602758176334
+        }
+      ],
+      "average_cash_pct": 25.40282126287938,
+      "allocation_statuses": {}
+    },
+    {
+      "horizon": "long",
+      "model": "equal_weight",
+      "start": "2026-04-01",
+      "end": "2026-07-01",
+      "dataset_id": "bb9c03c89e0c4415b9b0f141eae22d65",
+      "enabled": true,
+      "cost_multiplier": 1,
+      "metrics": {
+        "return_pct": 6.9959140518568,
+        "final_equity": 106995.9140518568,
+        "max_drawdown_pct": 10.64468828855858,
+        "fees": 44.766595843211,
+        "impact_cost": 66.3203523,
+        "trade_count": 31,
+        "halted": true,
+        "turnover": 2.1067912037450873,
+        "realized_pnl": 6995.914051856787,
+        "unrealized_pnl": 0.0,
+        "trading_days": 62,
+        "daily_sharpe": 1.1767591117746499,
+        "average_gross_exposure_pct": 84.95943613304262,
+        "estimated_liquidation_return_pct": 6.9959140518568
+      },
+      "contributions": [
+        {
+          "symbol": "AAPL",
+          "net_profit": 2690.320328380418
+        },
+        {
+          "symbol": "AMD",
+          "net_profit": 0.0
+        },
+        {
+          "symbol": "NVDA",
+          "net_profit": 2465.1376645747587
+        },
+        {
+          "symbol": "SOFI",
+          "net_profit": 1840.4560589016037
+        },
+        {
+          "symbol": "TSLA",
+          "net_profit": 0.0
+        }
+      ],
+      "average_cash_pct": 15.040563866957388,
+      "allocation_statuses": {
+        "optimized": 12,
+        "cash": 1
+      }
+    },
+    {
+      "horizon": "long",
+      "model": "equal_weight",
+      "start": "2026-04-01",
+      "end": "2026-07-01",
+      "dataset_id": "bb9c03c89e0c4415b9b0f141eae22d65",
+      "enabled": true,
+      "cost_multiplier": 2,
+      "metrics": {
+        "return_pct": 6.306031504692444,
+        "final_equity": 106306.03150469244,
+        "max_drawdown_pct": 10.684234587059683,
+        "fees": 87.28824470756399,
+        "impact_cost": 129.7312506,
+        "trade_count": 30,
+        "halted": true,
+        "turnover": 2.0686268736047677,
+        "realized_pnl": 6306.031504692433,
+        "unrealized_pnl": 0.0,
+        "trading_days": 62,
+        "daily_sharpe": 1.0867556197479857,
+        "average_gross_exposure_pct": 84.38775529903062,
+        "estimated_liquidation_return_pct": 6.306031504692444
+      },
+      "contributions": [
+        {
+          "symbol": "AAPL",
+          "net_profit": 2647.392107681673
+        },
+        {
+          "symbol": "AMD",
+          "net_profit": 0.0
+        },
+        {
+          "symbol": "NVDA",
+          "net_profit": 2271.168122178751
+        },
+        {
+          "symbol": "SOFI",
+          "net_profit": 1387.471274831998
+        },
+        {
+          "symbol": "TSLA",
+          "net_profit": 0.0
+        }
+      ],
+      "average_cash_pct": 15.61224470096938,
+      "allocation_statuses": {
+        "optimized": 12,
+        "cash": 1
+      }
+    },
+    {
+      "horizon": "short",
+      "model": "sma",
+      "start": "2026-04-01",
+      "end": "2026-07-01",
+      "dataset_id": "bb9c03c89e0c4415b9b0f141eae22d65",
+      "enabled": false,
+      "cost_multiplier": 1,
+      "metrics": {
+        "initial_cash": 100000.0,
+        "final_equity": 57027.27410129347,
+        "net_profit": -42972.72589870653,
+        "return_pct": -42.97272589870653,
+        "max_drawdown_pct": 44.49820545519284,
+        "daily_sharpe": -15.793750941658704,
+        "fees": 13244.88369978695,
+        "impact_cost": 34855.89280991949,
+        "pnl_before_modeled_costs": 5128.050610999911,
+        "trade_count": 7807,
+        "roundtrips": 3798,
+        "win_rate_pct": 26.276987888362296,
+        "mean_trade_pnl": -11.3145671139301,
+        "trading_days": 62,
+        "intraday_benchmark_return_pct": 19.90700235506335
+      },
+      "contributions": [
+        {
+          "symbol": "AAPL",
+          "net_profit": -8125.3224161028265,
+          "strategy": "sma"
+        },
+        {
+          "symbol": "AMD",
+          "net_profit": -5234.692433530261,
+          "strategy": "sma"
+        },
+        {
+          "symbol": "NVDA",
+          "net_profit": -9936.11100619133,
+          "strategy": "sma"
+        },
+        {
+          "symbol": "SOFI",
+          "net_profit": -11492.57470773948,
+          "strategy": "sma"
+        },
+        {
+          "symbol": "TSLA",
+          "net_profit": -8184.0253351426345,
+          "strategy": "sma"
+        }
+      ],
+      "average_cash_pct": null,
+      "allocation_statuses": {}
+    },
+    {
+      "horizon": "short",
+      "model": "sma",
+      "start": "2026-04-01",
+      "end": "2026-07-01",
+      "dataset_id": "bb9c03c89e0c4415b9b0f141eae22d65",
+      "enabled": false,
+      "cost_multiplier": 2,
+      "metrics": {
+        "initial_cash": 100000.0,
+        "final_equity": 29001.448501220864,
+        "net_profit": -70998.55149877914,
+        "return_pct": -70.99855149877914,
+        "max_drawdown_pct": 71.12721431491988,
+        "daily_sharpe": -32.88523007976469,
+        "fees": 22584.555842456546,
+        "impact_cost": 53271.766995322505,
+        "pnl_before_modeled_costs": 4857.771338999912,
+        "trade_count": 7741,
+        "roundtrips": 3800,
+        "win_rate_pct": 19.39473684210526,
+        "mean_trade_pnl": -18.683829341783987,
+        "trading_days": 62,
+        "intraday_benchmark_return_pct": 19.90700235506335
+      },
+      "contributions": [
+        {
+          "symbol": "AAPL",
+          "net_profit": -13679.817634160165,
+          "strategy": "sma"
+        },
+        {
+          "symbol": "AMD",
+          "net_profit": -11971.815001453517,
+          "strategy": "sma"
+        },
+        {
+          "symbol": "NVDA",
+          "net_profit": -14826.181486490043,
+          "strategy": "sma"
+        },
+        {
+          "symbol": "SOFI",
+          "net_profit": -16761.922323939565,
+          "strategy": "sma"
+        },
+        {
+          "symbol": "TSLA",
+          "net_profit": -13758.815052735848,
+          "strategy": "sma"
+        }
+      ],
+      "average_cash_pct": null,
+      "allocation_statuses": {}
+    },
+    {
+      "horizon": "short",
+      "model": "sma",
+      "start": "2026-04-01",
+      "end": "2026-07-01",
+      "dataset_id": "bb9c03c89e0c4415b9b0f141eae22d65",
+      "enabled": true,
+      "cost_multiplier": 1,
+      "metrics": {
+        "initial_cash": 100000.0,
+        "final_equity": 96132.67568374443,
+        "net_profit": -3867.3243162555736,
+        "return_pct": -3.8673243162555737,
+        "max_drawdown_pct": 4.616821491394296,
+        "fees": 686.647703175861,
+        "impact_cost": 2587.1082130797176,
+        "trade_count": 433,
+        "turnover": 87.6885202365883,
+        "trading_days": 62,
+        "pnl_before_modeled_costs": -593.5683999999951,
+        "daily_sharpe": -4.464750861262383,
+        "win_rate_pct": 26.60098522167488,
+        "mean_trade_pnl": -19.050858700766245,
+        "intraday_benchmark_return_pct": 18.74697416865885
+      },
+      "contributions": [
+        {
+          "symbol": "AAPL",
+          "net_profit": -978.1453336535196,
+          "strategy": "sma"
+        },
+        {
+          "symbol": "AMD",
+          "net_profit": -1213.0190429091454,
+          "strategy": "sma"
+        },
+        {
+          "symbol": "NVDA",
+          "net_profit": -1114.7039941312505,
+          "strategy": "sma"
+        },
+        {
+          "symbol": "SOFI",
+          "net_profit": -964.8508719857309,
+          "strategy": "sma"
+        },
+        {
+          "symbol": "TSLA",
+          "net_profit": 403.3949264240946,
+          "strategy": "sma"
+        }
+      ],
+      "average_cash_pct": 97.43248905517144,
+      "allocation_statuses": {
+        "optimized": 651,
+        "cash": 155
+      }
+    },
+    {
+      "horizon": "short",
+      "model": "sma",
+      "start": "2026-04-01",
+      "end": "2026-07-01",
+      "dataset_id": "bb9c03c89e0c4415b9b0f141eae22d65",
+      "enabled": true,
+      "cost_multiplier": 2,
+      "metrics": {
+        "initial_cash": 100000.0,
+        "final_equity": 92991.7229077385,
+        "net_profit": -7008.277092261502,
+        "return_pct": -7.008277092261501,
+        "max_drawdown_pct": 7.169447678757179,
+        "fees": 1356.6104616214802,
+        "impact_cost": 5091.200030639919,
+        "trade_count": 430,
+        "turnover": 87.68929807027521,
+        "trading_days": 62,
+        "pnl_before_modeled_costs": -560.4666000001034,
+        "daily_sharpe": -8.269018907014493,
+        "win_rate_pct": 22.167487684729064,
+        "mean_trade_pnl": -34.52353247419403,
+        "intraday_benchmark_return_pct": 18.74697416865885
+      },
+      "contributions": [
+        {
+          "symbol": "AAPL",
+          "net_profit": -1900.558738421707,
+          "strategy": "sma"
+        },
+        {
+          "symbol": "AMD",
+          "net_profit": -1586.0200998319997,
+          "strategy": "sma"
+        },
+        {
+          "symbol": "NVDA",
+          "net_profit": -1933.1133776312963,
+          "strategy": "sma"
+        },
+        {
+          "symbol": "SOFI",
+          "net_profit": -1318.501251775495,
+          "strategy": "sma"
+        },
+        {
+          "symbol": "TSLA",
+          "net_profit": -270.08362460088756,
+          "strategy": "sma"
+        }
+      ],
+      "average_cash_pct": 97.43191342554748,
+      "allocation_statuses": {
+        "optimized": 651,
+        "cash": 155
+      }
+    },
+    {
+      "horizon": "short",
+      "model": "regime_adaptive",
+      "start": "2026-04-01",
+      "end": "2026-07-01",
+      "dataset_id": "bb9c03c89e0c4415b9b0f141eae22d65",
+      "enabled": false,
+      "cost_multiplier": 1,
+      "metrics": {
+        "initial_cash": 100000.0,
+        "final_equity": 94341.97421823035,
+        "net_profit": -5658.025781769655,
+        "return_pct": -5.658025781769655,
+        "max_drawdown_pct": 6.139027509482209,
+        "daily_sharpe": -8.272920199159673,
+        "fees": 1912.120109310223,
+        "impact_cost": 5018.72607245945,
+        "pnl_before_modeled_costs": 1272.8204000000178,
+        "trade_count": 1080,
+        "roundtrips": 526,
+        "win_rate_pct": 34.4106463878327,
+        "mean_trade_pnl": -10.756703007166717,
+        "trading_days": 62,
+        "intraday_benchmark_return_pct": 19.90700235506335
+      },
+      "contributions": [
+        {
+          "symbol": "AAPL",
+          "net_profit": -1368.2755401085742,
+          "strategy": "regime_adaptive"
+        },
+        {
+          "symbol": "AMD",
+          "net_profit": -259.38107725812733,
+          "strategy": "regime_adaptive"
+        },
+        {
+          "symbol": "NVDA",
+          "net_profit": -1432.6806638259477,
+          "strategy": "regime_adaptive"
+        },
+        {
+          "symbol": "SOFI",
+          "net_profit": -1235.3949622614018,
+          "strategy": "regime_adaptive"
+        },
+        {
+          "symbol": "TSLA",
+          "net_profit": -1362.2935383156073,
+          "strategy": "regime_adaptive"
+        }
+      ],
+      "average_cash_pct": null,
+      "allocation_statuses": {}
+    },
+    {
+      "horizon": "short",
+      "model": "regime_adaptive",
+      "start": "2026-04-01",
+      "end": "2026-07-01",
+      "dataset_id": "bb9c03c89e0c4415b9b0f141eae22d65",
+      "enabled": false,
+      "cost_multiplier": 2,
+      "metrics": {
+        "initial_cash": 100000.0,
+        "final_equity": 89830.00867322819,
+        "net_profit": -10169.991326771808,
+        "return_pct": -10.169991326771807,
+        "max_drawdown_pct": 10.361804867442947,
+        "daily_sharpe": -14.308597607795237,
+        "fees": 3268.8593817839055,
+        "impact_cost": 8151.528764987832,
+        "pnl_before_modeled_costs": 1250.39681999993,
+        "trade_count": 924,
+        "roundtrips": 450,
+        "win_rate_pct": 29.555555555555557,
+        "mean_trade_pnl": -22.59998072615961,
+        "trading_days": 62,
+        "intraday_benchmark_return_pct": 19.90700235506335
+      },
+      "contributions": [
+        {
+          "symbol": "AAPL",
+          "net_profit": -1220.3254746491402,
+          "strategy": "regime_adaptive"
+        },
+        {
+          "symbol": "AMD",
+          "net_profit": -1142.0154639848479,
+          "strategy": "regime_adaptive"
+        },
+        {
+          "symbol": "NVDA",
+          "net_profit": -2779.946335546374,
+          "strategy": "regime_adaptive"
+        },
+        {
+          "symbol": "SOFI",
+          "net_profit": -2318.0718354342134,
+          "strategy": "regime_adaptive"
+        },
+        {
+          "symbol": "TSLA",
+          "net_profit": -2709.6322171572283,
+          "strategy": "regime_adaptive"
+        }
+      ],
+      "average_cash_pct": null,
+      "allocation_statuses": {}
+    },
+    {
+      "horizon": "short",
+      "model": "regime_adaptive",
+      "start": "2026-04-01",
+      "end": "2026-07-01",
+      "dataset_id": "bb9c03c89e0c4415b9b0f141eae22d65",
+      "enabled": true,
+      "cost_multiplier": 1,
+      "metrics": {
+        "initial_cash": 100000.0,
+        "final_equity": 99292.11774161216,
+        "net_profit": -707.8822583878355,
+        "return_pct": -0.7078822583878355,
+        "max_drawdown_pct": 0.9120827104163842,
+        "fees": 218.1901879279295,
+        "impact_cost": 537.2506704599389,
+        "trade_count": 104,
+        "turnover": 17.94929914562932,
+        "trading_days": 62,
+        "pnl_before_modeled_costs": 47.558600000032925,
+        "daily_sharpe": -3.066772786050126,
+        "win_rate_pct": 46.93877551020408,
+        "mean_trade_pnl": -14.446576701792672,
+        "intraday_benchmark_return_pct": 18.74697416865885
+      },
+      "contributions": [
+        {
+          "symbol": "AAPL",
+          "net_profit": -2.27585646134321,
+          "strategy": "regime_adaptive"
+        },
+        {
+          "symbol": "AMD",
+          "net_profit": -179.7691173147723,
+          "strategy": "regime_adaptive"
+        },
+        {
+          "symbol": "NVDA",
+          "net_profit": 51.54701430217028,
+          "strategy": "regime_adaptive"
+        },
+        {
+          "symbol": "SOFI",
+          "net_profit": 2.7933382040209835,
+          "strategy": "regime_adaptive"
+        },
+        {
+          "symbol": "TSLA",
+          "net_profit": -580.1776371179149,
+          "strategy": "regime_adaptive"
+        }
+      ],
+      "average_cash_pct": 99.40625727897189,
+      "allocation_statuses": {
+        "optimized": 48,
+        "cash": 758
+      }
+    },
+    {
+      "horizon": "short",
+      "model": "regime_adaptive",
+      "start": "2026-04-01",
+      "end": "2026-07-01",
+      "dataset_id": "bb9c03c89e0c4415b9b0f141eae22d65",
+      "enabled": true,
+      "cost_multiplier": 2,
+      "metrics": {
+        "initial_cash": 100000.0,
+        "final_equity": 98666.71647826053,
+        "net_profit": -1333.283521739475,
+        "return_pct": -1.333283521739475,
+        "max_drawdown_pct": 1.4793137226195574,
+        "fees": 367.43589641954395,
+        "impact_cost": 933.4974253199678,
+        "trade_count": 89,
+        "turnover": 15.626606550500096,
+        "trading_days": 62,
+        "pnl_before_modeled_costs": -32.35019999996325,
+        "daily_sharpe": -5.962587079216787,
+        "win_rate_pct": 30.23255813953488,
+        "mean_trade_pnl": -31.006593528825558,
+        "intraday_benchmark_return_pct": 18.74697416865885
+      },
+      "contributions": [
+        {
+          "symbol": "AAPL",
+          "net_profit": -121.68217554347575,
+          "strategy": "regime_adaptive"
+        },
+        {
+          "symbol": "AMD",
+          "net_profit": -180.8202745578037,
+          "strategy": "regime_adaptive"
+        },
+        {
+          "symbol": "NVDA",
+          "net_profit": -159.40868799009695,
+          "strategy": "regime_adaptive"
+        },
+        {
+          "symbol": "SOFI",
+          "net_profit": -190.99838107940377,
+          "strategy": "regime_adaptive"
+        },
+        {
+          "symbol": "TSLA",
+          "net_profit": -680.3740025687111,
+          "strategy": "regime_adaptive"
+        }
+      ],
+      "average_cash_pct": 99.52422145760998,
+      "allocation_statuses": {
+        "optimized": 42,
+        "cash": 764
+      }
+    }
+  ]
+}

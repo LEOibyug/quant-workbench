@@ -3,8 +3,11 @@ from typing import Literal
 
 from pydantic import BaseModel, ConfigDict, Field, model_validator
 
+from quant_workbench.allocation import AllocationConfig
+
 
 class StrategyConfig(BaseModel):
+    allocation: AllocationConfig = Field(default_factory=AllocationConfig)
     model_config = ConfigDict(frozen=True, extra="forbid", allow_inf_nan=False)
     strategy: Literal[
         "sma",

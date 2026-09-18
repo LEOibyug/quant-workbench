@@ -19,6 +19,7 @@ dependencies = [
   "httpx[socks]>=0.28,<1",
   "python-multipart>=0.0.20,<1",
   "scikit-learn>=1.6,<2",
+  "scipy>=1.15,<2",
   "joblib>=1.4,<2",
 ]
 

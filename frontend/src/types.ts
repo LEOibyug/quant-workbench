@@ -67,7 +67,8 @@ export interface Experiment {
   config: {
     strategy: string;
     initial_cash: number;
-    [key: string]: string | number;
+    allocation?: { enabled: boolean };
+    [key: string]: unknown;
   };
   model: { enabled: boolean };
   model_metadata?: Record<string, unknown>;

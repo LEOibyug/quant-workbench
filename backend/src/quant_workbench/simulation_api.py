@@ -4,6 +4,7 @@ import pandas as pd
 from fastapi import APIRouter, BackgroundTasks
 from fastapi.responses import Response
 
+from quant_workbench.portfolio_export import portfolio_rows
 from quant_workbench.repository import Repository
 from quant_workbench.simulations import (
     Scope,
@@ -42,11 +43,15 @@ def result(scope: Scope, identifier: str):
 
 
 @router.get("/{scope}/simulations/{identifier}/export/{kind}")
-def export(scope: Scope, identifier: str, kind: Literal["trades", "market_curve", "daily_returns"]):
+def export(scope: Scope, identifier: str, kind: Literal[
+    "trades", "market_curve", "daily_returns", "portfolio_curve", "allocation_decisions",
+]):
     repo = Repository()
     if get_job(repo, scope, identifier)["status"] != "completed":
         raise ValueError("请在模拟完成后导出完整数据")
-    rows = snapshot(repo, scope, identifier)[kind]
+    rows = snapshot(repo, scope, identifier).get(kind, [])
+    if kind == "portfolio_curve":
+        rows = list(portfolio_rows(rows))
     return Response(
         pd.DataFrame(rows).to_csv(index=False).encode("utf-8-sig"),
         media_type="text/csv",

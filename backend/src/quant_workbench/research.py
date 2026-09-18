@@ -54,7 +54,8 @@ def create_experiment(repo: Repository, request: ExperimentInput, progress=None)
             "source": dataset["source"],
             "profiles": profiles,
             "strategies": strategies,
-            "engine_version": ENGINE_VERSION,
+            "engine_version": "minute-portfolio-v1" if request.config.allocation.enabled
+            else ENGINE_VERSION,
             "profile_period": {"start": str(request.start), "end": str(request.train_end)},
         }
     )
@@ -96,7 +97,7 @@ def has_prior_exposure(db, symbols, start, end):
         previous = json.loads(row[0])
         if (
             (previous["scope"] == "workspace" or previous["phase"] == "test")
-            and previous["symbol"] in symbols
+            and set(previous.get("symbols") or [previous["symbol"]]) & set(symbols)
             and previous["start"] < end
             and start < previous["end"]
         ):
