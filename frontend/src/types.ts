@@ -5,6 +5,8 @@ export const phaseNames = {
   test: "最终测试",
 };
 export const strategyNames: Record<string, string> = {
+  pattern_policy: "历史校准多尺度模式网络",
+  spectral_rules: "纯数学谱分解 · 对照",
   generated_policy: "生成网络训练分类器 · 策略混合",
   synthetic_regime: "合成状态分类器 · 概率策略混合",
   adaptive_specialist: "每股观察期专家选择",

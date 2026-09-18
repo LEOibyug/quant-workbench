@@ -181,10 +181,10 @@ export function PortfolioCharts({ curve, trades, initialCash, allocationEnabled,
       </div>
       <p className="muted">开 / 高 / 低 / 收：{[at.assets[s].open, at.assets[s].high, at.assets[s].low, at.assets[s].close].map(amount).join(" / ")}</p>
       {at.assets[s].forecast?.classifier_version != null && <p className="notice">
-        分类器 {String(at.assets[s].forecast!.classifier_version)} · 趋势 {(Number(at.assets[s].forecast!.trend_probability)*100).toFixed(1)}%
-        {" · 反转 "}{(Number(at.assets[s].forecast!.reversion_probability)*100).toFixed(1)}%
+        模式模型 {String(at.assets[s].forecast!.classifier_version)} · 趋势 {(Number(at.assets[s].forecast!.trend_probability)*100).toFixed(1)}%
+        {String(at.assets[s].forecast!.classifier_version).startsWith("spectral-") ? " · 周期 " : " · 反转 "}{(Number(at.assets[s].forecast!.reversion_probability)*100).toFixed(1)}%
         {" · 现金/噪声 "}{(Number(at.assets[s].forecast!.cash_probability ?? at.assets[s].forecast!.noise_probability)*100).toFixed(1)}%
-        。合成数据训练的策略混合权重，不是未来盈利概率。
+        。模式符合程度／策略混合权重，不是未来盈利概率。
       </p>}
       {at.assets[s].forecast?.selected_expert != null && <p className="notice">
         观察期选择的专家（按调仓日执行）：{strategyNames[String(at.assets[s].forecast!.selected_expert)] || (at.assets[s].forecast!.selected_expert === "cash" ? "现金 / 观察" : String(at.assets[s].forecast!.selected_expert))}

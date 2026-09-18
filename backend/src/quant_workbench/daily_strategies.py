@@ -15,10 +15,15 @@ MODELS = {
     "adaptive_specialist",
     "synthetic_regime",
     "generated_policy",
+    "pattern_policy",
+    "spectral_rules",
 }
 
 
 def rule_forecasts(daily, config):
+    if config.model in {"pattern_policy", "spectral_rules"}:
+        from quant_workbench.conditional_policy import forecasts
+        return forecasts(daily, config)
     if config.model == "adaptive_specialist":
         return specialist_forecasts(daily, config)
     closes = (

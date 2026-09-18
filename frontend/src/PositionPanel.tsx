@@ -39,6 +39,8 @@ export function PositionPanel({ datasets, modelEnabled = true, deployment, selec
   const pendingKey = deployment ? `quant.pending.position.${deployment.id}` : "quant.pending.position.operation";
   const lastKey = deployment ? `quant.last.position.${deployment.id}` : "quant.last.position.operation";
   const config = deployment?.position_config;
+  const [patternModel, setPatternModel] = useState<{trained: boolean; version?: string; cutoff?: string; metrics?: {dominant_pattern_agreement: number}} | null>(null);
+  useEffect(() => { api<typeof patternModel>("/position/pattern-model").then(setPatternModel).catch(() => setPatternModel(null)); }, []);
   const [generatedModel, setGeneratedModel] = useState<{trained: boolean; version?: string; metrics?: {accuracy: number; majority_accuracy: number}} | null>(null);
   useEffect(() => { api<typeof generatedModel>("/position/generated-model").then(setGeneratedModel).catch(() => setGeneratedModel(null)); }, []);
   const [portfolioPolicy, setPortfolioPolicy] = useState(config?.portfolio_policy || "legacy");
@@ -130,6 +132,9 @@ export function PositionPanel({ datasets, modelEnabled = true, deployment, selec
     <p>独立日线模型，持仓数日至数周；收盘形成目标仓位，次日开盘分批执行。
       与短期策略分别核算资金，研究结果不会提交真实订单。</p>
     {error && <p className="notice error" role="alert">{error}</p>}
+    {patternModel?.trained && <details><summary>多尺度模式网络已训练 · {patternModel.version}</summary>
+      <p className="muted">训练/校准截止 {patternModel.cutoff}（不含）。识别已知窗口的趋势、周期、未解释噪声混合程度；数学分解主模式一致率 {(patternModel.metrics!.dominant_pattern_agreement*100).toFixed(2)}%，不是未来走势或盈利准确率。可与“纯数学谱分解”对照。</p>
+    </details>}
     {generatedModel?.trained && <details><summary>生成策略模型已训练 · {generatedModel.version}</summary>
       <p className="muted">独立合成样本准确率 {(generatedModel.metrics!.accuracy*100).toFixed(2)}%，多数类基线 {(generatedModel.metrics!.majority_accuracy*100).toFixed(2)}%。尚未超过分类基线；在下方模型中选择“生成网络训练分类器 · 策略混合”运行端到端研究。预测概率不等于盈利概率。</p>
     </details>}
@@ -194,7 +199,7 @@ export function PositionPanel({ datasets, modelEnabled = true, deployment, selec
         <label>{modelEnabled || deployment ? "长期模型 / 策略" : "规则策略"}<select key={String(modelEnabled)} name="model" defaultValue={config?.model || (modelEnabled ? "trend" : "equal_weight")} required>
           {(modelEnabled || deployment) && <><option value="trend">统计趋势 + 波动率仓位</option>
           <option value="bayesian">贝叶斯多日收益回归</option>
-          {["cross_momentum", "channel_trend", "residual_reversal", "minimum_variance", "fixed_ensemble", "adaptive_specialist", "synthetic_regime", "generated_policy"].map((model) => <option key={model} value={model}>{strategyNames[model]}（研究候选）</option>)}</>}
+          {["cross_momentum", "channel_trend", "residual_reversal", "minimum_variance", "fixed_ensemble", "adaptive_specialist", "synthetic_regime", "generated_policy", "pattern_policy", "spectral_rules"].map((model) => <option key={model} value={model}>{strategyNames[model]}（研究候选）</option>)}</>}
           {(!modelEnabled || deployment) && <option value="equal_weight">等权分批再平衡（无预测模型）</option>}
         </select></label>
 

@@ -36,6 +36,10 @@ def test_rule_causality_permutation_limits_and_ledger(method, policy):
         from quant_workbench.generated_policy import ARTIFACT
         if not ARTIFACT.exists():
             pytest.skip("Run train_generated_policy.py to validate trained artifact")
+    if method == "pattern_policy":
+        from quant_workbench.conditional_policy import ARTIFACT
+        if not ARTIFACT.exists():
+            pytest.skip("Run train_pattern_policy.py to validate trained artifact")
     frame = sample()
     cfg = PositionConfig(model=method, tranche_weight=0.1, portfolio_policy=policy)
     forecast = rule_forecasts(frame, cfg)

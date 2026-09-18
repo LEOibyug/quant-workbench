@@ -36,6 +36,8 @@ class PositionConfig(BaseModel):
         "adaptive_specialist",
         "synthetic_regime",
         "generated_policy",
+        "pattern_policy",
+        "spectral_rules",
     ] = "bayesian"
     lookback: int = Field(default=20, ge=10, le=60)
     horizon: int = Field(default=5, ge=1, le=20)
@@ -155,8 +157,11 @@ def daily_forecasts(daily, config):
 
 
 def simulate_positions(frame, config, start, end, progress=None, *, daily_bars=False):
-    if config.model == "generated_policy":
-        from quant_workbench.generated_policy import artifact_digest
+    if config.model in {"generated_policy", "pattern_policy"}:
+        if config.model == "pattern_policy":
+            from quant_workbench.conditional_policy import artifact_digest
+        else:
+            from quant_workbench.generated_policy import artifact_digest
 
         digest = artifact_digest()
         if config.classifier_sha256 and digest != config.classifier_sha256:

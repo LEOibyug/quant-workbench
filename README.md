@@ -136,3 +136,17 @@ OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 uv run --locked python scripts/evaluate
 模型、样本和训练日志存于 `artifacts/models/generated-policy-v1/`，不会提交到 Git。网页选择“生成网络训练分类器 · 策略混合”，使用已有日线数据集运行、发布及展示。未训练时会明确报错，不静默替代模型。生成器使用可微策略代理奖励，完整真实交易能力由日线执行引擎评价；合成准确率与回测盈利不是未来收益保证。
 
 研究报告：`docs/research-results/2026-09-18-principled-strategies.md` 和 `docs/research-results/2026-09-18-generated-policy.md`。本轮分类器尚未超越多数类分类基线或等权收益基线，保持研究候选。
+
+### 历史校准的多尺度模式网络
+
+长期研究新增“历史校准多尺度模式网络”与“纯数学谱分解 · 对照”。输出过去64日的趋势、周期、未解释噪声混合系数，按固定规则映射策略，并共享现金。训练/校准仅使用2025-09-01之前数据；不预测未来收益。
+
+```bash
+uv run --env-file .env --locked --extra neural python scripts/download_policy_history.py
+uv run --locked --extra neural python scripts/train_pattern_policy.py
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 uv run --locked --extra neural python scripts/evaluate_pattern_policy.py
+```
+
+下载器默认从本机数据集 `bfbd52245d674bd487bdd558295ad222` 读取20股名单，可用 `--universe` 指定其他数据集。评价脚本使用该本机后一年日线快照及v1模型，对照前需完成前述v1训练。下载历史与原始价格锚点保存在 `artifacts/models/conditional-policy-v2/history/`，训练权重与日志保存在 `artifacts/models/pattern-policy-v2/`；模型缺失时明确提示先训练。
+
+[训练与12组固定对照](docs/research-results/2026-09-18-pattern-policy-v2.md)：数学教师一致率91.08%，不是未来准确率；本轮网络未胜过直接数学分解，保留研究候选。
