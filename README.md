@@ -30,7 +30,7 @@
 
 ## 直接获取行情
 
-研究面板选择 Alpaca 或 Massive（原 Polygon）、股票和日期，调用供应商 API 下载，不需要 CSV 中转。工作台启动前在运行环境配置凭证：
+研究面板选择 Alpaca 或 Massive（原 Polygon）、股票和日期，调用供应商 API 下载，不需要 CSV 中转。凭证可放在项目根目录 `.env`，统一启动脚本会通过 `uv --env-file` 加载到后端；已有环境变量优先。该文件不提交 Git，凭证不传入前端构建。也可在启动前配置运行环境：
 
 - Alpaca：`APCA_API_KEY_ID`、`APCA_API_SECRET_KEY`；支持 IEX / SIP。
 - Massive：`MASSIVE_API_KEY`，兼容 `POLYGON_API_KEY`。

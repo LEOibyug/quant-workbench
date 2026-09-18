@@ -19,4 +19,8 @@ if (!((major === 22 && minor >= 12) || major === 24)) {
 }'
 npm --prefix frontend ci --no-audit --no-fund
 npm --prefix frontend run build
-exec uv run --locked --extra neural python scripts/start.py "$@"
+env_args=()
+if [[ -f .env ]]; then
+  env_args=(--env-file .env)
+fi
+exec uv run "${env_args[@]}" --locked --extra neural python scripts/start.py "$@"
