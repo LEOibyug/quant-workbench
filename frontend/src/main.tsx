@@ -4,16 +4,28 @@ const Research = lazy(() =>
   import("./Research").then((m) => ({ default: m.Research })),
 );
 import { Workspace } from "./Workspace";
-import { api } from "./api";
+import { ComputeConnection } from "./ComputeConnection";
 import "./style.css";
 function App() {
-  const research = location.pathname !== "/workspace";
-  const [connected, setConnected] = useState(false);
+  const [research, setResearch] = useState(location.pathname !== "/workspace");
+  const [visitedResearch, setVisitedResearch] = useState(research);
+  const [visitedWorkspace, setVisitedWorkspace] = useState(!research);
   useEffect(() => {
-    api("/health")
-      .then(() => setConnected(true))
-      .catch(() => setConnected(false));
+    const update = () => {
+      const next = location.pathname !== "/workspace";
+      setResearch(next);
+      if (next) setVisitedResearch(true);
+      else setVisitedWorkspace(true);
+    };
+    window.addEventListener("popstate", update);
+    return () => window.removeEventListener("popstate", update);
   }, []);
+  function navigate(event: React.MouseEvent<HTMLAnchorElement>, path: string) {
+    if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+    event.preventDefault();
+    history.pushState(null, "", path);
+    window.dispatchEvent(new PopStateEvent("popstate"));
+  }
   return (
     <div className="shell">
       <aside>
@@ -21,40 +33,31 @@ function App() {
           Q<span> / </span>WORKBENCH
         </div>
         <div className="local">
-          {research ? "本地美股研究" : "策略与模型展示"}
+          {research ? "美股策略开发" : "策略与模型展示"}
         </div>
         <nav aria-label="工作区导航">
-          {research && (
-            <a href="/research" aria-current="page">
-              策略研究
-            </a>
-          )}
-          <a
-            href="/workspace"
-            target={research ? "_blank" : undefined}
-            rel="noopener noreferrer"
-            aria-current={!research ? "page" : undefined}
-          >
-            策略与模型展示
-          </a>
+          <a href="/research" onClick={(e) => navigate(e, "/research")}
+            aria-current={research ? "page" : undefined}>策略开发</a>
+          <a href="/workspace" onClick={(e) => navigate(e, "/workspace")}
+            aria-current={!research ? "page" : undefined}>策略与模型展示</a>
         </nav>
         <div className="aside-footer">
-          历史研究 v0.2
+          历史研究 v0.3
           <br />
           规则策略 × 时序模型
           <br />
-          本地计算 · 无实盘下单
+          远程计算 · 本地交互
         </div>
       </aside>
       <main>
         <header>
-          <span>LOCAL / US EQUITIES</span>
-          <span role="status">
-            {connected ? "● 本地 API 已连接" : "○ 正在连接本地 API"}
-          </span>
+          <span>QUANT WORKBENCH / US EQUITIES</span>
+          <span>策略开发与展示</span>
         </header>
-        <Suspense fallback={<p>加载研究面板…</p>}>
-          {research ? <Research /> : <Workspace />}
+        <ComputeConnection />
+        <Suspense fallback={<p>加载面板…</p>}>
+          <div hidden={!research}>{visitedResearch && <Research />}</div>
+          <div hidden={research}>{visitedWorkspace && <Workspace />}</div>
         </Suspense>
       </main>
     </div>

@@ -1,29 +1,61 @@
 # Quant Workbench
 
-本地美股日内策略研究工作台：供应商 API 下载 → 离线训练与冻结实验 → 验证／最终测试 → 收益与成交复盘。前后端分离，研究页与展示页分开。研究页完成训练、验证、测试与复盘，发布独立策略／模型版本后可单向打开展示页；展示页没有返回研究的入口，也不读取实验数据或结果。
+美股日内策略研究工作台：供应商 API 下载 → 离线训练与冻结实验 → 验证／最终测试 → 收益与成交复盘。计算服务与本地工作台分别启动，开发和展示整合在同一网页，可来回切换。
 
-## 启动
+## 分别启动计算服务与本地工作台
 
 Python 3.12，Node.js 22.12+ 或 24。macOS / Linux 原生运行，无容器。
 
+**计算服务器**（训练、回测、模拟、行情获取和数据持久化）：
+
+一键启动（已安装 `uv`）：
+
 ```sh
-uv sync --locked --extra neural --python 3.12
-uv run --extra neural uvicorn quant_workbench.api:app --host 127.0.0.1 --port 8000
+./scripts/start-compute.sh
 ```
 
-另一个终端：
+脚本自动安装锁定的 neural 依赖，以 `0.0.0.0` 监听系统分配的空闲端口，并打印网页应填写的端口。选择没有计算进程、显存占用不超过 512 MiB、利用率不超过 5% 的 NVIDIA GPU，优先选择空闲显存最多的一张；通过 `CUDA_VISIBLE_DEVICES` 将模型限制到该卡。无空闲 GPU 或 CUDA 不可用时明确退出，不自动退回 CPU。GPU 空闲检查是启动时快照，不是集群资源预留，其他用户仍可能随后占用该卡。
+
+可用参数：`--dry-run` 仅检查；`--port 8001` 指定端口（占用则报错）；`--cpu` 显式使用 CPU；`--max-gpu-memory-mib 512` / `--max-gpu-utilization 5` 调整空闲阈值。脚本前台运行，Ctrl+C 停止。已有计算服务使用同一数据目录时不要重复启动。
+
+手动指定监听地址及端口：
+
+```sh
+uv sync --locked --extra neural --python 3.12
+uv run --extra neural quant-workbench serve-compute --host 0.0.0.0 --port 8001
+```
+
+在服务器配置供应商密钥，`QUANT_DATA_DIR` 指向数据目录（默认 `data`）。已有数据目录可直接沿用，无须迁移格式。单个数据目录只启动一个计算进程，不使用多 worker 或热重载。
+
+**本地机器**只需轻量 Python 网关和前端，无须安装 PyTorch 或复制模型、行情：
+
+```sh
+uv venv .venv-local --python 3.12
+uv pip install --python .venv-local/bin/python -r requirements-local.txt
+.venv-local/bin/python -m uvicorn quant_workbench.local_api:app --app-dir backend/src --host 127.0.0.1 --port 8000
+```
+
+若本地已经安装完整项目，也可运行 `uv run quant-workbench serve-local`。
+
+另一个本地终端：
 
 ```sh
 cd frontend
-npm ci --cache ../tmp/npm-cache
+npm ci
 npm run dev
 ```
 
-打开 [研究面板](http://127.0.0.1:5173/research) 或 [策略与模型展示](http://127.0.0.1:5173/workspace)。
+打开 [工作台](http://127.0.0.1:5173/research)，在顶部填写计算服务器 IP／主机名、端口（默认 `8001`），点击「连接并保存」。验证成功后保存到当前浏览器，开发页和展示页共用连接；左侧导航支持双向切换并保留本次页面状态。两项服务也可以在同一机器上分别启动。
+
+网页 → 本地网关（8000）→ 计算服务（8001）。网关转发行情上传、任务提交、进度、结果和 CSV 下载；不运行模型，不写入计算数据目录。进度采用自动轮询和断线重试，训练／下载任务 ID 按服务器地址保存。关闭网页不终止已提交任务，重新打开或重新连接后可继续查看；回测和模拟也可从各自历史记录恢复。计算服务重启会将中断任务标记失败，不会自动续算。
+
+计算服务应部署在可信局域网／VPN 内；当前不提供公网身份认证。本地网关保持 `127.0.0.1` 监听。也可通过 SSH 隧道把服务器的计算端口转发到本机，再在页面填写 `127.0.0.1` 和转发端口。`QUANT_API_TARGET` 仅用于改变 Vite 的**本地网关**目标，不应直接指向计算服务器。
+
+旧入口 `quant_workbench.api:app` 仍作为计算服务兼容入口；新部署请使用上述拆分入口。详细接口约定见 [远程计算服务](docs/remote-compute.md)。
 
 ## 直接获取行情
 
-研究面板选择 Alpaca 或 Massive（原 Polygon）、股票和日期，调用供应商 API 下载，不需要 CSV 中转。后端启动前在本地环境配置凭证：
+研究面板选择 Alpaca 或 Massive（原 Polygon）、股票和日期，调用供应商 API 下载，不需要 CSV 中转。计算服务启动前在服务器环境配置凭证：
 
 - Alpaca：`APCA_API_KEY_ID`、`APCA_API_SECRET_KEY`；支持 IEX / SIP。
 - Massive：`MASSIVE_API_KEY`，兼容 `POLYGON_API_KEY`。

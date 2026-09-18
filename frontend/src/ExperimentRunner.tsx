@@ -272,10 +272,8 @@ export function ExperimentRunner({ selectedId }: { selectedId?: string }) {
                 <a
                   className="button primary"
                   href={`/workspace?deployment=${published.id}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
                 >
-                  打开展示页 ↗
+                  切换到展示页 →
                 </a>
               )}
               <p className="muted">

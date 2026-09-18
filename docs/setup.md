@@ -23,7 +23,9 @@ quant-workbench doctor
 后端与前端分别运行：
 
 ```sh
-uv run uvicorn quant_workbench.api:app --host 127.0.0.1 --port 8000
+uv run quant-workbench serve-compute --port 8001
+# 另一个终端启动本地网关
+uv run quant-workbench serve-local --port 8000
 ```
 
 ```sh
@@ -32,7 +34,7 @@ npm ci
 npm run dev
 ```
 
-前端地址为`http://127.0.0.1:5173`，研究页与策略／模型展示页分别为`/research`、`/workspace`；实验回测在研究页，展示页仅接受发布的策略模型且无反向研究导航。Vite把`/api`转发到本机8000端口，不必放宽CORS。HTTP客户端包含SOCKS代理依赖，读取标准HTTP_PROXY / HTTPS_PROXY / ALL_PROXY环境配置。API文档位于`http://127.0.0.1:8000/docs`。这是本地开发服务，不直接暴露公网。
+前端地址为`http://127.0.0.1:5173`，研究页与策略／模型展示页分别为`/research`、`/workspace`；实验回测在研究页，展示页仅接受发布的策略模型，侧栏支持返回开发页。Vite把`/api`转发到本机8000网关，再由网关连接网页中设置的计算服务器，不必放宽CORS。远程部署与仅安装轻量本地依赖见[远程计算服务](remote-compute.md)和[README](../README.md)。HTTP客户端包含SOCKS代理依赖，读取标准HTTP_PROXY / HTTPS_PROXY / ALL_PROXY环境配置。计算 API 文档位于计算服务器的`http://127.0.0.1:8001/docs`。这是本地开发服务，不直接暴露公网。
 
 当前提供供应商API直连下载、策略回测、离线／在线时序模型、冻结实验与结果展示。交易网关尚未实现。两面板属于界面分工，不提供安全隔离。后端只使用单进程，勿开启多个worker。
 
@@ -49,7 +51,7 @@ uv run quant-workbench doctor
 
 ## 可选PyTorch与设备自适应
 
-GRU安装和启动必须带neural extra：`uv sync --locked --extra neural`、`uv run --extra neural uvicorn quant_workbench.api:app --host 127.0.0.1 --port 8000`。默认CUDA→CPU（MPS支持已放弃，面向CUDA生态开发），`QUANT_TORCH_DEVICE`可手动指定auto/cuda/cpu，模型跨设备保存为CPU权重。详见[序列网络](sequence-model.md)。
+GRU安装和启动必须带neural extra：`uv sync --locked --extra neural`、`uv run --extra neural quant-workbench serve-compute --port 8001`。默认CUDA→CPU（MPS支持已放弃，面向CUDA生态开发），`QUANT_TORCH_DEVICE`可手动指定auto/cuda/cpu，模型跨设备保存为CPU权重。详见[序列网络](sequence-model.md)。
 
 ### NVIDIA服务器
 

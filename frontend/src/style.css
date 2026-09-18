@@ -736,3 +736,9 @@ pre {
     position: static;
   }
 }
+
+.compute-connection { margin-top: 18px; }
+.connection-fields { display: flex; flex-wrap: wrap; align-items: end; gap: 12px; margin: 12px 0; }
+.connection-fields label { flex: 1; min-width: 110px; }
+.connection-fields label:nth-child(2) { flex: 3; }
+[hidden] { display: none !important; }

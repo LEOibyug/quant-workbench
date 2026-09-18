@@ -1,8 +1,16 @@
+export const computeUrl = localStorage.getItem("quant.compute.url") || "http://127.0.0.1:8001";
+
+export function computeFetch(path: string, options?: RequestInit) {
+  const headers = new Headers(options?.headers);
+  headers.set("X-Quant-Compute-URL", computeUrl);
+  return fetch(path, { ...options, headers });
+}
+
 export async function api<T = unknown>(
   path: string,
   options?: RequestInit,
 ): Promise<T> {
-  const response = await fetch(`/api${path}`, options);
+  const response = await computeFetch(`/api${path}`, options);
   if (!response.ok) {
     let detail: unknown = "请求失败";
     try {

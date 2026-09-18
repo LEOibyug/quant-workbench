@@ -216,7 +216,7 @@ export function Research() {
         <div>
           <div className="eyebrow">RESEARCH LAB</div>
           <h1>从数据到可复现的策略</h1>
-          <p>先冻结开发范围、策略与成本，再依次验证。所有运算在本地完成。</p>
+          <p>先冻结开发范围、策略与成本，再依次验证。计算任务由当前连接的服务器执行。</p>
         </div>
         <span className="badge">1 MIN · LONG ONLY</span>
       </div>
@@ -255,11 +255,11 @@ export function Research() {
         </div>
         <p className="muted">
           通过数据提供商 API
-          直接下载到本地。示例只用于检查流程，不代表真实股票表现。
+          直接下载到计算服务器。示例只用于检查流程，不代表真实股票表现。
         </p>
         <div className="form-grid">
           <label>
-            本地数据集
+            服务器数据集
             <select
               value={selected}
               onChange={(e) => {
@@ -308,7 +308,7 @@ export function Research() {
         <div className="provider-form">
           <h3>API 直连行情</h3>
           <p className="muted">
-            密钥在本地后端配置。下载后存为可复现快照，研究时直接选择该数据集。当前不自动补齐缺失分钟。
+            密钥在计算服务器环境中配置。下载后存为可复现快照，研究时直接选择该数据集。当前不自动补齐缺失分钟。
           </p>
           <form
             className="form-grid"
