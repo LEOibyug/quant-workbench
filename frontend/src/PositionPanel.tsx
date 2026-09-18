@@ -31,8 +31,9 @@ export interface PositionDeployment {
     allocation?: AllocationConfig;
   };
 }
-export function PositionPanel({ datasets, modelEnabled = true, deployment }: {
+export function PositionPanel({ datasets, modelEnabled = true, deployment, selectedDatasetId, onDatasetChange }: {
   datasets: Dataset[]; modelEnabled?: boolean; deployment?: PositionDeployment;
+  selectedDatasetId?: string; onDatasetChange?: (id: string) => void;
 }) {
   const pendingKey = deployment ? `quant.pending.position.${deployment.id}` : "quant.pending.position.operation";
   const lastKey = deployment ? `quant.last.position.${deployment.id}` : "quant.last.position.operation";
@@ -46,7 +47,7 @@ export function PositionPanel({ datasets, modelEnabled = true, deployment }: {
   const [publishing, setPublishing] = useState(false);
   const [datasetId, setDatasetId] = useState("");
   const dailyDatasets = datasets.filter((d) => d.timeframe === "1Day");
-  const dataset = dailyDatasets.find((d) => d.id === datasetId) || dailyDatasets[0];
+  const dataset = dailyDatasets.find((d) => d.id === (selectedDatasetId ?? datasetId)) || dailyDatasets[0];
   const [busy, setBusy] = useState(false);
   const [progress, setProgress] = useState<ProgressState | null>(null);
   const [result, setResult] = useState<PositionResult | null>(null);
@@ -154,7 +155,7 @@ export function PositionPanel({ datasets, modelEnabled = true, deployment }: {
       </div>
       {marketMode === "daily" && <p className="notice">直接获取日线和预热历史，无需预先下载分钟数据。流动性按前一交易日总成交量 / 常规交易分钟数估算；不代表真实开盘可成交量。</p>}
     </>}
-    {(!deployment || marketMode === "dataset") && <label>日线数据集<select value={dataset?.id || ""} disabled={busy} onChange={(e) => setDatasetId(e.target.value)}>
+    {(!deployment || marketMode === "dataset") && <label>日线数据集<select value={dataset?.id || ""} disabled={busy} onChange={(e) => { setDatasetId(e.target.value); onDatasetChange?.(e.target.value); }}>
       {dailyDatasets.map((d) => <option key={d.id} value={d.id}>{d.name}</option>)}
     </select></label>}
     {!dataset && (!deployment || marketMode === "dataset") && <p className="notice">暂无日线数据集，请在上方 API 直连行情中选择“长期 · 日 K 线”并下载；已有分钟线不用于长期实验。</p>}

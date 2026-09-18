@@ -18,6 +18,7 @@ const tomorrow = (day: string) =>
 export function Research() {
   const [datasets, setDatasets] = useState<Dataset[]>([]),
     [selected, setSelected] = useState("");
+  const [longDatasetId, setLongDatasetId] = useState("");
   const [symbols, setSymbols] = useState<string[]>([]),
     [dates, setDates] = useState(["", "", "", ""]);
   const [busy, setBusy] = useState(false),
@@ -37,9 +38,14 @@ export function Research() {
   const [minimum, setMinimum] = useState("1");
   const dataset = datasets.find((d) => d.id === selected && (d.timeframe || "1Min") === "1Min");
   const [downloadTimeframe, setDownloadTimeframe] = useState("1Min");
+  const currentLongId = longDatasetId || datasets.find((d) => d.timeframe === "1Day")?.id || "";
+  const activeDataset = horizonType === "long" ? datasets.find((d) => d.id === currentLongId) : dataset;
   const choose = (d: Dataset) => {
+    if (d.timeframe === "1Day") {
+      setLongDatasetId(d.id); setHorizonType("long"); setDownloadTimeframe("1Day"); return;
+    }
+    setHorizonType("short"); setDownloadTimeframe("1Min");
     setSelected(d.id);
-    if (d.timeframe === "1Day") setHorizonType("long");
     setSymbols(d.symbols);
     setDates([
       d.start,
@@ -274,20 +280,26 @@ export function Research() {
         </p>
         <div className="form-grid">
           <label>
-            短期分钟线数据集
+            行情数据集（短期 / 长期）
             <select
-              value={selected}
+              value={horizonType === "long" ? currentLongId : selected}
+              disabled={busy}
               onChange={(e) => {
                 const d = datasets.find((x) => x.id === e.target.value);
                 if (d) choose(d);
               }}
             >
               <option value="">选择数据集</option>
-              {datasets.filter((d) => (d.timeframe || "1Min") === "1Min").map((d) => (
-                <option key={d.id} value={d.id}>
-                  {d.name}
-                </option>
-              ))}
+              <optgroup label="长期 · 日线">
+                {datasets.filter((d) => d.timeframe === "1Day").map((d) => <option key={d.id} value={d.id}>
+                  [日线] {d.name} · {d.symbols.length} 股 · {d.rows.toLocaleString()} 条 · {d.id.slice(0, 6)}
+                </option>)}
+              </optgroup>
+              <optgroup label="短期 · 分钟线">
+                {datasets.filter((d) => (d.timeframe || "1Min") === "1Min").map((d) => <option key={d.id} value={d.id}>
+                  [分钟线] {d.name} · {d.symbols.length} 股 · {d.id.slice(0, 6)}
+                </option>)}
+              </optgroup>
             </select>
           </label>
           <details>
@@ -400,10 +412,10 @@ export function Research() {
           </small>
         </div>
         {activity === "data" && <ProgressNotice value={progress} />}
-        {dataset && (
+        {activeDataset && (
           <div className="notice">
-            {dataset.synthetic ? "合成数据" : dataset.source} ·{" "}
-            {dataset.rows.toLocaleString()} 条 · {dataset.start} — {dataset.end}
+            {activeDataset.timeframe === "1Day" ? "长期日线" : "短期分钟线"} · {activeDataset.synthetic ? "合成数据" : activeDataset.source} ·{" "}
+            {activeDataset.rows.toLocaleString()} 条 · {activeDataset.start} — {activeDataset.end}
           </div>
         )}
       </section>
@@ -975,7 +987,8 @@ export function Research() {
       </div>
       </div>
       <div id="position" hidden={horizonType !== "long"}>
-        <PositionPanel datasets={datasets} modelEnabled={longEnabled} />
+        <PositionPanel datasets={datasets} modelEnabled={longEnabled}
+          selectedDatasetId={currentLongId} onDatasetChange={setLongDatasetId} />
       </div>
     </>
   );
