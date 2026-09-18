@@ -18,8 +18,17 @@ class StrategyConfig(BaseModel):
         "adaptive_intraday",
         "intraday_momentum",
         "scaled_reversion",
+        "ou_reversion",
+        "ou_scaling",
+        "kalman_trend",
+        "bayesian_session",
     ] = "adaptive"
     fast: int = Field(default=5, ge=2, le=60)
+    stat_window: int = Field(default=120, ge=30, le=390)
+    stat_horizon: int = Field(default=15, ge=5, le=60)
+    stat_entry_z: float = Field(default=1.5, ge=0.5, le=4)
+    stat_confidence: float = Field(default=0.5, ge=0, le=3)
+    stat_process_noise: float = Field(default=0.001, ge=0.00001, le=0.1)
     slow: int = Field(default=20, ge=3, le=120)
     flatten_minutes: int = Field(default=5, ge=1, le=30)
     opening_minutes: int = Field(default=15, ge=5, le=60)

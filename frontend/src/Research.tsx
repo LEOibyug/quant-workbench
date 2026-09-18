@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { ExperimentRunner } from "./ExperimentRunner";
+import { PositionPanel } from "./PositionPanel";
 import { api, post } from "./api";
 import {
   ProgressNotice,
@@ -172,6 +173,12 @@ export function Research() {
             regime_window: n("regime_window"),
             min_reward_risk: n("reward_risk"),
             reversion_atr: n("reversion_atr"),
+            stat_window: n("stat_window"),
+            max_scaling_lots: n("stat_lots"),
+            stat_horizon: n("stat_horizon"),
+            stat_entry_z: n("stat_entry_z"),
+            stat_confidence: n("stat_confidence"),
+            stat_process_noise: n("stat_process_noise"),
           },
           model: enabled
             ? {
@@ -223,7 +230,8 @@ export function Research() {
       <nav className="anchor-nav" aria-label="页面分区导航">
         {[
           ["#data", "行情数据"],
-          ["#setup", "冻结实验"],
+          ["#setup", "短期实验"],
+          ["#position", "长期持仓"],
           ["#model", "时序模型"],
           ["#evaluation", "实验验证"],
           ["#simulation", "单股模拟"],
@@ -409,7 +417,9 @@ export function Research() {
               </label>
               <label>
                 策略
-                <select name="strategy" defaultValue="regime_adaptive">
+                <select name="strategy" defaultValue="regime_adaptive" onChange={(e) => {
+                  if (["ou_reversion", "ou_scaling", "kalman_trend", "bayesian_session"].includes(e.target.value)) setEnabled(false);
+                }}>
                   {Object.entries(strategyNames).map(([k, v]) => (
                     <option key={k} value={k}>
                       {v}
@@ -514,6 +524,22 @@ export function Research() {
                 <input name="reversion" type="number" defaultValue={15} />
               </label>
             </div>
+            <details>
+              <summary>统计策略参数（OU / Kalman / 贝叶斯）</summary>
+              <p className="muted">
+                使用当前及此前已完成行情估计收益与不确定性，预期收益须覆盖成本才入场。
+                统计策略自带模型，无需额外启用下方时序模型。贝叶斯策略固定使用前60个已完成交易日、开盘30分钟预测，不确定性扣减倍数可调。
+                研究候选，尚未证明未来盈利。
+              </p>
+              <div className="form-grid">
+                <label>估计窗口 分钟<input name="stat_window" type="number" min={30} max={390} defaultValue={120} /></label>
+                <label>分批策略最多批数<input name="stat_lots" type="number" min={1} max={5} defaultValue={3} /></label>
+                <label>预测跨度 分钟<input name="stat_horizon" type="number" min={5} max={60} defaultValue={15} /></label>
+                <label>OU 入场偏离 标准差<input name="stat_entry_z" type="number" min={0.5} max={4} step={0.1} defaultValue={1.5} /></label>
+                <label>不确定性扣减倍数<input name="stat_confidence" type="number" min={0} max={3} step={0.1} defaultValue={0.5} /></label>
+                <label>Kalman 趋势噪声比<input name="stat_process_noise" type="number" min={0.00001} max={0.1} step={0.00001} defaultValue={0.001} /></label>
+              </div>
+            </details>
             <details open>
               <summary>增强策略风控（含趋势回调 / 状态组合）</summary>
               <p className="muted">
@@ -929,6 +955,9 @@ export function Research() {
       )}
       <div id="evaluation">
         <ExperimentRunner selectedId={created?.id} />
+      </div>
+      <div id="position">
+        <PositionPanel datasets={datasets} />
       </div>
     </>
   );

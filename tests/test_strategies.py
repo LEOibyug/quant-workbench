@@ -205,6 +205,11 @@ def test_basket_regime_gate_is_causal_and_conservative():
     mutated.loc[late, "close"] *= 3
     gate2 = basket_regime_gate(mutated, config)
     assert all(gate[f"{d.date()}"] == gate2[f"{d.date()}"] for d in days[:15])
+    # Today's final close is future information for today's entry decisions.
+    mutated = frame.copy()
+    mutated.loc[mutated.timestamp >= days[10], "close"] *= 0.1
+    changed = basket_regime_gate(mutated, config)
+    assert all(gate[str(d.date())] == changed[str(d.date())] for d in days[:11])
     assert StrategyConfig().regime_gate == "off"
     assert basket_regime_gate(frame, StrategyConfig()) == {}
 
@@ -347,3 +352,4 @@ def test_tranche_uptrend_requirement_blocks_falling_day_entries():
         "2024-01-03", "2024-01-04",
     )
     assert any(t["side"] == "buy" for t in unrestricted["trades"])
+    assert sum(t["side"] == "buy" for t in unrestricted["trades"]) <= 3

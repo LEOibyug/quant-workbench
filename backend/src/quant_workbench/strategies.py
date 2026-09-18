@@ -6,11 +6,13 @@ import numpy as np
 import pandas as pd
 
 from quant_workbench.costs import estimate_round_trip
+from quant_workbench.statistical import StatisticalForecast
 
 REGIME_STRATEGIES = {"trend_pullback", "regime_adaptive", "adaptive_intraday"}
-SCALING_STRATEGIES = {"scaled_reversion"}
+SCALING_STRATEGIES = {"scaled_reversion", "ou_scaling"}
 REFINED_STRATEGIES = (
-    {"trend_breakout", "range_reversion", "intraday_momentum"}
+    {"trend_breakout", "range_reversion", "intraday_momentum", "ou_reversion", "kalman_trend",
+     "bayesian_session"}
     | REGIME_STRATEGIES
     | SCALING_STRATEGIES
 )
@@ -21,6 +23,8 @@ REVERSION_GATE_STRATEGIES = {
     "regime_adaptive",
     "adaptive_intraday",
     "scaled_reversion",
+    "ou_reversion",
+    "ou_scaling",
 }
 
 
@@ -42,14 +46,16 @@ def basket_regime_gate(frame, config):
         .pivot(index="_d", columns="symbol", values="close")
         .sort_index()
     )
-    index = (1 + daily.pct_change().mean(axis=1).fillna(0)).cumprod()
+    index = (1 + daily.pct_change(fill_method=None).mean(axis=1).fillna(0)).cumprod()
     window = config.regime_window_days
     ok = {}
     for i, day in enumerate(daily.index):
-        if i < window:
+        if i < window + 1:
             ok[str(day)] = False
             continue
-        trailing = index.iloc[i - window : i + 1]
+        # At today's open only yesterday's close is known. N returns require
+        # N+1 completed daily closes; never include today's final close.
+        trailing = index.iloc[i - window - 1 : i]
         drift_bps = float(trailing.iloc[-1] / trailing.iloc[0] - 1) * 10000
         path = float(trailing.diff().abs().sum())
         efficiency = (
@@ -76,8 +82,9 @@ def basket_regime_gate(frame, config):
 
 
 class IntradayRules:
-    def __init__(self, config, strategy, past=None):
+    def __init__(self, config, strategy, past=None, session_forecasts=None):
         self.config, self.strategy = config, strategy
+        self.session_forecasts = session_forecasts or {}
         self.daily_noise = deque(maxlen=20)
         if past is not None and len(past):
             day = past.timestamp.dt.tz_convert("America/New_York").dt.date
@@ -110,10 +117,17 @@ class IntradayRules:
         self.lots = []
         self.pending_atr = 0.0
         self.pending_cost_bps = 0.0
+        self.add_entry = False
+        self.last_entry_count = -10000
+        self.statistical = (
+            StatisticalForecast(self.config, self.strategy)
+            if self.strategy in {"ou_reversion", "kalman_trend", "ou_scaling"} else None
+        )
 
     def filled(self, side, price, remaining, qty=None):
         if side == "buy":
             self.entries += 1
+            self.last_entry_count = self.count + 1
             self.entry_mode = self.pending_mode
             self.entry_bar = self.count + 1
             self.peak = price
@@ -190,6 +204,7 @@ class IntradayRules:
         if (
             self.day_halted
             or self.entries >= min(cfg.max_daily_entries, cfg.max_scaling_lots)
+            or self.count - self.last_entry_count < cfg.cooldown_minutes
             or (not shares and self.count - self.last_exit <= cfg.cooldown_minutes)
             or len(self.bars) < max(cfg.slow + 1, cfg.atr_window + 1)
             or bar.timestamp
@@ -242,12 +257,24 @@ class IntradayRules:
             and deviation_bps <= 6 * band_bps  # 过深偏离视为结构性下跌，不接飞刀
             and stabilized
         )
+        if self.statistical is not None:
+            forecast = self.statistical.forecast()
+            if forecast is None:
+                return shares > 0, None
+            conservative = forecast["mean_bps"] - cfg.stat_confidence * forecast["uncertainty_bps"]
+            signal = (
+                forecast["eligible"] and stabilized
+                and forecast["z_score"] <= -(cfg.stat_entry_z + 0.5 * self.entries)
+                and conservative > cfg.rule_cost_multiplier * cost_bps
+            )
+            target_distance = max(forecast["mean_bps"], 0) / 10000 * bar.close
         self.entry_diagnostic = "目标空间不足以覆盖交易成本"
         signal = signal and target_distance / bar.close * 10000 > (
             cfg.rule_cost_multiplier * cost_bps + 1
         )
         if signal:
             self.entry_diagnostic = "规则入场候选"
+            self.add_entry = True
             self.pending_distance = stop
             self.pending_take = min(target_distance, cfg.take_atr * atr)
             self.pending_mode = "scaled"
@@ -263,8 +290,11 @@ class IntradayRules:
 
     def observe(self, bar, shares, entry_price, cash, close_time):
         cfg = self.config
+        self.add_entry = False
         self.count += 1
         self.bars.append(bar)
+        if self.statistical is not None:
+            self.statistical.observe(bar.close)
         self.ranges.append((bar.high - bar.low) / bar.close)
         self.pv += (bar.high + bar.low + bar.close) / 3 * bar.volume
         self.volume += bar.volume
@@ -342,12 +372,32 @@ class IntradayRules:
         fast, slow = close[-cfg.fast :].mean(), close[-cfg.slow :].mean()
         relative_volume = bar.volume / max(np.mean([b.volume for b in bars[:-1]]), 1)
         self.entry_diagnostic = "形态条件未满足"
-        if self.strategy in REGIME_STRATEGIES:
+        if self.statistical is not None:
+            forecast = self.statistical.forecast()
+            self.entry_diagnostic = "统计模型证据或预期净收益不足"
+            if forecast is None:
+                return False, None
+            conservative = forecast["mean_bps"] - cfg.stat_confidence * forecast["uncertainty_bps"]
+            signal = forecast["eligible"] and conservative > cfg.rule_cost_multiplier * cost_bps
+            target_distance = bar.close * max(forecast["mean_bps"], 0) / 10000
+            self.pending_mode = self.strategy
+        elif self.strategy in REGIME_STRATEGIES:
             signal, target_distance, mode = self.regime_signal(bars, close, atr, vwap)
             self.pending_mode = mode
             signal = signal and min(target_distance, cfg.take_atr * atr) >= (
                 cfg.min_reward_risk * stop
             )
+        elif self.strategy == "bayesian_session":
+            self.entry_diagnostic = "等待开盘半小时或贝叶斯净收益不足"
+            forecast = self.session_forecasts.get(
+                (bar.symbol, str(bar.timestamp.tz_convert("America/New_York").date()))
+            )
+            if self.count != 30 or forecast is None:
+                return False, None
+            conservative = forecast["mean_bps"] - cfg.stat_confidence * forecast["uncertainty_bps"]
+            signal = conservative > cfg.rule_cost_multiplier * cost_bps
+            target_distance = bar.close * max(forecast["mean_bps"], 0) / 10000
+            self.pending_mode = "momentum"  # Hold to flatten, subject to stop / daily loss limit.
         elif self.strategy == "intraday_momentum":
             # Gao-Han-Li-Zhou (2018): 当日已实现动量延续到尾盘；仅尾盘窗口入场，持有到收盘。
             day_open = bars[0].open

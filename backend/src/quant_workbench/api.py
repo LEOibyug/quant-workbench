@@ -11,6 +11,7 @@ from fastapi.responses import FileResponse, JSONResponse
 from fastapi.staticfiles import StaticFiles
 
 from quant_workbench.operations import router as operations_router
+from quant_workbench.position_api import router as position_router
 from quant_workbench.repository import Repository
 from quant_workbench.research_api import router
 from quant_workbench.simulation_api import router as simulation_router
@@ -27,6 +28,7 @@ app = FastAPI(title="Quant Workbench", version="0.3.0", lifespan=lifespan)
 app.include_router(router)
 app.include_router(operations_router)
 app.include_router(simulation_router)
+app.include_router(position_router)
 
 
 @app.exception_handler(ValueError)

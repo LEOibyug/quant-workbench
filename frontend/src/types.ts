@@ -5,6 +5,10 @@ export const phaseNames = {
   test: "最终测试",
 };
 export const strategyNames: Record<string, string> = {
+  ou_reversion: "OU / AR(1) 统计均值回复",
+  ou_scaling: "OU 统计分批交易（各批独立退出）",
+  kalman_trend: "Kalman 局部趋势预测",
+  bayesian_session: "贝叶斯开盘预测（每日最多一次）",
   trend_pullback: "趋势回调再入场",
   regime_adaptive: "趋势/震荡状态组合",
   adaptive_intraday: "局部均价回归 / 趋势恢复",

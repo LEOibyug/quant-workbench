@@ -70,6 +70,17 @@ def create_experiment(repo: Repository, request: ExperimentInput, progress=None)
 
 
 def has_prior_exposure(db, symbols, start, end):
+    # Long-horizon research also reveals prices/results in any overlapping test window.
+    for row in db.execute("SELECT body FROM operations"):
+        operation = json.loads(row[0])
+        previous = operation.get("request", {})
+        if (
+            operation.get("kind") == "position"
+            and set(previous.get("symbols", [])) & set(symbols)
+            and previous.get("start", end) < end
+            and start < previous.get("end", start)
+        ):
+            return True
     for row in db.execute(
         "SELECT e.body FROM experiments e JOIN runs r ON e.id=r.experiment_id "
         "WHERE r.phase='test' AND r.exposed=1"

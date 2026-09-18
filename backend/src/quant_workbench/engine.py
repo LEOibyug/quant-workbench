@@ -9,6 +9,7 @@ import pandas as pd
 from quant_workbench.costs import estimate_round_trip
 from quant_workbench.market_data import require_complete, schedule
 from quant_workbench.models import StrategyConfig
+from quant_workbench.statistical import bayesian_session_forecasts
 from quant_workbench.strategies import (
     REFINED_STRATEGIES,
     REVERSION_GATE_STRATEGIES,
@@ -17,7 +18,7 @@ from quant_workbench.strategies import (
     basket_regime_gate,
 )
 
-ENGINE_VERSION = "minute-v5-regime-sequence"
+ENGINE_VERSION = "minute-v6-causal-regime-statistics"
 
 
 def simulate(
@@ -40,8 +41,12 @@ def simulate(
         raise ValueError("没有选择股票")
     times = pd.DatetimeIndex(frame.timestamp.unique()).sort_values()
     closes = {str(row.Index.date()): row.close for row in schedule(start, end).itertuples()}
-    # 门控基于frame内更早的已完成交易日；frame不含回测前历史时前N日保守禁入。
-    regime_ok = basket_regime_gate(frame, config)
+    # Include available pre-evaluation history, but the gate only reads prior closes.
+    regime_ok = basket_regime_gate(pd.concat([past, frame], ignore_index=True), config)
+    session_forecasts = (
+        bayesian_session_forecasts(pd.concat([past, frame], ignore_index=True), config)
+        if "bayesian_session" in {config.strategy, *(strategies or {}).values()} else {}
+    )
     equity = np.zeros(len(times))
     benchmark = np.zeros(len(times))
     trades, positions, roundtrips, contributions = [], [], [], []
@@ -93,7 +98,7 @@ def simulate(
         if strategy == "adaptive":
             strategy = "sma"
         rules = (
-            IntradayRules(config, strategy, past[past.symbol == symbol])
+            IntradayRules(config, strategy, past[past.symbol == symbol], session_forecasts)
             if strategy in REFINED_STRATEGIES
             else None
         )
@@ -144,7 +149,9 @@ def simulate(
                     fill_reason, selling_lot = lot_reason, lot_index
                 elif shares and not wanted:
                     side, qty = "sell", min(shares, cap)
-                elif wanted and (not shares or strategy in SCALING_STRATEGIES):
+                elif wanted and (
+                    not shares or (strategy in SCALING_STRATEGIES and rules.add_entry)
+                ):
                     side = "buy"
                     price = row.open * (1 + (config.spread_bps / 2 + config.slippage_bps) / 10000)
                     qty = max(0, min(cap, math.floor(cash / price)))
@@ -296,7 +303,9 @@ def simulate(
                     "volume": int(row.volume),
                 }
             )
-            rule_candidate = bool(target and not shares)
+            rule_candidate = bool(target and (
+                not shares or (strategy in SCALING_STRATEGIES and rules.add_entry)
+            ))
             if model_filter is not None:
                 estimated_cost = estimate_round_trip(
                     row.close,
@@ -314,8 +323,11 @@ def simulate(
                     }
                 )
                 # The model gates entries (including scaled tranches); exits never need it.
-                if target and (not shares or strategy in SCALING_STRATEGIES):
-                    target = model_decision["allow_entry"]
+                if rule_candidate:
+                    if not shares:
+                        target = model_decision["allow_entry"]
+                    elif not model_decision["allow_entry"]:
+                        rules.add_entry = False
                     pending_model_fraction = model_decision.get("risk_fraction", 1.0)
             funnel["bars"] += 1
             if rule_candidate:
