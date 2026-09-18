@@ -77,4 +77,6 @@ uv run quant-workbench study --dataset 数据集ID \
 
 盈利策略搜索日志（vwap回归参数搜索、自适应门控对照与尾盘动量策略）：验证期最优+3.40%未通过一次性最终测试（-3.11%），样本外盈利未成立，全部尝试见[搜索日志](docs/research-results/2026-09-18-profitable-strategy-log.md)。
 
+第二轮机制探索（同日志）：新增**因果市场状态门控**（`regime_gate`，basket前N日漂移/效率，只禁开仓不碍退出）与**walk-forward评估协议**（[scripts/walk_forward.py](scripts/walk_forward.py)）；门控消除全部深度亏损月（walk-forward 3个月+1.57%、无亏损月）。按需求实现**分批波动收割** `scaled_reversion`（逐档加仓、各批独立止盈止损，`max_scaling_lots`），本数据上弱于单批，保留为可选策略。
+
 [入场稀疏与三组佣金对照](docs/research-results/2026-09-18-entry-and-commissions.md)：旧严格模型换佣金仍仅3笔；新规则与标准化GRU仓位调节有241—243笔，保守费用下仍亏损，作为研究候选保留。

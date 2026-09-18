@@ -9,7 +9,13 @@ import pandas as pd
 from quant_workbench.costs import estimate_round_trip
 from quant_workbench.market_data import require_complete, schedule
 from quant_workbench.models import StrategyConfig
-from quant_workbench.strategies import REFINED_STRATEGIES, IntradayRules
+from quant_workbench.strategies import (
+    REFINED_STRATEGIES,
+    REVERSION_GATE_STRATEGIES,
+    SCALING_STRATEGIES,
+    IntradayRules,
+    basket_regime_gate,
+)
 
 ENGINE_VERSION = "minute-v5-regime-sequence"
 
@@ -34,6 +40,8 @@ def simulate(
         raise ValueError("没有选择股票")
     times = pd.DatetimeIndex(frame.timestamp.unique()).sort_values()
     closes = {str(row.Index.date()): row.close for row in schedule(start, end).itertuples()}
+    # 门控基于frame内更早的已完成交易日；frame不含回测前历史时前N日保守禁入。
+    regime_ok = basket_regime_gate(frame, config)
     equity = np.zeros(len(times))
     benchmark = np.zeros(len(times))
     trades, positions, roundtrips, contributions = [], [], [], []
@@ -80,6 +88,7 @@ def simulate(
         pv = 0.0
         total_volume = 0.0
         model_decision = {"allow_entry": False}
+        pending_lot_sells = []
         strategy = strategies.get(symbol, config.strategy)
         if strategy == "adaptive":
             strategy = "sma"
@@ -101,6 +110,7 @@ def simulate(
                 benchmark_capital = benchmark_value
                 benchmark_open = float(row.open)
                 session, target, signal_time = day, False, None
+                pending_lot_sells = []
                 history.clear()
                 prices.clear()
                 opening_high, pv, total_volume, session_bars = 0.0, 0.0, 0.0, 0
@@ -110,15 +120,31 @@ def simulate(
             # A scheduled close exit is issued ahead of the final bar.
             flatten = ts >= close_time
             wanted = False if flatten or exit_pending else target
+            if (
+                wanted
+                and not shares
+                and regime_ok
+                and strategy in REVERSION_GATE_STRATEGIES
+                and not regime_ok.get(day, True)
+            ):
+                # 状态门控只禁止新开仓；持仓退出与收盘清仓不受影响。
+                wanted = False
+                funnel["regime_blocked_entries"] = funnel.get("regime_blocked_entries", 0) + 1
             fill_reason = "session_flatten" if flatten else (exit_reason or strategy)
             qty = 0
             side = None
             # Previous completed minute's volume avoids using future volume at the open.
             cap = max(0, math.floor(previous_volume * config.participation))
             if signal_time is not None:
-                if shares and not wanted:
+                selling_lot = None
+                if pending_lot_sells and shares and not exit_pending:
+                    # 分批退出：只卖触发条件的批次，其余持仓保留。
+                    lot_index, lot_qty, lot_reason = pending_lot_sells[0]
+                    side, qty = "sell", min(lot_qty, shares, cap)
+                    fill_reason, selling_lot = lot_reason, lot_index
+                elif shares and not wanted:
                     side, qty = "sell", min(shares, cap)
-                elif wanted and not shares:
+                elif wanted and (not shares or strategy in SCALING_STRATEGIES):
                     side = "buy"
                     price = row.open * (1 + (config.spread_bps / 2 + config.slippage_bps) / 10000)
                     qty = max(0, min(cap, math.floor(cash / price)))
@@ -164,22 +190,32 @@ def simulate(
                     funnel["entry_fills"] += 1
                     cash -= notional + fee
                     shares += qty
-                    basis = notional + fee
-                    entry_price = price
-                    entry_quantity = qty
+                    if shares == qty:
+                        # 从空仓开立：与单批路径完全一致。
+                        basis = notional + fee
+                        entry_quantity = qty
+                        entry_price = price
+                        realized = 0.0
+                    else:
+                        # 分批加仓：成本与数量累加，均价供整体止损兜底参考。
+                        basis += notional + fee
+                        entry_quantity += qty
+                        entry_price = basis / entry_quantity
                     position_id += 1
-                    realized = 0.0
                 else:
                     trade_pnl = notional - fee - basis * qty / entry_quantity
                     realized_pnl += trade_pnl
                     cash += notional - fee
                     realized += notional - fee
                     shares -= qty
+                    if selling_lot is not None and rules is not None:
+                        if rules.lot_filled(selling_lot, qty) or shares == 0:
+                            pending_lot_sells.pop(0)
                     if shares == 0:
                         roundtrips.append(realized - basis)
                         exit_pending, exit_reason = False, None
                 if rules is not None:
-                    rules.filled(side, price, shares)
+                    rules.filled(side, price, shares, qty)
                 trades.append(
                     {
                         "timestamp": (
@@ -218,6 +254,8 @@ def simulate(
                 target, risk_reason = rules.observe(row, shares, entry_price, cash, close_time)
                 if shares and risk_reason and not exit_pending:
                     exit_pending, exit_reason = True, risk_reason
+                elif strategy in SCALING_STRATEGIES and shares and not exit_pending:
+                    pending_lot_sells = rules.lot_exits(row)
             elif strategy == "sma":
                 target = len(prices) >= config.slow and fast > slow
             elif strategy == "opening_breakout":
@@ -275,8 +313,8 @@ def simulate(
                         "round_trip_cost_bps": estimated_cost["round_trip_bps"],
                     }
                 )
-                # The model gates entries; risk/rule exits never need model approval.
-                if target and not shares:
+                # The model gates entries (including scaled tranches); exits never need it.
+                if target and (not shares or strategy in SCALING_STRATEGIES):
                     target = model_decision["allow_entry"]
                     pending_model_fraction = model_decision.get("risk_fraction", 1.0)
             funnel["bars"] += 1

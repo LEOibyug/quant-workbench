@@ -17,6 +17,7 @@ class StrategyConfig(BaseModel):
         "regime_adaptive",
         "adaptive_intraday",
         "intraday_momentum",
+        "scaled_reversion",
     ] = "adaptive"
     fast: int = Field(default=5, ge=2, le=60)
     slow: int = Field(default=20, ge=3, le=120)
@@ -32,6 +33,15 @@ class StrategyConfig(BaseModel):
     breakout_buffer_atr: float = Field(default=0.1, ge=0, le=1)
     reversion_atr: float = Field(default=2, ge=0.5, le=5)
     momentum_threshold_bps: float = Field(default=10, ge=-100, le=500)
+    # 因果市场状态门控：只允许用已完成的历史交易日判断当日是否入场。
+    regime_gate: Literal[
+        "off", "drift", "efficiency", "drift_and_efficiency", "drift_or_efficiency"
+    ] = "off"
+    regime_window_days: int = Field(default=10, ge=2, le=60)
+    regime_min_drift_bps: float = Field(default=0, ge=-1000, le=5000)
+    regime_max_efficiency: float = Field(default=0.35, ge=0.05, le=1)
+    # 分批波动收割：偏离加深逐档加仓，各批独立目标/止损。
+    max_scaling_lots: int = Field(default=3, ge=1, le=5)
     min_relative_volume: float = Field(default=1.2, ge=0.5, le=5)
     max_hold_minutes: int = Field(default=30, ge=5, le=120)
     cooldown_minutes: int = Field(default=10, ge=0, le=60)

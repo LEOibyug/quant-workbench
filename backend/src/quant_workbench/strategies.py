@@ -8,9 +8,71 @@ import pandas as pd
 from quant_workbench.costs import estimate_round_trip
 
 REGIME_STRATEGIES = {"trend_pullback", "regime_adaptive", "adaptive_intraday"}
+SCALING_STRATEGIES = {"scaled_reversion"}
 REFINED_STRATEGIES = (
-    {"trend_breakout", "range_reversion", "intraday_momentum"} | REGIME_STRATEGIES
+    {"trend_breakout", "range_reversion", "intraday_momentum"}
+    | REGIME_STRATEGIES
+    | SCALING_STRATEGIES
 )
+# 状态门控只约束均值回归类入场：趋势类本身自带方向条件。
+REVERSION_GATE_STRATEGIES = {
+    "vwap_reversion",
+    "range_reversion",
+    "regime_adaptive",
+    "adaptive_intraday",
+    "scaled_reversion",
+}
+
+
+def basket_regime_gate(frame, config):
+    """Per-day entry admission from completed prior sessions only.
+
+    Equal-weight basket of the dataset's symbols; the trailing window for a given
+    day uses strictly earlier sessions, so future data cannot affect the gate.
+    Days without enough prior history are denied (conservative). Returns {} when
+    the gate is off, else {date_str: bool}.
+    """
+    if config.regime_gate == "off":
+        return {}
+    dates = frame.timestamp.dt.tz_convert("America/New_York").dt.date
+    daily = (
+        frame.assign(_d=dates)
+        .sort_values("timestamp")
+        .drop_duplicates(["_d", "symbol"], keep="last")
+        .pivot(index="_d", columns="symbol", values="close")
+        .sort_index()
+    )
+    index = (1 + daily.pct_change().mean(axis=1).fillna(0)).cumprod()
+    window = config.regime_window_days
+    ok = {}
+    for i, day in enumerate(daily.index):
+        if i < window:
+            ok[str(day)] = False
+            continue
+        trailing = index.iloc[i - window : i + 1]
+        drift_bps = float(trailing.iloc[-1] / trailing.iloc[0] - 1) * 10000
+        path = float(trailing.diff().abs().sum())
+        efficiency = (
+            float(abs(trailing.iloc[-1] - trailing.iloc[0]) / path) if path > 0 else 0.0
+        )
+        gate = config.regime_gate
+        ok[str(day)] = (
+            (gate == "drift" and drift_bps >= config.regime_min_drift_bps)
+            or (gate == "efficiency" and efficiency <= config.regime_max_efficiency)
+            or (
+                gate == "drift_and_efficiency"
+                and drift_bps >= config.regime_min_drift_bps
+                and efficiency <= config.regime_max_efficiency
+            )
+            or (
+                gate == "drift_or_efficiency"
+                and (
+                    drift_bps >= config.regime_min_drift_bps
+                    or efficiency <= config.regime_max_efficiency
+                )
+            )
+        )
+    return ok
 
 
 class IntradayRules:
@@ -45,8 +107,9 @@ class IntradayRules:
         self.max_quantity = None
         self.pending_mode = self.entry_mode = self.strategy
         self.entry_diagnostic = "等待规则观察"
+        self.lots = []
 
-    def filled(self, side, price, remaining):
+    def filled(self, side, price, remaining, qty=None):
         if side == "buy":
             self.entries += 1
             self.entry_mode = self.pending_mode
@@ -54,9 +117,109 @@ class IntradayRules:
             self.peak = price
             self.stop_distance = self.pending_distance
             self.take_distance = self.pending_take
+            self.lots.append(
+                dict(
+                    qty=qty if qty is not None else remaining,
+                    entry_bar=self.count + 1,
+                    stop_price=price - self.pending_distance,
+                    take_price=price + self.pending_take,
+                )
+            )
         elif remaining == 0:
             self.last_exit = self.count + 1
             self.entry_bar = None
+            self.lots = []
+
+    def lot_filled(self, index, qty):
+        """部分或全部卖出第index批；该批清零时移除。"""
+        lot = self.lots[index]
+        lot["qty"] -= qty
+        if lot["qty"] <= 0:
+            self.lots.pop(index)
+            if not self.lots:
+                self.last_exit = self.count + 1
+
+    def lot_exits(self, bar):
+        """触发退出条件的批次：(下标, 数量, 原因)；各批独立目标/止损/时间退出。"""
+        out = []
+        for index, lot in enumerate(self.lots):
+            if bar.close <= lot["stop_price"]:
+                out.append((index, lot["qty"], "lot_stop"))
+            elif bar.close >= lot["take_price"]:
+                out.append((index, lot["qty"], "lot_take"))
+            elif self.count - lot["entry_bar"] + 1 >= self.config.max_hold_minutes:
+                out.append((index, lot["qty"], "lot_time"))
+        return out
+
+    def _scaled_signal(self, bar, shares, cash, close_time, vwap):
+        """分批波动收割：偏离每加深一档加一批，各批独立回到均值目标。"""
+        cfg = self.config
+        if shares and self.day_halted:
+            return False, "daily_loss_limit"
+        self.entry_diagnostic = "风控/冷却/窗口/尾盘限制"
+        if (
+            self.day_halted
+            or self.entries >= min(cfg.max_daily_entries, cfg.max_scaling_lots)
+            or (not shares and self.count - self.last_exit <= cfg.cooldown_minutes)
+            or len(self.bars) < max(cfg.slow + 1, cfg.atr_window + 1)
+            or bar.timestamp
+            >= close_time - pd.Timedelta(minutes=cfg.flatten_minutes + 1)
+        ):
+            return shares > 0, None
+        bars = list(self.bars)
+        true_range = [
+            max(b.high - b.low, abs(b.high - a.close), abs(b.low - a.close))
+            for a, b in zip(bars[:-1], bars[1:], strict=True)
+        ]
+        atr = float(np.mean(true_range[-cfg.atr_window :]))
+        self.entry_diagnostic = "波动率不足"
+        if atr <= 0:
+            return shares > 0, None
+        normal = float(np.mean(self.daily_noise)) if self.daily_noise else atr / bar.close
+        self.entry_diagnostic = "波动率偏离历史范围"
+        if not 0.5 * normal <= atr / bar.close <= 3 * normal:
+            return shares > 0, None
+        stop = min(cfg.stop_atr * atr, bar.close * cfg.stop_loss_bps / 10000)
+        if stop <= 0:
+            return shares > 0, None
+        # 每批只占风险预算的1/批数；深档累计敞口仍受日损失限制与参与率约束。
+        self.max_quantity = max(
+            0,
+            int(
+                cash * (cfg.risk_per_trade_bps / cfg.max_scaling_lots) / 10000 / stop
+            ),
+        )
+        cost = estimate_round_trip(bar.close, bar.volume, cash, cfg, self.max_quantity)
+        cost_bps = cost["round_trip_bps"]
+        self.entry_diagnostic = "资金或成交量不足"
+        if cost_bps is None or self.max_quantity <= 0:
+            return shares > 0, None
+        band_bps = max(cfg.reversion_bps, cfg.reversion_atr * atr / bar.close * 10000)
+        deviation_bps = (vwap - bar.close) / bar.close * 10000
+        level = self.entries + 1
+        target_distance = vwap - bar.close
+        stabilized = bar.close >= bar.low + 0.25 * (bar.high - bar.low)
+        signal = (
+            deviation_bps >= level * band_bps
+            and deviation_bps <= 6 * band_bps  # 过深偏离视为结构性下跌，不接飞刀
+            and stabilized
+        )
+        self.entry_diagnostic = "目标空间不足以覆盖交易成本"
+        signal = signal and target_distance / bar.close * 10000 > (
+            cfg.rule_cost_multiplier * cost_bps + 1
+        )
+        if signal:
+            self.entry_diagnostic = "规则入场候选"
+            self.pending_distance = stop
+            self.pending_take = min(target_distance, cfg.take_atr * atr)
+            self.pending_mode = "scaled"
+            return True, None
+        self.entry_diagnostic = (
+            "偏离未达下一档"
+            if deviation_bps < level * band_bps
+            else "偏离过深或未企稳"
+        )
+        return shares > 0, None
 
     def observe(self, bar, shares, entry_price, cash, close_time):
         cfg = self.config
@@ -71,6 +234,8 @@ class IntradayRules:
         equity = cash + shares * bar.close
         if equity <= self.day_cash * (1 - cfg.daily_loss_bps / 10000):
             self.day_halted = True
+        if self.strategy in SCALING_STRATEGIES:
+            return self._scaled_signal(bar, shares, cash, close_time, vwap)
         if shares:
             self.peak = max(self.peak, bar.close)
             reason = None

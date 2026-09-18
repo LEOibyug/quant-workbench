@@ -9,6 +9,7 @@ export const strategyNames: Record<string, string> = {
   regime_adaptive: "趋势/震荡状态组合",
   adaptive_intraday: "局部均价回归 / 趋势恢复",
   intraday_momentum: "尾盘日内动量（持有至收盘）",
+  scaled_reversion: "分批波动收割（逐档加仓/分批止盈）",
   trend_breakout: "趋势过滤突破 · ATR风控",
   range_reversion: "止跌确认回归 · ATR风控",
   adaptive: "按开发期特征匹配",

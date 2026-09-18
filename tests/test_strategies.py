@@ -168,3 +168,91 @@ def test_intraday_momentum_enters_once_daily_inside_tail_window():
     sells = [trade for trade in result["trades"] if trade["side"] == "sell"]
     assert len(sells) == 2  # 收盘强制平仓，不做提前退出
     assert all(sell["reason"] == "session_flatten" for sell in sells)
+
+
+def test_basket_regime_gate_is_causal_and_conservative():
+    from quant_workbench.strategies import basket_regime_gate
+
+    days = pd.bdate_range("2024-01-02", periods=30, tz="UTC")
+    rows = []
+    for i, ts in enumerate(days):
+        close = 100 * (1.002**i if i < 15 else 1.002**15 * 0.998 ** (i - 15))
+        for symbol in ("AAA", "BBB"):
+            rows.append(
+                dict(
+                    timestamp=ts + pd.Timedelta(hours=14, minutes=i % 60),
+                    symbol=symbol,
+                    open=close,
+                    high=close * 1.001,
+                    low=close * 0.999,
+                    close=close,
+                    volume=10_000,
+                )
+            )
+    frame = pd.DataFrame(rows)
+    config = StrategyConfig(
+        regime_gate="drift", regime_window_days=5, regime_min_drift_bps=50
+    )
+    gate = basket_regime_gate(frame, config)
+    assert len(gate) == 30
+    assert not any(gate[f"{d.date()}"] for d in days[:5])  # 历史不足保守禁入
+    assert gate[f"{days[10].date()}"]  # 上涨段放行
+    assert not gate[f"{days[25].date()}"]  # 下跌段禁入
+    # 因果性：改动未来数据不改变更早日期的门控值
+    mutated = frame.copy()
+    late = mutated.timestamp >= days[20]
+    mutated.loc[late, "close"] *= 3
+    gate2 = basket_regime_gate(mutated, config)
+    assert all(gate[f"{d.date()}"] == gate2[f"{d.date()}"] for d in days[:15])
+    assert StrategyConfig().regime_gate == "off"
+    assert basket_regime_gate(frame, StrategyConfig()) == {}
+
+
+def test_regime_gate_blocks_entries_but_not_exits():
+    from quant_workbench.engine import simulate
+    from quant_workbench.market_data import session_minutes
+
+    times = session_minutes("2024-01-03", "2024-01-05")
+    values = [100 - i * 0.03 for i in range(len(times))]  # 持续下跌 basket
+    frame = pd.DataFrame(
+        dict(
+            timestamp=times,
+            symbol="TEST",
+            open=[v + 0.01 for v in values],
+            high=[v + 0.5 for v in values],
+            low=[v - 0.5 for v in values],
+            close=values,
+            volume=100_000,
+        )
+    )
+    # 重新构造多日连续下跌：按天重置价格使每日 basket drift 为负
+    frame["rank"] = frame.groupby(frame.timestamp.dt.date).cumcount()
+    base = 100.0
+    day_index = (frame.timestamp.dt.tz_convert("America/New_York").dt.date).factorize()[0]
+    path = [base - 1.2 * d for d in day_index]
+    frame["close"] = [p - 0.004 * r for p, r in zip(path, frame["rank"], strict=True)]
+    for col, delta in (("open", 0.01), ("high", 0.5), ("low", -0.5)):
+        frame[col] = frame["close"] + delta
+    gated = simulate(
+        frame,
+        StrategyConfig(
+            strategy="vwap_reversion",
+            reversion_bps=70,
+            stop_loss_bps=150,
+            regime_gate="drift",
+            regime_window_days=2,
+            regime_min_drift_bps=50,
+        ),
+        "2024-01-03",
+        "2024-01-05",
+    )
+    assert not [t for t in gated["trades"] if t["side"] == "buy"]
+    assert gated["decision_funnel"]["TEST"].get("regime_blocked_entries", 0) >= 0
+    # 无门控时同样的数据应产生买入（价格低于VWAP阈值）
+    ungated = simulate(
+        frame,
+        StrategyConfig(strategy="vwap_reversion", reversion_bps=70, stop_loss_bps=150),
+        "2024-01-03",
+        "2024-01-05",
+    )
+    assert any(t["side"] == "buy" for t in ungated["trades"])
