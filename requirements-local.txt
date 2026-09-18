@@ -1,4 +1,0 @@
-# Local gateway only; no pandas, torch, datasets or model files required.
-fastapi>=0.115,<1
-uvicorn>=0.34,<1
-httpx>=0.28,<1

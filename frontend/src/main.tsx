@@ -4,7 +4,6 @@ const Research = lazy(() =>
   import("./Research").then((m) => ({ default: m.Research })),
 );
 import { Workspace } from "./Workspace";
-import { ComputeConnection } from "./ComputeConnection";
 import "./style.css";
 function App() {
   const [research, setResearch] = useState(location.pathname !== "/workspace");
@@ -46,7 +45,7 @@ function App() {
           <br />
           规则策略 × 时序模型
           <br />
-          远程计算 · 本地交互
+          统一工作台 · 无实盘下单
         </div>
       </aside>
       <main>
@@ -54,7 +53,6 @@ function App() {
           <span>QUANT WORKBENCH / US EQUITIES</span>
           <span>策略开发与展示</span>
         </header>
-        <ComputeConnection />
         <Suspense fallback={<p>加载面板…</p>}>
           <div hidden={!research}>{visitedResearch && <Research />}</div>
           <div hidden={research}>{visitedWorkspace && <Workspace />}</div>

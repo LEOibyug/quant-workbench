@@ -15,10 +15,9 @@ from quant_workbench.storage import estimate_storage
 def main() -> None:
     parser = argparse.ArgumentParser(description="Local quant workbench tools")
     sub = parser.add_subparsers(dest="command", required=True)
-    for name, default_port in (("serve-local", 8000), ("serve-compute", 8001)):
-        serve = sub.add_parser(name, help="Start independent local gateway or compute service")
-        serve.add_argument("--host", default="127.0.0.1")
-        serve.add_argument("--port", type=int, default=default_port)
+    serve = sub.add_parser("serve", help="Start the unified workbench backend and built UI")
+    serve.add_argument("--host", default="127.0.0.1")
+    serve.add_argument("--port", type=int, default=8000)
     sub.add_parser("doctor", help="Report environment without loading optional GPU packages")
     estimate = sub.add_parser("estimate", help="Estimate compressed OHLCV storage")
     estimate.add_argument("--symbols", type=int, default=7)
@@ -33,11 +32,10 @@ def main() -> None:
     study.add_argument("--include-test", action="store_true")
     study.add_argument("--suite", choices=["legacy", "enhanced", "sequence"], default="legacy")
     args = parser.parse_args()
-    if args.command in {"serve-local", "serve-compute"}:
+    if args.command == "serve":
         import uvicorn
 
-        module = "local_api" if args.command == "serve-local" else "compute_api"
-        uvicorn.run(f"quant_workbench.{module}:app", host=args.host, port=args.port, workers=1)
+        uvicorn.run("quant_workbench.api:app", host=args.host, port=args.port, workers=1)
         return
     if args.command == "study":
         from quant_workbench.repository import Repository

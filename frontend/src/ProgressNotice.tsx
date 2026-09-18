@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { api, post, computeFetch, computeUrl } from "./api";
+import { api, post } from "./api";
 export interface ProgressState {
   stage: string;
   status: string;
@@ -74,7 +74,7 @@ interface Operation<T> extends ProgressState {
   id: string;
   result: T | null;
 }
-const operationKey = `quant.pending.research.operation:${computeUrl}`;
+const operationKey = "quant.pending.research.operation";
 export function pendingOperation(): {
   id: string;
   kind: "download" | "train";
@@ -139,7 +139,7 @@ export function DownloadButton({
     const started_at = new Date().toISOString();
     setState({ status: "running", stage: "正在生成导出文件", started_at });
     try {
-      const response = await computeFetch(href);
+      const response = await fetch(href);
       if (!response.ok) {
         let detail = "导出失败";
         try {

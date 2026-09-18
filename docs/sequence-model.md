@@ -57,14 +57,14 @@ GRU 只有约 6 万参数。在线推理逐股、逐分钟执行，每次一个�
 - 离线特征缓存：同一训练阶段的归一化样本和标签驻留 GPU，跨 epoch 复用。默认上限 256 MiB，且不超过当时空闲显存的 20%；超过预算则沿用分批准备。进入反馈阶段后重新生成缓存，不复用尚未更新的反馈。
 - CPU 数据准备：离线历史背景使用按股票分组的因果滚动计算，避免每根行情复制最多 7,800 条历史收益；教师反馈循环使用预先提取的行记录，避免逐行构造 pandas Series。
 
-开关在**计算服务器启动前**配置，已有模型也可使用推理加速：
+开关在**工作台启动前**配置，已有模型也可使用推理加速：
 
 ```sh
 # 默认启用 CUDA Graph，训练缓存上限 256 MiB
-./scripts/start-compute.sh
+./scripts/start.sh
 
 # 兼容性排查：关闭图捕获或训练缓存
-QUANT_CUDA_GRAPHS=0 QUANT_TRAIN_CACHE_MIB=0 ./scripts/start-compute.sh
+QUANT_CUDA_GRAPHS=0 QUANT_TRAIN_CACHE_MIB=0 ./scripts/start.sh
 ```
 
 合成基准不读取、修改真实行情或实验结果：

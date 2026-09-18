@@ -30,6 +30,22 @@ def test_storage_estimate_and_validation_over_http():
     assert get("/api/storage-estimate?interval_seconds=7").status_code == 422
 
 
+def test_unified_pages_and_api_share_origin_without_swallowing_missing_api(tmp_path, monkeypatch):
+    from quant_workbench import api
+
+    (tmp_path / "index.html").write_text('<html><div id="root">workbench</div></html>')
+    monkeypatch.setattr(api, "FRONTEND_DIR", tmp_path)
+    for route in ("/", "/research", "/workspace?deployment=example"):
+        response = get(route)
+        assert response.status_code == 200
+        assert 'id="root"' in response.text
+        assert response.headers["cache-control"] == "no-cache"
+    assert get("/api/health").json()["service"] == "quant-workbench"
+    assert get("/api/unknown").status_code == 404
+    (tmp_path / "index.html").unlink()
+    assert get("/research").status_code == 503
+
+
 def test_provider_catalog_missing_credentials_and_csv_validation(monkeypatch, tmp_path):
     monkeypatch.setenv("QUANT_DATA_DIR", str(tmp_path))
     for key in ("APCA_API_KEY_ID", "APCA_API_SECRET_KEY", "MASSIVE_API_KEY", "POLYGON_API_KEY"):
