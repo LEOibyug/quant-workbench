@@ -26,6 +26,7 @@ export interface PositionDeployment {
   symbols: string[];
   position_config: {
     model: string; lookback: number; horizon: number; rebalance_days: number;
+    capital_mode?: "signal_budget" | "risk_budget"; entry_band?: number | null;
     confidence: number; tranche_weight: number; costs: { initial_cash: number };
     allocation?: AllocationConfig;
   };
@@ -99,6 +100,7 @@ export function PositionPanel({ datasets, modelEnabled = true, deployment }: {
         start: f.get("start"), end: f.get("end"),
         config: {
           allocation: readAllocation(f),
+          capital_mode: f.get("capital_mode"), entry_band: f.get("entry_band") === "" ? null : n("entry_band") / 100,
           model: modelEnabled ? f.get("model") : "equal_weight", lookback: n("lookback"), horizon: n("horizon"),
           rebalance_days: n("rebalance"), confidence: n("confidence"),
           tranche_weight: n("tranche") / 100,
@@ -171,6 +173,11 @@ export function PositionPanel({ datasets, modelEnabled = true, deployment }: {
           {(!modelEnabled || deployment) && <option value="equal_weight">等权分批再平衡（无预测模型）</option>}
         </select></label>
 
+        <label>组合资金预算<select name="capital_mode" defaultValue={config?.capital_mode || "signal_budget"}>
+          <option value="signal_budget">原信号预算 · 按候选股票数限制投入</option>
+          <option value="risk_budget">风险预算 · 按单股风险额度投入</option>
+        </select></label>
+        <label>首次建仓门槛 净值%<input name="entry_band" type="number" min={0} max={20} step={0.1} placeholder="留空沿用最小调仓差额" defaultValue={config?.entry_band == null ? "" : config.entry_band * 100} /></label>
         <label>独立资金 USD<input name="cash" type="number" min={100} defaultValue={config?.costs.initial_cash ?? 100000} required /></label>
         <label>历史窗口 交易日<input name="lookback" type="number" min={10} max={60} defaultValue={config?.lookback ?? 20} required /></label>
         <label>预测跨度 交易日<input name="horizon" type="number" min={1} max={20} defaultValue={config?.horizon ?? 5} required /></label>
@@ -181,7 +188,7 @@ export function PositionPanel({ datasets, modelEnabled = true, deployment }: {
       <AllocationControls key={dataset?.id || deployment?.id} symbols={deployment?.symbols || dataset?.symbols || []}
         initial={config?.allocation} long />
       </fieldset>
-      <p className="muted">{(deployment ? selectedSymbols : dataset!.symbols).join(" / ")}。默认单股目标上限20%、止损10%、组合回撤10%后熔断。
+      <p className="muted">{(deployment ? selectedSymbols : dataset!.symbols).join(" / ")}。原信号预算按股票池大小限制投入；风险预算提高合格信号资金额度，仅在启用共享资金时生效。首次建仓门槛可独立于已有持仓调仓门槛。默认单股目标上限20%、止损10%、组合回撤10%后熔断。
         价差2bps、滑点2bps，佣金每股$0.005、每次最低$1。模型历史不足时持币；已有数据已参与研究，不能视为新的样本外验证。</p>
       <button className="primary" disabled={busy || publishing || (!!deployment && !selectedSymbols.length)}>{busy ? "计算中…" : deployment ? "运行已发布策略模拟" : "创建并运行长期实验"}</button>
     </form>}

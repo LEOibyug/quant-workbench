@@ -1,0 +1,5834 @@
+[
+  {
+    "task": {
+      "name": "budget_only",
+      "dataset_id": "0c6c4cea1cc4472085b35ca94c86a20d",
+      "start": "2026-03-02",
+      "end": "2026-09-01",
+      "config": {
+        "allocation": {
+          "enabled": true,
+          "symbols": [
+            "AAPL",
+            "AMD",
+            "AMZN",
+            "AVGO",
+            "BRK.B",
+            "COST",
+            "GOOGL",
+            "JNJ",
+            "JPM",
+            "LLY",
+            "MA",
+            "META",
+            "MSFT",
+            "NVDA",
+            "ORCL",
+            "SOFI",
+            "TSLA",
+            "V",
+            "WMT",
+            "XOM"
+          ],
+          "lookback": 30,
+          "max_positions": 3,
+          "max_weight": 0.35,
+          "cash_reserve": 0.05,
+          "risk_aversion": 10.0,
+          "cost_penalty": 1.5,
+          "rebalance_band": 0.02,
+          "max_daily_turnover": 0.2,
+          "rebalance_minutes": 30
+        },
+        "model": "trend",
+        "lookback": 15,
+        "horizon": 3,
+        "rebalance_days": 5,
+        "confidence": 0.5,
+        "tranche_weight": 0.1,
+        "max_weight": 0.2,
+        "daily_vol_target": 0.015,
+        "stop_loss_pct": 10.0,
+        "max_drawdown_pct": 10.0,
+        "costs": {
+          "allocation": {
+            "enabled": false,
+            "symbols": [],
+            "lookback": 60,
+            "max_positions": 3,
+            "max_weight": 0.35,
+            "cash_reserve": 0.05,
+            "risk_aversion": 10.0,
+            "cost_penalty": 2.0,
+            "rebalance_band": 0.02,
+            "max_daily_turnover": 1.0,
+            "rebalance_minutes": 30
+          },
+          "strategy": "adaptive",
+          "fast": 5,
+          "stat_window": 120,
+          "stat_horizon": 15,
+          "stat_entry_z": 1.5,
+          "stat_confidence": 0.5,
+          "stat_process_noise": 0.001,
+          "slow": 20,
+          "flatten_minutes": 5,
+          "opening_minutes": 15,
+          "reversion_bps": 30.0,
+          "stop_loss_bps": 100.0,
+          "regime_window": 60,
+          "min_reward_risk": 1.2,
+          "atr_window": 14,
+          "stop_atr": 2.0,
+          "take_atr": 3.0,
+          "breakout_buffer_atr": 0.1,
+          "reversion_atr": 2.0,
+          "momentum_threshold_bps": 10.0,
+          "regime_gate": "off",
+          "regime_window_days": 10,
+          "regime_min_drift_bps": 0.0,
+          "regime_max_efficiency": 0.35,
+          "max_scaling_lots": 3,
+          "lot_breakeven_hold": false,
+          "lot_patience_minutes": 45,
+          "lot_hard_stop_atr": 4.0,
+          "tranche_requires_uptrend": false,
+          "min_relative_volume": 1.2,
+          "max_hold_minutes": 30,
+          "cooldown_minutes": 10,
+          "max_daily_entries": 4,
+          "daily_loss_bps": 100.0,
+          "risk_per_trade_bps": 25.0,
+          "rule_cost_multiplier": 1.5,
+          "initial_cash": 100000.0,
+          "spread_bps": 2.0,
+          "slippage_bps": 2.0,
+          "commission_per_share": 0.005,
+          "minimum_commission": 1.0,
+          "sell_fee_bps": 0.3,
+          "participation": 0.01
+        },
+        "capital_mode": "risk_budget"
+      }
+    },
+    "metrics": {
+      "return_pct": 22.357567427074443,
+      "final_equity": 122357.56742707443,
+      "max_drawdown_pct": 5.444175652795247,
+      "fees": 197.72989422550899,
+      "impact_cost": 392.47167869999976,
+      "trade_count": 178,
+      "halted": false,
+      "turnover": 11.261344115265075,
+      "realized_pnl": 22303.96701485226,
+      "unrealized_pnl": 53.60041222222321,
+      "trading_days": 127,
+      "daily_sharpe": 2.056210445740617,
+      "average_gross_exposure_pct": 33.23557785564056,
+      "estimated_liquidation_return_pct": 22.350463746074432
+    },
+    "months": {
+      "2026-03": -0.0017552265700000458,
+      "2026-04": 0.08702928912081997,
+      "2026-05": 0.10621826887101782,
+      "2026-06": -0.035795829719417416,
+      "2026-07": 0.06311322009192,
+      "2026-08": -0.005595244424512313
+    },
+    "contributions": [
+      {
+        "symbol": "AAPL",
+        "net_profit": 2146.6172893352104
+      },
+      {
+        "symbol": "AMD",
+        "net_profit": 19876.69749702749
+      },
+      {
+        "symbol": "AMZN",
+        "net_profit": 1450.817599764408
+      },
+      {
+        "symbol": "AVGO",
+        "net_profit": -2050.8293670956027
+      },
+      {
+        "symbol": "BRK.B",
+        "net_profit": 0.0
+      },
+      {
+        "symbol": "COST",
+        "net_profit": -1191.6149583010538
+      },
+      {
+        "symbol": "GOOGL",
+        "net_profit": -144.37909364897087
+      },
+      {
+        "symbol": "JNJ",
+        "net_profit": -474.82488338007215
+      },
+      {
+        "symbol": "JPM",
+        "net_profit": 360.5331542061922
+      },
+      {
+        "symbol": "LLY",
+        "net_profit": -597.8076042949397
+      },
+      {
+        "symbol": "MA",
+        "net_profit": 1208.8484456771748
+      },
+      {
+        "symbol": "META",
+        "net_profit": -344.76189269550014
+      },
+      {
+        "symbol": "MSFT",
+        "net_profit": 3052.674928435119
+      },
+      {
+        "symbol": "NVDA",
+        "net_profit": -7.367164414909212
+      },
+      {
+        "symbol": "ORCL",
+        "net_profit": -704.2720054560787
+      },
+      {
+        "symbol": "SOFI",
+        "net_profit": 0.0
+      },
+      {
+        "symbol": "TSLA",
+        "net_profit": -88.48273112885181
+      },
+      {
+        "symbol": "V",
+        "net_profit": 405.7520699120605
+      },
+      {
+        "symbol": "WMT",
+        "net_profit": 0.0
+      },
+      {
+        "symbol": "XOM",
+        "net_profit": -540.0338568671878
+      }
+    ],
+    "daily_returns": [
+      {
+        "date": "2026-03-02",
+        "return_pct": 0.0
+      },
+      {
+        "date": "2026-03-03",
+        "return_pct": 0.0
+      },
+      {
+        "date": "2026-03-04",
+        "return_pct": 0.0
+      },
+      {
+        "date": "2026-03-05",
+        "return_pct": 0.0
+      },
+      {
+        "date": "2026-03-06",
+        "return_pct": 0.0
+      },
+      {
+        "date": "2026-03-09",
+        "return_pct": 0.0
+      },
+      {
+        "date": "2026-03-10",
+        "return_pct": 0.0
+      },
+      {
+        "date": "2026-03-11",
+        "return_pct": 0.0
+      },
+      {
+        "date": "2026-03-12",
+        "return_pct": 0.0
+      },
+      {
+        "date": "2026-03-13",
+        "return_pct": 0.0
+      },
+      {
+        "date": "2026-03-16",
+        "return_pct": 0.0
+      },
+      {
+        "date": "2026-03-17",
+        "return_pct": 0.0
+      },
+      {
+        "date": "2026-03-18",
+        "return_pct": 0.0
+      },
+      {
+        "date": "2026-03-19",
+        "return_pct": 0.0
+      },
+      {
+        "date": "2026-03-20",
+        "return_pct": 0.0
+      },
+      {
+        "date": "2026-03-23",
+        "return_pct": 0.0
+      },
+      {
+        "date": "2026-03-24",
+        "return_pct": 0.0
+      },
+      {
+        "date": "2026-03-25",
+        "return_pct": 0.0
+      },
+      {
+        "date": "2026-03-26",
+        "return_pct": 0.0
+      },
+      {
+        "date": "2026-03-27",
+        "return_pct": 0.0
+      },
+      {
+        "date": "2026-03-30",
+        "return_pct": 0.0
+      },
+      {
+        "date": "2026-03-31",
+        "return_pct": -0.1755226570000086
+      },
+      {
+        "date": "2026-04-01",
+        "return_pct": -0.8059186989136012
+      },
+      {
+        "date": "2026-04-02",
+        "return_pct": -0.010543327432966536
+      },
+      {
+        "date": "2026-04-06",
+        "return_pct": 0.31398996632783993
+      },
+      {
+        "date": "2026-04-07",
+        "return_pct": 0.06306860591189105
+      },
+      {
+        "date": "2026-04-08",
+        "return_pct": -1.0729511312738935
+      },
+      {
+        "date": "2026-04-09",
+        "return_pct": 0.03069324619954193
+      },
+      {
+        "date": "2026-04-10",
+        "return_pct": 0.0
+      },
+      {
+        "date": "2026-04-13",
+        "return_pct": 0.0
+      },
+      {
+        "date": "2026-04-14",
+        "return_pct": 0.0
+      },
+      {
+        "date": "2026-04-15",
+        "return_pct": 0.08440249007106945
+      },
+      {
+        "date": "2026-04-16",
+        "return_pct": 1.3630725722419823
+      },
+      {
+        "date": "2026-04-17",
+        "return_pct": -0.007956315595451036
+      },
+      {
+        "date": "2026-04-20",
+        "return_pct": -0.4976161738131863
+      },
+      {
+        "date": "2026-04-21",
+        "return_pct": 0.9567007186791383
+      },
+      {
+        "date": "2026-04-22",
+        "return_pct": 2.822004178280729
+      },
+      {
+        "date": "2026-04-23",
+        "return_pct": 0.08705318703035599
+      },
+      {
+        "date": "2026-04-24",
+        "return_pct": 5.98941154268123
+      },
+      {
+        "date": "2026-04-27",
+        "return_pct": -2.0752074571957966
+      },
+      {
+        "date": "2026-04-28",
+        "return_pct": -2.9365930791612005
+      },
+      {
+        "date": "2026-04-29",
+        "return_pct": 2.2724877752672703
+      },
+      {
+        "date": "2026-04-30",
+        "return_pct": 2.1183801075612996
+      },
+      {
+        "date": "2026-05-01",
+        "return_pct": 0.8391760371632729
+      },
+      {
+        "date": "2026-05-04",
+        "return_pct": -1.531487098330515
+      },
+      {
+        "date": "2026-05-05",
+        "return_pct": 1.3945267992915955
+      },
+      {
+        "date": "2026-05-06",
+        "return_pct": 7.892992625303294
+      },
+      {
+        "date": "2026-05-07",
+        "return_pct": -1.6678856505955797
+      },
+      {
+        "date": "2026-05-08",
+        "return_pct": 4.826833524966349
+      },
+      {
+        "date": "2026-05-11",
+        "return_pct": -0.5946361185832779
+      },
+      {
+        "date": "2026-05-12",
+        "return_pct": -1.3877280573728465
+      },
+      {
+        "date": "2026-05-13",
+        "return_pct": 0.7564495408532353
+      },
+      {
+        "date": "2026-05-14",
+        "return_pct": 0.009882275221147046
+      },
+      {
+        "date": "2026-05-15",
+        "return_pct": -2.150348026042544
+      },
+      {
+        "date": "2026-05-18",
+        "return_pct": -0.348779111252341
+      },
+      {
+        "date": "2026-05-19",
+        "return_pct": -0.552821575115318
+      },
+      {
+        "date": "2026-05-20",
+        "return_pct": 2.331788199503872
+      },
+      {
+        "date": "2026-05-21",
+        "return_pct": 0.01963307424764346
+      },
+      {
+        "date": "2026-05-22",
+        "return_pct": 0.7005253509295485
+      },
+      {
+        "date": "2026-05-26",
+        "return_pct": -0.32924653862141806
+      },
+      {
+        "date": "2026-05-27",
+        "return_pct": 0.24648124420952208
+      },
+      {
+        "date": "2026-05-28",
+        "return_pct": 0.3932638246084673
+      },
+      {
+        "date": "2026-05-29",
+        "return_pct": -0.234904437910717
+      },
+      {
+        "date": "2026-06-01",
+        "return_pct": -0.7563517167307755
+      },
+      {
+        "date": "2026-06-02",
+        "return_pct": 1.3489947305099728
+      },
+      {
+        "date": "2026-06-03",
+        "return_pct": 0.12022801472772436
+      },
+      {
+        "date": "2026-06-04",
+        "return_pct": -0.4951186409286183
+      },
+      {
+        "date": "2026-06-05",
+        "return_pct": -1.9044207061150402
+      },
+      {
+        "date": "2026-06-08",
+        "return_pct": 0.5417812893506574
+      },
+      {
+        "date": "2026-06-09",
+        "return_pct": -0.4999884674320958
+      },
+      {
+        "date": "2026-06-10",
+        "return_pct": -1.0744383531493278
+      },
+      {
+        "date": "2026-06-11",
+        "return_pct": 0.20542373450215679
+      },
+      {
+        "date": "2026-06-12",
+        "return_pct": -0.30375081445800245
+      },
+      {
+        "date": "2026-06-15",
+        "return_pct": -0.056663424025486527
+      },
+      {
+        "date": "2026-06-16",
+        "return_pct": -0.09400511706788364
+      },
+      {
+        "date": "2026-06-17",
+        "return_pct": -0.14423101946027678
+      },
+      {
+        "date": "2026-06-18",
+        "return_pct": -0.3470279140953813
+      },
+      {
+        "date": "2026-06-22",
+        "return_pct": 0.3015283516507855
+      },
+      {
+        "date": "2026-06-23",
+        "return_pct": 0.1578734689937794
+      },
+      {
+        "date": "2026-06-24",
+        "return_pct": -0.04088758979687202
+      },
+      {
+        "date": "2026-06-25",
+        "return_pct": 0.09900029761931729
+      },
+      {
+        "date": "2026-06-26",
+        "return_pct": -0.480228791668305
+      },
+      {
+        "date": "2026-06-29",
+        "return_pct": 0.09816987045609905
+      },
+      {
+        "date": "2026-06-30",
+        "return_pct": -0.2773490411236536
+      },
+      {
+        "date": "2026-07-01",
+        "return_pct": 0.7047617728666314
+      },
+      {
+        "date": "2026-07-02",
+        "return_pct": 0.1658931707728702
+      },
+      {
+        "date": "2026-07-06",
+        "return_pct": 0.08564597934930145
+      },
+      {
+        "date": "2026-07-07",
+        "return_pct": 0.3592644994804805
+      },
+      {
+        "date": "2026-07-08",
+        "return_pct": -0.7606544663743048
+      },
+      {
+        "date": "2026-07-09",
+        "return_pct": -0.08141713942826821
+      },
+      {
+        "date": "2026-07-10",
+        "return_pct": -0.13292347313020883
+      },
+      {
+        "date": "2026-07-13",
+        "return_pct": 0.9393675064736475
+      },
+      {
+        "date": "2026-07-14",
+        "return_pct": -0.293661825179329
+      },
+      {
+        "date": "2026-07-15",
+        "return_pct": 0.0015218928659513351
+      },
+      {
+        "date": "2026-07-16",
+        "return_pct": -0.052653474289696495
+      },
+      {
+        "date": "2026-07-17",
+        "return_pct": -0.2503687058889692
+      },
+      {
+        "date": "2026-07-20",
+        "return_pct": 0.07600685935222751
+      },
+      {
+        "date": "2026-07-21",
+        "return_pct": -0.08904637124341752
+      },
+      {
+        "date": "2026-07-22",
+        "return_pct": -0.6507142384474189
+      },
+      {
+        "date": "2026-07-23",
+        "return_pct": -0.7458354128391321
+      },
+      {
+        "date": "2026-07-24",
+        "return_pct": 1.675249490271535
+      },
+      {
+        "date": "2026-07-27",
+        "return_pct": 1.3351243206015395
+      },
+      {
+        "date": "2026-07-28",
+        "return_pct": 0.88939997657936
+      },
+      {
+        "date": "2026-07-29",
+        "return_pct": -0.33495727592295516
+      },
+      {
+        "date": "2026-07-30",
+        "return_pct": 3.4258511245199457
+      },
+      {
+        "date": "2026-07-31",
+        "return_pct": -0.044648725237400017
+      },
+      {
+        "date": "2026-08-03",
+        "return_pct": 0.28201572058832614
+      },
+      {
+        "date": "2026-08-04",
+        "return_pct": -0.007475823034034934
+      },
+      {
+        "date": "2026-08-05",
+        "return_pct": -0.6033367844183182
+      },
+      {
+        "date": "2026-08-06",
+        "return_pct": 0.9548970035828386
+      },
+      {
+        "date": "2026-08-07",
+        "return_pct": -0.5374262139444991
+      },
+      {
+        "date": "2026-08-10",
+        "return_pct": 1.231568844205068
+      },
+      {
+        "date": "2026-08-11",
+        "return_pct": -0.1490626566607198
+      },
+      {
+        "date": "2026-08-12",
+        "return_pct": -0.5995385215240908
+      },
+      {
+        "date": "2026-08-13",
+        "return_pct": 0.2472199048375129
+      },
+      {
+        "date": "2026-08-14",
+        "return_pct": -0.34283735909446134
+      },
+      {
+        "date": "2026-08-17",
+        "return_pct": -0.8907011610146596
+      },
+      {
+        "date": "2026-08-18",
+        "return_pct": -0.11762682705817509
+      },
+      {
+        "date": "2026-08-19",
+        "return_pct": 0.06971333257184231
+      },
+      {
+        "date": "2026-08-20",
+        "return_pct": -0.15691244440061125
+      },
+      {
+        "date": "2026-08-21",
+        "return_pct": 0.3298425996274897
+      },
+      {
+        "date": "2026-08-24",
+        "return_pct": -0.25736773018196935
+      },
+      {
+        "date": "2026-08-25",
+        "return_pct": 0.028817064877965138
+      },
+      {
+        "date": "2026-08-26",
+        "return_pct": -0.16289274793537065
+      },
+      {
+        "date": "2026-08-27",
+        "return_pct": 0.33110499024717605
+      },
+      {
+        "date": "2026-08-28",
+        "return_pct": -0.22245545677895273
+      },
+      {
+        "date": "2026-08-31",
+        "return_pct": 0.03591471424626583
+      }
+    ]
+  },
+  {
+    "task": {
+      "name": "entry_only",
+      "dataset_id": "0c6c4cea1cc4472085b35ca94c86a20d",
+      "start": "2026-03-02",
+      "end": "2026-09-01",
+      "config": {
+        "allocation": {
+          "enabled": true,
+          "symbols": [
+            "AAPL",
+            "AMD",
+            "AMZN",
+            "AVGO",
+            "BRK.B",
+            "COST",
+            "GOOGL",
+            "JNJ",
+            "JPM",
+            "LLY",
+            "MA",
+            "META",
+            "MSFT",
+            "NVDA",
+            "ORCL",
+            "SOFI",
+            "TSLA",
+            "V",
+            "WMT",
+            "XOM"
+          ],
+          "lookback": 30,
+          "max_positions": 3,
+          "max_weight": 0.35,
+          "cash_reserve": 0.05,
+          "risk_aversion": 10.0,
+          "cost_penalty": 1.5,
+          "rebalance_band": 0.02,
+          "max_daily_turnover": 0.2,
+          "rebalance_minutes": 30
+        },
+        "model": "trend",
+        "lookback": 15,
+        "horizon": 3,
+        "rebalance_days": 5,
+        "confidence": 0.5,
+        "tranche_weight": 0.1,
+        "max_weight": 0.2,
+        "daily_vol_target": 0.015,
+        "stop_loss_pct": 10.0,
+        "max_drawdown_pct": 10.0,
+        "costs": {
+          "allocation": {
+            "enabled": false,
+            "symbols": [],
+            "lookback": 60,
+            "max_positions": 3,
+            "max_weight": 0.35,
+            "cash_reserve": 0.05,
+            "risk_aversion": 10.0,
+            "cost_penalty": 2.0,
+            "rebalance_band": 0.02,
+            "max_daily_turnover": 1.0,
+            "rebalance_minutes": 30
+          },
+          "strategy": "adaptive",
+          "fast": 5,
+          "stat_window": 120,
+          "stat_horizon": 15,
+          "stat_entry_z": 1.5,
+          "stat_confidence": 0.5,
+          "stat_process_noise": 0.001,
+          "slow": 20,
+          "flatten_minutes": 5,
+          "opening_minutes": 15,
+          "reversion_bps": 30.0,
+          "stop_loss_bps": 100.0,
+          "regime_window": 60,
+          "min_reward_risk": 1.2,
+          "atr_window": 14,
+          "stop_atr": 2.0,
+          "take_atr": 3.0,
+          "breakout_buffer_atr": 0.1,
+          "reversion_atr": 2.0,
+          "momentum_threshold_bps": 10.0,
+          "regime_gate": "off",
+          "regime_window_days": 10,
+          "regime_min_drift_bps": 0.0,
+          "regime_max_efficiency": 0.35,
+          "max_scaling_lots": 3,
+          "lot_breakeven_hold": false,
+          "lot_patience_minutes": 45,
+          "lot_hard_stop_atr": 4.0,
+          "tranche_requires_uptrend": false,
+          "min_relative_volume": 1.2,
+          "max_hold_minutes": 30,
+          "cooldown_minutes": 10,
+          "max_daily_entries": 4,
+          "daily_loss_bps": 100.0,
+          "risk_per_trade_bps": 25.0,
+          "rule_cost_multiplier": 1.5,
+          "initial_cash": 100000.0,
+          "spread_bps": 2.0,
+          "slippage_bps": 2.0,
+          "commission_per_share": 0.005,
+          "minimum_commission": 1.0,
+          "sell_fee_bps": 0.3,
+          "participation": 0.01
+        },
+        "entry_band": 0.005
+      }
+    },
+    "metrics": {
+      "return_pct": 13.781673336827849,
+      "final_equity": 113781.67333682785,
+      "max_drawdown_pct": 2.9419555974269707,
+      "fees": 57.391974672175,
+      "impact_cost": 105.27968850000002,
+      "trade_count": 52,
+      "halted": false,
+      "turnover": 3.1477046741782266,
+      "realized_pnl": 13822.345894827828,
+      "unrealized_pnl": -40.672557999999526,
+      "trading_days": 127,
+      "daily_sharpe": 2.1308367388689673,
+      "average_gross_exposure_pct": 10.110511875617812,
+      "estimated_liquidation_return_pct": 13.778923086127847
+    },
+    "months": {
+      "2026-03": -0.0008979222899999639,
+      "2026-04": 0.06696951371953985,
+      "2026-05": 0.07237037960090564,
+      "2026-06": -0.00894599170175192,
+      "2026-07": 0.009354289045609088,
+      "2026-08": -0.004996338467980865
+    },
+    "contributions": [
+      {
+        "symbol": "AAPL",
+        "net_profit": 1249.046304947081
+      },
+      {
+        "symbol": "AMD",
+        "net_profit": 13989.508713468265
+      },
+      {
+        "symbol": "AMZN",
+        "net_profit": 0.0
+      },
+      {
+        "symbol": "AVGO",
+        "net_profit": -168.33912382098038
+      },
+      {
+        "symbol": "BRK.B",
+        "net_profit": 0.0
+      },
+      {
+        "symbol": "COST",
+        "net_profit": -80.42063319550982
+      },
+      {
+        "symbol": "GOOGL",
+        "net_profit": 0.0
+      },
+      {
+        "symbol": "JNJ",
+        "net_profit": 0.0
+      },
+      {
+        "symbol": "JPM",
+        "net_profit": -57.91794851999839
+      },
+      {
+        "symbol": "LLY",
+        "net_profit": -61.79499384676956
+      },
+      {
+        "symbol": "MA",
+        "net_profit": -40.67255800000021
+      },
+      {
+        "symbol": "META",
+        "net_profit": -47.27545753909976
+      },
+      {
+        "symbol": "MSFT",
+        "net_profit": -301.4810233522803
+      },
+      {
+        "symbol": "NVDA",
+        "net_profit": 0.0
+      },
+      {
+        "symbol": "ORCL",
+        "net_profit": -104.67269881759967
+      },
+      {
+        "symbol": "SOFI",
+        "net_profit": 0.0
+      },
+      {
+        "symbol": "TSLA",
+        "net_profit": -146.22999175110044
+      },
+      {
+        "symbol": "V",
+        "net_profit": -64.179050935938
+      },
+      {
+        "symbol": "WMT",
+        "net_profit": 0.0
+      },
+      {
+        "symbol": "XOM",
+        "net_profit": -383.8982018082479
+      }
+    ],
+    "daily_returns": [
+      {
+        "date": "2026-03-02",
+        "return_pct": 0.0
+      },
+      {
+        "date": "2026-03-03",
+        "return_pct": 0.0
+      },
+      {
+        "date": "2026-03-04",
+        "return_pct": 0.0
+      },
+      {
+        "date": "2026-03-05",
+        "return_pct": 0.0
+      },
+      {
+        "date": "2026-03-06",
+        "return_pct": 0.0
+      },
+      {
+        "date": "2026-03-09",
+        "return_pct": 0.0
+      },
+      {
+        "date": "2026-03-10",
+        "return_pct": 0.0
+      },
+      {
+        "date": "2026-03-11",
+        "return_pct": 0.0
+      },
+      {
+        "date": "2026-03-12",
+        "return_pct": 0.0
+      },
+      {
+        "date": "2026-03-13",
+        "return_pct": 0.0
+      },
+      {
+        "date": "2026-03-16",
+        "return_pct": 0.0
+      },
+      {
+        "date": "2026-03-17",
+        "return_pct": 0.0
+      },
+      {
+        "date": "2026-03-18",
+        "return_pct": 0.0
+      },
+      {
+        "date": "2026-03-19",
+        "return_pct": 0.0
+      },
+      {
+        "date": "2026-03-20",
+        "return_pct": 0.0
+      },
+      {
+        "date": "2026-03-23",
+        "return_pct": 0.0
+      },
+      {
+        "date": "2026-03-24",
+        "return_pct": 0.0
+      },
+      {
+        "date": "2026-03-25",
+        "return_pct": 0.0
+      },
+      {
+        "date": "2026-03-26",
+        "return_pct": 0.0
+      },
+      {
+        "date": "2026-03-27",
+        "return_pct": 0.0
+      },
+      {
+        "date": "2026-03-30",
+        "return_pct": 0.0
+      },
+      {
+        "date": "2026-03-31",
+        "return_pct": -0.08979222899999877
+      },
+      {
+        "date": "2026-04-01",
+        "return_pct": -0.2577514407639456
+      },
+      {
+        "date": "2026-04-02",
+        "return_pct": -0.002619096442233764
+      },
+      {
+        "date": "2026-04-06",
+        "return_pct": 0.07799291454503923
+      },
+      {
+        "date": "2026-04-07",
+        "return_pct": 0.015702743217054463
+      },
+      {
+        "date": "2026-04-08",
+        "return_pct": -0.30456047255622376
+      },
+      {
+        "date": "2026-04-09",
+        "return_pct": 0.0
+      },
+      {
+        "date": "2026-04-10",
+        "return_pct": 0.0
+      },
+      {
+        "date": "2026-04-13",
+        "return_pct": 0.0
+      },
+      {
+        "date": "2026-04-14",
+        "return_pct": 0.0
+      },
+      {
+        "date": "2026-04-15",
+        "return_pct": 0.11992895557327557
+      },
+      {
+        "date": "2026-04-16",
+        "return_pct": 0.7889397323547178
+      },
+      {
+        "date": "2026-04-17",
+        "return_pct": 0.005052599071475052
+      },
+      {
+        "date": "2026-04-20",
+        "return_pct": -0.13369278970010812
+      },
+      {
+        "date": "2026-04-21",
+        "return_pct": 0.37126065504630446
+      },
+      {
+        "date": "2026-04-22",
+        "return_pct": 1.2217529803659395
+      },
+      {
+        "date": "2026-04-23",
+        "return_pct": 0.22445336633667412
+      },
+      {
+        "date": "2026-04-24",
+        "return_pct": 4.607972581953795
+      },
+      {
+        "date": "2026-04-27",
+        "return_pct": -1.5400335890824908
+      },
+      {
+        "date": "2026-04-28",
+        "return_pct": -1.423849773108426
+      },
+      {
+        "date": "2026-04-29",
+        "return_pct": 1.3470317459710315
+      },
+      {
+        "date": "2026-04-30",
+        "return_pct": 1.5227873475221725
+      },
+      {
+        "date": "2026-05-01",
+        "return_pct": 0.5221332245704294
+      },
+      {
+        "date": "2026-05-04",
+        "return_pct": -1.6312399882370439
+      },
+      {
+        "date": "2026-05-05",
+        "return_pct": 1.197460434429311
+      },
+      {
+        "date": "2026-05-06",
+        "return_pct": 5.4091490172336245
+      },
+      {
+        "date": "2026-05-07",
+        "return_pct": -0.7589510623684845
+      },
+      {
+        "date": "2026-05-08",
+        "return_pct": 2.7638831831539306
+      },
+      {
+        "date": "2026-05-11",
+        "return_pct": 0.20719816095641796
+      },
+      {
+        "date": "2026-05-12",
+        "return_pct": -0.6030784020979689
+      },
+      {
+        "date": "2026-05-13",
+        "return_pct": 0.08708352300485164
+      },
+      {
+        "date": "2026-05-14",
+        "return_pct": 0.06888400725982985
+      },
+      {
+        "date": "2026-05-15",
+        "return_pct": -0.6937327143930085
+      },
+      {
+        "date": "2026-05-18",
+        "return_pct": -0.08486643142341425
+      },
+      {
+        "date": "2026-05-19",
+        "return_pct": -0.18954125370789515
+      },
+      {
+        "date": "2026-05-20",
+        "return_pct": 0.5617489698979761
+      },
+      {
+        "date": "2026-05-21",
+        "return_pct": 0.03023055661507327
+      },
+      {
+        "date": "2026-05-22",
+        "return_pct": 0.0880561760939291
+      },
+      {
+        "date": "2026-05-26",
+        "return_pct": -0.0359366929223944
+      },
+      {
+        "date": "2026-05-27",
+        "return_pct": 0.07139054449280563
+      },
+      {
+        "date": "2026-05-28",
+        "return_pct": 0.21744487913212796
+      },
+      {
+        "date": "2026-05-29",
+        "return_pct": -0.029995572061904424
+      },
+      {
+        "date": "2026-06-01",
+        "return_pct": -0.21318117265236447
+      },
+      {
+        "date": "2026-06-02",
+        "return_pct": 0.3494102514951439
+      },
+      {
+        "date": "2026-06-03",
+        "return_pct": 0.04518183150740048
+      },
+      {
+        "date": "2026-06-04",
+        "return_pct": -0.05612731149768568
+      },
+      {
+        "date": "2026-06-05",
+        "return_pct": -0.6123805889395486
+      },
+      {
+        "date": "2026-06-08",
+        "return_pct": 0.24875763419480035
+      },
+      {
+        "date": "2026-06-09",
+        "return_pct": -0.14557135548344383
+      },
+      {
+        "date": "2026-06-10",
+        "return_pct": -0.2733628633218566
+      },
+      {
+        "date": "2026-06-11",
+        "return_pct": 0.13433858145888353
+      },
+      {
+        "date": "2026-06-12",
+        "return_pct": -0.0737366162761195
+      },
+      {
+        "date": "2026-06-15",
+        "return_pct": -0.009636395333880459
+      },
+      {
+        "date": "2026-06-16",
+        "return_pct": -0.018086484813153402
+      },
+      {
+        "date": "2026-06-17",
+        "return_pct": -0.027728824007219398
+      },
+      {
+        "date": "2026-06-18",
+        "return_pct": -0.1574093013108734
+      },
+      {
+        "date": "2026-06-22",
+        "return_pct": 0.0938531280951702
+      },
+      {
+        "date": "2026-06-23",
+        "return_pct": 0.03984268957372918
+      },
+      {
+        "date": "2026-06-24",
+        "return_pct": -0.010331017606340706
+      },
+      {
+        "date": "2026-06-25",
+        "return_pct": 0.025006640545616094
+      },
+      {
+        "date": "2026-06-26",
+        "return_pct": -0.18488487590249938
+      },
+      {
+        "date": "2026-06-29",
+        "return_pct": 0.009598733927351792
+      },
+      {
+        "date": "2026-06-30",
+        "return_pct": -0.058151453168388864
+      },
+      {
+        "date": "2026-07-01",
+        "return_pct": 0.19037322632909037
+      },
+      {
+        "date": "2026-07-02",
+        "return_pct": 0.011276646606224539
+      },
+      {
+        "date": "2026-07-06",
+        "return_pct": -0.14993025169796262
+      },
+      {
+        "date": "2026-07-07",
+        "return_pct": -0.03438378637010275
+      },
+      {
+        "date": "2026-07-08",
+        "return_pct": -0.3137180102045175
+      },
+      {
+        "date": "2026-07-09",
+        "return_pct": 0.04982424198100579
+      },
+      {
+        "date": "2026-07-10",
+        "return_pct": 0.05723218050790739
+      },
+      {
+        "date": "2026-07-13",
+        "return_pct": 0.4639456725006177
+      },
+      {
+        "date": "2026-07-14",
+        "return_pct": -0.07871245391115093
+      },
+      {
+        "date": "2026-07-15",
+        "return_pct": 0.013158684481752553
+      },
+      {
+        "date": "2026-07-16",
+        "return_pct": -0.04431499630726841
+      },
+      {
+        "date": "2026-07-17",
+        "return_pct": -0.04898753360448721
+      },
+      {
+        "date": "2026-07-20",
+        "return_pct": -0.21078928079827655
+      },
+      {
+        "date": "2026-07-21",
+        "return_pct": 0.16923369443310934
+      },
+      {
+        "date": "2026-07-22",
+        "return_pct": -0.14117236430095997
+      },
+      {
+        "date": "2026-07-23",
+        "return_pct": -0.3138462573899391
+      },
+      {
+        "date": "2026-07-24",
+        "return_pct": 0.8455125892743495
+      },
+      {
+        "date": "2026-07-27",
+        "return_pct": 0.30861855873609056
+      },
+      {
+        "date": "2026-07-28",
+        "return_pct": 0.0317410989239858
+      },
+      {
+        "date": "2026-07-29",
+        "return_pct": 0.20990534940233668
+      },
+      {
+        "date": "2026-07-30",
+        "return_pct": 0.012880022966470102
+      },
+      {
+        "date": "2026-07-31",
+        "return_pct": -0.08956316941909133
+      },
+      {
+        "date": "2026-08-03",
+        "return_pct": 0.004126930807089616
+      },
+      {
+        "date": "2026-08-04",
+        "return_pct": -0.08368476050534877
+      },
+      {
+        "date": "2026-08-05",
+        "return_pct": -0.17740800162261589
+      },
+      {
+        "date": "2026-08-06",
+        "return_pct": 0.24484625891876688
+      },
+      {
+        "date": "2026-08-07",
+        "return_pct": -0.1369616222098679
+      },
+      {
+        "date": "2026-08-10",
+        "return_pct": 0.21866449588993225
+      },
+      {
+        "date": "2026-08-11",
+        "return_pct": -0.04642734297117544
+      },
+      {
+        "date": "2026-08-12",
+        "return_pct": -0.21888720111866186
+      },
+      {
+        "date": "2026-08-13",
+        "return_pct": 0.08578073712999693
+      },
+      {
+        "date": "2026-08-14",
+        "return_pct": -0.028504872120104136
+      },
+      {
+        "date": "2026-08-17",
+        "return_pct": -0.15466232994063933
+      },
+      {
+        "date": "2026-08-18",
+        "return_pct": -0.10156387980077325
+      },
+      {
+        "date": "2026-08-19",
+        "return_pct": 0.026865409229867174
+      },
+      {
+        "date": "2026-08-20",
+        "return_pct": -0.045816918607081834
+      },
+      {
+        "date": "2026-08-21",
+        "return_pct": 0.11591198193702415
+      },
+      {
+        "date": "2026-08-24",
+        "return_pct": -0.14877522019097816
+      },
+      {
+        "date": "2026-08-25",
+        "return_pct": 0.011419346438142857
+      },
+      {
+        "date": "2026-08-26",
+        "return_pct": -0.03890917584254984
+      },
+      {
+        "date": "2026-08-27",
+        "return_pct": 0.07899089064687413
+      },
+      {
+        "date": "2026-08-28",
+        "return_pct": -0.05320433574836596
+      },
+      {
+        "date": "2026-08-31",
+        "return_pct": -0.051140526316320926
+      }
+    ]
+  },
+  {
+    "task": {
+      "name": "baseline",
+      "dataset_id": "0c6c4cea1cc4472085b35ca94c86a20d",
+      "start": "2026-03-02",
+      "end": "2026-09-01",
+      "config": {
+        "allocation": {
+          "enabled": true,
+          "symbols": [
+            "AAPL",
+            "AMD",
+            "AMZN",
+            "AVGO",
+            "BRK.B",
+            "COST",
+            "GOOGL",
+            "JNJ",
+            "JPM",
+            "LLY",
+            "MA",
+            "META",
+            "MSFT",
+            "NVDA",
+            "ORCL",
+            "SOFI",
+            "TSLA",
+            "V",
+            "WMT",
+            "XOM"
+          ],
+          "lookback": 30,
+          "max_positions": 3,
+          "max_weight": 0.35,
+          "cash_reserve": 0.05,
+          "risk_aversion": 10.0,
+          "cost_penalty": 1.5,
+          "rebalance_band": 0.02,
+          "max_daily_turnover": 0.2,
+          "rebalance_minutes": 30
+        },
+        "model": "trend",
+        "lookback": 15,
+        "horizon": 3,
+        "rebalance_days": 5,
+        "confidence": 0.5,
+        "tranche_weight": 0.1,
+        "max_weight": 0.2,
+        "daily_vol_target": 0.015,
+        "stop_loss_pct": 10.0,
+        "max_drawdown_pct": 10.0,
+        "costs": {
+          "allocation": {
+            "enabled": false,
+            "symbols": [],
+            "lookback": 60,
+            "max_positions": 3,
+            "max_weight": 0.35,
+            "cash_reserve": 0.05,
+            "risk_aversion": 10.0,
+            "cost_penalty": 2.0,
+            "rebalance_band": 0.02,
+            "max_daily_turnover": 1.0,
+            "rebalance_minutes": 30
+          },
+          "strategy": "adaptive",
+          "fast": 5,
+          "stat_window": 120,
+          "stat_horizon": 15,
+          "stat_entry_z": 1.5,
+          "stat_confidence": 0.5,
+          "stat_process_noise": 0.001,
+          "slow": 20,
+          "flatten_minutes": 5,
+          "opening_minutes": 15,
+          "reversion_bps": 30.0,
+          "stop_loss_bps": 100.0,
+          "regime_window": 60,
+          "min_reward_risk": 1.2,
+          "atr_window": 14,
+          "stop_atr": 2.0,
+          "take_atr": 3.0,
+          "breakout_buffer_atr": 0.1,
+          "reversion_atr": 2.0,
+          "momentum_threshold_bps": 10.0,
+          "regime_gate": "off",
+          "regime_window_days": 10,
+          "regime_min_drift_bps": 0.0,
+          "regime_max_efficiency": 0.35,
+          "max_scaling_lots": 3,
+          "lot_breakeven_hold": false,
+          "lot_patience_minutes": 45,
+          "lot_hard_stop_atr": 4.0,
+          "tranche_requires_uptrend": false,
+          "min_relative_volume": 1.2,
+          "max_hold_minutes": 30,
+          "cooldown_minutes": 10,
+          "max_daily_entries": 4,
+          "daily_loss_bps": 100.0,
+          "risk_per_trade_bps": 25.0,
+          "rule_cost_multiplier": 1.5,
+          "initial_cash": 100000.0,
+          "spread_bps": 2.0,
+          "slippage_bps": 2.0,
+          "commission_per_share": 0.005,
+          "minimum_commission": 1.0,
+          "sell_fee_bps": 0.3,
+          "participation": 0.01
+        }
+      }
+    },
+    "metrics": {
+      "return_pct": 14.144023789352334,
+      "final_equity": 114144.02378935233,
+      "max_drawdown_pct": 2.9419555974269707,
+      "fees": 52.31491264772001,
+      "impact_cost": 103.63129800000002,
+      "trade_count": 47,
+      "halted": false,
+      "turnover": 3.09327751444024,
+      "realized_pnl": 14184.696347352281,
+      "unrealized_pnl": -40.672557999999526,
+      "trading_days": 127,
+      "daily_sharpe": 2.183872975373837,
+      "average_gross_exposure_pct": 10.070803886219911,
+      "estimated_liquidation_return_pct": 14.141273538652332
+    },
+    "months": {
+      "2026-03": -0.0008979222899999639,
+      "2026-04": 0.06696951371953985,
+      "2026-05": 0.07390098143421087,
+      "2026-06": -0.007602666508631284,
+      "2026-07": 0.009786172446105912,
+      "2026-08": -0.005025253309593025
+    },
+    "contributions": [
+      {
+        "symbol": "AAPL",
+        "net_profit": 1341.191068654839
+      },
+      {
+        "symbol": "AMD",
+        "net_profit": 13989.508713468265
+      },
+      {
+        "symbol": "AMZN",
+        "net_profit": 0.0
+      },
+      {
+        "symbol": "AVGO",
+        "net_profit": -20.676226842500228
+      },
+      {
+        "symbol": "BRK.B",
+        "net_profit": 0.0
+      },
+      {
+        "symbol": "COST",
+        "net_profit": 0.0
+      },
+      {
+        "symbol": "GOOGL",
+        "net_profit": 0.0
+      },
+      {
+        "symbol": "JNJ",
+        "net_profit": 0.0
+      },
+      {
+        "symbol": "JPM",
+        "net_profit": -57.91794851999839
+      },
+      {
+        "symbol": "LLY",
+        "net_profit": -61.79499384676956
+      },
+      {
+        "symbol": "MA",
+        "net_profit": -40.67255800000021
+      },
+      {
+        "symbol": "META",
+        "net_profit": 0.0
+      },
+      {
+        "symbol": "MSFT",
+        "net_profit": -301.4810233522803
+      },
+      {
+        "symbol": "NVDA",
+        "net_profit": 0.0
+      },
+      {
+        "symbol": "ORCL",
+        "net_profit": -104.67269881759967
+      },
+      {
+        "symbol": "SOFI",
+        "net_profit": 0.0
+      },
+      {
+        "symbol": "TSLA",
+        "net_profit": -146.22999175110044
+      },
+      {
+        "symbol": "V",
+        "net_profit": -64.179050935938
+      },
+      {
+        "symbol": "WMT",
+        "net_profit": 0.0
+      },
+      {
+        "symbol": "XOM",
+        "net_profit": -389.05150070464197
+      }
+    ],
+    "daily_returns": [
+      {
+        "date": "2026-03-02",
+        "return_pct": 0.0
+      },
+      {
+        "date": "2026-03-03",
+        "return_pct": 0.0
+      },
+      {
+        "date": "2026-03-04",
+        "return_pct": 0.0
+      },
+      {
+        "date": "2026-03-05",
+        "return_pct": 0.0
+      },
+      {
+        "date": "2026-03-06",
+        "return_pct": 0.0
+      },
+      {
+        "date": "2026-03-09",
+        "return_pct": 0.0
+      },
+      {
+        "date": "2026-03-10",
+        "return_pct": 0.0
+      },
+      {
+        "date": "2026-03-11",
+        "return_pct": 0.0
+      },
+      {
+        "date": "2026-03-12",
+        "return_pct": 0.0
+      },
+      {
+        "date": "2026-03-13",
+        "return_pct": 0.0
+      },
+      {
+        "date": "2026-03-16",
+        "return_pct": 0.0
+      },
+      {
+        "date": "2026-03-17",
+        "return_pct": 0.0
+      },
+      {
+        "date": "2026-03-18",
+        "return_pct": 0.0
+      },
+      {
+        "date": "2026-03-19",
+        "return_pct": 0.0
+      },
+      {
+        "date": "2026-03-20",
+        "return_pct": 0.0
+      },
+      {
+        "date": "2026-03-23",
+        "return_pct": 0.0
+      },
+      {
+        "date": "2026-03-24",
+        "return_pct": 0.0
+      },
+      {
+        "date": "2026-03-25",
+        "return_pct": 0.0
+      },
+      {
+        "date": "2026-03-26",
+        "return_pct": 0.0
+      },
+      {
+        "date": "2026-03-27",
+        "return_pct": 0.0
+      },
+      {
+        "date": "2026-03-30",
+        "return_pct": 0.0
+      },
+      {
+        "date": "2026-03-31",
+        "return_pct": -0.08979222899999877
+      },
+      {
+        "date": "2026-04-01",
+        "return_pct": -0.2577514407639456
+      },
+      {
+        "date": "2026-04-02",
+        "return_pct": -0.002619096442233764
+      },
+      {
+        "date": "2026-04-06",
+        "return_pct": 0.07799291454503923
+      },
+      {
+        "date": "2026-04-07",
+        "return_pct": 0.015702743217054463
+      },
+      {
+        "date": "2026-04-08",
+        "return_pct": -0.30456047255622376
+      },
+      {
+        "date": "2026-04-09",
+        "return_pct": 0.0
+      },
+      {
+        "date": "2026-04-10",
+        "return_pct": 0.0
+      },
+      {
+        "date": "2026-04-13",
+        "return_pct": 0.0
+      },
+      {
+        "date": "2026-04-14",
+        "return_pct": 0.0
+      },
+      {
+        "date": "2026-04-15",
+        "return_pct": 0.11992895557327557
+      },
+      {
+        "date": "2026-04-16",
+        "return_pct": 0.7889397323547178
+      },
+      {
+        "date": "2026-04-17",
+        "return_pct": 0.005052599071475052
+      },
+      {
+        "date": "2026-04-20",
+        "return_pct": -0.13369278970010812
+      },
+      {
+        "date": "2026-04-21",
+        "return_pct": 0.37126065504630446
+      },
+      {
+        "date": "2026-04-22",
+        "return_pct": 1.2217529803659395
+      },
+      {
+        "date": "2026-04-23",
+        "return_pct": 0.22445336633667412
+      },
+      {
+        "date": "2026-04-24",
+        "return_pct": 4.607972581953795
+      },
+      {
+        "date": "2026-04-27",
+        "return_pct": -1.5400335890824908
+      },
+      {
+        "date": "2026-04-28",
+        "return_pct": -1.423849773108426
+      },
+      {
+        "date": "2026-04-29",
+        "return_pct": 1.3470317459710315
+      },
+      {
+        "date": "2026-04-30",
+        "return_pct": 1.5227873475221725
+      },
+      {
+        "date": "2026-05-01",
+        "return_pct": 0.5221332245704294
+      },
+      {
+        "date": "2026-05-04",
+        "return_pct": -1.6312399882370439
+      },
+      {
+        "date": "2026-05-05",
+        "return_pct": 1.197460434429311
+      },
+      {
+        "date": "2026-05-06",
+        "return_pct": 5.4091490172336245
+      },
+      {
+        "date": "2026-05-07",
+        "return_pct": -0.7589510623684845
+      },
+      {
+        "date": "2026-05-08",
+        "return_pct": 2.7638831831539306
+      },
+      {
+        "date": "2026-05-11",
+        "return_pct": 0.20719816095641796
+      },
+      {
+        "date": "2026-05-12",
+        "return_pct": -0.6030784020979689
+      },
+      {
+        "date": "2026-05-13",
+        "return_pct": 0.08708352300485164
+      },
+      {
+        "date": "2026-05-14",
+        "return_pct": 0.06888400725982985
+      },
+      {
+        "date": "2026-05-15",
+        "return_pct": -0.6937327143930085
+      },
+      {
+        "date": "2026-05-18",
+        "return_pct": -0.08486643142341425
+      },
+      {
+        "date": "2026-05-19",
+        "return_pct": -0.18954125370789515
+      },
+      {
+        "date": "2026-05-20",
+        "return_pct": 0.5975596419951168
+      },
+      {
+        "date": "2026-05-21",
+        "return_pct": 0.0653175292040365
+      },
+      {
+        "date": "2026-05-22",
+        "return_pct": 0.12761974726910855
+      },
+      {
+        "date": "2026-05-26",
+        "return_pct": -0.016306520250640312
+      },
+      {
+        "date": "2026-05-27",
+        "return_pct": 0.08387578136738781
+      },
+      {
+        "date": "2026-05-28",
+        "return_pct": 0.22008830153163755
+      },
+      {
+        "date": "2026-05-29",
+        "return_pct": -0.032309874372149876
+      },
+      {
+        "date": "2026-06-01",
+        "return_pct": -0.24301384315207805
+      },
+      {
+        "date": "2026-06-02",
+        "return_pct": 0.3957237627235134
+      },
+      {
+        "date": "2026-06-03",
+        "return_pct": 0.01925814366860992
+      },
+      {
+        "date": "2026-06-04",
+        "return_pct": -0.07766397899937635
+      },
+      {
+        "date": "2026-06-05",
+        "return_pct": -0.49408077847745097
+      },
+      {
+        "date": "2026-06-08",
+        "return_pct": 0.21005148072875496
+      },
+      {
+        "date": "2026-06-09",
+        "return_pct": -0.12974888858855338
+      },
+      {
+        "date": "2026-06-10",
+        "return_pct": -0.2024784349921241
+      },
+      {
+        "date": "2026-06-11",
+        "return_pct": 0.1327460470433522
+      },
+      {
+        "date": "2026-06-12",
+        "return_pct": -0.07353261099208144
+      },
+      {
+        "date": "2026-06-15",
+        "return_pct": -0.00960971493694988
+      },
+      {
+        "date": "2026-06-16",
+        "return_pct": -0.018036403745103548
+      },
+      {
+        "date": "2026-06-17",
+        "return_pct": -0.02765202966873089
+      },
+      {
+        "date": "2026-06-18",
+        "return_pct": -0.15697323930173623
+      },
+      {
+        "date": "2026-06-22",
+        "return_pct": 0.09359272336184135
+      },
+      {
+        "date": "2026-06-23",
+        "return_pct": 0.039732245481048194
+      },
+      {
+        "date": "2026-06-24",
+        "return_pct": -0.010302391358630248
+      },
+      {
+        "date": "2026-06-25",
+        "return_pct": 0.02493734243086789
+      },
+      {
+        "date": "2026-06-26",
+        "return_pct": -0.1843726527950753
+      },
+      {
+        "date": "2026-06-29",
+        "return_pct": 0.009572091536632778
+      },
+      {
+        "date": "2026-06-30",
+        "return_pct": -0.057990062566014126
+      },
+      {
+        "date": "2026-07-01",
+        "return_pct": 0.1898445675344425
+      },
+      {
+        "date": "2026-07-02",
+        "return_pct": 0.011245391148818621
+      },
+      {
+        "date": "2026-07-06",
+        "return_pct": -0.1495147370645736
+      },
+      {
+        "date": "2026-07-07",
+        "return_pct": -0.0342883529313395
+      },
+      {
+        "date": "2026-07-08",
+        "return_pct": -0.31284697589290444
+      },
+      {
+        "date": "2026-07-09",
+        "return_pct": 0.04968547142823994
+      },
+      {
+        "date": "2026-07-10",
+        "return_pct": 0.0570728565146311
+      },
+      {
+        "date": "2026-07-13",
+        "return_pct": 0.4763639797098486
+      },
+      {
+        "date": "2026-07-14",
+        "return_pct": -0.08983246431343547
+      },
+      {
+        "date": "2026-07-15",
+        "return_pct": -0.04029923477225797
+      },
+      {
+        "date": "2026-07-16",
+        "return_pct": 0.0
+      },
+      {
+        "date": "2026-07-17",
+        "return_pct": 0.0
+      },
+      {
+        "date": "2026-07-20",
+        "return_pct": -0.21049417665530762
+      },
+      {
+        "date": "2026-07-21",
+        "return_pct": 0.17266767444913794
+      },
+      {
+        "date": "2026-07-22",
+        "return_pct": -0.14051574461142113
+      },
+      {
+        "date": "2026-07-23",
+        "return_pct": -0.3128307839697466
+      },
+      {
+        "date": "2026-07-24",
+        "return_pct": 0.8427682839954546
+      },
+      {
+        "date": "2026-07-27",
+        "return_pct": 0.30762523772445716
+      },
+      {
+        "date": "2026-07-28",
+        "return_pct": 0.031639250199778216
+      },
+      {
+        "date": "2026-07-29",
+        "return_pct": 0.20923203212972397
+      },
+      {
+        "date": "2026-07-30",
+        "return_pct": 0.012838793743257198
+      },
+      {
+        "date": "2026-07-31",
+        "return_pct": -0.08927651264167312
+      },
+      {
+        "date": "2026-08-03",
+        "return_pct": 0.004113710308198422
+      },
+      {
+        "date": "2026-08-04",
+        "return_pct": -0.08341668991612733
+      },
+      {
+        "date": "2026-08-05",
+        "return_pct": -0.17683922934485513
+      },
+      {
+        "date": "2026-08-06",
+        "return_pct": 0.24405988813044943
+      },
+      {
+        "date": "2026-08-07",
+        "return_pct": -0.13652281460716634
+      },
+      {
+        "date": "2026-08-10",
+        "return_pct": 0.21330036624516274
+      },
+      {
+        "date": "2026-08-11",
+        "return_pct": -0.04611737226897615
+      },
+      {
+        "date": "2026-08-12",
+        "return_pct": -0.21819595782001786
+      },
+      {
+        "date": "2026-08-13",
+        "return_pct": 0.08550925016142814
+      },
+      {
+        "date": "2026-08-14",
+        "return_pct": -0.02841473428813713
+      },
+      {
+        "date": "2026-08-17",
+        "return_pct": -0.15417311920317803
+      },
+      {
+        "date": "2026-08-18",
+        "return_pct": -0.10124212814016113
+      },
+      {
+        "date": "2026-08-19",
+        "return_pct": 0.026780214077041054
+      },
+      {
+        "date": "2026-08-20",
+        "return_pct": -0.04567166363270659
+      },
+      {
+        "date": "2026-08-21",
+        "return_pct": 0.11554433422882517
+      },
+      {
+        "date": "2026-08-24",
+        "return_pct": -0.14830388201149983
+      },
+      {
+        "date": "2026-08-25",
+        "return_pct": 0.011383114812478359
+      },
+      {
+        "date": "2026-08-26",
+        "return_pct": -0.03878573775900344
+      },
+      {
+        "date": "2026-08-27",
+        "return_pct": 0.07874019740517896
+      },
+      {
+        "date": "2026-08-28",
+        "return_pct": -0.053035614099413125
+      },
+      {
+        "date": "2026-08-31",
+        "return_pct": -0.05097826336499152
+      }
+    ]
+  },
+  {
+    "task": {
+      "name": "budget_entry",
+      "dataset_id": "0c6c4cea1cc4472085b35ca94c86a20d",
+      "start": "2026-03-02",
+      "end": "2026-09-01",
+      "config": {
+        "allocation": {
+          "enabled": true,
+          "symbols": [
+            "AAPL",
+            "AMD",
+            "AMZN",
+            "AVGO",
+            "BRK.B",
+            "COST",
+            "GOOGL",
+            "JNJ",
+            "JPM",
+            "LLY",
+            "MA",
+            "META",
+            "MSFT",
+            "NVDA",
+            "ORCL",
+            "SOFI",
+            "TSLA",
+            "V",
+            "WMT",
+            "XOM"
+          ],
+          "lookback": 30,
+          "max_positions": 3,
+          "max_weight": 0.35,
+          "cash_reserve": 0.05,
+          "risk_aversion": 10.0,
+          "cost_penalty": 1.5,
+          "rebalance_band": 0.02,
+          "max_daily_turnover": 0.2,
+          "rebalance_minutes": 30
+        },
+        "model": "trend",
+        "lookback": 15,
+        "horizon": 3,
+        "rebalance_days": 5,
+        "confidence": 0.5,
+        "tranche_weight": 0.1,
+        "max_weight": 0.2,
+        "daily_vol_target": 0.015,
+        "stop_loss_pct": 10.0,
+        "max_drawdown_pct": 10.0,
+        "costs": {
+          "allocation": {
+            "enabled": false,
+            "symbols": [],
+            "lookback": 60,
+            "max_positions": 3,
+            "max_weight": 0.35,
+            "cash_reserve": 0.05,
+            "risk_aversion": 10.0,
+            "cost_penalty": 2.0,
+            "rebalance_band": 0.02,
+            "max_daily_turnover": 1.0,
+            "rebalance_minutes": 30
+          },
+          "strategy": "adaptive",
+          "fast": 5,
+          "stat_window": 120,
+          "stat_horizon": 15,
+          "stat_entry_z": 1.5,
+          "stat_confidence": 0.5,
+          "stat_process_noise": 0.001,
+          "slow": 20,
+          "flatten_minutes": 5,
+          "opening_minutes": 15,
+          "reversion_bps": 30.0,
+          "stop_loss_bps": 100.0,
+          "regime_window": 60,
+          "min_reward_risk": 1.2,
+          "atr_window": 14,
+          "stop_atr": 2.0,
+          "take_atr": 3.0,
+          "breakout_buffer_atr": 0.1,
+          "reversion_atr": 2.0,
+          "momentum_threshold_bps": 10.0,
+          "regime_gate": "off",
+          "regime_window_days": 10,
+          "regime_min_drift_bps": 0.0,
+          "regime_max_efficiency": 0.35,
+          "max_scaling_lots": 3,
+          "lot_breakeven_hold": false,
+          "lot_patience_minutes": 45,
+          "lot_hard_stop_atr": 4.0,
+          "tranche_requires_uptrend": false,
+          "min_relative_volume": 1.2,
+          "max_hold_minutes": 30,
+          "cooldown_minutes": 10,
+          "max_daily_entries": 4,
+          "daily_loss_bps": 100.0,
+          "risk_per_trade_bps": 25.0,
+          "rule_cost_multiplier": 1.5,
+          "initial_cash": 100000.0,
+          "spread_bps": 2.0,
+          "slippage_bps": 2.0,
+          "commission_per_share": 0.005,
+          "minimum_commission": 1.0,
+          "sell_fee_bps": 0.3,
+          "participation": 0.01
+        },
+        "capital_mode": "risk_budget",
+        "entry_band": 0.005
+      }
+    },
+    "metrics": {
+      "return_pct": 22.384724188961446,
+      "final_equity": 122384.72418896145,
+      "max_drawdown_pct": 5.4189202661356735,
+      "fees": 199.74617933850902,
+      "impact_cost": 392.78863169999977,
+      "trade_count": 180,
+      "halted": false,
+      "turnover": 11.268029835042572,
+      "realized_pnl": 22331.12377673927,
+      "unrealized_pnl": 53.60041222222321,
+      "trading_days": 127,
+      "daily_sharpe": 2.059700207192867,
+      "average_gross_exposure_pct": 33.2297689998359,
+      "estimated_liquidation_return_pct": 22.37762050796146
+    },
+    "months": {
+      "2026-03": -0.0017552265700000458,
+      "2026-04": 0.08702928912081997,
+      "2026-05": 0.10611676298006589,
+      "2026-06": -0.0353457581755654,
+      "2026-07": 0.06297974835085185,
+      "2026-08": -0.00562252124470064
+    },
+    "contributions": [
+      {
+        "symbol": "AAPL",
+        "net_profit": 2145.521960835211
+      },
+      {
+        "symbol": "AMD",
+        "net_profit": 19875.537149027492
+      },
+      {
+        "symbol": "AMZN",
+        "net_profit": 1450.817599764408
+      },
+      {
+        "symbol": "AVGO",
+        "net_profit": -2043.0720405956035
+      },
+      {
+        "symbol": "BRK.B",
+        "net_profit": 0.0
+      },
+      {
+        "symbol": "COST",
+        "net_profit": -1191.6149583010538
+      },
+      {
+        "symbol": "GOOGL",
+        "net_profit": -144.37909364897087
+      },
+      {
+        "symbol": "JNJ",
+        "net_profit": -474.82488338007215
+      },
+      {
+        "symbol": "JPM",
+        "net_profit": 360.5331542061922
+      },
+      {
+        "symbol": "LLY",
+        "net_profit": -588.5424243175439
+      },
+      {
+        "symbol": "MA",
+        "net_profit": 1208.8484456771748
+      },
+      {
+        "symbol": "META",
+        "net_profit": -344.76189269550014
+      },
+      {
+        "symbol": "MSFT",
+        "net_profit": 3052.674928435119
+      },
+      {
+        "symbol": "NVDA",
+        "net_profit": -7.367164414909212
+      },
+      {
+        "symbol": "ORCL",
+        "net_profit": -675.63840224258
+      },
+      {
+        "symbol": "SOFI",
+        "net_profit": 0.0
+      },
+      {
+        "symbol": "TSLA",
+        "net_profit": -88.48273112885181
+      },
+      {
+        "symbol": "V",
+        "net_profit": 393.03723373992943
+      },
+      {
+        "symbol": "WMT",
+        "net_profit": 0.0
+      },
+      {
+        "symbol": "XOM",
+        "net_profit": -543.5626919989518
+      }
+    ],
+    "daily_returns": [
+      {
+        "date": "2026-03-02",
+        "return_pct": 0.0
+      },
+      {
+        "date": "2026-03-03",
+        "return_pct": 0.0
+      },
+      {
+        "date": "2026-03-04",
+        "return_pct": 0.0
+      },
+      {
+        "date": "2026-03-05",
+        "return_pct": 0.0
+      },
+      {
+        "date": "2026-03-06",
+        "return_pct": 0.0
+      },
+      {
+        "date": "2026-03-09",
+        "return_pct": 0.0
+      },
+      {
+        "date": "2026-03-10",
+        "return_pct": 0.0
+      },
+      {
+        "date": "2026-03-11",
+        "return_pct": 0.0
+      },
+      {
+        "date": "2026-03-12",
+        "return_pct": 0.0
+      },
+      {
+        "date": "2026-03-13",
+        "return_pct": 0.0
+      },
+      {
+        "date": "2026-03-16",
+        "return_pct": 0.0
+      },
+      {
+        "date": "2026-03-17",
+        "return_pct": 0.0
+      },
+      {
+        "date": "2026-03-18",
+        "return_pct": 0.0
+      },
+      {
+        "date": "2026-03-19",
+        "return_pct": 0.0
+      },
+      {
+        "date": "2026-03-20",
+        "return_pct": 0.0
+      },
+      {
+        "date": "2026-03-23",
+        "return_pct": 0.0
+      },
+      {
+        "date": "2026-03-24",
+        "return_pct": 0.0
+      },
+      {
+        "date": "2026-03-25",
+        "return_pct": 0.0
+      },
+      {
+        "date": "2026-03-26",
+        "return_pct": 0.0
+      },
+      {
+        "date": "2026-03-27",
+        "return_pct": 0.0
+      },
+      {
+        "date": "2026-03-30",
+        "return_pct": 0.0
+      },
+      {
+        "date": "2026-03-31",
+        "return_pct": -0.1755226570000086
+      },
+      {
+        "date": "2026-04-01",
+        "return_pct": -0.8059186989136012
+      },
+      {
+        "date": "2026-04-02",
+        "return_pct": -0.010543327432966536
+      },
+      {
+        "date": "2026-04-06",
+        "return_pct": 0.31398996632783993
+      },
+      {
+        "date": "2026-04-07",
+        "return_pct": 0.06306860591189105
+      },
+      {
+        "date": "2026-04-08",
+        "return_pct": -1.0729511312738935
+      },
+      {
+        "date": "2026-04-09",
+        "return_pct": 0.03069324619954193
+      },
+      {
+        "date": "2026-04-10",
+        "return_pct": 0.0
+      },
+      {
+        "date": "2026-04-13",
+        "return_pct": 0.0
+      },
+      {
+        "date": "2026-04-14",
+        "return_pct": 0.0
+      },
+      {
+        "date": "2026-04-15",
+        "return_pct": 0.08440249007106945
+      },
+      {
+        "date": "2026-04-16",
+        "return_pct": 1.3630725722419823
+      },
+      {
+        "date": "2026-04-17",
+        "return_pct": -0.007956315595451036
+      },
+      {
+        "date": "2026-04-20",
+        "return_pct": -0.4976161738131863
+      },
+      {
+        "date": "2026-04-21",
+        "return_pct": 0.9567007186791383
+      },
+      {
+        "date": "2026-04-22",
+        "return_pct": 2.822004178280729
+      },
+      {
+        "date": "2026-04-23",
+        "return_pct": 0.08705318703035599
+      },
+      {
+        "date": "2026-04-24",
+        "return_pct": 5.98941154268123
+      },
+      {
+        "date": "2026-04-27",
+        "return_pct": -2.0752074571957966
+      },
+      {
+        "date": "2026-04-28",
+        "return_pct": -2.9365930791612005
+      },
+      {
+        "date": "2026-04-29",
+        "return_pct": 2.2724877752672703
+      },
+      {
+        "date": "2026-04-30",
+        "return_pct": 2.1183801075612996
+      },
+      {
+        "date": "2026-05-01",
+        "return_pct": 0.8391760371632729
+      },
+      {
+        "date": "2026-05-04",
+        "return_pct": -1.531487098330515
+      },
+      {
+        "date": "2026-05-05",
+        "return_pct": 1.3945267992915955
+      },
+      {
+        "date": "2026-05-06",
+        "return_pct": 7.892992625303294
+      },
+      {
+        "date": "2026-05-07",
+        "return_pct": -1.6678856505955797
+      },
+      {
+        "date": "2026-05-08",
+        "return_pct": 4.826833524966349
+      },
+      {
+        "date": "2026-05-11",
+        "return_pct": -0.5946361185832779
+      },
+      {
+        "date": "2026-05-12",
+        "return_pct": -1.3877280573728465
+      },
+      {
+        "date": "2026-05-13",
+        "return_pct": 0.7564495408532353
+      },
+      {
+        "date": "2026-05-14",
+        "return_pct": 0.009882275221147046
+      },
+      {
+        "date": "2026-05-15",
+        "return_pct": -2.150348026042544
+      },
+      {
+        "date": "2026-05-18",
+        "return_pct": -0.348779111252341
+      },
+      {
+        "date": "2026-05-19",
+        "return_pct": -0.552821575115318
+      },
+      {
+        "date": "2026-05-20",
+        "return_pct": 2.331788199503872
+      },
+      {
+        "date": "2026-05-21",
+        "return_pct": 0.01963307424764346
+      },
+      {
+        "date": "2026-05-22",
+        "return_pct": 0.7005253509295485
+      },
+      {
+        "date": "2026-05-26",
+        "return_pct": -0.32924653862141806
+      },
+      {
+        "date": "2026-05-27",
+        "return_pct": 0.24648124420952208
+      },
+      {
+        "date": "2026-05-28",
+        "return_pct": 0.4000672887339643
+      },
+      {
+        "date": "2026-05-29",
+        "return_pct": -0.25081863604318383
+      },
+      {
+        "date": "2026-06-01",
+        "return_pct": -0.7622615138164283
+      },
+      {
+        "date": "2026-06-02",
+        "return_pct": 1.3340450837110809
+      },
+      {
+        "date": "2026-06-03",
+        "return_pct": 0.13238479090427052
+      },
+      {
+        "date": "2026-06-04",
+        "return_pct": -0.4955476550174952
+      },
+      {
+        "date": "2026-06-05",
+        "return_pct": -1.8490362575285715
+      },
+      {
+        "date": "2026-06-08",
+        "return_pct": 0.5287385071667999
+      },
+      {
+        "date": "2026-06-09",
+        "return_pct": -0.4947972125364704
+      },
+      {
+        "date": "2026-06-10",
+        "return_pct": -1.0678641018600492
+      },
+      {
+        "date": "2026-06-11",
+        "return_pct": 0.20534741278505678
+      },
+      {
+        "date": "2026-06-12",
+        "return_pct": -0.30363819224277866
+      },
+      {
+        "date": "2026-06-15",
+        "return_pct": -0.056642350843455716
+      },
+      {
+        "date": "2026-06-16",
+        "return_pct": -0.09397013666047985
+      },
+      {
+        "date": "2026-06-17",
+        "return_pct": -0.1441772989238273
+      },
+      {
+        "date": "2026-06-18",
+        "return_pct": -0.346898472849827
+      },
+      {
+        "date": "2026-06-22",
+        "return_pct": 0.3014154902055757
+      },
+      {
+        "date": "2026-06-23",
+        "return_pct": 0.15781455485362883
+      },
+      {
+        "date": "2026-06-24",
+        "return_pct": -0.04087235568772315
+      },
+      {
+        "date": "2026-06-25",
+        "return_pct": 0.09896339649532117
+      },
+      {
+        "date": "2026-06-26",
+        "return_pct": -0.4800499693549782
+      },
+      {
+        "date": "2026-06-29",
+        "return_pct": 0.09813313870919406
+      },
+      {
+        "date": "2026-06-30",
+        "return_pct": -0.27724536850792464
+      },
+      {
+        "date": "2026-07-01",
+        "return_pct": 0.7044976016718582
+      },
+      {
+        "date": "2026-07-02",
+        "return_pct": 0.16583142279186686
+      },
+      {
+        "date": "2026-07-06",
+        "return_pct": 0.08561415338044698
+      },
+      {
+        "date": "2026-07-07",
+        "return_pct": 0.3591311113149197
+      },
+      {
+        "date": "2026-07-08",
+        "return_pct": -0.7603730602646815
+      },
+      {
+        "date": "2026-07-09",
+        "return_pct": -0.08138678816170407
+      },
+      {
+        "date": "2026-07-10",
+        "return_pct": -0.13135643989518586
+      },
+      {
+        "date": "2026-07-13",
+        "return_pct": 0.9314446685507268
+      },
+      {
+        "date": "2026-07-14",
+        "return_pct": -0.29209529512785687
+      },
+      {
+        "date": "2026-07-15",
+        "return_pct": 0.0022740898468780486
+      },
+      {
+        "date": "2026-07-16",
+        "return_pct": -0.06118904916837827
+      },
+      {
+        "date": "2026-07-17",
+        "return_pct": -0.24886023198440943
+      },
+      {
+        "date": "2026-07-20",
+        "return_pct": 0.07598684872365687
+      },
+      {
+        "date": "2026-07-21",
+        "return_pct": -0.08902294545114077
+      },
+      {
+        "date": "2026-07-22",
+        "return_pct": -0.6505428998665397
+      },
+      {
+        "date": "2026-07-23",
+        "return_pct": -0.7456377421129456
+      },
+      {
+        "date": "2026-07-24",
+        "return_pct": 1.6748021590109161
+      },
+      {
+        "date": "2026-07-27",
+        "return_pct": 1.3347736832919097
+      },
+      {
+        "date": "2026-07-28",
+        "return_pct": 0.8891694744030781
+      },
+      {
+        "date": "2026-07-29",
+        "return_pct": -0.33487123148828474
+      },
+      {
+        "date": "2026-07-30",
+        "return_pct": 3.4249681287492497
+      },
+      {
+        "date": "2026-07-31",
+        "return_pct": -0.04463759834712301
+      },
+      {
+        "date": "2026-08-03",
+        "return_pct": 0.2819454081819296
+      },
+      {
+        "date": "2026-08-04",
+        "return_pct": -0.007473964395635707
+      },
+      {
+        "date": "2026-08-05",
+        "return_pct": -0.6031867716734666
+      },
+      {
+        "date": "2026-08-06",
+        "return_pct": 0.95465813863546
+      },
+      {
+        "date": "2026-08-07",
+        "return_pct": -0.5372930494710163
+      },
+      {
+        "date": "2026-08-10",
+        "return_pct": 1.2269259689160903
+      },
+      {
+        "date": "2026-08-11",
+        "return_pct": -0.14904037740016024
+      },
+      {
+        "date": "2026-08-12",
+        "return_pct": -0.5993763618571009
+      },
+      {
+        "date": "2026-08-13",
+        "return_pct": 0.24860117653256425
+      },
+      {
+        "date": "2026-08-14",
+        "return_pct": -0.3427623135208602
+      },
+      {
+        "date": "2026-08-17",
+        "return_pct": -0.8905055199067122
+      },
+      {
+        "date": "2026-08-18",
+        "return_pct": -0.11760075836764221
+      },
+      {
+        "date": "2026-08-19",
+        "return_pct": 0.06969786437419773
+      },
+      {
+        "date": "2026-08-20",
+        "return_pct": -0.15687765245883994
+      },
+      {
+        "date": "2026-08-21",
+        "return_pct": 0.32976934924943424
+      },
+      {
+        "date": "2026-08-24",
+        "return_pct": -0.25731076265004893
+      },
+      {
+        "date": "2026-08-25",
+        "return_pct": 0.028810669856848468
+      },
+      {
+        "date": "2026-08-26",
+        "return_pct": -0.16285660953848097
+      },
+      {
+        "date": "2026-08-27",
+        "return_pct": 0.3310314134780127
+      },
+      {
+        "date": "2026-08-28",
+        "return_pct": -0.2224061867549567
+      },
+      {
+        "date": "2026-08-31",
+        "return_pct": 0.03590674202948988
+      }
+    ]
+  },
+  {
+    "task": {
+      "name": "baseline_double_cost",
+      "dataset_id": "0c6c4cea1cc4472085b35ca94c86a20d",
+      "start": "2026-03-02",
+      "end": "2026-09-01",
+      "config": {
+        "allocation": {
+          "enabled": true,
+          "symbols": [
+            "AAPL",
+            "AMD",
+            "AMZN",
+            "AVGO",
+            "BRK.B",
+            "COST",
+            "GOOGL",
+            "JNJ",
+            "JPM",
+            "LLY",
+            "MA",
+            "META",
+            "MSFT",
+            "NVDA",
+            "ORCL",
+            "SOFI",
+            "TSLA",
+            "V",
+            "WMT",
+            "XOM"
+          ],
+          "lookback": 30,
+          "max_positions": 3,
+          "max_weight": 0.35,
+          "cash_reserve": 0.05,
+          "risk_aversion": 10.0,
+          "cost_penalty": 1.5,
+          "rebalance_band": 0.02,
+          "max_daily_turnover": 0.2,
+          "rebalance_minutes": 30
+        },
+        "model": "trend",
+        "lookback": 15,
+        "horizon": 3,
+        "rebalance_days": 5,
+        "confidence": 0.5,
+        "tranche_weight": 0.1,
+        "max_weight": 0.2,
+        "daily_vol_target": 0.015,
+        "stop_loss_pct": 10.0,
+        "max_drawdown_pct": 10.0,
+        "costs": {
+          "allocation": {
+            "enabled": false,
+            "symbols": [],
+            "lookback": 60,
+            "max_positions": 3,
+            "max_weight": 0.35,
+            "cash_reserve": 0.05,
+            "risk_aversion": 10.0,
+            "cost_penalty": 2.0,
+            "rebalance_band": 0.02,
+            "max_daily_turnover": 1.0,
+            "rebalance_minutes": 30
+          },
+          "strategy": "adaptive",
+          "fast": 5,
+          "stat_window": 120,
+          "stat_horizon": 15,
+          "stat_entry_z": 1.5,
+          "stat_confidence": 0.5,
+          "stat_process_noise": 0.001,
+          "slow": 20,
+          "flatten_minutes": 5,
+          "opening_minutes": 15,
+          "reversion_bps": 30.0,
+          "stop_loss_bps": 100.0,
+          "regime_window": 60,
+          "min_reward_risk": 1.2,
+          "atr_window": 14,
+          "stop_atr": 2.0,
+          "take_atr": 3.0,
+          "breakout_buffer_atr": 0.1,
+          "reversion_atr": 2.0,
+          "momentum_threshold_bps": 10.0,
+          "regime_gate": "off",
+          "regime_window_days": 10,
+          "regime_min_drift_bps": 0.0,
+          "regime_max_efficiency": 0.35,
+          "max_scaling_lots": 3,
+          "lot_breakeven_hold": false,
+          "lot_patience_minutes": 45,
+          "lot_hard_stop_atr": 4.0,
+          "tranche_requires_uptrend": false,
+          "min_relative_volume": 1.2,
+          "max_hold_minutes": 30,
+          "cooldown_minutes": 10,
+          "max_daily_entries": 4,
+          "daily_loss_bps": 100.0,
+          "risk_per_trade_bps": 25.0,
+          "rule_cost_multiplier": 1.5,
+          "initial_cash": 100000.0,
+          "spread_bps": 4.0,
+          "slippage_bps": 4.0,
+          "commission_per_share": 0.01,
+          "minimum_commission": 2.0,
+          "sell_fee_bps": 0.6,
+          "participation": 0.01
+        }
+      }
+    },
+    "metrics": {
+      "return_pct": 12.303566184840008,
+      "final_equity": 112303.56618484002,
+      "max_drawdown_pct": 2.942541159871681,
+      "fees": 101.63678115998,
+      "impact_cost": 185.29703400000002,
+      "trade_count": 46,
+      "halted": false,
+      "turnover": 2.806714520334409,
+      "realized_pnl": 12303.566184840023,
+      "unrealized_pnl": 0.0,
+      "trading_days": 127,
+      "daily_sharpe": 2.1048475691081623,
+      "average_gross_exposure_pct": 8.879461150859537,
+      "estimated_liquidation_return_pct": 12.303566184840008
+    },
+    "months": {
+      "2026-03": -0.0009229445800000846,
+      "2026-04": 0.06496503605413895,
+      "2026-05": 0.06151691217288957,
+      "2026-06": -0.007958447247903178,
+      "2026-07": 0.006588541905194756,
+      "2026-08": -0.004249693109495856
+    },
+    "contributions": [
+      {
+        "symbol": "AAPL",
+        "net_profit": 1083.9910970156022
+      },
+      {
+        "symbol": "AMD",
+        "net_profit": 12713.244959669408
+      },
+      {
+        "symbol": "AMZN",
+        "net_profit": 0.0
+      },
+      {
+        "symbol": "AVGO",
+        "net_profit": -247.92106804088007
+      },
+      {
+        "symbol": "BRK.B",
+        "net_profit": 0.0
+      },
+      {
+        "symbol": "COST",
+        "net_profit": 0.0
+      },
+      {
+        "symbol": "GOOGL",
+        "net_profit": 0.0
+      },
+      {
+        "symbol": "JNJ",
+        "net_profit": 0.0
+      },
+      {
+        "symbol": "JPM",
+        "net_profit": -66.73513407999963
+      },
+      {
+        "symbol": "LLY",
+        "net_profit": -65.92992718707956
+      },
+      {
+        "symbol": "MA",
+        "net_profit": 0.0
+      },
+      {
+        "symbol": "META",
+        "net_profit": 0.0
+      },
+      {
+        "symbol": "MSFT",
+        "net_profit": -326.22269890843745
+      },
+      {
+        "symbol": "NVDA",
+        "net_profit": 0.0
+      },
+      {
+        "symbol": "ORCL",
+        "net_profit": -74.29687951359983
+      },
+      {
+        "symbol": "SOFI",
+        "net_profit": 0.0
+      },
+      {
+        "symbol": "TSLA",
+        "net_profit": -150.45992100440026
+      },
+      {
+        "symbol": "V",
+        "net_profit": -141.67774842999825
+      },
+      {
+        "symbol": "WMT",
+        "net_profit": 0.0
+      },
+      {
+        "symbol": "XOM",
+        "net_profit": -420.42649468058244
+      }
+    ],
+    "daily_returns": [
+      {
+        "date": "2026-03-02",
+        "return_pct": 0.0
+      },
+      {
+        "date": "2026-03-03",
+        "return_pct": 0.0
+      },
+      {
+        "date": "2026-03-04",
+        "return_pct": 0.0
+      },
+      {
+        "date": "2026-03-05",
+        "return_pct": 0.0
+      },
+      {
+        "date": "2026-03-06",
+        "return_pct": 0.0
+      },
+      {
+        "date": "2026-03-09",
+        "return_pct": 0.0
+      },
+      {
+        "date": "2026-03-10",
+        "return_pct": 0.0
+      },
+      {
+        "date": "2026-03-11",
+        "return_pct": 0.0
+      },
+      {
+        "date": "2026-03-12",
+        "return_pct": 0.0
+      },
+      {
+        "date": "2026-03-13",
+        "return_pct": 0.0
+      },
+      {
+        "date": "2026-03-16",
+        "return_pct": 0.0
+      },
+      {
+        "date": "2026-03-17",
+        "return_pct": 0.0
+      },
+      {
+        "date": "2026-03-18",
+        "return_pct": 0.0
+      },
+      {
+        "date": "2026-03-19",
+        "return_pct": 0.0
+      },
+      {
+        "date": "2026-03-20",
+        "return_pct": 0.0
+      },
+      {
+        "date": "2026-03-23",
+        "return_pct": 0.0
+      },
+      {
+        "date": "2026-03-24",
+        "return_pct": 0.0
+      },
+      {
+        "date": "2026-03-25",
+        "return_pct": 0.0
+      },
+      {
+        "date": "2026-03-26",
+        "return_pct": 0.0
+      },
+      {
+        "date": "2026-03-27",
+        "return_pct": 0.0
+      },
+      {
+        "date": "2026-03-30",
+        "return_pct": 0.0
+      },
+      {
+        "date": "2026-03-31",
+        "return_pct": -0.09229445800000394
+      },
+      {
+        "date": "2026-04-01",
+        "return_pct": -0.25775789625330325
+      },
+      {
+        "date": "2026-04-02",
+        "return_pct": -0.0026191622080829285
+      },
+      {
+        "date": "2026-04-06",
+        "return_pct": 0.07799487300846905
+      },
+      {
+        "date": "2026-04-07",
+        "return_pct": 0.015703137217987162
+      },
+      {
+        "date": "2026-04-08",
+        "return_pct": -0.30704359193366004
+      },
+      {
+        "date": "2026-04-09",
+        "return_pct": 0.0
+      },
+      {
+        "date": "2026-04-10",
+        "return_pct": 0.0
+      },
+      {
+        "date": "2026-04-13",
+        "return_pct": 0.0
+      },
+      {
+        "date": "2026-04-14",
+        "return_pct": 0.0
+      },
+      {
+        "date": "2026-04-15",
+        "return_pct": 0.11592927569852897
+      },
+      {
+        "date": "2026-04-16",
+        "return_pct": 0.7890106959491701
+      },
+      {
+        "date": "2026-04-17",
+        "return_pct": 0.00505304998519158
+      },
+      {
+        "date": "2026-04-20",
+        "return_pct": -0.13370472036469003
+      },
+      {
+        "date": "2026-04-21",
+        "return_pct": 0.3712938304821675
+      },
+      {
+        "date": "2026-04-22",
+        "return_pct": 1.2163129826847217
+      },
+      {
+        "date": "2026-04-23",
+        "return_pct": 0.22056613069926456
+      },
+      {
+        "date": "2026-04-24",
+        "return_pct": 4.6061457789884095
+      },
+      {
+        "date": "2026-04-27",
+        "return_pct": -1.5403401150661364
+      },
+      {
+        "date": "2026-04-28",
+        "return_pct": -1.4241376076702372
+      },
+      {
+        "date": "2026-04-29",
+        "return_pct": 1.3415095191889945
+      },
+      {
+        "date": "2026-04-30",
+        "return_pct": 1.3558249005660896
+      },
+      {
+        "date": "2026-05-01",
+        "return_pct": 0.44920867133929526
+      },
+      {
+        "date": "2026-05-04",
+        "return_pct": -1.4044291585438895
+      },
+      {
+        "date": "2026-05-05",
+        "return_pct": 1.028591526436533
+      },
+      {
+        "date": "2026-05-06",
+        "return_pct": 4.596766171793635
+      },
+      {
+        "date": "2026-05-07",
+        "return_pct": -0.6038110438680916
+      },
+      {
+        "date": "2026-05-08",
+        "return_pct": 2.1954753999571053
+      },
+      {
+        "date": "2026-05-11",
+        "return_pct": 0.16550214494846324
+      },
+      {
+        "date": "2026-05-12",
+        "return_pct": -0.4819170064504783
+      },
+      {
+        "date": "2026-05-13",
+        "return_pct": 0.07877573904031095
+      },
+      {
+        "date": "2026-05-14",
+        "return_pct": 0.11538427041666319
+      },
+      {
+        "date": "2026-05-15",
+        "return_pct": -0.7024840445453153
+      },
+      {
+        "date": "2026-05-18",
+        "return_pct": -0.08594458207529392
+      },
+      {
+        "date": "2026-05-19",
+        "return_pct": -0.19195127384308833
+      },
+      {
+        "date": "2026-05-20",
+        "return_pct": 0.5935845339729893
+      },
+      {
+        "date": "2026-05-21",
+        "return_pct": 0.06218064851772079
+      },
+      {
+        "date": "2026-05-22",
+        "return_pct": 0.12585327459772255
+      },
+      {
+        "date": "2026-05-26",
+        "return_pct": -0.01608109419778495
+      },
+      {
+        "date": "2026-05-27",
+        "return_pct": 0.08271607180949814
+      },
+      {
+        "date": "2026-05-28",
+        "return_pct": 0.1345979290624525
+      },
+      {
+        "date": "2026-05-29",
+        "return_pct": -0.021722957570566918
+      },
+      {
+        "date": "2026-06-01",
+        "return_pct": -0.17426411893267565
+      },
+      {
+        "date": "2026-06-02",
+        "return_pct": 0.2814983041563201
+      },
+      {
+        "date": "2026-06-03",
+        "return_pct": -0.011002611877586648
+      },
+      {
+        "date": "2026-06-04",
+        "return_pct": 0.013710074172833785
+      },
+      {
+        "date": "2026-06-05",
+        "return_pct": -0.47759241530734564
+      },
+      {
+        "date": "2026-06-08",
+        "return_pct": 0.18566190608157887
+      },
+      {
+        "date": "2026-06-09",
+        "return_pct": -0.1025315397884786
+      },
+      {
+        "date": "2026-06-10",
+        "return_pct": -0.22996711064513692
+      },
+      {
+        "date": "2026-06-11",
+        "return_pct": 0.09957542097561484
+      },
+      {
+        "date": "2026-06-12",
+        "return_pct": -0.07455099586654725
+      },
+      {
+        "date": "2026-06-15",
+        "return_pct": -0.009742903320997958
+      },
+      {
+        "date": "2026-06-16",
+        "return_pct": -0.0182864084076025
+      },
+      {
+        "date": "2026-06-17",
+        "return_pct": -0.02803538772824303
+      },
+      {
+        "date": "2026-06-18",
+        "return_pct": -0.15282517868119735
+      },
+      {
+        "date": "2026-06-22",
+        "return_pct": 0.08930511232181274
+      },
+      {
+        "date": "2026-06-23",
+        "return_pct": 0.03791368088527524
+      },
+      {
+        "date": "2026-06-24",
+        "return_pct": -0.009831024505335526
+      },
+      {
+        "date": "2026-06-25",
+        "return_pct": 0.023796268292182992
+      },
+      {
+        "date": "2026-06-26",
+        "return_pct": -0.19013396143304093
+      },
+      {
+        "date": "2026-06-29",
+        "return_pct": 0.009705647006903921
+      },
+      {
+        "date": "2026-06-30",
+        "return_pct": -0.058799095620982046
+      },
+      {
+        "date": "2026-07-01",
+        "return_pct": 0.1924946921698829
+      },
+      {
+        "date": "2026-07-02",
+        "return_pct": 0.011402068961898932
+      },
+      {
+        "date": "2026-07-06",
+        "return_pct": -0.15422106551501252
+      },
+      {
+        "date": "2026-07-07",
+        "return_pct": -0.03413835428347031
+      },
+      {
+        "date": "2026-07-08",
+        "return_pct": -0.2583754969440874
+      },
+      {
+        "date": "2026-07-09",
+        "return_pct": 0.037164886405874724
+      },
+      {
+        "date": "2026-07-10",
+        "return_pct": 0.04269601645089827
+      },
+      {
+        "date": "2026-07-13",
+        "return_pct": 0.31158544507256086
+      },
+      {
+        "date": "2026-07-14",
+        "return_pct": -0.06297002135679995
+      },
+      {
+        "date": "2026-07-15",
+        "return_pct": 0.0
+      },
+      {
+        "date": "2026-07-16",
+        "return_pct": 0.0
+      },
+      {
+        "date": "2026-07-17",
+        "return_pct": 0.0
+      },
+      {
+        "date": "2026-07-20",
+        "return_pct": -0.21116443963382506
+      },
+      {
+        "date": "2026-07-21",
+        "return_pct": 0.166303779297678
+      },
+      {
+        "date": "2026-07-22",
+        "return_pct": -0.1105821298862068
+      },
+      {
+        "date": "2026-07-23",
+        "return_pct": -0.25312445604647343
+      },
+      {
+        "date": "2026-07-24",
+        "return_pct": 0.6815108438286048
+      },
+      {
+        "date": "2026-07-27",
+        "return_pct": 0.19939394756883144
+      },
+      {
+        "date": "2026-07-28",
+        "return_pct": 0.03517861648883709
+      },
+      {
+        "date": "2026-07-29",
+        "return_pct": 0.10634353337193826
+      },
+      {
+        "date": "2026-07-30",
+        "return_pct": 0.006434681980207633
+      },
+      {
+        "date": "2026-07-31",
+        "return_pct": -0.04474740896346139
+      },
+      {
+        "date": "2026-08-03",
+        "return_pct": 0.05820488303241317
+      },
+      {
+        "date": "2026-08-04",
+        "return_pct": -0.08382920177912241
+      },
+      {
+        "date": "2026-08-05",
+        "return_pct": -0.17771446766091137
+      },
+      {
+        "date": "2026-08-06",
+        "return_pct": 0.24526997516268276
+      },
+      {
+        "date": "2026-08-07",
+        "return_pct": -0.13719805986442807
+      },
+      {
+        "date": "2026-08-10",
+        "return_pct": 0.20757189854496988
+      },
+      {
+        "date": "2026-08-11",
+        "return_pct": -0.04837960413525035
+      },
+      {
+        "date": "2026-08-12",
+        "return_pct": -0.22184407344842927
+      },
+      {
+        "date": "2026-08-13",
+        "return_pct": 0.08694209617288023
+      },
+      {
+        "date": "2026-08-14",
+        "return_pct": -0.02889045559093584
+      },
+      {
+        "date": "2026-08-17",
+        "return_pct": -0.16291159242277767
+      },
+      {
+        "date": "2026-08-18",
+        "return_pct": -0.06635523717919065
+      },
+      {
+        "date": "2026-08-19",
+        "return_pct": 0.022915941588386685
+      },
+      {
+        "date": "2026-08-20",
+        "return_pct": -0.03657172476177701
+      },
+      {
+        "date": "2026-08-21",
+        "return_pct": 0.08201398197590785
+      },
+      {
+        "date": "2026-08-24",
+        "return_pct": -0.14436405793545584
+      },
+      {
+        "date": "2026-08-25",
+        "return_pct": 0.011573532322523852
+      },
+      {
+        "date": "2026-08-26",
+        "return_pct": -0.03943447310680418
+      },
+      {
+        "date": "2026-08-27",
+        "return_pct": 0.08005773586103151
+      },
+      {
+        "date": "2026-08-28",
+        "return_pct": -0.05392233481695812
+      },
+      {
+        "date": "2026-08-31",
+        "return_pct": -0.017531062949127915
+      }
+    ]
+  },
+  {
+    "task": {
+      "name": "entry_only_double_cost",
+      "dataset_id": "0c6c4cea1cc4472085b35ca94c86a20d",
+      "start": "2026-03-02",
+      "end": "2026-09-01",
+      "config": {
+        "allocation": {
+          "enabled": true,
+          "symbols": [
+            "AAPL",
+            "AMD",
+            "AMZN",
+            "AVGO",
+            "BRK.B",
+            "COST",
+            "GOOGL",
+            "JNJ",
+            "JPM",
+            "LLY",
+            "MA",
+            "META",
+            "MSFT",
+            "NVDA",
+            "ORCL",
+            "SOFI",
+            "TSLA",
+            "V",
+            "WMT",
+            "XOM"
+          ],
+          "lookback": 30,
+          "max_positions": 3,
+          "max_weight": 0.35,
+          "cash_reserve": 0.05,
+          "risk_aversion": 10.0,
+          "cost_penalty": 1.5,
+          "rebalance_band": 0.02,
+          "max_daily_turnover": 0.2,
+          "rebalance_minutes": 30
+        },
+        "model": "trend",
+        "lookback": 15,
+        "horizon": 3,
+        "rebalance_days": 5,
+        "confidence": 0.5,
+        "tranche_weight": 0.1,
+        "max_weight": 0.2,
+        "daily_vol_target": 0.015,
+        "stop_loss_pct": 10.0,
+        "max_drawdown_pct": 10.0,
+        "costs": {
+          "allocation": {
+            "enabled": false,
+            "symbols": [],
+            "lookback": 60,
+            "max_positions": 3,
+            "max_weight": 0.35,
+            "cash_reserve": 0.05,
+            "risk_aversion": 10.0,
+            "cost_penalty": 2.0,
+            "rebalance_band": 0.02,
+            "max_daily_turnover": 1.0,
+            "rebalance_minutes": 30
+          },
+          "strategy": "adaptive",
+          "fast": 5,
+          "stat_window": 120,
+          "stat_horizon": 15,
+          "stat_entry_z": 1.5,
+          "stat_confidence": 0.5,
+          "stat_process_noise": 0.001,
+          "slow": 20,
+          "flatten_minutes": 5,
+          "opening_minutes": 15,
+          "reversion_bps": 30.0,
+          "stop_loss_bps": 100.0,
+          "regime_window": 60,
+          "min_reward_risk": 1.2,
+          "atr_window": 14,
+          "stop_atr": 2.0,
+          "take_atr": 3.0,
+          "breakout_buffer_atr": 0.1,
+          "reversion_atr": 2.0,
+          "momentum_threshold_bps": 10.0,
+          "regime_gate": "off",
+          "regime_window_days": 10,
+          "regime_min_drift_bps": 0.0,
+          "regime_max_efficiency": 0.35,
+          "max_scaling_lots": 3,
+          "lot_breakeven_hold": false,
+          "lot_patience_minutes": 45,
+          "lot_hard_stop_atr": 4.0,
+          "tranche_requires_uptrend": false,
+          "min_relative_volume": 1.2,
+          "max_hold_minutes": 30,
+          "cooldown_minutes": 10,
+          "max_daily_entries": 4,
+          "daily_loss_bps": 100.0,
+          "risk_per_trade_bps": 25.0,
+          "rule_cost_multiplier": 1.5,
+          "initial_cash": 100000.0,
+          "spread_bps": 4.0,
+          "slippage_bps": 4.0,
+          "commission_per_share": 0.01,
+          "minimum_commission": 2.0,
+          "sell_fee_bps": 0.6,
+          "participation": 0.01
+        },
+        "entry_band": 0.005
+      }
+    },
+    "metrics": {
+      "return_pct": 12.112074279355678,
+      "final_equity": 112112.07427935567,
+      "max_drawdown_pct": 2.942541159871681,
+      "fees": 107.70276764431998,
+      "impact_cost": 186.727953,
+      "trade_count": 49,
+      "halted": false,
+      "turnover": 2.830849193885734,
+      "realized_pnl": 12112.074279355684,
+      "unrealized_pnl": 0.0,
+      "trading_days": 127,
+      "daily_sharpe": 2.074592072451141,
+      "average_gross_exposure_pct": 8.961307433629278,
+      "estimated_liquidation_return_pct": 12.112074279355678
+    },
+    "months": {
+      "2026-03": -0.0009229445800000846,
+      "2026-04": 0.06496503605413895,
+      "2026-05": 0.06011630160705517,
+      "2026-06": -0.00794334144641029,
+      "2026-07": 0.006145747117991984,
+      "2026-08": -0.004211358724279357
+    },
+    "contributions": [
+      {
+        "symbol": "AAPL",
+        "net_profit": 1020.9397219841237
+      },
+      {
+        "symbol": "AMD",
+        "net_profit": 12713.244959669408
+      },
+      {
+        "symbol": "AMZN",
+        "net_profit": 0.0
+      },
+      {
+        "symbol": "AVGO",
+        "net_profit": -247.92106804088007
+      },
+      {
+        "symbol": "BRK.B",
+        "net_profit": 0.0
+      },
+      {
+        "symbol": "COST",
+        "net_profit": -83.08124818203999
+      },
+      {
+        "symbol": "GOOGL",
+        "net_profit": 0.0
+      },
+      {
+        "symbol": "JNJ",
+        "net_profit": 0.0
+      },
+      {
+        "symbol": "JPM",
+        "net_profit": -66.73513407999963
+      },
+      {
+        "symbol": "LLY",
+        "net_profit": -65.92992718707956
+      },
+      {
+        "symbol": "MA",
+        "net_profit": 0.0
+      },
+      {
+        "symbol": "META",
+        "net_profit": -50.51088015639971
+      },
+      {
+        "symbol": "MSFT",
+        "net_profit": -326.22269890843745
+      },
+      {
+        "symbol": "NVDA",
+        "net_profit": 0.0
+      },
+      {
+        "symbol": "ORCL",
+        "net_profit": -74.29687951359983
+      },
+      {
+        "symbol": "SOFI",
+        "net_profit": 0.0
+      },
+      {
+        "symbol": "TSLA",
+        "net_profit": -150.45992100440026
+      },
+      {
+        "symbol": "V",
+        "net_profit": -141.67774842999825
+      },
+      {
+        "symbol": "WMT",
+        "net_profit": 0.0
+      },
+      {
+        "symbol": "XOM",
+        "net_profit": -415.2748967950015
+      }
+    ],
+    "daily_returns": [
+      {
+        "date": "2026-03-02",
+        "return_pct": 0.0
+      },
+      {
+        "date": "2026-03-03",
+        "return_pct": 0.0
+      },
+      {
+        "date": "2026-03-04",
+        "return_pct": 0.0
+      },
+      {
+        "date": "2026-03-05",
+        "return_pct": 0.0
+      },
+      {
+        "date": "2026-03-06",
+        "return_pct": 0.0
+      },
+      {
+        "date": "2026-03-09",
+        "return_pct": 0.0
+      },
+      {
+        "date": "2026-03-10",
+        "return_pct": 0.0
+      },
+      {
+        "date": "2026-03-11",
+        "return_pct": 0.0
+      },
+      {
+        "date": "2026-03-12",
+        "return_pct": 0.0
+      },
+      {
+        "date": "2026-03-13",
+        "return_pct": 0.0
+      },
+      {
+        "date": "2026-03-16",
+        "return_pct": 0.0
+      },
+      {
+        "date": "2026-03-17",
+        "return_pct": 0.0
+      },
+      {
+        "date": "2026-03-18",
+        "return_pct": 0.0
+      },
+      {
+        "date": "2026-03-19",
+        "return_pct": 0.0
+      },
+      {
+        "date": "2026-03-20",
+        "return_pct": 0.0
+      },
+      {
+        "date": "2026-03-23",
+        "return_pct": 0.0
+      },
+      {
+        "date": "2026-03-24",
+        "return_pct": 0.0
+      },
+      {
+        "date": "2026-03-25",
+        "return_pct": 0.0
+      },
+      {
+        "date": "2026-03-26",
+        "return_pct": 0.0
+      },
+      {
+        "date": "2026-03-27",
+        "return_pct": 0.0
+      },
+      {
+        "date": "2026-03-30",
+        "return_pct": 0.0
+      },
+      {
+        "date": "2026-03-31",
+        "return_pct": -0.09229445800000394
+      },
+      {
+        "date": "2026-04-01",
+        "return_pct": -0.25775789625330325
+      },
+      {
+        "date": "2026-04-02",
+        "return_pct": -0.0026191622080829285
+      },
+      {
+        "date": "2026-04-06",
+        "return_pct": 0.07799487300846905
+      },
+      {
+        "date": "2026-04-07",
+        "return_pct": 0.015703137217987162
+      },
+      {
+        "date": "2026-04-08",
+        "return_pct": -0.30704359193366004
+      },
+      {
+        "date": "2026-04-09",
+        "return_pct": 0.0
+      },
+      {
+        "date": "2026-04-10",
+        "return_pct": 0.0
+      },
+      {
+        "date": "2026-04-13",
+        "return_pct": 0.0
+      },
+      {
+        "date": "2026-04-14",
+        "return_pct": 0.0
+      },
+      {
+        "date": "2026-04-15",
+        "return_pct": 0.11592927569852897
+      },
+      {
+        "date": "2026-04-16",
+        "return_pct": 0.7890106959491701
+      },
+      {
+        "date": "2026-04-17",
+        "return_pct": 0.00505304998519158
+      },
+      {
+        "date": "2026-04-20",
+        "return_pct": -0.13370472036469003
+      },
+      {
+        "date": "2026-04-21",
+        "return_pct": 0.3712938304821675
+      },
+      {
+        "date": "2026-04-22",
+        "return_pct": 1.2163129826847217
+      },
+      {
+        "date": "2026-04-23",
+        "return_pct": 0.22056613069926456
+      },
+      {
+        "date": "2026-04-24",
+        "return_pct": 4.6061457789884095
+      },
+      {
+        "date": "2026-04-27",
+        "return_pct": -1.5403401150661364
+      },
+      {
+        "date": "2026-04-28",
+        "return_pct": -1.4241376076702372
+      },
+      {
+        "date": "2026-04-29",
+        "return_pct": 1.3415095191889945
+      },
+      {
+        "date": "2026-04-30",
+        "return_pct": 1.3558249005660896
+      },
+      {
+        "date": "2026-05-01",
+        "return_pct": 0.44920867133929526
+      },
+      {
+        "date": "2026-05-04",
+        "return_pct": -1.4044291585438895
+      },
+      {
+        "date": "2026-05-05",
+        "return_pct": 1.028591526436533
+      },
+      {
+        "date": "2026-05-06",
+        "return_pct": 4.596766171793635
+      },
+      {
+        "date": "2026-05-07",
+        "return_pct": -0.6038110438680916
+      },
+      {
+        "date": "2026-05-08",
+        "return_pct": 2.1954753999571053
+      },
+      {
+        "date": "2026-05-11",
+        "return_pct": 0.16550214494846324
+      },
+      {
+        "date": "2026-05-12",
+        "return_pct": -0.4819170064504783
+      },
+      {
+        "date": "2026-05-13",
+        "return_pct": 0.07877573904031095
+      },
+      {
+        "date": "2026-05-14",
+        "return_pct": 0.11538427041666319
+      },
+      {
+        "date": "2026-05-15",
+        "return_pct": -0.7024840445453153
+      },
+      {
+        "date": "2026-05-18",
+        "return_pct": -0.08594458207529392
+      },
+      {
+        "date": "2026-05-19",
+        "return_pct": -0.19195127384308833
+      },
+      {
+        "date": "2026-05-20",
+        "return_pct": 0.5566113691937751
+      },
+      {
+        "date": "2026-05-21",
+        "return_pct": 0.026644176398990173
+      },
+      {
+        "date": "2026-05-22",
+        "return_pct": 0.08578181953158415
+      },
+      {
+        "date": "2026-05-26",
+        "return_pct": -0.03596338628761634
+      },
+      {
+        "date": "2026-05-27",
+        "return_pct": 0.07006944404525985
+      },
+      {
+        "date": "2026-05-28",
+        "return_pct": 0.14864770680979134
+      },
+      {
+        "date": "2026-05-29",
+        "return_pct": -0.02294798353206355
+      },
+      {
+        "date": "2026-06-01",
+        "return_pct": -0.18978765575060463
+      },
+      {
+        "date": "2026-06-02",
+        "return_pct": 0.3056037893687414
+      },
+      {
+        "date": "2026-06-03",
+        "return_pct": -0.024140031242748668
+      },
+      {
+        "date": "2026-06-04",
+        "return_pct": 0.02107164721441344
+      },
+      {
+        "date": "2026-06-05",
+        "return_pct": -0.47821047429457003
+      },
+      {
+        "date": "2026-06-08",
+        "return_pct": 0.18590332824257141
+      },
+      {
+        "date": "2026-06-09",
+        "return_pct": -0.10266461745878754
+      },
+      {
+        "date": "2026-06-10",
+        "return_pct": -0.23026589615677584
+      },
+      {
+        "date": "2026-06-11",
+        "return_pct": 0.0997050932541272
+      },
+      {
+        "date": "2026-06-12",
+        "return_pct": -0.07464798333913
+      },
+      {
+        "date": "2026-06-15",
+        "return_pct": -0.009755587866160714
+      },
+      {
+        "date": "2026-06-16",
+        "return_pct": -0.018310218292236207
+      },
+      {
+        "date": "2026-06-17",
+        "return_pct": -0.02807189799199862
+      },
+      {
+        "date": "2026-06-18",
+        "return_pct": -0.15302425758819424
+      },
+      {
+        "date": "2026-06-22",
+        "return_pct": 0.08942162461266084
+      },
+      {
+        "date": "2026-06-23",
+        "return_pct": 0.03796310093648135
+      },
+      {
+        "date": "2026-06-24",
+        "return_pct": -0.00984383427082099
+      },
+      {
+        "date": "2026-06-25",
+        "return_pct": 0.02382727773839795
+      },
+      {
+        "date": "2026-06-26",
+        "return_pct": -0.19038167020270458
+      },
+      {
+        "date": "2026-06-29",
+        "return_pct": 0.009718315757387493
+      },
+      {
+        "date": "2026-06-30",
+        "return_pct": -0.0588758384372803
+      },
+      {
+        "date": "2026-07-01",
+        "return_pct": 0.19274607847523964
+      },
+      {
+        "date": "2026-07-02",
+        "return_pct": 0.011416930721766846
+      },
+      {
+        "date": "2026-07-06",
+        "return_pct": -0.15442205840535045
+      },
+      {
+        "date": "2026-07-07",
+        "return_pct": -0.03418291485394496
+      },
+      {
+        "date": "2026-07-08",
+        "return_pct": -0.2587128681129644
+      },
+      {
+        "date": "2026-07-09",
+        "return_pct": 0.037213539950077944
+      },
+      {
+        "date": "2026-07-10",
+        "return_pct": 0.04275189015240943
+      },
+      {
+        "date": "2026-07-13",
+        "return_pct": 0.29665002134290924
+      },
+      {
+        "date": "2026-07-14",
+        "return_pct": -0.05152195148741326
+      },
+      {
+        "date": "2026-07-15",
+        "return_pct": 0.054299979674894035
+      },
+      {
+        "date": "2026-07-16",
+        "return_pct": -0.04489967765623384
+      },
+      {
+        "date": "2026-07-17",
+        "return_pct": -0.04963415361135333
+      },
+      {
+        "date": "2026-07-20",
+        "return_pct": -0.2126143456584451
+      },
+      {
+        "date": "2026-07-21",
+        "return_pct": 0.16659653518359804
+      },
+      {
+        "date": "2026-07-22",
+        "return_pct": -0.11077647138580946
+      },
+      {
+        "date": "2026-07-23",
+        "return_pct": -0.2535698005218375
+      },
+      {
+        "date": "2026-07-24",
+        "return_pct": 0.6827129348976108
+      },
+      {
+        "date": "2026-07-27",
+        "return_pct": 0.199743266129757
+      },
+      {
+        "date": "2026-07-28",
+        "return_pct": 0.035240123105404794
+      },
+      {
+        "date": "2026-07-29",
+        "return_pct": 0.10652939988402131
+      },
+      {
+        "date": "2026-07-30",
+        "return_pct": 0.00644591650600325
+      },
+      {
+        "date": "2026-07-31",
+        "return_pct": -0.044825529920996414
+      },
+      {
+        "date": "2026-08-03",
+        "return_pct": 0.05830654389818135
+      },
+      {
+        "date": "2026-08-04",
+        "return_pct": -0.08397553285498152
+      },
+      {
+        "date": "2026-08-05",
+        "return_pct": -0.178024944261103
+      },
+      {
+        "date": "2026-08-06",
+        "return_pct": 0.24569923901405694
+      },
+      {
+        "date": "2026-08-07",
+        "return_pct": -0.1374375910980392
+      },
+      {
+        "date": "2026-08-10",
+        "return_pct": 0.2127285814997794
+      },
+      {
+        "date": "2026-08-11",
+        "return_pct": -0.04867493852905943
+      },
+      {
+        "date": "2026-08-12",
+        "return_pct": -0.222221140583497
+      },
+      {
+        "date": "2026-08-13",
+        "return_pct": 0.0870902002877831
+      },
+      {
+        "date": "2026-08-14",
+        "return_pct": -0.02893962707832449
+      },
+      {
+        "date": "2026-08-17",
+        "return_pct": -0.16318894783508933
+      },
+      {
+        "date": "2026-08-18",
+        "return_pct": -0.06646839098398005
+      },
+      {
+        "date": "2026-08-19",
+        "return_pct": 0.0229550455201995
+      },
+      {
+        "date": "2026-08-20",
+        "return_pct": -0.03663411670065878
+      },
+      {
+        "date": "2026-08-21",
+        "return_pct": 0.08215395039804628
+      },
+      {
+        "date": "2026-08-24",
+        "return_pct": -0.14461023330920805
+      },
+      {
+        "date": "2026-08-25",
+        "return_pct": 0.011593296554492628
+      },
+      {
+        "date": "2026-08-26",
+        "return_pct": -0.0395018079278054
+      },
+      {
+        "date": "2026-08-27",
+        "return_pct": 0.08019448939528738
+      },
+      {
+        "date": "2026-08-28",
+        "return_pct": -0.05401437040756293
+      },
+      {
+        "date": "2026-08-31",
+        "return_pct": -0.017561001447171973
+      }
+    ]
+  },
+  {
+    "task": {
+      "name": "budget_entry_double_cost",
+      "dataset_id": "0c6c4cea1cc4472085b35ca94c86a20d",
+      "start": "2026-03-02",
+      "end": "2026-09-01",
+      "config": {
+        "allocation": {
+          "enabled": true,
+          "symbols": [
+            "AAPL",
+            "AMD",
+            "AMZN",
+            "AVGO",
+            "BRK.B",
+            "COST",
+            "GOOGL",
+            "JNJ",
+            "JPM",
+            "LLY",
+            "MA",
+            "META",
+            "MSFT",
+            "NVDA",
+            "ORCL",
+            "SOFI",
+            "TSLA",
+            "V",
+            "WMT",
+            "XOM"
+          ],
+          "lookback": 30,
+          "max_positions": 3,
+          "max_weight": 0.35,
+          "cash_reserve": 0.05,
+          "risk_aversion": 10.0,
+          "cost_penalty": 1.5,
+          "rebalance_band": 0.02,
+          "max_daily_turnover": 0.2,
+          "rebalance_minutes": 30
+        },
+        "model": "trend",
+        "lookback": 15,
+        "horizon": 3,
+        "rebalance_days": 5,
+        "confidence": 0.5,
+        "tranche_weight": 0.1,
+        "max_weight": 0.2,
+        "daily_vol_target": 0.015,
+        "stop_loss_pct": 10.0,
+        "max_drawdown_pct": 10.0,
+        "costs": {
+          "allocation": {
+            "enabled": false,
+            "symbols": [],
+            "lookback": 60,
+            "max_positions": 3,
+            "max_weight": 0.35,
+            "cash_reserve": 0.05,
+            "risk_aversion": 10.0,
+            "cost_penalty": 2.0,
+            "rebalance_band": 0.02,
+            "max_daily_turnover": 1.0,
+            "rebalance_minutes": 30
+          },
+          "strategy": "adaptive",
+          "fast": 5,
+          "stat_window": 120,
+          "stat_horizon": 15,
+          "stat_entry_z": 1.5,
+          "stat_confidence": 0.5,
+          "stat_process_noise": 0.001,
+          "slow": 20,
+          "flatten_minutes": 5,
+          "opening_minutes": 15,
+          "reversion_bps": 30.0,
+          "stop_loss_bps": 100.0,
+          "regime_window": 60,
+          "min_reward_risk": 1.2,
+          "atr_window": 14,
+          "stop_atr": 2.0,
+          "take_atr": 3.0,
+          "breakout_buffer_atr": 0.1,
+          "reversion_atr": 2.0,
+          "momentum_threshold_bps": 10.0,
+          "regime_gate": "off",
+          "regime_window_days": 10,
+          "regime_min_drift_bps": 0.0,
+          "regime_max_efficiency": 0.35,
+          "max_scaling_lots": 3,
+          "lot_breakeven_hold": false,
+          "lot_patience_minutes": 45,
+          "lot_hard_stop_atr": 4.0,
+          "tranche_requires_uptrend": false,
+          "min_relative_volume": 1.2,
+          "max_hold_minutes": 30,
+          "cooldown_minutes": 10,
+          "max_daily_entries": 4,
+          "daily_loss_bps": 100.0,
+          "risk_per_trade_bps": 25.0,
+          "rule_cost_multiplier": 1.5,
+          "initial_cash": 100000.0,
+          "spread_bps": 4.0,
+          "slippage_bps": 4.0,
+          "commission_per_share": 0.01,
+          "minimum_commission": 2.0,
+          "sell_fee_bps": 0.6,
+          "participation": 0.01
+        },
+        "capital_mode": "risk_budget",
+        "entry_band": 0.005
+      }
+    },
+    "metrics": {
+      "return_pct": 20.26643087475206,
+      "final_equity": 120266.43087475207,
+      "max_drawdown_pct": 4.956078666105357,
+      "fees": 366.971623847916,
+      "impact_cost": 729.2665013999998,
+      "trade_count": 165,
+      "halted": false,
+      "turnover": 10.49798229395707,
+      "realized_pnl": 20142.23268611571,
+      "unrealized_pnl": 124.19818863636408,
+      "trading_days": 127,
+      "daily_sharpe": 1.950349649588938,
+      "average_gross_exposure_pct": 31.212023401671857,
+      "estimated_liquidation_return_pct": 20.262002404752067
+    },
+    "months": {
+      "2026-03": -0.0017947531400001049,
+      "2026-04": 0.0862950519602188,
+      "2026-05": 0.10871257332368911,
+      "2026-06": -0.03560268887474172,
+      "2026-07": 0.046714193756761446,
+      "2026-08": -0.008999904907266987
+    },
+    "contributions": [
+      {
+        "symbol": "AAPL",
+        "net_profit": 2512.7883388804694
+      },
+      {
+        "symbol": "AMD",
+        "net_profit": 19847.012479997946
+      },
+      {
+        "symbol": "AMZN",
+        "net_profit": 1510.134431626555
+      },
+      {
+        "symbol": "AVGO",
+        "net_profit": -2093.7564472651306
+      },
+      {
+        "symbol": "BRK.B",
+        "net_profit": 0.0
+      },
+      {
+        "symbol": "COST",
+        "net_profit": -1212.4345032041983
+      },
+      {
+        "symbol": "GOOGL",
+        "net_profit": -25.112245128400218
+      },
+      {
+        "symbol": "JNJ",
+        "net_profit": -214.83437854307977
+      },
+      {
+        "symbol": "JPM",
+        "net_profit": 326.99704142476185
+      },
+      {
+        "symbol": "LLY",
+        "net_profit": -614.2448867797593
+      },
+      {
+        "symbol": "MA",
+        "net_profit": 1514.5889144259472
+      },
+      {
+        "symbol": "META",
+        "net_profit": -395.0232257819989
+      },
+      {
+        "symbol": "MSFT",
+        "net_profit": 91.46271409711517
+      },
+      {
+        "symbol": "NVDA",
+        "net_profit": -31.744951059638424
+      },
+      {
+        "symbol": "ORCL",
+        "net_profit": -668.6213522777598
+      },
+      {
+        "symbol": "SOFI",
+        "net_profit": 0.0
+      },
+      {
+        "symbol": "TSLA",
+        "net_profit": -168.47893741495864
+      },
+      {
+        "symbol": "V",
+        "net_profit": 442.83429898792065
+      },
+      {
+        "symbol": "WMT",
+        "net_profit": 0.0
+      },
+      {
+        "symbol": "XOM",
+        "net_profit": -555.1364172337317
+      }
+    ],
+    "daily_returns": [
+      {
+        "date": "2026-03-02",
+        "return_pct": 0.0
+      },
+      {
+        "date": "2026-03-03",
+        "return_pct": 0.0
+      },
+      {
+        "date": "2026-03-04",
+        "return_pct": 0.0
+      },
+      {
+        "date": "2026-03-05",
+        "return_pct": 0.0
+      },
+      {
+        "date": "2026-03-06",
+        "return_pct": 0.0
+      },
+      {
+        "date": "2026-03-09",
+        "return_pct": 0.0
+      },
+      {
+        "date": "2026-03-10",
+        "return_pct": 0.0
+      },
+      {
+        "date": "2026-03-11",
+        "return_pct": 0.0
+      },
+      {
+        "date": "2026-03-12",
+        "return_pct": 0.0
+      },
+      {
+        "date": "2026-03-13",
+        "return_pct": 0.0
+      },
+      {
+        "date": "2026-03-16",
+        "return_pct": 0.0
+      },
+      {
+        "date": "2026-03-17",
+        "return_pct": 0.0
+      },
+      {
+        "date": "2026-03-18",
+        "return_pct": 0.0
+      },
+      {
+        "date": "2026-03-19",
+        "return_pct": 0.0
+      },
+      {
+        "date": "2026-03-20",
+        "return_pct": 0.0
+      },
+      {
+        "date": "2026-03-23",
+        "return_pct": 0.0
+      },
+      {
+        "date": "2026-03-24",
+        "return_pct": 0.0
+      },
+      {
+        "date": "2026-03-25",
+        "return_pct": 0.0
+      },
+      {
+        "date": "2026-03-26",
+        "return_pct": 0.0
+      },
+      {
+        "date": "2026-03-27",
+        "return_pct": 0.0
+      },
+      {
+        "date": "2026-03-30",
+        "return_pct": 0.0
+      },
+      {
+        "date": "2026-03-31",
+        "return_pct": -0.17947531400001024
+      },
+      {
+        "date": "2026-04-01",
+        "return_pct": -0.8098918138760091
+      },
+      {
+        "date": "2026-04-02",
+        "return_pct": -0.010544167259397746
+      },
+      {
+        "date": "2026-04-06",
+        "return_pct": 0.3140149797671101
+      },
+      {
+        "date": "2026-04-07",
+        "return_pct": 0.06307361443011161
+      },
+      {
+        "date": "2026-04-08",
+        "return_pct": -1.0772540584294337
+      },
+      {
+        "date": "2026-04-09",
+        "return_pct": 0.026889204386201068
+      },
+      {
+        "date": "2026-04-10",
+        "return_pct": 0.0
+      },
+      {
+        "date": "2026-04-13",
+        "return_pct": 0.0
+      },
+      {
+        "date": "2026-04-14",
+        "return_pct": 0.0
+      },
+      {
+        "date": "2026-04-15",
+        "return_pct": 0.07646052955396965
+      },
+      {
+        "date": "2026-04-16",
+        "return_pct": 1.3554240061127352
+      },
+      {
+        "date": "2026-04-17",
+        "return_pct": -0.011721749785090819
+      },
+      {
+        "date": "2026-04-20",
+        "return_pct": -0.4977920429219798
+      },
+      {
+        "date": "2026-04-21",
+        "return_pct": 0.9570405304805895
+      },
+      {
+        "date": "2026-04-22",
+        "return_pct": 2.814013122774976
+      },
+      {
+        "date": "2026-04-23",
+        "return_pct": 0.08149253524446687
+      },
+      {
+        "date": "2026-04-24",
+        "return_pct": 5.988255318301372
+      },
+      {
+        "date": "2026-04-27",
+        "return_pct": -2.078999447920703
+      },
+      {
+        "date": "2026-04-28",
+        "return_pct": -2.9381636237003934
+      },
+      {
+        "date": "2026-04-29",
+        "return_pct": 2.2635274558108938
+      },
+      {
+        "date": "2026-04-30",
+        "return_pct": 2.1105371413790803
+      },
+      {
+        "date": "2026-05-01",
+        "return_pct": 0.8257353725801834
+      },
+      {
+        "date": "2026-05-04",
+        "return_pct": -1.5400819833826382
+      },
+      {
+        "date": "2026-05-05",
+        "return_pct": 1.3944390439361034
+      },
+      {
+        "date": "2026-05-06",
+        "return_pct": 7.785251424686093
+      },
+      {
+        "date": "2026-05-07",
+        "return_pct": -1.602478858116195
+      },
+      {
+        "date": "2026-05-08",
+        "return_pct": 4.7020602329658985
+      },
+      {
+        "date": "2026-05-11",
+        "return_pct": -0.0840824626018683
+      },
+      {
+        "date": "2026-05-12",
+        "return_pct": -1.306732466219491
+      },
+      {
+        "date": "2026-05-13",
+        "return_pct": 0.23503880267267632
+      },
+      {
+        "date": "2026-05-14",
+        "return_pct": 0.11967423465384164
+      },
+      {
+        "date": "2026-05-15",
+        "return_pct": -2.0681710842335157
+      },
+      {
+        "date": "2026-05-18",
+        "return_pct": -0.34755996915562
+      },
+      {
+        "date": "2026-05-19",
+        "return_pct": -0.5269043928270345
+      },
+      {
+        "date": "2026-05-20",
+        "return_pct": 2.3570055781307295
+      },
+      {
+        "date": "2026-05-21",
+        "return_pct": 0.017350050419939304
+      },
+      {
+        "date": "2026-05-22",
+        "return_pct": 0.7106087910030794
+      },
+      {
+        "date": "2026-05-26",
+        "return_pct": -0.3209728104708414
+      },
+      {
+        "date": "2026-05-27",
+        "return_pct": 0.24625707639996733
+      },
+      {
+        "date": "2026-05-28",
+        "return_pct": 0.4115260359617289
+      },
+      {
+        "date": "2026-05-29",
+        "return_pct": -0.19025486292783245
+      },
+      {
+        "date": "2026-06-01",
+        "return_pct": -0.692747477668085
+      },
+      {
+        "date": "2026-06-02",
+        "return_pct": 1.1186875927341322
+      },
+      {
+        "date": "2026-06-03",
+        "return_pct": -0.11689328254596533
+      },
+      {
+        "date": "2026-06-04",
+        "return_pct": 0.07977612023698248
+      },
+      {
+        "date": "2026-06-05",
+        "return_pct": -2.2128505744955946
+      },
+      {
+        "date": "2026-06-08",
+        "return_pct": 0.7134976335085885
+      },
+      {
+        "date": "2026-06-09",
+        "return_pct": -0.4863989652357445
+      },
+      {
+        "date": "2026-06-10",
+        "return_pct": -1.0748651757151828
+      },
+      {
+        "date": "2026-06-11",
+        "return_pct": 0.2037701664598235
+      },
+      {
+        "date": "2026-06-12",
+        "return_pct": -0.3079492984931341
+      },
+      {
+        "date": "2026-06-15",
+        "return_pct": -0.05886545872985988
+      },
+      {
+        "date": "2026-06-16",
+        "return_pct": -0.0938265502395798
+      },
+      {
+        "date": "2026-06-17",
+        "return_pct": -0.14395678903433934
+      },
+      {
+        "date": "2026-06-18",
+        "return_pct": -0.3542054015294008
+      },
+      {
+        "date": "2026-06-22",
+        "return_pct": 0.29437596374031394
+      },
+      {
+        "date": "2026-06-23",
+        "return_pct": 0.15759545499199762
+      },
+      {
+        "date": "2026-06-24",
+        "return_pct": -0.040815700350600566
+      },
+      {
+        "date": "2026-06-25",
+        "return_pct": 0.09882616207641255
+      },
+      {
+        "date": "2026-06-26",
+        "return_pct": -0.4797086793762501
+      },
+      {
+        "date": "2026-06-29",
+        "return_pct": 0.09892431899055382
+      },
+      {
+        "date": "2026-06-30",
+        "return_pct": -0.2807628895068066
+      },
+      {
+        "date": "2026-07-01",
+        "return_pct": 0.7035470936584399
+      },
+      {
+        "date": "2026-07-02",
+        "return_pct": 0.1733668424235198
+      },
+      {
+        "date": "2026-07-06",
+        "return_pct": 0.07269034566773794
+      },
+      {
+        "date": "2026-07-07",
+        "return_pct": 0.35577868521947537
+      },
+      {
+        "date": "2026-07-08",
+        "return_pct": -0.77088341077112
+      },
+      {
+        "date": "2026-07-09",
+        "return_pct": -0.04363604399473623
+      },
+      {
+        "date": "2026-07-10",
+        "return_pct": -0.055724573109554504
+      },
+      {
+        "date": "2026-07-13",
+        "return_pct": 1.0975912385611317
+      },
+      {
+        "date": "2026-07-14",
+        "return_pct": -0.23989659486536005
+      },
+      {
+        "date": "2026-07-15",
+        "return_pct": -0.005751620771926072
+      },
+      {
+        "date": "2026-07-16",
+        "return_pct": -0.07464355425008082
+      },
+      {
+        "date": "2026-07-17",
+        "return_pct": -0.24628835563274848
+      },
+      {
+        "date": "2026-07-20",
+        "return_pct": 0.06618913234427458
+      },
+      {
+        "date": "2026-07-21",
+        "return_pct": -0.0900695564765199
+      },
+      {
+        "date": "2026-07-22",
+        "return_pct": -0.5739011409046173
+      },
+      {
+        "date": "2026-07-23",
+        "return_pct": -0.5281169292218164
+      },
+      {
+        "date": "2026-07-24",
+        "return_pct": 1.7847736151643683
+      },
+      {
+        "date": "2026-07-27",
+        "return_pct": 1.1245107908790217
+      },
+      {
+        "date": "2026-07-28",
+        "return_pct": 0.785512251849025
+      },
+      {
+        "date": "2026-07-29",
+        "return_pct": -0.24248489077195332
+      },
+      {
+        "date": "2026-07-30",
+        "return_pct": 1.230328880203097
+      },
+      {
+        "date": "2026-07-31",
+        "return_pct": 0.09162578024948997
+      },
+      {
+        "date": "2026-08-03",
+        "return_pct": 0.02283800013336663
+      },
+      {
+        "date": "2026-08-04",
+        "return_pct": 0.047751008058152335
+      },
+      {
+        "date": "2026-08-05",
+        "return_pct": -0.614079657711143
+      },
+      {
+        "date": "2026-08-06",
+        "return_pct": 0.8864894394601502
+      },
+      {
+        "date": "2026-08-07",
+        "return_pct": -0.5627315498487251
+      },
+      {
+        "date": "2026-08-10",
+        "return_pct": 1.187239896017158
+      },
+      {
+        "date": "2026-08-11",
+        "return_pct": -0.1331750030192083
+      },
+      {
+        "date": "2026-08-12",
+        "return_pct": -0.5329676528234933
+      },
+      {
+        "date": "2026-08-13",
+        "return_pct": 0.2148518252227498
+      },
+      {
+        "date": "2026-08-14",
+        "return_pct": -0.30621717501362244
+      },
+      {
+        "date": "2026-08-17",
+        "return_pct": -0.9133724458287689
+      },
+      {
+        "date": "2026-08-18",
+        "return_pct": -0.12865484751511685
+      },
+      {
+        "date": "2026-08-19",
+        "return_pct": 0.05480464667587942
+      },
+      {
+        "date": "2026-08-20",
+        "return_pct": -0.12699978437836765
+      },
+      {
+        "date": "2026-08-21",
+        "return_pct": 0.23813007845371162
+      },
+      {
+        "date": "2026-08-24",
+        "return_pct": -0.2992177221991422
+      },
+      {
+        "date": "2026-08-25",
+        "return_pct": 0.029863345819390163
+      },
+      {
+        "date": "2026-08-26",
+        "return_pct": -0.1621595784489384
+      },
+      {
+        "date": "2026-08-27",
+        "return_pct": 0.3296122880222719
+      },
+      {
+        "date": "2026-08-28",
+        "return_pct": -0.22145586797463762
+      },
+      {
+        "date": "2026-08-31",
+        "return_pct": 0.10808450731155014
+      }
+    ]
+  },
+  {
+    "task": {
+      "name": "budget_only_double_cost",
+      "dataset_id": "0c6c4cea1cc4472085b35ca94c86a20d",
+      "start": "2026-03-02",
+      "end": "2026-09-01",
+      "config": {
+        "allocation": {
+          "enabled": true,
+          "symbols": [
+            "AAPL",
+            "AMD",
+            "AMZN",
+            "AVGO",
+            "BRK.B",
+            "COST",
+            "GOOGL",
+            "JNJ",
+            "JPM",
+            "LLY",
+            "MA",
+            "META",
+            "MSFT",
+            "NVDA",
+            "ORCL",
+            "SOFI",
+            "TSLA",
+            "V",
+            "WMT",
+            "XOM"
+          ],
+          "lookback": 30,
+          "max_positions": 3,
+          "max_weight": 0.35,
+          "cash_reserve": 0.05,
+          "risk_aversion": 10.0,
+          "cost_penalty": 1.5,
+          "rebalance_band": 0.02,
+          "max_daily_turnover": 0.2,
+          "rebalance_minutes": 30
+        },
+        "model": "trend",
+        "lookback": 15,
+        "horizon": 3,
+        "rebalance_days": 5,
+        "confidence": 0.5,
+        "tranche_weight": 0.1,
+        "max_weight": 0.2,
+        "daily_vol_target": 0.015,
+        "stop_loss_pct": 10.0,
+        "max_drawdown_pct": 10.0,
+        "costs": {
+          "allocation": {
+            "enabled": false,
+            "symbols": [],
+            "lookback": 60,
+            "max_positions": 3,
+            "max_weight": 0.35,
+            "cash_reserve": 0.05,
+            "risk_aversion": 10.0,
+            "cost_penalty": 2.0,
+            "rebalance_band": 0.02,
+            "max_daily_turnover": 1.0,
+            "rebalance_minutes": 30
+          },
+          "strategy": "adaptive",
+          "fast": 5,
+          "stat_window": 120,
+          "stat_horizon": 15,
+          "stat_entry_z": 1.5,
+          "stat_confidence": 0.5,
+          "stat_process_noise": 0.001,
+          "slow": 20,
+          "flatten_minutes": 5,
+          "opening_minutes": 15,
+          "reversion_bps": 30.0,
+          "stop_loss_bps": 100.0,
+          "regime_window": 60,
+          "min_reward_risk": 1.2,
+          "atr_window": 14,
+          "stop_atr": 2.0,
+          "take_atr": 3.0,
+          "breakout_buffer_atr": 0.1,
+          "reversion_atr": 2.0,
+          "momentum_threshold_bps": 10.0,
+          "regime_gate": "off",
+          "regime_window_days": 10,
+          "regime_min_drift_bps": 0.0,
+          "regime_max_efficiency": 0.35,
+          "max_scaling_lots": 3,
+          "lot_breakeven_hold": false,
+          "lot_patience_minutes": 45,
+          "lot_hard_stop_atr": 4.0,
+          "tranche_requires_uptrend": false,
+          "min_relative_volume": 1.2,
+          "max_hold_minutes": 30,
+          "cooldown_minutes": 10,
+          "max_daily_entries": 4,
+          "daily_loss_bps": 100.0,
+          "risk_per_trade_bps": 25.0,
+          "rule_cost_multiplier": 1.5,
+          "initial_cash": 100000.0,
+          "spread_bps": 4.0,
+          "slippage_bps": 4.0,
+          "commission_per_share": 0.01,
+          "minimum_commission": 2.0,
+          "sell_fee_bps": 0.6,
+          "participation": 0.01
+        },
+        "capital_mode": "risk_budget"
+      }
+    },
+    "metrics": {
+      "return_pct": 20.262859028570613,
+      "final_equity": 120262.8590285706,
+      "max_drawdown_pct": 4.956078666105357,
+      "fees": 362.883874029416,
+      "impact_cost": 727.5160973999998,
+      "trade_count": 163,
+      "halted": false,
+      "turnover": 10.473962526239948,
+      "realized_pnl": 20138.6608399342,
+      "unrealized_pnl": 124.19818863636408,
+      "trading_days": 127,
+      "daily_sharpe": 1.951517661708865,
+      "average_gross_exposure_pct": 31.25535108543603,
+      "estimated_liquidation_return_pct": 20.258430558570595
+    },
+    "months": {
+      "2026-03": -0.0017947531400001049,
+      "2026-04": 0.0862950519602188,
+      "2026-05": 0.10856912256918427,
+      "2026-06": -0.03550760828325261,
+      "2026-07": 0.04671563292767145,
+      "2026-08": -0.009000169801634539
+    },
+    "contributions": [
+      {
+        "symbol": "AAPL",
+        "net_profit": 2620.360952570576
+      },
+      {
+        "symbol": "AMD",
+        "net_profit": 19825.199399997946
+      },
+      {
+        "symbol": "AMZN",
+        "net_profit": 1510.134431626555
+      },
+      {
+        "symbol": "AVGO",
+        "net_profit": -2093.7564472651306
+      },
+      {
+        "symbol": "BRK.B",
+        "net_profit": 0.0
+      },
+      {
+        "symbol": "COST",
+        "net_profit": -1326.8781282042019
+      },
+      {
+        "symbol": "GOOGL",
+        "net_profit": 0.0
+      },
+      {
+        "symbol": "JNJ",
+        "net_profit": -214.83437854307977
+      },
+      {
+        "symbol": "JPM",
+        "net_profit": 326.99704142476185
+      },
+      {
+        "symbol": "LLY",
+        "net_profit": -614.2448867797593
+      },
+      {
+        "symbol": "MA",
+        "net_profit": 1514.5889144259472
+      },
+      {
+        "symbol": "META",
+        "net_profit": -395.0232257819989
+      },
+      {
+        "symbol": "MSFT",
+        "net_profit": 91.46271409711517
+      },
+      {
+        "symbol": "NVDA",
+        "net_profit": -31.744951059638424
+      },
+      {
+        "symbol": "ORCL",
+        "net_profit": -668.6213522777598
+      },
+      {
+        "symbol": "SOFI",
+        "net_profit": 0.0
+      },
+      {
+        "symbol": "TSLA",
+        "net_profit": -168.47893741495864
+      },
+      {
+        "symbol": "V",
+        "net_profit": 442.83429898792065
+      },
+      {
+        "symbol": "WMT",
+        "net_profit": 0.0
+      },
+      {
+        "symbol": "XOM",
+        "net_profit": -555.1364172337317
+      }
+    ],
+    "daily_returns": [
+      {
+        "date": "2026-03-02",
+        "return_pct": 0.0
+      },
+      {
+        "date": "2026-03-03",
+        "return_pct": 0.0
+      },
+      {
+        "date": "2026-03-04",
+        "return_pct": 0.0
+      },
+      {
+        "date": "2026-03-05",
+        "return_pct": 0.0
+      },
+      {
+        "date": "2026-03-06",
+        "return_pct": 0.0
+      },
+      {
+        "date": "2026-03-09",
+        "return_pct": 0.0
+      },
+      {
+        "date": "2026-03-10",
+        "return_pct": 0.0
+      },
+      {
+        "date": "2026-03-11",
+        "return_pct": 0.0
+      },
+      {
+        "date": "2026-03-12",
+        "return_pct": 0.0
+      },
+      {
+        "date": "2026-03-13",
+        "return_pct": 0.0
+      },
+      {
+        "date": "2026-03-16",
+        "return_pct": 0.0
+      },
+      {
+        "date": "2026-03-17",
+        "return_pct": 0.0
+      },
+      {
+        "date": "2026-03-18",
+        "return_pct": 0.0
+      },
+      {
+        "date": "2026-03-19",
+        "return_pct": 0.0
+      },
+      {
+        "date": "2026-03-20",
+        "return_pct": 0.0
+      },
+      {
+        "date": "2026-03-23",
+        "return_pct": 0.0
+      },
+      {
+        "date": "2026-03-24",
+        "return_pct": 0.0
+      },
+      {
+        "date": "2026-03-25",
+        "return_pct": 0.0
+      },
+      {
+        "date": "2026-03-26",
+        "return_pct": 0.0
+      },
+      {
+        "date": "2026-03-27",
+        "return_pct": 0.0
+      },
+      {
+        "date": "2026-03-30",
+        "return_pct": 0.0
+      },
+      {
+        "date": "2026-03-31",
+        "return_pct": -0.17947531400001024
+      },
+      {
+        "date": "2026-04-01",
+        "return_pct": -0.8098918138760091
+      },
+      {
+        "date": "2026-04-02",
+        "return_pct": -0.010544167259397746
+      },
+      {
+        "date": "2026-04-06",
+        "return_pct": 0.3140149797671101
+      },
+      {
+        "date": "2026-04-07",
+        "return_pct": 0.06307361443011161
+      },
+      {
+        "date": "2026-04-08",
+        "return_pct": -1.0772540584294337
+      },
+      {
+        "date": "2026-04-09",
+        "return_pct": 0.026889204386201068
+      },
+      {
+        "date": "2026-04-10",
+        "return_pct": 0.0
+      },
+      {
+        "date": "2026-04-13",
+        "return_pct": 0.0
+      },
+      {
+        "date": "2026-04-14",
+        "return_pct": 0.0
+      },
+      {
+        "date": "2026-04-15",
+        "return_pct": 0.07646052955396965
+      },
+      {
+        "date": "2026-04-16",
+        "return_pct": 1.3554240061127352
+      },
+      {
+        "date": "2026-04-17",
+        "return_pct": -0.011721749785090819
+      },
+      {
+        "date": "2026-04-20",
+        "return_pct": -0.4977920429219798
+      },
+      {
+        "date": "2026-04-21",
+        "return_pct": 0.9570405304805895
+      },
+      {
+        "date": "2026-04-22",
+        "return_pct": 2.814013122774976
+      },
+      {
+        "date": "2026-04-23",
+        "return_pct": 0.08149253524446687
+      },
+      {
+        "date": "2026-04-24",
+        "return_pct": 5.988255318301372
+      },
+      {
+        "date": "2026-04-27",
+        "return_pct": -2.078999447920703
+      },
+      {
+        "date": "2026-04-28",
+        "return_pct": -2.9381636237003934
+      },
+      {
+        "date": "2026-04-29",
+        "return_pct": 2.2635274558108938
+      },
+      {
+        "date": "2026-04-30",
+        "return_pct": 2.1105371413790803
+      },
+      {
+        "date": "2026-05-01",
+        "return_pct": 0.8257353725801834
+      },
+      {
+        "date": "2026-05-04",
+        "return_pct": -1.5400819833826382
+      },
+      {
+        "date": "2026-05-05",
+        "return_pct": 1.3944390439361034
+      },
+      {
+        "date": "2026-05-06",
+        "return_pct": 7.777303114613934
+      },
+      {
+        "date": "2026-05-07",
+        "return_pct": -1.6024695249075591
+      },
+      {
+        "date": "2026-05-08",
+        "return_pct": 4.6951236679945785
+      },
+      {
+        "date": "2026-05-11",
+        "return_pct": -0.0539916127815903
+      },
+      {
+        "date": "2026-05-12",
+        "return_pct": -1.303326643224578
+      },
+      {
+        "date": "2026-05-13",
+        "return_pct": 0.196671375163795
+      },
+      {
+        "date": "2026-05-14",
+        "return_pct": 0.1235788591523643
+      },
+      {
+        "date": "2026-05-15",
+        "return_pct": -2.041474989963037
+      },
+      {
+        "date": "2026-05-18",
+        "return_pct": -0.36826983464442514
+      },
+      {
+        "date": "2026-05-19",
+        "return_pct": -0.49350785010206266
+      },
+      {
+        "date": "2026-05-20",
+        "return_pct": 2.379779364184366
+      },
+      {
+        "date": "2026-05-21",
+        "return_pct": 0.004312263873064189
+      },
+      {
+        "date": "2026-05-22",
+        "return_pct": 0.6832016535733761
+      },
+      {
+        "date": "2026-05-26",
+        "return_pct": -0.3156247558707017
+      },
+      {
+        "date": "2026-05-27",
+        "return_pct": 0.23990916896090247
+      },
+      {
+        "date": "2026-05-28",
+        "return_pct": 0.3944259181822619
+      },
+      {
+        "date": "2026-05-29",
+        "return_pct": -0.19241129196105614
+      },
+      {
+        "date": "2026-06-01",
+        "return_pct": -0.6880537124771465
+      },
+      {
+        "date": "2026-06-02",
+        "return_pct": 1.1113326710592004
+      },
+      {
+        "date": "2026-06-03",
+        "return_pct": -0.11281882562076664
+      },
+      {
+        "date": "2026-06-04",
+        "return_pct": 0.07898071357794083
+      },
+      {
+        "date": "2026-06-05",
+        "return_pct": -2.2098968329850637
+      },
+      {
+        "date": "2026-06-08",
+        "return_pct": 0.7184784338104738
+      },
+      {
+        "date": "2026-06-09",
+        "return_pct": -0.4851884343171126
+      },
+      {
+        "date": "2026-06-10",
+        "return_pct": -1.0748976373635426
+      },
+      {
+        "date": "2026-06-11",
+        "return_pct": 0.2037763873232707
+      },
+      {
+        "date": "2026-06-12",
+        "return_pct": -0.3079586807041852
+      },
+      {
+        "date": "2026-06-15",
+        "return_pct": -0.05886725770855417
+      },
+      {
+        "date": "2026-06-16",
+        "return_pct": -0.09382941934808778
+      },
+      {
+        "date": "2026-06-17",
+        "return_pct": -0.14396119520243106
+      },
+      {
+        "date": "2026-06-18",
+        "return_pct": -0.35421625852736144
+      },
+      {
+        "date": "2026-06-22",
+        "return_pct": 0.29438501893925484
+      },
+      {
+        "date": "2026-06-23",
+        "return_pct": 0.1576002885030521
+      },
+      {
+        "date": "2026-06-24",
+        "return_pct": -0.040816950213484
+      },
+      {
+        "date": "2026-06-25",
+        "return_pct": 0.09882918957779482
+      },
+      {
+        "date": "2026-06-26",
+        "return_pct": -0.4797233605574322
+      },
+      {
+        "date": "2026-06-29",
+        "return_pct": 0.09892736110055285
+      },
+      {
+        "date": "2026-06-30",
+        "return_pct": -0.28077151496405545
+      },
+      {
+        "date": "2026-07-01",
+        "return_pct": 0.703568768537744
+      },
+      {
+        "date": "2026-07-02",
+        "return_pct": 0.17337214619364014
+      },
+      {
+        "date": "2026-07-06",
+        "return_pct": 0.0726925656172413
+      },
+      {
+        "date": "2026-07-07",
+        "return_pct": 0.35578954274101215
+      },
+      {
+        "date": "2026-07-08",
+        "return_pct": -0.7709068528996036
+      },
+      {
+        "date": "2026-07-09",
+        "return_pct": -0.04363738125116592
+      },
+      {
+        "date": "2026-07-10",
+        "return_pct": -0.05572628157273163
+      },
+      {
+        "date": "2026-07-13",
+        "return_pct": 1.0976249084428786
+      },
+      {
+        "date": "2026-07-14",
+        "return_pct": -0.23990387407270408
+      },
+      {
+        "date": "2026-07-15",
+        "return_pct": -0.005751795713633298
+      },
+      {
+        "date": "2026-07-16",
+        "return_pct": -0.07464582474451295
+      },
+      {
+        "date": "2026-07-17",
+        "return_pct": -0.24629585278466293
+      },
+      {
+        "date": "2026-07-20",
+        "return_pct": 0.06619115215227768
+      },
+      {
+        "date": "2026-07-21",
+        "return_pct": -0.09007230319439229
+      },
+      {
+        "date": "2026-07-22",
+        "return_pct": -0.5739186580959904
+      },
+      {
+        "date": "2026-07-23",
+        "return_pct": -0.5281331419892473
+      },
+      {
+        "date": "2026-07-24",
+        "return_pct": 1.7848286971936536
+      },
+      {
+        "date": "2026-07-27",
+        "return_pct": 1.1245448871883206
+      },
+      {
+        "date": "2026-07-28",
+        "return_pct": 0.785535804517979
+      },
+      {
+        "date": "2026-07-29",
+        "return_pct": -0.2424921047304357
+      },
+      {
+        "date": "2026-07-30",
+        "return_pct": 1.2303655716284376
+      },
+      {
+        "date": "2026-07-31",
+        "return_pct": 0.09162847954383686
+      },
+      {
+        "date": "2026-08-03",
+        "return_pct": 0.022838672324647945
+      },
+      {
+        "date": "2026-08-04",
+        "return_pct": 0.047752413193543494
+      },
+      {
+        "date": "2026-08-05",
+        "return_pct": -0.614097719177338
+      },
+      {
+        "date": "2026-08-06",
+        "return_pct": 0.8865156742187935
+      },
+      {
+        "date": "2026-08-07",
+        "return_pct": -0.562748056981652
+      },
+      {
+        "date": "2026-08-10",
+        "return_pct": 1.1872749195339434
+      },
+      {
+        "date": "2026-08-11",
+        "return_pct": -0.13317888557839902
+      },
+      {
+        "date": "2026-08-12",
+        "return_pct": -0.5329832115839884
+      },
+      {
+        "date": "2026-08-13",
+        "return_pct": 0.21485813093427694
+      },
+      {
+        "date": "2026-08-14",
+        "return_pct": -0.3062261429492243
+      },
+      {
+        "date": "2026-08-17",
+        "return_pct": -0.9133992771960977
+      },
+      {
+        "date": "2026-08-18",
+        "return_pct": -0.12865866173849522
+      },
+      {
+        "date": "2026-08-19",
+        "return_pct": 0.05480627355943274
+      },
+      {
+        "date": "2026-08-20",
+        "return_pct": -0.1270035523195492
+      },
+      {
+        "date": "2026-08-21",
+        "return_pct": 0.23813715249037173
+      },
+      {
+        "date": "2026-08-24",
+        "return_pct": -0.2992265898253164
+      },
+      {
+        "date": "2026-08-25",
+        "return_pct": 0.029864233506677263
+      },
+      {
+        "date": "2026-08-26",
+        "return_pct": -0.16216439719970094
+      },
+      {
+        "date": "2026-08-27",
+        "return_pct": 0.3296220987244936
+      },
+      {
+        "date": "2026-08-28",
+        "return_pct": -0.22146243781347363
+      },
+      {
+        "date": "2026-08-31",
+        "return_pct": 0.10808772092648189
+      }
+    ]
+  }
+]

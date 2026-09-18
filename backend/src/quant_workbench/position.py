@@ -24,6 +24,8 @@ class PositionConfig(BaseModel):
     confidence: float = Field(default=0.5, ge=0, le=3)
     tranche_weight: float = Field(default=0.05, gt=0, le=0.2)
     max_weight: float = Field(default=0.2, gt=0, le=0.5)
+    capital_mode: Literal["signal_budget", "risk_budget"] = "signal_budget"
+    entry_band: float | None = Field(default=None, ge=0, le=0.2)
     daily_vol_target: float = Field(default=0.015, gt=0, le=0.05)
     stop_loss_pct: float = Field(default=10, ge=2, le=30)
     max_drawdown_pct: float = Field(default=10, ge=2, le=30)
@@ -218,7 +220,9 @@ def simulate_positions(frame, config, start, end, progress=None, *, daily_bars=F
                 )
                 quantity = min(abs(delta), step, cap)
                 if config.allocation.enabled and desired > 0 and not forced_exit[symbol]:
-                    if abs(delta) * price / opening_equity < config.allocation.rebalance_band:
+                    band = (config.entry_band if shares[symbol] == 0 and delta > 0
+                            and config.entry_band is not None else config.allocation.rebalance_band)
+                    if abs(delta) * price / opening_equity < band:
                         quantity = 0
                 if quantity:
                     orders.append((delta > 0, symbol, quantity))
@@ -330,7 +334,8 @@ def simulate_positions(frame, config, start, end, progress=None, *, daily_bars=F
                     else -math.inf
                 )
                 weight = (
-                    min(config.max_weight, 1 / len(symbols))
+                    (config.max_weight if config.capital_mode == "risk_budget"
+                     and config.allocation.enabled else min(config.max_weight, 1 / len(symbols)))
                     * min(
                         1,
                         config.daily_vol_target / forecast["volatility"],
@@ -461,7 +466,8 @@ def simulate_positions(frame, config, start, end, progress=None, *, daily_bars=F
         allocation_decisions=allocation_decisions,
         portfolio_enabled=config.allocation.enabled,
         engine_version=("daily-position-v3-daily" if daily_bars else "daily-position-v2")
-        + ("-portfolio-v1" if config.allocation.enabled else ""),
+        + ("-portfolio-v1" if config.allocation.enabled else "")
+        + ("-budget-v2" if config.capital_mode != "signal_budget" or config.entry_band is not None else ""),
         metrics=dict(
             return_pct=(final / costs.initial_cash - 1) * 100,
             final_equity=final,

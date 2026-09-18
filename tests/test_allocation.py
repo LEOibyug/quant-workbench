@@ -155,3 +155,49 @@ def test_published_short_portfolio_uses_requested_stocks_and_independent_data(
     assert len(rows) == 390*2 and "asset_weight" in rows[0]
     with repo.connect() as db:
         assert has_prior_exposure(db, ["AMD"], "2024-01-03", "2024-01-04")
+
+
+def test_daily_risk_budget_is_causal_and_preserves_ledger():
+    from quant_workbench.market_data import schedule
+    dates = schedule('2024-01-02', '2024-06-01').index.strftime('%Y-%m-%d')
+    frames = []
+    for i, symbol in enumerate('ABCD'):
+        close = 100 * np.exp(np.arange(len(dates)) * (.002 + i * .0002))
+        frames.append(pd.DataFrame(dict(day=dates, symbol=symbol, open=close*.999,
+            high=close*1.002, low=close*.998, close=close, volume=10000000)))
+    frame = pd.concat(frames, ignore_index=True)
+    cfg = PositionConfig(model='trend', lookback=15, confidence=0, capital_mode='risk_budget',
+        entry_band=.005, max_weight=.35, allocation=AllocationConfig(enabled=True,
+            max_positions=3, max_weight=.35, rebalance_band=.02))
+    result = simulate_positions(frame, cfg, '2024-03-01', '2024-06-01', daily_bars=True)
+    assert_ledger(result['curve'])
+    # Adding rejected candidates must not dilute approved risk budgets.
+    rejected = []
+    for symbol in 'EFGHIJ':
+        close = 100 * np.exp(-np.arange(len(dates)) * .002)
+        rejected.append(pd.DataFrame(dict(day=dates, symbol=symbol, open=close*1.001,
+            high=close*1.002, low=close*.998, close=close, volume=10000000)))
+    expanded = simulate_positions(pd.concat([frame, *rejected], ignore_index=True), cfg,
+                                  '2024-03-01', '2024-06-01', daily_bars=True)
+    assert [p['equity'] for p in expanded['curve']] == pytest.approx(
+        [p['equity'] for p in result['curve']])
+    assert expanded['trades'] == result['trades']
+    prefix = simulate_positions(frame, cfg, '2024-03-01', '2024-05-01', daily_bars=True)
+    assert prefix['curve'] == [p for p in result['curve'] if p['date'] < '2024-05-01']
+
+
+def test_initial_entry_band_does_not_disable_rebalance_band():
+    from quant_workbench.market_data import schedule
+    days = schedule('2024-01-02', '2024-04-01').index.strftime('%Y-%m-%d')
+    frame = pd.DataFrame(dict(day=days, symbol='PRICEY', open=1100., high=1101.,
+                             low=1099., close=1100., volume=10000000))
+    cfg = PositionConfig(model='equal_weight', max_weight=.023, tranche_weight=.1,
+        allocation=AllocationConfig(enabled=True, rebalance_band=.03))
+    blocked = simulate_positions(frame, cfg, '2024-03-01', '2024-04-01', daily_bars=True)
+    assert blocked['trades'] == []
+    enabled = simulate_positions(frame, cfg.model_copy(update={'entry_band':.005}),
+                                 '2024-03-01', '2024-04-01', daily_bars=True)
+    assert len(enabled['trades']) == 1
+    assert enabled['trades'][0]['side'] == 'buy'
+    assert enabled['trades'][0]['quantity'] == 2
+    assert_ledger(enabled['curve'])
