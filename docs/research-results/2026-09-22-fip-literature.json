@@ -1,0 +1,38 @@
+{
+  "sources": [
+    {
+      "url": "https://www3.nd.edu/~zda/Frog.pdf",
+      "final_url": "https://academicweb.nd.edu/~zda/Frog.pdf?utm_campaign=redirect&utm_medium=web&utm_source=www3.nd.edu",
+      "status": 200,
+      "path": "artifacts/research/fip-literature/source-0",
+      "content_type": "application/pdf",
+      "bytes": 597218,
+      "sha256": "7202cb813e00031e96c6a101cc49cd243a0bb55dc554a3bf960e0bbca14c525f"
+    },
+    {
+      "url": "https://rpc.cfainstitute.org/research/cfa-digest/2015/03/frog-in-the-pan-continuous-information-and-momentum-digest-summary",
+      "final_url": "https://rpc.cfainstitute.org/research/cfa-digest/2015/03/frog-in-the-pan-continuous-information-and-momentum-digest-summary",
+      "status": 200,
+      "path": "artifacts/research/fip-literature/source-1",
+      "content_type": "text/html; charset=UTF-8",
+      "bytes": 61834,
+      "sha256": "9aff4a2c998eb77d6cde3dd1896f4ad8e5b0e11e7c55347da247efa43307cc91"
+    },
+    {
+      "url": "https://api.crossref.org/works/10.1093/rfs/hhu003",
+      "final_url": "https://api.crossref.org/works/10.1093/rfs/hhu003",
+      "status": 200,
+      "path": "artifacts/research/fip-literature/source-2",
+      "content_type": "application/json",
+      "bytes": 8584,
+      "sha256": "08c64ee256f1c97341d7273f387d00d882c2ab1a81fa96d883dc9820561fa07c"
+    }
+  ],
+  "doi": "10.1093/rfs/hhu003",
+  "read_sections": [
+    "journal PDF abstract",
+    "section 1 equation 1 and its counterexamples"
+  ],
+  "definition": "ID = sign(PRET) * (%negative - %positive); zero days remain in denominator",
+  "caveat": "Conditional on formation return; not every low ID path is smooth. SSRN older abstract numerical results differ from journal PDF; do not merge versions."
+}
