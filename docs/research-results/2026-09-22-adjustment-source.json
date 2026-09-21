@@ -1,0 +1,8 @@
+{
+  "url": "https://api.github.com/repos/alpacahq/alpaca-py/contents/alpaca/data/enums.py",
+  "sha256": "b87ef8a9485ae94159b99a57a95cc6fe396295b625f386ece0682485867c340b",
+  "excerpt": "class Adjustment(str, Enum):\n    \"\"\"Data normalization based on types of corporate actions.\n\n    Attributes:\n        RAW (str): Unadjusted data\n        SPLIT (str): Stock-split adjusted data\n        DIVIDEND (str): Dividend adjusted data\n        ALL (str): Data adjusted for all corporate actions\n    \"\"\"\n\n    RAW = \"raw\"\n    SPLIT = \"split\"\n    DIVIDEND = \"dividend\"\n    ALL = \"all\"\n\n",
+  "documentation_status": 403,
+  "raw_github_status": "timeout",
+  "read": true
+}
