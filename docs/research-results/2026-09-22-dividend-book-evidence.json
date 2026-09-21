@@ -1,0 +1,95 @@
+{
+  "linde": {
+    "sources": [
+      {
+        "url": "https://www.linde.com/news-media/press-releases/2023/linde-increases-dividend-2023",
+        "status": 404,
+        "path": "artifacts/research/dividend-audit/linde-source-0",
+        "bytes": 525975,
+        "sha256": "735301e6e35a3a0e27748fac1c79e1d84a414f8f6f1f3df0bbab36f181f97767"
+      },
+      {
+        "url": "https://www.linde.com/news-media/press-releases/2023/linde-completes-intercompany-reorganization",
+        "status": 404,
+        "path": "artifacts/research/dividend-audit/linde-source-1",
+        "bytes": 525975,
+        "sha256": "adb92cf18f7bbeec2110c29247b10dd006c2e1daa14267c11febcd97e8f8bcb3"
+      },
+      {
+        "url": "https://www.annualreports.com/HostedData/AnnualReportArchive/l/NYSE_LIN_2023.pdf",
+        "status": 200,
+        "path": "artifacts/research/dividend-audit/linde-source-2",
+        "bytes": 6626650,
+        "sha256": "6bacabb31aadb6142e42a132cec015cd4b8fcc824c5d7c97f4614c30eae6fed7"
+      }
+    ],
+    "verified": {
+      "document": "Linde 2023 annual report, annualreports mirror",
+      "pdf_page": 64,
+      "printed_page": 56,
+      "method": "OCR to locate, then visually checked rendered page",
+      "reorganization_date": "2023-03-01",
+      "exchange_ratio": "1:1",
+      "ticker_unchanged": "LIN"
+    },
+    "short_excerpt": "automatically received one share of the new holding company in exchange for each share",
+    "not_verified": [
+      "Mapping both API CUSIPs to legal pre/post entities",
+      "Which API dividend record supersedes the other",
+      "Ex-date and payable-date terms of the disputed dividend"
+    ],
+    "duplicate_resolution": "Do not double count; unresolved identity mapping blocks automatic ingestion"
+  },
+  "synthetic_trace": [
+    {
+      "day": "2024-02-08",
+      "preceding_shares": 10,
+      "opening_receivable": "0",
+      "closing_cash_credit": "0",
+      "closing_receivable": "0"
+    },
+    {
+      "day": "2024-02-09",
+      "preceding_shares": 10,
+      "opening_receivable": "2.40",
+      "closing_cash_credit": "0",
+      "closing_receivable": "2.40"
+    },
+    {
+      "day": "2024-02-12",
+      "preceding_shares": 0,
+      "opening_receivable": "2.40",
+      "closing_cash_credit": "0",
+      "closing_receivable": "2.40"
+    },
+    {
+      "day": "2024-02-15",
+      "preceding_shares": 0,
+      "opening_receivable": "2.40",
+      "closing_cash_credit": "2.40",
+      "closing_receivable": "0"
+    },
+    {
+      "day": "2024-02-16",
+      "preceding_shares": 0,
+      "opening_receivable": "0",
+      "closing_cash_credit": "0",
+      "closing_receivable": "0"
+    }
+  ],
+  "audit": [
+    {
+      "id": "synthetic",
+      "day": "2024-02-09",
+      "action": "recognize",
+      "shares": 10,
+      "amount": "2.40"
+    },
+    {
+      "id": "synthetic",
+      "day": "2024-02-15",
+      "action": "pay",
+      "amount": "2.40"
+    }
+  ]
+}
