@@ -1,0 +1,715 @@
+{
+  "status": "completed",
+  "source_hashes": {
+    "artifacts/research/annual-momentum/random10-temporal.parquet": "e1f9fee2a0e61ecf4784ba74f29b7fd582a1689d154f8754ca710ade536ea52b",
+    "artifacts/research/transfer12-temporal-2026-09-21/combined.parquet": "5877a055761a6915851917051db5b56121f96e9cf027c3e58729b0abe782e4b9",
+    "artifacts/research/annual-momentum/original20.parquet": "71f9c93d7cdb5c55385351a0f5a525ca088c2a4533c401a3c90b557167119ea5",
+    "artifacts/research/annual-momentum/alternate20.parquet": "9ccde0f6b6ba8d52df76079c376bc6fbace68ec331819e75393a31e52fae1a6c",
+    "artifacts/research/annual-momentum/random10.parquet": "133d28fe39d2687ba7fd266564d6a1a09097cd7ee07a8f16e64883aa526646e7",
+    "artifacts/research/transfer12-2026-09-21/daily.parquet": "2337f56b5d4cada16f9c9d5106ba84a18ce51c921d9a190e3923204859d6b664"
+  },
+  "train_rows": 173,
+  "train_dates": 13,
+  "train_last_label": "2024-08-30",
+  "coefficients": {
+    "base": {
+      "pret": -0.0009334574907957586,
+      "pret_squared": -0.0005949520686963549,
+      "log_volatility63": 0.0003699334216479233,
+      "recent21": -0.0037572020299403816
+    },
+    "augmented": {
+      "pret": -0.0007753703259710113,
+      "pret_squared": -0.0005037845237482192,
+      "log_volatility63": 0.00018545420520987634,
+      "recent21": -0.003833189783675621,
+      "continuity": -0.0009962650670373749
+    }
+  },
+  "evaluations": {
+    "temporal22": {
+      "rows": 182,
+      "dates": [
+        {
+          "day": "2024-09-27",
+          "n": 20,
+          "base": {
+            "mse": 0.0014985498913715751,
+            "spearman": 0.21804511278195485
+          },
+          "augmented": {
+            "mse": 0.0014658724980433717,
+            "spearman": 0.2992481203007519
+          },
+          "zero": {
+            "mse": 0.0015616473044028946,
+            "spearman": null
+          }
+        },
+        {
+          "day": "2024-10-25",
+          "n": 20,
+          "base": {
+            "mse": 0.002601627527028886,
+            "spearman": -0.33233082706766914
+          },
+          "augmented": {
+            "mse": 0.002614239540115865,
+            "spearman": -0.31879699248120297
+          },
+          "zero": {
+            "mse": 0.0024703358861002016,
+            "spearman": null
+          }
+        },
+        {
+          "day": "2024-11-22",
+          "n": 20,
+          "base": {
+            "mse": 0.001993743939737713,
+            "spearman": -0.24511278195488717
+          },
+          "augmented": {
+            "mse": 0.0020120072422710475,
+            "spearman": -0.2601503759398496
+          },
+          "zero": {
+            "mse": 0.0018859495432105651,
+            "spearman": null
+          }
+        },
+        {
+          "day": "2024-12-23",
+          "n": 17,
+          "base": {
+            "mse": 0.0018705808015959688,
+            "spearman": 0.4436274509803922
+          },
+          "augmented": {
+            "mse": 0.0018491746228930623,
+            "spearman": 0.5000000000000001
+          },
+          "zero": {
+            "mse": 0.0019318821371020571,
+            "spearman": null
+          }
+        },
+        {
+          "day": "2025-01-24",
+          "n": 14,
+          "base": {
+            "mse": 0.006177768260470479,
+            "spearman": -0.01098901098901099
+          },
+          "augmented": {
+            "mse": 0.006189037535140059,
+            "spearman": -0.1076923076923077
+          },
+          "zero": {
+            "mse": 0.006125678063933934,
+            "spearman": null
+          }
+        },
+        {
+          "day": "2025-02-24",
+          "n": 15,
+          "base": {
+            "mse": 0.0022017201525819387,
+            "spearman": -0.0964285714285714
+          },
+          "augmented": {
+            "mse": 0.0022274517918523863,
+            "spearman": -0.09999999999999999
+          },
+          "zero": {
+            "mse": 0.002148323477030792,
+            "spearman": null
+          }
+        },
+        {
+          "day": "2025-03-24",
+          "n": 14,
+          "base": {
+            "mse": 0.0022578703208965068,
+            "spearman": -0.23076923076923075
+          },
+          "augmented": {
+            "mse": 0.002232262429724647,
+            "spearman": -0.0945054945054945
+          },
+          "zero": {
+            "mse": 0.002161878635033371,
+            "spearman": null
+          }
+        },
+        {
+          "day": "2025-04-22",
+          "n": 16,
+          "base": {
+            "mse": 0.0015699449832210152,
+            "spearman": 0.7000000000000001
+          },
+          "augmented": {
+            "mse": 0.0015716694309979313,
+            "spearman": 0.75
+          },
+          "zero": {
+            "mse": 0.0018104536650711176,
+            "spearman": null
+          }
+        },
+        {
+          "day": "2025-05-20",
+          "n": 12,
+          "base": {
+            "mse": 0.000753471725390764,
+            "spearman": 0.06293706293706294
+          },
+          "augmented": {
+            "mse": 0.0007559875748645309,
+            "spearman": 0.07692307692307693
+          },
+          "zero": {
+            "mse": 0.0007320742693635874,
+            "spearman": null
+          }
+        },
+        {
+          "day": "2025-06-18",
+          "n": 19,
+          "base": {
+            "mse": 0.0015270479325021342,
+            "spearman": 0.19649122807017544
+          },
+          "augmented": {
+            "mse": 0.0015350392940838003,
+            "spearman": 0.1649122807017544
+          },
+          "zero": {
+            "mse": 0.0015887841469690977,
+            "spearman": null
+          }
+        },
+        {
+          "day": "2025-07-18",
+          "n": 15,
+          "base": {
+            "mse": 0.0022292692225077677,
+            "spearman": -0.0035714285714285704
+          },
+          "augmented": {
+            "mse": 0.0022578963382664167,
+            "spearman": -0.007142857142857141
+          },
+          "zero": {
+            "mse": 0.0021742475392261627,
+            "spearman": null
+          }
+        }
+      ],
+      "average_mse": {
+        "base": 0.0022437813415731593,
+        "augmented": 0.002246421663477556,
+        "zero": 0.0022355686061312527
+      },
+      "average_spearman": {
+        "base": 0.06380900036261705,
+        "augmented": 0.08207231365126105
+      },
+      "augmented_minus_base_mse": 2.640321904397248e-06,
+      "descriptive_block_interval": [
+        -2.250520324582116e-06,
+        8.701604083287165e-06
+      ]
+    },
+    "latest62": {
+      "rows": 495,
+      "dates": [
+        {
+          "day": "2025-09-02",
+          "n": 38,
+          "base": {
+            "mse": 0.004895610214760768,
+            "spearman": -0.060291060291060294
+          },
+          "augmented": {
+            "mse": 0.0048979129337782335,
+            "spearman": -0.10734215997373893
+          },
+          "zero": {
+            "mse": 0.004830426545422171,
+            "spearman": null
+          }
+        },
+        {
+          "day": "2025-09-30",
+          "n": 41,
+          "base": {
+            "mse": 0.004491817496142966,
+            "spearman": -0.4513937282229966
+          },
+          "augmented": {
+            "mse": 0.0044815737980126715,
+            "spearman": -0.48170731707317077
+          },
+          "zero": {
+            "mse": 0.004175270092661978,
+            "spearman": null
+          }
+        },
+        {
+          "day": "2025-10-28",
+          "n": 42,
+          "base": {
+            "mse": 0.007600082691655856,
+            "spearman": 0.07916700429462767
+          },
+          "augmented": {
+            "mse": 0.0076355656731975485,
+            "spearman": 0.04416173729843611
+          },
+          "zero": {
+            "mse": 0.007794860713391456,
+            "spearman": null
+          }
+        },
+        {
+          "day": "2025-11-25",
+          "n": 40,
+          "base": {
+            "mse": 0.0025040830302105613,
+            "spearman": 0.3129455909943715
+          },
+          "augmented": {
+            "mse": 0.0025142350988462186,
+            "spearman": 0.19906191369606008
+          },
+          "zero": {
+            "mse": 0.002587117884367261,
+            "spearman": null
+          }
+        },
+        {
+          "day": "2025-12-24",
+          "n": 42,
+          "base": {
+            "mse": 0.006026943243263587,
+            "spearman": 0.07770845150311968
+          },
+          "augmented": {
+            "mse": 0.0060010619905404555,
+            "spearman": 0.0850012154606596
+          },
+          "zero": {
+            "mse": 0.006032953195220887,
+            "spearman": null
+          }
+        },
+        {
+          "day": "2026-01-26",
+          "n": 44,
+          "base": {
+            "mse": 0.017993557387079112,
+            "spearman": -0.3455954897815363
+          },
+          "augmented": {
+            "mse": 0.01797523180206826,
+            "spearman": -0.28668076109936574
+          },
+          "zero": {
+            "mse": 0.01757944509943524,
+            "spearman": null
+          }
+        },
+        {
+          "day": "2026-02-24",
+          "n": 40,
+          "base": {
+            "mse": 0.002843922851118963,
+            "spearman": 0.07861163227016886
+          },
+          "augmented": {
+            "mse": 0.0028445882917183902,
+            "spearman": 0.09305816135084428
+          },
+          "zero": {
+            "mse": 0.002885949075217691,
+            "spearman": null
+          }
+        },
+        {
+          "day": "2026-03-24",
+          "n": 43,
+          "base": {
+            "mse": 0.012768838311336373,
+            "spearman": -0.12790697674418605
+          },
+          "augmented": {
+            "mse": 0.012740052751415104,
+            "spearman": -0.10480217456961644
+          },
+          "zero": {
+            "mse": 0.012596151933587658,
+            "spearman": null
+          }
+        },
+        {
+          "day": "2026-04-22",
+          "n": 45,
+          "base": {
+            "mse": 0.01538390710811727,
+            "spearman": -0.2650856389986824
+          },
+          "augmented": {
+            "mse": 0.015394066433241711,
+            "spearman": -0.3067193675889328
+          },
+          "zero": {
+            "mse": 0.014705269658424048,
+            "spearman": null
+          }
+        },
+        {
+          "day": "2026-05-20",
+          "n": 42,
+          "base": {
+            "mse": 0.00789626953762558,
+            "spearman": -0.13361964184425898
+          },
+          "augmented": {
+            "mse": 0.007939569663509708,
+            "spearman": -0.19957864030467548
+          },
+          "zero": {
+            "mse": 0.007552415442872244,
+            "spearman": null
+          }
+        },
+        {
+          "day": "2026-06-18",
+          "n": 41,
+          "base": {
+            "mse": 0.006377851674704031,
+            "spearman": 0.24721254355400704
+          },
+          "augmented": {
+            "mse": 0.00637343385272949,
+            "spearman": 0.2811846689895471
+          },
+          "zero": {
+            "mse": 0.006691399980606301,
+            "spearman": null
+          }
+        },
+        {
+          "day": "2026-07-20",
+          "n": 37,
+          "base": {
+            "mse": 0.004694076233092599,
+            "spearman": -0.2204836415362731
+          },
+          "augmented": {
+            "mse": 0.004670540989773012,
+            "spearman": -0.13276434329065906
+          },
+          "zero": {
+            "mse": 0.004581630707028766,
+            "spearman": null
+          }
+        }
+      ],
+      "average_mse": {
+        "base": 0.007789746648258972,
+        "augmented": 0.007788986106569235,
+        "zero": 0.00766774086068631
+      },
+      "average_spearman": {
+        "base": -0.06739424623355826,
+        "augmented": -0.076427255592051
+      },
+      "augmented_minus_base_mse": -7.605416897387499e-07,
+      "descriptive_block_interval": [
+        -1.1468920178341592e-05,
+        9.717048595015687e-06
+      ]
+    }
+  },
+  "checks": {
+    "prefix_invariance": true,
+    "strict_label_boundary": true,
+    "unique_symbol_days": true
+  },
+  "coverage": {
+    "past": [
+      {
+        "day": "2022-09-01",
+        "accepted": false,
+        "reason": "fewer_than_10_winners",
+        "count": 6
+      },
+      {
+        "day": "2022-09-30",
+        "accepted": false,
+        "reason": "fewer_than_10_winners",
+        "count": 8
+      },
+      {
+        "day": "2022-10-28",
+        "accepted": false,
+        "reason": "fewer_than_10_winners",
+        "count": 3
+      },
+      {
+        "day": "2022-11-28",
+        "accepted": false,
+        "reason": "fewer_than_10_winners",
+        "count": 4
+      },
+      {
+        "day": "2022-12-27",
+        "accepted": false,
+        "reason": "fewer_than_10_winners",
+        "count": 5
+      },
+      {
+        "day": "2023-01-26",
+        "accepted": false,
+        "reason": "fewer_than_10_winners",
+        "count": 8
+      },
+      {
+        "day": "2023-02-24",
+        "accepted": false,
+        "reason": "fewer_than_10_winners",
+        "count": 9
+      },
+      {
+        "day": "2023-03-24",
+        "accepted": false,
+        "reason": "fewer_than_10_winners",
+        "count": 5
+      },
+      {
+        "day": "2023-04-24",
+        "accepted": false,
+        "reason": "fewer_than_10_winners",
+        "count": 4
+      },
+      {
+        "day": "2023-05-22",
+        "accepted": true,
+        "count": 15
+      },
+      {
+        "day": "2023-06-21",
+        "accepted": true,
+        "count": 16
+      },
+      {
+        "day": "2023-07-20",
+        "accepted": true,
+        "count": 11
+      },
+      {
+        "day": "2023-08-17",
+        "accepted": false,
+        "reason": "fewer_than_10_winners",
+        "count": 7
+      },
+      {
+        "day": "2023-09-15",
+        "accepted": true,
+        "count": 12
+      },
+      {
+        "day": "2023-10-13",
+        "accepted": true,
+        "count": 18
+      },
+      {
+        "day": "2023-11-10",
+        "accepted": true,
+        "count": 10
+      },
+      {
+        "day": "2023-12-11",
+        "accepted": false,
+        "reason": "fewer_than_10_winners",
+        "count": 5
+      },
+      {
+        "day": "2024-01-10",
+        "accepted": false,
+        "reason": "fewer_than_10_winners",
+        "count": 9
+      },
+      {
+        "day": "2024-02-08",
+        "accepted": true,
+        "count": 14
+      },
+      {
+        "day": "2024-03-08",
+        "accepted": true,
+        "count": 15
+      },
+      {
+        "day": "2024-04-08",
+        "accepted": true,
+        "count": 14
+      },
+      {
+        "day": "2024-05-06",
+        "accepted": true,
+        "count": 12
+      },
+      {
+        "day": "2024-06-04",
+        "accepted": true,
+        "count": 13
+      },
+      {
+        "day": "2024-07-03",
+        "accepted": true,
+        "count": 13
+      },
+      {
+        "day": "2024-08-01",
+        "accepted": true,
+        "count": 10
+      },
+      {
+        "day": "2024-08-29",
+        "accepted": true,
+        "count": 16
+      },
+      {
+        "day": "2024-09-27",
+        "accepted": true,
+        "count": 20
+      },
+      {
+        "day": "2024-10-25",
+        "accepted": true,
+        "count": 20
+      },
+      {
+        "day": "2024-11-22",
+        "accepted": true,
+        "count": 20
+      },
+      {
+        "day": "2024-12-23",
+        "accepted": true,
+        "count": 17
+      },
+      {
+        "day": "2025-01-24",
+        "accepted": true,
+        "count": 14
+      },
+      {
+        "day": "2025-02-24",
+        "accepted": true,
+        "count": 15
+      },
+      {
+        "day": "2025-03-24",
+        "accepted": true,
+        "count": 14
+      },
+      {
+        "day": "2025-04-22",
+        "accepted": true,
+        "count": 16
+      },
+      {
+        "day": "2025-05-20",
+        "accepted": true,
+        "count": 12
+      },
+      {
+        "day": "2025-06-18",
+        "accepted": true,
+        "count": 19
+      },
+      {
+        "day": "2025-07-18",
+        "accepted": true,
+        "count": 15
+      },
+      {
+        "day": "2025-08-15",
+        "accepted": false,
+        "reason": "history_or_label_boundary"
+      }
+    ],
+    "latest": [
+      {
+        "day": "2025-09-02",
+        "accepted": true,
+        "count": 38
+      },
+      {
+        "day": "2025-09-30",
+        "accepted": true,
+        "count": 41
+      },
+      {
+        "day": "2025-10-28",
+        "accepted": true,
+        "count": 42
+      },
+      {
+        "day": "2025-11-25",
+        "accepted": true,
+        "count": 40
+      },
+      {
+        "day": "2025-12-24",
+        "accepted": true,
+        "count": 42
+      },
+      {
+        "day": "2026-01-26",
+        "accepted": true,
+        "count": 44
+      },
+      {
+        "day": "2026-02-24",
+        "accepted": true,
+        "count": 40
+      },
+      {
+        "day": "2026-03-24",
+        "accepted": true,
+        "count": 43
+      },
+      {
+        "day": "2026-04-22",
+        "accepted": true,
+        "count": 45
+      },
+      {
+        "day": "2026-05-20",
+        "accepted": true,
+        "count": 42
+      },
+      {
+        "day": "2026-06-18",
+        "accepted": true,
+        "count": 41
+      },
+      {
+        "day": "2026-07-20",
+        "accepted": true,
+        "count": 37
+      },
+      {
+        "day": "2026-08-17",
+        "accepted": false,
+        "reason": "history_or_label_boundary"
+      }
+    ]
+  }
+}
