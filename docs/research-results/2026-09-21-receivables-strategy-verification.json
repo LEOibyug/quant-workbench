@@ -1,0 +1,9 @@
+{
+  "panels": 116,
+  "source_checks": 698,
+  "hashes": {
+    "scripts/audit_receivables_quality.py": "ca3822fe4bdb810fd5a5b9b94a08a1bf7697b4199d90f91b027fa0daf01771fb",
+    "scripts/study_receivables_strategy.py": "3e7303c93067891850a4547540e1213ca7316e9023dcc4abfd4b8a0d64e9ef2b",
+    "scripts/study_receivables_temporal.py": "6c29afcbf81f62ea7f72aa3bc6c8ebabfae4b2c441272eae96592350875b80ae"
+  }
+}
