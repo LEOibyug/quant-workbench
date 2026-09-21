@@ -1,0 +1,1071 @@
+{
+  "status": "completed",
+  "results": [
+    {
+      "pool": "original20",
+      "method": "adaptive_specialist",
+      "cost_multiplier": 1,
+      "config": {
+        "allocation": {
+          "enabled": false,
+          "symbols": [],
+          "lookback": 60,
+          "max_positions": 3,
+          "max_weight": 0.35,
+          "cash_reserve": 0.05,
+          "risk_aversion": 10.0,
+          "cost_penalty": 2.0,
+          "rebalance_band": 0.02,
+          "max_daily_turnover": 1.0,
+          "rebalance_minutes": 30
+        },
+        "model": "adaptive_specialist",
+        "lookback": 20,
+        "horizon": 5,
+        "rebalance_days": 5,
+        "confidence": 0.5,
+        "tranche_weight": 0.1,
+        "max_weight": 0.2,
+        "capital_mode": "signal_budget",
+        "classifier_sha256": null,
+        "portfolio_policy": "legacy",
+        "entry_band": 0.005,
+        "daily_vol_target": 0.015,
+        "stop_loss_pct": 10.0,
+        "max_drawdown_pct": 10.0,
+        "costs": {
+          "allocation": {
+            "enabled": false,
+            "symbols": [],
+            "lookback": 60,
+            "max_positions": 3,
+            "max_weight": 0.35,
+            "cash_reserve": 0.05,
+            "risk_aversion": 10.0,
+            "cost_penalty": 2.0,
+            "rebalance_band": 0.02,
+            "max_daily_turnover": 1.0,
+            "rebalance_minutes": 30
+          },
+          "strategy": "adaptive",
+          "fast": 5,
+          "stat_window": 120,
+          "stat_horizon": 15,
+          "stat_entry_z": 1.5,
+          "stat_confidence": 0.5,
+          "stat_process_noise": 0.001,
+          "slow": 20,
+          "flatten_minutes": 5,
+          "opening_minutes": 15,
+          "reversion_bps": 30.0,
+          "stop_loss_bps": 100.0,
+          "regime_window": 60,
+          "min_reward_risk": 1.2,
+          "atr_window": 14,
+          "stop_atr": 2.0,
+          "take_atr": 3.0,
+          "breakout_buffer_atr": 0.1,
+          "reversion_atr": 2.0,
+          "momentum_threshold_bps": 10.0,
+          "regime_gate": "off",
+          "regime_window_days": 10,
+          "regime_min_drift_bps": 0.0,
+          "regime_max_efficiency": 0.35,
+          "max_scaling_lots": 3,
+          "lot_breakeven_hold": false,
+          "lot_patience_minutes": 45,
+          "lot_hard_stop_atr": 4.0,
+          "tranche_requires_uptrend": false,
+          "min_relative_volume": 1.2,
+          "max_hold_minutes": 30,
+          "cooldown_minutes": 10,
+          "max_daily_entries": 4,
+          "daily_loss_bps": 100.0,
+          "risk_per_trade_bps": 25.0,
+          "rule_cost_multiplier": 1.5,
+          "initial_cash": 100000.0,
+          "spread_bps": 2.0,
+          "slippage_bps": 2.0,
+          "commission_per_share": 0.005,
+          "minimum_commission": 1.0,
+          "sell_fee_bps": 0.3,
+          "participation": 0.01
+        }
+      },
+      "metrics": {
+        "return_pct": 4.94097376464282,
+        "final_equity": 104940.97376464281,
+        "max_drawdown_pct": 4.148306031948257,
+        "fees": 294.77765265709496,
+        "impact_cost": 428.5495826999995,
+        "trade_count": 273,
+        "halted": false,
+        "turnover": 13.794173209952394,
+        "realized_pnl": 4513.131754000044,
+        "unrealized_pnl": 427.84201064285566,
+        "trading_days": 251,
+        "daily_sharpe": 0.7337554749405311,
+        "average_gross_exposure_pct": 35.024097159702066,
+        "estimated_liquidation_return_pct": 4.929437484042798
+      },
+      "contributions": [
+        {
+          "symbol": "AAPL",
+          "net_profit": 331.2008283184914
+        },
+        {
+          "symbol": "AMD",
+          "net_profit": -182.5064350313114
+        },
+        {
+          "symbol": "AMZN",
+          "net_profit": 0.0
+        },
+        {
+          "symbol": "AVGO",
+          "net_profit": -1293.2737047110422
+        },
+        {
+          "symbol": "BRK.B",
+          "net_profit": 1197.4440391270173
+        },
+        {
+          "symbol": "COST",
+          "net_profit": -535.9791818741969
+        },
+        {
+          "symbol": "GOOGL",
+          "net_profit": 2798.5007943105397
+        },
+        {
+          "symbol": "JNJ",
+          "net_profit": 360.5529231697094
+        },
+        {
+          "symbol": "JPM",
+          "net_profit": 178.8496939419947
+        },
+        {
+          "symbol": "LLY",
+          "net_profit": 995.2999766454377
+        },
+        {
+          "symbol": "MA",
+          "net_profit": -38.328487548080375
+        },
+        {
+          "symbol": "META",
+          "net_profit": -343.0313222337227
+        },
+        {
+          "symbol": "MSFT",
+          "net_profit": -454.4463644135194
+        },
+        {
+          "symbol": "NVDA",
+          "net_profit": 1507.4744276485126
+        },
+        {
+          "symbol": "ORCL",
+          "net_profit": -567.6641699004149
+        },
+        {
+          "symbol": "SOFI",
+          "net_profit": -338.5232155213189
+        },
+        {
+          "symbol": "TSLA",
+          "net_profit": -145.79530785535053
+        },
+        {
+          "symbol": "V",
+          "net_profit": 738.3246909455502
+        },
+        {
+          "symbol": "WMT",
+          "net_profit": 61.746345709705565
+        },
+        {
+          "symbol": "XOM",
+          "net_profit": 671.1282339148893
+        }
+      ],
+      "first_halt": null
+    },
+    {
+      "pool": "original20",
+      "method": "adaptive_specialist",
+      "cost_multiplier": 2,
+      "config": {
+        "allocation": {
+          "enabled": false,
+          "symbols": [],
+          "lookback": 60,
+          "max_positions": 3,
+          "max_weight": 0.35,
+          "cash_reserve": 0.05,
+          "risk_aversion": 10.0,
+          "cost_penalty": 2.0,
+          "rebalance_band": 0.02,
+          "max_daily_turnover": 1.0,
+          "rebalance_minutes": 30
+        },
+        "model": "adaptive_specialist",
+        "lookback": 20,
+        "horizon": 5,
+        "rebalance_days": 5,
+        "confidence": 0.5,
+        "tranche_weight": 0.1,
+        "max_weight": 0.2,
+        "capital_mode": "signal_budget",
+        "classifier_sha256": null,
+        "portfolio_policy": "legacy",
+        "entry_band": 0.005,
+        "daily_vol_target": 0.015,
+        "stop_loss_pct": 10.0,
+        "max_drawdown_pct": 10.0,
+        "costs": {
+          "allocation": {
+            "enabled": false,
+            "symbols": [],
+            "lookback": 60,
+            "max_positions": 3,
+            "max_weight": 0.35,
+            "cash_reserve": 0.05,
+            "risk_aversion": 10.0,
+            "cost_penalty": 2.0,
+            "rebalance_band": 0.02,
+            "max_daily_turnover": 1.0,
+            "rebalance_minutes": 30
+          },
+          "strategy": "adaptive",
+          "fast": 5,
+          "stat_window": 120,
+          "stat_horizon": 15,
+          "stat_entry_z": 1.5,
+          "stat_confidence": 0.5,
+          "stat_process_noise": 0.001,
+          "slow": 20,
+          "flatten_minutes": 5,
+          "opening_minutes": 15,
+          "reversion_bps": 30.0,
+          "stop_loss_bps": 100.0,
+          "regime_window": 60,
+          "min_reward_risk": 1.2,
+          "atr_window": 14,
+          "stop_atr": 2.0,
+          "take_atr": 3.0,
+          "breakout_buffer_atr": 0.1,
+          "reversion_atr": 2.0,
+          "momentum_threshold_bps": 10.0,
+          "regime_gate": "off",
+          "regime_window_days": 10,
+          "regime_min_drift_bps": 0.0,
+          "regime_max_efficiency": 0.35,
+          "max_scaling_lots": 3,
+          "lot_breakeven_hold": false,
+          "lot_patience_minutes": 45,
+          "lot_hard_stop_atr": 4.0,
+          "tranche_requires_uptrend": false,
+          "min_relative_volume": 1.2,
+          "max_hold_minutes": 30,
+          "cooldown_minutes": 10,
+          "max_daily_entries": 4,
+          "daily_loss_bps": 100.0,
+          "risk_per_trade_bps": 25.0,
+          "rule_cost_multiplier": 1.5,
+          "initial_cash": 100000.0,
+          "spread_bps": 4.0,
+          "slippage_bps": 4.0,
+          "commission_per_share": 0.01,
+          "minimum_commission": 2.0,
+          "sell_fee_bps": 0.6,
+          "participation": 0.01
+        }
+      },
+      "metrics": {
+        "return_pct": 5.711788271981688,
+        "final_equity": 105711.7882719817,
+        "max_drawdown_pct": 4.340953347951593,
+        "fees": 560.51267061824,
+        "impact_cost": 763.0700573999994,
+        "trade_count": 261,
+        "halted": false,
+        "turnover": 12.253894840046762,
+        "realized_pnl": 5373.502872203578,
+        "unrealized_pnl": 338.28539977820213,
+        "trading_days": 251,
+        "daily_sharpe": 0.8217041247998932,
+        "average_gross_exposure_pct": 35.90640104650799,
+        "estimated_liquidation_return_pct": 5.67939719518169
+      },
+      "contributions": [
+        {
+          "symbol": "AAPL",
+          "net_profit": 266.24307499050065
+        },
+        {
+          "symbol": "AMD",
+          "net_profit": -220.01817092028068
+        },
+        {
+          "symbol": "AMZN",
+          "net_profit": 0.0
+        },
+        {
+          "symbol": "AVGO",
+          "net_profit": -1320.9870284441595
+        },
+        {
+          "symbol": "BRK.B",
+          "net_profit": -174.20838248362816
+        },
+        {
+          "symbol": "COST",
+          "net_profit": -593.9304811124202
+        },
+        {
+          "symbol": "GOOGL",
+          "net_profit": 3151.6980472460446
+        },
+        {
+          "symbol": "JNJ",
+          "net_profit": 2577.572462122562
+        },
+        {
+          "symbol": "JPM",
+          "net_profit": 107.32296461999977
+        },
+        {
+          "symbol": "LLY",
+          "net_profit": 954.6456951817627
+        },
+        {
+          "symbol": "MA",
+          "net_profit": 0.0
+        },
+        {
+          "symbol": "META",
+          "net_profit": -365.79752355888013
+        },
+        {
+          "symbol": "MSFT",
+          "net_profit": -464.20753945407887
+        },
+        {
+          "symbol": "NVDA",
+          "net_profit": 1488.8195530351204
+        },
+        {
+          "symbol": "ORCL",
+          "net_profit": -565.1027061517007
+        },
+        {
+          "symbol": "SOFI",
+          "net_profit": -359.1892082006416
+        },
+        {
+          "symbol": "TSLA",
+          "net_profit": -157.4304844213998
+        },
+        {
+          "symbol": "V",
+          "net_profit": 709.70997748222
+        },
+        {
+          "symbol": "WMT",
+          "net_profit": 33.23715287361574
+        },
+        {
+          "symbol": "XOM",
+          "net_profit": 643.4108691771253
+        }
+      ],
+      "first_halt": null
+    },
+    {
+      "pool": "alternate20",
+      "method": "adaptive_specialist",
+      "cost_multiplier": 1,
+      "config": {
+        "allocation": {
+          "enabled": false,
+          "symbols": [],
+          "lookback": 60,
+          "max_positions": 3,
+          "max_weight": 0.35,
+          "cash_reserve": 0.05,
+          "risk_aversion": 10.0,
+          "cost_penalty": 2.0,
+          "rebalance_band": 0.02,
+          "max_daily_turnover": 1.0,
+          "rebalance_minutes": 30
+        },
+        "model": "adaptive_specialist",
+        "lookback": 20,
+        "horizon": 5,
+        "rebalance_days": 5,
+        "confidence": 0.5,
+        "tranche_weight": 0.1,
+        "max_weight": 0.2,
+        "capital_mode": "signal_budget",
+        "classifier_sha256": null,
+        "portfolio_policy": "legacy",
+        "entry_band": 0.005,
+        "daily_vol_target": 0.015,
+        "stop_loss_pct": 10.0,
+        "max_drawdown_pct": 10.0,
+        "costs": {
+          "allocation": {
+            "enabled": false,
+            "symbols": [],
+            "lookback": 60,
+            "max_positions": 3,
+            "max_weight": 0.35,
+            "cash_reserve": 0.05,
+            "risk_aversion": 10.0,
+            "cost_penalty": 2.0,
+            "rebalance_band": 0.02,
+            "max_daily_turnover": 1.0,
+            "rebalance_minutes": 30
+          },
+          "strategy": "adaptive",
+          "fast": 5,
+          "stat_window": 120,
+          "stat_horizon": 15,
+          "stat_entry_z": 1.5,
+          "stat_confidence": 0.5,
+          "stat_process_noise": 0.001,
+          "slow": 20,
+          "flatten_minutes": 5,
+          "opening_minutes": 15,
+          "reversion_bps": 30.0,
+          "stop_loss_bps": 100.0,
+          "regime_window": 60,
+          "min_reward_risk": 1.2,
+          "atr_window": 14,
+          "stop_atr": 2.0,
+          "take_atr": 3.0,
+          "breakout_buffer_atr": 0.1,
+          "reversion_atr": 2.0,
+          "momentum_threshold_bps": 10.0,
+          "regime_gate": "off",
+          "regime_window_days": 10,
+          "regime_min_drift_bps": 0.0,
+          "regime_max_efficiency": 0.35,
+          "max_scaling_lots": 3,
+          "lot_breakeven_hold": false,
+          "lot_patience_minutes": 45,
+          "lot_hard_stop_atr": 4.0,
+          "tranche_requires_uptrend": false,
+          "min_relative_volume": 1.2,
+          "max_hold_minutes": 30,
+          "cooldown_minutes": 10,
+          "max_daily_entries": 4,
+          "daily_loss_bps": 100.0,
+          "risk_per_trade_bps": 25.0,
+          "rule_cost_multiplier": 1.5,
+          "initial_cash": 100000.0,
+          "spread_bps": 2.0,
+          "slippage_bps": 2.0,
+          "commission_per_share": 0.005,
+          "minimum_commission": 1.0,
+          "sell_fee_bps": 0.3,
+          "participation": 0.01
+        }
+      },
+      "metrics": {
+        "return_pct": 5.751908125570648,
+        "final_equity": 105751.90812557064,
+        "max_drawdown_pct": 4.462531809335313,
+        "fees": 249.879303729315,
+        "impact_cost": 324.71357069999993,
+        "trade_count": 234,
+        "halted": false,
+        "turnover": 10.144510290912189,
+        "realized_pnl": 6764.575804258526,
+        "unrealized_pnl": -1012.6676786878479,
+        "trading_days": 251,
+        "daily_sharpe": 0.8557685605498349,
+        "average_gross_exposure_pct": 30.329901948046,
+        "estimated_liquidation_return_pct": 5.739084969370634
+      },
+      "contributions": [
+        {
+          "symbol": "ABBV",
+          "net_profit": -622.6911844103379
+        },
+        {
+          "symbol": "ADBE",
+          "net_profit": 218.424979569294
+        },
+        {
+          "symbol": "BAC",
+          "net_profit": 206.1775702486866
+        },
+        {
+          "symbol": "CAT",
+          "net_profit": 6102.756781009961
+        },
+        {
+          "symbol": "CRM",
+          "net_profit": 0.0
+        },
+        {
+          "symbol": "CSCO",
+          "net_profit": -605.5168250915403
+        },
+        {
+          "symbol": "CVX",
+          "net_profit": -99.21226097692261
+        },
+        {
+          "symbol": "GE",
+          "net_profit": -331.2703718067896
+        },
+        {
+          "symbol": "GS",
+          "net_profit": 1805.6696333537702
+        },
+        {
+          "symbol": "HD",
+          "net_profit": 48.88883908856951
+        },
+        {
+          "symbol": "IBM",
+          "net_profit": -2877.6700623891975
+        },
+        {
+          "symbol": "INTC",
+          "net_profit": -1016.66615886814
+        },
+        {
+          "symbol": "KO",
+          "net_profit": -186.96085853466957
+        },
+        {
+          "symbol": "MRK",
+          "net_profit": 1086.4224042056344
+        },
+        {
+          "symbol": "MS",
+          "net_profit": 1139.0792017196982
+        },
+        {
+          "symbol": "PEP",
+          "net_profit": -244.24147115828418
+        },
+        {
+          "symbol": "PG",
+          "net_profit": 0.0
+        },
+        {
+          "symbol": "QCOM",
+          "net_profit": 671.0323607654202
+        },
+        {
+          "symbol": "TXN",
+          "net_profit": -603.4508167403992
+        },
+        {
+          "symbol": "UNH",
+          "net_profit": 1061.1363655859263
+        }
+      ],
+      "first_halt": null
+    },
+    {
+      "pool": "alternate20",
+      "method": "adaptive_specialist",
+      "cost_multiplier": 2,
+      "config": {
+        "allocation": {
+          "enabled": false,
+          "symbols": [],
+          "lookback": 60,
+          "max_positions": 3,
+          "max_weight": 0.35,
+          "cash_reserve": 0.05,
+          "risk_aversion": 10.0,
+          "cost_penalty": 2.0,
+          "rebalance_band": 0.02,
+          "max_daily_turnover": 1.0,
+          "rebalance_minutes": 30
+        },
+        "model": "adaptive_specialist",
+        "lookback": 20,
+        "horizon": 5,
+        "rebalance_days": 5,
+        "confidence": 0.5,
+        "tranche_weight": 0.1,
+        "max_weight": 0.2,
+        "capital_mode": "signal_budget",
+        "classifier_sha256": null,
+        "portfolio_policy": "legacy",
+        "entry_band": 0.005,
+        "daily_vol_target": 0.015,
+        "stop_loss_pct": 10.0,
+        "max_drawdown_pct": 10.0,
+        "costs": {
+          "allocation": {
+            "enabled": false,
+            "symbols": [],
+            "lookback": 60,
+            "max_positions": 3,
+            "max_weight": 0.35,
+            "cash_reserve": 0.05,
+            "risk_aversion": 10.0,
+            "cost_penalty": 2.0,
+            "rebalance_band": 0.02,
+            "max_daily_turnover": 1.0,
+            "rebalance_minutes": 30
+          },
+          "strategy": "adaptive",
+          "fast": 5,
+          "stat_window": 120,
+          "stat_horizon": 15,
+          "stat_entry_z": 1.5,
+          "stat_confidence": 0.5,
+          "stat_process_noise": 0.001,
+          "slow": 20,
+          "flatten_minutes": 5,
+          "opening_minutes": 15,
+          "reversion_bps": 30.0,
+          "stop_loss_bps": 100.0,
+          "regime_window": 60,
+          "min_reward_risk": 1.2,
+          "atr_window": 14,
+          "stop_atr": 2.0,
+          "take_atr": 3.0,
+          "breakout_buffer_atr": 0.1,
+          "reversion_atr": 2.0,
+          "momentum_threshold_bps": 10.0,
+          "regime_gate": "off",
+          "regime_window_days": 10,
+          "regime_min_drift_bps": 0.0,
+          "regime_max_efficiency": 0.35,
+          "max_scaling_lots": 3,
+          "lot_breakeven_hold": false,
+          "lot_patience_minutes": 45,
+          "lot_hard_stop_atr": 4.0,
+          "tranche_requires_uptrend": false,
+          "min_relative_volume": 1.2,
+          "max_hold_minutes": 30,
+          "cooldown_minutes": 10,
+          "max_daily_entries": 4,
+          "daily_loss_bps": 100.0,
+          "risk_per_trade_bps": 25.0,
+          "rule_cost_multiplier": 1.5,
+          "initial_cash": 100000.0,
+          "spread_bps": 4.0,
+          "slippage_bps": 4.0,
+          "commission_per_share": 0.01,
+          "minimum_commission": 2.0,
+          "sell_fee_bps": 0.6,
+          "participation": 0.01
+        }
+      },
+      "metrics": {
+        "return_pct": 5.770124474781735,
+        "final_equity": 105770.12447478173,
+        "max_drawdown_pct": 4.299282366823077,
+        "fees": 490.99086401818,
+        "impact_cost": 633.9126611999999,
+        "trade_count": 230,
+        "halted": false,
+        "turnover": 9.908379885275831,
+        "realized_pnl": 6800.739166168685,
+        "unrealized_pnl": -1030.6146913868854,
+        "trading_days": 251,
+        "daily_sharpe": 0.861871025151352,
+        "average_gross_exposure_pct": 30.10550955036705,
+        "estimated_liquidation_return_pct": 5.744478162381728
+      },
+      "contributions": [
+        {
+          "symbol": "ABBV",
+          "net_profit": -69.50696086888365
+        },
+        {
+          "symbol": "ADBE",
+          "net_profit": 222.39370671711913
+        },
+        {
+          "symbol": "BAC",
+          "net_profit": 191.230237894737
+        },
+        {
+          "symbol": "CAT",
+          "net_profit": 6035.7246444398315
+        },
+        {
+          "symbol": "CRM",
+          "net_profit": 0.0
+        },
+        {
+          "symbol": "CSCO",
+          "net_profit": -613.4135439661586
+        },
+        {
+          "symbol": "CVX",
+          "net_profit": -147.5006149548026
+        },
+        {
+          "symbol": "GE",
+          "net_profit": -399.4446701271427
+        },
+        {
+          "symbol": "GS",
+          "net_profit": 1754.9802452150775
+        },
+        {
+          "symbol": "HD",
+          "net_profit": 37.97787615428024
+        },
+        {
+          "symbol": "IBM",
+          "net_profit": -2897.009739556799
+        },
+        {
+          "symbol": "INTC",
+          "net_profit": -1057.7306857333992
+        },
+        {
+          "symbol": "KO",
+          "net_profit": -202.42639093868092
+        },
+        {
+          "symbol": "MRK",
+          "net_profit": 1036.9916744171785
+        },
+        {
+          "symbol": "MS",
+          "net_profit": 1081.324463878802
+        },
+        {
+          "symbol": "PEP",
+          "net_profit": -257.85766953314123
+        },
+        {
+          "symbol": "PG",
+          "net_profit": 0.0
+        },
+        {
+          "symbol": "QCOM",
+          "net_profit": 662.4448298616801
+        },
+        {
+          "symbol": "TXN",
+          "net_profit": -631.7612809616003
+        },
+        {
+          "symbol": "UNH",
+          "net_profit": 1023.7083528436993
+        }
+      ],
+      "first_halt": null
+    },
+    {
+      "pool": "random10",
+      "method": "adaptive_specialist",
+      "cost_multiplier": 1,
+      "config": {
+        "allocation": {
+          "enabled": false,
+          "symbols": [],
+          "lookback": 60,
+          "max_positions": 3,
+          "max_weight": 0.35,
+          "cash_reserve": 0.05,
+          "risk_aversion": 10.0,
+          "cost_penalty": 2.0,
+          "rebalance_band": 0.02,
+          "max_daily_turnover": 1.0,
+          "rebalance_minutes": 30
+        },
+        "model": "adaptive_specialist",
+        "lookback": 20,
+        "horizon": 5,
+        "rebalance_days": 5,
+        "confidence": 0.5,
+        "tranche_weight": 0.1,
+        "max_weight": 0.2,
+        "capital_mode": "signal_budget",
+        "classifier_sha256": null,
+        "portfolio_policy": "legacy",
+        "entry_band": 0.005,
+        "daily_vol_target": 0.015,
+        "stop_loss_pct": 10.0,
+        "max_drawdown_pct": 10.0,
+        "costs": {
+          "allocation": {
+            "enabled": false,
+            "symbols": [],
+            "lookback": 60,
+            "max_positions": 3,
+            "max_weight": 0.35,
+            "cash_reserve": 0.05,
+            "risk_aversion": 10.0,
+            "cost_penalty": 2.0,
+            "rebalance_band": 0.02,
+            "max_daily_turnover": 1.0,
+            "rebalance_minutes": 30
+          },
+          "strategy": "adaptive",
+          "fast": 5,
+          "stat_window": 120,
+          "stat_horizon": 15,
+          "stat_entry_z": 1.5,
+          "stat_confidence": 0.5,
+          "stat_process_noise": 0.001,
+          "slow": 20,
+          "flatten_minutes": 5,
+          "opening_minutes": 15,
+          "reversion_bps": 30.0,
+          "stop_loss_bps": 100.0,
+          "regime_window": 60,
+          "min_reward_risk": 1.2,
+          "atr_window": 14,
+          "stop_atr": 2.0,
+          "take_atr": 3.0,
+          "breakout_buffer_atr": 0.1,
+          "reversion_atr": 2.0,
+          "momentum_threshold_bps": 10.0,
+          "regime_gate": "off",
+          "regime_window_days": 10,
+          "regime_min_drift_bps": 0.0,
+          "regime_max_efficiency": 0.35,
+          "max_scaling_lots": 3,
+          "lot_breakeven_hold": false,
+          "lot_patience_minutes": 45,
+          "lot_hard_stop_atr": 4.0,
+          "tranche_requires_uptrend": false,
+          "min_relative_volume": 1.2,
+          "max_hold_minutes": 30,
+          "cooldown_minutes": 10,
+          "max_daily_entries": 4,
+          "daily_loss_bps": 100.0,
+          "risk_per_trade_bps": 25.0,
+          "rule_cost_multiplier": 1.5,
+          "initial_cash": 100000.0,
+          "spread_bps": 2.0,
+          "slippage_bps": 2.0,
+          "commission_per_share": 0.005,
+          "minimum_commission": 1.0,
+          "sell_fee_bps": 0.3,
+          "participation": 0.01
+        }
+      },
+      "metrics": {
+        "return_pct": -4.152208696705095,
+        "final_equity": 95847.7913032949,
+        "max_drawdown_pct": 4.967841803915752,
+        "fees": 63.85497820505499,
+        "impact_cost": 105.22871850000001,
+        "trade_count": 58,
+        "halted": false,
+        "turnover": 3.5764566320581523,
+        "realized_pnl": -3466.270669705058,
+        "unrealized_pnl": -685.9380270000017,
+        "trading_days": 251,
+        "daily_sharpe": -1.405876262112458,
+        "average_gross_exposure_pct": 8.193181734640982,
+        "estimated_liquidation_return_pct": -4.157283226505093
+      },
+      "contributions": [
+        {
+          "symbol": "ACN",
+          "net_profit": 0.0
+        },
+        {
+          "symbol": "GILD",
+          "net_profit": -1710.0005682211413
+        },
+        {
+          "symbol": "INTU",
+          "net_profit": -572.2959609190093
+        },
+        {
+          "symbol": "LMT",
+          "net_profit": -623.7824070468378
+        },
+        {
+          "symbol": "LOW",
+          "net_profit": -993.3607927326011
+        },
+        {
+          "symbol": "MCD",
+          "net_profit": 46.7425062712166
+        },
+        {
+          "symbol": "NEE",
+          "net_profit": 15.612849132958218
+        },
+        {
+          "symbol": "NKE",
+          "net_profit": -341.3459630500284
+        },
+        {
+          "symbol": "PLD",
+          "net_profit": 26.22163986037799
+        },
+        {
+          "symbol": "SO",
+          "net_profit": 0.0
+        }
+      ],
+      "first_halt": null
+    },
+    {
+      "pool": "random10",
+      "method": "adaptive_specialist",
+      "cost_multiplier": 2,
+      "config": {
+        "allocation": {
+          "enabled": false,
+          "symbols": [],
+          "lookback": 60,
+          "max_positions": 3,
+          "max_weight": 0.35,
+          "cash_reserve": 0.05,
+          "risk_aversion": 10.0,
+          "cost_penalty": 2.0,
+          "rebalance_band": 0.02,
+          "max_daily_turnover": 1.0,
+          "rebalance_minutes": 30
+        },
+        "model": "adaptive_specialist",
+        "lookback": 20,
+        "horizon": 5,
+        "rebalance_days": 5,
+        "confidence": 0.5,
+        "tranche_weight": 0.1,
+        "max_weight": 0.2,
+        "capital_mode": "signal_budget",
+        "classifier_sha256": null,
+        "portfolio_policy": "legacy",
+        "entry_band": 0.005,
+        "daily_vol_target": 0.015,
+        "stop_loss_pct": 10.0,
+        "max_drawdown_pct": 10.0,
+        "costs": {
+          "allocation": {
+            "enabled": false,
+            "symbols": [],
+            "lookback": 60,
+            "max_positions": 3,
+            "max_weight": 0.35,
+            "cash_reserve": 0.05,
+            "risk_aversion": 10.0,
+            "cost_penalty": 2.0,
+            "rebalance_band": 0.02,
+            "max_daily_turnover": 1.0,
+            "rebalance_minutes": 30
+          },
+          "strategy": "adaptive",
+          "fast": 5,
+          "stat_window": 120,
+          "stat_horizon": 15,
+          "stat_entry_z": 1.5,
+          "stat_confidence": 0.5,
+          "stat_process_noise": 0.001,
+          "slow": 20,
+          "flatten_minutes": 5,
+          "opening_minutes": 15,
+          "reversion_bps": 30.0,
+          "stop_loss_bps": 100.0,
+          "regime_window": 60,
+          "min_reward_risk": 1.2,
+          "atr_window": 14,
+          "stop_atr": 2.0,
+          "take_atr": 3.0,
+          "breakout_buffer_atr": 0.1,
+          "reversion_atr": 2.0,
+          "momentum_threshold_bps": 10.0,
+          "regime_gate": "off",
+          "regime_window_days": 10,
+          "regime_min_drift_bps": 0.0,
+          "regime_max_efficiency": 0.35,
+          "max_scaling_lots": 3,
+          "lot_breakeven_hold": false,
+          "lot_patience_minutes": 45,
+          "lot_hard_stop_atr": 4.0,
+          "tranche_requires_uptrend": false,
+          "min_relative_volume": 1.2,
+          "max_hold_minutes": 30,
+          "cooldown_minutes": 10,
+          "max_daily_entries": 4,
+          "daily_loss_bps": 100.0,
+          "risk_per_trade_bps": 25.0,
+          "rule_cost_multiplier": 1.5,
+          "initial_cash": 100000.0,
+          "spread_bps": 4.0,
+          "slippage_bps": 4.0,
+          "commission_per_share": 0.01,
+          "minimum_commission": 2.0,
+          "sell_fee_bps": 0.6,
+          "participation": 0.01
+        }
+      },
+      "metrics": {
+        "return_pct": -4.323341272132309,
+        "final_equity": 95676.65872786769,
+        "max_drawdown_pct": 5.125182327238164,
+        "fees": 127.69126313230002,
+        "impact_cost": 210.345009,
+        "trade_count": 58,
+        "halted": false,
+        "turnover": 3.577594821222811,
+        "realized_pnl": -3631.161884798968,
+        "unrealized_pnl": -692.1793873333347,
+        "trading_days": 251,
+        "daily_sharpe": -1.4644082355720147,
+        "average_gross_exposure_pct": 8.19615117262789,
+        "estimated_liquidation_return_pct": -4.333490331732303
+      },
+      "contributions": [
+        {
+          "symbol": "ACN",
+          "net_profit": 0.0
+        },
+        {
+          "symbol": "GILD",
+          "net_profit": -1745.3704544845623
+        },
+        {
+          "symbol": "INTU",
+          "net_profit": -580.0217630760399
+        },
+        {
+          "symbol": "LMT",
+          "net_profit": -654.9894047873604
+        },
+        {
+          "symbol": "LOW",
+          "net_profit": -1012.5712449304028
+        },
+        {
+          "symbol": "MCD",
+          "net_profit": 29.115373884879432
+        },
+        {
+          "symbol": "NEE",
+          "net_profit": -4.871431947822202
+        },
+        {
+          "symbol": "NKE",
+          "net_profit": -361.44598143251886
+        },
+        {
+          "symbol": "PLD",
+          "net_profit": 6.813634641520821
+        },
+        {
+          "symbol": "SO",
+          "net_profit": 0.0
+        }
+      ],
+      "first_halt": null
+    }
+  ]
+}
