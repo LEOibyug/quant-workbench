@@ -1,0 +1,8 @@
+{
+  "source_sha256": {
+    "scripts/regime_router.py": "3b8995810c6a36757fca8ff3a67c99abe705185005f7f690d8f3febd2df0eb8f",
+    "scripts/train_regime_router.py": "b1b55b3126f312131cc0e7ac112efd31f2fd07bdf8fa6efb1474e470c17aec37",
+    "scripts/study_regime_router.py": "93845e3a1329a091a6f6ffaa68b0cb9aadc27ec1558c94af611cf80615277763"
+  },
+  "protocol": "2026-09-21-regime-router-protocol.md"
+}
