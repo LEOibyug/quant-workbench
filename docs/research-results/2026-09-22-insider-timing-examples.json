@@ -1,0 +1,26 @@
+[
+  {
+    "symbol": "ACN",
+    "accession": "0001467373-25-000197",
+    "acceptance_utc": "2025-08-06 20:57:29+00:00",
+    "acceptance_new_york": "2025-08-06 16:57:29-04:00",
+    "first_later_session_open_utc": "2025-08-07 13:30:00+00:00",
+    "assumption": "If choosing next-open execution, before any additional dissemination delay; no trade signal confirmed"
+  },
+  {
+    "symbol": "ADP",
+    "accession": "0001225208-25-007134",
+    "acceptance_utc": "2025-08-07 20:58:14+00:00",
+    "acceptance_new_york": "2025-08-07 16:58:14-04:00",
+    "first_later_session_open_utc": "2025-08-08 13:30:00+00:00",
+    "assumption": "If choosing next-open execution, before any additional dissemination delay; no trade signal confirmed"
+  },
+  {
+    "symbol": "COP",
+    "accession": "0000950170-25-101808",
+    "acceptance_utc": "2025-08-04 17:24:06+00:00",
+    "acceptance_new_york": "2025-08-04 13:24:06-04:00",
+    "first_later_session_open_utc": "2025-08-05 13:30:00+00:00",
+    "assumption": "If choosing next-open execution, before any additional dissemination delay; no trade signal confirmed"
+  }
+]
