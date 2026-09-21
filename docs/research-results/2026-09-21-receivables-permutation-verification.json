@@ -1,0 +1,12 @@
+{
+  "accounts": 96,
+  "identity_reproductions": 4,
+  "protocol_commit": "2a5ba41",
+  "hashes": {
+    "scripts/study_receivables_permutation.py": "95be9a4bae854d50333496611a5c85dbb4c8172bae282ee1fa06fbcb9e786149",
+    "docs/research-results/2026-09-21-receivables-strategy-coverage.json": "0b5100fb68947e6f8958a2368da943368d4a191310185b91bbda9cad447194df",
+    "docs/research-results/2026-09-21-receivables-temporal-coverage.json": "effdb8fe41b6ada508f2a233b040855a7962d761036c80f22a7c922c8276ce45",
+    "artifacts/research/annual-momentum/random10.parquet": "133d28fe39d2687ba7fd266564d6a1a09097cd7ee07a8f16e64883aa526646e7",
+    "artifacts/research/annual-momentum/random10-temporal.parquet": "e1f9fee2a0e61ecf4784ba74f29b7fd582a1689d154f8754ca710ade536ea52b"
+  }
+}

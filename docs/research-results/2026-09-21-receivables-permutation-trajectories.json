@@ -1,0 +1,12 @@
+[
+  {
+    "window": "recent",
+    "permutations": 24,
+    "distinct_selected_set_trajectories": 12
+  },
+  {
+    "window": "continuous",
+    "permutations": 24,
+    "distinct_selected_set_trajectories": 24
+  }
+]

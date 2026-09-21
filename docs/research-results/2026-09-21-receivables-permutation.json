@@ -1,0 +1,2733 @@
+{
+  "status": "completed",
+  "validated": false,
+  "summary": [
+    {
+      "start": "2025-09-01",
+      "cost_multiplier": 1,
+      "identity_return_pct": 4.836977219327476,
+      "strictly_higher": 0,
+      "min_return_pct": -6.924453215817894,
+      "median_return_pct": -1.68587728988,
+      "max_return_pct": 4.836977219327476
+    },
+    {
+      "start": "2025-09-01",
+      "cost_multiplier": 2,
+      "identity_return_pct": 4.794845255709834,
+      "strictly_higher": 0,
+      "min_return_pct": -6.991825119871564,
+      "median_return_pct": -1.7453769866665303,
+      "max_return_pct": 4.794845255709834
+    },
+    {
+      "start": "2022-09-01",
+      "cost_multiplier": 1,
+      "identity_return_pct": 12.37711790782219,
+      "strictly_higher": 0,
+      "min_return_pct": -8.480470052467048,
+      "median_return_pct": -0.065975508256777,
+      "max_return_pct": 12.37711790782219
+    },
+    {
+      "start": "2022-09-01",
+      "cost_multiplier": 2,
+      "identity_return_pct": 12.199419297049952,
+      "strictly_higher": 0,
+      "min_return_pct": -8.662837231971842,
+      "median_return_pct": -0.24032971207526566,
+      "max_return_pct": 12.199419297049952
+    }
+  ],
+  "results": [
+    {
+      "start": "2025-09-01",
+      "end": "2026-09-01",
+      "permutation": {
+        "ACN": "ACN",
+        "GILD": "GILD",
+        "INTU": "INTU",
+        "NKE": "NKE"
+      },
+      "identity": true,
+      "cost_multiplier": 1,
+      "metrics": {
+        "return_pct": 4.836977219327476,
+        "final_equity": 104836.97721932747,
+        "max_drawdown_pct": 2.541773662641089,
+        "fees": 16.36134967254,
+        "impact_cost": 25.771430999999996,
+        "trade_count": 15,
+        "halted": false,
+        "turnover": 0.847572699668643,
+        "realized_pnl": 4836.977219327458,
+        "unrealized_pnl": 0.0,
+        "trading_days": 251,
+        "daily_sharpe": 1.1299305586125163,
+        "average_gross_exposure_pct": 12.807456516733549,
+        "estimated_liquidation_return_pct": 4.836977219327476
+      }
+    },
+    {
+      "start": "2025-09-01",
+      "end": "2026-09-01",
+      "permutation": {
+        "ACN": "ACN",
+        "GILD": "GILD",
+        "INTU": "INTU",
+        "NKE": "NKE"
+      },
+      "identity": true,
+      "cost_multiplier": 2,
+      "metrics": {
+        "return_pct": 4.794845255709834,
+        "final_equity": 104794.84525570984,
+        "max_drawdown_pct": 2.543830999502117,
+        "fees": 32.72188229016,
+        "impact_cost": 51.54286199999999,
+        "trade_count": 15,
+        "halted": false,
+        "turnover": 0.8476963917594926,
+        "realized_pnl": 4794.845255709834,
+        "unrealized_pnl": 0.0,
+        "trading_days": 251,
+        "daily_sharpe": 1.120223465192411,
+        "average_gross_exposure_pct": 12.810762661599087,
+        "estimated_liquidation_return_pct": 4.794845255709834
+      }
+    },
+    {
+      "start": "2025-09-01",
+      "end": "2026-09-01",
+      "permutation": {
+        "ACN": "ACN",
+        "GILD": "GILD",
+        "INTU": "NKE",
+        "NKE": "INTU"
+      },
+      "identity": false,
+      "cost_multiplier": 1,
+      "metrics": {
+        "return_pct": 4.428561943355169,
+        "final_equity": 104428.56194335516,
+        "max_drawdown_pct": 2.551452546206645,
+        "fees": 15.27813364484,
+        "impact_cost": 24.229922999999996,
+        "trade_count": 14,
+        "halted": false,
+        "turnover": 0.7979695044445975,
+        "realized_pnl": 4428.561943355157,
+        "unrealized_pnl": 0.0,
+        "trading_days": 251,
+        "daily_sharpe": 1.0340366241782641,
+        "average_gross_exposure_pct": 12.681459831264178,
+        "estimated_liquidation_return_pct": 4.428561943355169
+      }
+    },
+    {
+      "start": "2025-09-01",
+      "end": "2026-09-01",
+      "permutation": {
+        "ACN": "ACN",
+        "GILD": "GILD",
+        "INTU": "NKE",
+        "NKE": "INTU"
+      },
+      "identity": false,
+      "cost_multiplier": 2,
+      "metrics": {
+        "return_pct": 4.389054653820645,
+        "final_equity": 104389.05465382064,
+        "max_drawdown_pct": 2.553457928734759,
+        "fees": 30.555500179360003,
+        "impact_cost": 48.45984599999999,
+        "trade_count": 14,
+        "halted": false,
+        "turnover": 0.7980791150461075,
+        "realized_pnl": 4389.054653820634,
+        "unrealized_pnl": 0.0,
+        "trading_days": 251,
+        "daily_sharpe": 1.0252991686227535,
+        "average_gross_exposure_pct": 12.684541689450288,
+        "estimated_liquidation_return_pct": 4.389054653820645
+      }
+    },
+    {
+      "start": "2025-09-01",
+      "end": "2026-09-01",
+      "permutation": {
+        "ACN": "ACN",
+        "GILD": "INTU",
+        "INTU": "GILD",
+        "NKE": "NKE"
+      },
+      "identity": false,
+      "cost_multiplier": 1,
+      "metrics": {
+        "return_pct": -1.2468762872175132,
+        "final_equity": 98753.12371278249,
+        "max_drawdown_pct": 5.527334431247388,
+        "fees": 21.308748717535003,
+        "impact_cost": 46.54253849999999,
+        "trade_count": 19,
+        "halted": false,
+        "turnover": 1.5782751193327245,
+        "realized_pnl": -1246.8762872175366,
+        "unrealized_pnl": 0.0,
+        "trading_days": 251,
+        "daily_sharpe": -0.2398435236792985,
+        "average_gross_exposure_pct": 10.78545141451319,
+        "estimated_liquidation_return_pct": -1.2468762872175132
+      }
+    },
+    {
+      "start": "2025-09-01",
+      "end": "2026-09-01",
+      "permutation": {
+        "ACN": "ACN",
+        "GILD": "INTU",
+        "INTU": "GILD",
+        "NKE": "NKE"
+      },
+      "identity": false,
+      "cost_multiplier": 2,
+      "metrics": {
+        "return_pct": -1.3147261887701434,
+        "final_equity": 98685.27381122985,
+        "max_drawdown_pct": 5.553984832340153,
+        "fees": 42.616111770139995,
+        "impact_cost": 93.08507699999998,
+        "trade_count": 19,
+        "halted": false,
+        "turnover": 1.578779479453483,
+        "realized_pnl": -1314.7261887701409,
+        "unrealized_pnl": 0.0,
+        "trading_days": 251,
+        "daily_sharpe": -0.2541735701740104,
+        "average_gross_exposure_pct": 10.78856758450045,
+        "estimated_liquidation_return_pct": -1.3147261887701434
+      }
+    },
+    {
+      "start": "2025-09-01",
+      "end": "2026-09-01",
+      "permutation": {
+        "ACN": "ACN",
+        "GILD": "INTU",
+        "INTU": "NKE",
+        "NKE": "GILD"
+      },
+      "identity": false,
+      "cost_multiplier": 1,
+      "metrics": {
+        "return_pct": -0.9404197402525183,
+        "final_equity": 99059.58025974748,
+        "max_drawdown_pct": 4.540687171895441,
+        "fees": 21.261146252560003,
+        "impact_cost": 45.49859399999999,
+        "trade_count": 19,
+        "halted": false,
+        "turnover": 1.5400335712897137,
+        "realized_pnl": -940.4197402525602,
+        "unrealized_pnl": 0.0,
+        "trading_days": 251,
+        "daily_sharpe": -0.18159710161653145,
+        "average_gross_exposure_pct": 10.580770418825395,
+        "estimated_liquidation_return_pct": -0.9404197402525183
+      }
+    },
+    {
+      "start": "2025-09-01",
+      "end": "2026-09-01",
+      "permutation": {
+        "ACN": "ACN",
+        "GILD": "INTU",
+        "INTU": "NKE",
+        "NKE": "GILD"
+      },
+      "identity": false,
+      "cost_multiplier": 2,
+      "metrics": {
+        "return_pct": -1.0065235556866337,
+        "final_equity": 98993.47644431336,
+        "max_drawdown_pct": 4.5583849118897675,
+        "fees": 42.52097468666,
+        "impact_cost": 90.99758099999998,
+        "trade_count": 19,
+        "halted": false,
+        "turnover": 1.540516950644263,
+        "realized_pnl": -1006.523555686667,
+        "unrealized_pnl": 0.0,
+        "trading_days": 251,
+        "daily_sharpe": -0.19605039494728713,
+        "average_gross_exposure_pct": 10.583989652253399,
+        "estimated_liquidation_return_pct": -1.0065235556866337
+      }
+    },
+    {
+      "start": "2025-09-01",
+      "end": "2026-09-01",
+      "permutation": {
+        "ACN": "ACN",
+        "GILD": "NKE",
+        "INTU": "GILD",
+        "NKE": "INTU"
+      },
+      "identity": false,
+      "cost_multiplier": 1,
+      "metrics": {
+        "return_pct": -6.624666410067148,
+        "final_equity": 93375.33358993285,
+        "max_drawdown_pct": 7.429701812350031,
+        "fees": 22.62744706715,
+        "impact_cost": 46.128963,
+        "trade_count": 19,
+        "halted": false,
+        "turnover": 1.580544740611725,
+        "realized_pnl": -6624.666410067154,
+        "unrealized_pnl": 0.0,
+        "trading_days": 251,
+        "daily_sharpe": -1.4331443042219902,
+        "average_gross_exposure_pct": 10.46938569730919,
+        "estimated_liquidation_return_pct": -6.624666410067148
+      }
+    },
+    {
+      "start": "2025-09-01",
+      "end": "2026-09-01",
+      "permutation": {
+        "ACN": "ACN",
+        "GILD": "NKE",
+        "INTU": "GILD",
+        "NKE": "INTU"
+      },
+      "identity": false,
+      "cost_multiplier": 2,
+      "metrics": {
+        "return_pct": -6.693421495268604,
+        "final_equity": 93306.5785047314,
+        "max_drawdown_pct": 7.476022436350938,
+        "fees": 45.2535692686,
+        "impact_cost": 92.257926,
+        "trade_count": 19,
+        "halted": false,
+        "turnover": 1.5810700398900024,
+        "realized_pnl": -6693.421495268606,
+        "unrealized_pnl": 0.0,
+        "trading_days": 251,
+        "daily_sharpe": -1.4478320223408598,
+        "average_gross_exposure_pct": 10.473836567220337,
+        "estimated_liquidation_return_pct": -6.693421495268604
+      }
+    },
+    {
+      "start": "2025-09-01",
+      "end": "2026-09-01",
+      "permutation": {
+        "ACN": "ACN",
+        "GILD": "NKE",
+        "INTU": "INTU",
+        "NKE": "GILD"
+      },
+      "identity": false,
+      "cost_multiplier": 1,
+      "metrics": {
+        "return_pct": -5.96652316070444,
+        "final_equity": 94033.47683929556,
+        "max_drawdown_pct": 6.392361769688204,
+        "fees": 22.70431170444,
+        "impact_cost": 46.66884900000001,
+        "trade_count": 19,
+        "halted": false,
+        "turnover": 1.590613810833225,
+        "realized_pnl": -5966.523160704442,
+        "unrealized_pnl": 0.0,
+        "trading_days": 251,
+        "daily_sharpe": -1.3296346810269395,
+        "average_gross_exposure_pct": 10.423881959448057,
+        "estimated_liquidation_return_pct": -5.96652316070444
+      }
+    },
+    {
+      "start": "2025-09-01",
+      "end": "2026-09-01",
+      "permutation": {
+        "ACN": "ACN",
+        "GILD": "NKE",
+        "INTU": "INTU",
+        "NKE": "GILD"
+      },
+      "identity": false,
+      "cost_multiplier": 2,
+      "metrics": {
+        "return_pct": -6.029676706548958,
+        "final_equity": 93970.32329345105,
+        "max_drawdown_pct": 6.424486084592173,
+        "fees": 45.39372654896,
+        "impact_cost": 93.26298000000001,
+        "trade_count": 19,
+        "halted": false,
+        "turnover": 1.5898108875239316,
+        "realized_pnl": -6029.676706548967,
+        "unrealized_pnl": 0.0,
+        "trading_days": 251,
+        "daily_sharpe": -1.3447059514227342,
+        "average_gross_exposure_pct": 10.423461554107663,
+        "estimated_liquidation_return_pct": -6.029676706548958
+      }
+    },
+    {
+      "start": "2025-09-01",
+      "end": "2026-09-01",
+      "permutation": {
+        "ACN": "GILD",
+        "GILD": "ACN",
+        "INTU": "INTU",
+        "NKE": "NKE"
+      },
+      "identity": false,
+      "cost_multiplier": 1,
+      "metrics": {
+        "return_pct": -1.8209792586101559,
+        "final_equity": 98179.02074138985,
+        "max_drawdown_pct": 4.886655152463925,
+        "fees": 18.751607110175,
+        "impact_cost": 35.5726515,
+        "trade_count": 17,
+        "halted": false,
+        "turnover": 1.1952586568302528,
+        "realized_pnl": -1820.9792586101723,
+        "unrealized_pnl": 0.0,
+        "trading_days": 251,
+        "daily_sharpe": -0.3318957632423931,
+        "average_gross_exposure_pct": 12.018440814804872,
+        "estimated_liquidation_return_pct": -1.8209792586101559
+      }
+    },
+    {
+      "start": "2025-09-01",
+      "end": "2026-09-01",
+      "permutation": {
+        "ACN": "GILD",
+        "GILD": "ACN",
+        "INTU": "INTU",
+        "NKE": "NKE"
+      },
+      "identity": false,
+      "cost_multiplier": 2,
+      "metrics": {
+        "return_pct": -1.8725297026336296,
+        "final_equity": 98127.47029736637,
+        "max_drawdown_pct": 4.89925906183557,
+        "fees": 37.49068163362,
+        "impact_cost": 70.91402099999999,
+        "trade_count": 17,
+        "halted": false,
+        "turnover": 1.1916296494366883,
+        "realized_pnl": -1872.5297026336211,
+        "unrealized_pnl": 0.0,
+        "trading_days": 251,
+        "daily_sharpe": -0.342807194617741,
+        "average_gross_exposure_pct": 12.005612058863719,
+        "estimated_liquidation_return_pct": -1.8725297026336296
+      }
+    },
+    {
+      "start": "2025-09-01",
+      "end": "2026-09-01",
+      "permutation": {
+        "ACN": "GILD",
+        "GILD": "ACN",
+        "INTU": "NKE",
+        "NKE": "INTU"
+      },
+      "identity": false,
+      "cost_multiplier": 1,
+      "metrics": {
+        "return_pct": -2.200958190408664,
+        "final_equity": 97799.04180959133,
+        "max_drawdown_pct": 4.847608751088561,
+        "fees": 17.665637908674995,
+        "impact_cost": 33.967552500000004,
+        "trade_count": 16,
+        "halted": false,
+        "turnover": 1.1446237648352262,
+        "realized_pnl": -2200.9581904086795,
+        "unrealized_pnl": 0.0,
+        "trading_days": 251,
+        "daily_sharpe": -0.4112968092045695,
+        "average_gross_exposure_pct": 11.840663076124427,
+        "estimated_liquidation_return_pct": -2.200958190408664
+      }
+    },
+    {
+      "start": "2025-09-01",
+      "end": "2026-09-01",
+      "permutation": {
+        "ACN": "GILD",
+        "GILD": "ACN",
+        "INTU": "NKE",
+        "NKE": "INTU"
+      },
+      "identity": false,
+      "cost_multiplier": 2,
+      "metrics": {
+        "return_pct": -2.2525903811346892,
+        "final_equity": 97747.4096188653,
+        "max_drawdown_pct": 4.860093689108213,
+        "fees": 35.3302761347,
+        "impact_cost": 67.93510500000001,
+        "trade_count": 16,
+        "halted": false,
+        "turnover": 1.144897786848179,
+        "realized_pnl": -2252.5903811347016,
+        "unrealized_pnl": 0.0,
+        "trading_days": 251,
+        "daily_sharpe": -0.42173138801270954,
+        "average_gross_exposure_pct": 11.843751461066294,
+        "estimated_liquidation_return_pct": -2.2525903811346892
+      }
+    },
+    {
+      "start": "2025-09-01",
+      "end": "2026-09-01",
+      "permutation": {
+        "ACN": "GILD",
+        "GILD": "INTU",
+        "INTU": "ACN",
+        "NKE": "NKE"
+      },
+      "identity": false,
+      "cost_multiplier": 1,
+      "metrics": {
+        "return_pct": -1.5507753211498443,
+        "final_equity": 98449.22467885015,
+        "max_drawdown_pct": 5.034338668196048,
+        "fees": 21.285314649865,
+        "impact_cost": 46.16500649999999,
+        "trade_count": 19,
+        "halted": false,
+        "turnover": 1.5696043003798168,
+        "realized_pnl": -1550.7753211498703,
+        "unrealized_pnl": 0.0,
+        "trading_days": 251,
+        "daily_sharpe": -0.2993863126337803,
+        "average_gross_exposure_pct": 10.7298246458963,
+        "estimated_liquidation_return_pct": -1.5507753211498443
+      }
+    },
+    {
+      "start": "2025-09-01",
+      "end": "2026-09-01",
+      "permutation": {
+        "ACN": "GILD",
+        "GILD": "INTU",
+        "INTU": "ACN",
+        "NKE": "NKE"
+      },
+      "identity": false,
+      "cost_multiplier": 2,
+      "metrics": {
+        "return_pct": -1.618224270699431,
+        "final_equity": 98381.77572930057,
+        "max_drawdown_pct": 5.060872561080054,
+        "fees": 42.569257699459996,
+        "impact_cost": 92.33001299999998,
+        "trade_count": 19,
+        "halted": false,
+        "turnover": 1.570105923978033,
+        "realized_pnl": -1618.2242706994655,
+        "unrealized_pnl": 0.0,
+        "trading_days": 251,
+        "daily_sharpe": -0.3134287798346205,
+        "average_gross_exposure_pct": 10.732913136538146,
+        "estimated_liquidation_return_pct": -1.618224270699431
+      }
+    },
+    {
+      "start": "2025-09-01",
+      "end": "2026-09-01",
+      "permutation": {
+        "ACN": "GILD",
+        "GILD": "INTU",
+        "INTU": "NKE",
+        "NKE": "ACN"
+      },
+      "identity": false,
+      "cost_multiplier": 1,
+      "metrics": {
+        "return_pct": -0.9404197402525183,
+        "final_equity": 99059.58025974748,
+        "max_drawdown_pct": 4.540687171895441,
+        "fees": 21.261146252560003,
+        "impact_cost": 45.49859399999999,
+        "trade_count": 19,
+        "halted": false,
+        "turnover": 1.5400335712897137,
+        "realized_pnl": -940.4197402525602,
+        "unrealized_pnl": 0.0,
+        "trading_days": 251,
+        "daily_sharpe": -0.18159710161653145,
+        "average_gross_exposure_pct": 10.580770418825395,
+        "estimated_liquidation_return_pct": -0.9404197402525183
+      }
+    },
+    {
+      "start": "2025-09-01",
+      "end": "2026-09-01",
+      "permutation": {
+        "ACN": "GILD",
+        "GILD": "INTU",
+        "INTU": "NKE",
+        "NKE": "ACN"
+      },
+      "identity": false,
+      "cost_multiplier": 2,
+      "metrics": {
+        "return_pct": -1.0065235556866337,
+        "final_equity": 98993.47644431336,
+        "max_drawdown_pct": 4.5583849118897675,
+        "fees": 42.52097468666,
+        "impact_cost": 90.99758099999998,
+        "trade_count": 19,
+        "halted": false,
+        "turnover": 1.540516950644263,
+        "realized_pnl": -1006.523555686667,
+        "unrealized_pnl": 0.0,
+        "trading_days": 251,
+        "daily_sharpe": -0.19605039494728713,
+        "average_gross_exposure_pct": 10.583989652253399,
+        "estimated_liquidation_return_pct": -1.0065235556866337
+      }
+    },
+    {
+      "start": "2025-09-01",
+      "end": "2026-09-01",
+      "permutation": {
+        "ACN": "GILD",
+        "GILD": "NKE",
+        "INTU": "ACN",
+        "NKE": "INTU"
+      },
+      "identity": false,
+      "cost_multiplier": 1,
+      "metrics": {
+        "return_pct": -6.924453215817894,
+        "final_equity": 93075.54678418211,
+        "max_drawdown_pct": 7.123359985614486,
+        "fees": 21.590617817890006,
+        "impact_cost": 45.782598000000014,
+        "trade_count": 18,
+        "halted": false,
+        "turnover": 1.5729338450574664,
+        "realized_pnl": -6924.453215817899,
+        "unrealized_pnl": 0.0,
+        "trading_days": 251,
+        "daily_sharpe": -1.4927282490698341,
+        "average_gross_exposure_pct": 10.410477683072356,
+        "estimated_liquidation_return_pct": -6.924453215817894
+      }
+    },
+    {
+      "start": "2025-09-01",
+      "end": "2026-09-01",
+      "permutation": {
+        "ACN": "GILD",
+        "GILD": "NKE",
+        "INTU": "ACN",
+        "NKE": "INTU"
+      },
+      "identity": false,
+      "cost_multiplier": 2,
+      "metrics": {
+        "return_pct": -6.991825119871564,
+        "final_equity": 93008.17488012844,
+        "max_drawdown_pct": 7.169544798407768,
+        "fees": 43.17992387156001,
+        "impact_cost": 91.56519600000003,
+        "trade_count": 18,
+        "halted": false,
+        "turnover": 1.5734440537109466,
+        "realized_pnl": -6991.825119871565,
+        "unrealized_pnl": 0.0,
+        "trading_days": 251,
+        "daily_sharpe": -1.5069669135719055,
+        "average_gross_exposure_pct": 10.414802574055583,
+        "estimated_liquidation_return_pct": -6.991825119871564
+      }
+    },
+    {
+      "start": "2025-09-01",
+      "end": "2026-09-01",
+      "permutation": {
+        "ACN": "GILD",
+        "GILD": "NKE",
+        "INTU": "INTU",
+        "NKE": "ACN"
+      },
+      "identity": false,
+      "cost_multiplier": 1,
+      "metrics": {
+        "return_pct": -5.96652316070444,
+        "final_equity": 94033.47683929556,
+        "max_drawdown_pct": 6.392361769688204,
+        "fees": 22.70431170444,
+        "impact_cost": 46.66884900000001,
+        "trade_count": 19,
+        "halted": false,
+        "turnover": 1.590613810833225,
+        "realized_pnl": -5966.523160704442,
+        "unrealized_pnl": 0.0,
+        "trading_days": 251,
+        "daily_sharpe": -1.3296346810269395,
+        "average_gross_exposure_pct": 10.423881959448057,
+        "estimated_liquidation_return_pct": -5.96652316070444
+      }
+    },
+    {
+      "start": "2025-09-01",
+      "end": "2026-09-01",
+      "permutation": {
+        "ACN": "GILD",
+        "GILD": "NKE",
+        "INTU": "INTU",
+        "NKE": "ACN"
+      },
+      "identity": false,
+      "cost_multiplier": 2,
+      "metrics": {
+        "return_pct": -6.029676706548958,
+        "final_equity": 93970.32329345105,
+        "max_drawdown_pct": 6.424486084592173,
+        "fees": 45.39372654896,
+        "impact_cost": 93.26298000000001,
+        "trade_count": 19,
+        "halted": false,
+        "turnover": 1.5898108875239316,
+        "realized_pnl": -6029.676706548967,
+        "unrealized_pnl": 0.0,
+        "trading_days": 251,
+        "daily_sharpe": -1.3447059514227342,
+        "average_gross_exposure_pct": 10.423461554107663,
+        "estimated_liquidation_return_pct": -6.029676706548958
+      }
+    },
+    {
+      "start": "2025-09-01",
+      "end": "2026-09-01",
+      "permutation": {
+        "ACN": "INTU",
+        "GILD": "ACN",
+        "INTU": "GILD",
+        "NKE": "NKE"
+      },
+      "identity": false,
+      "cost_multiplier": 1,
+      "metrics": {
+        "return_pct": -2.539175891374179,
+        "final_equity": 97460.82410862582,
+        "max_drawdown_pct": 4.855410213848687,
+        "fees": 18.718570374169996,
+        "impact_cost": 35.12732100000001,
+        "trade_count": 17,
+        "halted": false,
+        "turnover": 1.185873099104562,
+        "realized_pnl": -2539.1758913741714,
+        "unrealized_pnl": 0.0,
+        "trading_days": 251,
+        "daily_sharpe": -0.468422458735144,
+        "average_gross_exposure_pct": 12.032353369566447,
+        "estimated_liquidation_return_pct": -2.539175891374179
+      }
+    },
+    {
+      "start": "2025-09-01",
+      "end": "2026-09-01",
+      "permutation": {
+        "ACN": "INTU",
+        "GILD": "ACN",
+        "INTU": "GILD",
+        "NKE": "NKE"
+      },
+      "identity": false,
+      "cost_multiplier": 2,
+      "metrics": {
+        "return_pct": -2.5930207512966708,
+        "final_equity": 97406.97924870333,
+        "max_drawdown_pct": 4.8679585277141,
+        "fees": 37.436109296679994,
+        "impact_cost": 70.25464200000002,
+        "trade_count": 17,
+        "halted": false,
+        "turnover": 1.1861718995942074,
+        "realized_pnl": -2593.0207512966786,
+        "unrealized_pnl": 0.0,
+        "trading_days": 251,
+        "daily_sharpe": -0.4789661143024767,
+        "average_gross_exposure_pct": 12.035722982625034,
+        "estimated_liquidation_return_pct": -2.5930207512966708
+      }
+    },
+    {
+      "start": "2025-09-01",
+      "end": "2026-09-01",
+      "permutation": {
+        "ACN": "INTU",
+        "GILD": "ACN",
+        "INTU": "NKE",
+        "NKE": "GILD"
+      },
+      "identity": false,
+      "cost_multiplier": 1,
+      "metrics": {
+        "return_pct": -2.200958190408664,
+        "final_equity": 97799.04180959133,
+        "max_drawdown_pct": 4.847608751088561,
+        "fees": 17.665637908674995,
+        "impact_cost": 33.967552500000004,
+        "trade_count": 16,
+        "halted": false,
+        "turnover": 1.1446237648352262,
+        "realized_pnl": -2200.9581904086795,
+        "unrealized_pnl": 0.0,
+        "trading_days": 251,
+        "daily_sharpe": -0.4112968092045695,
+        "average_gross_exposure_pct": 11.840663076124427,
+        "estimated_liquidation_return_pct": -2.200958190408664
+      }
+    },
+    {
+      "start": "2025-09-01",
+      "end": "2026-09-01",
+      "permutation": {
+        "ACN": "INTU",
+        "GILD": "ACN",
+        "INTU": "NKE",
+        "NKE": "GILD"
+      },
+      "identity": false,
+      "cost_multiplier": 2,
+      "metrics": {
+        "return_pct": -2.2525903811346892,
+        "final_equity": 97747.4096188653,
+        "max_drawdown_pct": 4.860093689108213,
+        "fees": 35.3302761347,
+        "impact_cost": 67.93510500000001,
+        "trade_count": 16,
+        "halted": false,
+        "turnover": 1.144897786848179,
+        "realized_pnl": -2252.5903811347016,
+        "unrealized_pnl": 0.0,
+        "trading_days": 251,
+        "daily_sharpe": -0.42173138801270954,
+        "average_gross_exposure_pct": 11.843751461066294,
+        "estimated_liquidation_return_pct": -2.2525903811346892
+      }
+    },
+    {
+      "start": "2025-09-01",
+      "end": "2026-09-01",
+      "permutation": {
+        "ACN": "INTU",
+        "GILD": "GILD",
+        "INTU": "ACN",
+        "NKE": "NKE"
+      },
+      "identity": false,
+      "cost_multiplier": 1,
+      "metrics": {
+        "return_pct": 3.763632418806373,
+        "final_equity": 103763.63241880637,
+        "max_drawdown_pct": 2.6191673512063085,
+        "fees": 16.30529619363,
+        "impact_cost": 24.972284999999996,
+        "trade_count": 15,
+        "halted": false,
+        "turnover": 0.8255658740399041,
+        "realized_pnl": 3763.632418806364,
+        "unrealized_pnl": 0.0,
+        "trading_days": 251,
+        "daily_sharpe": 0.8543536546628557,
+        "average_gross_exposure_pct": 12.80607051546012,
+        "estimated_liquidation_return_pct": 3.763632418806373
+      }
+    },
+    {
+      "start": "2025-09-01",
+      "end": "2026-09-01",
+      "permutation": {
+        "ACN": "INTU",
+        "GILD": "GILD",
+        "INTU": "ACN",
+        "NKE": "NKE"
+      },
+      "identity": false,
+      "cost_multiplier": 2,
+      "metrics": {
+        "return_pct": 3.7223556210254527,
+        "final_equity": 103722.35562102546,
+        "max_drawdown_pct": 2.6196055676991126,
+        "fees": 32.60980897452,
+        "impact_cost": 49.94456999999999,
+        "trade_count": 15,
+        "halted": false,
+        "turnover": 0.8256872393092318,
+        "realized_pnl": 3722.3556210254737,
+        "unrealized_pnl": 0.0,
+        "trading_days": 251,
+        "daily_sharpe": 0.8451667737109146,
+        "average_gross_exposure_pct": 12.809377150069437,
+        "estimated_liquidation_return_pct": 3.7223556210254527
+      }
+    },
+    {
+      "start": "2025-09-01",
+      "end": "2026-09-01",
+      "permutation": {
+        "ACN": "INTU",
+        "GILD": "GILD",
+        "INTU": "NKE",
+        "NKE": "ACN"
+      },
+      "identity": false,
+      "cost_multiplier": 1,
+      "metrics": {
+        "return_pct": 4.428561943355169,
+        "final_equity": 104428.56194335516,
+        "max_drawdown_pct": 2.551452546206645,
+        "fees": 15.27813364484,
+        "impact_cost": 24.229922999999996,
+        "trade_count": 14,
+        "halted": false,
+        "turnover": 0.7979695044445975,
+        "realized_pnl": 4428.561943355157,
+        "unrealized_pnl": 0.0,
+        "trading_days": 251,
+        "daily_sharpe": 1.0340366241782641,
+        "average_gross_exposure_pct": 12.681459831264178,
+        "estimated_liquidation_return_pct": 4.428561943355169
+      }
+    },
+    {
+      "start": "2025-09-01",
+      "end": "2026-09-01",
+      "permutation": {
+        "ACN": "INTU",
+        "GILD": "GILD",
+        "INTU": "NKE",
+        "NKE": "ACN"
+      },
+      "identity": false,
+      "cost_multiplier": 2,
+      "metrics": {
+        "return_pct": 4.389054653820645,
+        "final_equity": 104389.05465382064,
+        "max_drawdown_pct": 2.553457928734759,
+        "fees": 30.555500179360003,
+        "impact_cost": 48.45984599999999,
+        "trade_count": 14,
+        "halted": false,
+        "turnover": 0.7980791150461075,
+        "realized_pnl": 4389.054653820634,
+        "unrealized_pnl": 0.0,
+        "trading_days": 251,
+        "daily_sharpe": 1.0252991686227535,
+        "average_gross_exposure_pct": 12.684541689450288,
+        "estimated_liquidation_return_pct": 4.389054653820645
+      }
+    },
+    {
+      "start": "2025-09-01",
+      "end": "2026-09-01",
+      "permutation": {
+        "ACN": "INTU",
+        "GILD": "NKE",
+        "INTU": "ACN",
+        "NKE": "GILD"
+      },
+      "identity": false,
+      "cost_multiplier": 1,
+      "metrics": {
+        "return_pct": -6.924453215817894,
+        "final_equity": 93075.54678418211,
+        "max_drawdown_pct": 7.123359985614486,
+        "fees": 21.590617817890006,
+        "impact_cost": 45.782598000000014,
+        "trade_count": 18,
+        "halted": false,
+        "turnover": 1.5729338450574664,
+        "realized_pnl": -6924.453215817899,
+        "unrealized_pnl": 0.0,
+        "trading_days": 251,
+        "daily_sharpe": -1.4927282490698341,
+        "average_gross_exposure_pct": 10.410477683072356,
+        "estimated_liquidation_return_pct": -6.924453215817894
+      }
+    },
+    {
+      "start": "2025-09-01",
+      "end": "2026-09-01",
+      "permutation": {
+        "ACN": "INTU",
+        "GILD": "NKE",
+        "INTU": "ACN",
+        "NKE": "GILD"
+      },
+      "identity": false,
+      "cost_multiplier": 2,
+      "metrics": {
+        "return_pct": -6.991825119871564,
+        "final_equity": 93008.17488012844,
+        "max_drawdown_pct": 7.169544798407768,
+        "fees": 43.17992387156001,
+        "impact_cost": 91.56519600000003,
+        "trade_count": 18,
+        "halted": false,
+        "turnover": 1.5734440537109466,
+        "realized_pnl": -6991.825119871565,
+        "unrealized_pnl": 0.0,
+        "trading_days": 251,
+        "daily_sharpe": -1.5069669135719055,
+        "average_gross_exposure_pct": 10.414802574055583,
+        "estimated_liquidation_return_pct": -6.991825119871564
+      }
+    },
+    {
+      "start": "2025-09-01",
+      "end": "2026-09-01",
+      "permutation": {
+        "ACN": "INTU",
+        "GILD": "NKE",
+        "INTU": "GILD",
+        "NKE": "ACN"
+      },
+      "identity": false,
+      "cost_multiplier": 1,
+      "metrics": {
+        "return_pct": -6.624666410067148,
+        "final_equity": 93375.33358993285,
+        "max_drawdown_pct": 7.429701812350031,
+        "fees": 22.62744706715,
+        "impact_cost": 46.128963,
+        "trade_count": 19,
+        "halted": false,
+        "turnover": 1.580544740611725,
+        "realized_pnl": -6624.666410067154,
+        "unrealized_pnl": 0.0,
+        "trading_days": 251,
+        "daily_sharpe": -1.4331443042219902,
+        "average_gross_exposure_pct": 10.46938569730919,
+        "estimated_liquidation_return_pct": -6.624666410067148
+      }
+    },
+    {
+      "start": "2025-09-01",
+      "end": "2026-09-01",
+      "permutation": {
+        "ACN": "INTU",
+        "GILD": "NKE",
+        "INTU": "GILD",
+        "NKE": "ACN"
+      },
+      "identity": false,
+      "cost_multiplier": 2,
+      "metrics": {
+        "return_pct": -6.693421495268604,
+        "final_equity": 93306.5785047314,
+        "max_drawdown_pct": 7.476022436350938,
+        "fees": 45.2535692686,
+        "impact_cost": 92.257926,
+        "trade_count": 19,
+        "halted": false,
+        "turnover": 1.5810700398900024,
+        "realized_pnl": -6693.421495268606,
+        "unrealized_pnl": 0.0,
+        "trading_days": 251,
+        "daily_sharpe": -1.4478320223408598,
+        "average_gross_exposure_pct": 10.473836567220337,
+        "estimated_liquidation_return_pct": -6.693421495268604
+      }
+    },
+    {
+      "start": "2025-09-01",
+      "end": "2026-09-01",
+      "permutation": {
+        "ACN": "NKE",
+        "GILD": "ACN",
+        "INTU": "GILD",
+        "NKE": "INTU"
+      },
+      "identity": false,
+      "cost_multiplier": 1,
+      "metrics": {
+        "return_pct": -2.539175891374179,
+        "final_equity": 97460.82410862582,
+        "max_drawdown_pct": 4.855410213848687,
+        "fees": 18.718570374169996,
+        "impact_cost": 35.12732100000001,
+        "trade_count": 17,
+        "halted": false,
+        "turnover": 1.185873099104562,
+        "realized_pnl": -2539.1758913741714,
+        "unrealized_pnl": 0.0,
+        "trading_days": 251,
+        "daily_sharpe": -0.468422458735144,
+        "average_gross_exposure_pct": 12.032353369566447,
+        "estimated_liquidation_return_pct": -2.539175891374179
+      }
+    },
+    {
+      "start": "2025-09-01",
+      "end": "2026-09-01",
+      "permutation": {
+        "ACN": "NKE",
+        "GILD": "ACN",
+        "INTU": "GILD",
+        "NKE": "INTU"
+      },
+      "identity": false,
+      "cost_multiplier": 2,
+      "metrics": {
+        "return_pct": -2.5930207512966708,
+        "final_equity": 97406.97924870333,
+        "max_drawdown_pct": 4.8679585277141,
+        "fees": 37.436109296679994,
+        "impact_cost": 70.25464200000002,
+        "trade_count": 17,
+        "halted": false,
+        "turnover": 1.1861718995942074,
+        "realized_pnl": -2593.0207512966786,
+        "unrealized_pnl": 0.0,
+        "trading_days": 251,
+        "daily_sharpe": -0.4789661143024767,
+        "average_gross_exposure_pct": 12.035722982625034,
+        "estimated_liquidation_return_pct": -2.5930207512966708
+      }
+    },
+    {
+      "start": "2025-09-01",
+      "end": "2026-09-01",
+      "permutation": {
+        "ACN": "NKE",
+        "GILD": "ACN",
+        "INTU": "INTU",
+        "NKE": "GILD"
+      },
+      "identity": false,
+      "cost_multiplier": 1,
+      "metrics": {
+        "return_pct": -1.8209792586101559,
+        "final_equity": 98179.02074138985,
+        "max_drawdown_pct": 4.886655152463925,
+        "fees": 18.751607110175,
+        "impact_cost": 35.5726515,
+        "trade_count": 17,
+        "halted": false,
+        "turnover": 1.1952586568302528,
+        "realized_pnl": -1820.9792586101723,
+        "unrealized_pnl": 0.0,
+        "trading_days": 251,
+        "daily_sharpe": -0.3318957632423931,
+        "average_gross_exposure_pct": 12.018440814804872,
+        "estimated_liquidation_return_pct": -1.8209792586101559
+      }
+    },
+    {
+      "start": "2025-09-01",
+      "end": "2026-09-01",
+      "permutation": {
+        "ACN": "NKE",
+        "GILD": "ACN",
+        "INTU": "INTU",
+        "NKE": "GILD"
+      },
+      "identity": false,
+      "cost_multiplier": 2,
+      "metrics": {
+        "return_pct": -1.8725297026336296,
+        "final_equity": 98127.47029736637,
+        "max_drawdown_pct": 4.89925906183557,
+        "fees": 37.49068163362,
+        "impact_cost": 70.91402099999999,
+        "trade_count": 17,
+        "halted": false,
+        "turnover": 1.1916296494366883,
+        "realized_pnl": -1872.5297026336211,
+        "unrealized_pnl": 0.0,
+        "trading_days": 251,
+        "daily_sharpe": -0.342807194617741,
+        "average_gross_exposure_pct": 12.005612058863719,
+        "estimated_liquidation_return_pct": -1.8725297026336296
+      }
+    },
+    {
+      "start": "2025-09-01",
+      "end": "2026-09-01",
+      "permutation": {
+        "ACN": "NKE",
+        "GILD": "GILD",
+        "INTU": "ACN",
+        "NKE": "INTU"
+      },
+      "identity": false,
+      "cost_multiplier": 1,
+      "metrics": {
+        "return_pct": 3.763632418806373,
+        "final_equity": 103763.63241880637,
+        "max_drawdown_pct": 2.6191673512063085,
+        "fees": 16.30529619363,
+        "impact_cost": 24.972284999999996,
+        "trade_count": 15,
+        "halted": false,
+        "turnover": 0.8255658740399041,
+        "realized_pnl": 3763.632418806364,
+        "unrealized_pnl": 0.0,
+        "trading_days": 251,
+        "daily_sharpe": 0.8543536546628557,
+        "average_gross_exposure_pct": 12.80607051546012,
+        "estimated_liquidation_return_pct": 3.763632418806373
+      }
+    },
+    {
+      "start": "2025-09-01",
+      "end": "2026-09-01",
+      "permutation": {
+        "ACN": "NKE",
+        "GILD": "GILD",
+        "INTU": "ACN",
+        "NKE": "INTU"
+      },
+      "identity": false,
+      "cost_multiplier": 2,
+      "metrics": {
+        "return_pct": 3.7223556210254527,
+        "final_equity": 103722.35562102546,
+        "max_drawdown_pct": 2.6196055676991126,
+        "fees": 32.60980897452,
+        "impact_cost": 49.94456999999999,
+        "trade_count": 15,
+        "halted": false,
+        "turnover": 0.8256872393092318,
+        "realized_pnl": 3722.3556210254737,
+        "unrealized_pnl": 0.0,
+        "trading_days": 251,
+        "daily_sharpe": 0.8451667737109146,
+        "average_gross_exposure_pct": 12.809377150069437,
+        "estimated_liquidation_return_pct": 3.7223556210254527
+      }
+    },
+    {
+      "start": "2025-09-01",
+      "end": "2026-09-01",
+      "permutation": {
+        "ACN": "NKE",
+        "GILD": "GILD",
+        "INTU": "INTU",
+        "NKE": "ACN"
+      },
+      "identity": false,
+      "cost_multiplier": 1,
+      "metrics": {
+        "return_pct": 4.836977219327476,
+        "final_equity": 104836.97721932747,
+        "max_drawdown_pct": 2.541773662641089,
+        "fees": 16.36134967254,
+        "impact_cost": 25.771430999999996,
+        "trade_count": 15,
+        "halted": false,
+        "turnover": 0.847572699668643,
+        "realized_pnl": 4836.977219327458,
+        "unrealized_pnl": 0.0,
+        "trading_days": 251,
+        "daily_sharpe": 1.1299305586125163,
+        "average_gross_exposure_pct": 12.807456516733549,
+        "estimated_liquidation_return_pct": 4.836977219327476
+      }
+    },
+    {
+      "start": "2025-09-01",
+      "end": "2026-09-01",
+      "permutation": {
+        "ACN": "NKE",
+        "GILD": "GILD",
+        "INTU": "INTU",
+        "NKE": "ACN"
+      },
+      "identity": false,
+      "cost_multiplier": 2,
+      "metrics": {
+        "return_pct": 4.794845255709834,
+        "final_equity": 104794.84525570984,
+        "max_drawdown_pct": 2.543830999502117,
+        "fees": 32.72188229016,
+        "impact_cost": 51.54286199999999,
+        "trade_count": 15,
+        "halted": false,
+        "turnover": 0.8476963917594926,
+        "realized_pnl": 4794.845255709834,
+        "unrealized_pnl": 0.0,
+        "trading_days": 251,
+        "daily_sharpe": 1.120223465192411,
+        "average_gross_exposure_pct": 12.810762661599087,
+        "estimated_liquidation_return_pct": 4.794845255709834
+      }
+    },
+    {
+      "start": "2025-09-01",
+      "end": "2026-09-01",
+      "permutation": {
+        "ACN": "NKE",
+        "GILD": "INTU",
+        "INTU": "ACN",
+        "NKE": "GILD"
+      },
+      "identity": false,
+      "cost_multiplier": 1,
+      "metrics": {
+        "return_pct": -1.5507753211498443,
+        "final_equity": 98449.22467885015,
+        "max_drawdown_pct": 5.034338668196048,
+        "fees": 21.285314649865,
+        "impact_cost": 46.16500649999999,
+        "trade_count": 19,
+        "halted": false,
+        "turnover": 1.5696043003798168,
+        "realized_pnl": -1550.7753211498703,
+        "unrealized_pnl": 0.0,
+        "trading_days": 251,
+        "daily_sharpe": -0.2993863126337803,
+        "average_gross_exposure_pct": 10.7298246458963,
+        "estimated_liquidation_return_pct": -1.5507753211498443
+      }
+    },
+    {
+      "start": "2025-09-01",
+      "end": "2026-09-01",
+      "permutation": {
+        "ACN": "NKE",
+        "GILD": "INTU",
+        "INTU": "ACN",
+        "NKE": "GILD"
+      },
+      "identity": false,
+      "cost_multiplier": 2,
+      "metrics": {
+        "return_pct": -1.618224270699431,
+        "final_equity": 98381.77572930057,
+        "max_drawdown_pct": 5.060872561080054,
+        "fees": 42.569257699459996,
+        "impact_cost": 92.33001299999998,
+        "trade_count": 19,
+        "halted": false,
+        "turnover": 1.570105923978033,
+        "realized_pnl": -1618.2242706994655,
+        "unrealized_pnl": 0.0,
+        "trading_days": 251,
+        "daily_sharpe": -0.3134287798346205,
+        "average_gross_exposure_pct": 10.732913136538146,
+        "estimated_liquidation_return_pct": -1.618224270699431
+      }
+    },
+    {
+      "start": "2025-09-01",
+      "end": "2026-09-01",
+      "permutation": {
+        "ACN": "NKE",
+        "GILD": "INTU",
+        "INTU": "GILD",
+        "NKE": "ACN"
+      },
+      "identity": false,
+      "cost_multiplier": 1,
+      "metrics": {
+        "return_pct": -1.2468762872175132,
+        "final_equity": 98753.12371278249,
+        "max_drawdown_pct": 5.527334431247388,
+        "fees": 21.308748717535003,
+        "impact_cost": 46.54253849999999,
+        "trade_count": 19,
+        "halted": false,
+        "turnover": 1.5782751193327245,
+        "realized_pnl": -1246.8762872175366,
+        "unrealized_pnl": 0.0,
+        "trading_days": 251,
+        "daily_sharpe": -0.2398435236792985,
+        "average_gross_exposure_pct": 10.78545141451319,
+        "estimated_liquidation_return_pct": -1.2468762872175132
+      }
+    },
+    {
+      "start": "2025-09-01",
+      "end": "2026-09-01",
+      "permutation": {
+        "ACN": "NKE",
+        "GILD": "INTU",
+        "INTU": "GILD",
+        "NKE": "ACN"
+      },
+      "identity": false,
+      "cost_multiplier": 2,
+      "metrics": {
+        "return_pct": -1.3147261887701434,
+        "final_equity": 98685.27381122985,
+        "max_drawdown_pct": 5.553984832340153,
+        "fees": 42.616111770139995,
+        "impact_cost": 93.08507699999998,
+        "trade_count": 19,
+        "halted": false,
+        "turnover": 1.578779479453483,
+        "realized_pnl": -1314.7261887701409,
+        "unrealized_pnl": 0.0,
+        "trading_days": 251,
+        "daily_sharpe": -0.2541735701740104,
+        "average_gross_exposure_pct": 10.78856758450045,
+        "estimated_liquidation_return_pct": -1.3147261887701434
+      }
+    },
+    {
+      "start": "2022-09-01",
+      "end": "2025-09-01",
+      "permutation": {
+        "ACN": "ACN",
+        "GILD": "GILD",
+        "INTU": "INTU",
+        "NKE": "NKE"
+      },
+      "identity": true,
+      "cost_multiplier": 1,
+      "metrics": {
+        "return_pct": 12.37711790782219,
+        "final_equity": 112377.11790782219,
+        "max_drawdown_pct": 4.586006131511344,
+        "fees": 82.86424767781,
+        "impact_cost": 86.35284449999997,
+        "trade_count": 79,
+        "halted": false,
+        "turnover": 2.778086292994022,
+        "realized_pnl": 5977.0520091991175,
+        "unrealized_pnl": 6400.065898623069,
+        "trading_days": 751,
+        "daily_sharpe": 0.7331931645716848,
+        "average_gross_exposure_pct": 19.85528874593182,
+        "estimated_liquidation_return_pct": 12.361028448922195
+      }
+    },
+    {
+      "start": "2022-09-01",
+      "end": "2025-09-01",
+      "permutation": {
+        "ACN": "ACN",
+        "GILD": "GILD",
+        "INTU": "INTU",
+        "NKE": "NKE"
+      },
+      "identity": true,
+      "cost_multiplier": 2,
+      "metrics": {
+        "return_pct": 12.199419297049952,
+        "final_equity": 112199.41929704994,
+        "max_drawdown_pct": 4.600728576516566,
+        "fees": 165.73743795008,
+        "impact_cost": 172.8682649999999,
+        "trade_count": 79,
+        "halted": false,
+        "turnover": 2.7826284670512726,
+        "realized_pnl": 5849.362361825258,
+        "unrealized_pnl": 6350.05693522467,
+        "trading_days": 751,
+        "daily_sharpe": 0.7229909276360081,
+        "average_gross_exposure_pct": 19.87008351373393,
+        "estimated_liquidation_return_pct": 12.167314939449959
+      }
+    },
+    {
+      "start": "2022-09-01",
+      "end": "2025-09-01",
+      "permutation": {
+        "ACN": "ACN",
+        "GILD": "GILD",
+        "INTU": "NKE",
+        "NKE": "INTU"
+      },
+      "identity": false,
+      "cost_multiplier": 1,
+      "metrics": {
+        "return_pct": 9.240017637660136,
+        "final_equity": 109240.01763766014,
+        "max_drawdown_pct": 7.817226701246982,
+        "fees": 91.79979933979,
+        "impact_cost": 102.86256299999997,
+        "trade_count": 86,
+        "halted": false,
+        "turnover": 3.3064207216607064,
+        "realized_pnl": -47.85362405464298,
+        "unrealized_pnl": 9287.871261714852,
+        "trading_days": 751,
+        "daily_sharpe": 0.5633336460519959,
+        "average_gross_exposure_pct": 18.965723360590257,
+        "estimated_liquidation_return_pct": 9.224236789360152
+      }
+    },
+    {
+      "start": "2022-09-01",
+      "end": "2025-09-01",
+      "permutation": {
+        "ACN": "ACN",
+        "GILD": "GILD",
+        "INTU": "NKE",
+        "NKE": "INTU"
+      },
+      "identity": false,
+      "cost_multiplier": 2,
+      "metrics": {
+        "return_pct": 9.062775055335347,
+        "final_equity": 109062.77505533534,
+        "max_drawdown_pct": 7.82906026466752,
+        "fees": 183.59494866460003,
+        "impact_cost": 205.809996,
+        "trade_count": 86,
+        "halted": false,
+        "turnover": 3.310575770221694,
+        "realized_pnl": -156.40303815004677,
+        "unrealized_pnl": 9219.178093485443,
+        "trading_days": 751,
+        "daily_sharpe": 0.5534730506108163,
+        "average_gross_exposure_pct": 18.963197380136773,
+        "estimated_liquidation_return_pct": 9.031287918935348
+      }
+    },
+    {
+      "start": "2022-09-01",
+      "end": "2025-09-01",
+      "permutation": {
+        "ACN": "ACN",
+        "GILD": "INTU",
+        "INTU": "GILD",
+        "NKE": "NKE"
+      },
+      "identity": false,
+      "cost_multiplier": 1,
+      "metrics": {
+        "return_pct": 7.463567191146492,
+        "final_equity": 107463.56719114649,
+        "max_drawdown_pct": 4.611532881247992,
+        "fees": 88.5310953535,
+        "impact_cost": 80.45671349999999,
+        "trade_count": 85,
+        "halted": false,
+        "turnover": 2.6551713922154403,
+        "realized_pnl": 1279.3878642674888,
+        "unrealized_pnl": 6184.179326879001,
+        "trading_days": 751,
+        "daily_sharpe": 0.4790656022001513,
+        "average_gross_exposure_pct": 19.471223429037327,
+        "estimated_liquidation_return_pct": 7.448253473146482
+      }
+    },
+    {
+      "start": "2022-09-01",
+      "end": "2025-09-01",
+      "permutation": {
+        "ACN": "ACN",
+        "GILD": "INTU",
+        "INTU": "GILD",
+        "NKE": "NKE"
+      },
+      "identity": false,
+      "cost_multiplier": 2,
+      "metrics": {
+        "return_pct": 7.3586478713659975,
+        "final_equity": 107358.647871366,
+        "max_drawdown_pct": 4.567986193572581,
+        "fees": 179.06403563403993,
+        "impact_cost": 160.953093,
+        "trade_count": 86,
+        "halted": false,
+        "turnover": 2.6574684483878968,
+        "realized_pnl": 1193.1892953719562,
+        "unrealized_pnl": 6165.458575994004,
+        "trading_days": 751,
+        "daily_sharpe": 0.473126518124244,
+        "average_gross_exposure_pct": 19.475280990620032,
+        "estimated_liquidation_return_pct": 7.328020435366001
+      }
+    },
+    {
+      "start": "2022-09-01",
+      "end": "2025-09-01",
+      "permutation": {
+        "ACN": "ACN",
+        "GILD": "INTU",
+        "INTU": "NKE",
+        "NKE": "GILD"
+      },
+      "identity": false,
+      "cost_multiplier": 1,
+      "metrics": {
+        "return_pct": -5.619465603680074,
+        "final_equity": 94380.53439631993,
+        "max_drawdown_pct": 10.049493100939289,
+        "fees": 89.91058218010998,
+        "impact_cost": 100.57002150000002,
+        "trade_count": 84,
+        "halted": true,
+        "turnover": 3.3692955643883096,
+        "realized_pnl": -5619.465603680111,
+        "unrealized_pnl": 0.0,
+        "trading_days": 751,
+        "daily_sharpe": -0.38232663718383386,
+        "average_gross_exposure_pct": 14.412090605489603,
+        "estimated_liquidation_return_pct": -5.619465603680074
+      }
+    },
+    {
+      "start": "2022-09-01",
+      "end": "2025-09-01",
+      "permutation": {
+        "ACN": "ACN",
+        "GILD": "INTU",
+        "INTU": "NKE",
+        "NKE": "GILD"
+      },
+      "identity": false,
+      "cost_multiplier": 2,
+      "metrics": {
+        "return_pct": -5.798395532399403,
+        "final_equity": 94201.6044676006,
+        "max_drawdown_pct": 10.107058604361896,
+        "fees": 179.8100633994,
+        "impact_cost": 201.17046900000003,
+        "trade_count": 84,
+        "halted": true,
+        "turnover": 3.3729483332885186,
+        "realized_pnl": -5798.395532399405,
+        "unrealized_pnl": 0.0,
+        "trading_days": 751,
+        "daily_sharpe": -0.39524220522860454,
+        "average_gross_exposure_pct": 14.418019861980788,
+        "estimated_liquidation_return_pct": -5.798395532399403
+      }
+    },
+    {
+      "start": "2022-09-01",
+      "end": "2025-09-01",
+      "permutation": {
+        "ACN": "ACN",
+        "GILD": "NKE",
+        "INTU": "GILD",
+        "NKE": "INTU"
+      },
+      "identity": false,
+      "cost_multiplier": 1,
+      "metrics": {
+        "return_pct": 8.697290840740113,
+        "final_equity": 108697.29084074011,
+        "max_drawdown_pct": 7.809667238126316,
+        "fees": 88.38885125985999,
+        "impact_cost": 95.05030800000002,
+        "trade_count": 83,
+        "halted": false,
+        "turnover": 3.0660844316390734,
+        "realized_pnl": -548.1351966046445,
+        "unrealized_pnl": 9245.426037344783,
+        "trading_days": 751,
+        "daily_sharpe": 0.5465889893392947,
+        "average_gross_exposure_pct": 18.828695296344236,
+        "estimated_liquidation_return_pct": 8.681577804640117
+      }
+    },
+    {
+      "start": "2022-09-01",
+      "end": "2025-09-01",
+      "permutation": {
+        "ACN": "ACN",
+        "GILD": "NKE",
+        "INTU": "GILD",
+        "NKE": "INTU"
+      },
+      "identity": false,
+      "cost_multiplier": 2,
+      "metrics": {
+        "return_pct": 8.47408545699182,
+        "final_equity": 108474.08545699182,
+        "max_drawdown_pct": 7.83291608615616,
+        "fees": 178.78151300820005,
+        "impact_cost": 190.38303,
+        "trade_count": 84,
+        "halted": false,
+        "turnover": 3.073387956182836,
+        "realized_pnl": -682.5937161486647,
+        "unrealized_pnl": 9156.67917314045,
+        "trading_days": 751,
+        "daily_sharpe": 0.5340858517340225,
+        "average_gross_exposure_pct": 18.819514669001602,
+        "estimated_liquidation_return_pct": 8.44273394499182
+      }
+    },
+    {
+      "start": "2022-09-01",
+      "end": "2025-09-01",
+      "permutation": {
+        "ACN": "ACN",
+        "GILD": "NKE",
+        "INTU": "INTU",
+        "NKE": "GILD"
+      },
+      "identity": false,
+      "cost_multiplier": 1,
+      "metrics": {
+        "return_pct": -1.9384093207948316,
+        "final_equity": 98061.59067920517,
+        "max_drawdown_pct": 10.051004171258715,
+        "fees": 84.01586479485,
+        "impact_cost": 99.57345600000001,
+        "trade_count": 78,
+        "halted": true,
+        "turnover": 3.256401707323546,
+        "realized_pnl": -1938.4093207948615,
+        "unrealized_pnl": 0.0,
+        "trading_days": 751,
+        "daily_sharpe": -0.11001421084617266,
+        "average_gross_exposure_pct": 14.759546431709452,
+        "estimated_liquidation_return_pct": -1.9384093207948316
+      }
+    },
+    {
+      "start": "2022-09-01",
+      "end": "2025-09-01",
+      "permutation": {
+        "ACN": "ACN",
+        "GILD": "NKE",
+        "INTU": "INTU",
+        "NKE": "GILD"
+      },
+      "identity": false,
+      "cost_multiplier": 2,
+      "metrics": {
+        "return_pct": -2.094698227357805,
+        "final_equity": 97905.3017726422,
+        "max_drawdown_pct": 10.08639475225519,
+        "fees": 167.99680135780002,
+        "impact_cost": 198.89142599999997,
+        "trade_count": 78,
+        "halted": true,
+        "turnover": 3.2550393700435825,
+        "realized_pnl": -2094.698227357801,
+        "unrealized_pnl": 0.0,
+        "trading_days": 751,
+        "daily_sharpe": -0.12091031218132603,
+        "average_gross_exposure_pct": 14.76575573394508,
+        "estimated_liquidation_return_pct": -2.094698227357805
+      }
+    },
+    {
+      "start": "2022-09-01",
+      "end": "2025-09-01",
+      "permutation": {
+        "ACN": "GILD",
+        "GILD": "ACN",
+        "INTU": "INTU",
+        "NKE": "NKE"
+      },
+      "identity": false,
+      "cost_multiplier": 1,
+      "metrics": {
+        "return_pct": -6.583898595992932,
+        "final_equity": 93416.10140400707,
+        "max_drawdown_pct": 10.14892946885454,
+        "fees": 78.58797999296,
+        "impact_cost": 93.710616,
+        "trade_count": 74,
+        "halted": true,
+        "turnover": 3.1907590082442217,
+        "realized_pnl": -6583.898595992949,
+        "unrealized_pnl": 0.0,
+        "trading_days": 751,
+        "daily_sharpe": -0.4449598086064936,
+        "average_gross_exposure_pct": 14.659301123663978,
+        "estimated_liquidation_return_pct": -6.583898595992932
+      }
+    },
+    {
+      "start": "2022-09-01",
+      "end": "2025-09-01",
+      "permutation": {
+        "ACN": "GILD",
+        "GILD": "ACN",
+        "INTU": "INTU",
+        "NKE": "NKE"
+      },
+      "identity": false,
+      "cost_multiplier": 2,
+      "metrics": {
+        "return_pct": -6.768123572287033,
+        "final_equity": 93231.87642771297,
+        "max_drawdown_pct": 10.199287384493461,
+        "fees": 157.17234828699995,
+        "impact_cost": 187.41122399999998,
+        "trade_count": 74,
+        "halted": true,
+        "turnover": 3.193490152243192,
+        "realized_pnl": -6768.123572287001,
+        "unrealized_pnl": 0.0,
+        "trading_days": 751,
+        "daily_sharpe": -0.4578053593435972,
+        "average_gross_exposure_pct": 14.669976605767532,
+        "estimated_liquidation_return_pct": -6.768123572287033
+      }
+    },
+    {
+      "start": "2022-09-01",
+      "end": "2025-09-01",
+      "permutation": {
+        "ACN": "GILD",
+        "GILD": "ACN",
+        "INTU": "NKE",
+        "NKE": "INTU"
+      },
+      "identity": false,
+      "cost_multiplier": 1,
+      "metrics": {
+        "return_pct": -8.480470052467048,
+        "final_equity": 91519.52994753295,
+        "max_drawdown_pct": 10.227910955078611,
+        "fees": 82.24649196703001,
+        "impact_cost": 110.34856050000002,
+        "trade_count": 76,
+        "halted": true,
+        "turnover": 3.794351161085184,
+        "realized_pnl": -8480.470052467033,
+        "unrealized_pnl": 0.0,
+        "trading_days": 751,
+        "daily_sharpe": -0.7313869099996042,
+        "average_gross_exposure_pct": 13.83082733499845,
+        "estimated_liquidation_return_pct": -8.480470052467048
+      }
+    },
+    {
+      "start": "2022-09-01",
+      "end": "2025-09-01",
+      "permutation": {
+        "ACN": "GILD",
+        "GILD": "ACN",
+        "INTU": "NKE",
+        "NKE": "INTU"
+      },
+      "identity": false,
+      "cost_multiplier": 2,
+      "metrics": {
+        "return_pct": -8.662837231971842,
+        "final_equity": 91337.16276802815,
+        "max_drawdown_pct": 10.286563379707303,
+        "fees": 164.46124697184,
+        "impact_cost": 220.52098500000005,
+        "trade_count": 76,
+        "halted": true,
+        "turnover": 3.7951258436606574,
+        "realized_pnl": -8662.837231971831,
+        "unrealized_pnl": 0.0,
+        "trading_days": 751,
+        "daily_sharpe": -0.7476724670162201,
+        "average_gross_exposure_pct": 13.837782175881472,
+        "estimated_liquidation_return_pct": -8.662837231971842
+      }
+    },
+    {
+      "start": "2022-09-01",
+      "end": "2025-09-01",
+      "permutation": {
+        "ACN": "GILD",
+        "GILD": "INTU",
+        "INTU": "ACN",
+        "NKE": "NKE"
+      },
+      "identity": false,
+      "cost_multiplier": 1,
+      "metrics": {
+        "return_pct": -6.519074427065252,
+        "final_equity": 93480.92557293475,
+        "max_drawdown_pct": 10.142605524938286,
+        "fees": 79.18919206524,
+        "impact_cost": 85.71523499999999,
+        "trade_count": 75,
+        "halted": true,
+        "turnover": 2.9137662202533705,
+        "realized_pnl": -6519.074427065235,
+        "unrealized_pnl": 0.0,
+        "trading_days": 751,
+        "daily_sharpe": -0.4524259813880222,
+        "average_gross_exposure_pct": 14.615989569271342,
+        "estimated_liquidation_return_pct": -6.519074427065252
+      }
+    },
+    {
+      "start": "2022-09-01",
+      "end": "2025-09-01",
+      "permutation": {
+        "ACN": "GILD",
+        "GILD": "INTU",
+        "INTU": "ACN",
+        "NKE": "NKE"
+      },
+      "identity": false,
+      "cost_multiplier": 2,
+      "metrics": {
+        "return_pct": -6.687509712249562,
+        "final_equity": 93312.49028775044,
+        "max_drawdown_pct": 10.19137408107994,
+        "fees": 158.38688224955996,
+        "impact_cost": 171.65283,
+        "trade_count": 75,
+        "halted": true,
+        "turnover": 2.9199511495844312,
+        "realized_pnl": -6687.509712249558,
+        "unrealized_pnl": 0.0,
+        "trading_days": 751,
+        "daily_sharpe": -0.4644459624835755,
+        "average_gross_exposure_pct": 14.62504565591933,
+        "estimated_liquidation_return_pct": -6.687509712249562
+      }
+    },
+    {
+      "start": "2022-09-01",
+      "end": "2025-09-01",
+      "permutation": {
+        "ACN": "GILD",
+        "GILD": "INTU",
+        "INTU": "NKE",
+        "NKE": "ACN"
+      },
+      "identity": false,
+      "cost_multiplier": 1,
+      "metrics": {
+        "return_pct": -7.8102863810090355,
+        "final_equity": 92189.71361899097,
+        "max_drawdown_pct": 10.016779856663206,
+        "fees": 84.80616300896,
+        "impact_cost": 100.54021799999998,
+        "trade_count": 79,
+        "halted": true,
+        "turnover": 3.441101164705954,
+        "realized_pnl": -7810.286381008962,
+        "unrealized_pnl": 0.0,
+        "trading_days": 751,
+        "daily_sharpe": -0.5687813424335885,
+        "average_gross_exposure_pct": 14.203912953997866,
+        "estimated_liquidation_return_pct": -7.8102863810090355
+      }
+    },
+    {
+      "start": "2022-09-01",
+      "end": "2025-09-01",
+      "permutation": {
+        "ACN": "GILD",
+        "GILD": "INTU",
+        "INTU": "NKE",
+        "NKE": "ACN"
+      },
+      "identity": false,
+      "cost_multiplier": 2,
+      "metrics": {
+        "return_pct": -7.980623483332838,
+        "final_equity": 92019.37651666717,
+        "max_drawdown_pct": 10.075857203092475,
+        "fees": 169.5952193328,
+        "impact_cost": 200.9882639999999,
+        "trade_count": 79,
+        "halted": true,
+        "turnover": 3.4426385509083515,
+        "realized_pnl": -7980.623483332805,
+        "unrealized_pnl": 0.0,
+        "trading_days": 751,
+        "daily_sharpe": -0.5815498184351765,
+        "average_gross_exposure_pct": 14.214008441463607,
+        "estimated_liquidation_return_pct": -7.980623483332838
+      }
+    },
+    {
+      "start": "2022-09-01",
+      "end": "2025-09-01",
+      "permutation": {
+        "ACN": "GILD",
+        "GILD": "NKE",
+        "INTU": "ACN",
+        "NKE": "INTU"
+      },
+      "identity": false,
+      "cost_multiplier": 1,
+      "metrics": {
+        "return_pct": -4.823232115807407,
+        "final_equity": 95176.7678841926,
+        "max_drawdown_pct": 10.197711675107291,
+        "fees": 83.08145180744,
+        "impact_cost": 102.95066400000002,
+        "trade_count": 77,
+        "halted": true,
+        "turnover": 3.445232194494107,
+        "realized_pnl": -4823.232115807441,
+        "unrealized_pnl": 0.0,
+        "trading_days": 751,
+        "daily_sharpe": -0.39937782259210886,
+        "average_gross_exposure_pct": 14.093336021724785,
+        "estimated_liquidation_return_pct": -4.823232115807407
+      }
+    },
+    {
+      "start": "2022-09-01",
+      "end": "2025-09-01",
+      "permutation": {
+        "ACN": "GILD",
+        "GILD": "NKE",
+        "INTU": "ACN",
+        "NKE": "INTU"
+      },
+      "identity": false,
+      "cost_multiplier": 2,
+      "metrics": {
+        "return_pct": -5.006329426829758,
+        "final_equity": 94993.67057317024,
+        "max_drawdown_pct": 10.266205986246025,
+        "fees": 166.15985682976,
+        "impact_cost": 205.89957000000004,
+        "trade_count": 77,
+        "halted": true,
+        "turnover": 3.448525644584705,
+        "realized_pnl": -5006.32942682977,
+        "unrealized_pnl": 0.0,
+        "trading_days": 751,
+        "daily_sharpe": -0.4151928525255393,
+        "average_gross_exposure_pct": 14.10300648007732,
+        "estimated_liquidation_return_pct": -5.006329426829758
+      }
+    },
+    {
+      "start": "2022-09-01",
+      "end": "2025-09-01",
+      "permutation": {
+        "ACN": "GILD",
+        "GILD": "NKE",
+        "INTU": "INTU",
+        "NKE": "ACN"
+      },
+      "identity": false,
+      "cost_multiplier": 1,
+      "metrics": {
+        "return_pct": -4.1719517573394205,
+        "final_equity": 95828.04824266057,
+        "max_drawdown_pct": 10.051462632392983,
+        "fees": 80.98403933950001,
+        "impact_cost": 100.907718,
+        "trade_count": 75,
+        "halted": true,
+        "turnover": 3.3728723481694627,
+        "realized_pnl": -4171.951757339501,
+        "unrealized_pnl": 0.0,
+        "trading_days": 751,
+        "daily_sharpe": -0.2772180776584799,
+        "average_gross_exposure_pct": 14.500394282600315,
+        "estimated_liquidation_return_pct": -4.1719517573394205
+      }
+    },
+    {
+      "start": "2022-09-01",
+      "end": "2025-09-01",
+      "permutation": {
+        "ACN": "GILD",
+        "GILD": "NKE",
+        "INTU": "INTU",
+        "NKE": "ACN"
+      },
+      "identity": false,
+      "cost_multiplier": 2,
+      "metrics": {
+        "return_pct": -4.338854522073876,
+        "final_equity": 95661.14547792613,
+        "max_drawdown_pct": 10.101413773353595,
+        "fees": 161.96189607392003,
+        "impact_cost": 201.74262599999997,
+        "trade_count": 75,
+        "halted": true,
+        "turnover": 3.3746014812497354,
+        "realized_pnl": -4338.854522073923,
+        "unrealized_pnl": 0.0,
+        "trading_days": 751,
+        "daily_sharpe": -0.28927530994093514,
+        "average_gross_exposure_pct": 14.511192750101594,
+        "estimated_liquidation_return_pct": -4.338854522073876
+      }
+    },
+    {
+      "start": "2022-09-01",
+      "end": "2025-09-01",
+      "permutation": {
+        "ACN": "INTU",
+        "GILD": "ACN",
+        "INTU": "GILD",
+        "NKE": "NKE"
+      },
+      "identity": false,
+      "cost_multiplier": 1,
+      "metrics": {
+        "return_pct": 1.8064583042812776,
+        "final_equity": 101806.45830428129,
+        "max_drawdown_pct": 7.502632775036345,
+        "fees": 92.341468218685,
+        "impact_cost": 98.34522750000001,
+        "trade_count": 88,
+        "halted": false,
+        "turnover": 3.275268228647132,
+        "realized_pnl": -3800.6067900730363,
+        "unrealized_pnl": 5607.065094354368,
+        "trading_days": 751,
+        "daily_sharpe": 0.1378974147968789,
+        "average_gross_exposure_pct": 19.50243260103797,
+        "estimated_liquidation_return_pct": 1.7911604592812935
+      }
+    },
+    {
+      "start": "2022-09-01",
+      "end": "2025-09-01",
+      "permutation": {
+        "ACN": "INTU",
+        "GILD": "ACN",
+        "INTU": "GILD",
+        "NKE": "NKE"
+      },
+      "identity": false,
+      "cost_multiplier": 2,
+      "metrics": {
+        "return_pct": 1.6140388032072739,
+        "final_equity": 101614.03880320728,
+        "max_drawdown_pct": 7.521315206378731,
+        "fees": 184.68030079273998,
+        "impact_cost": 196.69089600000004,
+        "trade_count": 88,
+        "halted": false,
+        "turnover": 3.2782179680306207,
+        "realized_pnl": -3976.5918788163026,
+        "unrealized_pnl": 5590.630682023566,
+        "trading_days": 751,
+        "daily_sharpe": 0.12613096536756432,
+        "average_gross_exposure_pct": 19.509727573154592,
+        "estimated_liquidation_return_pct": 1.5834431132072835
+      }
+    },
+    {
+      "start": "2022-09-01",
+      "end": "2025-09-01",
+      "permutation": {
+        "ACN": "INTU",
+        "GILD": "ACN",
+        "INTU": "NKE",
+        "NKE": "GILD"
+      },
+      "identity": false,
+      "cost_multiplier": 1,
+      "metrics": {
+        "return_pct": -7.252132562232816,
+        "final_equity": 92747.86743776719,
+        "max_drawdown_pct": 10.189670915738624,
+        "fees": 91.56619173282004,
+        "impact_cost": 115.37137049999998,
+        "trade_count": 85,
+        "halted": true,
+        "turnover": 3.9064556167914524,
+        "realized_pnl": -7252.1325622328295,
+        "unrealized_pnl": 0.0,
+        "trading_days": 751,
+        "daily_sharpe": -0.5932581541531723,
+        "average_gross_exposure_pct": 14.117025484471558,
+        "estimated_liquidation_return_pct": -7.252132562232816
+      }
+    },
+    {
+      "start": "2022-09-01",
+      "end": "2025-09-01",
+      "permutation": {
+        "ACN": "INTU",
+        "GILD": "ACN",
+        "INTU": "NKE",
+        "NKE": "GILD"
+      },
+      "identity": false,
+      "cost_multiplier": 2,
+      "metrics": {
+        "return_pct": -7.4551545094759035,
+        "final_equity": 92544.8454905241,
+        "max_drawdown_pct": 10.250010423896928,
+        "fees": 183.09541947591998,
+        "impact_cost": 230.46908999999994,
+        "trade_count": 85,
+        "halted": true,
+        "turnover": 3.906053941245863,
+        "realized_pnl": -7455.154509475931,
+        "unrealized_pnl": 0.0,
+        "trading_days": 751,
+        "daily_sharpe": -0.610590614353538,
+        "average_gross_exposure_pct": 14.124007637977035,
+        "estimated_liquidation_return_pct": -7.4551545094759035
+      }
+    },
+    {
+      "start": "2022-09-01",
+      "end": "2025-09-01",
+      "permutation": {
+        "ACN": "INTU",
+        "GILD": "GILD",
+        "INTU": "ACN",
+        "NKE": "NKE"
+      },
+      "identity": false,
+      "cost_multiplier": 1,
+      "metrics": {
+        "return_pct": 6.531412686309479,
+        "final_equity": 106531.41268630947,
+        "max_drawdown_pct": 7.5144381061236,
+        "fees": 86.34256169054501,
+        "impact_cost": 97.53475200000001,
+        "trade_count": 82,
+        "halted": false,
+        "turnover": 3.1489545491630895,
+        "realized_pnl": 655.6470270187883,
+        "unrealized_pnl": 5875.765659290661,
+        "trading_days": 751,
+        "daily_sharpe": 0.4105481114961302,
+        "average_gross_exposure_pct": 19.892855694835568,
+        "estimated_liquidation_return_pct": 6.515473440109476
+      }
+    },
+    {
+      "start": "2022-09-01",
+      "end": "2025-09-01",
+      "permutation": {
+        "ACN": "INTU",
+        "GILD": "GILD",
+        "INTU": "ACN",
+        "NKE": "NKE"
+      },
+      "identity": false,
+      "cost_multiplier": 2,
+      "metrics": {
+        "return_pct": 6.349466049206143,
+        "final_equity": 106349.46604920614,
+        "max_drawdown_pct": 7.532254896313617,
+        "fees": 170.64498679385997,
+        "impact_cost": 194.31896400000002,
+        "trade_count": 81,
+        "halted": false,
+        "turnover": 3.139742023452975,
+        "realized_pnl": 491.27021980073596,
+        "unrealized_pnl": 5858.195829405412,
+        "trading_days": 751,
+        "daily_sharpe": 0.40002376731301287,
+        "average_gross_exposure_pct": 19.88335419316555,
+        "estimated_liquidation_return_pct": 6.317587556806137
+      }
+    },
+    {
+      "start": "2022-09-01",
+      "end": "2025-09-01",
+      "permutation": {
+        "ACN": "INTU",
+        "GILD": "GILD",
+        "INTU": "NKE",
+        "NKE": "ACN"
+      },
+      "identity": false,
+      "cost_multiplier": 1,
+      "metrics": {
+        "return_pct": 8.132643163569654,
+        "final_equity": 108132.64316356965,
+        "max_drawdown_pct": 7.812474516315559,
+        "fees": 90.03341843033,
+        "impact_cost": 108.35341800000002,
+        "trade_count": 84,
+        "halted": false,
+        "turnover": 3.5114151098100237,
+        "realized_pnl": -1073.6828880092426,
+        "unrealized_pnl": 9206.326051578917,
+        "trading_days": 751,
+        "daily_sharpe": 0.5037200361267264,
+        "average_gross_exposure_pct": 18.999799931175087,
+        "estimated_liquidation_return_pct": 8.116997939669645
+      }
+    },
+    {
+      "start": "2022-09-01",
+      "end": "2025-09-01",
+      "permutation": {
+        "ACN": "INTU",
+        "GILD": "GILD",
+        "INTU": "NKE",
+        "NKE": "ACN"
+      },
+      "identity": false,
+      "cost_multiplier": 2,
+      "metrics": {
+        "return_pct": 7.929479107971682,
+        "final_equity": 107929.47910797168,
+        "max_drawdown_pct": 7.8227817181574455,
+        "fees": 178.06436402828,
+        "impact_cost": 216.60652800000008,
+        "trade_count": 83,
+        "halted": false,
+        "turnover": 3.513172181154239,
+        "realized_pnl": -1236.7983651823374,
+        "unrealized_pnl": 9166.277473154048,
+        "trading_days": 751,
+        "daily_sharpe": 0.49230196637503465,
+        "average_gross_exposure_pct": 19.00240510488012,
+        "estimated_liquidation_return_pct": 7.8983242845716894
+      }
+    },
+    {
+      "start": "2022-09-01",
+      "end": "2025-09-01",
+      "permutation": {
+        "ACN": "INTU",
+        "GILD": "NKE",
+        "INTU": "ACN",
+        "NKE": "GILD"
+      },
+      "identity": false,
+      "cost_multiplier": 1,
+      "metrics": {
+        "return_pct": -3.6642615970369996,
+        "final_equity": 96335.738402963,
+        "max_drawdown_pct": 10.164344380805234,
+        "fees": 86.42659803699999,
+        "impact_cost": 108.50499899999998,
+        "trade_count": 80,
+        "halted": true,
+        "turnover": 3.585264967068312,
+        "realized_pnl": -3664.261597036999,
+        "unrealized_pnl": 0.0,
+        "trading_days": 751,
+        "daily_sharpe": -0.28040792483912746,
+        "average_gross_exposure_pct": 14.457589790468505,
+        "estimated_liquidation_return_pct": -3.6642615970369996
+      }
+    },
+    {
+      "start": "2022-09-01",
+      "end": "2025-09-01",
+      "permutation": {
+        "ACN": "INTU",
+        "GILD": "NKE",
+        "INTU": "ACN",
+        "NKE": "GILD"
+      },
+      "identity": false,
+      "cost_multiplier": 2,
+      "metrics": {
+        "return_pct": -3.8479618458483134,
+        "final_equity": 96152.03815415168,
+        "max_drawdown_pct": 10.225516829326365,
+        "fees": 172.82180984832,
+        "impact_cost": 216.84003599999997,
+        "trade_count": 80,
+        "halted": true,
+        "turnover": 3.5858633399438484,
+        "realized_pnl": -3847.961845848325,
+        "unrealized_pnl": 0.0,
+        "trading_days": 751,
+        "daily_sharpe": -0.29564613319782873,
+        "average_gross_exposure_pct": 14.45300839754545,
+        "estimated_liquidation_return_pct": -3.8479618458483134
+      }
+    },
+    {
+      "start": "2022-09-01",
+      "end": "2025-09-01",
+      "permutation": {
+        "ACN": "INTU",
+        "GILD": "NKE",
+        "INTU": "GILD",
+        "NKE": "ACN"
+      },
+      "identity": false,
+      "cost_multiplier": 1,
+      "metrics": {
+        "return_pct": 7.330375034669334,
+        "final_equity": 107330.37503466933,
+        "max_drawdown_pct": 7.791291163813896,
+        "fees": 88.63919333064999,
+        "impact_cost": 101.19577199999998,
+        "trade_count": 83,
+        "halted": false,
+        "turnover": 3.3024832550917256,
+        "realized_pnl": -1807.3567389497464,
+        "unrealized_pnl": 9137.731773619103,
+        "trading_days": 751,
+        "daily_sharpe": 0.4653380991009055,
+        "average_gross_exposure_pct": 18.952188082704083,
+        "estimated_liquidation_return_pct": 7.3148654351693265
+      }
+    },
+    {
+      "start": "2022-09-01",
+      "end": "2025-09-01",
+      "permutation": {
+        "ACN": "INTU",
+        "GILD": "NKE",
+        "INTU": "GILD",
+        "NKE": "ACN"
+      },
+      "identity": false,
+      "cost_multiplier": 2,
+      "metrics": {
+        "return_pct": 7.12676279961828,
+        "final_equity": 107126.76279961829,
+        "max_drawdown_pct": 7.828582035676557,
+        "fees": 175.27454638175996,
+        "impact_cost": 202.33265400000008,
+        "trade_count": 82,
+        "halted": false,
+        "turnover": 3.304420712339761,
+        "realized_pnl": -1972.6580553680287,
+        "unrealized_pnl": 9099.420854986256,
+        "trading_days": 751,
+        "daily_sharpe": 0.4534309655921283,
+        "average_gross_exposure_pct": 18.949274514909952,
+        "estimated_liquidation_return_pct": 7.095804664818273
+      }
+    },
+    {
+      "start": "2022-09-01",
+      "end": "2025-09-01",
+      "permutation": {
+        "ACN": "NKE",
+        "GILD": "ACN",
+        "INTU": "GILD",
+        "NKE": "INTU"
+      },
+      "identity": false,
+      "cost_multiplier": 1,
+      "metrics": {
+        "return_pct": 2.2397907200265577,
+        "final_equity": 102239.79072002656,
+        "max_drawdown_pct": 7.47215167546087,
+        "fees": 91.160673473385,
+        "impact_cost": 94.63360649999998,
+        "trade_count": 87,
+        "halted": false,
+        "turnover": 3.147038225706104,
+        "realized_pnl": -3413.0752187320086,
+        "unrealized_pnl": 5652.865938758628,
+        "trading_days": 751,
+        "daily_sharpe": 0.1652132198460786,
+        "average_gross_exposure_pct": 19.485923336118574,
+        "estimated_liquidation_return_pct": 2.2244555949265665
+      }
+    },
+    {
+      "start": "2022-09-01",
+      "end": "2025-09-01",
+      "permutation": {
+        "ACN": "NKE",
+        "GILD": "ACN",
+        "INTU": "GILD",
+        "NKE": "INTU"
+      },
+      "identity": false,
+      "cost_multiplier": 2,
+      "metrics": {
+        "return_pct": 2.0538366513559003,
+        "final_equity": 102053.8366513559,
+        "max_drawdown_pct": 7.49909966035548,
+        "fees": 178.27645764410002,
+        "impact_cost": 188.42189100000002,
+        "trade_count": 85,
+        "halted": false,
+        "turnover": 3.1359890550179084,
+        "realized_pnl": -3582.663042755251,
+        "unrealized_pnl": 5636.499694111143,
+        "trading_days": 751,
+        "daily_sharpe": 0.15385387064284314,
+        "average_gross_exposure_pct": 19.477336279193285,
+        "estimated_liquidation_return_pct": 2.023166401155896
+      }
+    },
+    {
+      "start": "2022-09-01",
+      "end": "2025-09-01",
+      "permutation": {
+        "ACN": "NKE",
+        "GILD": "ACN",
+        "INTU": "INTU",
+        "NKE": "GILD"
+      },
+      "identity": false,
+      "cost_multiplier": 1,
+      "metrics": {
+        "return_pct": -5.149833606184984,
+        "final_equity": 94850.16639381502,
+        "max_drawdown_pct": 10.104654381889544,
+        "fees": 82.62732818495998,
+        "impact_cost": 94.06627799999998,
+        "trade_count": 78,
+        "halted": true,
+        "turnover": 3.155706623264267,
+        "realized_pnl": -5149.833606184967,
+        "unrealized_pnl": 0.0,
+        "trading_days": 751,
+        "daily_sharpe": -0.33492257493455063,
+        "average_gross_exposure_pct": 14.902960511351509,
+        "estimated_liquidation_return_pct": -5.149833606184984
+      }
+    },
+    {
+      "start": "2022-09-01",
+      "end": "2025-09-01",
+      "permutation": {
+        "ACN": "NKE",
+        "GILD": "ACN",
+        "INTU": "INTU",
+        "NKE": "GILD"
+      },
+      "identity": false,
+      "cost_multiplier": 2,
+      "metrics": {
+        "return_pct": -5.3173709687618365,
+        "final_equity": 94682.62903123816,
+        "max_drawdown_pct": 10.15419018248429,
+        "fees": 167.25250876184,
+        "impact_cost": 188.13845999999995,
+        "trade_count": 79,
+        "halted": true,
+        "turnover": 3.158321893773774,
+        "realized_pnl": -5317.370968761845,
+        "unrealized_pnl": 0.0,
+        "trading_days": 751,
+        "daily_sharpe": -0.3464244242045558,
+        "average_gross_exposure_pct": 14.912522501175532,
+        "estimated_liquidation_return_pct": -5.3173709687618365
+      }
+    },
+    {
+      "start": "2022-09-01",
+      "end": "2025-09-01",
+      "permutation": {
+        "ACN": "NKE",
+        "GILD": "GILD",
+        "INTU": "ACN",
+        "NKE": "INTU"
+      },
+      "identity": false,
+      "cost_multiplier": 1,
+      "metrics": {
+        "return_pct": 6.904919419670863,
+        "final_equity": 106904.91941967087,
+        "max_drawdown_pct": 7.507843904261757,
+        "fees": 86.175483329095,
+        "impact_cost": 94.115097,
+        "trade_count": 82,
+        "halted": false,
+        "turnover": 3.03435559730455,
+        "realized_pnl": 985.2103344773982,
+        "unrealized_pnl": 5919.709085193501,
+        "trading_days": 751,
+        "daily_sharpe": 0.4332093936861326,
+        "average_gross_exposure_pct": 19.876641075400727,
+        "estimated_liquidation_return_pct": 6.888942893370875
+      }
+    },
+    {
+      "start": "2022-09-01",
+      "end": "2025-09-01",
+      "permutation": {
+        "ACN": "NKE",
+        "GILD": "GILD",
+        "INTU": "ACN",
+        "NKE": "INTU"
+      },
+      "identity": false,
+      "cost_multiplier": 2,
+      "metrics": {
+        "return_pct": 6.726926367124553,
+        "final_equity": 106726.92636712456,
+        "max_drawdown_pct": 7.515339919251673,
+        "fees": 168.32854087539994,
+        "impact_cost": 187.76509199999998,
+        "trade_count": 80,
+        "halted": false,
+        "turnover": 3.029504801710621,
+        "realized_pnl": 850.2237577031751,
+        "unrealized_pnl": 5876.702609421422,
+        "trading_days": 751,
+        "daily_sharpe": 0.4231565088718771,
+        "average_gross_exposure_pct": 19.87321481408415,
+        "estimated_liquidation_return_pct": 6.695047874724547
+      }
+    },
+    {
+      "start": "2022-09-01",
+      "end": "2025-09-01",
+      "permutation": {
+        "ACN": "NKE",
+        "GILD": "GILD",
+        "INTU": "INTU",
+        "NKE": "ACN"
+      },
+      "identity": false,
+      "cost_multiplier": 1,
+      "metrics": {
+        "return_pct": 11.347323733759684,
+        "final_equity": 111347.3237337597,
+        "max_drawdown_pct": 4.604400949226839,
+        "fees": 79.92435474027998,
+        "impact_cost": 87.59691150000002,
+        "trade_count": 76,
+        "halted": false,
+        "turnover": 2.8393406910374486,
+        "realized_pnl": 4886.135948004335,
+        "unrealized_pnl": 6461.187785755388,
+        "trading_days": 751,
+        "daily_sharpe": 0.6833443104655386,
+        "average_gross_exposure_pct": 19.868449153092577,
+        "estimated_liquidation_return_pct": 11.331528945059688
+      }
+    },
+    {
+      "start": "2022-09-01",
+      "end": "2025-09-01",
+      "permutation": {
+        "ACN": "NKE",
+        "GILD": "GILD",
+        "INTU": "INTU",
+        "NKE": "ACN"
+      },
+      "identity": false,
+      "cost_multiplier": 2,
+      "metrics": {
+        "return_pct": 11.213070969838856,
+        "final_equity": 111213.07096983887,
+        "max_drawdown_pct": 4.619189166235794,
+        "fees": 161.84635416111993,
+        "impact_cost": 175.172676,
+        "trade_count": 77,
+        "halted": false,
+        "turnover": 2.841030903154151,
+        "realized_pnl": 4736.009200621943,
+        "unrealized_pnl": 6477.061769216936,
+        "trading_days": 751,
+        "daily_sharpe": 0.675748821388327,
+        "average_gross_exposure_pct": 19.869479200034128,
+        "estimated_liquidation_return_pct": 11.181481392438863
+      }
+    },
+    {
+      "start": "2022-09-01",
+      "end": "2025-09-01",
+      "permutation": {
+        "ACN": "NKE",
+        "GILD": "INTU",
+        "INTU": "ACN",
+        "NKE": "GILD"
+      },
+      "identity": false,
+      "cost_multiplier": 1,
+      "metrics": {
+        "return_pct": -5.116266143017101,
+        "final_equity": 94883.7338569829,
+        "max_drawdown_pct": 10.101440714323196,
+        "fees": 82.34697201704999,
+        "impact_cost": 88.449171,
+        "trade_count": 78,
+        "halted": true,
+        "turnover": 2.9640041147240637,
+        "realized_pnl": -5116.26614301706,
+        "unrealized_pnl": 0.0,
+        "trading_days": 751,
+        "daily_sharpe": -0.33584602477226483,
+        "average_gross_exposure_pct": 14.93120717523001,
+        "estimated_liquidation_return_pct": -5.116266143017101
+      }
+    },
+    {
+      "start": "2022-09-01",
+      "end": "2025-09-01",
+      "permutation": {
+        "ACN": "NKE",
+        "GILD": "INTU",
+        "INTU": "ACN",
+        "NKE": "GILD"
+      },
+      "identity": false,
+      "cost_multiplier": 2,
+      "metrics": {
+        "return_pct": -5.286170752787889,
+        "final_equity": 94713.82924721211,
+        "max_drawdown_pct": 10.151184785454316,
+        "fees": 166.69146878791997,
+        "impact_cost": 176.89928400000002,
+        "trade_count": 79,
+        "halted": true,
+        "turnover": 2.96647347429996,
+        "realized_pnl": -5286.170752787926,
+        "unrealized_pnl": 0.0,
+        "trading_days": 751,
+        "daily_sharpe": -0.3476116596517834,
+        "average_gross_exposure_pct": 14.942130750578835,
+        "estimated_liquidation_return_pct": -5.286170752787889
+      }
+    },
+    {
+      "start": "2022-09-01",
+      "end": "2025-09-01",
+      "permutation": {
+        "ACN": "NKE",
+        "GILD": "INTU",
+        "INTU": "GILD",
+        "NKE": "ACN"
+      },
+      "identity": false,
+      "cost_multiplier": 1,
+      "metrics": {
+        "return_pct": 6.529432755723574,
+        "final_equity": 106529.43275572358,
+        "max_drawdown_pct": 4.567554088316161,
+        "fees": 87.61266127638001,
+        "impact_cost": 82.334583,
+        "trade_count": 84,
+        "halted": false,
+        "turnover": 2.7387715541525264,
+        "realized_pnl": 329.9247053146252,
+        "unrealized_pnl": 6199.508050408989,
+        "trading_days": 751,
+        "daily_sharpe": 0.4272190708848452,
+        "average_gross_exposure_pct": 19.49646434858607,
+        "estimated_liquidation_return_pct": 6.514156317823572
+      }
+    },
+    {
+      "start": "2022-09-01",
+      "end": "2025-09-01",
+      "permutation": {
+        "ACN": "NKE",
+        "GILD": "INTU",
+        "INTU": "GILD",
+        "NKE": "ACN"
+      },
+      "identity": false,
+      "cost_multiplier": 2,
+      "metrics": {
+        "return_pct": 6.349569229837204,
+        "final_equity": 106349.5692298372,
+        "max_drawdown_pct": 4.582612646591711,
+        "fees": 175.22255916281995,
+        "impact_cost": 164.663211,
+        "trade_count": 84,
+        "halted": false,
+        "turnover": 2.740793086307233,
+        "realized_pnl": 168.74845981504313,
+        "unrealized_pnl": 6180.820770022137,
+        "trading_days": 751,
+        "daily_sharpe": 0.41611574783047595,
+        "average_gross_exposure_pct": 19.515064793059956,
+        "estimated_liquidation_return_pct": 6.319016354037199
+      }
+    }
+  ],
+  "full_archive": "2026-09-21-receivables-permutation.full.json.gz"
+}
