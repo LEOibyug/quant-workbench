@@ -1,0 +1,50 @@
+[
+  {
+    "symbol": "AAPL",
+    "asof": "2025-09-01",
+    "status": "证据不足",
+    "validated": false,
+    "computable": true,
+    "burden": 0.8439640528248123,
+    "accession": "0000320193-24-000123",
+    "sources": {
+      "Assets": {
+        "end": "2024-09-28",
+        "val": 364980000000,
+        "accn": "0000320193-24-000123",
+        "fy": 2024,
+        "fp": "FY",
+        "form": "10-K",
+        "filed": "2024-11-01",
+        "tag": "Assets"
+      },
+      "Liabilities": {
+        "end": "2024-09-28",
+        "val": 308030000000,
+        "accn": "0000320193-24-000123",
+        "fy": 2024,
+        "fp": "FY",
+        "form": "10-K",
+        "filed": "2024-11-01",
+        "tag": "Liabilities"
+      }
+    },
+    "reason": "负债负担可计算，非破产概率；排名依赖股票池，策略适用性未验证"
+  },
+  {
+    "symbol": "ABT",
+    "asof": "2025-09-01",
+    "status": "证据不足",
+    "validated": false,
+    "computable": false,
+    "reason": "同申报同日缺Liabilities"
+  },
+  {
+    "symbol": "USB",
+    "asof": "2025-09-01",
+    "status": "证据不足",
+    "validated": false,
+    "computable": false,
+    "reason": "身份或会计范围未通过"
+  }
+]

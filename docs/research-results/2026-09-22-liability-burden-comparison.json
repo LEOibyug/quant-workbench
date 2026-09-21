@@ -1,0 +1,225 @@
+{
+  "summary": {
+    "negative": 2,
+    "beat_high": 8,
+    "beat_eligible": 8
+  },
+  "comparisons": [
+    {
+      "pool": "original20",
+      "start": "2025-09-01",
+      "end": "2026-09-01",
+      "cost_multiplier": 1,
+      "negative": false,
+      "low_minus_high_pp": -6.1877152275416245,
+      "low_minus_eligible_pp": -2.245552189716693
+    },
+    {
+      "pool": "original20",
+      "start": "2025-09-01",
+      "end": "2026-09-01",
+      "cost_multiplier": 2,
+      "negative": false,
+      "low_minus_high_pp": -6.280521626764845,
+      "low_minus_eligible_pp": -2.197471418832354
+    },
+    {
+      "pool": "alternate20",
+      "start": "2025-09-01",
+      "end": "2026-09-01",
+      "cost_multiplier": 1,
+      "negative": false,
+      "low_minus_high_pp": 18.731691390363526,
+      "low_minus_eligible_pp": 2.038796153196177
+    },
+    {
+      "pool": "alternate20",
+      "start": "2025-09-01",
+      "end": "2026-09-01",
+      "cost_multiplier": 2,
+      "negative": false,
+      "low_minus_high_pp": 18.36503936605095,
+      "low_minus_eligible_pp": 2.162832986385599
+    },
+    {
+      "pool": "random10",
+      "start": "2025-09-01",
+      "end": "2026-09-01",
+      "cost_multiplier": 1,
+      "negative": true,
+      "low_minus_high_pp": 3.9999848086732293,
+      "low_minus_eligible_pp": -0.8219359530239334
+    },
+    {
+      "pool": "random10",
+      "start": "2025-09-01",
+      "end": "2026-09-01",
+      "cost_multiplier": 2,
+      "negative": true,
+      "low_minus_high_pp": 3.8439512745099047,
+      "low_minus_eligible_pp": -0.8156565299957008
+    },
+    {
+      "pool": "transfer12",
+      "start": "2025-09-01",
+      "end": "2026-09-01",
+      "cost_multiplier": 1,
+      "negative": false,
+      "low_minus_high_pp": 1.338967869668295,
+      "low_minus_eligible_pp": 1.2400209546983954
+    },
+    {
+      "pool": "transfer12",
+      "start": "2025-09-01",
+      "end": "2026-09-01",
+      "cost_multiplier": 2,
+      "negative": false,
+      "low_minus_high_pp": 1.3636701612729452,
+      "low_minus_eligible_pp": 1.2263939205085617
+    },
+    {
+      "pool": "random10_temporal",
+      "start": "2022-09-01",
+      "end": "2023-09-01",
+      "cost_multiplier": 1,
+      "negative": false,
+      "low_minus_high_pp": -1.304723828033949,
+      "low_minus_eligible_pp": -0.048475973758699276
+    },
+    {
+      "pool": "random10_temporal",
+      "start": "2022-09-01",
+      "end": "2023-09-01",
+      "cost_multiplier": 2,
+      "negative": false,
+      "low_minus_high_pp": -1.3306670467355675,
+      "low_minus_eligible_pp": -0.0438516936347888
+    },
+    {
+      "pool": "random10_temporal",
+      "start": "2023-09-01",
+      "end": "2024-09-01",
+      "cost_multiplier": 1,
+      "negative": false,
+      "low_minus_high_pp": 0.44999528207965156,
+      "low_minus_eligible_pp": 0.4502609017095427
+    },
+    {
+      "pool": "random10_temporal",
+      "start": "2023-09-01",
+      "end": "2024-09-01",
+      "cost_multiplier": 2,
+      "negative": false,
+      "low_minus_high_pp": 0.45309057671865105,
+      "low_minus_eligible_pp": 0.47266168543835807
+    },
+    {
+      "pool": "random10_temporal",
+      "start": "2024-09-01",
+      "end": "2025-09-01",
+      "cost_multiplier": 1,
+      "negative": false,
+      "low_minus_high_pp": -1.0999277339300617,
+      "low_minus_eligible_pp": 1.5590401033050982
+    },
+    {
+      "pool": "random10_temporal",
+      "start": "2024-09-01",
+      "end": "2025-09-01",
+      "cost_multiplier": 2,
+      "negative": false,
+      "low_minus_high_pp": -1.1071851431200486,
+      "low_minus_eligible_pp": 1.5448977744704218
+    },
+    {
+      "pool": "random10_temporal",
+      "start": "2022-09-01",
+      "end": "2025-09-01",
+      "cost_multiplier": 1,
+      "negative": false,
+      "low_minus_high_pp": 0.5659422750323051,
+      "low_minus_eligible_pp": 2.624872465081318
+    },
+    {
+      "pool": "random10_temporal",
+      "start": "2022-09-01",
+      "end": "2025-09-01",
+      "cost_multiplier": 2,
+      "negative": false,
+      "low_minus_high_pp": 0.5628619806292701,
+      "low_minus_eligible_pp": 2.692729430369778
+    },
+    {
+      "pool": "transfer12_temporal",
+      "start": "2022-09-01",
+      "end": "2023-09-01",
+      "cost_multiplier": 1,
+      "negative": false,
+      "low_minus_high_pp": 1.0329938878687273,
+      "low_minus_eligible_pp": 0.49924419767855
+    },
+    {
+      "pool": "transfer12_temporal",
+      "start": "2022-09-01",
+      "end": "2023-09-01",
+      "cost_multiplier": 2,
+      "negative": false,
+      "low_minus_high_pp": 1.0148082990671048,
+      "low_minus_eligible_pp": 0.39566832394324347
+    },
+    {
+      "pool": "transfer12_temporal",
+      "start": "2023-09-01",
+      "end": "2024-09-01",
+      "cost_multiplier": 1,
+      "negative": false,
+      "low_minus_high_pp": 3.8128904792968044,
+      "low_minus_eligible_pp": 2.198613003642347
+    },
+    {
+      "pool": "transfer12_temporal",
+      "start": "2023-09-01",
+      "end": "2024-09-01",
+      "cost_multiplier": 2,
+      "negative": false,
+      "low_minus_high_pp": 3.811451027387336,
+      "low_minus_eligible_pp": 2.227782449044624
+    },
+    {
+      "pool": "transfer12_temporal",
+      "start": "2024-09-01",
+      "end": "2025-09-01",
+      "cost_multiplier": 1,
+      "negative": true,
+      "low_minus_high_pp": -3.0272925617466195,
+      "low_minus_eligible_pp": -1.6206417600439615
+    },
+    {
+      "pool": "transfer12_temporal",
+      "start": "2024-09-01",
+      "end": "2025-09-01",
+      "cost_multiplier": 2,
+      "negative": true,
+      "low_minus_high_pp": -3.0579402741863104,
+      "low_minus_eligible_pp": -1.5726988936322295
+    },
+    {
+      "pool": "transfer12_temporal",
+      "start": "2022-09-01",
+      "end": "2025-09-01",
+      "cost_multiplier": 1,
+      "negative": false,
+      "low_minus_high_pp": 4.263979119400928,
+      "low_minus_eligible_pp": 3.2561142847880467
+    },
+    {
+      "pool": "transfer12_temporal",
+      "start": "2022-09-01",
+      "end": "2025-09-01",
+      "cost_multiplier": 2,
+      "negative": false,
+      "low_minus_high_pp": 4.198508374349408,
+      "low_minus_eligible_pp": 3.1581278291349157
+    }
+  ]
+}
