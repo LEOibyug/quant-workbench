@@ -1,0 +1,41 @@
+[
+  {
+    "parent": "GE",
+    "child": "GEHC",
+    "first_session": "2023-01-04",
+    "end_exclusive": "2024-04-02",
+    "assumed_parent_shares": 101,
+    "sessions_reconciled": 311,
+    "initial_parent_cost": 8582.98,
+    "parent_basis_after": 67.24416024059222,
+    "child_cost": 1791.3198157001852,
+    "cash_credited": 0,
+    "note": "Hypothetical valuation only; unsettled fractional claim; not strategy return"
+  },
+  {
+    "parent": "GE",
+    "child": "GEV",
+    "first_session": "2024-04-02",
+    "end_exclusive": "2025-09-01",
+    "assumed_parent_shares": 101,
+    "sessions_reconciled": 355,
+    "initial_parent_cost": 17711.36,
+    "parent_basis_after": 139.8263233896478,
+    "child_cost": 3588.901337645573,
+    "cash_credited": 0,
+    "note": "Hypothetical valuation only; unsettled fractional claim; not strategy return"
+  },
+  {
+    "parent": "IBM",
+    "child": "KD",
+    "first_session": "2021-11-04",
+    "end_exclusive": "2025-09-01",
+    "assumed_parent_shares": 101,
+    "sessions_reconciled": 958,
+    "initial_parent_cost": 12840.13,
+    "parent_basis_after": 121.51870941180125,
+    "child_cost": 566.7403494080718,
+    "cash_credited": 0,
+    "note": "Hypothetical valuation only; unsettled fractional claim; not strategy return"
+  }
+]

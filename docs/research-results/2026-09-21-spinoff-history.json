@@ -1,0 +1,35 @@
+{
+  "status": "completed",
+  "results": [
+    {
+      "symbol": "GEHC",
+      "start": "2023-01-04",
+      "end_exclusive": "2025-09-01",
+      "sessions": 666,
+      "path": "artifacts/research/spinoff-history/GEHC/daily.parquet",
+      "sha256": "126d81d829def6a0a3d238773ecbf67a78127414d88ac2c9d36edf3ae7b55ac8",
+      "guard": "expected exchange sessions, unique rows, overnight ratio within [0.65,1.5]",
+      "full_corporate_action_audit": false
+    },
+    {
+      "symbol": "GEV",
+      "start": "2024-04-02",
+      "end_exclusive": "2025-09-01",
+      "sessions": 355,
+      "path": "artifacts/research/spinoff-history/GEV/daily.parquet",
+      "sha256": "ae899c7add8516b318173b973b9b0285fc978a71c015ce18466457259d6b2f37",
+      "guard": "expected exchange sessions, unique rows, overnight ratio within [0.65,1.5]",
+      "full_corporate_action_audit": false
+    },
+    {
+      "symbol": "KD",
+      "start": "2021-11-04",
+      "end_exclusive": "2025-09-01",
+      "sessions": 958,
+      "path": "artifacts/research/spinoff-history/KD/daily.parquet",
+      "sha256": "b934702eae7581b9c6ea25c6100373a6f16ed17669a23e8ee9f94c53f6496066",
+      "guard": "expected exchange sessions, unique rows, overnight ratio within [0.65,1.5]",
+      "full_corporate_action_audit": false
+    }
+  ]
+}
