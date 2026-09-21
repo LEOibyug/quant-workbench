@@ -1,0 +1,6 @@
+{
+  "script_sha256": "7163c6be06db4d766163def666461e2e0efa0edbbf87c86ab04d7dc5312f068d",
+  "protocol": "2026-09-21-session-return-protocol.md",
+  "data_manifest": "2026-09-21-annual-momentum-data.json",
+  "not_production_execution": true
+}
