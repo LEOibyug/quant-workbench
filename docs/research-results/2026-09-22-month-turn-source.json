@@ -1,0 +1,35 @@
+{
+  "url": "https://api.crossref.org/works/10.2139/ssrn.917884",
+  "title": [
+    "Equity Returns at the Turn of the Month"
+  ],
+  "abstract": "<jats:p>A turn-of-the-month effect in U.S. equity returns was initially identified by Lakonishok and Smidt (1988) using the DJIA for the period 1897-1986.  According to the turn-of-the-month effect, equity returns over the interval beginning the last trading day of the month and ending three days later are significantly higher than over other days.  Using CRSP daily returns, we find that the turn-of-the-month effect persists over the recent interval of 1987-2005: in essence, over this 19-year period (and over the 109-year period of 1897-2005) all of the excess market return occurred during the four-day turn-of-the-month interval.  Thus, during the other 16 trading days of the month, on average, investors received no reward for bearing market risk.  We further find that the turn-of-the-month effect is not confined to small or low-priced stocks; it is not confined to the December-January turn-of-the-month; it is not confined to calendar-quarter-ends; it is not confined to the U.S.; and it is not due to market risk as traditionally measured: the standard deviation of returns at the turn-of-the-month is no higher than during other days.  This persistent peculiarity in equity returns poses a challenge to both \"rational\" and \"behavioral\" models of asset pricing.</jats:p>",
+  "authors": [
+    {
+      "given": "Wei",
+      "family": "Xu",
+      "sequence": "first",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "John J.",
+      "family": "McConnell",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    }
+  ],
+  "journal_doi": "10.2469/faj.v64.n2.11",
+  "full_text_read": false
+}
