@@ -1,0 +1,82 @@
+{
+  "sources": [
+    {
+      "symbol": "V",
+      "url": "https://www.sec.gov/Archives/edgar/data/1403161/000140316125000089/v-20250930.htm",
+      "status": 403,
+      "path": "artifacts/research/dividend-sec-filings/V.html",
+      "sha256": "ed7243eac3f5adda9424f551b2e792b68c29dc64f93dcfb91ef51a5e550c652f"
+    },
+    {
+      "symbol": "AVGO",
+      "url": "https://www.sec.gov/Archives/edgar/data/1730168/000173016824000139/avgo-20241103.htm",
+      "status": 403,
+      "path": "artifacts/research/dividend-sec-filings/AVGO.html",
+      "sha256": "8f1d6b97416ae70929308a7ae1b534ed21b6f7045fb29a76b7f25e830b7a9291"
+    },
+    {
+      "symbol": "ACN",
+      "url": "https://www.sec.gov/Archives/edgar/data/1467373/000146737325000217/acn-20250831.htm",
+      "status": 403,
+      "path": "artifacts/research/dividend-sec-filings/ACN.html",
+      "sha256": "2919ae1c9ef321d0b6b9f214ee113118077600deb7bda1b492ba4229154913c8"
+    },
+    {
+      "symbol": "V",
+      "url": "https://www.annualreports.com/HostedData/AnnualReportArchive/v/NYSE_V_2025.pdf",
+      "status": 404,
+      "path": "artifacts/research/dividend-sec-filings/V.pdf",
+      "bytes": 146,
+      "sha256": "55f7d9e99b8e2d4e0e193b2f0275501e6d9c1ebd29cadbea6a0da48a8587e3e0"
+    },
+    {
+      "symbol": "AVGO",
+      "url": "https://www.annualreports.com/HostedData/AnnualReportArchive/a/NASDAQ_AVGO_2024.pdf",
+      "status": 404,
+      "path": "artifacts/research/dividend-sec-filings/AVGO.pdf",
+      "bytes": 146,
+      "sha256": "55f7d9e99b8e2d4e0e193b2f0275501e6d9c1ebd29cadbea6a0da48a8587e3e0"
+    },
+    {
+      "symbol": "ACN",
+      "url": "https://www.annualreports.com/HostedData/AnnualReportArchive/a/NYSE_ACN_2025.pdf",
+      "status": 404,
+      "path": "artifacts/research/dividend-sec-filings/ACN.pdf",
+      "bytes": 146,
+      "sha256": "55f7d9e99b8e2d4e0e193b2f0275501e6d9c1ebd29cadbea6a0da48a8587e3e0"
+    },
+    {
+      "symbol": "AVGO",
+      "url": "https://investors.broadcom.com/news-releases/news-release-details/broadcom-inc-announces-second-quarter-fiscal-year-2024-financial",
+      "status": 200,
+      "path": "artifacts/research/dividend-sec-filings/AVGO-issuer.html",
+      "sha256": "3db73e637fb9cd77375c2e48a5b51ed7b92bf66d323a12f9505cfb199aad1bb2"
+    },
+    {
+      "symbol": "ACN",
+      "url": "https://investor.accenture.com/stock-information/dividend-history",
+      "status": 403,
+      "path": "artifacts/research/dividend-sec-filings/ACN-issuer.html",
+      "sha256": "ae3d4e3f6533e0af36fcf7ea8095bad033e9e3b8a0769b2b395b0fc1ec0d6915"
+    },
+    {
+      "symbol": "V",
+      "url": "https://investor.visa.com/financial-information/quarterly-earnings/default.aspx",
+      "status": 429,
+      "path": "artifacts/research/dividend-sec-filings/V-issuer.html",
+      "sha256": "b4b01ba2e934d020b5b0a3b291da66833eda4e0ce7fa4bf56bdf2e3de804012f"
+    }
+  ],
+  "verified_broadcom": {
+    "announcement_date": "2024-06-12",
+    "split_ratio": "10:1",
+    "first_split_adjusted_trading_date": "2024-07-15",
+    "issuer_paid_dividend_date": "2024-03-29",
+    "issuer_paid_per_share": "5.25",
+    "supplier_payable_date": "2024-04-02",
+    "normalized_annual_per_share": "2.105",
+    "normalization": "3 * 5.25 / 10 + 0.53",
+    "scope": "One split-unit reconciliation; does not verify all ex-dates/payment times or net tax"
+  },
+  "other_discrepancies_unresolved": true
+}
