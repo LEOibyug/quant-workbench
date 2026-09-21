@@ -1,0 +1,22 @@
+{
+  "path": "artifacts/research/transfer12-2026-09-21/daily.parquet",
+  "sha256": "2337f56b5d4cada16f9c9d5106ba84a18ce51c921d9a190e3923204859d6b664",
+  "symbols": [
+    "ABT",
+    "ADP",
+    "AMT",
+    "BLK",
+    "CME",
+    "DUK",
+    "LIN",
+    "MDT",
+    "SPGI",
+    "UPS",
+    "USB",
+    "VZ"
+  ],
+  "rows": 6264,
+  "full_corporate_action_audit": false,
+  "adjustment": "raw",
+  "feed": "sip"
+}

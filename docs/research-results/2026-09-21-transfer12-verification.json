@@ -1,0 +1,11 @@
+{
+  "complete_calendars": 12,
+  "accounts": 8,
+  "protocol_commit": "10e66fe",
+  "hashes": {
+    "scripts/study_transfer12.py": "fa7db1d2a0f17e124a2850470d7cde8579c75e470df0965be817584bc2fde855",
+    "scripts/study_erc.py": "c9af2d2176a78cf6c2c0bed6fb7db428ad7a1e484289afe1473a76f0dbf44cca",
+    "backend/src/quant_workbench/daily_strategies.py": "3f66ce4779a4714a66cfe1e4635c766d1f0b562702613680363d9a8e76ffc180",
+    "backend/src/quant_workbench/position.py": "1e6623296d3047befe148eb223908a473eb61c055cdaf6ee609723d658c2cab1"
+  }
+}
