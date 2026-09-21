@@ -655,6 +655,7 @@ def simulate_positions(
             {
                 "research_dividends": {
                     "events": research_dividends.audit,
+                    "data_status": dividend_value["data_status"],
                     "policy": (
                         "gross USD; recognize ex-date; pay after close; "
                         "retained-share dividend stop credit"

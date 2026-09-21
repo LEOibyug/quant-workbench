@@ -64,3 +64,19 @@ def test_ambiguous_unverified_and_missing_snapshots_rejected_before_mutation():
     b.after_close("2024-02-08")
     with pytest.raises(ValueError):
         b.before_open("2024-02-12", {"A": 10, "B": 10})
+
+
+def test_source_rate_scenario_never_promotes_unverified_events():
+    e = event(verified=False, currency=None)
+    with pytest.raises(ValueError):
+        CashDividendBook([e])
+    with pytest.raises(ValueError):
+        CashDividendBook([e], source_rate_scenario=True)
+    e["scenario_assumption"] = "USD gross source rate"
+    book = CashDividendBook([e], source_rate_scenario=True)
+    book.before_open("2024-02-09", {"A": 10})
+    assert book.snapshot()["data_status"] == "unverified_source_rate_scenario"
+    assert book.events[0]["verified"] is False and book.events[0]["currency"] is None
+    assert book.after_close("2024-02-09") == 0
+    with pytest.raises(ValueError):
+        CashDividendBook([{**e, "special": True}], source_rate_scenario=True)

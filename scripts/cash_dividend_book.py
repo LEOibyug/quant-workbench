@@ -18,13 +18,21 @@ def money(value):
 
 
 class CashDividendBook:
-    def __init__(self, events):
+    def __init__(self, events, *, source_rate_scenario=False):
+        self.source_rate_scenario = source_rate_scenario
         self.events = deepcopy(events)
         ids, economic_keys = set(), set()
         for e in self.events:
             if not e.get("id") or not e.get("symbol") or not e.get("evidence"):
                 raise ValueError("Event identity and evidence required")
-            if e.get("verified") is not True or e.get("currency") != "USD":
+            if source_rate_scenario:
+                if (
+                    e.get("verified") is not False
+                    or e.get("currency") not in (None, "USD")
+                    or e.get("scenario_assumption") != "USD gross source rate"
+                ):
+                    raise ValueError("Explicit unverified source-rate scenario required")
+            elif e.get("verified") is not True or e.get("currency") != "USD":
                 raise ValueError("Verified USD event required")
             if e.get("kind") != "ordinary_cash" or e.get("amount_basis") != "gross":
                 raise ValueError("Only ordinary gross cash distributions supported")
@@ -67,6 +75,11 @@ class CashDividendBook:
             entry["income"] += amount
             entry["paid" if claim["paid"] else "receivable"] += amount
         return dict(
+            data_status=(
+                "unverified_source_rate_scenario"
+                if self.source_rate_scenario
+                else "caller_verified_events"
+            ),
             income=float(self.total_earned),
             paid=float(self.total_paid),
             receivable=float(self.receivable),
