@@ -1,0 +1,4072 @@
+{
+  "results": [
+    {
+      "symbol": "AAPL",
+      "asof": "2022-09-01",
+      "status": "证据不足",
+      "method": "cash-payout-audit-v0",
+      "candidate_eligible": false,
+      "reasons": [
+        "最近共同财务年度陈旧，超过550日"
+      ],
+      "sources": {},
+      "available_annual_components": {
+        "repurchases": 27,
+        "dividends": 2,
+        "issuance": 42
+      }
+    },
+    {
+      "symbol": "AAPL",
+      "asof": "2023-09-01",
+      "status": "证据不足",
+      "method": "cash-payout-audit-v0",
+      "candidate_eligible": false,
+      "reasons": [
+        "最近共同财务年度陈旧，超过550日"
+      ],
+      "sources": {},
+      "available_annual_components": {
+        "repurchases": 30,
+        "dividends": 2,
+        "issuance": 42
+      }
+    },
+    {
+      "symbol": "AAPL",
+      "asof": "2024-09-01",
+      "status": "证据不足",
+      "method": "cash-payout-audit-v0",
+      "candidate_eligible": false,
+      "reasons": [
+        "最近共同财务年度陈旧，超过550日"
+      ],
+      "sources": {},
+      "available_annual_components": {
+        "repurchases": 33,
+        "dividends": 2,
+        "issuance": 42
+      }
+    },
+    {
+      "symbol": "AAPL",
+      "asof": "2025-09-01",
+      "status": "证据不足",
+      "method": "cash-payout-audit-v0",
+      "candidate_eligible": false,
+      "reasons": [
+        "最近共同财务年度陈旧，超过550日"
+      ],
+      "sources": {},
+      "available_annual_components": {
+        "repurchases": 36,
+        "dividends": 2,
+        "issuance": 42
+      }
+    },
+    {
+      "symbol": "ABBV",
+      "asof": "2022-09-01",
+      "status": "证据不足",
+      "method": "cash-payout-audit-v0",
+      "candidate_eligible": false,
+      "reasons": [
+        "缺少同一申报、相同年度起止的普通股回购/分红/发行现金记录；不补零"
+      ],
+      "sources": {},
+      "available_annual_components": {
+        "repurchases": 24,
+        "dividends": 0,
+        "issuance": 0
+      }
+    },
+    {
+      "symbol": "ABBV",
+      "asof": "2023-09-01",
+      "status": "证据不足",
+      "method": "cash-payout-audit-v0",
+      "candidate_eligible": false,
+      "reasons": [
+        "缺少同一申报、相同年度起止的普通股回购/分红/发行现金记录；不补零"
+      ],
+      "sources": {},
+      "available_annual_components": {
+        "repurchases": 27,
+        "dividends": 0,
+        "issuance": 0
+      }
+    },
+    {
+      "symbol": "ABBV",
+      "asof": "2024-09-01",
+      "status": "证据不足",
+      "method": "cash-payout-audit-v0",
+      "candidate_eligible": false,
+      "reasons": [
+        "缺少同一申报、相同年度起止的普通股回购/分红/发行现金记录；不补零"
+      ],
+      "sources": {},
+      "available_annual_components": {
+        "repurchases": 30,
+        "dividends": 0,
+        "issuance": 0
+      }
+    },
+    {
+      "symbol": "ABBV",
+      "asof": "2025-09-01",
+      "status": "证据不足",
+      "method": "cash-payout-audit-v0",
+      "candidate_eligible": false,
+      "reasons": [
+        "缺少同一申报、相同年度起止的普通股回购/分红/发行现金记录；不补零"
+      ],
+      "sources": {},
+      "available_annual_components": {
+        "repurchases": 33,
+        "dividends": 0,
+        "issuance": 0
+      }
+    },
+    {
+      "symbol": "ACN",
+      "asof": "2022-09-01",
+      "status": "证据不足",
+      "method": "cash-payout-audit-v0",
+      "candidate_eligible": false,
+      "reasons": [
+        "缺少同一申报、相同年度起止的普通股回购/分红/发行现金记录；不补零"
+      ],
+      "sources": {},
+      "available_annual_components": {
+        "repurchases": 36,
+        "dividends": 36,
+        "issuance": 0
+      }
+    },
+    {
+      "symbol": "ACN",
+      "asof": "2023-09-01",
+      "status": "证据不足",
+      "method": "cash-payout-audit-v0",
+      "candidate_eligible": false,
+      "reasons": [
+        "缺少同一申报、相同年度起止的普通股回购/分红/发行现金记录；不补零"
+      ],
+      "sources": {},
+      "available_annual_components": {
+        "repurchases": 39,
+        "dividends": 39,
+        "issuance": 0
+      }
+    },
+    {
+      "symbol": "ACN",
+      "asof": "2024-09-01",
+      "status": "证据不足",
+      "method": "cash-payout-audit-v0",
+      "candidate_eligible": false,
+      "reasons": [
+        "缺少同一申报、相同年度起止的普通股回购/分红/发行现金记录；不补零"
+      ],
+      "sources": {},
+      "available_annual_components": {
+        "repurchases": 42,
+        "dividends": 39,
+        "issuance": 0
+      }
+    },
+    {
+      "symbol": "ACN",
+      "asof": "2025-09-01",
+      "status": "证据不足",
+      "method": "cash-payout-audit-v0",
+      "candidate_eligible": false,
+      "reasons": [
+        "缺少同一申报、相同年度起止的普通股回购/分红/发行现金记录；不补零"
+      ],
+      "sources": {},
+      "available_annual_components": {
+        "repurchases": 45,
+        "dividends": 39,
+        "issuance": 0
+      }
+    },
+    {
+      "symbol": "ADBE",
+      "asof": "2022-09-01",
+      "status": "证据不足",
+      "method": "cash-payout-audit-v0",
+      "candidate_eligible": false,
+      "reasons": [
+        "缺少同一申报、相同年度起止的普通股回购/分红/发行现金记录；不补零"
+      ],
+      "sources": {},
+      "available_annual_components": {
+        "repurchases": 39,
+        "dividends": 0,
+        "issuance": 0
+      }
+    },
+    {
+      "symbol": "ADBE",
+      "asof": "2023-09-01",
+      "status": "证据不足",
+      "method": "cash-payout-audit-v0",
+      "candidate_eligible": false,
+      "reasons": [
+        "缺少同一申报、相同年度起止的普通股回购/分红/发行现金记录；不补零"
+      ],
+      "sources": {},
+      "available_annual_components": {
+        "repurchases": 42,
+        "dividends": 0,
+        "issuance": 0
+      }
+    },
+    {
+      "symbol": "ADBE",
+      "asof": "2024-09-01",
+      "status": "证据不足",
+      "method": "cash-payout-audit-v0",
+      "candidate_eligible": false,
+      "reasons": [
+        "缺少同一申报、相同年度起止的普通股回购/分红/发行现金记录；不补零"
+      ],
+      "sources": {},
+      "available_annual_components": {
+        "repurchases": 45,
+        "dividends": 0,
+        "issuance": 0
+      }
+    },
+    {
+      "symbol": "ADBE",
+      "asof": "2025-09-01",
+      "status": "证据不足",
+      "method": "cash-payout-audit-v0",
+      "candidate_eligible": false,
+      "reasons": [
+        "缺少同一申报、相同年度起止的普通股回购/分红/发行现金记录；不补零"
+      ],
+      "sources": {},
+      "available_annual_components": {
+        "repurchases": 48,
+        "dividends": 0,
+        "issuance": 0
+      }
+    },
+    {
+      "symbol": "AMD",
+      "asof": "2022-09-01",
+      "status": "证据不足",
+      "method": "cash-payout-audit-v0",
+      "candidate_eligible": false,
+      "reasons": [
+        "缺少同一申报、相同年度起止的普通股回购/分红/发行现金记录；不补零"
+      ],
+      "sources": {},
+      "available_annual_components": {
+        "repurchases": 3,
+        "dividends": 0,
+        "issuance": 26
+      }
+    },
+    {
+      "symbol": "AMD",
+      "asof": "2023-09-01",
+      "status": "证据不足",
+      "method": "cash-payout-audit-v0",
+      "candidate_eligible": false,
+      "reasons": [
+        "缺少同一申报、相同年度起止的普通股回购/分红/发行现金记录；不补零"
+      ],
+      "sources": {},
+      "available_annual_components": {
+        "repurchases": 6,
+        "dividends": 0,
+        "issuance": 26
+      }
+    },
+    {
+      "symbol": "AMD",
+      "asof": "2024-09-01",
+      "status": "证据不足",
+      "method": "cash-payout-audit-v0",
+      "candidate_eligible": false,
+      "reasons": [
+        "缺少同一申报、相同年度起止的普通股回购/分红/发行现金记录；不补零"
+      ],
+      "sources": {},
+      "available_annual_components": {
+        "repurchases": 9,
+        "dividends": 0,
+        "issuance": 26
+      }
+    },
+    {
+      "symbol": "AMD",
+      "asof": "2025-09-01",
+      "status": "证据不足",
+      "method": "cash-payout-audit-v0",
+      "candidate_eligible": false,
+      "reasons": [
+        "缺少同一申报、相同年度起止的普通股回购/分红/发行现金记录；不补零"
+      ],
+      "sources": {},
+      "available_annual_components": {
+        "repurchases": 12,
+        "dividends": 0,
+        "issuance": 26
+      }
+    },
+    {
+      "symbol": "AMZN",
+      "asof": "2022-09-01",
+      "status": "证据不足",
+      "method": "cash-payout-audit-v0",
+      "candidate_eligible": false,
+      "reasons": [
+        "缺少同一申报、相同年度起止的普通股回购/分红/发行现金记录；不补零"
+      ],
+      "sources": {},
+      "available_annual_components": {
+        "repurchases": 13,
+        "dividends": 0,
+        "issuance": 0
+      }
+    },
+    {
+      "symbol": "AMZN",
+      "asof": "2023-09-01",
+      "status": "证据不足",
+      "method": "cash-payout-audit-v0",
+      "candidate_eligible": false,
+      "reasons": [
+        "缺少同一申报、相同年度起止的普通股回购/分红/发行现金记录；不补零"
+      ],
+      "sources": {},
+      "available_annual_components": {
+        "repurchases": 16,
+        "dividends": 0,
+        "issuance": 0
+      }
+    },
+    {
+      "symbol": "AMZN",
+      "asof": "2024-09-01",
+      "status": "证据不足",
+      "method": "cash-payout-audit-v0",
+      "candidate_eligible": false,
+      "reasons": [
+        "缺少同一申报、相同年度起止的普通股回购/分红/发行现金记录；不补零"
+      ],
+      "sources": {},
+      "available_annual_components": {
+        "repurchases": 19,
+        "dividends": 0,
+        "issuance": 0
+      }
+    },
+    {
+      "symbol": "AMZN",
+      "asof": "2025-09-01",
+      "status": "证据不足",
+      "method": "cash-payout-audit-v0",
+      "candidate_eligible": false,
+      "reasons": [
+        "缺少同一申报、相同年度起止的普通股回购/分红/发行现金记录；不补零"
+      ],
+      "sources": {},
+      "available_annual_components": {
+        "repurchases": 22,
+        "dividends": 0,
+        "issuance": 0
+      }
+    },
+    {
+      "symbol": "AVGO",
+      "asof": "2022-09-01",
+      "status": "证据不足",
+      "method": "cash-payout-audit-v0",
+      "candidate_eligible": false,
+      "reasons": [
+        "现金发行不覆盖非现金股权薪酬、换股并购与可转债转股，不能据此判断净稀释",
+        "期权行权现金与普通股发行标签可能重叠，尚未查阅报表附注，不相加",
+        "尚无判断时点的完整历史总市值分母，不输出净派息收益率",
+        "财务字段可计算不等于策略适用性已验证"
+      ],
+      "sources": {
+        "repurchases": {
+          "start": "2020-11-02",
+          "end": "2021-10-31",
+          "val": 0,
+          "accn": "0001730168-21-000153",
+          "fy": 2021,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2021-12-17",
+          "tag": "PaymentsForRepurchaseOfCommonStock"
+        },
+        "dividends": {
+          "start": "2020-11-02",
+          "end": "2021-10-31",
+          "val": 5913000000,
+          "accn": "0001730168-21-000153",
+          "fy": 2021,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2021-12-17",
+          "tag": "PaymentsOfDividendsCommonStock"
+        },
+        "issuance": {
+          "start": "2020-11-02",
+          "end": "2021-10-31",
+          "val": 170000000,
+          "accn": "0001730168-21-000153",
+          "fy": 2021,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2021-12-17",
+          "tag": "ProceedsFromIssuanceOfCommonStock"
+        }
+      },
+      "available_annual_components": {
+        "repurchases": 12,
+        "dividends": 12,
+        "issuance": 9
+      },
+      "fiscal_end": "2021-10-31",
+      "cash_components_complete": true,
+      "cash_net_payout_usd": 5743000000,
+      "same_filing_option_proceeds": []
+    },
+    {
+      "symbol": "AVGO",
+      "asof": "2023-09-01",
+      "status": "证据不足",
+      "method": "cash-payout-audit-v0",
+      "candidate_eligible": false,
+      "reasons": [
+        "现金发行不覆盖非现金股权薪酬、换股并购与可转债转股，不能据此判断净稀释",
+        "期权行权现金与普通股发行标签可能重叠，尚未查阅报表附注，不相加",
+        "尚无判断时点的完整历史总市值分母，不输出净派息收益率",
+        "财务字段可计算不等于策略适用性已验证"
+      ],
+      "sources": {
+        "repurchases": {
+          "start": "2021-11-01",
+          "end": "2022-10-30",
+          "val": 7000000000,
+          "accn": "0001730168-22-000118",
+          "fy": 2022,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2022-12-16",
+          "tag": "PaymentsForRepurchaseOfCommonStock"
+        },
+        "dividends": {
+          "start": "2021-11-01",
+          "end": "2022-10-30",
+          "val": 6733000000,
+          "accn": "0001730168-22-000118",
+          "fy": 2022,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2022-12-16",
+          "tag": "PaymentsOfDividendsCommonStock"
+        },
+        "issuance": {
+          "start": "2021-11-01",
+          "end": "2022-10-30",
+          "val": 114000000,
+          "accn": "0001730168-22-000118",
+          "fy": 2022,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2022-12-16",
+          "tag": "ProceedsFromIssuanceOfCommonStock"
+        }
+      },
+      "available_annual_components": {
+        "repurchases": 15,
+        "dividends": 15,
+        "issuance": 12
+      },
+      "fiscal_end": "2022-10-30",
+      "cash_components_complete": true,
+      "cash_net_payout_usd": 13619000000,
+      "same_filing_option_proceeds": []
+    },
+    {
+      "symbol": "AVGO",
+      "asof": "2024-09-01",
+      "status": "证据不足",
+      "method": "cash-payout-audit-v0",
+      "candidate_eligible": false,
+      "reasons": [
+        "现金发行不覆盖非现金股权薪酬、换股并购与可转债转股，不能据此判断净稀释",
+        "期权行权现金与普通股发行标签可能重叠，尚未查阅报表附注，不相加",
+        "尚无判断时点的完整历史总市值分母，不输出净派息收益率",
+        "财务字段可计算不等于策略适用性已验证"
+      ],
+      "sources": {
+        "repurchases": {
+          "start": "2022-10-31",
+          "end": "2023-10-29",
+          "val": 5824000000,
+          "accn": "0001730168-23-000096",
+          "fy": 2023,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2023-12-14",
+          "tag": "PaymentsForRepurchaseOfCommonStock"
+        },
+        "dividends": {
+          "start": "2022-10-31",
+          "end": "2023-10-29",
+          "val": 7645000000,
+          "accn": "0001730168-23-000096",
+          "fy": 2023,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2023-12-14",
+          "tag": "PaymentsOfDividendsCommonStock"
+        },
+        "issuance": {
+          "start": "2022-10-31",
+          "end": "2023-10-29",
+          "val": 122000000,
+          "accn": "0001730168-23-000096",
+          "fy": 2023,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2023-12-14",
+          "tag": "ProceedsFromIssuanceOfCommonStock"
+        }
+      },
+      "available_annual_components": {
+        "repurchases": 18,
+        "dividends": 18,
+        "issuance": 15
+      },
+      "fiscal_end": "2023-10-29",
+      "cash_components_complete": true,
+      "cash_net_payout_usd": 13347000000,
+      "same_filing_option_proceeds": []
+    },
+    {
+      "symbol": "AVGO",
+      "asof": "2025-09-01",
+      "status": "证据不足",
+      "method": "cash-payout-audit-v0",
+      "candidate_eligible": false,
+      "reasons": [
+        "现金发行不覆盖非现金股权薪酬、换股并购与可转债转股，不能据此判断净稀释",
+        "期权行权现金与普通股发行标签可能重叠，尚未查阅报表附注，不相加",
+        "尚无判断时点的完整历史总市值分母，不输出净派息收益率",
+        "财务字段可计算不等于策略适用性已验证"
+      ],
+      "sources": {
+        "repurchases": {
+          "start": "2023-10-30",
+          "end": "2024-11-03",
+          "val": 7176000000,
+          "accn": "0001730168-24-000139",
+          "fy": 2024,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2024-12-20",
+          "tag": "PaymentsForRepurchaseOfCommonStock"
+        },
+        "dividends": {
+          "start": "2023-10-30",
+          "end": "2024-11-03",
+          "val": 9814000000,
+          "accn": "0001730168-24-000139",
+          "fy": 2024,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2024-12-20",
+          "tag": "PaymentsOfDividendsCommonStock"
+        },
+        "issuance": {
+          "start": "2023-10-30",
+          "end": "2024-11-03",
+          "val": 190000000,
+          "accn": "0001730168-24-000139",
+          "fy": 2024,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2024-12-20",
+          "tag": "ProceedsFromIssuanceOfCommonStock"
+        }
+      },
+      "available_annual_components": {
+        "repurchases": 21,
+        "dividends": 21,
+        "issuance": 18
+      },
+      "fiscal_end": "2024-11-03",
+      "cash_components_complete": true,
+      "cash_net_payout_usd": 16800000000,
+      "same_filing_option_proceeds": []
+    },
+    {
+      "symbol": "BAC",
+      "asof": "2022-09-01",
+      "status": "证据不足",
+      "method": "cash-payout-audit-v0",
+      "candidate_eligible": false,
+      "reasons": [
+        "缺少同一申报、相同年度起止的普通股回购/分红/发行现金记录；不补零"
+      ],
+      "sources": {},
+      "available_annual_components": {
+        "repurchases": 28,
+        "dividends": 0,
+        "issuance": 8
+      }
+    },
+    {
+      "symbol": "BAC",
+      "asof": "2023-09-01",
+      "status": "证据不足",
+      "method": "cash-payout-audit-v0",
+      "candidate_eligible": false,
+      "reasons": [
+        "缺少同一申报、相同年度起止的普通股回购/分红/发行现金记录；不补零"
+      ],
+      "sources": {},
+      "available_annual_components": {
+        "repurchases": 31,
+        "dividends": 0,
+        "issuance": 8
+      }
+    },
+    {
+      "symbol": "BAC",
+      "asof": "2024-09-01",
+      "status": "证据不足",
+      "method": "cash-payout-audit-v0",
+      "candidate_eligible": false,
+      "reasons": [
+        "缺少同一申报、相同年度起止的普通股回购/分红/发行现金记录；不补零"
+      ],
+      "sources": {},
+      "available_annual_components": {
+        "repurchases": 34,
+        "dividends": 0,
+        "issuance": 8
+      }
+    },
+    {
+      "symbol": "BAC",
+      "asof": "2025-09-01",
+      "status": "证据不足",
+      "method": "cash-payout-audit-v0",
+      "candidate_eligible": false,
+      "reasons": [
+        "缺少同一申报、相同年度起止的普通股回购/分红/发行现金记录；不补零"
+      ],
+      "sources": {},
+      "available_annual_components": {
+        "repurchases": 37,
+        "dividends": 0,
+        "issuance": 8
+      }
+    },
+    {
+      "symbol": "BRK.B",
+      "asof": "2022-09-01",
+      "status": "证据不足",
+      "method": "cash-payout-audit-v0",
+      "candidate_eligible": false,
+      "reasons": [
+        "缺少同一申报、相同年度起止的普通股回购/分红/发行现金记录；不补零"
+      ],
+      "sources": {},
+      "available_annual_components": {
+        "repurchases": 11,
+        "dividends": 0,
+        "issuance": 0
+      }
+    },
+    {
+      "symbol": "BRK.B",
+      "asof": "2023-09-01",
+      "status": "证据不足",
+      "method": "cash-payout-audit-v0",
+      "candidate_eligible": false,
+      "reasons": [
+        "缺少同一申报、相同年度起止的普通股回购/分红/发行现金记录；不补零"
+      ],
+      "sources": {},
+      "available_annual_components": {
+        "repurchases": 14,
+        "dividends": 0,
+        "issuance": 0
+      }
+    },
+    {
+      "symbol": "BRK.B",
+      "asof": "2024-09-01",
+      "status": "证据不足",
+      "method": "cash-payout-audit-v0",
+      "candidate_eligible": false,
+      "reasons": [
+        "缺少同一申报、相同年度起止的普通股回购/分红/发行现金记录；不补零"
+      ],
+      "sources": {},
+      "available_annual_components": {
+        "repurchases": 17,
+        "dividends": 0,
+        "issuance": 0
+      }
+    },
+    {
+      "symbol": "BRK.B",
+      "asof": "2025-09-01",
+      "status": "证据不足",
+      "method": "cash-payout-audit-v0",
+      "candidate_eligible": false,
+      "reasons": [
+        "缺少同一申报、相同年度起止的普通股回购/分红/发行现金记录；不补零"
+      ],
+      "sources": {},
+      "available_annual_components": {
+        "repurchases": 20,
+        "dividends": 0,
+        "issuance": 0
+      }
+    },
+    {
+      "symbol": "CAT",
+      "asof": "2022-09-01",
+      "status": "证据不足",
+      "method": "cash-payout-audit-v0",
+      "candidate_eligible": false,
+      "reasons": [
+        "缺少同一申报、相同年度起止的普通股回购/分红/发行现金记录；不补零"
+      ],
+      "sources": {},
+      "available_annual_components": {
+        "repurchases": 31,
+        "dividends": 36,
+        "issuance": 0
+      }
+    },
+    {
+      "symbol": "CAT",
+      "asof": "2023-09-01",
+      "status": "证据不足",
+      "method": "cash-payout-audit-v0",
+      "candidate_eligible": false,
+      "reasons": [
+        "缺少同一申报、相同年度起止的普通股回购/分红/发行现金记录；不补零"
+      ],
+      "sources": {},
+      "available_annual_components": {
+        "repurchases": 34,
+        "dividends": 39,
+        "issuance": 0
+      }
+    },
+    {
+      "symbol": "CAT",
+      "asof": "2024-09-01",
+      "status": "证据不足",
+      "method": "cash-payout-audit-v0",
+      "candidate_eligible": false,
+      "reasons": [
+        "缺少同一申报、相同年度起止的普通股回购/分红/发行现金记录；不补零"
+      ],
+      "sources": {},
+      "available_annual_components": {
+        "repurchases": 37,
+        "dividends": 42,
+        "issuance": 0
+      }
+    },
+    {
+      "symbol": "CAT",
+      "asof": "2025-09-01",
+      "status": "证据不足",
+      "method": "cash-payout-audit-v0",
+      "candidate_eligible": false,
+      "reasons": [
+        "缺少同一申报、相同年度起止的普通股回购/分红/发行现金记录；不补零"
+      ],
+      "sources": {},
+      "available_annual_components": {
+        "repurchases": 40,
+        "dividends": 45,
+        "issuance": 0
+      }
+    },
+    {
+      "symbol": "COST",
+      "asof": "2022-09-01",
+      "status": "证据不足",
+      "method": "cash-payout-audit-v0",
+      "candidate_eligible": false,
+      "reasons": [
+        "缺少同一申报、相同年度起止的普通股回购/分红/发行现金记录；不补零"
+      ],
+      "sources": {},
+      "available_annual_components": {
+        "repurchases": 36,
+        "dividends": 0,
+        "issuance": 0
+      }
+    },
+    {
+      "symbol": "COST",
+      "asof": "2023-09-01",
+      "status": "证据不足",
+      "method": "cash-payout-audit-v0",
+      "candidate_eligible": false,
+      "reasons": [
+        "缺少同一申报、相同年度起止的普通股回购/分红/发行现金记录；不补零"
+      ],
+      "sources": {},
+      "available_annual_components": {
+        "repurchases": 39,
+        "dividends": 3,
+        "issuance": 0
+      }
+    },
+    {
+      "symbol": "COST",
+      "asof": "2024-09-01",
+      "status": "证据不足",
+      "method": "cash-payout-audit-v0",
+      "candidate_eligible": false,
+      "reasons": [
+        "缺少同一申报、相同年度起止的普通股回购/分红/发行现金记录；不补零"
+      ],
+      "sources": {},
+      "available_annual_components": {
+        "repurchases": 42,
+        "dividends": 6,
+        "issuance": 0
+      }
+    },
+    {
+      "symbol": "COST",
+      "asof": "2025-09-01",
+      "status": "证据不足",
+      "method": "cash-payout-audit-v0",
+      "candidate_eligible": false,
+      "reasons": [
+        "缺少同一申报、相同年度起止的普通股回购/分红/发行现金记录；不补零"
+      ],
+      "sources": {},
+      "available_annual_components": {
+        "repurchases": 45,
+        "dividends": 9,
+        "issuance": 0
+      }
+    },
+    {
+      "symbol": "CRM",
+      "asof": "2022-09-01",
+      "status": "证据不足",
+      "method": "cash-payout-audit-v0",
+      "candidate_eligible": false,
+      "reasons": [
+        "缺少同一申报、相同年度起止的普通股回购/分红/发行现金记录；不补零"
+      ],
+      "sources": {},
+      "available_annual_components": {
+        "repurchases": 0,
+        "dividends": 0,
+        "issuance": 0
+      }
+    },
+    {
+      "symbol": "CRM",
+      "asof": "2023-09-01",
+      "status": "证据不足",
+      "method": "cash-payout-audit-v0",
+      "candidate_eligible": false,
+      "reasons": [
+        "缺少同一申报、相同年度起止的普通股回购/分红/发行现金记录；不补零"
+      ],
+      "sources": {},
+      "available_annual_components": {
+        "repurchases": 3,
+        "dividends": 0,
+        "issuance": 0
+      }
+    },
+    {
+      "symbol": "CRM",
+      "asof": "2024-09-01",
+      "status": "证据不足",
+      "method": "cash-payout-audit-v0",
+      "candidate_eligible": false,
+      "reasons": [
+        "缺少同一申报、相同年度起止的普通股回购/分红/发行现金记录；不补零"
+      ],
+      "sources": {},
+      "available_annual_components": {
+        "repurchases": 6,
+        "dividends": 0,
+        "issuance": 0
+      }
+    },
+    {
+      "symbol": "CRM",
+      "asof": "2025-09-01",
+      "status": "证据不足",
+      "method": "cash-payout-audit-v0",
+      "candidate_eligible": false,
+      "reasons": [
+        "缺少同一申报、相同年度起止的普通股回购/分红/发行现金记录；不补零"
+      ],
+      "sources": {},
+      "available_annual_components": {
+        "repurchases": 9,
+        "dividends": 0,
+        "issuance": 0
+      }
+    },
+    {
+      "symbol": "CSCO",
+      "asof": "2022-09-01",
+      "status": "证据不足",
+      "method": "cash-payout-audit-v0",
+      "candidate_eligible": false,
+      "reasons": [
+        "缺少同一申报、相同年度起止的普通股回购/分红/发行现金记录；不补零"
+      ],
+      "sources": {},
+      "available_annual_components": {
+        "repurchases": 36,
+        "dividends": 0,
+        "issuance": 36
+      }
+    },
+    {
+      "symbol": "CSCO",
+      "asof": "2023-09-01",
+      "status": "证据不足",
+      "method": "cash-payout-audit-v0",
+      "candidate_eligible": false,
+      "reasons": [
+        "缺少同一申报、相同年度起止的普通股回购/分红/发行现金记录；不补零"
+      ],
+      "sources": {},
+      "available_annual_components": {
+        "repurchases": 39,
+        "dividends": 0,
+        "issuance": 39
+      }
+    },
+    {
+      "symbol": "CSCO",
+      "asof": "2024-09-01",
+      "status": "证据不足",
+      "method": "cash-payout-audit-v0",
+      "candidate_eligible": false,
+      "reasons": [
+        "缺少同一申报、相同年度起止的普通股回购/分红/发行现金记录；不补零"
+      ],
+      "sources": {},
+      "available_annual_components": {
+        "repurchases": 42,
+        "dividends": 0,
+        "issuance": 42
+      }
+    },
+    {
+      "symbol": "CSCO",
+      "asof": "2025-09-01",
+      "status": "证据不足",
+      "method": "cash-payout-audit-v0",
+      "candidate_eligible": false,
+      "reasons": [
+        "缺少同一申报、相同年度起止的普通股回购/分红/发行现金记录；不补零"
+      ],
+      "sources": {},
+      "available_annual_components": {
+        "repurchases": 45,
+        "dividends": 0,
+        "issuance": 45
+      }
+    },
+    {
+      "symbol": "CVX",
+      "asof": "2022-09-01",
+      "status": "证据不足",
+      "method": "cash-payout-audit-v0",
+      "candidate_eligible": false,
+      "reasons": [
+        "缺少同一申报、相同年度起止的普通股回购/分红/发行现金记录；不补零"
+      ],
+      "sources": {},
+      "available_annual_components": {
+        "repurchases": 30,
+        "dividends": 39,
+        "issuance": 0
+      }
+    },
+    {
+      "symbol": "CVX",
+      "asof": "2023-09-01",
+      "status": "证据不足",
+      "method": "cash-payout-audit-v0",
+      "candidate_eligible": false,
+      "reasons": [
+        "缺少同一申报、相同年度起止的普通股回购/分红/发行现金记录；不补零"
+      ],
+      "sources": {},
+      "available_annual_components": {
+        "repurchases": 33,
+        "dividends": 42,
+        "issuance": 0
+      }
+    },
+    {
+      "symbol": "CVX",
+      "asof": "2024-09-01",
+      "status": "证据不足",
+      "method": "cash-payout-audit-v0",
+      "candidate_eligible": false,
+      "reasons": [
+        "缺少同一申报、相同年度起止的普通股回购/分红/发行现金记录；不补零"
+      ],
+      "sources": {},
+      "available_annual_components": {
+        "repurchases": 36,
+        "dividends": 45,
+        "issuance": 0
+      }
+    },
+    {
+      "symbol": "CVX",
+      "asof": "2025-09-01",
+      "status": "证据不足",
+      "method": "cash-payout-audit-v0",
+      "candidate_eligible": false,
+      "reasons": [
+        "缺少同一申报、相同年度起止的普通股回购/分红/发行现金记录；不补零"
+      ],
+      "sources": {},
+      "available_annual_components": {
+        "repurchases": 39,
+        "dividends": 48,
+        "issuance": 0
+      }
+    },
+    {
+      "symbol": "GE",
+      "asof": "2022-09-01",
+      "status": "证据不足",
+      "method": "cash-payout-audit-v0",
+      "candidate_eligible": false,
+      "reasons": [
+        "缺少同一申报、相同年度起止的普通股回购/分红/发行现金记录；不补零"
+      ],
+      "sources": {},
+      "available_annual_components": {
+        "repurchases": 9,
+        "dividends": 0,
+        "issuance": 4
+      }
+    },
+    {
+      "symbol": "GE",
+      "asof": "2023-09-01",
+      "status": "证据不足",
+      "method": "cash-payout-audit-v0",
+      "candidate_eligible": false,
+      "reasons": [
+        "缺少同一申报、相同年度起止的普通股回购/分红/发行现金记录；不补零"
+      ],
+      "sources": {},
+      "available_annual_components": {
+        "repurchases": 9,
+        "dividends": 0,
+        "issuance": 4
+      }
+    },
+    {
+      "symbol": "GE",
+      "asof": "2024-09-01",
+      "status": "证据不足",
+      "method": "cash-payout-audit-v0",
+      "candidate_eligible": false,
+      "reasons": [
+        "缺少同一申报、相同年度起止的普通股回购/分红/发行现金记录；不补零"
+      ],
+      "sources": {},
+      "available_annual_components": {
+        "repurchases": 12,
+        "dividends": 0,
+        "issuance": 4
+      }
+    },
+    {
+      "symbol": "GE",
+      "asof": "2025-09-01",
+      "status": "证据不足",
+      "method": "cash-payout-audit-v0",
+      "candidate_eligible": false,
+      "reasons": [
+        "缺少同一申报、相同年度起止的普通股回购/分红/发行现金记录；不补零"
+      ],
+      "sources": {},
+      "available_annual_components": {
+        "repurchases": 15,
+        "dividends": 0,
+        "issuance": 4
+      }
+    },
+    {
+      "symbol": "GILD",
+      "asof": "2022-09-01",
+      "status": "证据不足",
+      "method": "cash-payout-audit-v0",
+      "candidate_eligible": false,
+      "reasons": [
+        "缺少同一申报、相同年度起止的普通股回购/分红/发行现金记录；不补零"
+      ],
+      "sources": {},
+      "available_annual_components": {
+        "repurchases": 39,
+        "dividends": 0,
+        "issuance": 39
+      }
+    },
+    {
+      "symbol": "GILD",
+      "asof": "2023-09-01",
+      "status": "证据不足",
+      "method": "cash-payout-audit-v0",
+      "candidate_eligible": false,
+      "reasons": [
+        "缺少同一申报、相同年度起止的普通股回购/分红/发行现金记录；不补零"
+      ],
+      "sources": {},
+      "available_annual_components": {
+        "repurchases": 42,
+        "dividends": 0,
+        "issuance": 42
+      }
+    },
+    {
+      "symbol": "GILD",
+      "asof": "2024-09-01",
+      "status": "证据不足",
+      "method": "cash-payout-audit-v0",
+      "candidate_eligible": false,
+      "reasons": [
+        "缺少同一申报、相同年度起止的普通股回购/分红/发行现金记录；不补零"
+      ],
+      "sources": {},
+      "available_annual_components": {
+        "repurchases": 45,
+        "dividends": 0,
+        "issuance": 45
+      }
+    },
+    {
+      "symbol": "GILD",
+      "asof": "2025-09-01",
+      "status": "证据不足",
+      "method": "cash-payout-audit-v0",
+      "candidate_eligible": false,
+      "reasons": [
+        "缺少同一申报、相同年度起止的普通股回购/分红/发行现金记录；不补零"
+      ],
+      "sources": {},
+      "available_annual_components": {
+        "repurchases": 48,
+        "dividends": 0,
+        "issuance": 48
+      }
+    },
+    {
+      "symbol": "GOOGL",
+      "asof": "2022-09-01",
+      "status": "证据不足",
+      "method": "cash-payout-audit-v0",
+      "candidate_eligible": false,
+      "reasons": [
+        "缺少同一申报、相同年度起止的普通股回购/分红/发行现金记录；不补零"
+      ],
+      "sources": {},
+      "available_annual_components": {
+        "repurchases": 21,
+        "dividends": 0,
+        "issuance": 0
+      }
+    },
+    {
+      "symbol": "GOOGL",
+      "asof": "2023-09-01",
+      "status": "证据不足",
+      "method": "cash-payout-audit-v0",
+      "candidate_eligible": false,
+      "reasons": [
+        "缺少同一申报、相同年度起止的普通股回购/分红/发行现金记录；不补零"
+      ],
+      "sources": {},
+      "available_annual_components": {
+        "repurchases": 24,
+        "dividends": 0,
+        "issuance": 0
+      }
+    },
+    {
+      "symbol": "GOOGL",
+      "asof": "2024-09-01",
+      "status": "证据不足",
+      "method": "cash-payout-audit-v0",
+      "candidate_eligible": false,
+      "reasons": [
+        "缺少同一申报、相同年度起止的普通股回购/分红/发行现金记录；不补零"
+      ],
+      "sources": {},
+      "available_annual_components": {
+        "repurchases": 27,
+        "dividends": 0,
+        "issuance": 0
+      }
+    },
+    {
+      "symbol": "GOOGL",
+      "asof": "2025-09-01",
+      "status": "证据不足",
+      "method": "cash-payout-audit-v0",
+      "candidate_eligible": false,
+      "reasons": [
+        "缺少同一申报、相同年度起止的普通股回购/分红/发行现金记录；不补零"
+      ],
+      "sources": {},
+      "available_annual_components": {
+        "repurchases": 30,
+        "dividends": 0,
+        "issuance": 0
+      }
+    },
+    {
+      "symbol": "GS",
+      "asof": "2022-09-01",
+      "status": "证据不足",
+      "method": "cash-payout-audit-v0",
+      "candidate_eligible": false,
+      "reasons": [
+        "缺少同一申报、相同年度起止的普通股回购/分红/发行现金记录；不补零"
+      ],
+      "sources": {},
+      "available_annual_components": {
+        "repurchases": 42,
+        "dividends": 0,
+        "issuance": 0
+      }
+    },
+    {
+      "symbol": "GS",
+      "asof": "2023-09-01",
+      "status": "证据不足",
+      "method": "cash-payout-audit-v0",
+      "candidate_eligible": false,
+      "reasons": [
+        "缺少同一申报、相同年度起止的普通股回购/分红/发行现金记录；不补零"
+      ],
+      "sources": {},
+      "available_annual_components": {
+        "repurchases": 45,
+        "dividends": 0,
+        "issuance": 0
+      }
+    },
+    {
+      "symbol": "GS",
+      "asof": "2024-09-01",
+      "status": "证据不足",
+      "method": "cash-payout-audit-v0",
+      "candidate_eligible": false,
+      "reasons": [
+        "缺少同一申报、相同年度起止的普通股回购/分红/发行现金记录；不补零"
+      ],
+      "sources": {},
+      "available_annual_components": {
+        "repurchases": 48,
+        "dividends": 0,
+        "issuance": 0
+      }
+    },
+    {
+      "symbol": "GS",
+      "asof": "2025-09-01",
+      "status": "证据不足",
+      "method": "cash-payout-audit-v0",
+      "candidate_eligible": false,
+      "reasons": [
+        "缺少同一申报、相同年度起止的普通股回购/分红/发行现金记录；不补零"
+      ],
+      "sources": {},
+      "available_annual_components": {
+        "repurchases": 51,
+        "dividends": 0,
+        "issuance": 0
+      }
+    },
+    {
+      "symbol": "HD",
+      "asof": "2022-09-01",
+      "status": "证据不足",
+      "method": "cash-payout-audit-v0",
+      "candidate_eligible": false,
+      "reasons": [
+        "现金发行不覆盖非现金股权薪酬、换股并购与可转债转股，不能据此判断净稀释",
+        "期权行权现金与普通股发行标签可能重叠，尚未查阅报表附注，不相加",
+        "尚无判断时点的完整历史总市值分母，不输出净派息收益率",
+        "财务字段可计算不等于策略适用性已验证"
+      ],
+      "sources": {
+        "repurchases": {
+          "start": "2021-02-01",
+          "end": "2022-01-30",
+          "val": 14809000000,
+          "accn": "0000354950-22-000070",
+          "fy": 2021,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2022-03-23",
+          "tag": "PaymentsForRepurchaseOfCommonStock"
+        },
+        "dividends": {
+          "start": "2021-02-01",
+          "end": "2022-01-30",
+          "val": 6985000000,
+          "accn": "0000354950-22-000070",
+          "fy": 2021,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2022-03-23",
+          "tag": "PaymentsOfDividendsCommonStock"
+        },
+        "issuance": {
+          "start": "2021-02-01",
+          "end": "2022-01-30",
+          "val": 337000000,
+          "accn": "0000354950-22-000070",
+          "fy": 2021,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2022-03-23",
+          "tag": "ProceedsFromIssuanceOfCommonStock"
+        }
+      },
+      "available_annual_components": {
+        "repurchases": 39,
+        "dividends": 39,
+        "issuance": 39
+      },
+      "fiscal_end": "2022-01-30",
+      "cash_components_complete": true,
+      "cash_net_payout_usd": 21457000000,
+      "same_filing_option_proceeds": []
+    },
+    {
+      "symbol": "HD",
+      "asof": "2023-09-01",
+      "status": "证据不足",
+      "method": "cash-payout-audit-v0",
+      "candidate_eligible": false,
+      "reasons": [
+        "现金发行不覆盖非现金股权薪酬、换股并购与可转债转股，不能据此判断净稀释",
+        "期权行权现金与普通股发行标签可能重叠，尚未查阅报表附注，不相加",
+        "尚无判断时点的完整历史总市值分母，不输出净派息收益率",
+        "财务字段可计算不等于策略适用性已验证"
+      ],
+      "sources": {
+        "repurchases": {
+          "start": "2022-01-31",
+          "end": "2023-01-29",
+          "val": 6696000000,
+          "accn": "0000354950-23-000059",
+          "fy": 2022,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2023-03-15",
+          "tag": "PaymentsForRepurchaseOfCommonStock"
+        },
+        "dividends": {
+          "start": "2022-01-31",
+          "end": "2023-01-29",
+          "val": 7789000000,
+          "accn": "0000354950-23-000059",
+          "fy": 2022,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2023-03-15",
+          "tag": "PaymentsOfDividendsCommonStock"
+        },
+        "issuance": {
+          "start": "2022-01-31",
+          "end": "2023-01-29",
+          "val": 264000000,
+          "accn": "0000354950-23-000059",
+          "fy": 2022,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2023-03-15",
+          "tag": "ProceedsFromIssuanceOfCommonStock"
+        }
+      },
+      "available_annual_components": {
+        "repurchases": 42,
+        "dividends": 42,
+        "issuance": 42
+      },
+      "fiscal_end": "2023-01-29",
+      "cash_components_complete": true,
+      "cash_net_payout_usd": 14221000000,
+      "same_filing_option_proceeds": []
+    },
+    {
+      "symbol": "HD",
+      "asof": "2024-09-01",
+      "status": "证据不足",
+      "method": "cash-payout-audit-v0",
+      "candidate_eligible": false,
+      "reasons": [
+        "现金发行不覆盖非现金股权薪酬、换股并购与可转债转股，不能据此判断净稀释",
+        "期权行权现金与普通股发行标签可能重叠，尚未查阅报表附注，不相加",
+        "尚无判断时点的完整历史总市值分母，不输出净派息收益率",
+        "财务字段可计算不等于策略适用性已验证"
+      ],
+      "sources": {
+        "repurchases": {
+          "start": "2023-01-30",
+          "end": "2024-01-28",
+          "val": 7951000000,
+          "accn": "0000354950-24-000062",
+          "fy": 2023,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2024-03-13",
+          "tag": "PaymentsForRepurchaseOfCommonStock"
+        },
+        "dividends": {
+          "start": "2023-01-30",
+          "end": "2024-01-28",
+          "val": 8383000000,
+          "accn": "0000354950-24-000062",
+          "fy": 2023,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2024-03-13",
+          "tag": "PaymentsOfDividendsCommonStock"
+        },
+        "issuance": {
+          "start": "2023-01-30",
+          "end": "2024-01-28",
+          "val": 323000000,
+          "accn": "0000354950-24-000062",
+          "fy": 2023,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2024-03-13",
+          "tag": "ProceedsFromIssuanceOfCommonStock"
+        }
+      },
+      "available_annual_components": {
+        "repurchases": 45,
+        "dividends": 45,
+        "issuance": 45
+      },
+      "fiscal_end": "2024-01-28",
+      "cash_components_complete": true,
+      "cash_net_payout_usd": 16011000000,
+      "same_filing_option_proceeds": []
+    },
+    {
+      "symbol": "HD",
+      "asof": "2025-09-01",
+      "status": "证据不足",
+      "method": "cash-payout-audit-v0",
+      "candidate_eligible": false,
+      "reasons": [
+        "现金发行不覆盖非现金股权薪酬、换股并购与可转债转股，不能据此判断净稀释",
+        "期权行权现金与普通股发行标签可能重叠，尚未查阅报表附注，不相加",
+        "尚无判断时点的完整历史总市值分母，不输出净派息收益率",
+        "财务字段可计算不等于策略适用性已验证"
+      ],
+      "sources": {
+        "repurchases": {
+          "start": "2024-01-29",
+          "end": "2025-02-02",
+          "val": 649000000,
+          "accn": "0000354950-25-000085",
+          "fy": 2024,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2025-03-21",
+          "tag": "PaymentsForRepurchaseOfCommonStock"
+        },
+        "dividends": {
+          "start": "2024-01-29",
+          "end": "2025-02-02",
+          "val": 8929000000,
+          "accn": "0000354950-25-000085",
+          "fy": 2024,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2025-03-21",
+          "tag": "PaymentsOfDividendsCommonStock"
+        },
+        "issuance": {
+          "start": "2024-01-29",
+          "end": "2025-02-02",
+          "val": 395000000,
+          "accn": "0000354950-25-000085",
+          "fy": 2024,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2025-03-21",
+          "tag": "ProceedsFromIssuanceOfCommonStock"
+        }
+      },
+      "available_annual_components": {
+        "repurchases": 48,
+        "dividends": 48,
+        "issuance": 48
+      },
+      "fiscal_end": "2025-02-02",
+      "cash_components_complete": true,
+      "cash_net_payout_usd": 9183000000,
+      "same_filing_option_proceeds": []
+    },
+    {
+      "symbol": "IBM",
+      "asof": "2022-09-01",
+      "status": "证据不足",
+      "method": "cash-payout-audit-v0",
+      "candidate_eligible": false,
+      "reasons": [
+        "缺少同一申报、相同年度起止的普通股回购/分红/发行现金记录；不补零"
+      ],
+      "sources": {},
+      "available_annual_components": {
+        "repurchases": 36,
+        "dividends": 39,
+        "issuance": 0
+      }
+    },
+    {
+      "symbol": "IBM",
+      "asof": "2023-09-01",
+      "status": "证据不足",
+      "method": "cash-payout-audit-v0",
+      "candidate_eligible": false,
+      "reasons": [
+        "缺少同一申报、相同年度起止的普通股回购/分红/发行现金记录；不补零"
+      ],
+      "sources": {},
+      "available_annual_components": {
+        "repurchases": 36,
+        "dividends": 42,
+        "issuance": 0
+      }
+    },
+    {
+      "symbol": "IBM",
+      "asof": "2024-09-01",
+      "status": "证据不足",
+      "method": "cash-payout-audit-v0",
+      "candidate_eligible": false,
+      "reasons": [
+        "缺少同一申报、相同年度起止的普通股回购/分红/发行现金记录；不补零"
+      ],
+      "sources": {},
+      "available_annual_components": {
+        "repurchases": 36,
+        "dividends": 45,
+        "issuance": 0
+      }
+    },
+    {
+      "symbol": "IBM",
+      "asof": "2025-09-01",
+      "status": "证据不足",
+      "method": "cash-payout-audit-v0",
+      "candidate_eligible": false,
+      "reasons": [
+        "缺少同一申报、相同年度起止的普通股回购/分红/发行现金记录；不补零"
+      ],
+      "sources": {},
+      "available_annual_components": {
+        "repurchases": 36,
+        "dividends": 48,
+        "issuance": 0
+      }
+    },
+    {
+      "symbol": "INTC",
+      "asof": "2022-09-01",
+      "status": "证据不足",
+      "method": "cash-payout-audit-v0",
+      "candidate_eligible": false,
+      "reasons": [
+        "缺少同一申报、相同年度起止的普通股回购/分红/发行现金记录；不补零"
+      ],
+      "sources": {},
+      "available_annual_components": {
+        "repurchases": 39,
+        "dividends": 39,
+        "issuance": 0
+      }
+    },
+    {
+      "symbol": "INTC",
+      "asof": "2023-09-01",
+      "status": "证据不足",
+      "method": "cash-payout-audit-v0",
+      "candidate_eligible": false,
+      "reasons": [
+        "缺少同一申报、相同年度起止的普通股回购/分红/发行现金记录；不补零"
+      ],
+      "sources": {},
+      "available_annual_components": {
+        "repurchases": 42,
+        "dividends": 42,
+        "issuance": 0
+      }
+    },
+    {
+      "symbol": "INTC",
+      "asof": "2024-09-01",
+      "status": "证据不足",
+      "method": "cash-payout-audit-v0",
+      "candidate_eligible": false,
+      "reasons": [
+        "缺少同一申报、相同年度起止的普通股回购/分红/发行现金记录；不补零"
+      ],
+      "sources": {},
+      "available_annual_components": {
+        "repurchases": 45,
+        "dividends": 45,
+        "issuance": 0
+      }
+    },
+    {
+      "symbol": "INTC",
+      "asof": "2025-09-01",
+      "status": "证据不足",
+      "method": "cash-payout-audit-v0",
+      "candidate_eligible": false,
+      "reasons": [
+        "缺少同一申报、相同年度起止的普通股回购/分红/发行现金记录；不补零"
+      ],
+      "sources": {},
+      "available_annual_components": {
+        "repurchases": 45,
+        "dividends": 48,
+        "issuance": 0
+      }
+    },
+    {
+      "symbol": "INTU",
+      "asof": "2022-09-01",
+      "status": "证据不足",
+      "method": "cash-payout-audit-v0",
+      "candidate_eligible": false,
+      "reasons": [
+        "缺少同一申报、相同年度起止的普通股回购/分红/发行现金记录；不补零"
+      ],
+      "sources": {},
+      "available_annual_components": {
+        "repurchases": 36,
+        "dividends": 0,
+        "issuance": 0
+      }
+    },
+    {
+      "symbol": "INTU",
+      "asof": "2023-09-01",
+      "status": "证据不足",
+      "method": "cash-payout-audit-v0",
+      "candidate_eligible": false,
+      "reasons": [
+        "缺少同一申报、相同年度起止的普通股回购/分红/发行现金记录；不补零"
+      ],
+      "sources": {},
+      "available_annual_components": {
+        "repurchases": 39,
+        "dividends": 0,
+        "issuance": 0
+      }
+    },
+    {
+      "symbol": "INTU",
+      "asof": "2024-09-01",
+      "status": "证据不足",
+      "method": "cash-payout-audit-v0",
+      "candidate_eligible": false,
+      "reasons": [
+        "缺少同一申报、相同年度起止的普通股回购/分红/发行现金记录；不补零"
+      ],
+      "sources": {},
+      "available_annual_components": {
+        "repurchases": 42,
+        "dividends": 0,
+        "issuance": 0
+      }
+    },
+    {
+      "symbol": "INTU",
+      "asof": "2025-09-01",
+      "status": "证据不足",
+      "method": "cash-payout-audit-v0",
+      "candidate_eligible": false,
+      "reasons": [
+        "缺少同一申报、相同年度起止的普通股回购/分红/发行现金记录；不补零"
+      ],
+      "sources": {},
+      "available_annual_components": {
+        "repurchases": 45,
+        "dividends": 0,
+        "issuance": 0
+      }
+    },
+    {
+      "symbol": "JNJ",
+      "asof": "2022-09-01",
+      "status": "证据不足",
+      "method": "cash-payout-audit-v0",
+      "candidate_eligible": false,
+      "reasons": [
+        "缺少同一申报、相同年度起止的普通股回购/分红/发行现金记录；不补零"
+      ],
+      "sources": {},
+      "available_annual_components": {
+        "repurchases": 39,
+        "dividends": 0,
+        "issuance": 0
+      }
+    },
+    {
+      "symbol": "JNJ",
+      "asof": "2023-09-01",
+      "status": "证据不足",
+      "method": "cash-payout-audit-v0",
+      "candidate_eligible": false,
+      "reasons": [
+        "缺少同一申报、相同年度起止的普通股回购/分红/发行现金记录；不补零"
+      ],
+      "sources": {},
+      "available_annual_components": {
+        "repurchases": 42,
+        "dividends": 0,
+        "issuance": 0
+      }
+    },
+    {
+      "symbol": "JNJ",
+      "asof": "2024-09-01",
+      "status": "证据不足",
+      "method": "cash-payout-audit-v0",
+      "candidate_eligible": false,
+      "reasons": [
+        "缺少同一申报、相同年度起止的普通股回购/分红/发行现金记录；不补零"
+      ],
+      "sources": {},
+      "available_annual_components": {
+        "repurchases": 45,
+        "dividends": 0,
+        "issuance": 0
+      }
+    },
+    {
+      "symbol": "JNJ",
+      "asof": "2025-09-01",
+      "status": "证据不足",
+      "method": "cash-payout-audit-v0",
+      "candidate_eligible": false,
+      "reasons": [
+        "缺少同一申报、相同年度起止的普通股回购/分红/发行现金记录；不补零"
+      ],
+      "sources": {},
+      "available_annual_components": {
+        "repurchases": 48,
+        "dividends": 0,
+        "issuance": 0
+      }
+    },
+    {
+      "symbol": "JPM",
+      "asof": "2022-09-01",
+      "status": "证据不足",
+      "method": "cash-payout-audit-v0",
+      "candidate_eligible": false,
+      "reasons": [
+        "缺少同一申报、相同年度起止的普通股回购/分红/发行现金记录；不补零"
+      ],
+      "sources": {},
+      "available_annual_components": {
+        "repurchases": 19,
+        "dividends": 0,
+        "issuance": 8
+      }
+    },
+    {
+      "symbol": "JPM",
+      "asof": "2023-09-01",
+      "status": "证据不足",
+      "method": "cash-payout-audit-v0",
+      "candidate_eligible": false,
+      "reasons": [
+        "缺少同一申报、相同年度起止的普通股回购/分红/发行现金记录；不补零"
+      ],
+      "sources": {},
+      "available_annual_components": {
+        "repurchases": 22,
+        "dividends": 0,
+        "issuance": 8
+      }
+    },
+    {
+      "symbol": "JPM",
+      "asof": "2024-09-01",
+      "status": "证据不足",
+      "method": "cash-payout-audit-v0",
+      "candidate_eligible": false,
+      "reasons": [
+        "缺少同一申报、相同年度起止的普通股回购/分红/发行现金记录；不补零"
+      ],
+      "sources": {},
+      "available_annual_components": {
+        "repurchases": 25,
+        "dividends": 0,
+        "issuance": 8
+      }
+    },
+    {
+      "symbol": "JPM",
+      "asof": "2025-09-01",
+      "status": "证据不足",
+      "method": "cash-payout-audit-v0",
+      "candidate_eligible": false,
+      "reasons": [
+        "缺少同一申报、相同年度起止的普通股回购/分红/发行现金记录；不补零"
+      ],
+      "sources": {},
+      "available_annual_components": {
+        "repurchases": 28,
+        "dividends": 0,
+        "issuance": 8
+      }
+    },
+    {
+      "symbol": "KO",
+      "asof": "2022-09-01",
+      "status": "证据不足",
+      "method": "cash-payout-audit-v0",
+      "candidate_eligible": false,
+      "reasons": [
+        "缺少同一申报、相同年度起止的普通股回购/分红/发行现金记录；不补零"
+      ],
+      "sources": {},
+      "available_annual_components": {
+        "repurchases": 39,
+        "dividends": 0,
+        "issuance": 39
+      }
+    },
+    {
+      "symbol": "KO",
+      "asof": "2023-09-01",
+      "status": "证据不足",
+      "method": "cash-payout-audit-v0",
+      "candidate_eligible": false,
+      "reasons": [
+        "缺少同一申报、相同年度起止的普通股回购/分红/发行现金记录；不补零"
+      ],
+      "sources": {},
+      "available_annual_components": {
+        "repurchases": 42,
+        "dividends": 0,
+        "issuance": 42
+      }
+    },
+    {
+      "symbol": "KO",
+      "asof": "2024-09-01",
+      "status": "证据不足",
+      "method": "cash-payout-audit-v0",
+      "candidate_eligible": false,
+      "reasons": [
+        "缺少同一申报、相同年度起止的普通股回购/分红/发行现金记录；不补零"
+      ],
+      "sources": {},
+      "available_annual_components": {
+        "repurchases": 45,
+        "dividends": 0,
+        "issuance": 45
+      }
+    },
+    {
+      "symbol": "KO",
+      "asof": "2025-09-01",
+      "status": "证据不足",
+      "method": "cash-payout-audit-v0",
+      "candidate_eligible": false,
+      "reasons": [
+        "缺少同一申报、相同年度起止的普通股回购/分红/发行现金记录；不补零"
+      ],
+      "sources": {},
+      "available_annual_components": {
+        "repurchases": 48,
+        "dividends": 0,
+        "issuance": 48
+      }
+    },
+    {
+      "symbol": "LLY",
+      "asof": "2022-09-01",
+      "status": "证据不足",
+      "method": "cash-payout-audit-v0",
+      "candidate_eligible": false,
+      "reasons": [
+        "缺少同一申报、相同年度起止的普通股回购/分红/发行现金记录；不补零"
+      ],
+      "sources": {},
+      "available_annual_components": {
+        "repurchases": 30,
+        "dividends": 0,
+        "issuance": 0
+      }
+    },
+    {
+      "symbol": "LLY",
+      "asof": "2023-09-01",
+      "status": "证据不足",
+      "method": "cash-payout-audit-v0",
+      "candidate_eligible": false,
+      "reasons": [
+        "缺少同一申报、相同年度起止的普通股回购/分红/发行现金记录；不补零"
+      ],
+      "sources": {},
+      "available_annual_components": {
+        "repurchases": 33,
+        "dividends": 0,
+        "issuance": 0
+      }
+    },
+    {
+      "symbol": "LLY",
+      "asof": "2024-09-01",
+      "status": "证据不足",
+      "method": "cash-payout-audit-v0",
+      "candidate_eligible": false,
+      "reasons": [
+        "缺少同一申报、相同年度起止的普通股回购/分红/发行现金记录；不补零"
+      ],
+      "sources": {},
+      "available_annual_components": {
+        "repurchases": 36,
+        "dividends": 0,
+        "issuance": 0
+      }
+    },
+    {
+      "symbol": "LLY",
+      "asof": "2025-09-01",
+      "status": "证据不足",
+      "method": "cash-payout-audit-v0",
+      "candidate_eligible": false,
+      "reasons": [
+        "缺少同一申报、相同年度起止的普通股回购/分红/发行现金记录；不补零"
+      ],
+      "sources": {},
+      "available_annual_components": {
+        "repurchases": 39,
+        "dividends": 0,
+        "issuance": 0
+      }
+    },
+    {
+      "symbol": "LMT",
+      "asof": "2022-09-01",
+      "status": "证据不足",
+      "method": "cash-payout-audit-v0",
+      "candidate_eligible": false,
+      "reasons": [
+        "最近共同财务年度陈旧，超过550日"
+      ],
+      "sources": {},
+      "available_annual_components": {
+        "repurchases": 42,
+        "dividends": 42,
+        "issuance": 3
+      }
+    },
+    {
+      "symbol": "LMT",
+      "asof": "2023-09-01",
+      "status": "证据不足",
+      "method": "cash-payout-audit-v0",
+      "candidate_eligible": false,
+      "reasons": [
+        "最近共同财务年度陈旧，超过550日"
+      ],
+      "sources": {},
+      "available_annual_components": {
+        "repurchases": 45,
+        "dividends": 45,
+        "issuance": 3
+      }
+    },
+    {
+      "symbol": "LMT",
+      "asof": "2024-09-01",
+      "status": "证据不足",
+      "method": "cash-payout-audit-v0",
+      "candidate_eligible": false,
+      "reasons": [
+        "最近共同财务年度陈旧，超过550日"
+      ],
+      "sources": {},
+      "available_annual_components": {
+        "repurchases": 48,
+        "dividends": 48,
+        "issuance": 3
+      }
+    },
+    {
+      "symbol": "LMT",
+      "asof": "2025-09-01",
+      "status": "证据不足",
+      "method": "cash-payout-audit-v0",
+      "candidate_eligible": false,
+      "reasons": [
+        "最近共同财务年度陈旧，超过550日"
+      ],
+      "sources": {},
+      "available_annual_components": {
+        "repurchases": 51,
+        "dividends": 51,
+        "issuance": 3
+      }
+    },
+    {
+      "symbol": "LOW",
+      "asof": "2022-09-01",
+      "status": "证据不足",
+      "method": "cash-payout-audit-v0",
+      "candidate_eligible": false,
+      "reasons": [
+        "缺少同一申报、相同年度起止的普通股回购/分红/发行现金记录；不补零"
+      ],
+      "sources": {},
+      "available_annual_components": {
+        "repurchases": 42,
+        "dividends": 42,
+        "issuance": 0
+      }
+    },
+    {
+      "symbol": "LOW",
+      "asof": "2023-09-01",
+      "status": "证据不足",
+      "method": "cash-payout-audit-v0",
+      "candidate_eligible": false,
+      "reasons": [
+        "缺少同一申报、相同年度起止的普通股回购/分红/发行现金记录；不补零"
+      ],
+      "sources": {},
+      "available_annual_components": {
+        "repurchases": 45,
+        "dividends": 45,
+        "issuance": 0
+      }
+    },
+    {
+      "symbol": "LOW",
+      "asof": "2024-09-01",
+      "status": "证据不足",
+      "method": "cash-payout-audit-v0",
+      "candidate_eligible": false,
+      "reasons": [
+        "缺少同一申报、相同年度起止的普通股回购/分红/发行现金记录；不补零"
+      ],
+      "sources": {},
+      "available_annual_components": {
+        "repurchases": 48,
+        "dividends": 48,
+        "issuance": 0
+      }
+    },
+    {
+      "symbol": "LOW",
+      "asof": "2025-09-01",
+      "status": "证据不足",
+      "method": "cash-payout-audit-v0",
+      "candidate_eligible": false,
+      "reasons": [
+        "缺少同一申报、相同年度起止的普通股回购/分红/发行现金记录；不补零"
+      ],
+      "sources": {},
+      "available_annual_components": {
+        "repurchases": 51,
+        "dividends": 51,
+        "issuance": 0
+      }
+    },
+    {
+      "symbol": "MA",
+      "asof": "2022-09-01",
+      "status": "证据不足",
+      "method": "cash-payout-audit-v0",
+      "candidate_eligible": false,
+      "reasons": [
+        "缺少同一申报、相同年度起止的普通股回购/分红/发行现金记录；不补零"
+      ],
+      "sources": {},
+      "available_annual_components": {
+        "repurchases": 37,
+        "dividends": 0,
+        "issuance": 0
+      }
+    },
+    {
+      "symbol": "MA",
+      "asof": "2023-09-01",
+      "status": "证据不足",
+      "method": "cash-payout-audit-v0",
+      "candidate_eligible": false,
+      "reasons": [
+        "缺少同一申报、相同年度起止的普通股回购/分红/发行现金记录；不补零"
+      ],
+      "sources": {},
+      "available_annual_components": {
+        "repurchases": 40,
+        "dividends": 0,
+        "issuance": 0
+      }
+    },
+    {
+      "symbol": "MA",
+      "asof": "2024-09-01",
+      "status": "证据不足",
+      "method": "cash-payout-audit-v0",
+      "candidate_eligible": false,
+      "reasons": [
+        "缺少同一申报、相同年度起止的普通股回购/分红/发行现金记录；不补零"
+      ],
+      "sources": {},
+      "available_annual_components": {
+        "repurchases": 43,
+        "dividends": 0,
+        "issuance": 0
+      }
+    },
+    {
+      "symbol": "MA",
+      "asof": "2025-09-01",
+      "status": "证据不足",
+      "method": "cash-payout-audit-v0",
+      "candidate_eligible": false,
+      "reasons": [
+        "缺少同一申报、相同年度起止的普通股回购/分红/发行现金记录；不补零"
+      ],
+      "sources": {},
+      "available_annual_components": {
+        "repurchases": 46,
+        "dividends": 0,
+        "issuance": 0
+      }
+    },
+    {
+      "symbol": "MCD",
+      "asof": "2022-09-01",
+      "status": "证据不足",
+      "method": "cash-payout-audit-v0",
+      "candidate_eligible": false,
+      "reasons": [
+        "缺少同一申报、相同年度起止的普通股回购/分红/发行现金记录；不补零"
+      ],
+      "sources": {},
+      "available_annual_components": {
+        "repurchases": 39,
+        "dividends": 39,
+        "issuance": 0
+      }
+    },
+    {
+      "symbol": "MCD",
+      "asof": "2023-09-01",
+      "status": "证据不足",
+      "method": "cash-payout-audit-v0",
+      "candidate_eligible": false,
+      "reasons": [
+        "缺少同一申报、相同年度起止的普通股回购/分红/发行现金记录；不补零"
+      ],
+      "sources": {},
+      "available_annual_components": {
+        "repurchases": 42,
+        "dividends": 42,
+        "issuance": 0
+      }
+    },
+    {
+      "symbol": "MCD",
+      "asof": "2024-09-01",
+      "status": "证据不足",
+      "method": "cash-payout-audit-v0",
+      "candidate_eligible": false,
+      "reasons": [
+        "缺少同一申报、相同年度起止的普通股回购/分红/发行现金记录；不补零"
+      ],
+      "sources": {},
+      "available_annual_components": {
+        "repurchases": 45,
+        "dividends": 45,
+        "issuance": 0
+      }
+    },
+    {
+      "symbol": "MCD",
+      "asof": "2025-09-01",
+      "status": "证据不足",
+      "method": "cash-payout-audit-v0",
+      "candidate_eligible": false,
+      "reasons": [
+        "缺少同一申报、相同年度起止的普通股回购/分红/发行现金记录；不补零"
+      ],
+      "sources": {},
+      "available_annual_components": {
+        "repurchases": 48,
+        "dividends": 48,
+        "issuance": 0
+      }
+    },
+    {
+      "symbol": "META",
+      "asof": "2022-09-01",
+      "status": "证据不足",
+      "method": "cash-payout-audit-v0",
+      "candidate_eligible": false,
+      "reasons": [
+        "缺少同一申报、相同年度起止的普通股回购/分红/发行现金记录；不补零"
+      ],
+      "sources": {},
+      "available_annual_components": {
+        "repurchases": 15,
+        "dividends": 0,
+        "issuance": 12
+      }
+    },
+    {
+      "symbol": "META",
+      "asof": "2023-09-01",
+      "status": "证据不足",
+      "method": "cash-payout-audit-v0",
+      "candidate_eligible": false,
+      "reasons": [
+        "缺少同一申报、相同年度起止的普通股回购/分红/发行现金记录；不补零"
+      ],
+      "sources": {},
+      "available_annual_components": {
+        "repurchases": 18,
+        "dividends": 0,
+        "issuance": 12
+      }
+    },
+    {
+      "symbol": "META",
+      "asof": "2024-09-01",
+      "status": "证据不足",
+      "method": "cash-payout-audit-v0",
+      "candidate_eligible": false,
+      "reasons": [
+        "缺少同一申报、相同年度起止的普通股回购/分红/发行现金记录；不补零"
+      ],
+      "sources": {},
+      "available_annual_components": {
+        "repurchases": 21,
+        "dividends": 0,
+        "issuance": 12
+      }
+    },
+    {
+      "symbol": "META",
+      "asof": "2025-09-01",
+      "status": "证据不足",
+      "method": "cash-payout-audit-v0",
+      "candidate_eligible": false,
+      "reasons": [
+        "缺少同一申报、相同年度起止的普通股回购/分红/发行现金记录；不补零"
+      ],
+      "sources": {},
+      "available_annual_components": {
+        "repurchases": 24,
+        "dividends": 0,
+        "issuance": 12
+      }
+    },
+    {
+      "symbol": "MRK",
+      "asof": "2022-09-01",
+      "status": "证据不足",
+      "method": "cash-payout-audit-v0",
+      "candidate_eligible": false,
+      "reasons": [
+        "缺少同一申报、相同年度起止的普通股回购/分红/发行现金记录；不补零"
+      ],
+      "sources": {},
+      "available_annual_components": {
+        "repurchases": 37,
+        "dividends": 39,
+        "issuance": 0
+      }
+    },
+    {
+      "symbol": "MRK",
+      "asof": "2023-09-01",
+      "status": "证据不足",
+      "method": "cash-payout-audit-v0",
+      "candidate_eligible": false,
+      "reasons": [
+        "缺少同一申报、相同年度起止的普通股回购/分红/发行现金记录；不补零"
+      ],
+      "sources": {},
+      "available_annual_components": {
+        "repurchases": 40,
+        "dividends": 42,
+        "issuance": 0
+      }
+    },
+    {
+      "symbol": "MRK",
+      "asof": "2024-09-01",
+      "status": "证据不足",
+      "method": "cash-payout-audit-v0",
+      "candidate_eligible": false,
+      "reasons": [
+        "缺少同一申报、相同年度起止的普通股回购/分红/发行现金记录；不补零"
+      ],
+      "sources": {},
+      "available_annual_components": {
+        "repurchases": 43,
+        "dividends": 45,
+        "issuance": 0
+      }
+    },
+    {
+      "symbol": "MRK",
+      "asof": "2025-09-01",
+      "status": "证据不足",
+      "method": "cash-payout-audit-v0",
+      "candidate_eligible": false,
+      "reasons": [
+        "缺少同一申报、相同年度起止的普通股回购/分红/发行现金记录；不补零"
+      ],
+      "sources": {},
+      "available_annual_components": {
+        "repurchases": 46,
+        "dividends": 48,
+        "issuance": 0
+      }
+    },
+    {
+      "symbol": "MS",
+      "asof": "2022-09-01",
+      "status": "证据不足",
+      "method": "cash-payout-audit-v0",
+      "candidate_eligible": false,
+      "reasons": [
+        "缺少同一申报、相同年度起止的普通股回购/分红/发行现金记录；不补零"
+      ],
+      "sources": {},
+      "available_annual_components": {
+        "repurchases": 15,
+        "dividends": 0,
+        "issuance": 12
+      }
+    },
+    {
+      "symbol": "MS",
+      "asof": "2023-09-01",
+      "status": "证据不足",
+      "method": "cash-payout-audit-v0",
+      "candidate_eligible": false,
+      "reasons": [
+        "缺少同一申报、相同年度起止的普通股回购/分红/发行现金记录；不补零"
+      ],
+      "sources": {},
+      "available_annual_components": {
+        "repurchases": 15,
+        "dividends": 0,
+        "issuance": 12
+      }
+    },
+    {
+      "symbol": "MS",
+      "asof": "2024-09-01",
+      "status": "证据不足",
+      "method": "cash-payout-audit-v0",
+      "candidate_eligible": false,
+      "reasons": [
+        "缺少同一申报、相同年度起止的普通股回购/分红/发行现金记录；不补零"
+      ],
+      "sources": {},
+      "available_annual_components": {
+        "repurchases": 15,
+        "dividends": 0,
+        "issuance": 12
+      }
+    },
+    {
+      "symbol": "MS",
+      "asof": "2025-09-01",
+      "status": "证据不足",
+      "method": "cash-payout-audit-v0",
+      "candidate_eligible": false,
+      "reasons": [
+        "缺少同一申报、相同年度起止的普通股回购/分红/发行现金记录；不补零"
+      ],
+      "sources": {},
+      "available_annual_components": {
+        "repurchases": 15,
+        "dividends": 0,
+        "issuance": 12
+      }
+    },
+    {
+      "symbol": "MSFT",
+      "asof": "2022-09-01",
+      "status": "证据不足",
+      "method": "cash-payout-audit-v0",
+      "candidate_eligible": false,
+      "reasons": [
+        "现金发行不覆盖非现金股权薪酬、换股并购与可转债转股，不能据此判断净稀释",
+        "期权行权现金与普通股发行标签可能重叠，尚未查阅报表附注，不相加",
+        "尚无判断时点的完整历史总市值分母，不输出净派息收益率",
+        "财务字段可计算不等于策略适用性已验证"
+      ],
+      "sources": {
+        "repurchases": {
+          "start": "2021-07-01",
+          "end": "2022-06-30",
+          "val": 32696000000,
+          "accn": "0001564590-22-026876",
+          "fy": 2022,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2022-07-28",
+          "tag": "PaymentsForRepurchaseOfCommonStock"
+        },
+        "dividends": {
+          "start": "2021-07-01",
+          "end": "2022-06-30",
+          "val": 18135000000,
+          "accn": "0001564590-22-026876",
+          "fy": 2022,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2022-07-28",
+          "tag": "PaymentsOfDividendsCommonStock"
+        },
+        "issuance": {
+          "start": "2021-07-01",
+          "end": "2022-06-30",
+          "val": 1841000000,
+          "accn": "0001564590-22-026876",
+          "fy": 2022,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2022-07-28",
+          "tag": "ProceedsFromIssuanceOfCommonStock"
+        }
+      },
+      "available_annual_components": {
+        "repurchases": 39,
+        "dividends": 39,
+        "issuance": 39
+      },
+      "fiscal_end": "2022-06-30",
+      "cash_components_complete": true,
+      "cash_net_payout_usd": 48990000000,
+      "same_filing_option_proceeds": []
+    },
+    {
+      "symbol": "MSFT",
+      "asof": "2023-09-01",
+      "status": "证据不足",
+      "method": "cash-payout-audit-v0",
+      "candidate_eligible": false,
+      "reasons": [
+        "现金发行不覆盖非现金股权薪酬、换股并购与可转债转股，不能据此判断净稀释",
+        "期权行权现金与普通股发行标签可能重叠，尚未查阅报表附注，不相加",
+        "尚无判断时点的完整历史总市值分母，不输出净派息收益率",
+        "财务字段可计算不等于策略适用性已验证"
+      ],
+      "sources": {
+        "repurchases": {
+          "start": "2022-07-01",
+          "end": "2023-06-30",
+          "val": 22245000000,
+          "accn": "0000950170-23-035122",
+          "fy": 2023,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2023-07-27",
+          "tag": "PaymentsForRepurchaseOfCommonStock"
+        },
+        "dividends": {
+          "start": "2022-07-01",
+          "end": "2023-06-30",
+          "val": 19800000000,
+          "accn": "0000950170-23-035122",
+          "fy": 2023,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2023-07-27",
+          "tag": "PaymentsOfDividendsCommonStock"
+        },
+        "issuance": {
+          "start": "2022-07-01",
+          "end": "2023-06-30",
+          "val": 1866000000,
+          "accn": "0000950170-23-035122",
+          "fy": 2023,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2023-07-27",
+          "tag": "ProceedsFromIssuanceOfCommonStock"
+        }
+      },
+      "available_annual_components": {
+        "repurchases": 42,
+        "dividends": 42,
+        "issuance": 42
+      },
+      "fiscal_end": "2023-06-30",
+      "cash_components_complete": true,
+      "cash_net_payout_usd": 40179000000,
+      "same_filing_option_proceeds": []
+    },
+    {
+      "symbol": "MSFT",
+      "asof": "2024-09-01",
+      "status": "证据不足",
+      "method": "cash-payout-audit-v0",
+      "candidate_eligible": false,
+      "reasons": [
+        "现金发行不覆盖非现金股权薪酬、换股并购与可转债转股，不能据此判断净稀释",
+        "期权行权现金与普通股发行标签可能重叠，尚未查阅报表附注，不相加",
+        "尚无判断时点的完整历史总市值分母，不输出净派息收益率",
+        "财务字段可计算不等于策略适用性已验证"
+      ],
+      "sources": {
+        "repurchases": {
+          "start": "2023-07-01",
+          "end": "2024-06-30",
+          "val": 17254000000,
+          "accn": "0000950170-24-087843",
+          "fy": 2024,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2024-07-30",
+          "tag": "PaymentsForRepurchaseOfCommonStock"
+        },
+        "dividends": {
+          "start": "2023-07-01",
+          "end": "2024-06-30",
+          "val": 21771000000,
+          "accn": "0000950170-24-087843",
+          "fy": 2024,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2024-07-30",
+          "tag": "PaymentsOfDividendsCommonStock"
+        },
+        "issuance": {
+          "start": "2023-07-01",
+          "end": "2024-06-30",
+          "val": 2002000000,
+          "accn": "0000950170-24-087843",
+          "fy": 2024,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2024-07-30",
+          "tag": "ProceedsFromIssuanceOfCommonStock"
+        }
+      },
+      "available_annual_components": {
+        "repurchases": 45,
+        "dividends": 45,
+        "issuance": 45
+      },
+      "fiscal_end": "2024-06-30",
+      "cash_components_complete": true,
+      "cash_net_payout_usd": 37023000000,
+      "same_filing_option_proceeds": []
+    },
+    {
+      "symbol": "MSFT",
+      "asof": "2025-09-01",
+      "status": "证据不足",
+      "method": "cash-payout-audit-v0",
+      "candidate_eligible": false,
+      "reasons": [
+        "现金发行不覆盖非现金股权薪酬、换股并购与可转债转股，不能据此判断净稀释",
+        "期权行权现金与普通股发行标签可能重叠，尚未查阅报表附注，不相加",
+        "尚无判断时点的完整历史总市值分母，不输出净派息收益率",
+        "财务字段可计算不等于策略适用性已验证"
+      ],
+      "sources": {
+        "repurchases": {
+          "start": "2024-07-01",
+          "end": "2025-06-30",
+          "val": 18420000000,
+          "accn": "0000950170-25-100235",
+          "fy": 2025,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2025-07-30",
+          "tag": "PaymentsForRepurchaseOfCommonStock"
+        },
+        "dividends": {
+          "start": "2024-07-01",
+          "end": "2025-06-30",
+          "val": 24082000000,
+          "accn": "0000950170-25-100235",
+          "fy": 2025,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2025-07-30",
+          "tag": "PaymentsOfDividendsCommonStock"
+        },
+        "issuance": {
+          "start": "2024-07-01",
+          "end": "2025-06-30",
+          "val": 2056000000,
+          "accn": "0000950170-25-100235",
+          "fy": 2025,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2025-07-30",
+          "tag": "ProceedsFromIssuanceOfCommonStock"
+        }
+      },
+      "available_annual_components": {
+        "repurchases": 48,
+        "dividends": 48,
+        "issuance": 48
+      },
+      "fiscal_end": "2025-06-30",
+      "cash_components_complete": true,
+      "cash_net_payout_usd": 40446000000,
+      "same_filing_option_proceeds": []
+    },
+    {
+      "symbol": "NEE",
+      "asof": "2022-09-01",
+      "status": "证据不足",
+      "method": "cash-payout-audit-v0",
+      "candidate_eligible": false,
+      "reasons": [
+        "缺少同一申报、相同年度起止的普通股回购/分红/发行现金记录；不补零"
+      ],
+      "sources": {},
+      "available_annual_components": {
+        "repurchases": 12,
+        "dividends": 0,
+        "issuance": 37
+      }
+    },
+    {
+      "symbol": "NEE",
+      "asof": "2023-09-01",
+      "status": "证据不足",
+      "method": "cash-payout-audit-v0",
+      "candidate_eligible": false,
+      "reasons": [
+        "缺少同一申报、相同年度起止的普通股回购/分红/发行现金记录；不补零"
+      ],
+      "sources": {},
+      "available_annual_components": {
+        "repurchases": 12,
+        "dividends": 0,
+        "issuance": 39
+      }
+    },
+    {
+      "symbol": "NEE",
+      "asof": "2024-09-01",
+      "status": "证据不足",
+      "method": "cash-payout-audit-v0",
+      "candidate_eligible": false,
+      "reasons": [
+        "缺少同一申报、相同年度起止的普通股回购/分红/发行现金记录；不补零"
+      ],
+      "sources": {},
+      "available_annual_components": {
+        "repurchases": 12,
+        "dividends": 0,
+        "issuance": 42
+      }
+    },
+    {
+      "symbol": "NEE",
+      "asof": "2025-09-01",
+      "status": "证据不足",
+      "method": "cash-payout-audit-v0",
+      "candidate_eligible": false,
+      "reasons": [
+        "缺少同一申报、相同年度起止的普通股回购/分红/发行现金记录；不补零"
+      ],
+      "sources": {},
+      "available_annual_components": {
+        "repurchases": 12,
+        "dividends": 0,
+        "issuance": 45
+      }
+    },
+    {
+      "symbol": "NKE",
+      "asof": "2022-09-01",
+      "status": "证据不足",
+      "method": "cash-payout-audit-v0",
+      "candidate_eligible": false,
+      "reasons": [
+        "缺少同一申报、相同年度起止的普通股回购/分红/发行现金记录；不补零"
+      ],
+      "sources": {},
+      "available_annual_components": {
+        "repurchases": 39,
+        "dividends": 33,
+        "issuance": 0
+      }
+    },
+    {
+      "symbol": "NKE",
+      "asof": "2023-09-01",
+      "status": "证据不足",
+      "method": "cash-payout-audit-v0",
+      "candidate_eligible": false,
+      "reasons": [
+        "缺少同一申报、相同年度起止的普通股回购/分红/发行现金记录；不补零"
+      ],
+      "sources": {},
+      "available_annual_components": {
+        "repurchases": 42,
+        "dividends": 36,
+        "issuance": 0
+      }
+    },
+    {
+      "symbol": "NKE",
+      "asof": "2024-09-01",
+      "status": "证据不足",
+      "method": "cash-payout-audit-v0",
+      "candidate_eligible": false,
+      "reasons": [
+        "缺少同一申报、相同年度起止的普通股回购/分红/发行现金记录；不补零"
+      ],
+      "sources": {},
+      "available_annual_components": {
+        "repurchases": 45,
+        "dividends": 39,
+        "issuance": 0
+      }
+    },
+    {
+      "symbol": "NKE",
+      "asof": "2025-09-01",
+      "status": "证据不足",
+      "method": "cash-payout-audit-v0",
+      "candidate_eligible": false,
+      "reasons": [
+        "缺少同一申报、相同年度起止的普通股回购/分红/发行现金记录；不补零"
+      ],
+      "sources": {},
+      "available_annual_components": {
+        "repurchases": 48,
+        "dividends": 42,
+        "issuance": 0
+      }
+    },
+    {
+      "symbol": "NVDA",
+      "asof": "2022-09-01",
+      "status": "证据不足",
+      "method": "cash-payout-audit-v0",
+      "candidate_eligible": false,
+      "reasons": [
+        "缺少同一申报、相同年度起止的普通股回购/分红/发行现金记录；不补零"
+      ],
+      "sources": {},
+      "available_annual_components": {
+        "repurchases": 33,
+        "dividends": 0,
+        "issuance": 6
+      }
+    },
+    {
+      "symbol": "NVDA",
+      "asof": "2023-09-01",
+      "status": "证据不足",
+      "method": "cash-payout-audit-v0",
+      "candidate_eligible": false,
+      "reasons": [
+        "缺少同一申报、相同年度起止的普通股回购/分红/发行现金记录；不补零"
+      ],
+      "sources": {},
+      "available_annual_components": {
+        "repurchases": 36,
+        "dividends": 0,
+        "issuance": 6
+      }
+    },
+    {
+      "symbol": "NVDA",
+      "asof": "2024-09-01",
+      "status": "证据不足",
+      "method": "cash-payout-audit-v0",
+      "candidate_eligible": false,
+      "reasons": [
+        "缺少同一申报、相同年度起止的普通股回购/分红/发行现金记录；不补零"
+      ],
+      "sources": {},
+      "available_annual_components": {
+        "repurchases": 39,
+        "dividends": 0,
+        "issuance": 6
+      }
+    },
+    {
+      "symbol": "NVDA",
+      "asof": "2025-09-01",
+      "status": "证据不足",
+      "method": "cash-payout-audit-v0",
+      "candidate_eligible": false,
+      "reasons": [
+        "缺少同一申报、相同年度起止的普通股回购/分红/发行现金记录；不补零"
+      ],
+      "sources": {},
+      "available_annual_components": {
+        "repurchases": 42,
+        "dividends": 0,
+        "issuance": 6
+      }
+    },
+    {
+      "symbol": "ORCL",
+      "asof": "2022-09-01",
+      "status": "证据不足",
+      "method": "cash-payout-audit-v0",
+      "candidate_eligible": false,
+      "reasons": [
+        "现金发行不覆盖非现金股权薪酬、换股并购与可转债转股，不能据此判断净稀释",
+        "期权行权现金与普通股发行标签可能重叠，尚未查阅报表附注，不相加",
+        "尚无判断时点的完整历史总市值分母，不输出净派息收益率",
+        "财务字段可计算不等于策略适用性已验证"
+      ],
+      "sources": {
+        "repurchases": {
+          "start": "2021-06-01",
+          "end": "2022-05-31",
+          "val": 16248000000,
+          "accn": "0001564590-22-023675",
+          "fy": 2022,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2022-06-21",
+          "tag": "PaymentsForRepurchaseOfCommonStock"
+        },
+        "dividends": {
+          "start": "2021-06-01",
+          "end": "2022-05-31",
+          "val": 3457000000,
+          "accn": "0001564590-22-023675",
+          "fy": 2022,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2022-06-21",
+          "tag": "PaymentsOfDividendsCommonStock"
+        },
+        "issuance": {
+          "start": "2021-06-01",
+          "end": "2022-05-31",
+          "val": 482000000,
+          "accn": "0001564590-22-023675",
+          "fy": 2022,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2022-06-21",
+          "tag": "ProceedsFromIssuanceOfCommonStock"
+        }
+      },
+      "available_annual_components": {
+        "repurchases": 39,
+        "dividends": 39,
+        "issuance": 18
+      },
+      "fiscal_end": "2022-05-31",
+      "cash_components_complete": true,
+      "cash_net_payout_usd": 19223000000,
+      "same_filing_option_proceeds": [
+        {
+          "start": "2021-06-01",
+          "end": "2022-05-31",
+          "val": 319000000,
+          "accn": "0001564590-22-023675",
+          "fy": 2022,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2022-06-21",
+          "tag": "ProceedsFromStockOptionsExercised"
+        }
+      ]
+    },
+    {
+      "symbol": "ORCL",
+      "asof": "2023-09-01",
+      "status": "证据不足",
+      "method": "cash-payout-audit-v0",
+      "candidate_eligible": false,
+      "reasons": [
+        "现金发行不覆盖非现金股权薪酬、换股并购与可转债转股，不能据此判断净稀释",
+        "期权行权现金与普通股发行标签可能重叠，尚未查阅报表附注，不相加",
+        "尚无判断时点的完整历史总市值分母，不输出净派息收益率",
+        "财务字段可计算不等于策略适用性已验证"
+      ],
+      "sources": {
+        "repurchases": {
+          "start": "2022-06-01",
+          "end": "2023-05-31",
+          "val": 1300000000,
+          "accn": "0000950170-23-028914",
+          "fy": 2023,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2023-06-20",
+          "tag": "PaymentsForRepurchaseOfCommonStock"
+        },
+        "dividends": {
+          "start": "2022-06-01",
+          "end": "2023-05-31",
+          "val": 3668000000,
+          "accn": "0000950170-23-028914",
+          "fy": 2023,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2023-06-20",
+          "tag": "PaymentsOfDividendsCommonStock"
+        },
+        "issuance": {
+          "start": "2022-06-01",
+          "end": "2023-05-31",
+          "val": 1192000000,
+          "accn": "0000950170-23-028914",
+          "fy": 2023,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2023-06-20",
+          "tag": "ProceedsFromIssuanceOfCommonStock"
+        }
+      },
+      "available_annual_components": {
+        "repurchases": 42,
+        "dividends": 42,
+        "issuance": 21
+      },
+      "fiscal_end": "2023-05-31",
+      "cash_components_complete": true,
+      "cash_net_payout_usd": 3776000000,
+      "same_filing_option_proceeds": [
+        {
+          "start": "2022-06-01",
+          "end": "2023-05-31",
+          "val": 1000000000,
+          "accn": "0000950170-23-028914",
+          "fy": 2023,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2023-06-20",
+          "tag": "ProceedsFromStockOptionsExercised"
+        }
+      ]
+    },
+    {
+      "symbol": "ORCL",
+      "asof": "2024-09-01",
+      "status": "证据不足",
+      "method": "cash-payout-audit-v0",
+      "candidate_eligible": false,
+      "reasons": [
+        "现金发行不覆盖非现金股权薪酬、换股并购与可转债转股，不能据此判断净稀释",
+        "期权行权现金与普通股发行标签可能重叠，尚未查阅报表附注，不相加",
+        "尚无判断时点的完整历史总市值分母，不输出净派息收益率",
+        "财务字段可计算不等于策略适用性已验证"
+      ],
+      "sources": {
+        "repurchases": {
+          "start": "2023-06-01",
+          "end": "2024-05-31",
+          "val": 1202000000,
+          "accn": "0000950170-24-075605",
+          "fy": 2024,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2024-06-20",
+          "tag": "PaymentsForRepurchaseOfCommonStock"
+        },
+        "dividends": {
+          "start": "2023-06-01",
+          "end": "2024-05-31",
+          "val": 4391000000,
+          "accn": "0000950170-24-075605",
+          "fy": 2024,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2024-06-20",
+          "tag": "PaymentsOfDividendsCommonStock"
+        },
+        "issuance": {
+          "start": "2023-06-01",
+          "end": "2024-05-31",
+          "val": 742000000,
+          "accn": "0000950170-24-075605",
+          "fy": 2024,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2024-06-20",
+          "tag": "ProceedsFromIssuanceOfCommonStock"
+        }
+      },
+      "available_annual_components": {
+        "repurchases": 45,
+        "dividends": 45,
+        "issuance": 24
+      },
+      "fiscal_end": "2024-05-31",
+      "cash_components_complete": true,
+      "cash_net_payout_usd": 4851000000,
+      "same_filing_option_proceeds": [
+        {
+          "start": "2023-06-01",
+          "end": "2024-05-31",
+          "val": 545000000,
+          "accn": "0000950170-24-075605",
+          "fy": 2024,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2024-06-20",
+          "tag": "ProceedsFromStockOptionsExercised"
+        }
+      ]
+    },
+    {
+      "symbol": "ORCL",
+      "asof": "2025-09-01",
+      "status": "证据不足",
+      "method": "cash-payout-audit-v0",
+      "candidate_eligible": false,
+      "reasons": [
+        "现金发行不覆盖非现金股权薪酬、换股并购与可转债转股，不能据此判断净稀释",
+        "期权行权现金与普通股发行标签可能重叠，尚未查阅报表附注，不相加",
+        "尚无判断时点的完整历史总市值分母，不输出净派息收益率",
+        "财务字段可计算不等于策略适用性已验证"
+      ],
+      "sources": {
+        "repurchases": {
+          "start": "2024-06-01",
+          "end": "2025-05-31",
+          "val": 600000000,
+          "accn": "0000950170-25-087926",
+          "fy": 2025,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2025-06-18",
+          "tag": "PaymentsForRepurchaseOfCommonStock"
+        },
+        "dividends": {
+          "start": "2024-06-01",
+          "end": "2025-05-31",
+          "val": 4743000000,
+          "accn": "0000950170-25-087926",
+          "fy": 2025,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2025-06-18",
+          "tag": "PaymentsOfDividendsCommonStock"
+        },
+        "issuance": {
+          "start": "2024-06-01",
+          "end": "2025-05-31",
+          "val": 653000000,
+          "accn": "0000950170-25-087926",
+          "fy": 2025,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2025-06-18",
+          "tag": "ProceedsFromIssuanceOfCommonStock"
+        }
+      },
+      "available_annual_components": {
+        "repurchases": 48,
+        "dividends": 48,
+        "issuance": 27
+      },
+      "fiscal_end": "2025-05-31",
+      "cash_components_complete": true,
+      "cash_net_payout_usd": 4690000000,
+      "same_filing_option_proceeds": [
+        {
+          "start": "2024-06-01",
+          "end": "2025-05-31",
+          "val": 448000000,
+          "accn": "0000950170-25-087926",
+          "fy": 2025,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2025-06-18",
+          "tag": "ProceedsFromStockOptionsExercised"
+        }
+      ]
+    },
+    {
+      "symbol": "PEP",
+      "asof": "2022-09-01",
+      "status": "证据不足",
+      "method": "cash-payout-audit-v0",
+      "candidate_eligible": false,
+      "reasons": [
+        "缺少同一申报、相同年度起止的普通股回购/分红/发行现金记录；不补零"
+      ],
+      "sources": {},
+      "available_annual_components": {
+        "repurchases": 37,
+        "dividends": 0,
+        "issuance": 0
+      }
+    },
+    {
+      "symbol": "PEP",
+      "asof": "2023-09-01",
+      "status": "证据不足",
+      "method": "cash-payout-audit-v0",
+      "candidate_eligible": false,
+      "reasons": [
+        "缺少同一申报、相同年度起止的普通股回购/分红/发行现金记录；不补零"
+      ],
+      "sources": {},
+      "available_annual_components": {
+        "repurchases": 40,
+        "dividends": 0,
+        "issuance": 0
+      }
+    },
+    {
+      "symbol": "PEP",
+      "asof": "2024-09-01",
+      "status": "证据不足",
+      "method": "cash-payout-audit-v0",
+      "candidate_eligible": false,
+      "reasons": [
+        "缺少同一申报、相同年度起止的普通股回购/分红/发行现金记录；不补零"
+      ],
+      "sources": {},
+      "available_annual_components": {
+        "repurchases": 43,
+        "dividends": 0,
+        "issuance": 0
+      }
+    },
+    {
+      "symbol": "PEP",
+      "asof": "2025-09-01",
+      "status": "证据不足",
+      "method": "cash-payout-audit-v0",
+      "candidate_eligible": false,
+      "reasons": [
+        "缺少同一申报、相同年度起止的普通股回购/分红/发行现金记录；不补零"
+      ],
+      "sources": {},
+      "available_annual_components": {
+        "repurchases": 46,
+        "dividends": 0,
+        "issuance": 0
+      }
+    },
+    {
+      "symbol": "PG",
+      "asof": "2022-09-01",
+      "status": "证据不足",
+      "method": "cash-payout-audit-v0",
+      "candidate_eligible": false,
+      "reasons": [
+        "缺少同一申报、相同年度起止的普通股回购/分红/发行现金记录；不补零"
+      ],
+      "sources": {},
+      "available_annual_components": {
+        "repurchases": 42,
+        "dividends": 0,
+        "issuance": 0
+      }
+    },
+    {
+      "symbol": "PG",
+      "asof": "2023-09-01",
+      "status": "证据不足",
+      "method": "cash-payout-audit-v0",
+      "candidate_eligible": false,
+      "reasons": [
+        "缺少同一申报、相同年度起止的普通股回购/分红/发行现金记录；不补零"
+      ],
+      "sources": {},
+      "available_annual_components": {
+        "repurchases": 45,
+        "dividends": 0,
+        "issuance": 0
+      }
+    },
+    {
+      "symbol": "PG",
+      "asof": "2024-09-01",
+      "status": "证据不足",
+      "method": "cash-payout-audit-v0",
+      "candidate_eligible": false,
+      "reasons": [
+        "缺少同一申报、相同年度起止的普通股回购/分红/发行现金记录；不补零"
+      ],
+      "sources": {},
+      "available_annual_components": {
+        "repurchases": 48,
+        "dividends": 0,
+        "issuance": 0
+      }
+    },
+    {
+      "symbol": "PG",
+      "asof": "2025-09-01",
+      "status": "证据不足",
+      "method": "cash-payout-audit-v0",
+      "candidate_eligible": false,
+      "reasons": [
+        "缺少同一申报、相同年度起止的普通股回购/分红/发行现金记录；不补零"
+      ],
+      "sources": {},
+      "available_annual_components": {
+        "repurchases": 51,
+        "dividends": 0,
+        "issuance": 0
+      }
+    },
+    {
+      "symbol": "PLD",
+      "asof": "2022-09-01",
+      "status": "证据不足",
+      "method": "cash-payout-audit-v0",
+      "candidate_eligible": false,
+      "reasons": [
+        "缺少同一申报、相同年度起止的普通股回购/分红/发行现金记录；不补零"
+      ],
+      "sources": {},
+      "available_annual_components": {
+        "repurchases": 0,
+        "dividends": 9,
+        "issuance": 0
+      }
+    },
+    {
+      "symbol": "PLD",
+      "asof": "2023-09-01",
+      "status": "证据不足",
+      "method": "cash-payout-audit-v0",
+      "candidate_eligible": false,
+      "reasons": [
+        "缺少同一申报、相同年度起止的普通股回购/分红/发行现金记录；不补零"
+      ],
+      "sources": {},
+      "available_annual_components": {
+        "repurchases": 0,
+        "dividends": 9,
+        "issuance": 0
+      }
+    },
+    {
+      "symbol": "PLD",
+      "asof": "2024-09-01",
+      "status": "证据不足",
+      "method": "cash-payout-audit-v0",
+      "candidate_eligible": false,
+      "reasons": [
+        "缺少同一申报、相同年度起止的普通股回购/分红/发行现金记录；不补零"
+      ],
+      "sources": {},
+      "available_annual_components": {
+        "repurchases": 0,
+        "dividends": 9,
+        "issuance": 0
+      }
+    },
+    {
+      "symbol": "PLD",
+      "asof": "2025-09-01",
+      "status": "证据不足",
+      "method": "cash-payout-audit-v0",
+      "candidate_eligible": false,
+      "reasons": [
+        "缺少同一申报、相同年度起止的普通股回购/分红/发行现金记录；不补零"
+      ],
+      "sources": {},
+      "available_annual_components": {
+        "repurchases": 0,
+        "dividends": 9,
+        "issuance": 0
+      }
+    },
+    {
+      "symbol": "QCOM",
+      "asof": "2022-09-01",
+      "status": "证据不足",
+      "method": "cash-payout-audit-v0",
+      "candidate_eligible": false,
+      "reasons": [
+        "缺少同一申报、相同年度起止的普通股回购/分红/发行现金记录；不补零"
+      ],
+      "sources": {},
+      "available_annual_components": {
+        "repurchases": 42,
+        "dividends": 0,
+        "issuance": 42
+      }
+    },
+    {
+      "symbol": "QCOM",
+      "asof": "2023-09-01",
+      "status": "证据不足",
+      "method": "cash-payout-audit-v0",
+      "candidate_eligible": false,
+      "reasons": [
+        "缺少同一申报、相同年度起止的普通股回购/分红/发行现金记录；不补零"
+      ],
+      "sources": {},
+      "available_annual_components": {
+        "repurchases": 45,
+        "dividends": 0,
+        "issuance": 45
+      }
+    },
+    {
+      "symbol": "QCOM",
+      "asof": "2024-09-01",
+      "status": "证据不足",
+      "method": "cash-payout-audit-v0",
+      "candidate_eligible": false,
+      "reasons": [
+        "缺少同一申报、相同年度起止的普通股回购/分红/发行现金记录；不补零"
+      ],
+      "sources": {},
+      "available_annual_components": {
+        "repurchases": 48,
+        "dividends": 0,
+        "issuance": 48
+      }
+    },
+    {
+      "symbol": "QCOM",
+      "asof": "2025-09-01",
+      "status": "证据不足",
+      "method": "cash-payout-audit-v0",
+      "candidate_eligible": false,
+      "reasons": [
+        "缺少同一申报、相同年度起止的普通股回购/分红/发行现金记录；不补零"
+      ],
+      "sources": {},
+      "available_annual_components": {
+        "repurchases": 51,
+        "dividends": 0,
+        "issuance": 51
+      }
+    },
+    {
+      "symbol": "SO",
+      "asof": "2022-09-01",
+      "status": "证据不足",
+      "method": "cash-payout-audit-v0",
+      "candidate_eligible": false,
+      "reasons": [
+        "最近共同财务年度陈旧，超过550日"
+      ],
+      "sources": {},
+      "available_annual_components": {
+        "repurchases": 18,
+        "dividends": 39,
+        "issuance": 39
+      }
+    },
+    {
+      "symbol": "SO",
+      "asof": "2023-09-01",
+      "status": "证据不足",
+      "method": "cash-payout-audit-v0",
+      "candidate_eligible": false,
+      "reasons": [
+        "最近共同财务年度陈旧，超过550日"
+      ],
+      "sources": {},
+      "available_annual_components": {
+        "repurchases": 18,
+        "dividends": 42,
+        "issuance": 42
+      }
+    },
+    {
+      "symbol": "SO",
+      "asof": "2024-09-01",
+      "status": "证据不足",
+      "method": "cash-payout-audit-v0",
+      "candidate_eligible": false,
+      "reasons": [
+        "最近共同财务年度陈旧，超过550日"
+      ],
+      "sources": {},
+      "available_annual_components": {
+        "repurchases": 18,
+        "dividends": 45,
+        "issuance": 45
+      }
+    },
+    {
+      "symbol": "SO",
+      "asof": "2025-09-01",
+      "status": "证据不足",
+      "method": "cash-payout-audit-v0",
+      "candidate_eligible": false,
+      "reasons": [
+        "最近共同财务年度陈旧，超过550日"
+      ],
+      "sources": {},
+      "available_annual_components": {
+        "repurchases": 18,
+        "dividends": 48,
+        "issuance": 48
+      }
+    },
+    {
+      "symbol": "SOFI",
+      "asof": "2022-09-01",
+      "status": "证据不足",
+      "method": "cash-payout-audit-v0",
+      "candidate_eligible": false,
+      "reasons": [
+        "缺少同一申报、相同年度起止的普通股回购/分红/发行现金记录；不补零"
+      ],
+      "sources": {},
+      "available_annual_components": {
+        "repurchases": 3,
+        "dividends": 0,
+        "issuance": 3
+      }
+    },
+    {
+      "symbol": "SOFI",
+      "asof": "2023-09-01",
+      "status": "证据不足",
+      "method": "cash-payout-audit-v0",
+      "candidate_eligible": false,
+      "reasons": [
+        "缺少同一申报、相同年度起止的普通股回购/分红/发行现金记录；不补零"
+      ],
+      "sources": {},
+      "available_annual_components": {
+        "repurchases": 6,
+        "dividends": 0,
+        "issuance": 6
+      }
+    },
+    {
+      "symbol": "SOFI",
+      "asof": "2024-09-01",
+      "status": "证据不足",
+      "method": "cash-payout-audit-v0",
+      "candidate_eligible": false,
+      "reasons": [
+        "缺少同一申报、相同年度起止的普通股回购/分红/发行现金记录；不补零"
+      ],
+      "sources": {},
+      "available_annual_components": {
+        "repurchases": 9,
+        "dividends": 0,
+        "issuance": 6
+      }
+    },
+    {
+      "symbol": "SOFI",
+      "asof": "2025-09-01",
+      "status": "证据不足",
+      "method": "cash-payout-audit-v0",
+      "candidate_eligible": false,
+      "reasons": [
+        "缺少同一申报、相同年度起止的普通股回购/分红/发行现金记录；不补零"
+      ],
+      "sources": {},
+      "available_annual_components": {
+        "repurchases": 9,
+        "dividends": 0,
+        "issuance": 6
+      }
+    },
+    {
+      "symbol": "TSLA",
+      "asof": "2022-09-01",
+      "status": "证据不足",
+      "method": "cash-payout-audit-v0",
+      "candidate_eligible": false,
+      "reasons": [
+        "缺少同一申报、相同年度起止的普通股回购/分红/发行现金记录；不补零"
+      ],
+      "sources": {},
+      "available_annual_components": {
+        "repurchases": 0,
+        "dividends": 0,
+        "issuance": 16
+      }
+    },
+    {
+      "symbol": "TSLA",
+      "asof": "2023-09-01",
+      "status": "证据不足",
+      "method": "cash-payout-audit-v0",
+      "candidate_eligible": false,
+      "reasons": [
+        "缺少同一申报、相同年度起止的普通股回购/分红/发行现金记录；不补零"
+      ],
+      "sources": {},
+      "available_annual_components": {
+        "repurchases": 0,
+        "dividends": 0,
+        "issuance": 19
+      }
+    },
+    {
+      "symbol": "TSLA",
+      "asof": "2024-09-01",
+      "status": "证据不足",
+      "method": "cash-payout-audit-v0",
+      "candidate_eligible": false,
+      "reasons": [
+        "缺少同一申报、相同年度起止的普通股回购/分红/发行现金记录；不补零"
+      ],
+      "sources": {},
+      "available_annual_components": {
+        "repurchases": 0,
+        "dividends": 0,
+        "issuance": 19
+      }
+    },
+    {
+      "symbol": "TSLA",
+      "asof": "2025-09-01",
+      "status": "证据不足",
+      "method": "cash-payout-audit-v0",
+      "candidate_eligible": false,
+      "reasons": [
+        "缺少同一申报、相同年度起止的普通股回购/分红/发行现金记录；不补零"
+      ],
+      "sources": {},
+      "available_annual_components": {
+        "repurchases": 0,
+        "dividends": 0,
+        "issuance": 19
+      }
+    },
+    {
+      "symbol": "TXN",
+      "asof": "2022-09-01",
+      "status": "证据不足",
+      "method": "cash-payout-audit-v0",
+      "candidate_eligible": false,
+      "reasons": [
+        "缺少同一申报、相同年度起止的普通股回购/分红/发行现金记录；不补零"
+      ],
+      "sources": {},
+      "available_annual_components": {
+        "repurchases": 30,
+        "dividends": 0,
+        "issuance": 0
+      }
+    },
+    {
+      "symbol": "TXN",
+      "asof": "2023-09-01",
+      "status": "证据不足",
+      "method": "cash-payout-audit-v0",
+      "candidate_eligible": false,
+      "reasons": [
+        "缺少同一申报、相同年度起止的普通股回购/分红/发行现金记录；不补零"
+      ],
+      "sources": {},
+      "available_annual_components": {
+        "repurchases": 33,
+        "dividends": 0,
+        "issuance": 0
+      }
+    },
+    {
+      "symbol": "TXN",
+      "asof": "2024-09-01",
+      "status": "证据不足",
+      "method": "cash-payout-audit-v0",
+      "candidate_eligible": false,
+      "reasons": [
+        "缺少同一申报、相同年度起止的普通股回购/分红/发行现金记录；不补零"
+      ],
+      "sources": {},
+      "available_annual_components": {
+        "repurchases": 36,
+        "dividends": 0,
+        "issuance": 0
+      }
+    },
+    {
+      "symbol": "TXN",
+      "asof": "2025-09-01",
+      "status": "证据不足",
+      "method": "cash-payout-audit-v0",
+      "candidate_eligible": false,
+      "reasons": [
+        "缺少同一申报、相同年度起止的普通股回购/分红/发行现金记录；不补零"
+      ],
+      "sources": {},
+      "available_annual_components": {
+        "repurchases": 39,
+        "dividends": 0,
+        "issuance": 0
+      }
+    },
+    {
+      "symbol": "UNH",
+      "asof": "2022-09-01",
+      "status": "证据不足",
+      "method": "cash-payout-audit-v0",
+      "candidate_eligible": false,
+      "reasons": [
+        "现金发行不覆盖非现金股权薪酬、换股并购与可转债转股，不能据此判断净稀释",
+        "期权行权现金与普通股发行标签可能重叠，尚未查阅报表附注，不相加",
+        "尚无判断时点的完整历史总市值分母，不输出净派息收益率",
+        "财务字段可计算不等于策略适用性已验证"
+      ],
+      "sources": {
+        "repurchases": {
+          "start": "2021-01-01",
+          "end": "2021-12-31",
+          "val": 5000000000,
+          "accn": "0000731766-22-000008",
+          "fy": 2021,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2022-02-15",
+          "tag": "PaymentsForRepurchaseOfCommonStock"
+        },
+        "dividends": {
+          "start": "2021-01-01",
+          "end": "2021-12-31",
+          "val": 5280000000,
+          "accn": "0000731766-22-000008",
+          "fy": 2021,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2022-02-15",
+          "tag": "PaymentsOfDividendsCommonStock"
+        },
+        "issuance": {
+          "start": "2021-01-01",
+          "end": "2021-12-31",
+          "val": 1355000000,
+          "accn": "0000731766-22-000008",
+          "fy": 2021,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2022-02-15",
+          "tag": "ProceedsFromIssuanceOfCommonStock"
+        }
+      },
+      "available_annual_components": {
+        "repurchases": 39,
+        "dividends": 36,
+        "issuance": 39
+      },
+      "fiscal_end": "2021-12-31",
+      "cash_components_complete": true,
+      "cash_net_payout_usd": 8925000000,
+      "same_filing_option_proceeds": []
+    },
+    {
+      "symbol": "UNH",
+      "asof": "2023-09-01",
+      "status": "证据不足",
+      "method": "cash-payout-audit-v0",
+      "candidate_eligible": false,
+      "reasons": [
+        "现金发行不覆盖非现金股权薪酬、换股并购与可转债转股，不能据此判断净稀释",
+        "期权行权现金与普通股发行标签可能重叠，尚未查阅报表附注，不相加",
+        "尚无判断时点的完整历史总市值分母，不输出净派息收益率",
+        "财务字段可计算不等于策略适用性已验证"
+      ],
+      "sources": {
+        "repurchases": {
+          "start": "2022-01-01",
+          "end": "2022-12-31",
+          "val": 7000000000,
+          "accn": "0000731766-23-000008",
+          "fy": 2022,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2023-02-24",
+          "tag": "PaymentsForRepurchaseOfCommonStock"
+        },
+        "dividends": {
+          "start": "2022-01-01",
+          "end": "2022-12-31",
+          "val": 5991000000,
+          "accn": "0000731766-23-000008",
+          "fy": 2022,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2023-02-24",
+          "tag": "PaymentsOfDividendsCommonStock"
+        },
+        "issuance": {
+          "start": "2022-01-01",
+          "end": "2022-12-31",
+          "val": 1253000000,
+          "accn": "0000731766-23-000008",
+          "fy": 2022,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2023-02-24",
+          "tag": "ProceedsFromIssuanceOfCommonStock"
+        }
+      },
+      "available_annual_components": {
+        "repurchases": 42,
+        "dividends": 39,
+        "issuance": 42
+      },
+      "fiscal_end": "2022-12-31",
+      "cash_components_complete": true,
+      "cash_net_payout_usd": 11738000000,
+      "same_filing_option_proceeds": []
+    },
+    {
+      "symbol": "UNH",
+      "asof": "2024-09-01",
+      "status": "证据不足",
+      "method": "cash-payout-audit-v0",
+      "candidate_eligible": false,
+      "reasons": [
+        "现金发行不覆盖非现金股权薪酬、换股并购与可转债转股，不能据此判断净稀释",
+        "期权行权现金与普通股发行标签可能重叠，尚未查阅报表附注，不相加",
+        "尚无判断时点的完整历史总市值分母，不输出净派息收益率",
+        "财务字段可计算不等于策略适用性已验证"
+      ],
+      "sources": {
+        "repurchases": {
+          "start": "2023-01-01",
+          "end": "2023-12-31",
+          "val": 8000000000,
+          "accn": "0000731766-24-000081",
+          "fy": 2023,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2024-02-28",
+          "tag": "PaymentsForRepurchaseOfCommonStock"
+        },
+        "dividends": {
+          "start": "2023-01-01",
+          "end": "2023-12-31",
+          "val": 6761000000,
+          "accn": "0000731766-24-000081",
+          "fy": 2023,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2024-02-28",
+          "tag": "PaymentsOfDividendsCommonStock"
+        },
+        "issuance": {
+          "start": "2023-01-01",
+          "end": "2023-12-31",
+          "val": 1353000000,
+          "accn": "0000731766-24-000081",
+          "fy": 2023,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2024-02-28",
+          "tag": "ProceedsFromIssuanceOfCommonStock"
+        }
+      },
+      "available_annual_components": {
+        "repurchases": 45,
+        "dividends": 42,
+        "issuance": 45
+      },
+      "fiscal_end": "2023-12-31",
+      "cash_components_complete": true,
+      "cash_net_payout_usd": 13408000000,
+      "same_filing_option_proceeds": []
+    },
+    {
+      "symbol": "UNH",
+      "asof": "2025-09-01",
+      "status": "证据不足",
+      "method": "cash-payout-audit-v0",
+      "candidate_eligible": false,
+      "reasons": [
+        "现金发行不覆盖非现金股权薪酬、换股并购与可转债转股，不能据此判断净稀释",
+        "期权行权现金与普通股发行标签可能重叠，尚未查阅报表附注，不相加",
+        "尚无判断时点的完整历史总市值分母，不输出净派息收益率",
+        "财务字段可计算不等于策略适用性已验证"
+      ],
+      "sources": {
+        "repurchases": {
+          "start": "2024-01-01",
+          "end": "2024-12-31",
+          "val": 9000000000,
+          "accn": "0000731766-25-000063",
+          "fy": 2024,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2025-02-27",
+          "tag": "PaymentsForRepurchaseOfCommonStock"
+        },
+        "dividends": {
+          "start": "2024-01-01",
+          "end": "2024-12-31",
+          "val": 7533000000,
+          "accn": "0000731766-25-000063",
+          "fy": 2024,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2025-02-27",
+          "tag": "PaymentsOfDividendsCommonStock"
+        },
+        "issuance": {
+          "start": "2024-01-01",
+          "end": "2024-12-31",
+          "val": 1846000000,
+          "accn": "0000731766-25-000063",
+          "fy": 2024,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2025-02-27",
+          "tag": "ProceedsFromIssuanceOfCommonStock"
+        }
+      },
+      "available_annual_components": {
+        "repurchases": 48,
+        "dividends": 45,
+        "issuance": 48
+      },
+      "fiscal_end": "2024-12-31",
+      "cash_components_complete": true,
+      "cash_net_payout_usd": 14687000000,
+      "same_filing_option_proceeds": []
+    },
+    {
+      "symbol": "V",
+      "asof": "2022-09-01",
+      "status": "证据不足",
+      "method": "cash-payout-audit-v0",
+      "candidate_eligible": false,
+      "reasons": [
+        "缺少同一申报、相同年度起止的普通股回购/分红/发行现金记录；不补零"
+      ],
+      "sources": {},
+      "available_annual_components": {
+        "repurchases": 27,
+        "dividends": 0,
+        "issuance": 4
+      }
+    },
+    {
+      "symbol": "V",
+      "asof": "2023-09-01",
+      "status": "证据不足",
+      "method": "cash-payout-audit-v0",
+      "candidate_eligible": false,
+      "reasons": [
+        "缺少同一申报、相同年度起止的普通股回购/分红/发行现金记录；不补零"
+      ],
+      "sources": {},
+      "available_annual_components": {
+        "repurchases": 30,
+        "dividends": 0,
+        "issuance": 4
+      }
+    },
+    {
+      "symbol": "V",
+      "asof": "2024-09-01",
+      "status": "证据不足",
+      "method": "cash-payout-audit-v0",
+      "candidate_eligible": false,
+      "reasons": [
+        "缺少同一申报、相同年度起止的普通股回购/分红/发行现金记录；不补零"
+      ],
+      "sources": {},
+      "available_annual_components": {
+        "repurchases": 33,
+        "dividends": 0,
+        "issuance": 4
+      }
+    },
+    {
+      "symbol": "V",
+      "asof": "2025-09-01",
+      "status": "证据不足",
+      "method": "cash-payout-audit-v0",
+      "candidate_eligible": false,
+      "reasons": [
+        "缺少同一申报、相同年度起止的普通股回购/分红/发行现金记录；不补零"
+      ],
+      "sources": {},
+      "available_annual_components": {
+        "repurchases": 36,
+        "dividends": 0,
+        "issuance": 4
+      }
+    },
+    {
+      "symbol": "WMT",
+      "asof": "2022-09-01",
+      "status": "证据不足",
+      "method": "cash-payout-audit-v0",
+      "candidate_eligible": false,
+      "reasons": [
+        "缺少同一申报、相同年度起止的普通股回购/分红/发行现金记录；不补零"
+      ],
+      "sources": {},
+      "available_annual_components": {
+        "repurchases": 39,
+        "dividends": 6,
+        "issuance": 0
+      }
+    },
+    {
+      "symbol": "WMT",
+      "asof": "2023-09-01",
+      "status": "证据不足",
+      "method": "cash-payout-audit-v0",
+      "candidate_eligible": false,
+      "reasons": [
+        "缺少同一申报、相同年度起止的普通股回购/分红/发行现金记录；不补零"
+      ],
+      "sources": {},
+      "available_annual_components": {
+        "repurchases": 42,
+        "dividends": 9,
+        "issuance": 0
+      }
+    },
+    {
+      "symbol": "WMT",
+      "asof": "2024-09-01",
+      "status": "证据不足",
+      "method": "cash-payout-audit-v0",
+      "candidate_eligible": false,
+      "reasons": [
+        "缺少同一申报、相同年度起止的普通股回购/分红/发行现金记录；不补零"
+      ],
+      "sources": {},
+      "available_annual_components": {
+        "repurchases": 45,
+        "dividends": 12,
+        "issuance": 0
+      }
+    },
+    {
+      "symbol": "WMT",
+      "asof": "2025-09-01",
+      "status": "证据不足",
+      "method": "cash-payout-audit-v0",
+      "candidate_eligible": false,
+      "reasons": [
+        "缺少同一申报、相同年度起止的普通股回购/分红/发行现金记录；不补零"
+      ],
+      "sources": {},
+      "available_annual_components": {
+        "repurchases": 48,
+        "dividends": 15,
+        "issuance": 0
+      }
+    },
+    {
+      "symbol": "XOM",
+      "asof": "2022-09-01",
+      "status": "证据不足",
+      "method": "cash-payout-audit-v0",
+      "candidate_eligible": false,
+      "reasons": [
+        "缺少同一申报、相同年度起止的普通股回购/分红/发行现金记录；不补零"
+      ],
+      "sources": {},
+      "available_annual_components": {
+        "repurchases": 42,
+        "dividends": 42,
+        "issuance": 0
+      }
+    },
+    {
+      "symbol": "XOM",
+      "asof": "2023-09-01",
+      "status": "证据不足",
+      "method": "cash-payout-audit-v0",
+      "candidate_eligible": false,
+      "reasons": [
+        "缺少同一申报、相同年度起止的普通股回购/分红/发行现金记录；不补零"
+      ],
+      "sources": {},
+      "available_annual_components": {
+        "repurchases": 45,
+        "dividends": 45,
+        "issuance": 0
+      }
+    },
+    {
+      "symbol": "XOM",
+      "asof": "2024-09-01",
+      "status": "证据不足",
+      "method": "cash-payout-audit-v0",
+      "candidate_eligible": false,
+      "reasons": [
+        "缺少同一申报、相同年度起止的普通股回购/分红/发行现金记录；不补零"
+      ],
+      "sources": {},
+      "available_annual_components": {
+        "repurchases": 48,
+        "dividends": 48,
+        "issuance": 0
+      }
+    },
+    {
+      "symbol": "XOM",
+      "asof": "2025-09-01",
+      "status": "证据不足",
+      "method": "cash-payout-audit-v0",
+      "candidate_eligible": false,
+      "reasons": [
+        "缺少同一申报、相同年度起止的普通股回购/分红/发行现金记录；不补零"
+      ],
+      "sources": {},
+      "available_annual_components": {
+        "repurchases": 51,
+        "dividends": 51,
+        "issuance": 0
+      }
+    }
+  ]
+}
