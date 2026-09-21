@@ -1,0 +1,645 @@
+{
+  "status": "completed",
+  "asof": "2026-09-22",
+  "symbols": [
+    "COP"
+  ],
+  "sources": [
+    {
+      "path": "artifacts/research/cop-dividends/api/2021-08-01-2021-10-31-0.json",
+      "sha256": "7d3fef6d9bcf68dc00640860f323c2819f2cb7c1d3b24a1e7d2ce8debb834b4c"
+    },
+    {
+      "path": "artifacts/research/cop-dividends/api/2021-11-01-2022-01-31-0.json",
+      "sha256": "c92dfc533e37f41379adbcfcf9867634efc007a7c33cfc4bd55f8e7037508ae8"
+    },
+    {
+      "path": "artifacts/research/cop-dividends/api/2022-02-01-2022-04-30-0.json",
+      "sha256": "37693da43a31b11ac2fb70640b25e0beb882c013dab05cc95f3313106c0cfedf"
+    },
+    {
+      "path": "artifacts/research/cop-dividends/api/2022-05-01-2022-07-31-0.json",
+      "sha256": "48b990aff0e6feb96b56bab2d67a615f2d18bd70aee492c3d568b526db5e2289"
+    },
+    {
+      "path": "artifacts/research/cop-dividends/api/2022-08-01-2022-10-31-0.json",
+      "sha256": "b9179c3e53f54790dd872c66eb49486ca627a97ff048c1eef01d1a6d0ef4d42e"
+    },
+    {
+      "path": "artifacts/research/cop-dividends/api/2022-11-01-2023-01-31-0.json",
+      "sha256": "a9284dee5a5b39893e327d9b533f37b4642cb491a0733c40aeae2e43f141401b"
+    },
+    {
+      "path": "artifacts/research/cop-dividends/api/2023-02-01-2023-04-30-0.json",
+      "sha256": "db39ce3c9ca5523ec4dd2dba7e0148c6a26f4d65cacf34e8ea094f5bc08e5288"
+    },
+    {
+      "path": "artifacts/research/cop-dividends/api/2023-05-01-2023-07-31-0.json",
+      "sha256": "87d34fad06572cb4e85d4c2b2a586e490da25d66e7d681aa9564e6e355d3f34f"
+    },
+    {
+      "path": "artifacts/research/cop-dividends/api/2023-08-01-2023-10-31-0.json",
+      "sha256": "8808b1700db78d7c685ac23a8a1bb2e6870f7c3c402a0b085f8f3d794b27bede"
+    },
+    {
+      "path": "artifacts/research/cop-dividends/api/2023-11-01-2024-01-31-0.json",
+      "sha256": "89a9cd087afebb5c5f187498d29bcb6aa0534a90e65862e9405f5a76f06d22d8"
+    },
+    {
+      "path": "artifacts/research/cop-dividends/api/2024-02-01-2024-04-30-0.json",
+      "sha256": "83bb2bcc8a88898551439a1b7f48085b6e2143cf7f589ba19120788298008d5d"
+    },
+    {
+      "path": "artifacts/research/cop-dividends/api/2024-05-01-2024-07-31-0.json",
+      "sha256": "37ef6f1670fc7759379b59334e860702a336c60a198c1860cb0415a900631f8f"
+    },
+    {
+      "path": "artifacts/research/cop-dividends/api/2024-08-01-2024-10-31-0.json",
+      "sha256": "f76661dc23796388a4fba3c648aecdc56970f4bb56bdb6d219a3fbb8092e6c39"
+    },
+    {
+      "path": "artifacts/research/cop-dividends/api/2024-11-01-2025-01-31-0.json",
+      "sha256": "05c6f252e12c31c4206757120d20abb300d490ec6dd9bddfae3cc07417f70b61"
+    },
+    {
+      "path": "artifacts/research/cop-dividends/api/2025-02-01-2025-04-30-0.json",
+      "sha256": "9e61a2d44572f27de538bd65e2c681608d0ba60f20e9aed16dbc617d2d973cb2"
+    },
+    {
+      "path": "artifacts/research/cop-dividends/api/2025-05-01-2025-07-31-0.json",
+      "sha256": "4141aaded84e169e97b7c535dfa705fbff2c596c22cdb28c6cc5860c58afcfe5"
+    },
+    {
+      "path": "artifacts/research/cop-dividends/api/2025-08-01-2025-10-31-0.json",
+      "sha256": "02905f5f027a0e25dfffb41e517c140cdc48e20c72787db55d36633ed46f2575"
+    },
+    {
+      "path": "artifacts/research/cop-dividends/api/2025-11-01-2026-01-31-0.json",
+      "sha256": "404723ff74cc7a44d635ac112420fbcd2c0903e7f01f569ced9c7a1f3eb2cf12"
+    },
+    {
+      "path": "artifacts/research/cop-dividends/api/2026-02-01-2026-04-30-0.json",
+      "sha256": "a6fc7515be3098e90b38b460ec044044671884e0d7fe4504bafd02baaec0aac9"
+    },
+    {
+      "path": "artifacts/research/cop-dividends/api/2026-05-01-2026-07-31-0.json",
+      "sha256": "cf15b26eedc036e2ca2b39dd37840ec30047153b4baa3be34fb937a8a2adfa94"
+    },
+    {
+      "path": "artifacts/research/cop-dividends/api/2026-08-01-2026-09-22-0.json",
+      "sha256": "89f38c0592afd7dee0ed8d12028f96d9aadc4cab5edeb727d2a826e444be803e"
+    }
+  ],
+  "events": [
+    {
+      "cusip": "20825C104",
+      "ex_date": "2021-07-23",
+      "foreign": false,
+      "id": "a8eeec5d-48d4-4b12-974b-1f0c8f7893f5",
+      "payable_date": "2021-09-01",
+      "process_date": "2021-09-01",
+      "rate": 0.43,
+      "record_date": "2021-07-26",
+      "special": false,
+      "symbol": "COP",
+      "process_minus_ex_days": 40,
+      "issues": [
+        "currency_unspecified"
+      ],
+      "point_in_time_verified": false
+    },
+    {
+      "cusip": "20825C104",
+      "ex_date": "2021-10-27",
+      "foreign": false,
+      "id": "b6427105-ff56-4c98-9e61-e3a75f9fe801",
+      "payable_date": "2021-12-01",
+      "process_date": "2021-12-01",
+      "rate": 0.46,
+      "record_date": "2021-10-28",
+      "special": false,
+      "symbol": "COP",
+      "process_minus_ex_days": 35,
+      "issues": [
+        "currency_unspecified"
+      ],
+      "point_in_time_verified": false
+    },
+    {
+      "cusip": "20825C104",
+      "ex_date": "2021-12-31",
+      "foreign": false,
+      "id": "adc72fef-3be9-46aa-a2f6-b6ec1392c1b9",
+      "payable_date": "2022-01-14",
+      "process_date": "2022-01-14",
+      "rate": 0.2,
+      "record_date": "2022-01-03",
+      "special": false,
+      "symbol": "COP",
+      "process_minus_ex_days": 14,
+      "issues": [
+        "currency_unspecified"
+      ],
+      "point_in_time_verified": false
+    },
+    {
+      "cusip": "20825C104",
+      "ex_date": "2022-02-11",
+      "foreign": false,
+      "id": "ffd74294-e930-479e-a52a-7dd5d7261658",
+      "payable_date": "2022-03-01",
+      "process_date": "2022-03-01",
+      "rate": 0.46,
+      "record_date": "2022-02-14",
+      "special": false,
+      "symbol": "COP",
+      "process_minus_ex_days": 18,
+      "issues": [
+        "currency_unspecified"
+      ],
+      "point_in_time_verified": false
+    },
+    {
+      "cusip": "20825C104",
+      "ex_date": "2022-03-30",
+      "foreign": false,
+      "id": "e5490829-80a8-4d3b-964d-4ad0c922060f",
+      "payable_date": "2022-04-14",
+      "process_date": "2022-04-14",
+      "rate": 0.3,
+      "record_date": "2022-03-31",
+      "special": false,
+      "symbol": "COP",
+      "process_minus_ex_days": 15,
+      "issues": [
+        "currency_unspecified"
+      ],
+      "point_in_time_verified": false
+    },
+    {
+      "cusip": "20825C104",
+      "ex_date": "2022-05-16",
+      "foreign": false,
+      "id": "403a9629-e55e-46f8-9e5f-f449dcb07b43",
+      "payable_date": "2022-06-01",
+      "process_date": "2022-06-01",
+      "rate": 0.46,
+      "record_date": "2022-05-17",
+      "special": false,
+      "symbol": "COP",
+      "process_minus_ex_days": 16,
+      "issues": [
+        "currency_unspecified"
+      ],
+      "point_in_time_verified": false
+    },
+    {
+      "cusip": "20825C104",
+      "ex_date": "2022-06-27",
+      "foreign": false,
+      "id": "39b0f6af-548f-4b50-937e-79b0701b5454",
+      "payable_date": "2022-07-15",
+      "process_date": "2022-07-15",
+      "rate": 0.7,
+      "record_date": "2022-06-28",
+      "special": false,
+      "symbol": "COP",
+      "process_minus_ex_days": 18,
+      "issues": [
+        "currency_unspecified"
+      ],
+      "point_in_time_verified": false
+    },
+    {
+      "cusip": "20825C104",
+      "ex_date": "2022-08-15",
+      "foreign": false,
+      "id": "cedefbe4-2213-426a-9159-13c2c9b00233",
+      "payable_date": "2022-09-01",
+      "process_date": "2022-09-01",
+      "rate": 0.46,
+      "record_date": "2022-08-16",
+      "special": false,
+      "symbol": "COP",
+      "process_minus_ex_days": 17,
+      "issues": [
+        "currency_unspecified"
+      ],
+      "point_in_time_verified": false
+    },
+    {
+      "cusip": "20825C104",
+      "ex_date": "2022-09-28",
+      "foreign": false,
+      "id": "d88c086b-11f3-438a-9679-57617013ca50",
+      "payable_date": "2022-10-14",
+      "process_date": "2022-10-14",
+      "rate": 1.4,
+      "record_date": "2022-09-29",
+      "special": false,
+      "symbol": "COP",
+      "process_minus_ex_days": 16,
+      "issues": [
+        "currency_unspecified"
+      ],
+      "point_in_time_verified": false
+    },
+    {
+      "cusip": "20825C104",
+      "ex_date": "2022-11-14",
+      "foreign": false,
+      "id": "fd6e2804-6e1d-4385-9aef-d6d74920ebd6",
+      "payable_date": "2022-12-01",
+      "process_date": "2022-12-01",
+      "rate": 0.51,
+      "record_date": "2022-11-15",
+      "special": false,
+      "symbol": "COP",
+      "process_minus_ex_days": 17,
+      "issues": [
+        "currency_unspecified"
+      ],
+      "point_in_time_verified": false
+    },
+    {
+      "cusip": "20825C104",
+      "ex_date": "2022-12-23",
+      "foreign": false,
+      "id": "a15927b2-6c34-47b3-9ccd-42642fb9e18d",
+      "payable_date": "2023-01-13",
+      "process_date": "2023-01-13",
+      "rate": 0.7,
+      "record_date": "2022-12-27",
+      "special": false,
+      "symbol": "COP",
+      "process_minus_ex_days": 21,
+      "issues": [
+        "currency_unspecified"
+      ],
+      "point_in_time_verified": false
+    },
+    {
+      "cusip": "20825C104",
+      "ex_date": "2023-02-13",
+      "foreign": false,
+      "id": "89c747ba-252b-41ba-b205-86b9a6a9c782",
+      "payable_date": "2023-03-01",
+      "process_date": "2023-03-01",
+      "rate": 0.51,
+      "record_date": "2023-02-14",
+      "special": false,
+      "symbol": "COP",
+      "process_minus_ex_days": 16,
+      "issues": [
+        "currency_unspecified"
+      ],
+      "point_in_time_verified": false
+    },
+    {
+      "cusip": "20825C104",
+      "ex_date": "2023-03-28",
+      "foreign": false,
+      "id": "db90b5c2-474b-4bb1-b32e-ff32b7e6436a",
+      "payable_date": "2023-04-14",
+      "process_date": "2023-04-14",
+      "rate": 0.6,
+      "record_date": "2023-03-29",
+      "special": false,
+      "symbol": "COP",
+      "process_minus_ex_days": 17,
+      "issues": [
+        "currency_unspecified"
+      ],
+      "point_in_time_verified": false
+    },
+    {
+      "cusip": "20825C104",
+      "ex_date": "2023-05-15",
+      "foreign": false,
+      "id": "15417b72-ccc1-43b8-b259-885d434742c2",
+      "payable_date": "2023-06-01",
+      "process_date": "2023-06-01",
+      "rate": 0.51,
+      "record_date": "2023-05-16",
+      "special": false,
+      "symbol": "COP",
+      "process_minus_ex_days": 17,
+      "issues": [
+        "currency_unspecified"
+      ],
+      "point_in_time_verified": false
+    },
+    {
+      "cusip": "20825C104",
+      "ex_date": "2023-06-26",
+      "foreign": false,
+      "id": "de7d244f-3ccd-42f5-b133-bf52feb70479",
+      "payable_date": "2023-07-14",
+      "process_date": "2023-07-14",
+      "rate": 0.6,
+      "record_date": "2023-06-27",
+      "special": false,
+      "symbol": "COP",
+      "process_minus_ex_days": 18,
+      "issues": [
+        "currency_unspecified"
+      ],
+      "point_in_time_verified": false
+    },
+    {
+      "cusip": "20825C104",
+      "ex_date": "2023-08-15",
+      "foreign": false,
+      "id": "48765bff-bef4-4576-98e7-440398d38196",
+      "payable_date": "2023-09-01",
+      "process_date": "2023-09-01",
+      "rate": 0.51,
+      "record_date": "2023-08-16",
+      "special": false,
+      "symbol": "COP",
+      "process_minus_ex_days": 17,
+      "issues": [
+        "currency_unspecified"
+      ],
+      "point_in_time_verified": false
+    },
+    {
+      "cusip": "20825C104",
+      "ex_date": "2023-09-27",
+      "foreign": false,
+      "id": "8286b895-ea21-4767-96e5-e417f35d051d",
+      "payable_date": "2023-10-16",
+      "process_date": "2023-10-16",
+      "rate": 0.6,
+      "record_date": "2023-09-28",
+      "special": false,
+      "symbol": "COP",
+      "process_minus_ex_days": 19,
+      "issues": [
+        "currency_unspecified"
+      ],
+      "point_in_time_verified": false
+    },
+    {
+      "cusip": "20825C104",
+      "ex_date": "2023-11-13",
+      "foreign": false,
+      "id": "91da9730-7fdd-47c2-a36e-f31da4c32850",
+      "payable_date": "2023-12-01",
+      "process_date": "2023-12-01",
+      "rate": 0.58,
+      "record_date": "2023-11-14",
+      "special": false,
+      "symbol": "COP",
+      "process_minus_ex_days": 18,
+      "issues": [
+        "currency_unspecified"
+      ],
+      "point_in_time_verified": false
+    },
+    {
+      "cusip": "20825C104",
+      "ex_date": "2024-02-15",
+      "foreign": false,
+      "id": "70803c87-07f0-44c2-ab95-e66af555e7b1",
+      "payable_date": "2024-03-01",
+      "process_date": "2024-03-01",
+      "rate": 0.58,
+      "record_date": "2024-02-19",
+      "special": false,
+      "symbol": "COP",
+      "process_minus_ex_days": 15,
+      "issues": [
+        "currency_unspecified"
+      ],
+      "point_in_time_verified": false
+    },
+    {
+      "cusip": "20825C104",
+      "ex_date": "2024-02-15",
+      "foreign": false,
+      "id": "b50cc03b-b43f-4635-bb6c-f7cfe4bf842c",
+      "payable_date": "2024-03-01",
+      "process_date": "2024-03-01",
+      "rate": 0.2,
+      "record_date": "2024-02-19",
+      "special": false,
+      "symbol": "COP",
+      "process_minus_ex_days": 15,
+      "issues": [
+        "currency_unspecified"
+      ],
+      "point_in_time_verified": false
+    },
+    {
+      "cusip": "20825C104",
+      "ex_date": "2024-05-10",
+      "foreign": false,
+      "id": "65a7d241-a415-4a4a-b3a7-0e2a9e373420",
+      "payable_date": "2024-06-03",
+      "process_date": "2024-06-03",
+      "rate": 0.2,
+      "record_date": "2024-05-13",
+      "special": false,
+      "symbol": "COP",
+      "process_minus_ex_days": 24,
+      "issues": [
+        "currency_unspecified"
+      ],
+      "point_in_time_verified": false
+    },
+    {
+      "cusip": "20825C104",
+      "ex_date": "2024-05-10",
+      "foreign": false,
+      "id": "6b3e32c9-4e48-4436-b11d-0b8e6c6ea798",
+      "payable_date": "2024-06-03",
+      "process_date": "2024-06-03",
+      "rate": 0.58,
+      "record_date": "2024-05-13",
+      "special": false,
+      "symbol": "COP",
+      "process_minus_ex_days": 24,
+      "issues": [
+        "currency_unspecified"
+      ],
+      "point_in_time_verified": false
+    },
+    {
+      "cusip": "20825C104",
+      "ex_date": "2024-08-12",
+      "foreign": false,
+      "id": "75593cde-60eb-47d4-b28f-dce6cbecf1cf",
+      "payable_date": "2024-09-03",
+      "process_date": "2024-09-03",
+      "rate": 0.2,
+      "record_date": "2024-08-12",
+      "special": false,
+      "symbol": "COP",
+      "process_minus_ex_days": 22,
+      "issues": [
+        "currency_unspecified"
+      ],
+      "point_in_time_verified": false
+    },
+    {
+      "cusip": "20825C104",
+      "ex_date": "2024-08-12",
+      "foreign": false,
+      "id": "8318b86a-41ff-4573-b009-5242f57efa30",
+      "payable_date": "2024-09-03",
+      "process_date": "2024-09-03",
+      "rate": 0.58,
+      "record_date": "2024-08-12",
+      "special": false,
+      "symbol": "COP",
+      "process_minus_ex_days": 22,
+      "issues": [
+        "currency_unspecified"
+      ],
+      "point_in_time_verified": false
+    },
+    {
+      "cusip": "20825C104",
+      "ex_date": "2024-11-08",
+      "foreign": false,
+      "id": "3012c6ac-1b2c-4100-84e2-010bdaf10bb6",
+      "payable_date": "2024-12-02",
+      "process_date": "2024-12-02",
+      "rate": 0.78,
+      "record_date": "2024-11-11",
+      "special": false,
+      "symbol": "COP",
+      "process_minus_ex_days": 24,
+      "issues": [
+        "currency_unspecified"
+      ],
+      "point_in_time_verified": false
+    },
+    {
+      "cusip": "20825C104",
+      "ex_date": "2025-02-14",
+      "foreign": false,
+      "id": "c6d42a0e-7659-436a-bf2e-8d1227ce5001",
+      "payable_date": "2025-03-03",
+      "process_date": "2025-03-03",
+      "rate": 0.78,
+      "record_date": "2025-02-14",
+      "special": false,
+      "symbol": "COP",
+      "process_minus_ex_days": 17,
+      "issues": [
+        "currency_unspecified"
+      ],
+      "point_in_time_verified": false
+    },
+    {
+      "cusip": "20825C104",
+      "ex_date": "2025-05-19",
+      "foreign": false,
+      "id": "66909c44-230e-4020-a4c4-b6148eb00ac1",
+      "payable_date": "2025-06-02",
+      "process_date": "2025-06-02",
+      "rate": 0.78,
+      "record_date": "2025-05-19",
+      "special": false,
+      "symbol": "COP",
+      "process_minus_ex_days": 14,
+      "issues": [
+        "currency_unspecified"
+      ],
+      "point_in_time_verified": false
+    },
+    {
+      "cusip": "20825C104",
+      "ex_date": "2025-08-18",
+      "foreign": false,
+      "id": "fefd575f-aa2e-48a6-b078-3e8033462e9e",
+      "payable_date": "2025-09-02",
+      "process_date": "2025-09-02",
+      "rate": 0.78,
+      "record_date": "2025-08-18",
+      "special": false,
+      "symbol": "COP",
+      "process_minus_ex_days": 15,
+      "issues": [
+        "currency_unspecified"
+      ],
+      "point_in_time_verified": false
+    },
+    {
+      "cusip": "20825C104",
+      "ex_date": "2025-11-17",
+      "foreign": false,
+      "id": "31c4a202-1092-40e7-93db-d181b70544d7",
+      "payable_date": "2025-12-01",
+      "process_date": "2025-12-01",
+      "rate": 0.84,
+      "record_date": "2025-11-17",
+      "special": false,
+      "symbol": "COP",
+      "process_minus_ex_days": 14,
+      "issues": [
+        "currency_unspecified"
+      ],
+      "point_in_time_verified": false
+    },
+    {
+      "cusip": "20825C104",
+      "ex_date": "2026-02-18",
+      "foreign": false,
+      "id": "8b647702-56cf-4ace-b717-9b79155ab116",
+      "payable_date": "2026-03-02",
+      "process_date": "2026-03-02",
+      "rate": 0.84,
+      "record_date": "2026-02-18",
+      "special": false,
+      "symbol": "COP",
+      "process_minus_ex_days": 12,
+      "issues": [
+        "currency_unspecified"
+      ],
+      "point_in_time_verified": false
+    },
+    {
+      "cusip": "20825C104",
+      "ex_date": "2026-05-11",
+      "foreign": false,
+      "id": "04da2e82-a968-482a-921f-09363855bdbe",
+      "payable_date": "2026-06-01",
+      "process_date": "2026-06-01",
+      "rate": 0.84,
+      "record_date": "2026-05-11",
+      "special": false,
+      "symbol": "COP",
+      "process_minus_ex_days": 21,
+      "issues": [
+        "currency_unspecified"
+      ],
+      "point_in_time_verified": false
+    },
+    {
+      "cusip": "20825C104",
+      "ex_date": "2026-08-17",
+      "foreign": false,
+      "id": "3ef4f4cb-604c-46d5-973f-34475d67226a",
+      "payable_date": "2026-09-01",
+      "process_date": "2026-09-01",
+      "rate": 0.84,
+      "record_date": "2026-08-17",
+      "special": false,
+      "symbol": "COP",
+      "process_minus_ex_days": 15,
+      "issues": [
+        "currency_unspecified"
+      ],
+      "point_in_time_verified": false
+    }
+  ],
+  "potential_duplicate_economic_events": [],
+  "point_in_time_complete": false,
+  "ex_date_coverage_complete": false,
+  "counts": {
+    "COP": 32
+  }
+}
