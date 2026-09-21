@@ -1,0 +1,4535 @@
+{
+  "status": "completed",
+  "snapshots": {
+    "AAPL": {
+      "cutoff": "2025-09-01",
+      "entity": "Apple Inc.",
+      "cik": 320193,
+      "current_sic": "3571",
+      "current_sic_description": "Electronic Computers",
+      "current_sic_is_point_in_time": false,
+      "annual": [
+        {
+          "end": "2024-09-28",
+          "sources": {
+            "gross_profit": {
+              "tag": "GrossProfit",
+              "start": "2023-10-01",
+              "end": "2024-09-28",
+              "filed": "2024-11-01",
+              "accn": "0000320193-24-000123",
+              "form": "10-K"
+            },
+            "net_income": {
+              "tag": "NetIncomeLoss",
+              "start": "2023-10-01",
+              "end": "2024-09-28",
+              "filed": "2024-11-01",
+              "accn": "0000320193-24-000123",
+              "form": "10-K"
+            },
+            "operating_cash_flow": {
+              "tag": "NetCashProvidedByUsedInOperatingActivities",
+              "start": "2023-10-01",
+              "end": "2024-09-28",
+              "filed": "2024-11-01",
+              "accn": "0000320193-24-000123",
+              "form": "10-K"
+            },
+            "revenue": {
+              "tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+              "start": "2023-10-01",
+              "end": "2024-09-28",
+              "filed": "2024-11-01",
+              "accn": "0000320193-24-000123",
+              "form": "10-K"
+            },
+            "assets": {
+              "tag": "Assets",
+              "start": null,
+              "end": "2024-09-28",
+              "filed": "2024-11-01",
+              "accn": "0000320193-24-000123",
+              "form": "10-K"
+            }
+          },
+          "gross_profit": 180683000000,
+          "net_income": 93736000000,
+          "operating_cash_flow": 118254000000,
+          "revenue": 391035000000,
+          "assets": 364980000000
+        },
+        {
+          "end": "2023-09-30",
+          "sources": {
+            "gross_profit": {
+              "tag": "GrossProfit",
+              "start": "2022-09-25",
+              "end": "2023-09-30",
+              "filed": "2024-11-01",
+              "accn": "0000320193-24-000123",
+              "form": "10-K"
+            },
+            "net_income": {
+              "tag": "NetIncomeLoss",
+              "start": "2022-09-25",
+              "end": "2023-09-30",
+              "filed": "2024-11-01",
+              "accn": "0000320193-24-000123",
+              "form": "10-K"
+            },
+            "operating_cash_flow": {
+              "tag": "NetCashProvidedByUsedInOperatingActivities",
+              "start": "2022-09-25",
+              "end": "2023-09-30",
+              "filed": "2024-11-01",
+              "accn": "0000320193-24-000123",
+              "form": "10-K"
+            },
+            "revenue": {
+              "tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+              "start": "2022-09-25",
+              "end": "2023-09-30",
+              "filed": "2024-11-01",
+              "accn": "0000320193-24-000123",
+              "form": "10-K"
+            },
+            "assets": {
+              "tag": "Assets",
+              "start": null,
+              "end": "2023-09-30",
+              "filed": "2024-11-01",
+              "accn": "0000320193-24-000123",
+              "form": "10-K"
+            }
+          },
+          "gross_profit": 169148000000,
+          "net_income": 96995000000,
+          "operating_cash_flow": 110543000000,
+          "revenue": 383285000000,
+          "assets": 352583000000
+        },
+        {
+          "end": "2022-09-24",
+          "sources": {
+            "gross_profit": {
+              "tag": "GrossProfit",
+              "start": "2021-09-26",
+              "end": "2022-09-24",
+              "filed": "2024-11-01",
+              "accn": "0000320193-24-000123",
+              "form": "10-K"
+            },
+            "net_income": {
+              "tag": "NetIncomeLoss",
+              "start": "2021-09-26",
+              "end": "2022-09-24",
+              "filed": "2024-11-01",
+              "accn": "0000320193-24-000123",
+              "form": "10-K"
+            },
+            "operating_cash_flow": {
+              "tag": "NetCashProvidedByUsedInOperatingActivities",
+              "start": "2021-09-26",
+              "end": "2022-09-24",
+              "filed": "2024-11-01",
+              "accn": "0000320193-24-000123",
+              "form": "10-K"
+            },
+            "revenue": {
+              "tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+              "start": "2021-09-26",
+              "end": "2022-09-24",
+              "filed": "2024-11-01",
+              "accn": "0000320193-24-000123",
+              "form": "10-K"
+            },
+            "assets": {
+              "tag": "Assets",
+              "start": null,
+              "end": "2022-09-24",
+              "filed": "2023-11-03",
+              "accn": "0000320193-23-000106",
+              "form": "10-K"
+            }
+          },
+          "gross_profit": 170782000000,
+          "net_income": 99803000000,
+          "operating_cash_flow": 122151000000,
+          "revenue": 394328000000,
+          "assets": 352755000000
+        }
+      ],
+      "complete_three_years": true,
+      "positive_income_and_cashflow_three_years": true,
+      "gross_profit_assets_latest": 0.495049043783221
+    },
+    "MSFT": {
+      "cutoff": "2025-09-01",
+      "entity": "MICROSOFT CORPORATION",
+      "cik": 789019,
+      "current_sic": "7372",
+      "current_sic_description": "Services-Prepackaged Software",
+      "current_sic_is_point_in_time": false,
+      "annual": [
+        {
+          "end": "2025-06-30",
+          "sources": {
+            "gross_profit": {
+              "tag": "GrossProfit",
+              "start": "2024-07-01",
+              "end": "2025-06-30",
+              "filed": "2025-07-30",
+              "accn": "0000950170-25-100235",
+              "form": "10-K"
+            },
+            "net_income": {
+              "tag": "NetIncomeLoss",
+              "start": "2024-07-01",
+              "end": "2025-06-30",
+              "filed": "2025-07-30",
+              "accn": "0000950170-25-100235",
+              "form": "10-K"
+            },
+            "operating_cash_flow": {
+              "tag": "NetCashProvidedByUsedInOperatingActivities",
+              "start": "2024-07-01",
+              "end": "2025-06-30",
+              "filed": "2025-07-30",
+              "accn": "0000950170-25-100235",
+              "form": "10-K"
+            },
+            "revenue": {
+              "tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+              "start": "2024-07-01",
+              "end": "2025-06-30",
+              "filed": "2025-07-30",
+              "accn": "0000950170-25-100235",
+              "form": "10-K"
+            },
+            "assets": {
+              "tag": "Assets",
+              "start": null,
+              "end": "2025-06-30",
+              "filed": "2025-07-30",
+              "accn": "0000950170-25-100235",
+              "form": "10-K"
+            }
+          },
+          "gross_profit": 193893000000,
+          "net_income": 101832000000,
+          "operating_cash_flow": 136162000000,
+          "revenue": 281724000000,
+          "assets": 619003000000
+        },
+        {
+          "end": "2024-06-30",
+          "sources": {
+            "gross_profit": {
+              "tag": "GrossProfit",
+              "start": "2023-07-01",
+              "end": "2024-06-30",
+              "filed": "2025-07-30",
+              "accn": "0000950170-25-100235",
+              "form": "10-K"
+            },
+            "net_income": {
+              "tag": "NetIncomeLoss",
+              "start": "2023-07-01",
+              "end": "2024-06-30",
+              "filed": "2025-07-30",
+              "accn": "0000950170-25-100235",
+              "form": "10-K"
+            },
+            "operating_cash_flow": {
+              "tag": "NetCashProvidedByUsedInOperatingActivities",
+              "start": "2023-07-01",
+              "end": "2024-06-30",
+              "filed": "2025-07-30",
+              "accn": "0000950170-25-100235",
+              "form": "10-K"
+            },
+            "revenue": {
+              "tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+              "start": "2023-07-01",
+              "end": "2024-06-30",
+              "filed": "2025-07-30",
+              "accn": "0000950170-25-100235",
+              "form": "10-K"
+            },
+            "assets": {
+              "tag": "Assets",
+              "start": null,
+              "end": "2024-06-30",
+              "filed": "2025-07-30",
+              "accn": "0000950170-25-100235",
+              "form": "10-K"
+            }
+          },
+          "gross_profit": 171008000000,
+          "net_income": 88136000000,
+          "operating_cash_flow": 118548000000,
+          "revenue": 245122000000,
+          "assets": 512163000000
+        },
+        {
+          "end": "2023-06-30",
+          "sources": {
+            "gross_profit": {
+              "tag": "GrossProfit",
+              "start": "2022-07-01",
+              "end": "2023-06-30",
+              "filed": "2025-07-30",
+              "accn": "0000950170-25-100235",
+              "form": "10-K"
+            },
+            "net_income": {
+              "tag": "NetIncomeLoss",
+              "start": "2022-07-01",
+              "end": "2023-06-30",
+              "filed": "2025-07-30",
+              "accn": "0000950170-25-100235",
+              "form": "10-K"
+            },
+            "operating_cash_flow": {
+              "tag": "NetCashProvidedByUsedInOperatingActivities",
+              "start": "2022-07-01",
+              "end": "2023-06-30",
+              "filed": "2025-07-30",
+              "accn": "0000950170-25-100235",
+              "form": "10-K"
+            },
+            "revenue": {
+              "tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+              "start": "2022-07-01",
+              "end": "2023-06-30",
+              "filed": "2025-07-30",
+              "accn": "0000950170-25-100235",
+              "form": "10-K"
+            },
+            "assets": {
+              "tag": "Assets",
+              "start": null,
+              "end": "2023-06-30",
+              "filed": "2024-07-30",
+              "accn": "0000950170-24-087843",
+              "form": "10-K"
+            }
+          },
+          "gross_profit": 146052000000,
+          "net_income": 72361000000,
+          "operating_cash_flow": 87582000000,
+          "revenue": 211915000000,
+          "assets": 411976000000
+        }
+      ],
+      "complete_three_years": true,
+      "positive_income_and_cashflow_three_years": true,
+      "gross_profit_assets_latest": 0.31323434619864526
+    },
+    "NVDA": {
+      "cutoff": "2025-09-01",
+      "entity": "NVIDIA CORP",
+      "cik": 1045810,
+      "current_sic": "3674",
+      "current_sic_description": "Semiconductors & Related Devices",
+      "current_sic_is_point_in_time": false,
+      "annual": [
+        {
+          "end": "2025-01-26",
+          "sources": {
+            "gross_profit": {
+              "tag": "GrossProfit",
+              "start": "2024-01-29",
+              "end": "2025-01-26",
+              "filed": "2025-02-26",
+              "accn": "0001045810-25-000023",
+              "form": "10-K"
+            },
+            "net_income": {
+              "tag": "NetIncomeLoss",
+              "start": "2024-01-29",
+              "end": "2025-01-26",
+              "filed": "2025-02-26",
+              "accn": "0001045810-25-000023",
+              "form": "10-K"
+            },
+            "operating_cash_flow": {
+              "tag": "NetCashProvidedByUsedInOperatingActivities",
+              "start": "2024-01-29",
+              "end": "2025-01-26",
+              "filed": "2025-02-26",
+              "accn": "0001045810-25-000023",
+              "form": "10-K"
+            },
+            "revenue": {
+              "tag": "Revenues",
+              "start": "2024-01-29",
+              "end": "2025-01-26",
+              "filed": "2025-02-26",
+              "accn": "0001045810-25-000023",
+              "form": "10-K"
+            },
+            "assets": {
+              "tag": "Assets",
+              "start": null,
+              "end": "2025-01-26",
+              "filed": "2025-02-26",
+              "accn": "0001045810-25-000023",
+              "form": "10-K"
+            }
+          },
+          "gross_profit": 97858000000,
+          "net_income": 72880000000,
+          "operating_cash_flow": 64089000000,
+          "revenue": 130497000000,
+          "assets": 111601000000
+        },
+        {
+          "end": "2024-01-28",
+          "sources": {
+            "gross_profit": {
+              "tag": "GrossProfit",
+              "start": "2023-01-30",
+              "end": "2024-01-28",
+              "filed": "2025-02-26",
+              "accn": "0001045810-25-000023",
+              "form": "10-K"
+            },
+            "net_income": {
+              "tag": "NetIncomeLoss",
+              "start": "2023-01-30",
+              "end": "2024-01-28",
+              "filed": "2025-02-26",
+              "accn": "0001045810-25-000023",
+              "form": "10-K"
+            },
+            "operating_cash_flow": {
+              "tag": "NetCashProvidedByUsedInOperatingActivities",
+              "start": "2023-01-30",
+              "end": "2024-01-28",
+              "filed": "2025-02-26",
+              "accn": "0001045810-25-000023",
+              "form": "10-K"
+            },
+            "revenue": {
+              "tag": "Revenues",
+              "start": "2023-01-30",
+              "end": "2024-01-28",
+              "filed": "2025-02-26",
+              "accn": "0001045810-25-000023",
+              "form": "10-K"
+            },
+            "assets": {
+              "tag": "Assets",
+              "start": null,
+              "end": "2024-01-28",
+              "filed": "2025-02-26",
+              "accn": "0001045810-25-000023",
+              "form": "10-K"
+            }
+          },
+          "gross_profit": 44301000000,
+          "net_income": 29760000000,
+          "operating_cash_flow": 28090000000,
+          "revenue": 60922000000,
+          "assets": 65728000000
+        },
+        {
+          "end": "2023-01-29",
+          "sources": {
+            "gross_profit": {
+              "tag": "GrossProfit",
+              "start": "2022-01-31",
+              "end": "2023-01-29",
+              "filed": "2025-02-26",
+              "accn": "0001045810-25-000023",
+              "form": "10-K"
+            },
+            "net_income": {
+              "tag": "NetIncomeLoss",
+              "start": "2022-01-31",
+              "end": "2023-01-29",
+              "filed": "2025-02-26",
+              "accn": "0001045810-25-000023",
+              "form": "10-K"
+            },
+            "operating_cash_flow": {
+              "tag": "NetCashProvidedByUsedInOperatingActivities",
+              "start": "2022-01-31",
+              "end": "2023-01-29",
+              "filed": "2025-02-26",
+              "accn": "0001045810-25-000023",
+              "form": "10-K"
+            },
+            "revenue": {
+              "tag": "Revenues",
+              "start": "2022-01-31",
+              "end": "2023-01-29",
+              "filed": "2025-02-26",
+              "accn": "0001045810-25-000023",
+              "form": "10-K"
+            },
+            "assets": {
+              "tag": "Assets",
+              "start": null,
+              "end": "2023-01-29",
+              "filed": "2024-02-21",
+              "accn": "0001045810-24-000029",
+              "form": "10-K"
+            }
+          },
+          "gross_profit": 15356000000,
+          "net_income": 4368000000,
+          "operating_cash_flow": 5641000000,
+          "revenue": 26974000000,
+          "assets": 41182000000
+        }
+      ],
+      "complete_three_years": true,
+      "positive_income_and_cashflow_three_years": true,
+      "gross_profit_assets_latest": 0.876855942151056
+    },
+    "AMZN": {
+      "cutoff": "2025-09-01",
+      "entity": "AMAZON COM INC",
+      "cik": 1018724,
+      "current_sic": "5961",
+      "current_sic_description": "Retail-Catalog & Mail-Order Houses",
+      "current_sic_is_point_in_time": false,
+      "annual": [
+        {
+          "end": "2024-12-31",
+          "sources": {
+            "net_income": {
+              "tag": "NetIncomeLoss",
+              "start": "2024-01-01",
+              "end": "2024-12-31",
+              "filed": "2025-02-07",
+              "accn": "0001018724-25-000004",
+              "form": "10-K"
+            },
+            "operating_cash_flow": {
+              "tag": "NetCashProvidedByUsedInOperatingActivities",
+              "start": "2024-01-01",
+              "end": "2024-12-31",
+              "filed": "2025-02-07",
+              "accn": "0001018724-25-000004",
+              "form": "10-K"
+            },
+            "revenue": {
+              "tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+              "start": "2024-01-01",
+              "end": "2024-12-31",
+              "filed": "2025-02-07",
+              "accn": "0001018724-25-000004",
+              "form": "10-K"
+            },
+            "assets": {
+              "tag": "Assets",
+              "start": null,
+              "end": "2024-12-31",
+              "filed": "2025-02-07",
+              "accn": "0001018724-25-000004",
+              "form": "10-K"
+            }
+          },
+          "gross_profit": null,
+          "net_income": 59248000000,
+          "operating_cash_flow": 115877000000,
+          "revenue": 637959000000,
+          "assets": 624894000000
+        },
+        {
+          "end": "2023-12-31",
+          "sources": {
+            "net_income": {
+              "tag": "NetIncomeLoss",
+              "start": "2023-01-01",
+              "end": "2023-12-31",
+              "filed": "2025-02-07",
+              "accn": "0001018724-25-000004",
+              "form": "10-K"
+            },
+            "operating_cash_flow": {
+              "tag": "NetCashProvidedByUsedInOperatingActivities",
+              "start": "2023-01-01",
+              "end": "2023-12-31",
+              "filed": "2025-02-07",
+              "accn": "0001018724-25-000004",
+              "form": "10-K"
+            },
+            "revenue": {
+              "tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+              "start": "2023-01-01",
+              "end": "2023-12-31",
+              "filed": "2025-02-07",
+              "accn": "0001018724-25-000004",
+              "form": "10-K"
+            },
+            "assets": {
+              "tag": "Assets",
+              "start": null,
+              "end": "2023-12-31",
+              "filed": "2025-02-07",
+              "accn": "0001018724-25-000004",
+              "form": "10-K"
+            }
+          },
+          "gross_profit": null,
+          "net_income": 30425000000,
+          "operating_cash_flow": 84946000000,
+          "revenue": 574785000000,
+          "assets": 527854000000
+        },
+        {
+          "end": "2022-12-31",
+          "sources": {
+            "net_income": {
+              "tag": "NetIncomeLoss",
+              "start": "2022-01-01",
+              "end": "2022-12-31",
+              "filed": "2025-02-07",
+              "accn": "0001018724-25-000004",
+              "form": "10-K"
+            },
+            "operating_cash_flow": {
+              "tag": "NetCashProvidedByUsedInOperatingActivities",
+              "start": "2022-01-01",
+              "end": "2022-12-31",
+              "filed": "2025-02-07",
+              "accn": "0001018724-25-000004",
+              "form": "10-K"
+            },
+            "revenue": {
+              "tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+              "start": "2022-01-01",
+              "end": "2022-12-31",
+              "filed": "2025-02-07",
+              "accn": "0001018724-25-000004",
+              "form": "10-K"
+            },
+            "assets": {
+              "tag": "Assets",
+              "start": null,
+              "end": "2022-12-31",
+              "filed": "2025-02-07",
+              "accn": "0001018724-25-000004",
+              "form": "10-K"
+            }
+          },
+          "gross_profit": null,
+          "net_income": -2722000000,
+          "operating_cash_flow": 46752000000,
+          "revenue": 513983000000,
+          "assets": 462675000000
+        }
+      ],
+      "complete_three_years": true,
+      "positive_income_and_cashflow_three_years": false,
+      "gross_profit_assets_latest": null
+    },
+    "META": {
+      "cutoff": "2025-09-01",
+      "entity": "Meta Platforms, Inc.",
+      "cik": 1326801,
+      "current_sic": "7370",
+      "current_sic_description": "Services-Computer Programming, Data Processing, Etc.",
+      "current_sic_is_point_in_time": false,
+      "annual": [
+        {
+          "end": "2024-12-31",
+          "sources": {
+            "net_income": {
+              "tag": "NetIncomeLoss",
+              "start": "2024-01-01",
+              "end": "2024-12-31",
+              "filed": "2025-01-30",
+              "accn": "0001326801-25-000017",
+              "form": "10-K"
+            },
+            "operating_cash_flow": {
+              "tag": "NetCashProvidedByUsedInOperatingActivities",
+              "start": "2024-01-01",
+              "end": "2024-12-31",
+              "filed": "2025-01-30",
+              "accn": "0001326801-25-000017",
+              "form": "10-K"
+            },
+            "revenue": {
+              "tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+              "start": "2024-01-01",
+              "end": "2024-12-31",
+              "filed": "2025-01-30",
+              "accn": "0001326801-25-000017",
+              "form": "10-K"
+            },
+            "assets": {
+              "tag": "Assets",
+              "start": null,
+              "end": "2024-12-31",
+              "filed": "2025-01-30",
+              "accn": "0001326801-25-000017",
+              "form": "10-K"
+            }
+          },
+          "gross_profit": null,
+          "net_income": 62360000000,
+          "operating_cash_flow": 91328000000,
+          "revenue": 164501000000,
+          "assets": 276054000000
+        },
+        {
+          "end": "2023-12-31",
+          "sources": {
+            "net_income": {
+              "tag": "NetIncomeLoss",
+              "start": "2023-01-01",
+              "end": "2023-12-31",
+              "filed": "2025-01-30",
+              "accn": "0001326801-25-000017",
+              "form": "10-K"
+            },
+            "operating_cash_flow": {
+              "tag": "NetCashProvidedByUsedInOperatingActivities",
+              "start": "2023-01-01",
+              "end": "2023-12-31",
+              "filed": "2025-01-30",
+              "accn": "0001326801-25-000017",
+              "form": "10-K"
+            },
+            "revenue": {
+              "tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+              "start": "2023-01-01",
+              "end": "2023-12-31",
+              "filed": "2025-01-30",
+              "accn": "0001326801-25-000017",
+              "form": "10-K"
+            },
+            "assets": {
+              "tag": "Assets",
+              "start": null,
+              "end": "2023-12-31",
+              "filed": "2025-01-30",
+              "accn": "0001326801-25-000017",
+              "form": "10-K"
+            }
+          },
+          "gross_profit": null,
+          "net_income": 39098000000,
+          "operating_cash_flow": 71113000000,
+          "revenue": 134902000000,
+          "assets": 229623000000
+        },
+        {
+          "end": "2022-12-31",
+          "sources": {
+            "net_income": {
+              "tag": "NetIncomeLoss",
+              "start": "2022-01-01",
+              "end": "2022-12-31",
+              "filed": "2025-01-30",
+              "accn": "0001326801-25-000017",
+              "form": "10-K"
+            },
+            "operating_cash_flow": {
+              "tag": "NetCashProvidedByUsedInOperatingActivities",
+              "start": "2022-01-01",
+              "end": "2022-12-31",
+              "filed": "2025-01-30",
+              "accn": "0001326801-25-000017",
+              "form": "10-K"
+            },
+            "revenue": {
+              "tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+              "start": "2022-01-01",
+              "end": "2022-12-31",
+              "filed": "2025-01-30",
+              "accn": "0001326801-25-000017",
+              "form": "10-K"
+            },
+            "assets": {
+              "tag": "Assets",
+              "start": null,
+              "end": "2022-12-31",
+              "filed": "2024-02-02",
+              "accn": "0001326801-24-000012",
+              "form": "10-K"
+            }
+          },
+          "gross_profit": null,
+          "net_income": 23200000000,
+          "operating_cash_flow": 50475000000,
+          "revenue": 116609000000,
+          "assets": 185727000000
+        }
+      ],
+      "complete_three_years": true,
+      "positive_income_and_cashflow_three_years": true,
+      "gross_profit_assets_latest": null
+    },
+    "GOOGL": {
+      "cutoff": "2025-09-01",
+      "entity": "Alphabet Inc.",
+      "cik": 1652044,
+      "current_sic": "7370",
+      "current_sic_description": "Services-Computer Programming, Data Processing, Etc.",
+      "current_sic_is_point_in_time": false,
+      "annual": [
+        {
+          "end": "2024-12-31",
+          "sources": {
+            "net_income": {
+              "tag": "NetIncomeLoss",
+              "start": "2024-01-01",
+              "end": "2024-12-31",
+              "filed": "2025-02-05",
+              "accn": "0001652044-25-000014",
+              "form": "10-K"
+            },
+            "operating_cash_flow": {
+              "tag": "NetCashProvidedByUsedInOperatingActivities",
+              "start": "2024-01-01",
+              "end": "2024-12-31",
+              "filed": "2025-02-05",
+              "accn": "0001652044-25-000014",
+              "form": "10-K"
+            },
+            "revenue": {
+              "tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+              "start": "2024-01-01",
+              "end": "2024-12-31",
+              "filed": "2025-02-05",
+              "accn": "0001652044-25-000014",
+              "form": "10-K"
+            },
+            "assets": {
+              "tag": "Assets",
+              "start": null,
+              "end": "2024-12-31",
+              "filed": "2025-02-05",
+              "accn": "0001652044-25-000014",
+              "form": "10-K"
+            }
+          },
+          "gross_profit": null,
+          "net_income": 100118000000,
+          "operating_cash_flow": 125299000000,
+          "revenue": 350018000000,
+          "assets": 450256000000
+        },
+        {
+          "end": "2023-12-31",
+          "sources": {
+            "net_income": {
+              "tag": "NetIncomeLoss",
+              "start": "2023-01-01",
+              "end": "2023-12-31",
+              "filed": "2025-02-05",
+              "accn": "0001652044-25-000014",
+              "form": "10-K"
+            },
+            "operating_cash_flow": {
+              "tag": "NetCashProvidedByUsedInOperatingActivities",
+              "start": "2023-01-01",
+              "end": "2023-12-31",
+              "filed": "2025-02-05",
+              "accn": "0001652044-25-000014",
+              "form": "10-K"
+            },
+            "revenue": {
+              "tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+              "start": "2023-01-01",
+              "end": "2023-12-31",
+              "filed": "2025-02-05",
+              "accn": "0001652044-25-000014",
+              "form": "10-K"
+            },
+            "assets": {
+              "tag": "Assets",
+              "start": null,
+              "end": "2023-12-31",
+              "filed": "2025-02-05",
+              "accn": "0001652044-25-000014",
+              "form": "10-K"
+            }
+          },
+          "gross_profit": null,
+          "net_income": 73795000000,
+          "operating_cash_flow": 101746000000,
+          "revenue": 307394000000,
+          "assets": 402392000000
+        },
+        {
+          "end": "2022-12-31",
+          "sources": {
+            "net_income": {
+              "tag": "NetIncomeLoss",
+              "start": "2022-01-01",
+              "end": "2022-12-31",
+              "filed": "2025-02-05",
+              "accn": "0001652044-25-000014",
+              "form": "10-K"
+            },
+            "operating_cash_flow": {
+              "tag": "NetCashProvidedByUsedInOperatingActivities",
+              "start": "2022-01-01",
+              "end": "2022-12-31",
+              "filed": "2025-02-05",
+              "accn": "0001652044-25-000014",
+              "form": "10-K"
+            },
+            "revenue": {
+              "tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+              "start": "2022-01-01",
+              "end": "2022-12-31",
+              "filed": "2025-02-05",
+              "accn": "0001652044-25-000014",
+              "form": "10-K"
+            },
+            "assets": {
+              "tag": "Assets",
+              "start": null,
+              "end": "2022-12-31",
+              "filed": "2024-01-31",
+              "accn": "0001652044-24-000022",
+              "form": "10-K"
+            }
+          },
+          "gross_profit": null,
+          "net_income": 59972000000,
+          "operating_cash_flow": 91495000000,
+          "revenue": 282836000000,
+          "assets": 365264000000
+        }
+      ],
+      "complete_three_years": true,
+      "positive_income_and_cashflow_three_years": true,
+      "gross_profit_assets_latest": null
+    },
+    "AMD": {
+      "cutoff": "2025-09-01",
+      "entity": "ADVANCED MICRO DEVICES INC",
+      "cik": 2488,
+      "current_sic": "3674",
+      "current_sic_description": "Semiconductors & Related Devices",
+      "current_sic_is_point_in_time": false,
+      "annual": [
+        {
+          "end": "2024-12-28",
+          "sources": {
+            "gross_profit": {
+              "tag": "GrossProfit",
+              "start": "2023-12-31",
+              "end": "2024-12-28",
+              "filed": "2025-02-05",
+              "accn": "0000002488-25-000012",
+              "form": "10-K"
+            },
+            "net_income": {
+              "tag": "NetIncomeLoss",
+              "start": "2023-12-31",
+              "end": "2024-12-28",
+              "filed": "2025-02-05",
+              "accn": "0000002488-25-000012",
+              "form": "10-K"
+            },
+            "operating_cash_flow": {
+              "tag": "NetCashProvidedByUsedInOperatingActivities",
+              "start": "2023-12-31",
+              "end": "2024-12-28",
+              "filed": "2025-02-05",
+              "accn": "0000002488-25-000012",
+              "form": "10-K"
+            },
+            "revenue": {
+              "tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+              "start": "2023-12-31",
+              "end": "2024-12-28",
+              "filed": "2025-02-05",
+              "accn": "0000002488-25-000012",
+              "form": "10-K"
+            },
+            "assets": {
+              "tag": "Assets",
+              "start": null,
+              "end": "2024-12-28",
+              "filed": "2025-02-05",
+              "accn": "0000002488-25-000012",
+              "form": "10-K"
+            }
+          },
+          "gross_profit": 12725000000,
+          "net_income": 1641000000,
+          "operating_cash_flow": 3041000000,
+          "revenue": 25785000000,
+          "assets": 69226000000
+        },
+        {
+          "end": "2023-12-30",
+          "sources": {
+            "gross_profit": {
+              "tag": "GrossProfit",
+              "start": "2023-01-01",
+              "end": "2023-12-30",
+              "filed": "2025-02-05",
+              "accn": "0000002488-25-000012",
+              "form": "10-K"
+            },
+            "net_income": {
+              "tag": "NetIncomeLoss",
+              "start": "2023-01-01",
+              "end": "2023-12-30",
+              "filed": "2025-02-05",
+              "accn": "0000002488-25-000012",
+              "form": "10-K"
+            },
+            "operating_cash_flow": {
+              "tag": "NetCashProvidedByUsedInOperatingActivities",
+              "start": "2023-01-01",
+              "end": "2023-12-30",
+              "filed": "2025-02-05",
+              "accn": "0000002488-25-000012",
+              "form": "10-K"
+            },
+            "revenue": {
+              "tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+              "start": "2023-01-01",
+              "end": "2023-12-30",
+              "filed": "2025-02-05",
+              "accn": "0000002488-25-000012",
+              "form": "10-K"
+            },
+            "assets": {
+              "tag": "Assets",
+              "start": null,
+              "end": "2023-12-30",
+              "filed": "2025-02-05",
+              "accn": "0000002488-25-000012",
+              "form": "10-K"
+            }
+          },
+          "gross_profit": 10460000000,
+          "net_income": 854000000,
+          "operating_cash_flow": 1667000000,
+          "revenue": 22680000000,
+          "assets": 67885000000
+        },
+        {
+          "end": "2022-12-31",
+          "sources": {
+            "gross_profit": {
+              "tag": "GrossProfit",
+              "start": "2021-12-26",
+              "end": "2022-12-31",
+              "filed": "2025-02-05",
+              "accn": "0000002488-25-000012",
+              "form": "10-K"
+            },
+            "net_income": {
+              "tag": "NetIncomeLoss",
+              "start": "2021-12-26",
+              "end": "2022-12-31",
+              "filed": "2025-02-05",
+              "accn": "0000002488-25-000012",
+              "form": "10-K"
+            },
+            "operating_cash_flow": {
+              "tag": "NetCashProvidedByUsedInOperatingActivities",
+              "start": "2021-12-26",
+              "end": "2022-12-31",
+              "filed": "2025-02-05",
+              "accn": "0000002488-25-000012",
+              "form": "10-K"
+            },
+            "revenue": {
+              "tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+              "start": "2021-12-26",
+              "end": "2022-12-31",
+              "filed": "2025-02-05",
+              "accn": "0000002488-25-000012",
+              "form": "10-K"
+            },
+            "assets": {
+              "tag": "Assets",
+              "start": null,
+              "end": "2022-12-31",
+              "filed": "2024-01-31",
+              "accn": "0000002488-24-000012",
+              "form": "10-K"
+            }
+          },
+          "gross_profit": 10603000000,
+          "net_income": 1320000000,
+          "operating_cash_flow": 3565000000,
+          "revenue": 23601000000,
+          "assets": 67580000000
+        }
+      ],
+      "complete_three_years": true,
+      "positive_income_and_cashflow_three_years": true,
+      "gross_profit_assets_latest": 0.18381821858839165
+    },
+    "TSLA": {
+      "cutoff": "2025-09-01",
+      "entity": "Tesla, Inc.",
+      "cik": 1318605,
+      "current_sic": "3711",
+      "current_sic_description": "Motor Vehicles & Passenger Car Bodies",
+      "current_sic_is_point_in_time": false,
+      "annual": [
+        {
+          "end": "2024-12-31",
+          "sources": {
+            "gross_profit": {
+              "tag": "GrossProfit",
+              "start": "2024-01-01",
+              "end": "2024-12-31",
+              "filed": "2025-01-30",
+              "accn": "0001628280-25-003063",
+              "form": "10-K"
+            },
+            "net_income": {
+              "tag": "NetIncomeLoss",
+              "start": "2024-01-01",
+              "end": "2024-12-31",
+              "filed": "2025-01-30",
+              "accn": "0001628280-25-003063",
+              "form": "10-K"
+            },
+            "operating_cash_flow": {
+              "tag": "NetCashProvidedByUsedInOperatingActivities",
+              "start": "2024-01-01",
+              "end": "2024-12-31",
+              "filed": "2025-01-30",
+              "accn": "0001628280-25-003063",
+              "form": "10-K"
+            },
+            "revenue": {
+              "tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+              "start": "2024-01-01",
+              "end": "2024-12-31",
+              "filed": "2025-01-30",
+              "accn": "0001628280-25-003063",
+              "form": "10-K"
+            },
+            "assets": {
+              "tag": "Assets",
+              "start": null,
+              "end": "2024-12-31",
+              "filed": "2025-01-30",
+              "accn": "0001628280-25-003063",
+              "form": "10-K"
+            }
+          },
+          "gross_profit": 17450000000,
+          "net_income": 7091000000,
+          "operating_cash_flow": 14923000000,
+          "revenue": 97690000000,
+          "assets": 122070000000
+        },
+        {
+          "end": "2023-12-31",
+          "sources": {
+            "gross_profit": {
+              "tag": "GrossProfit",
+              "start": "2023-01-01",
+              "end": "2023-12-31",
+              "filed": "2025-01-30",
+              "accn": "0001628280-25-003063",
+              "form": "10-K"
+            },
+            "net_income": {
+              "tag": "NetIncomeLoss",
+              "start": "2023-01-01",
+              "end": "2023-12-31",
+              "filed": "2025-01-30",
+              "accn": "0001628280-25-003063",
+              "form": "10-K"
+            },
+            "operating_cash_flow": {
+              "tag": "NetCashProvidedByUsedInOperatingActivities",
+              "start": "2023-01-01",
+              "end": "2023-12-31",
+              "filed": "2025-01-30",
+              "accn": "0001628280-25-003063",
+              "form": "10-K"
+            },
+            "revenue": {
+              "tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+              "start": "2023-01-01",
+              "end": "2023-12-31",
+              "filed": "2025-01-30",
+              "accn": "0001628280-25-003063",
+              "form": "10-K"
+            },
+            "assets": {
+              "tag": "Assets",
+              "start": null,
+              "end": "2023-12-31",
+              "filed": "2025-01-30",
+              "accn": "0001628280-25-003063",
+              "form": "10-K"
+            }
+          },
+          "gross_profit": 17660000000,
+          "net_income": 14997000000,
+          "operating_cash_flow": 13256000000,
+          "revenue": 96773000000,
+          "assets": 106618000000
+        },
+        {
+          "end": "2022-12-31",
+          "sources": {
+            "gross_profit": {
+              "tag": "GrossProfit",
+              "start": "2022-01-01",
+              "end": "2022-12-31",
+              "filed": "2025-01-30",
+              "accn": "0001628280-25-003063",
+              "form": "10-K"
+            },
+            "net_income": {
+              "tag": "NetIncomeLoss",
+              "start": "2022-01-01",
+              "end": "2022-12-31",
+              "filed": "2025-01-30",
+              "accn": "0001628280-25-003063",
+              "form": "10-K"
+            },
+            "operating_cash_flow": {
+              "tag": "NetCashProvidedByUsedInOperatingActivities",
+              "start": "2022-01-01",
+              "end": "2022-12-31",
+              "filed": "2025-01-30",
+              "accn": "0001628280-25-003063",
+              "form": "10-K"
+            },
+            "revenue": {
+              "tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+              "start": "2022-01-01",
+              "end": "2022-12-31",
+              "filed": "2025-01-30",
+              "accn": "0001628280-25-003063",
+              "form": "10-K"
+            },
+            "assets": {
+              "tag": "Assets",
+              "start": null,
+              "end": "2022-12-31",
+              "filed": "2024-01-29",
+              "accn": "0001628280-24-002390",
+              "form": "10-K"
+            }
+          },
+          "gross_profit": 20853000000,
+          "net_income": 12556000000,
+          "operating_cash_flow": 14724000000,
+          "revenue": 81462000000,
+          "assets": 82338000000
+        }
+      ],
+      "complete_three_years": true,
+      "positive_income_and_cashflow_three_years": true,
+      "gross_profit_assets_latest": 0.14295076595396083
+    },
+    "COST": {
+      "cutoff": "2025-09-01",
+      "entity": "COSTCO WHOLESALE CORP /NEW",
+      "cik": 909832,
+      "current_sic": "5331",
+      "current_sic_description": "Retail-Variety Stores",
+      "current_sic_is_point_in_time": false,
+      "annual": [
+        {
+          "end": "2024-09-01",
+          "sources": {
+            "net_income": {
+              "tag": "NetIncomeLoss",
+              "start": "2023-09-04",
+              "end": "2024-09-01",
+              "filed": "2024-10-09",
+              "accn": "0000909832-24-000049",
+              "form": "10-K"
+            },
+            "operating_cash_flow": {
+              "tag": "NetCashProvidedByUsedInOperatingActivities",
+              "start": "2023-09-04",
+              "end": "2024-09-01",
+              "filed": "2024-10-09",
+              "accn": "0000909832-24-000049",
+              "form": "10-K"
+            },
+            "revenue": {
+              "tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+              "start": "2023-09-04",
+              "end": "2024-09-01",
+              "filed": "2024-10-09",
+              "accn": "0000909832-24-000049",
+              "form": "10-K"
+            },
+            "assets": {
+              "tag": "Assets",
+              "start": null,
+              "end": "2024-09-01",
+              "filed": "2024-10-09",
+              "accn": "0000909832-24-000049",
+              "form": "10-K"
+            }
+          },
+          "gross_profit": null,
+          "net_income": 7367000000,
+          "operating_cash_flow": 11339000000,
+          "revenue": 254453000000,
+          "assets": 69831000000
+        },
+        {
+          "end": "2023-09-03",
+          "sources": {
+            "net_income": {
+              "tag": "NetIncomeLoss",
+              "start": "2022-08-29",
+              "end": "2023-09-03",
+              "filed": "2024-10-09",
+              "accn": "0000909832-24-000049",
+              "form": "10-K"
+            },
+            "operating_cash_flow": {
+              "tag": "NetCashProvidedByUsedInOperatingActivities",
+              "start": "2022-08-29",
+              "end": "2023-09-03",
+              "filed": "2024-10-09",
+              "accn": "0000909832-24-000049",
+              "form": "10-K"
+            },
+            "revenue": {
+              "tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+              "start": "2022-08-29",
+              "end": "2023-09-03",
+              "filed": "2024-10-09",
+              "accn": "0000909832-24-000049",
+              "form": "10-K"
+            },
+            "assets": {
+              "tag": "Assets",
+              "start": null,
+              "end": "2023-09-03",
+              "filed": "2024-10-09",
+              "accn": "0000909832-24-000049",
+              "form": "10-K"
+            }
+          },
+          "gross_profit": null,
+          "net_income": 6292000000,
+          "operating_cash_flow": 11068000000,
+          "revenue": 242290000000,
+          "assets": 68994000000
+        },
+        {
+          "end": "2022-08-28",
+          "sources": {
+            "net_income": {
+              "tag": "NetIncomeLoss",
+              "start": "2021-08-30",
+              "end": "2022-08-28",
+              "filed": "2024-10-09",
+              "accn": "0000909832-24-000049",
+              "form": "10-K"
+            },
+            "operating_cash_flow": {
+              "tag": "NetCashProvidedByUsedInOperatingActivities",
+              "start": "2021-08-30",
+              "end": "2022-08-28",
+              "filed": "2024-10-09",
+              "accn": "0000909832-24-000049",
+              "form": "10-K"
+            },
+            "revenue": {
+              "tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+              "start": "2021-08-30",
+              "end": "2022-08-28",
+              "filed": "2024-10-09",
+              "accn": "0000909832-24-000049",
+              "form": "10-K"
+            },
+            "assets": {
+              "tag": "Assets",
+              "start": null,
+              "end": "2022-08-28",
+              "filed": "2024-10-09",
+              "accn": "0000909832-24-000049",
+              "form": "10-K"
+            }
+          },
+          "gross_profit": null,
+          "net_income": 5844000000,
+          "operating_cash_flow": 7392000000,
+          "revenue": 226954000000,
+          "assets": 64166000000
+        }
+      ],
+      "complete_three_years": true,
+      "positive_income_and_cashflow_three_years": true,
+      "gross_profit_assets_latest": null
+    },
+    "JNJ": {
+      "cutoff": "2025-09-01",
+      "entity": "Johnson & Johnson",
+      "cik": 200406,
+      "current_sic": "2834",
+      "current_sic_description": "Pharmaceutical Preparations",
+      "current_sic_is_point_in_time": false,
+      "annual": [
+        {
+          "end": "2024-12-29",
+          "sources": {
+            "gross_profit": {
+              "tag": "GrossProfit",
+              "start": "2024-01-01",
+              "end": "2024-12-29",
+              "filed": "2025-02-13",
+              "accn": "0000200406-25-000038",
+              "form": "10-K"
+            },
+            "net_income": {
+              "tag": "NetIncomeLoss",
+              "start": "2024-01-01",
+              "end": "2024-12-29",
+              "filed": "2025-02-13",
+              "accn": "0000200406-25-000038",
+              "form": "10-K"
+            },
+            "operating_cash_flow": {
+              "tag": "NetCashProvidedByUsedInOperatingActivities",
+              "start": "2024-01-01",
+              "end": "2024-12-29",
+              "filed": "2025-02-13",
+              "accn": "0000200406-25-000038",
+              "form": "10-K"
+            },
+            "revenue": {
+              "tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+              "start": "2024-01-01",
+              "end": "2024-12-29",
+              "filed": "2025-02-13",
+              "accn": "0000200406-25-000038",
+              "form": "10-K"
+            },
+            "assets": {
+              "tag": "Assets",
+              "start": null,
+              "end": "2024-12-29",
+              "filed": "2025-02-13",
+              "accn": "0000200406-25-000038",
+              "form": "10-K"
+            }
+          },
+          "gross_profit": 61350000000,
+          "net_income": 14066000000,
+          "operating_cash_flow": 24266000000,
+          "revenue": 88821000000,
+          "assets": 180104000000
+        },
+        {
+          "end": "2023-12-31",
+          "sources": {
+            "gross_profit": {
+              "tag": "GrossProfit",
+              "start": "2023-01-02",
+              "end": "2023-12-31",
+              "filed": "2025-02-13",
+              "accn": "0000200406-25-000038",
+              "form": "10-K"
+            },
+            "net_income": {
+              "tag": "NetIncomeLoss",
+              "start": "2023-01-02",
+              "end": "2023-12-31",
+              "filed": "2025-02-13",
+              "accn": "0000200406-25-000038",
+              "form": "10-K"
+            },
+            "operating_cash_flow": {
+              "tag": "NetCashProvidedByUsedInOperatingActivities",
+              "start": "2023-01-02",
+              "end": "2023-12-31",
+              "filed": "2025-02-13",
+              "accn": "0000200406-25-000038",
+              "form": "10-K"
+            },
+            "revenue": {
+              "tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+              "start": "2023-01-02",
+              "end": "2023-12-31",
+              "filed": "2025-02-13",
+              "accn": "0000200406-25-000038",
+              "form": "10-K"
+            },
+            "assets": {
+              "tag": "Assets",
+              "start": null,
+              "end": "2023-12-31",
+              "filed": "2025-02-13",
+              "accn": "0000200406-25-000038",
+              "form": "10-K"
+            }
+          },
+          "gross_profit": 58606000000,
+          "net_income": 35153000000,
+          "operating_cash_flow": 22791000000,
+          "revenue": 85159000000,
+          "assets": 167558000000
+        },
+        {
+          "end": "2023-01-01",
+          "sources": {
+            "gross_profit": {
+              "tag": "GrossProfit",
+              "start": "2022-01-03",
+              "end": "2023-01-01",
+              "filed": "2025-02-13",
+              "accn": "0000200406-25-000038",
+              "form": "10-K"
+            },
+            "net_income": {
+              "tag": "NetIncomeLoss",
+              "start": "2022-01-03",
+              "end": "2023-01-01",
+              "filed": "2025-02-13",
+              "accn": "0000200406-25-000038",
+              "form": "10-K"
+            },
+            "operating_cash_flow": {
+              "tag": "NetCashProvidedByUsedInOperatingActivities",
+              "start": "2022-01-03",
+              "end": "2023-01-01",
+              "filed": "2025-02-13",
+              "accn": "0000200406-25-000038",
+              "form": "10-K"
+            },
+            "revenue": {
+              "tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+              "start": "2022-01-03",
+              "end": "2023-01-01",
+              "filed": "2025-02-13",
+              "accn": "0000200406-25-000038",
+              "form": "10-K"
+            },
+            "assets": {
+              "tag": "Assets",
+              "start": null,
+              "end": "2023-01-01",
+              "filed": "2024-02-16",
+              "accn": "0000200406-24-000013",
+              "form": "10-K"
+            }
+          },
+          "gross_profit": 55394000000,
+          "net_income": 17941000000,
+          "operating_cash_flow": 21194000000,
+          "revenue": 79990000000,
+          "assets": 187378000000
+        }
+      ],
+      "complete_three_years": true,
+      "positive_income_and_cashflow_three_years": true,
+      "gross_profit_assets_latest": 0.34063652112113
+    },
+    "ACN": {
+      "cutoff": "2025-09-01",
+      "entity": "Accenture plc",
+      "cik": 1467373,
+      "current_sic": "7389",
+      "current_sic_description": "Services-Business Services, NEC",
+      "current_sic_is_point_in_time": false,
+      "annual": [
+        {
+          "end": "2024-08-31",
+          "sources": {
+            "net_income": {
+              "tag": "NetIncomeLoss",
+              "start": "2023-09-01",
+              "end": "2024-08-31",
+              "filed": "2024-10-10",
+              "accn": "0001467373-24-000278",
+              "form": "10-K"
+            },
+            "operating_cash_flow": {
+              "tag": "NetCashProvidedByUsedInOperatingActivities",
+              "start": "2023-09-01",
+              "end": "2024-08-31",
+              "filed": "2024-10-10",
+              "accn": "0001467373-24-000278",
+              "form": "10-K"
+            },
+            "revenue": {
+              "tag": "Revenues",
+              "start": "2023-09-01",
+              "end": "2024-08-31",
+              "filed": "2024-10-10",
+              "accn": "0001467373-24-000278",
+              "form": "10-K"
+            },
+            "assets": {
+              "tag": "Assets",
+              "start": null,
+              "end": "2024-08-31",
+              "filed": "2024-10-10",
+              "accn": "0001467373-24-000278",
+              "form": "10-K"
+            }
+          },
+          "gross_profit": null,
+          "net_income": 7264787000,
+          "operating_cash_flow": 9131027000,
+          "revenue": 64896464000,
+          "assets": 55932363000
+        },
+        {
+          "end": "2023-08-31",
+          "sources": {
+            "net_income": {
+              "tag": "NetIncomeLoss",
+              "start": "2022-09-01",
+              "end": "2023-08-31",
+              "filed": "2024-10-10",
+              "accn": "0001467373-24-000278",
+              "form": "10-K"
+            },
+            "operating_cash_flow": {
+              "tag": "NetCashProvidedByUsedInOperatingActivities",
+              "start": "2022-09-01",
+              "end": "2023-08-31",
+              "filed": "2024-10-10",
+              "accn": "0001467373-24-000278",
+              "form": "10-K"
+            },
+            "revenue": {
+              "tag": "Revenues",
+              "start": "2022-09-01",
+              "end": "2023-08-31",
+              "filed": "2024-10-10",
+              "accn": "0001467373-24-000278",
+              "form": "10-K"
+            },
+            "assets": {
+              "tag": "Assets",
+              "start": null,
+              "end": "2023-08-31",
+              "filed": "2024-10-10",
+              "accn": "0001467373-24-000278",
+              "form": "10-K"
+            }
+          },
+          "gross_profit": null,
+          "net_income": 6871557000,
+          "operating_cash_flow": 9524268000,
+          "revenue": 64111745000,
+          "assets": 51245305000
+        },
+        {
+          "end": "2022-08-31",
+          "sources": {
+            "net_income": {
+              "tag": "NetIncomeLoss",
+              "start": "2021-09-01",
+              "end": "2022-08-31",
+              "filed": "2024-10-10",
+              "accn": "0001467373-24-000278",
+              "form": "10-K"
+            },
+            "operating_cash_flow": {
+              "tag": "NetCashProvidedByUsedInOperatingActivities",
+              "start": "2021-09-01",
+              "end": "2022-08-31",
+              "filed": "2024-10-10",
+              "accn": "0001467373-24-000278",
+              "form": "10-K"
+            },
+            "revenue": {
+              "tag": "Revenues",
+              "start": "2021-09-01",
+              "end": "2022-08-31",
+              "filed": "2024-10-10",
+              "accn": "0001467373-24-000278",
+              "form": "10-K"
+            },
+            "assets": {
+              "tag": "Assets",
+              "start": null,
+              "end": "2022-08-31",
+              "filed": "2023-10-12",
+              "accn": "0001467373-23-000324",
+              "form": "10-K"
+            }
+          },
+          "gross_profit": null,
+          "net_income": 6877169000,
+          "operating_cash_flow": 9541129000,
+          "revenue": 61594305000,
+          "assets": 47263390000
+        }
+      ],
+      "complete_three_years": true,
+      "positive_income_and_cashflow_three_years": true,
+      "gross_profit_assets_latest": null
+    },
+    "GILD": {
+      "cutoff": "2025-09-01",
+      "entity": "GILEAD SCIENCES, INC.",
+      "cik": 882095,
+      "current_sic": "2836",
+      "current_sic_description": "Biological Products, (No Diagnostic Substances)",
+      "current_sic_is_point_in_time": false,
+      "annual": [
+        {
+          "end": "2024-12-31",
+          "sources": {
+            "net_income": {
+              "tag": "NetIncomeLoss",
+              "start": "2024-01-01",
+              "end": "2024-12-31",
+              "filed": "2025-02-28",
+              "accn": "0000882095-25-000006",
+              "form": "10-K"
+            },
+            "operating_cash_flow": {
+              "tag": "NetCashProvidedByUsedInOperatingActivities",
+              "start": "2024-01-01",
+              "end": "2024-12-31",
+              "filed": "2025-02-28",
+              "accn": "0000882095-25-000006",
+              "form": "10-K"
+            },
+            "revenue": {
+              "tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+              "start": "2024-01-01",
+              "end": "2024-12-31",
+              "filed": "2025-02-28",
+              "accn": "0000882095-25-000006",
+              "form": "10-K"
+            },
+            "assets": {
+              "tag": "Assets",
+              "start": null,
+              "end": "2024-12-31",
+              "filed": "2025-02-28",
+              "accn": "0000882095-25-000006",
+              "form": "10-K"
+            }
+          },
+          "gross_profit": null,
+          "net_income": 480000000,
+          "operating_cash_flow": 10828000000,
+          "revenue": 28754000000,
+          "assets": 58995000000
+        },
+        {
+          "end": "2023-12-31",
+          "sources": {
+            "net_income": {
+              "tag": "NetIncomeLoss",
+              "start": "2023-01-01",
+              "end": "2023-12-31",
+              "filed": "2025-02-28",
+              "accn": "0000882095-25-000006",
+              "form": "10-K"
+            },
+            "operating_cash_flow": {
+              "tag": "NetCashProvidedByUsedInOperatingActivities",
+              "start": "2023-01-01",
+              "end": "2023-12-31",
+              "filed": "2025-02-28",
+              "accn": "0000882095-25-000006",
+              "form": "10-K"
+            },
+            "revenue": {
+              "tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+              "start": "2023-01-01",
+              "end": "2023-12-31",
+              "filed": "2025-02-28",
+              "accn": "0000882095-25-000006",
+              "form": "10-K"
+            },
+            "assets": {
+              "tag": "Assets",
+              "start": null,
+              "end": "2023-12-31",
+              "filed": "2025-02-28",
+              "accn": "0000882095-25-000006",
+              "form": "10-K"
+            }
+          },
+          "gross_profit": null,
+          "net_income": 5665000000,
+          "operating_cash_flow": 8006000000,
+          "revenue": 27116000000,
+          "assets": 62125000000
+        },
+        {
+          "end": "2022-12-31",
+          "sources": {
+            "net_income": {
+              "tag": "NetIncomeLoss",
+              "start": "2022-01-01",
+              "end": "2022-12-31",
+              "filed": "2025-02-28",
+              "accn": "0000882095-25-000006",
+              "form": "10-K"
+            },
+            "operating_cash_flow": {
+              "tag": "NetCashProvidedByUsedInOperatingActivities",
+              "start": "2022-01-01",
+              "end": "2022-12-31",
+              "filed": "2025-02-28",
+              "accn": "0000882095-25-000006",
+              "form": "10-K"
+            },
+            "revenue": {
+              "tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+              "start": "2022-01-01",
+              "end": "2022-12-31",
+              "filed": "2025-02-28",
+              "accn": "0000882095-25-000006",
+              "form": "10-K"
+            },
+            "assets": {
+              "tag": "Assets",
+              "start": null,
+              "end": "2022-12-31",
+              "filed": "2024-02-23",
+              "accn": "0000882095-24-000007",
+              "form": "10-K"
+            }
+          },
+          "gross_profit": null,
+          "net_income": 4592000000,
+          "operating_cash_flow": 9072000000,
+          "revenue": 27281000000,
+          "assets": 63171000000
+        }
+      ],
+      "complete_three_years": true,
+      "positive_income_and_cashflow_three_years": true,
+      "gross_profit_assets_latest": null
+    },
+    "INTU": {
+      "cutoff": "2025-09-01",
+      "entity": "INTUIT INC.",
+      "cik": 896878,
+      "current_sic": "7372",
+      "current_sic_description": "Services-Prepackaged Software",
+      "current_sic_is_point_in_time": false,
+      "annual": [
+        {
+          "end": "2024-07-31",
+          "sources": {
+            "net_income": {
+              "tag": "NetIncomeLoss",
+              "start": "2023-08-01",
+              "end": "2024-07-31",
+              "filed": "2024-09-04",
+              "accn": "0000896878-24-000039",
+              "form": "10-K"
+            },
+            "operating_cash_flow": {
+              "tag": "NetCashProvidedByUsedInOperatingActivities",
+              "start": "2023-08-01",
+              "end": "2024-07-31",
+              "filed": "2024-09-04",
+              "accn": "0000896878-24-000039",
+              "form": "10-K"
+            },
+            "revenue": {
+              "tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+              "start": "2023-08-01",
+              "end": "2024-07-31",
+              "filed": "2024-09-04",
+              "accn": "0000896878-24-000039",
+              "form": "10-K"
+            },
+            "assets": {
+              "tag": "Assets",
+              "start": null,
+              "end": "2024-07-31",
+              "filed": "2024-09-04",
+              "accn": "0000896878-24-000039",
+              "form": "10-K"
+            }
+          },
+          "gross_profit": null,
+          "net_income": 2963000000,
+          "operating_cash_flow": 4884000000,
+          "revenue": 16285000000,
+          "assets": 32132000000
+        },
+        {
+          "end": "2023-07-31",
+          "sources": {
+            "net_income": {
+              "tag": "NetIncomeLoss",
+              "start": "2022-08-01",
+              "end": "2023-07-31",
+              "filed": "2024-09-04",
+              "accn": "0000896878-24-000039",
+              "form": "10-K"
+            },
+            "operating_cash_flow": {
+              "tag": "NetCashProvidedByUsedInOperatingActivities",
+              "start": "2022-08-01",
+              "end": "2023-07-31",
+              "filed": "2024-09-04",
+              "accn": "0000896878-24-000039",
+              "form": "10-K"
+            },
+            "revenue": {
+              "tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+              "start": "2022-08-01",
+              "end": "2023-07-31",
+              "filed": "2024-09-04",
+              "accn": "0000896878-24-000039",
+              "form": "10-K"
+            },
+            "assets": {
+              "tag": "Assets",
+              "start": null,
+              "end": "2023-07-31",
+              "filed": "2024-09-04",
+              "accn": "0000896878-24-000039",
+              "form": "10-K"
+            }
+          },
+          "gross_profit": null,
+          "net_income": 2384000000,
+          "operating_cash_flow": 5046000000,
+          "revenue": 14368000000,
+          "assets": 27780000000
+        },
+        {
+          "end": "2022-07-31",
+          "sources": {
+            "net_income": {
+              "tag": "NetIncomeLoss",
+              "start": "2021-08-01",
+              "end": "2022-07-31",
+              "filed": "2024-09-04",
+              "accn": "0000896878-24-000039",
+              "form": "10-K"
+            },
+            "operating_cash_flow": {
+              "tag": "NetCashProvidedByUsedInOperatingActivities",
+              "start": "2021-08-01",
+              "end": "2022-07-31",
+              "filed": "2024-09-04",
+              "accn": "0000896878-24-000039",
+              "form": "10-K"
+            },
+            "revenue": {
+              "tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+              "start": "2021-08-01",
+              "end": "2022-07-31",
+              "filed": "2024-09-04",
+              "accn": "0000896878-24-000039",
+              "form": "10-K"
+            },
+            "assets": {
+              "tag": "Assets",
+              "start": null,
+              "end": "2022-07-31",
+              "filed": "2023-09-01",
+              "accn": "0000896878-23-000034",
+              "form": "10-K"
+            }
+          },
+          "gross_profit": null,
+          "net_income": 2066000000,
+          "operating_cash_flow": 3889000000,
+          "revenue": 12726000000,
+          "assets": 27734000000
+        }
+      ],
+      "complete_three_years": true,
+      "positive_income_and_cashflow_three_years": true,
+      "gross_profit_assets_latest": null
+    },
+    "LMT": {
+      "cutoff": "2025-09-01",
+      "entity": "LOCKHEED MARTIN CORPORATION",
+      "cik": 936468,
+      "current_sic": "3760",
+      "current_sic_description": "Guided Missiles & Space Vehicles & Parts",
+      "current_sic_is_point_in_time": false,
+      "annual": [
+        {
+          "end": "2024-12-31",
+          "sources": {
+            "gross_profit": {
+              "tag": "GrossProfit",
+              "start": "2024-01-01",
+              "end": "2024-12-31",
+              "filed": "2025-01-28",
+              "accn": "0000936468-25-000009",
+              "form": "10-K"
+            },
+            "net_income": {
+              "tag": "NetIncomeLoss",
+              "start": "2024-01-01",
+              "end": "2024-12-31",
+              "filed": "2025-01-28",
+              "accn": "0000936468-25-000009",
+              "form": "10-K"
+            },
+            "operating_cash_flow": {
+              "tag": "NetCashProvidedByUsedInOperatingActivities",
+              "start": "2024-01-01",
+              "end": "2024-12-31",
+              "filed": "2025-01-28",
+              "accn": "0000936468-25-000009",
+              "form": "10-K"
+            },
+            "revenue": {
+              "tag": "Revenues",
+              "start": "2024-01-01",
+              "end": "2024-12-31",
+              "filed": "2025-01-28",
+              "accn": "0000936468-25-000009",
+              "form": "10-K"
+            },
+            "assets": {
+              "tag": "Assets",
+              "start": null,
+              "end": "2024-12-31",
+              "filed": "2025-01-28",
+              "accn": "0000936468-25-000009",
+              "form": "10-K"
+            }
+          },
+          "gross_profit": 6930000000,
+          "net_income": 5336000000,
+          "operating_cash_flow": 6972000000,
+          "revenue": 71043000000,
+          "assets": 55617000000
+        },
+        {
+          "end": "2023-12-31",
+          "sources": {
+            "gross_profit": {
+              "tag": "GrossProfit",
+              "start": "2023-01-01",
+              "end": "2023-12-31",
+              "filed": "2025-01-28",
+              "accn": "0000936468-25-000009",
+              "form": "10-K"
+            },
+            "net_income": {
+              "tag": "NetIncomeLoss",
+              "start": "2023-01-01",
+              "end": "2023-12-31",
+              "filed": "2025-01-28",
+              "accn": "0000936468-25-000009",
+              "form": "10-K"
+            },
+            "operating_cash_flow": {
+              "tag": "NetCashProvidedByUsedInOperatingActivities",
+              "start": "2023-01-01",
+              "end": "2023-12-31",
+              "filed": "2025-01-28",
+              "accn": "0000936468-25-000009",
+              "form": "10-K"
+            },
+            "revenue": {
+              "tag": "Revenues",
+              "start": "2023-01-01",
+              "end": "2023-12-31",
+              "filed": "2025-01-28",
+              "accn": "0000936468-25-000009",
+              "form": "10-K"
+            },
+            "assets": {
+              "tag": "Assets",
+              "start": null,
+              "end": "2023-12-31",
+              "filed": "2025-01-28",
+              "accn": "0000936468-25-000009",
+              "form": "10-K"
+            }
+          },
+          "gross_profit": 8479000000,
+          "net_income": 6920000000,
+          "operating_cash_flow": 7920000000,
+          "revenue": 67571000000,
+          "assets": 52456000000
+        },
+        {
+          "end": "2022-12-31",
+          "sources": {
+            "gross_profit": {
+              "tag": "GrossProfit",
+              "start": "2022-01-01",
+              "end": "2022-12-31",
+              "filed": "2025-01-28",
+              "accn": "0000936468-25-000009",
+              "form": "10-K"
+            },
+            "net_income": {
+              "tag": "NetIncomeLoss",
+              "start": "2022-01-01",
+              "end": "2022-12-31",
+              "filed": "2025-01-28",
+              "accn": "0000936468-25-000009",
+              "form": "10-K"
+            },
+            "operating_cash_flow": {
+              "tag": "NetCashProvidedByUsedInOperatingActivities",
+              "start": "2022-01-01",
+              "end": "2022-12-31",
+              "filed": "2025-01-28",
+              "accn": "0000936468-25-000009",
+              "form": "10-K"
+            },
+            "revenue": {
+              "tag": "Revenues",
+              "start": "2022-01-01",
+              "end": "2022-12-31",
+              "filed": "2025-01-28",
+              "accn": "0000936468-25-000009",
+              "form": "10-K"
+            },
+            "assets": {
+              "tag": "Assets",
+              "start": null,
+              "end": "2022-12-31",
+              "filed": "2024-01-23",
+              "accn": "0000936468-24-000010",
+              "form": "10-K"
+            }
+          },
+          "gross_profit": 8287000000,
+          "net_income": 5732000000,
+          "operating_cash_flow": 7802000000,
+          "revenue": 65984000000,
+          "assets": 52880000000
+        }
+      ],
+      "complete_three_years": true,
+      "positive_income_and_cashflow_three_years": true,
+      "gross_profit_assets_latest": 0.12460218997788446
+    },
+    "LOW": {
+      "cutoff": "2025-09-01",
+      "entity": "LOWES COMPANIES INC",
+      "cik": 60667,
+      "current_sic": "5211",
+      "current_sic_description": "Retail-Lumber & Other Building Materials Dealers",
+      "current_sic_is_point_in_time": false,
+      "annual": [
+        {
+          "end": "2025-01-31",
+          "sources": {
+            "gross_profit": {
+              "tag": "GrossProfit",
+              "start": "2024-02-03",
+              "end": "2025-01-31",
+              "filed": "2025-03-24",
+              "accn": "0000060667-25-000049",
+              "form": "10-K"
+            },
+            "net_income": {
+              "tag": "NetIncomeLoss",
+              "start": "2024-02-03",
+              "end": "2025-01-31",
+              "filed": "2025-03-24",
+              "accn": "0000060667-25-000049",
+              "form": "10-K"
+            },
+            "operating_cash_flow": {
+              "tag": "NetCashProvidedByUsedInOperatingActivities",
+              "start": "2024-02-03",
+              "end": "2025-01-31",
+              "filed": "2025-03-24",
+              "accn": "0000060667-25-000049",
+              "form": "10-K"
+            },
+            "revenue": {
+              "tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+              "start": "2024-02-03",
+              "end": "2025-01-31",
+              "filed": "2025-03-24",
+              "accn": "0000060667-25-000049",
+              "form": "10-K"
+            },
+            "assets": {
+              "tag": "Assets",
+              "start": null,
+              "end": "2025-01-31",
+              "filed": "2025-03-24",
+              "accn": "0000060667-25-000049",
+              "form": "10-K"
+            }
+          },
+          "gross_profit": 27877000000,
+          "net_income": 6957000000,
+          "operating_cash_flow": 9625000000,
+          "revenue": 83674000000,
+          "assets": 43102000000
+        },
+        {
+          "end": "2024-02-02",
+          "sources": {
+            "gross_profit": {
+              "tag": "GrossProfit",
+              "start": "2023-02-04",
+              "end": "2024-02-02",
+              "filed": "2025-03-24",
+              "accn": "0000060667-25-000049",
+              "form": "10-K"
+            },
+            "net_income": {
+              "tag": "NetIncomeLoss",
+              "start": "2023-02-04",
+              "end": "2024-02-02",
+              "filed": "2025-03-24",
+              "accn": "0000060667-25-000049",
+              "form": "10-K"
+            },
+            "operating_cash_flow": {
+              "tag": "NetCashProvidedByUsedInOperatingActivities",
+              "start": "2023-02-04",
+              "end": "2024-02-02",
+              "filed": "2025-03-24",
+              "accn": "0000060667-25-000049",
+              "form": "10-K"
+            },
+            "revenue": {
+              "tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+              "start": "2023-02-04",
+              "end": "2024-02-02",
+              "filed": "2025-03-24",
+              "accn": "0000060667-25-000049",
+              "form": "10-K"
+            },
+            "assets": {
+              "tag": "Assets",
+              "start": null,
+              "end": "2024-02-02",
+              "filed": "2025-03-24",
+              "accn": "0000060667-25-000049",
+              "form": "10-K"
+            }
+          },
+          "gross_profit": 28844000000,
+          "net_income": 7726000000,
+          "operating_cash_flow": 8140000000,
+          "revenue": 86377000000,
+          "assets": 41795000000
+        },
+        {
+          "end": "2023-02-03",
+          "sources": {
+            "gross_profit": {
+              "tag": "GrossProfit",
+              "start": "2022-01-29",
+              "end": "2023-02-03",
+              "filed": "2025-03-24",
+              "accn": "0000060667-25-000049",
+              "form": "10-K"
+            },
+            "net_income": {
+              "tag": "NetIncomeLoss",
+              "start": "2022-01-29",
+              "end": "2023-02-03",
+              "filed": "2025-03-24",
+              "accn": "0000060667-25-000049",
+              "form": "10-K"
+            },
+            "operating_cash_flow": {
+              "tag": "NetCashProvidedByUsedInOperatingActivities",
+              "start": "2022-01-29",
+              "end": "2023-02-03",
+              "filed": "2025-03-24",
+              "accn": "0000060667-25-000049",
+              "form": "10-K"
+            },
+            "revenue": {
+              "tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+              "start": "2022-01-29",
+              "end": "2023-02-03",
+              "filed": "2025-03-24",
+              "accn": "0000060667-25-000049",
+              "form": "10-K"
+            },
+            "assets": {
+              "tag": "Assets",
+              "start": null,
+              "end": "2023-02-03",
+              "filed": "2024-03-25",
+              "accn": "0000060667-24-000033",
+              "form": "10-K"
+            }
+          },
+          "gross_profit": 32257000000,
+          "net_income": 6437000000,
+          "operating_cash_flow": 8589000000,
+          "revenue": 97059000000,
+          "assets": 43708000000
+        }
+      ],
+      "complete_three_years": true,
+      "positive_income_and_cashflow_three_years": true,
+      "gross_profit_assets_latest": 0.6467681314092153
+    },
+    "MCD": {
+      "cutoff": "2025-09-01",
+      "entity": "McDONALD\u2019S CORPORATION",
+      "cik": 63908,
+      "current_sic": "5812",
+      "current_sic_description": "Retail-Eating  Places",
+      "current_sic_is_point_in_time": false,
+      "annual": [
+        {
+          "end": "2024-12-31",
+          "sources": {
+            "net_income": {
+              "tag": "NetIncomeLoss",
+              "start": "2024-01-01",
+              "end": "2024-12-31",
+              "filed": "2025-02-25",
+              "accn": "0000063908-25-000012",
+              "form": "10-K"
+            },
+            "operating_cash_flow": {
+              "tag": "NetCashProvidedByUsedInOperatingActivities",
+              "start": "2024-01-01",
+              "end": "2024-12-31",
+              "filed": "2025-02-25",
+              "accn": "0000063908-25-000012",
+              "form": "10-K"
+            },
+            "revenue": {
+              "tag": "Revenues",
+              "start": "2024-01-01",
+              "end": "2024-12-31",
+              "filed": "2025-02-25",
+              "accn": "0000063908-25-000012",
+              "form": "10-K"
+            },
+            "assets": {
+              "tag": "Assets",
+              "start": null,
+              "end": "2024-12-31",
+              "filed": "2025-02-25",
+              "accn": "0000063908-25-000012",
+              "form": "10-K"
+            }
+          },
+          "gross_profit": null,
+          "net_income": 8223000000,
+          "operating_cash_flow": 9447000000,
+          "revenue": 25920000000,
+          "assets": 55182000000
+        },
+        {
+          "end": "2023-12-31",
+          "sources": {
+            "net_income": {
+              "tag": "NetIncomeLoss",
+              "start": "2023-01-01",
+              "end": "2023-12-31",
+              "filed": "2025-02-25",
+              "accn": "0000063908-25-000012",
+              "form": "10-K"
+            },
+            "operating_cash_flow": {
+              "tag": "NetCashProvidedByUsedInOperatingActivities",
+              "start": "2023-01-01",
+              "end": "2023-12-31",
+              "filed": "2025-02-25",
+              "accn": "0000063908-25-000012",
+              "form": "10-K"
+            },
+            "revenue": {
+              "tag": "Revenues",
+              "start": "2023-01-01",
+              "end": "2023-12-31",
+              "filed": "2025-02-25",
+              "accn": "0000063908-25-000012",
+              "form": "10-K"
+            },
+            "assets": {
+              "tag": "Assets",
+              "start": null,
+              "end": "2023-12-31",
+              "filed": "2025-02-25",
+              "accn": "0000063908-25-000012",
+              "form": "10-K"
+            }
+          },
+          "gross_profit": null,
+          "net_income": 8469000000,
+          "operating_cash_flow": 9612000000,
+          "revenue": 25494000000,
+          "assets": 56147000000
+        },
+        {
+          "end": "2022-12-31",
+          "sources": {
+            "net_income": {
+              "tag": "NetIncomeLoss",
+              "start": "2022-01-01",
+              "end": "2022-12-31",
+              "filed": "2025-02-25",
+              "accn": "0000063908-25-000012",
+              "form": "10-K"
+            },
+            "operating_cash_flow": {
+              "tag": "NetCashProvidedByUsedInOperatingActivities",
+              "start": "2022-01-01",
+              "end": "2022-12-31",
+              "filed": "2025-02-25",
+              "accn": "0000063908-25-000012",
+              "form": "10-K"
+            },
+            "revenue": {
+              "tag": "Revenues",
+              "start": "2022-01-01",
+              "end": "2022-12-31",
+              "filed": "2025-02-25",
+              "accn": "0000063908-25-000012",
+              "form": "10-K"
+            },
+            "assets": {
+              "tag": "Assets",
+              "start": null,
+              "end": "2022-12-31",
+              "filed": "2025-02-25",
+              "accn": "0000063908-25-000012",
+              "form": "10-K"
+            }
+          },
+          "gross_profit": null,
+          "net_income": 6177000000,
+          "operating_cash_flow": 7387000000,
+          "revenue": 23183000000,
+          "assets": 50436000000
+        }
+      ],
+      "complete_three_years": true,
+      "positive_income_and_cashflow_three_years": true,
+      "gross_profit_assets_latest": null
+    },
+    "NEE": {
+      "cutoff": "2025-09-01",
+      "entity": "NEXTERA ENERGY INC",
+      "cik": 753308,
+      "current_sic": "4911",
+      "current_sic_description": "Electric Services",
+      "current_sic_is_point_in_time": false,
+      "annual": [
+        {
+          "end": "2012-12-31",
+          "sources": {
+            "net_income": {
+              "tag": "NetIncomeLoss",
+              "start": "2012-01-01",
+              "end": "2012-12-31",
+              "filed": "2015-02-20",
+              "accn": "0000753308-15-000079",
+              "form": "10-K"
+            },
+            "operating_cash_flow": {
+              "tag": "NetCashProvidedByUsedInOperatingActivities",
+              "start": "2012-01-01",
+              "end": "2012-12-31",
+              "filed": "2015-02-20",
+              "accn": "0000753308-15-000079",
+              "form": "10-K"
+            },
+            "revenue": {
+              "tag": "Revenues",
+              "start": "2012-01-01",
+              "end": "2012-12-31",
+              "filed": "2013-02-28",
+              "accn": "0000753308-13-000023",
+              "form": "10-K"
+            },
+            "assets": {
+              "tag": "Assets",
+              "start": null,
+              "end": "2012-12-31",
+              "filed": "2015-02-20",
+              "accn": "0000753308-15-000079",
+              "form": "10-K"
+            }
+          },
+          "gross_profit": null,
+          "net_income": 1911000000,
+          "operating_cash_flow": 3992000000,
+          "revenue": 14256000000,
+          "assets": 64439000000
+        },
+        {
+          "end": "2011-12-31",
+          "sources": {
+            "net_income": {
+              "tag": "NetIncomeLoss",
+              "start": "2011-01-01",
+              "end": "2011-12-31",
+              "filed": "2014-02-24",
+              "accn": "0000753308-14-000025",
+              "form": "10-K"
+            },
+            "operating_cash_flow": {
+              "tag": "NetCashProvidedByUsedInOperatingActivities",
+              "start": "2011-01-01",
+              "end": "2011-12-31",
+              "filed": "2014-02-24",
+              "accn": "0000753308-14-000025",
+              "form": "10-K"
+            },
+            "revenue": {
+              "tag": "Revenues",
+              "start": "2010-12-31",
+              "end": "2011-12-31",
+              "filed": "2013-02-28",
+              "accn": "0000753308-13-000023",
+              "form": "10-K"
+            },
+            "assets": {
+              "tag": "Assets",
+              "start": null,
+              "end": "2011-12-31",
+              "filed": "2013-02-28",
+              "accn": "0000753308-13-000023",
+              "form": "10-K"
+            }
+          },
+          "gross_profit": null,
+          "net_income": 1923000000,
+          "operating_cash_flow": 4074000000,
+          "revenue": 15341000000,
+          "assets": 57188000000
+        },
+        {
+          "end": "2010-12-31",
+          "sources": {
+            "net_income": {
+              "tag": "NetIncomeLoss",
+              "start": "2009-12-31",
+              "end": "2010-12-31",
+              "filed": "2013-02-28",
+              "accn": "0000753308-13-000023",
+              "form": "10-K"
+            },
+            "operating_cash_flow": {
+              "tag": "NetCashProvidedByUsedInOperatingActivities",
+              "start": "2009-12-31",
+              "end": "2010-12-31",
+              "filed": "2013-02-28",
+              "accn": "0000753308-13-000023",
+              "form": "10-K"
+            },
+            "revenue": {
+              "tag": "Revenues",
+              "start": "2009-12-31",
+              "end": "2010-12-31",
+              "filed": "2013-02-28",
+              "accn": "0000753308-13-000023",
+              "form": "10-K"
+            },
+            "assets": {
+              "tag": "Assets",
+              "start": null,
+              "end": "2010-12-31",
+              "filed": "2012-02-28",
+              "accn": "0000753308-12-000025",
+              "form": "10-K"
+            }
+          },
+          "gross_profit": null,
+          "net_income": 1957000000,
+          "operating_cash_flow": 3834000000,
+          "revenue": 15317000000,
+          "assets": 52994000000
+        }
+      ],
+      "complete_three_years": true,
+      "positive_income_and_cashflow_three_years": true,
+      "gross_profit_assets_latest": null
+    },
+    "NKE": {
+      "cutoff": "2025-09-01",
+      "entity": "NIKE, Inc.",
+      "cik": 320187,
+      "current_sic": "3021",
+      "current_sic_description": "Rubber & Plastics Footwear",
+      "current_sic_is_point_in_time": false,
+      "annual": [
+        {
+          "end": "2025-05-31",
+          "sources": {
+            "gross_profit": {
+              "tag": "GrossProfit",
+              "start": "2024-06-01",
+              "end": "2025-05-31",
+              "filed": "2025-07-17",
+              "accn": "0000320187-25-000047",
+              "form": "10-K"
+            },
+            "net_income": {
+              "tag": "NetIncomeLoss",
+              "start": "2024-06-01",
+              "end": "2025-05-31",
+              "filed": "2025-07-17",
+              "accn": "0000320187-25-000047",
+              "form": "10-K"
+            },
+            "operating_cash_flow": {
+              "tag": "NetCashProvidedByUsedInOperatingActivities",
+              "start": "2024-06-01",
+              "end": "2025-05-31",
+              "filed": "2025-07-17",
+              "accn": "0000320187-25-000047",
+              "form": "10-K"
+            },
+            "revenue": {
+              "tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+              "start": "2024-06-01",
+              "end": "2025-05-31",
+              "filed": "2025-07-17",
+              "accn": "0000320187-25-000047",
+              "form": "10-K"
+            },
+            "assets": {
+              "tag": "Assets",
+              "start": null,
+              "end": "2025-05-31",
+              "filed": "2025-07-17",
+              "accn": "0000320187-25-000047",
+              "form": "10-K"
+            }
+          },
+          "gross_profit": 19790000000,
+          "net_income": 3219000000,
+          "operating_cash_flow": 3698000000,
+          "revenue": 46309000000,
+          "assets": 36579000000
+        },
+        {
+          "end": "2024-05-31",
+          "sources": {
+            "gross_profit": {
+              "tag": "GrossProfit",
+              "start": "2023-06-01",
+              "end": "2024-05-31",
+              "filed": "2025-07-17",
+              "accn": "0000320187-25-000047",
+              "form": "10-K"
+            },
+            "net_income": {
+              "tag": "NetIncomeLoss",
+              "start": "2023-06-01",
+              "end": "2024-05-31",
+              "filed": "2025-07-17",
+              "accn": "0000320187-25-000047",
+              "form": "10-K"
+            },
+            "operating_cash_flow": {
+              "tag": "NetCashProvidedByUsedInOperatingActivities",
+              "start": "2023-06-01",
+              "end": "2024-05-31",
+              "filed": "2025-07-17",
+              "accn": "0000320187-25-000047",
+              "form": "10-K"
+            },
+            "revenue": {
+              "tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+              "start": "2023-06-01",
+              "end": "2024-05-31",
+              "filed": "2025-07-17",
+              "accn": "0000320187-25-000047",
+              "form": "10-K"
+            },
+            "assets": {
+              "tag": "Assets",
+              "start": null,
+              "end": "2024-05-31",
+              "filed": "2025-07-17",
+              "accn": "0000320187-25-000047",
+              "form": "10-K"
+            }
+          },
+          "gross_profit": 22887000000,
+          "net_income": 5700000000,
+          "operating_cash_flow": 7429000000,
+          "revenue": 51362000000,
+          "assets": 38110000000
+        },
+        {
+          "end": "2023-05-31",
+          "sources": {
+            "gross_profit": {
+              "tag": "GrossProfit",
+              "start": "2022-06-01",
+              "end": "2023-05-31",
+              "filed": "2025-07-17",
+              "accn": "0000320187-25-000047",
+              "form": "10-K"
+            },
+            "net_income": {
+              "tag": "NetIncomeLoss",
+              "start": "2022-06-01",
+              "end": "2023-05-31",
+              "filed": "2025-07-17",
+              "accn": "0000320187-25-000047",
+              "form": "10-K"
+            },
+            "operating_cash_flow": {
+              "tag": "NetCashProvidedByUsedInOperatingActivities",
+              "start": "2022-06-01",
+              "end": "2023-05-31",
+              "filed": "2025-07-17",
+              "accn": "0000320187-25-000047",
+              "form": "10-K"
+            },
+            "revenue": {
+              "tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+              "start": "2022-06-01",
+              "end": "2023-05-31",
+              "filed": "2025-07-17",
+              "accn": "0000320187-25-000047",
+              "form": "10-K"
+            },
+            "assets": {
+              "tag": "Assets",
+              "start": null,
+              "end": "2023-05-31",
+              "filed": "2024-07-25",
+              "accn": "0000320187-24-000044",
+              "form": "10-K"
+            }
+          },
+          "gross_profit": 22292000000,
+          "net_income": 5070000000,
+          "operating_cash_flow": 5841000000,
+          "revenue": 51217000000,
+          "assets": 37531000000
+        }
+      ],
+      "complete_three_years": true,
+      "positive_income_and_cashflow_three_years": true,
+      "gross_profit_assets_latest": 0.5410208042866126
+    },
+    "PLD": {
+      "cutoff": "2025-09-01",
+      "entity": "Prologis, Inc.",
+      "cik": 1045609,
+      "current_sic": "6798",
+      "current_sic_description": "Real Estate Investment Trusts",
+      "current_sic_is_point_in_time": false,
+      "annual": [
+        {
+          "end": "2024-12-31",
+          "sources": {
+            "net_income": {
+              "tag": "NetIncomeLoss",
+              "start": "2024-01-01",
+              "end": "2024-12-31",
+              "filed": "2025-02-14",
+              "accn": "0000950170-25-021272",
+              "form": "10-K"
+            },
+            "operating_cash_flow": {
+              "tag": "NetCashProvidedByUsedInOperatingActivities",
+              "start": "2024-01-01",
+              "end": "2024-12-31",
+              "filed": "2025-02-14",
+              "accn": "0000950170-25-021272",
+              "form": "10-K"
+            },
+            "revenue": {
+              "tag": "Revenues",
+              "start": "2024-01-01",
+              "end": "2024-12-31",
+              "filed": "2025-02-14",
+              "accn": "0000950170-25-021272",
+              "form": "10-K"
+            },
+            "assets": {
+              "tag": "Assets",
+              "start": null,
+              "end": "2024-12-31",
+              "filed": "2025-02-14",
+              "accn": "0000950170-25-021272",
+              "form": "10-K"
+            }
+          },
+          "gross_profit": null,
+          "net_income": 3731635000,
+          "operating_cash_flow": 4912209000,
+          "revenue": 8201610000,
+          "assets": 95328909000
+        },
+        {
+          "end": "2023-12-31",
+          "sources": {
+            "net_income": {
+              "tag": "NetIncomeLoss",
+              "start": "2023-01-01",
+              "end": "2023-12-31",
+              "filed": "2025-02-14",
+              "accn": "0000950170-25-021272",
+              "form": "10-K"
+            },
+            "operating_cash_flow": {
+              "tag": "NetCashProvidedByUsedInOperatingActivities",
+              "start": "2023-01-01",
+              "end": "2023-12-31",
+              "filed": "2025-02-14",
+              "accn": "0000950170-25-021272",
+              "form": "10-K"
+            },
+            "revenue": {
+              "tag": "Revenues",
+              "start": "2023-01-01",
+              "end": "2023-12-31",
+              "filed": "2025-02-14",
+              "accn": "0000950170-25-021272",
+              "form": "10-K"
+            },
+            "assets": {
+              "tag": "Assets",
+              "start": null,
+              "end": "2023-12-31",
+              "filed": "2025-02-14",
+              "accn": "0000950170-25-021272",
+              "form": "10-K"
+            }
+          },
+          "gross_profit": null,
+          "net_income": 3059214000,
+          "operating_cash_flow": 5373058000,
+          "revenue": 8023469000,
+          "assets": 93020840000
+        },
+        {
+          "end": "2022-12-31",
+          "sources": {
+            "net_income": {
+              "tag": "NetIncomeLoss",
+              "start": "2022-01-01",
+              "end": "2022-12-31",
+              "filed": "2025-02-14",
+              "accn": "0000950170-25-021272",
+              "form": "10-K"
+            },
+            "operating_cash_flow": {
+              "tag": "NetCashProvidedByUsedInOperatingActivities",
+              "start": "2022-01-01",
+              "end": "2022-12-31",
+              "filed": "2025-02-14",
+              "accn": "0000950170-25-021272",
+              "form": "10-K"
+            },
+            "revenue": {
+              "tag": "Revenues",
+              "start": "2022-01-01",
+              "end": "2022-12-31",
+              "filed": "2025-02-14",
+              "accn": "0000950170-25-021272",
+              "form": "10-K"
+            },
+            "assets": {
+              "tag": "Assets",
+              "start": null,
+              "end": "2022-12-31",
+              "filed": "2024-02-13",
+              "accn": "0000950170-24-014539",
+              "form": "10-K"
+            }
+          },
+          "gross_profit": null,
+          "net_income": 3364856000,
+          "operating_cash_flow": 4126430000,
+          "revenue": 5973692000,
+          "assets": 87897448000
+        }
+      ],
+      "complete_three_years": true,
+      "positive_income_and_cashflow_three_years": true,
+      "gross_profit_assets_latest": null
+    },
+    "SO": {
+      "cutoff": "2025-09-01",
+      "entity": "SOUTHERN CO",
+      "cik": 92122,
+      "current_sic": "4911",
+      "current_sic_description": "Electric Services",
+      "current_sic_is_point_in_time": false,
+      "annual": [
+        {
+          "end": "2024-12-31",
+          "sources": {
+            "net_income": {
+              "tag": "ProfitLoss",
+              "start": "2024-01-01",
+              "end": "2024-12-31",
+              "filed": "2025-02-20",
+              "accn": "0000092122-25-000018",
+              "form": "10-K"
+            },
+            "operating_cash_flow": {
+              "tag": "NetCashProvidedByUsedInOperatingActivities",
+              "start": "2024-01-01",
+              "end": "2024-12-31",
+              "filed": "2025-02-20",
+              "accn": "0000092122-25-000018",
+              "form": "10-K"
+            },
+            "revenue": {
+              "tag": "Revenues",
+              "start": "2024-01-01",
+              "end": "2024-12-31",
+              "filed": "2025-02-20",
+              "accn": "0000092122-25-000018",
+              "form": "10-K"
+            },
+            "assets": {
+              "tag": "Assets",
+              "start": null,
+              "end": "2024-12-31",
+              "filed": "2025-02-20",
+              "accn": "0000092122-25-000018",
+              "form": "10-K"
+            }
+          },
+          "gross_profit": null,
+          "net_income": 4260000000,
+          "operating_cash_flow": 9788000000,
+          "revenue": 26724000000,
+          "assets": 145180000000
+        },
+        {
+          "end": "2023-12-31",
+          "sources": {
+            "net_income": {
+              "tag": "ProfitLoss",
+              "start": "2023-01-01",
+              "end": "2023-12-31",
+              "filed": "2025-02-20",
+              "accn": "0000092122-25-000018",
+              "form": "10-K"
+            },
+            "operating_cash_flow": {
+              "tag": "NetCashProvidedByUsedInOperatingActivities",
+              "start": "2023-01-01",
+              "end": "2023-12-31",
+              "filed": "2025-02-20",
+              "accn": "0000092122-25-000018",
+              "form": "10-K"
+            },
+            "revenue": {
+              "tag": "Revenues",
+              "start": "2023-01-01",
+              "end": "2023-12-31",
+              "filed": "2025-02-20",
+              "accn": "0000092122-25-000018",
+              "form": "10-K"
+            },
+            "assets": {
+              "tag": "Assets",
+              "start": null,
+              "end": "2023-12-31",
+              "filed": "2025-02-20",
+              "accn": "0000092122-25-000018",
+              "form": "10-K"
+            }
+          },
+          "gross_profit": null,
+          "net_income": 3849000000,
+          "operating_cash_flow": 7553000000,
+          "revenue": 25253000000,
+          "assets": 139331000000
+        },
+        {
+          "end": "2022-12-31",
+          "sources": {
+            "net_income": {
+              "tag": "ProfitLoss",
+              "start": "2022-01-01",
+              "end": "2022-12-31",
+              "filed": "2025-02-20",
+              "accn": "0000092122-25-000018",
+              "form": "10-K"
+            },
+            "operating_cash_flow": {
+              "tag": "NetCashProvidedByUsedInOperatingActivities",
+              "start": "2022-01-01",
+              "end": "2022-12-31",
+              "filed": "2025-02-20",
+              "accn": "0000092122-25-000018",
+              "form": "10-K"
+            },
+            "revenue": {
+              "tag": "Revenues",
+              "start": "2022-01-01",
+              "end": "2022-12-31",
+              "filed": "2025-02-20",
+              "accn": "0000092122-25-000018",
+              "form": "10-K"
+            },
+            "assets": {
+              "tag": "Assets",
+              "start": null,
+              "end": "2022-12-31",
+              "filed": "2025-02-20",
+              "accn": "0000092122-25-000018",
+              "form": "10-K"
+            }
+          },
+          "gross_profit": null,
+          "net_income": 3428000000,
+          "operating_cash_flow": 6302000000,
+          "revenue": 29279000000,
+          "assets": 134891000000
+        }
+      ],
+      "complete_three_years": true,
+      "positive_income_and_cashflow_three_years": true,
+      "gross_profit_assets_latest": null
+    },
+    "ADBE": {
+      "cutoff": "2025-09-01",
+      "entity": "ADOBE INC.",
+      "cik": 796343,
+      "current_sic": "7372",
+      "current_sic_description": "Services-Prepackaged Software",
+      "current_sic_is_point_in_time": false,
+      "annual": [
+        {
+          "end": "2024-11-29",
+          "sources": {
+            "gross_profit": {
+              "tag": "GrossProfit",
+              "start": "2023-12-02",
+              "end": "2024-11-29",
+              "filed": "2025-01-13",
+              "accn": "0000796343-25-000004",
+              "form": "10-K"
+            },
+            "net_income": {
+              "tag": "NetIncomeLoss",
+              "start": "2023-12-02",
+              "end": "2024-11-29",
+              "filed": "2025-01-13",
+              "accn": "0000796343-25-000004",
+              "form": "10-K"
+            },
+            "operating_cash_flow": {
+              "tag": "NetCashProvidedByUsedInOperatingActivities",
+              "start": "2023-12-02",
+              "end": "2024-11-29",
+              "filed": "2025-01-13",
+              "accn": "0000796343-25-000004",
+              "form": "10-K"
+            },
+            "revenue": {
+              "tag": "Revenues",
+              "start": "2023-12-02",
+              "end": "2024-11-29",
+              "filed": "2025-01-13",
+              "accn": "0000796343-25-000004",
+              "form": "10-K"
+            },
+            "assets": {
+              "tag": "Assets",
+              "start": null,
+              "end": "2024-11-29",
+              "filed": "2025-01-13",
+              "accn": "0000796343-25-000004",
+              "form": "10-K"
+            }
+          },
+          "gross_profit": 19147000000,
+          "net_income": 5560000000,
+          "operating_cash_flow": 8056000000,
+          "revenue": 21505000000,
+          "assets": 30230000000
+        },
+        {
+          "end": "2023-12-01",
+          "sources": {
+            "gross_profit": {
+              "tag": "GrossProfit",
+              "start": "2022-12-03",
+              "end": "2023-12-01",
+              "filed": "2025-01-13",
+              "accn": "0000796343-25-000004",
+              "form": "10-K"
+            },
+            "net_income": {
+              "tag": "NetIncomeLoss",
+              "start": "2022-12-03",
+              "end": "2023-12-01",
+              "filed": "2025-01-13",
+              "accn": "0000796343-25-000004",
+              "form": "10-K"
+            },
+            "operating_cash_flow": {
+              "tag": "NetCashProvidedByUsedInOperatingActivities",
+              "start": "2022-12-03",
+              "end": "2023-12-01",
+              "filed": "2025-01-13",
+              "accn": "0000796343-25-000004",
+              "form": "10-K"
+            },
+            "revenue": {
+              "tag": "Revenues",
+              "start": "2022-12-03",
+              "end": "2023-12-01",
+              "filed": "2025-01-13",
+              "accn": "0000796343-25-000004",
+              "form": "10-K"
+            },
+            "assets": {
+              "tag": "Assets",
+              "start": null,
+              "end": "2023-12-01",
+              "filed": "2025-01-13",
+              "accn": "0000796343-25-000004",
+              "form": "10-K"
+            }
+          },
+          "gross_profit": 17055000000,
+          "net_income": 5428000000,
+          "operating_cash_flow": 7302000000,
+          "revenue": 19409000000,
+          "assets": 29779000000
+        },
+        {
+          "end": "2022-12-02",
+          "sources": {
+            "gross_profit": {
+              "tag": "GrossProfit",
+              "start": "2021-12-04",
+              "end": "2022-12-02",
+              "filed": "2025-01-13",
+              "accn": "0000796343-25-000004",
+              "form": "10-K"
+            },
+            "net_income": {
+              "tag": "NetIncomeLoss",
+              "start": "2021-12-04",
+              "end": "2022-12-02",
+              "filed": "2025-01-13",
+              "accn": "0000796343-25-000004",
+              "form": "10-K"
+            },
+            "operating_cash_flow": {
+              "tag": "NetCashProvidedByUsedInOperatingActivities",
+              "start": "2021-12-04",
+              "end": "2022-12-02",
+              "filed": "2025-01-13",
+              "accn": "0000796343-25-000004",
+              "form": "10-K"
+            },
+            "revenue": {
+              "tag": "Revenues",
+              "start": "2021-12-04",
+              "end": "2022-12-02",
+              "filed": "2025-01-13",
+              "accn": "0000796343-25-000004",
+              "form": "10-K"
+            },
+            "assets": {
+              "tag": "Assets",
+              "start": null,
+              "end": "2022-12-02",
+              "filed": "2024-01-17",
+              "accn": "0000796343-24-000006",
+              "form": "10-K"
+            }
+          },
+          "gross_profit": 15441000000,
+          "net_income": 4756000000,
+          "operating_cash_flow": 7838000000,
+          "revenue": 17606000000,
+          "assets": 27165000000
+        }
+      ],
+      "complete_three_years": true,
+      "positive_income_and_cashflow_three_years": true,
+      "gross_profit_assets_latest": 0.6333774396295071
+    },
+    "CRM": {
+      "cutoff": "2025-09-01",
+      "entity": "Salesforce, Inc.",
+      "cik": 1108524,
+      "current_sic": "7372",
+      "current_sic_description": "Services-Prepackaged Software",
+      "current_sic_is_point_in_time": false,
+      "annual": [
+        {
+          "end": "2025-01-31",
+          "sources": {
+            "gross_profit": {
+              "tag": "GrossProfit",
+              "start": "2024-02-01",
+              "end": "2025-01-31",
+              "filed": "2025-03-05",
+              "accn": "0001108524-25-000006",
+              "form": "10-K"
+            },
+            "net_income": {
+              "tag": "NetIncomeLoss",
+              "start": "2024-02-01",
+              "end": "2025-01-31",
+              "filed": "2025-03-05",
+              "accn": "0001108524-25-000006",
+              "form": "10-K"
+            },
+            "operating_cash_flow": {
+              "tag": "NetCashProvidedByUsedInOperatingActivities",
+              "start": "2024-02-01",
+              "end": "2025-01-31",
+              "filed": "2025-03-05",
+              "accn": "0001108524-25-000006",
+              "form": "10-K"
+            },
+            "revenue": {
+              "tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+              "start": "2024-02-01",
+              "end": "2025-01-31",
+              "filed": "2025-03-05",
+              "accn": "0001108524-25-000006",
+              "form": "10-K"
+            },
+            "assets": {
+              "tag": "Assets",
+              "start": null,
+              "end": "2025-01-31",
+              "filed": "2025-03-05",
+              "accn": "0001108524-25-000006",
+              "form": "10-K"
+            }
+          },
+          "gross_profit": 29252000000,
+          "net_income": 6197000000,
+          "operating_cash_flow": 13092000000,
+          "revenue": 37895000000,
+          "assets": 102928000000
+        },
+        {
+          "end": "2024-01-31",
+          "sources": {
+            "gross_profit": {
+              "tag": "GrossProfit",
+              "start": "2023-02-01",
+              "end": "2024-01-31",
+              "filed": "2025-03-05",
+              "accn": "0001108524-25-000006",
+              "form": "10-K"
+            },
+            "net_income": {
+              "tag": "NetIncomeLoss",
+              "start": "2023-02-01",
+              "end": "2024-01-31",
+              "filed": "2025-03-05",
+              "accn": "0001108524-25-000006",
+              "form": "10-K"
+            },
+            "operating_cash_flow": {
+              "tag": "NetCashProvidedByUsedInOperatingActivities",
+              "start": "2023-02-01",
+              "end": "2024-01-31",
+              "filed": "2025-03-05",
+              "accn": "0001108524-25-000006",
+              "form": "10-K"
+            },
+            "revenue": {
+              "tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+              "start": "2023-02-01",
+              "end": "2024-01-31",
+              "filed": "2025-03-05",
+              "accn": "0001108524-25-000006",
+              "form": "10-K"
+            },
+            "assets": {
+              "tag": "Assets",
+              "start": null,
+              "end": "2024-01-31",
+              "filed": "2025-03-05",
+              "accn": "0001108524-25-000006",
+              "form": "10-K"
+            }
+          },
+          "gross_profit": 26316000000,
+          "net_income": 4136000000,
+          "operating_cash_flow": 10234000000,
+          "revenue": 34857000000,
+          "assets": 99823000000
+        },
+        {
+          "end": "2023-01-31",
+          "sources": {
+            "gross_profit": {
+              "tag": "GrossProfit",
+              "start": "2022-02-01",
+              "end": "2023-01-31",
+              "filed": "2025-03-05",
+              "accn": "0001108524-25-000006",
+              "form": "10-K"
+            },
+            "net_income": {
+              "tag": "NetIncomeLoss",
+              "start": "2022-02-01",
+              "end": "2023-01-31",
+              "filed": "2025-03-05",
+              "accn": "0001108524-25-000006",
+              "form": "10-K"
+            },
+            "operating_cash_flow": {
+              "tag": "NetCashProvidedByUsedInOperatingActivities",
+              "start": "2022-02-01",
+              "end": "2023-01-31",
+              "filed": "2025-03-05",
+              "accn": "0001108524-25-000006",
+              "form": "10-K"
+            },
+            "revenue": {
+              "tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+              "start": "2022-02-01",
+              "end": "2023-01-31",
+              "filed": "2025-03-05",
+              "accn": "0001108524-25-000006",
+              "form": "10-K"
+            },
+            "assets": {
+              "tag": "Assets",
+              "start": null,
+              "end": "2023-01-31",
+              "filed": "2024-03-06",
+              "accn": "0001108524-24-000005",
+              "form": "10-K"
+            }
+          },
+          "gross_profit": 22992000000,
+          "net_income": 208000000,
+          "operating_cash_flow": 7111000000,
+          "revenue": 31352000000,
+          "assets": 98849000000
+        }
+      ],
+      "complete_three_years": true,
+      "positive_income_and_cashflow_three_years": true,
+      "gross_profit_assets_latest": 0.28419866314316805
+    },
+    "CSCO": {
+      "cutoff": "2025-09-01",
+      "entity": "CISCO SYSTEMS, INC.",
+      "cik": 858877,
+      "current_sic": "3576",
+      "current_sic_description": "Computer Communications Equipment",
+      "current_sic_is_point_in_time": false,
+      "annual": [
+        {
+          "end": "2024-07-27",
+          "sources": {
+            "gross_profit": {
+              "tag": "GrossProfit",
+              "start": "2023-07-30",
+              "end": "2024-07-27",
+              "filed": "2024-09-05",
+              "accn": "0000858877-24-000017",
+              "form": "10-K"
+            },
+            "net_income": {
+              "tag": "NetIncomeLoss",
+              "start": "2023-07-30",
+              "end": "2024-07-27",
+              "filed": "2024-09-05",
+              "accn": "0000858877-24-000017",
+              "form": "10-K"
+            },
+            "operating_cash_flow": {
+              "tag": "NetCashProvidedByUsedInOperatingActivities",
+              "start": "2023-07-30",
+              "end": "2024-07-27",
+              "filed": "2024-09-05",
+              "accn": "0000858877-24-000017",
+              "form": "10-K"
+            },
+            "revenue": {
+              "tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+              "start": "2023-07-30",
+              "end": "2024-07-27",
+              "filed": "2024-09-05",
+              "accn": "0000858877-24-000017",
+              "form": "10-K"
+            },
+            "assets": {
+              "tag": "Assets",
+              "start": null,
+              "end": "2024-07-27",
+              "filed": "2024-09-05",
+              "accn": "0000858877-24-000017",
+              "form": "10-K"
+            }
+          },
+          "gross_profit": 34828000000,
+          "net_income": 10320000000,
+          "operating_cash_flow": 10880000000,
+          "revenue": 53803000000,
+          "assets": 124413000000
+        },
+        {
+          "end": "2023-07-29",
+          "sources": {
+            "gross_profit": {
+              "tag": "GrossProfit",
+              "start": "2022-07-31",
+              "end": "2023-07-29",
+              "filed": "2024-09-05",
+              "accn": "0000858877-24-000017",
+              "form": "10-K"
+            },
+            "net_income": {
+              "tag": "NetIncomeLoss",
+              "start": "2022-07-31",
+              "end": "2023-07-29",
+              "filed": "2024-09-05",
+              "accn": "0000858877-24-000017",
+              "form": "10-K"
+            },
+            "operating_cash_flow": {
+              "tag": "NetCashProvidedByUsedInOperatingActivities",
+              "start": "2022-07-31",
+              "end": "2023-07-29",
+              "filed": "2024-09-05",
+              "accn": "0000858877-24-000017",
+              "form": "10-K"
+            },
+            "revenue": {
+              "tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+              "start": "2022-07-31",
+              "end": "2023-07-29",
+              "filed": "2024-09-05",
+              "accn": "0000858877-24-000017",
+              "form": "10-K"
+            },
+            "assets": {
+              "tag": "Assets",
+              "start": null,
+              "end": "2023-07-29",
+              "filed": "2024-09-05",
+              "accn": "0000858877-24-000017",
+              "form": "10-K"
+            }
+          },
+          "gross_profit": 35753000000,
+          "net_income": 12613000000,
+          "operating_cash_flow": 19886000000,
+          "revenue": 56998000000,
+          "assets": 101852000000
+        },
+        {
+          "end": "2022-07-30",
+          "sources": {
+            "gross_profit": {
+              "tag": "GrossProfit",
+              "start": "2021-08-01",
+              "end": "2022-07-30",
+              "filed": "2024-09-05",
+              "accn": "0000858877-24-000017",
+              "form": "10-K"
+            },
+            "net_income": {
+              "tag": "NetIncomeLoss",
+              "start": "2021-08-01",
+              "end": "2022-07-30",
+              "filed": "2024-09-05",
+              "accn": "0000858877-24-000017",
+              "form": "10-K"
+            },
+            "operating_cash_flow": {
+              "tag": "NetCashProvidedByUsedInOperatingActivities",
+              "start": "2021-08-01",
+              "end": "2022-07-30",
+              "filed": "2024-09-05",
+              "accn": "0000858877-24-000017",
+              "form": "10-K"
+            },
+            "revenue": {
+              "tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+              "start": "2021-08-01",
+              "end": "2022-07-30",
+              "filed": "2024-09-05",
+              "accn": "0000858877-24-000017",
+              "form": "10-K"
+            },
+            "assets": {
+              "tag": "Assets",
+              "start": null,
+              "end": "2022-07-30",
+              "filed": "2023-09-07",
+              "accn": "0000858877-23-000023",
+              "form": "10-K"
+            }
+          },
+          "gross_profit": 32248000000,
+          "net_income": 11812000000,
+          "operating_cash_flow": 13226000000,
+          "revenue": 51557000000,
+          "assets": 94002000000
+        }
+      ],
+      "complete_three_years": true,
+      "positive_income_and_cashflow_three_years": true,
+      "gross_profit_assets_latest": 0.279938591626277
+    },
+    "IBM": {
+      "cutoff": "2025-09-01",
+      "entity": "INTERNATIONAL BUSINESS MACHINES CORP",
+      "cik": 51143,
+      "current_sic": "3570",
+      "current_sic_description": "Computer & office Equipment",
+      "current_sic_is_point_in_time": false,
+      "annual": [
+        {
+          "end": "2024-12-31",
+          "sources": {
+            "gross_profit": {
+              "tag": "GrossProfit",
+              "start": "2024-01-01",
+              "end": "2024-12-31",
+              "filed": "2025-02-25",
+              "accn": "0000051143-25-000015",
+              "form": "10-K"
+            },
+            "net_income": {
+              "tag": "NetIncomeLoss",
+              "start": "2024-01-01",
+              "end": "2024-12-31",
+              "filed": "2025-02-25",
+              "accn": "0000051143-25-000015",
+              "form": "10-K"
+            },
+            "operating_cash_flow": {
+              "tag": "NetCashProvidedByUsedInOperatingActivities",
+              "start": "2024-01-01",
+              "end": "2024-12-31",
+              "filed": "2025-02-25",
+              "accn": "0000051143-25-000015",
+              "form": "10-K"
+            },
+            "revenue": {
+              "tag": "Revenues",
+              "start": "2024-01-01",
+              "end": "2024-12-31",
+              "filed": "2025-02-25",
+              "accn": "0000051143-25-000015",
+              "form": "10-K"
+            },
+            "assets": {
+              "tag": "Assets",
+              "start": null,
+              "end": "2024-12-31",
+              "filed": "2025-02-25",
+              "accn": "0000051143-25-000015",
+              "form": "10-K"
+            }
+          },
+          "gross_profit": 35551000000,
+          "net_income": 6023000000,
+          "operating_cash_flow": 13445000000,
+          "revenue": 62753000000,
+          "assets": 137175000000
+        },
+        {
+          "end": "2023-12-31",
+          "sources": {
+            "gross_profit": {
+              "tag": "GrossProfit",
+              "start": "2023-01-01",
+              "end": "2023-12-31",
+              "filed": "2025-02-25",
+              "accn": "0000051143-25-000015",
+              "form": "10-K"
+            },
+            "net_income": {
+              "tag": "NetIncomeLoss",
+              "start": "2023-01-01",
+              "end": "2023-12-31",
+              "filed": "2025-02-25",
+              "accn": "0000051143-25-000015",
+              "form": "10-K"
+            },
+            "operating_cash_flow": {
+              "tag": "NetCashProvidedByUsedInOperatingActivities",
+              "start": "2023-01-01",
+              "end": "2023-12-31",
+              "filed": "2025-02-25",
+              "accn": "0000051143-25-000015",
+              "form": "10-K"
+            },
+            "revenue": {
+              "tag": "Revenues",
+              "start": "2023-01-01",
+              "end": "2023-12-31",
+              "filed": "2025-02-25",
+              "accn": "0000051143-25-000015",
+              "form": "10-K"
+            },
+            "assets": {
+              "tag": "Assets",
+              "start": null,
+              "end": "2023-12-31",
+              "filed": "2025-02-25",
+              "accn": "0000051143-25-000015",
+              "form": "10-K"
+            }
+          },
+          "gross_profit": 34300000000,
+          "net_income": 7502000000,
+          "operating_cash_flow": 13931000000,
+          "revenue": 61860000000,
+          "assets": 135241000000
+        },
+        {
+          "end": "2022-12-31",
+          "sources": {
+            "gross_profit": {
+              "tag": "GrossProfit",
+              "start": "2022-01-01",
+              "end": "2022-12-31",
+              "filed": "2025-02-25",
+              "accn": "0000051143-25-000015",
+              "form": "10-K"
+            },
+            "net_income": {
+              "tag": "NetIncomeLoss",
+              "start": "2022-01-01",
+              "end": "2022-12-31",
+              "filed": "2025-02-25",
+              "accn": "0000051143-25-000015",
+              "form": "10-K"
+            },
+            "operating_cash_flow": {
+              "tag": "NetCashProvidedByUsedInOperatingActivities",
+              "start": "2022-01-01",
+              "end": "2022-12-31",
+              "filed": "2025-02-25",
+              "accn": "0000051143-25-000015",
+              "form": "10-K"
+            },
+            "revenue": {
+              "tag": "Revenues",
+              "start": "2022-01-01",
+              "end": "2022-12-31",
+              "filed": "2025-02-25",
+              "accn": "0000051143-25-000015",
+              "form": "10-K"
+            },
+            "assets": {
+              "tag": "Assets",
+              "start": null,
+              "end": "2022-12-31",
+              "filed": "2024-02-26",
+              "accn": "0000051143-24-000012",
+              "form": "10-K"
+            }
+          },
+          "gross_profit": 32687000000,
+          "net_income": 1639000000,
+          "operating_cash_flow": 10435000000,
+          "revenue": 60530000000,
+          "assets": 127243000000
+        }
+      ],
+      "complete_three_years": true,
+      "positive_income_and_cashflow_three_years": true,
+      "gross_profit_assets_latest": 0.2591652997995261
+    },
+    "INTC": {
+      "cutoff": "2025-09-01",
+      "entity": "INTEL CORP",
+      "cik": 50863,
+      "current_sic": "3674",
+      "current_sic_description": "Semiconductors & Related Devices",
+      "current_sic_is_point_in_time": false,
+      "annual": [
+        {
+          "end": "2024-12-28",
+          "sources": {
+            "gross_profit": {
+              "tag": "GrossProfit",
+              "start": "2023-12-31",
+              "end": "2024-12-28",
+              "filed": "2025-01-31",
+              "accn": "0000050863-25-000009",
+              "form": "10-K"
+            },
+            "net_income": {
+              "tag": "NetIncomeLoss",
+              "start": "2023-12-31",
+              "end": "2024-12-28",
+              "filed": "2025-01-31",
+              "accn": "0000050863-25-000009",
+              "form": "10-K"
+            },
+            "operating_cash_flow": {
+              "tag": "NetCashProvidedByUsedInOperatingActivities",
+              "start": "2023-12-31",
+              "end": "2024-12-28",
+              "filed": "2025-01-31",
+              "accn": "0000050863-25-000009",
+              "form": "10-K"
+            },
+            "revenue": {
+              "tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+              "start": "2023-12-31",
+              "end": "2024-12-28",
+              "filed": "2025-01-31",
+              "accn": "0000050863-25-000009",
+              "form": "10-K"
+            },
+            "assets": {
+              "tag": "Assets",
+              "start": null,
+              "end": "2024-12-28",
+              "filed": "2025-01-31",
+              "accn": "0000050863-25-000009",
+              "form": "10-K"
+            }
+          },
+          "gross_profit": 17345000000,
+          "net_income": -18756000000,
+          "operating_cash_flow": 8288000000,
+          "revenue": 53101000000,
+          "assets": 196485000000
+        },
+        {
+          "end": "2023-12-30",
+          "sources": {
+            "gross_profit": {
+              "tag": "GrossProfit",
+              "start": "2023-01-01",
+              "end": "2023-12-30",
+              "filed": "2025-01-31",
+              "accn": "0000050863-25-000009",
+              "form": "10-K"
+            },
+            "net_income": {
+              "tag": "NetIncomeLoss",
+              "start": "2023-01-01",
+              "end": "2023-12-30",
+              "filed": "2025-01-31",
+              "accn": "0000050863-25-000009",
+              "form": "10-K"
+            },
+            "operating_cash_flow": {
+              "tag": "NetCashProvidedByUsedInOperatingActivities",
+              "start": "2023-01-01",
+              "end": "2023-12-30",
+              "filed": "2025-01-31",
+              "accn": "0000050863-25-000009",
+              "form": "10-K"
+            },
+            "revenue": {
+              "tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+              "start": "2023-01-01",
+              "end": "2023-12-30",
+              "filed": "2025-01-31",
+              "accn": "0000050863-25-000009",
+              "form": "10-K"
+            },
+            "assets": {
+              "tag": "Assets",
+              "start": null,
+              "end": "2023-12-30",
+              "filed": "2025-01-31",
+              "accn": "0000050863-25-000009",
+              "form": "10-K"
+            }
+          },
+          "gross_profit": 21711000000,
+          "net_income": 1689000000,
+          "operating_cash_flow": 11471000000,
+          "revenue": 54228000000,
+          "assets": 191572000000
+        },
+        {
+          "end": "2022-12-31",
+          "sources": {
+            "gross_profit": {
+              "tag": "GrossProfit",
+              "start": "2021-12-26",
+              "end": "2022-12-31",
+              "filed": "2025-01-31",
+              "accn": "0000050863-25-000009",
+              "form": "10-K"
+            },
+            "net_income": {
+              "tag": "NetIncomeLoss",
+              "start": "2021-12-26",
+              "end": "2022-12-31",
+              "filed": "2025-01-31",
+              "accn": "0000050863-25-000009",
+              "form": "10-K"
+            },
+            "operating_cash_flow": {
+              "tag": "NetCashProvidedByUsedInOperatingActivities",
+              "start": "2021-12-26",
+              "end": "2022-12-31",
+              "filed": "2025-01-31",
+              "accn": "0000050863-25-000009",
+              "form": "10-K"
+            },
+            "revenue": {
+              "tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+              "start": "2021-12-26",
+              "end": "2022-12-31",
+              "filed": "2025-01-31",
+              "accn": "0000050863-25-000009",
+              "form": "10-K"
+            },
+            "assets": {
+              "tag": "Assets",
+              "start": null,
+              "end": "2022-12-31",
+              "filed": "2024-01-26",
+              "accn": "0000050863-24-000010",
+              "form": "10-K"
+            }
+          },
+          "gross_profit": 26866000000,
+          "net_income": 8014000000,
+          "operating_cash_flow": 15433000000,
+          "revenue": 63054000000,
+          "assets": 182103000000
+        }
+      ],
+      "complete_three_years": true,
+      "positive_income_and_cashflow_three_years": false,
+      "gross_profit_assets_latest": 0.08827645876275543
+    },
+    "QCOM": {
+      "cutoff": "2025-09-01",
+      "entity": "QUALCOMM INC/DE",
+      "cik": 804328,
+      "current_sic": "3663",
+      "current_sic_description": "Radio & Tv Broadcasting & Communications Equipment",
+      "current_sic_is_point_in_time": false,
+      "annual": [
+        {
+          "end": "2024-09-29",
+          "sources": {
+            "net_income": {
+              "tag": "NetIncomeLoss",
+              "start": "2023-09-25",
+              "end": "2024-09-29",
+              "filed": "2024-11-06",
+              "accn": "0000804328-24-000075",
+              "form": "10-K"
+            },
+            "operating_cash_flow": {
+              "tag": "NetCashProvidedByUsedInOperatingActivities",
+              "start": "2023-09-25",
+              "end": "2024-09-29",
+              "filed": "2024-11-06",
+              "accn": "0000804328-24-000075",
+              "form": "10-K"
+            },
+            "revenue": {
+              "tag": "Revenues",
+              "start": "2023-09-25",
+              "end": "2024-09-29",
+              "filed": "2024-11-06",
+              "accn": "0000804328-24-000075",
+              "form": "10-K"
+            },
+            "assets": {
+              "tag": "Assets",
+              "start": null,
+              "end": "2024-09-29",
+              "filed": "2024-11-06",
+              "accn": "0000804328-24-000075",
+              "form": "10-K"
+            }
+          },
+          "gross_profit": null,
+          "net_income": 10142000000,
+          "operating_cash_flow": 12202000000,
+          "revenue": 38962000000,
+          "assets": 55154000000
+        },
+        {
+          "end": "2023-09-24",
+          "sources": {
+            "net_income": {
+              "tag": "NetIncomeLoss",
+              "start": "2022-09-26",
+              "end": "2023-09-24",
+              "filed": "2024-11-06",
+              "accn": "0000804328-24-000075",
+              "form": "10-K"
+            },
+            "operating_cash_flow": {
+              "tag": "NetCashProvidedByUsedInOperatingActivities",
+              "start": "2022-09-26",
+              "end": "2023-09-24",
+              "filed": "2024-11-06",
+              "accn": "0000804328-24-000075",
+              "form": "10-K"
+            },
+            "revenue": {
+              "tag": "Revenues",
+              "start": "2022-09-26",
+              "end": "2023-09-24",
+              "filed": "2024-11-06",
+              "accn": "0000804328-24-000075",
+              "form": "10-K"
+            },
+            "assets": {
+              "tag": "Assets",
+              "start": null,
+              "end": "2023-09-24",
+              "filed": "2024-11-06",
+              "accn": "0000804328-24-000075",
+              "form": "10-K"
+            }
+          },
+          "gross_profit": null,
+          "net_income": 7232000000,
+          "operating_cash_flow": 11299000000,
+          "revenue": 35820000000,
+          "assets": 51040000000
+        },
+        {
+          "end": "2022-09-25",
+          "sources": {
+            "net_income": {
+              "tag": "NetIncomeLoss",
+              "start": "2021-09-27",
+              "end": "2022-09-25",
+              "filed": "2024-11-06",
+              "accn": "0000804328-24-000075",
+              "form": "10-K"
+            },
+            "operating_cash_flow": {
+              "tag": "NetCashProvidedByUsedInOperatingActivities",
+              "start": "2021-09-27",
+              "end": "2022-09-25",
+              "filed": "2024-11-06",
+              "accn": "0000804328-24-000075",
+              "form": "10-K"
+            },
+            "revenue": {
+              "tag": "Revenues",
+              "start": "2021-09-27",
+              "end": "2022-09-25",
+              "filed": "2024-11-06",
+              "accn": "0000804328-24-000075",
+              "form": "10-K"
+            },
+            "assets": {
+              "tag": "Assets",
+              "start": null,
+              "end": "2022-09-25",
+              "filed": "2023-11-01",
+              "accn": "0000804328-23-000055",
+              "form": "10-K"
+            }
+          },
+          "gross_profit": null,
+          "net_income": 12936000000,
+          "operating_cash_flow": 9096000000,
+          "revenue": 44200000000,
+          "assets": 49014000000
+        }
+      ],
+      "complete_three_years": true,
+      "positive_income_and_cashflow_three_years": true,
+      "gross_profit_assets_latest": null
+    },
+    "TXN": {
+      "cutoff": "2025-09-01",
+      "entity": "TEXAS INSTRUMENTS INCORPORATED",
+      "cik": 97476,
+      "current_sic": "3674",
+      "current_sic_description": "Semiconductors & Related Devices",
+      "current_sic_is_point_in_time": false,
+      "annual": [
+        {
+          "end": "2024-12-31",
+          "sources": {
+            "gross_profit": {
+              "tag": "GrossProfit",
+              "start": "2024-01-01",
+              "end": "2024-12-31",
+              "filed": "2025-02-14",
+              "accn": "0000097476-25-000007",
+              "form": "10-K"
+            },
+            "net_income": {
+              "tag": "NetIncomeLoss",
+              "start": "2024-01-01",
+              "end": "2024-12-31",
+              "filed": "2025-02-14",
+              "accn": "0000097476-25-000007",
+              "form": "10-K"
+            },
+            "operating_cash_flow": {
+              "tag": "NetCashProvidedByUsedInOperatingActivities",
+              "start": "2024-01-01",
+              "end": "2024-12-31",
+              "filed": "2025-02-14",
+              "accn": "0000097476-25-000007",
+              "form": "10-K"
+            },
+            "revenue": {
+              "tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+              "start": "2024-01-01",
+              "end": "2024-12-31",
+              "filed": "2025-02-14",
+              "accn": "0000097476-25-000007",
+              "form": "10-K"
+            },
+            "assets": {
+              "tag": "Assets",
+              "start": null,
+              "end": "2024-12-31",
+              "filed": "2025-02-14",
+              "accn": "0000097476-25-000007",
+              "form": "10-K"
+            }
+          },
+          "gross_profit": 9094000000,
+          "net_income": 4799000000,
+          "operating_cash_flow": 6318000000,
+          "revenue": 15641000000,
+          "assets": 35509000000
+        },
+        {
+          "end": "2023-12-31",
+          "sources": {
+            "gross_profit": {
+              "tag": "GrossProfit",
+              "start": "2023-01-01",
+              "end": "2023-12-31",
+              "filed": "2025-02-14",
+              "accn": "0000097476-25-000007",
+              "form": "10-K"
+            },
+            "net_income": {
+              "tag": "NetIncomeLoss",
+              "start": "2023-01-01",
+              "end": "2023-12-31",
+              "filed": "2025-02-14",
+              "accn": "0000097476-25-000007",
+              "form": "10-K"
+            },
+            "operating_cash_flow": {
+              "tag": "NetCashProvidedByUsedInOperatingActivities",
+              "start": "2023-01-01",
+              "end": "2023-12-31",
+              "filed": "2025-02-14",
+              "accn": "0000097476-25-000007",
+              "form": "10-K"
+            },
+            "revenue": {
+              "tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+              "start": "2023-01-01",
+              "end": "2023-12-31",
+              "filed": "2025-02-14",
+              "accn": "0000097476-25-000007",
+              "form": "10-K"
+            },
+            "assets": {
+              "tag": "Assets",
+              "start": null,
+              "end": "2023-12-31",
+              "filed": "2025-02-14",
+              "accn": "0000097476-25-000007",
+              "form": "10-K"
+            }
+          },
+          "gross_profit": 11019000000,
+          "net_income": 6510000000,
+          "operating_cash_flow": 6420000000,
+          "revenue": 17519000000,
+          "assets": 32348000000
+        },
+        {
+          "end": "2022-12-31",
+          "sources": {
+            "gross_profit": {
+              "tag": "GrossProfit",
+              "start": "2022-01-01",
+              "end": "2022-12-31",
+              "filed": "2025-02-14",
+              "accn": "0000097476-25-000007",
+              "form": "10-K"
+            },
+            "net_income": {
+              "tag": "NetIncomeLoss",
+              "start": "2022-01-01",
+              "end": "2022-12-31",
+              "filed": "2025-02-14",
+              "accn": "0000097476-25-000007",
+              "form": "10-K"
+            },
+            "operating_cash_flow": {
+              "tag": "NetCashProvidedByUsedInOperatingActivities",
+              "start": "2022-01-01",
+              "end": "2022-12-31",
+              "filed": "2025-02-14",
+              "accn": "0000097476-25-000007",
+              "form": "10-K"
+            },
+            "revenue": {
+              "tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+              "start": "2022-01-01",
+              "end": "2022-12-31",
+              "filed": "2025-02-14",
+              "accn": "0000097476-25-000007",
+              "form": "10-K"
+            },
+            "assets": {
+              "tag": "Assets",
+              "start": null,
+              "end": "2022-12-31",
+              "filed": "2024-02-02",
+              "accn": "0000097476-24-000007",
+              "form": "10-K"
+            }
+          },
+          "gross_profit": 13771000000,
+          "net_income": 8749000000,
+          "operating_cash_flow": 8720000000,
+          "revenue": 20028000000,
+          "assets": 27207000000
+        }
+      ],
+      "complete_three_years": true,
+      "positive_income_and_cashflow_three_years": true,
+      "gross_profit_assets_latest": 0.2561040862879833
+    },
+    "MRK": {
+      "cutoff": "2025-09-01",
+      "entity": "Merck\u00a0& Co., Inc.",
+      "cik": 310158,
+      "current_sic": "2834",
+      "current_sic_description": "Pharmaceutical Preparations",
+      "current_sic_is_point_in_time": false,
+      "annual": [
+        {
+          "end": "2024-12-31",
+          "sources": {
+            "net_income": {
+              "tag": "NetIncomeLoss",
+              "start": "2024-01-01",
+              "end": "2024-12-31",
+              "filed": "2025-02-25",
+              "accn": "0001628280-25-007732",
+              "form": "10-K"
+            },
+            "operating_cash_flow": {
+              "tag": "NetCashProvidedByUsedInOperatingActivities",
+              "start": "2024-01-01",
+              "end": "2024-12-31",
+              "filed": "2025-02-25",
+              "accn": "0001628280-25-007732",
+              "form": "10-K"
+            },
+            "revenue": {
+              "tag": "Revenues",
+              "start": "2024-01-01",
+              "end": "2024-12-31",
+              "filed": "2025-02-25",
+              "accn": "0001628280-25-007732",
+              "form": "10-K"
+            },
+            "assets": {
+              "tag": "Assets",
+              "start": null,
+              "end": "2024-12-31",
+              "filed": "2025-02-25",
+              "accn": "0001628280-25-007732",
+              "form": "10-K"
+            }
+          },
+          "gross_profit": null,
+          "net_income": 17117000000,
+          "operating_cash_flow": 21468000000,
+          "revenue": 64168000000,
+          "assets": 117106000000
+        },
+        {
+          "end": "2023-12-31",
+          "sources": {
+            "net_income": {
+              "tag": "NetIncomeLoss",
+              "start": "2023-01-01",
+              "end": "2023-12-31",
+              "filed": "2025-02-25",
+              "accn": "0001628280-25-007732",
+              "form": "10-K"
+            },
+            "operating_cash_flow": {
+              "tag": "NetCashProvidedByUsedInOperatingActivities",
+              "start": "2023-01-01",
+              "end": "2023-12-31",
+              "filed": "2025-02-25",
+              "accn": "0001628280-25-007732",
+              "form": "10-K"
+            },
+            "revenue": {
+              "tag": "Revenues",
+              "start": "2023-01-01",
+              "end": "2023-12-31",
+              "filed": "2025-02-25",
+              "accn": "0001628280-25-007732",
+              "form": "10-K"
+            },
+            "assets": {
+              "tag": "Assets",
+              "start": null,
+              "end": "2023-12-31",
+              "filed": "2025-02-25",
+              "accn": "0001628280-25-007732",
+              "form": "10-K"
+            }
+          },
+          "gross_profit": null,
+          "net_income": 365000000,
+          "operating_cash_flow": 13006000000,
+          "revenue": 60115000000,
+          "assets": 106675000000
+        },
+        {
+          "end": "2022-12-31",
+          "sources": {
+            "net_income": {
+              "tag": "NetIncomeLoss",
+              "start": "2022-01-01",
+              "end": "2022-12-31",
+              "filed": "2025-02-25",
+              "accn": "0001628280-25-007732",
+              "form": "10-K"
+            },
+            "operating_cash_flow": {
+              "tag": "NetCashProvidedByUsedInOperatingActivities",
+              "start": "2022-01-01",
+              "end": "2022-12-31",
+              "filed": "2025-02-25",
+              "accn": "0001628280-25-007732",
+              "form": "10-K"
+            },
+            "revenue": {
+              "tag": "Revenues",
+              "start": "2022-01-01",
+              "end": "2022-12-31",
+              "filed": "2025-02-25",
+              "accn": "0001628280-25-007732",
+              "form": "10-K"
+            },
+            "assets": {
+              "tag": "Assets",
+              "start": null,
+              "end": "2022-12-31",
+              "filed": "2024-02-26",
+              "accn": "0001628280-24-006850",
+              "form": "10-K"
+            }
+          },
+          "gross_profit": null,
+          "net_income": 14519000000,
+          "operating_cash_flow": 19095000000,
+          "revenue": 59283000000,
+          "assets": 109160000000
+        }
+      ],
+      "complete_three_years": true,
+      "positive_income_and_cashflow_three_years": true,
+      "gross_profit_assets_latest": null
+    },
+    "PG": {
+      "cutoff": "2025-09-01",
+      "entity": "The Procter & Gamble Company",
+      "cik": 80424,
+      "current_sic": "2840",
+      "current_sic_description": "Soap, Detergents, Cleang Preparations, Perfumes, Cosmetics",
+      "current_sic_is_point_in_time": false,
+      "annual": [
+        {
+          "end": "2025-06-30",
+          "sources": {
+            "net_income": {
+              "tag": "NetIncomeLoss",
+              "start": "2024-07-01",
+              "end": "2025-06-30",
+              "filed": "2025-08-04",
+              "accn": "0000080424-25-000076",
+              "form": "10-K"
+            },
+            "operating_cash_flow": {
+              "tag": "NetCashProvidedByUsedInOperatingActivities",
+              "start": "2024-07-01",
+              "end": "2025-06-30",
+              "filed": "2025-08-04",
+              "accn": "0000080424-25-000076",
+              "form": "10-K"
+            },
+            "revenue": {
+              "tag": "Revenues",
+              "start": "2024-07-01",
+              "end": "2025-06-30",
+              "filed": "2025-08-04",
+              "accn": "0000080424-25-000076",
+              "form": "10-K"
+            },
+            "assets": {
+              "tag": "Assets",
+              "start": null,
+              "end": "2025-06-30",
+              "filed": "2025-08-04",
+              "accn": "0000080424-25-000076",
+              "form": "10-K"
+            }
+          },
+          "gross_profit": null,
+          "net_income": 15974000000,
+          "operating_cash_flow": 17817000000,
+          "revenue": 84284000000,
+          "assets": 125231000000
+        },
+        {
+          "end": "2024-06-30",
+          "sources": {
+            "net_income": {
+              "tag": "NetIncomeLoss",
+              "start": "2023-07-01",
+              "end": "2024-06-30",
+              "filed": "2025-08-04",
+              "accn": "0000080424-25-000076",
+              "form": "10-K"
+            },
+            "operating_cash_flow": {
+              "tag": "NetCashProvidedByUsedInOperatingActivities",
+              "start": "2023-07-01",
+              "end": "2024-06-30",
+              "filed": "2025-08-04",
+              "accn": "0000080424-25-000076",
+              "form": "10-K"
+            },
+            "revenue": {
+              "tag": "Revenues",
+              "start": "2023-07-01",
+              "end": "2024-06-30",
+              "filed": "2025-08-04",
+              "accn": "0000080424-25-000076",
+              "form": "10-K"
+            },
+            "assets": {
+              "tag": "Assets",
+              "start": null,
+              "end": "2024-06-30",
+              "filed": "2025-08-04",
+              "accn": "0000080424-25-000076",
+              "form": "10-K"
+            }
+          },
+          "gross_profit": null,
+          "net_income": 14879000000,
+          "operating_cash_flow": 19846000000,
+          "revenue": 84039000000,
+          "assets": 122370000000
+        },
+        {
+          "end": "2023-06-30",
+          "sources": {
+            "net_income": {
+              "tag": "NetIncomeLoss",
+              "start": "2022-07-01",
+              "end": "2023-06-30",
+              "filed": "2025-08-04",
+              "accn": "0000080424-25-000076",
+              "form": "10-K"
+            },
+            "operating_cash_flow": {
+              "tag": "NetCashProvidedByUsedInOperatingActivities",
+              "start": "2022-07-01",
+              "end": "2023-06-30",
+              "filed": "2025-08-04",
+              "accn": "0000080424-25-000076",
+              "form": "10-K"
+            },
+            "revenue": {
+              "tag": "Revenues",
+              "start": "2022-07-01",
+              "end": "2023-06-30",
+              "filed": "2025-08-04",
+              "accn": "0000080424-25-000076",
+              "form": "10-K"
+            },
+            "assets": {
+              "tag": "Assets",
+              "start": null,
+              "end": "2023-06-30",
+              "filed": "2024-08-05",
+              "accn": "0000080424-24-000083",
+              "form": "10-K"
+            }
+          },
+          "gross_profit": null,
+          "net_income": 14653000000,
+          "operating_cash_flow": 16848000000,
+          "revenue": 82006000000,
+          "assets": 120829000000
+        }
+      ],
+      "complete_three_years": true,
+      "positive_income_and_cashflow_three_years": true,
+      "gross_profit_assets_latest": null
+    },
+    "CAT": {
+      "cutoff": "2025-09-01",
+      "entity": "CATERPILLAR INC",
+      "cik": 18230,
+      "current_sic": "3531",
+      "current_sic_description": "Construction Machinery & Equip",
+      "current_sic_is_point_in_time": false,
+      "annual": [
+        {
+          "end": "2024-12-31",
+          "sources": {
+            "net_income": {
+              "tag": "ProfitLoss",
+              "start": "2024-01-01",
+              "end": "2024-12-31",
+              "filed": "2025-02-14",
+              "accn": "0000018230-25-000008",
+              "form": "10-K"
+            },
+            "operating_cash_flow": {
+              "tag": "NetCashProvidedByUsedInOperatingActivities",
+              "start": "2024-01-01",
+              "end": "2024-12-31",
+              "filed": "2025-02-14",
+              "accn": "0000018230-25-000008",
+              "form": "10-K"
+            },
+            "revenue": {
+              "tag": "Revenues",
+              "start": "2024-01-01",
+              "end": "2024-12-31",
+              "filed": "2025-02-14",
+              "accn": "0000018230-25-000008",
+              "form": "10-K"
+            },
+            "assets": {
+              "tag": "Assets",
+              "start": null,
+              "end": "2024-12-31",
+              "filed": "2025-02-14",
+              "accn": "0000018230-25-000008",
+              "form": "10-K"
+            }
+          },
+          "gross_profit": null,
+          "net_income": 10788000000,
+          "operating_cash_flow": 12035000000,
+          "revenue": 64809000000,
+          "assets": 87764000000
+        },
+        {
+          "end": "2023-12-31",
+          "sources": {
+            "net_income": {
+              "tag": "ProfitLoss",
+              "start": "2023-01-01",
+              "end": "2023-12-31",
+              "filed": "2025-02-14",
+              "accn": "0000018230-25-000008",
+              "form": "10-K"
+            },
+            "operating_cash_flow": {
+              "tag": "NetCashProvidedByUsedInOperatingActivities",
+              "start": "2023-01-01",
+              "end": "2023-12-31",
+              "filed": "2025-02-14",
+              "accn": "0000018230-25-000008",
+              "form": "10-K"
+            },
+            "revenue": {
+              "tag": "Revenues",
+              "start": "2023-01-01",
+              "end": "2023-12-31",
+              "filed": "2025-02-14",
+              "accn": "0000018230-25-000008",
+              "form": "10-K"
+            },
+            "assets": {
+              "tag": "Assets",
+              "start": null,
+              "end": "2023-12-31",
+              "filed": "2025-02-14",
+              "accn": "0000018230-25-000008",
+              "form": "10-K"
+            }
+          },
+          "gross_profit": null,
+          "net_income": 10332000000,
+          "operating_cash_flow": 12885000000,
+          "revenue": 67060000000,
+          "assets": 87476000000
+        },
+        {
+          "end": "2022-12-31",
+          "sources": {
+            "net_income": {
+              "tag": "ProfitLoss",
+              "start": "2022-01-01",
+              "end": "2022-12-31",
+              "filed": "2025-02-14",
+              "accn": "0000018230-25-000008",
+              "form": "10-K"
+            },
+            "operating_cash_flow": {
+              "tag": "NetCashProvidedByUsedInOperatingActivities",
+              "start": "2022-01-01",
+              "end": "2022-12-31",
+              "filed": "2025-02-14",
+              "accn": "0000018230-25-000008",
+              "form": "10-K"
+            },
+            "revenue": {
+              "tag": "Revenues",
+              "start": "2022-01-01",
+              "end": "2022-12-31",
+              "filed": "2025-02-14",
+              "accn": "0000018230-25-000008",
+              "form": "10-K"
+            },
+            "assets": {
+              "tag": "Assets",
+              "start": null,
+              "end": "2022-12-31",
+              "filed": "2024-02-16",
+              "accn": "0000018230-24-000009",
+              "form": "10-K"
+            }
+          },
+          "gross_profit": null,
+          "net_income": 6704000000,
+          "operating_cash_flow": 7766000000,
+          "revenue": 59427000000,
+          "assets": 81943000000
+        }
+      ],
+      "complete_three_years": true,
+      "positive_income_and_cashflow_three_years": true,
+      "gross_profit_assets_latest": null
+    }
+  }
+}
