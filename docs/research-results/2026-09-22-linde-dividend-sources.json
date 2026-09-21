@@ -1,0 +1,40 @@
+{
+  "sources": [
+    {
+      "url": "https://www.linde.com/investors/archive/delisting",
+      "status": 200,
+      "path": "artifacts/research/dividend-audit/linde-followup-0.html",
+      "sha256": "04bb7f5e0686fad632807dc04219bb425a3db5c09b6705ad25761565bbbc53f9"
+    },
+    {
+      "url": "https://www.linde.com/investors/stock-and-dividend-information",
+      "status": 200,
+      "path": "artifacts/research/dividend-audit/linde-followup-1.html",
+      "sha256": "7ab4478e2c58e2d858807aff2a7ae18f8b2940d91c355c994cf0c49fee0f06ac"
+    },
+    {
+      "url": "https://www.sec.gov/Archives/edgar/data/1707925/000119312523055949/d459315d8k12b.htm",
+      "status": 200,
+      "path": "artifacts/research/dividend-audit/linde-followup-2.html",
+      "sha256": "0893b77d30835cbec7b4a21018f45cc4aa48e31df9fff3bf0443a959d1dfdf94"
+    },
+    {
+      "url": "https://assets.linde.com/-/media/global/corporate/corporate/documents/investors/delisting/irsform_8937.pdf",
+      "status": 200,
+      "path": "artifacts/research/dividend-audit/linde-8937.pdf",
+      "sha256": "18e11b681bc8204bc603104c003aa342d4b83f650b11ab7a19e4a6fa8693175b"
+    },
+    {
+      "url": "https://www.sec.gov/Archives/edgar/data/1707925/000110465923015117/tv0079-lindeplc.htm",
+      "status": 403,
+      "path": "artifacts/research/dividend-audit/linde-2023-13g.html",
+      "sha256": "88768d248f825389f6ecef7a7a53f19f276bcf1dba25ea3c35e87d4f16d39453"
+    }
+  ],
+  "read_scope": [
+    "Official stock/dividend table and current CUSIP",
+    "SEC 8-K12B explanatory note and successor obligations",
+    "Form 8937 OCR pages 1, 3, 4",
+    "SEC companyfacts Q1 2023 USD/share distribution; public only on filing date"
+  ]
+}

@@ -1,0 +1,915 @@
+{
+  "status": "completed",
+  "declarations": [
+    {
+      "declaration_date": "2021-10-25",
+      "record_date": "2021-12-03",
+      "payable_date": "2021-12-17",
+      "rate": "1.060"
+    },
+    {
+      "declaration_date": "2021-07-26",
+      "record_date": "2021-09-03",
+      "payable_date": "2021-09-17",
+      "rate": "1.060"
+    },
+    {
+      "declaration_date": "2021-04-26",
+      "record_date": "2021-06-03",
+      "payable_date": "2021-06-17",
+      "rate": "1.060"
+    },
+    {
+      "declaration_date": "2021-01-25",
+      "record_date": "2021-03-05",
+      "payable_date": "2021-03-22",
+      "rate": "1.060"
+    },
+    {
+      "declaration_date": "2022-10-24",
+      "record_date": "2022-12-02",
+      "payable_date": "2022-12-16",
+      "rate": "1.17"
+    },
+    {
+      "declaration_date": "2022-07-25",
+      "record_date": "2022-09-02",
+      "payable_date": "2022-09-16",
+      "rate": "1.17"
+    },
+    {
+      "declaration_date": "2022-04-26",
+      "record_date": "2022-06-03",
+      "payable_date": "2022-06-17",
+      "rate": "1.17"
+    },
+    {
+      "declaration_date": "2022-02-28",
+      "record_date": "2022-03-11",
+      "payable_date": "2022-03-25",
+      "rate": "1.17"
+    },
+    {
+      "declaration_date": "2023-10-23",
+      "record_date": "2023-12-04",
+      "payable_date": "2023-12-18",
+      "rate": "1.275"
+    },
+    {
+      "declaration_date": "2023-07-24",
+      "record_date": "2023-09-05",
+      "payable_date": "2023-09-19",
+      "rate": "1.275"
+    },
+    {
+      "declaration_date": "2023-04-24",
+      "record_date": "2023-06-02",
+      "payable_date": "2023-06-16",
+      "rate": "1.275"
+    },
+    {
+      "declaration_date": "2023-02-28",
+      "record_date": "2023-03-14",
+      "payable_date": "2023-03-28",
+      "rate": "1.275"
+    },
+    {
+      "declaration_date": "2024-10-28",
+      "record_date": "2024-12-03",
+      "payable_date": "2024-12-17",
+      "rate": "1.39"
+    },
+    {
+      "declaration_date": "2024-07-30",
+      "record_date": "2024-09-04",
+      "payable_date": "2024-09-18",
+      "rate": "1.39"
+    },
+    {
+      "declaration_date": "2024-04-29",
+      "record_date": "2024-06-04",
+      "payable_date": "2024-06-18",
+      "rate": "1.39"
+    },
+    {
+      "declaration_date": "2024-02-27",
+      "record_date": "2024-03-14",
+      "payable_date": "2024-03-28",
+      "rate": "1.39"
+    },
+    {
+      "declaration_date": "2025-10-27",
+      "record_date": "2025-12-03",
+      "payable_date": "2025-12-17",
+      "rate": "1.50"
+    },
+    {
+      "declaration_date": "2025-07-29",
+      "record_date": "2025-09-04",
+      "payable_date": "2025-09-18",
+      "rate": "1.50"
+    },
+    {
+      "declaration_date": "2025-04-28",
+      "record_date": "2025-06-04",
+      "payable_date": "2025-06-18",
+      "rate": "1.50"
+    },
+    {
+      "declaration_date": "2025-02-25",
+      "record_date": "2025-03-13",
+      "payable_date": "2025-03-27",
+      "rate": "1.50"
+    },
+    {
+      "declaration_date": "2026-07-28",
+      "record_date": "2026-09-03",
+      "payable_date": "2026-09-17",
+      "rate": "1.60"
+    },
+    {
+      "declaration_date": "2026-04-27",
+      "record_date": "2026-06-04",
+      "payable_date": "2026-06-18",
+      "rate": "1.60"
+    },
+    {
+      "declaration_date": "2026-02-24",
+      "record_date": "2026-03-11",
+      "payable_date": "2026-03-26",
+      "rate": "1.60"
+    }
+  ],
+  "reconciliation": [
+    {
+      "source_id": "585d3d60-5f1f-4ae9-95bc-0c1424c0b093",
+      "cusip": "G5494J103",
+      "ex_date": "2021-09-02",
+      "payable_date": "2021-09-17",
+      "rate": 1.06,
+      "issuer_matches": [
+        {
+          "declaration_date": "2021-07-26",
+          "record_date": "2021-09-03",
+          "payable_date": "2021-09-17",
+          "rate": "1.060"
+        }
+      ],
+      "issuer_record_amount_matches": [
+        {
+          "declaration_date": "2021-07-26",
+          "record_date": "2021-09-03",
+          "payable_date": "2021-09-17",
+          "rate": "1.060"
+        }
+      ],
+      "payment_date_conflict": false,
+      "active_security_after_reorganization": null,
+      "economic_event_key": [
+        "LIN",
+        "2021-09-03",
+        "2021-09-17",
+        "1.06"
+      ],
+      "ex_date_independently_verified": false,
+      "book_ready": false
+    },
+    {
+      "source_id": "0b734c01-9de8-4fb7-9d31-26679736ecb3",
+      "cusip": "G5494J103",
+      "ex_date": "2021-12-02",
+      "payable_date": "2021-12-17",
+      "rate": 1.06,
+      "issuer_matches": [
+        {
+          "declaration_date": "2021-10-25",
+          "record_date": "2021-12-03",
+          "payable_date": "2021-12-17",
+          "rate": "1.060"
+        }
+      ],
+      "issuer_record_amount_matches": [
+        {
+          "declaration_date": "2021-10-25",
+          "record_date": "2021-12-03",
+          "payable_date": "2021-12-17",
+          "rate": "1.060"
+        }
+      ],
+      "payment_date_conflict": false,
+      "active_security_after_reorganization": null,
+      "economic_event_key": [
+        "LIN",
+        "2021-12-03",
+        "2021-12-17",
+        "1.06"
+      ],
+      "ex_date_independently_verified": false,
+      "book_ready": false
+    },
+    {
+      "source_id": "a5bfc158-7ef5-4a65-b560-8efa8807cdc3",
+      "cusip": "G5494J103",
+      "ex_date": "2022-03-10",
+      "payable_date": "2022-03-25",
+      "rate": 1.17,
+      "issuer_matches": [
+        {
+          "declaration_date": "2022-02-28",
+          "record_date": "2022-03-11",
+          "payable_date": "2022-03-25",
+          "rate": "1.17"
+        }
+      ],
+      "issuer_record_amount_matches": [
+        {
+          "declaration_date": "2022-02-28",
+          "record_date": "2022-03-11",
+          "payable_date": "2022-03-25",
+          "rate": "1.17"
+        }
+      ],
+      "payment_date_conflict": false,
+      "active_security_after_reorganization": null,
+      "economic_event_key": [
+        "LIN",
+        "2022-03-11",
+        "2022-03-25",
+        "1.17"
+      ],
+      "ex_date_independently_verified": false,
+      "book_ready": false
+    },
+    {
+      "source_id": "5869145a-ef03-4a9e-92c0-12b0c613cfad",
+      "cusip": "G5494J103",
+      "ex_date": "2022-06-02",
+      "payable_date": "2022-06-17",
+      "rate": 1.17,
+      "issuer_matches": [
+        {
+          "declaration_date": "2022-04-26",
+          "record_date": "2022-06-03",
+          "payable_date": "2022-06-17",
+          "rate": "1.17"
+        }
+      ],
+      "issuer_record_amount_matches": [
+        {
+          "declaration_date": "2022-04-26",
+          "record_date": "2022-06-03",
+          "payable_date": "2022-06-17",
+          "rate": "1.17"
+        }
+      ],
+      "payment_date_conflict": false,
+      "active_security_after_reorganization": null,
+      "economic_event_key": [
+        "LIN",
+        "2022-06-03",
+        "2022-06-17",
+        "1.17"
+      ],
+      "ex_date_independently_verified": false,
+      "book_ready": false
+    },
+    {
+      "source_id": "76eefb0a-5294-4ac4-8632-1bbaa1e812ba",
+      "cusip": "G5494J103",
+      "ex_date": "2022-09-01",
+      "payable_date": "2022-09-16",
+      "rate": 1.17,
+      "issuer_matches": [
+        {
+          "declaration_date": "2022-07-25",
+          "record_date": "2022-09-02",
+          "payable_date": "2022-09-16",
+          "rate": "1.17"
+        }
+      ],
+      "issuer_record_amount_matches": [
+        {
+          "declaration_date": "2022-07-25",
+          "record_date": "2022-09-02",
+          "payable_date": "2022-09-16",
+          "rate": "1.17"
+        }
+      ],
+      "payment_date_conflict": false,
+      "active_security_after_reorganization": null,
+      "economic_event_key": [
+        "LIN",
+        "2022-09-02",
+        "2022-09-16",
+        "1.17"
+      ],
+      "ex_date_independently_verified": false,
+      "book_ready": false
+    },
+    {
+      "source_id": "3385e527-342d-4192-82ca-17266c2124f8",
+      "cusip": "G5494J103",
+      "ex_date": "2022-12-01",
+      "payable_date": "2022-12-16",
+      "rate": 1.17,
+      "issuer_matches": [
+        {
+          "declaration_date": "2022-10-24",
+          "record_date": "2022-12-02",
+          "payable_date": "2022-12-16",
+          "rate": "1.17"
+        }
+      ],
+      "issuer_record_amount_matches": [
+        {
+          "declaration_date": "2022-10-24",
+          "record_date": "2022-12-02",
+          "payable_date": "2022-12-16",
+          "rate": "1.17"
+        }
+      ],
+      "payment_date_conflict": false,
+      "active_security_after_reorganization": null,
+      "economic_event_key": [
+        "LIN",
+        "2022-12-02",
+        "2022-12-16",
+        "1.17"
+      ],
+      "ex_date_independently_verified": false,
+      "book_ready": false
+    },
+    {
+      "source_id": "27dbe90c-ac90-48cf-8617-f3dd553ef85a",
+      "cusip": "G54950103",
+      "ex_date": "2023-03-13",
+      "payable_date": "2023-03-28",
+      "rate": 1.275,
+      "issuer_matches": [
+        {
+          "declaration_date": "2023-02-28",
+          "record_date": "2023-03-14",
+          "payable_date": "2023-03-28",
+          "rate": "1.275"
+        }
+      ],
+      "issuer_record_amount_matches": [
+        {
+          "declaration_date": "2023-02-28",
+          "record_date": "2023-03-14",
+          "payable_date": "2023-03-28",
+          "rate": "1.275"
+        }
+      ],
+      "payment_date_conflict": false,
+      "active_security_after_reorganization": true,
+      "economic_event_key": [
+        "LIN",
+        "2023-03-14",
+        "2023-03-28",
+        "1.275"
+      ],
+      "ex_date_independently_verified": false,
+      "book_ready": false
+    },
+    {
+      "source_id": "aea26e13-6bdd-420f-a819-3d5e9f76db16",
+      "cusip": "G5494J103",
+      "ex_date": "2023-03-13",
+      "payable_date": "2023-03-28",
+      "rate": 1.275,
+      "issuer_matches": [
+        {
+          "declaration_date": "2023-02-28",
+          "record_date": "2023-03-14",
+          "payable_date": "2023-03-28",
+          "rate": "1.275"
+        }
+      ],
+      "issuer_record_amount_matches": [
+        {
+          "declaration_date": "2023-02-28",
+          "record_date": "2023-03-14",
+          "payable_date": "2023-03-28",
+          "rate": "1.275"
+        }
+      ],
+      "payment_date_conflict": false,
+      "active_security_after_reorganization": false,
+      "economic_event_key": [
+        "LIN",
+        "2023-03-14",
+        "2023-03-28",
+        "1.275"
+      ],
+      "ex_date_independently_verified": false,
+      "book_ready": false
+    },
+    {
+      "source_id": "19536a2b-f451-4b1c-9aba-f3db12fe931e",
+      "cusip": "G54950103",
+      "ex_date": "2023-06-01",
+      "payable_date": "2023-06-16",
+      "rate": 1.275,
+      "issuer_matches": [
+        {
+          "declaration_date": "2023-04-24",
+          "record_date": "2023-06-02",
+          "payable_date": "2023-06-16",
+          "rate": "1.275"
+        }
+      ],
+      "issuer_record_amount_matches": [
+        {
+          "declaration_date": "2023-04-24",
+          "record_date": "2023-06-02",
+          "payable_date": "2023-06-16",
+          "rate": "1.275"
+        }
+      ],
+      "payment_date_conflict": false,
+      "active_security_after_reorganization": true,
+      "economic_event_key": [
+        "LIN",
+        "2023-06-02",
+        "2023-06-16",
+        "1.275"
+      ],
+      "ex_date_independently_verified": false,
+      "book_ready": false
+    },
+    {
+      "source_id": "509261e1-7281-4d08-8a4f-c737109f78ec",
+      "cusip": "G54950103",
+      "ex_date": "2023-09-01",
+      "payable_date": "2023-09-19",
+      "rate": 1.275,
+      "issuer_matches": [
+        {
+          "declaration_date": "2023-07-24",
+          "record_date": "2023-09-05",
+          "payable_date": "2023-09-19",
+          "rate": "1.275"
+        }
+      ],
+      "issuer_record_amount_matches": [
+        {
+          "declaration_date": "2023-07-24",
+          "record_date": "2023-09-05",
+          "payable_date": "2023-09-19",
+          "rate": "1.275"
+        }
+      ],
+      "payment_date_conflict": false,
+      "active_security_after_reorganization": true,
+      "economic_event_key": [
+        "LIN",
+        "2023-09-05",
+        "2023-09-19",
+        "1.275"
+      ],
+      "ex_date_independently_verified": false,
+      "book_ready": false
+    },
+    {
+      "source_id": "15373c52-e053-4b20-b809-fd515ac7d2f5",
+      "cusip": "G54950103",
+      "ex_date": "2023-12-01",
+      "payable_date": "2023-12-18",
+      "rate": 1.275,
+      "issuer_matches": [
+        {
+          "declaration_date": "2023-10-23",
+          "record_date": "2023-12-04",
+          "payable_date": "2023-12-18",
+          "rate": "1.275"
+        }
+      ],
+      "issuer_record_amount_matches": [
+        {
+          "declaration_date": "2023-10-23",
+          "record_date": "2023-12-04",
+          "payable_date": "2023-12-18",
+          "rate": "1.275"
+        }
+      ],
+      "payment_date_conflict": false,
+      "active_security_after_reorganization": true,
+      "economic_event_key": [
+        "LIN",
+        "2023-12-04",
+        "2023-12-18",
+        "1.275"
+      ],
+      "ex_date_independently_verified": false,
+      "book_ready": false
+    },
+    {
+      "source_id": "b8c41365-0ae4-490c-b345-4757442bac3f",
+      "cusip": "G54950103",
+      "ex_date": "2024-03-13",
+      "payable_date": "2024-04-01",
+      "rate": 1.39,
+      "issuer_matches": [],
+      "issuer_record_amount_matches": [
+        {
+          "declaration_date": "2024-02-27",
+          "record_date": "2024-03-14",
+          "payable_date": "2024-03-28",
+          "rate": "1.39"
+        }
+      ],
+      "payment_date_conflict": true,
+      "active_security_after_reorganization": true,
+      "economic_event_key": [
+        "LIN",
+        "2024-03-14",
+        "2024-04-01",
+        "1.39"
+      ],
+      "ex_date_independently_verified": false,
+      "book_ready": false
+    },
+    {
+      "source_id": "2ed1ec41-7035-4293-8a1c-b6e119d5544c",
+      "cusip": "G54950103",
+      "ex_date": "2024-06-04",
+      "payable_date": "2024-06-20",
+      "rate": 1.39,
+      "issuer_matches": [],
+      "issuer_record_amount_matches": [
+        {
+          "declaration_date": "2024-04-29",
+          "record_date": "2024-06-04",
+          "payable_date": "2024-06-18",
+          "rate": "1.39"
+        }
+      ],
+      "payment_date_conflict": true,
+      "active_security_after_reorganization": true,
+      "economic_event_key": [
+        "LIN",
+        "2024-06-04",
+        "2024-06-20",
+        "1.39"
+      ],
+      "ex_date_independently_verified": false,
+      "book_ready": false
+    },
+    {
+      "source_id": "d7e8c909-cee4-444a-9dd9-3efa22fd4e35",
+      "cusip": "G54950103",
+      "ex_date": "2024-09-04",
+      "payable_date": "2024-09-18",
+      "rate": 1.39,
+      "issuer_matches": [
+        {
+          "declaration_date": "2024-07-30",
+          "record_date": "2024-09-04",
+          "payable_date": "2024-09-18",
+          "rate": "1.39"
+        }
+      ],
+      "issuer_record_amount_matches": [
+        {
+          "declaration_date": "2024-07-30",
+          "record_date": "2024-09-04",
+          "payable_date": "2024-09-18",
+          "rate": "1.39"
+        }
+      ],
+      "payment_date_conflict": false,
+      "active_security_after_reorganization": true,
+      "economic_event_key": [
+        "LIN",
+        "2024-09-04",
+        "2024-09-18",
+        "1.39"
+      ],
+      "ex_date_independently_verified": false,
+      "book_ready": false
+    },
+    {
+      "source_id": "8c5e579d-f9d6-4c5d-9166-6ada8d2c3dc9",
+      "cusip": "G54950103",
+      "ex_date": "2024-12-03",
+      "payable_date": "2024-12-17",
+      "rate": 1.39,
+      "issuer_matches": [
+        {
+          "declaration_date": "2024-10-28",
+          "record_date": "2024-12-03",
+          "payable_date": "2024-12-17",
+          "rate": "1.39"
+        }
+      ],
+      "issuer_record_amount_matches": [
+        {
+          "declaration_date": "2024-10-28",
+          "record_date": "2024-12-03",
+          "payable_date": "2024-12-17",
+          "rate": "1.39"
+        }
+      ],
+      "payment_date_conflict": false,
+      "active_security_after_reorganization": true,
+      "economic_event_key": [
+        "LIN",
+        "2024-12-03",
+        "2024-12-17",
+        "1.39"
+      ],
+      "ex_date_independently_verified": false,
+      "book_ready": false
+    },
+    {
+      "source_id": "f42e903e-6cf1-403c-83b5-29b956bd5885",
+      "cusip": "G54950103",
+      "ex_date": "2025-03-13",
+      "payable_date": "2025-03-27",
+      "rate": 1.5,
+      "issuer_matches": [
+        {
+          "declaration_date": "2025-02-25",
+          "record_date": "2025-03-13",
+          "payable_date": "2025-03-27",
+          "rate": "1.50"
+        }
+      ],
+      "issuer_record_amount_matches": [
+        {
+          "declaration_date": "2025-02-25",
+          "record_date": "2025-03-13",
+          "payable_date": "2025-03-27",
+          "rate": "1.50"
+        }
+      ],
+      "payment_date_conflict": false,
+      "active_security_after_reorganization": true,
+      "economic_event_key": [
+        "LIN",
+        "2025-03-13",
+        "2025-03-27",
+        "1.5"
+      ],
+      "ex_date_independently_verified": false,
+      "book_ready": false
+    },
+    {
+      "source_id": "e6cbbbd4-8068-49b9-8eff-fe2789f2c0e7",
+      "cusip": "G54950103",
+      "ex_date": "2025-06-04",
+      "payable_date": "2025-06-18",
+      "rate": 1.5,
+      "issuer_matches": [
+        {
+          "declaration_date": "2025-04-28",
+          "record_date": "2025-06-04",
+          "payable_date": "2025-06-18",
+          "rate": "1.50"
+        }
+      ],
+      "issuer_record_amount_matches": [
+        {
+          "declaration_date": "2025-04-28",
+          "record_date": "2025-06-04",
+          "payable_date": "2025-06-18",
+          "rate": "1.50"
+        }
+      ],
+      "payment_date_conflict": false,
+      "active_security_after_reorganization": true,
+      "economic_event_key": [
+        "LIN",
+        "2025-06-04",
+        "2025-06-18",
+        "1.5"
+      ],
+      "ex_date_independently_verified": false,
+      "book_ready": false
+    },
+    {
+      "source_id": "788ca6ec-14c0-4bea-98ba-ba68465827c8",
+      "cusip": "G54950103",
+      "ex_date": "2025-09-04",
+      "payable_date": "2025-09-18",
+      "rate": 1.5,
+      "issuer_matches": [
+        {
+          "declaration_date": "2025-07-29",
+          "record_date": "2025-09-04",
+          "payable_date": "2025-09-18",
+          "rate": "1.50"
+        }
+      ],
+      "issuer_record_amount_matches": [
+        {
+          "declaration_date": "2025-07-29",
+          "record_date": "2025-09-04",
+          "payable_date": "2025-09-18",
+          "rate": "1.50"
+        }
+      ],
+      "payment_date_conflict": false,
+      "active_security_after_reorganization": true,
+      "economic_event_key": [
+        "LIN",
+        "2025-09-04",
+        "2025-09-18",
+        "1.5"
+      ],
+      "ex_date_independently_verified": false,
+      "book_ready": false
+    },
+    {
+      "source_id": "2bbefd70-ac7d-4acc-801e-ca11f6e9b911",
+      "cusip": "G54950103",
+      "ex_date": "2025-12-03",
+      "payable_date": "2025-12-17",
+      "rate": 1.5,
+      "issuer_matches": [
+        {
+          "declaration_date": "2025-10-27",
+          "record_date": "2025-12-03",
+          "payable_date": "2025-12-17",
+          "rate": "1.50"
+        }
+      ],
+      "issuer_record_amount_matches": [
+        {
+          "declaration_date": "2025-10-27",
+          "record_date": "2025-12-03",
+          "payable_date": "2025-12-17",
+          "rate": "1.50"
+        }
+      ],
+      "payment_date_conflict": false,
+      "active_security_after_reorganization": true,
+      "economic_event_key": [
+        "LIN",
+        "2025-12-03",
+        "2025-12-17",
+        "1.5"
+      ],
+      "ex_date_independently_verified": false,
+      "book_ready": false
+    },
+    {
+      "source_id": "4b230d49-3f71-455b-b859-b3c8e9ccff0f",
+      "cusip": "G54950103",
+      "ex_date": "2026-03-11",
+      "payable_date": "2026-03-26",
+      "rate": 1.6,
+      "issuer_matches": [
+        {
+          "declaration_date": "2026-02-24",
+          "record_date": "2026-03-11",
+          "payable_date": "2026-03-26",
+          "rate": "1.60"
+        }
+      ],
+      "issuer_record_amount_matches": [
+        {
+          "declaration_date": "2026-02-24",
+          "record_date": "2026-03-11",
+          "payable_date": "2026-03-26",
+          "rate": "1.60"
+        }
+      ],
+      "payment_date_conflict": false,
+      "active_security_after_reorganization": true,
+      "economic_event_key": [
+        "LIN",
+        "2026-03-11",
+        "2026-03-26",
+        "1.6"
+      ],
+      "ex_date_independently_verified": false,
+      "book_ready": false
+    },
+    {
+      "source_id": "888f989d-a00e-4b04-b986-eb4c13c0d646",
+      "cusip": "G54950103",
+      "ex_date": "2026-06-04",
+      "payable_date": "2026-06-18",
+      "rate": 1.6,
+      "issuer_matches": [
+        {
+          "declaration_date": "2026-04-27",
+          "record_date": "2026-06-04",
+          "payable_date": "2026-06-18",
+          "rate": "1.60"
+        }
+      ],
+      "issuer_record_amount_matches": [
+        {
+          "declaration_date": "2026-04-27",
+          "record_date": "2026-06-04",
+          "payable_date": "2026-06-18",
+          "rate": "1.60"
+        }
+      ],
+      "payment_date_conflict": false,
+      "active_security_after_reorganization": true,
+      "economic_event_key": [
+        "LIN",
+        "2026-06-04",
+        "2026-06-18",
+        "1.6"
+      ],
+      "ex_date_independently_verified": false,
+      "book_ready": false
+    },
+    {
+      "source_id": "480f8585-3d11-4049-a8c1-b7025cb27ded",
+      "cusip": "G54950103",
+      "ex_date": "2026-09-03",
+      "payable_date": "2026-09-17",
+      "rate": 1.6,
+      "issuer_matches": [
+        {
+          "declaration_date": "2026-07-28",
+          "record_date": "2026-09-03",
+          "payable_date": "2026-09-17",
+          "rate": "1.60"
+        }
+      ],
+      "issuer_record_amount_matches": [
+        {
+          "declaration_date": "2026-07-28",
+          "record_date": "2026-09-03",
+          "payable_date": "2026-09-17",
+          "rate": "1.60"
+        }
+      ],
+      "payment_date_conflict": false,
+      "active_security_after_reorganization": true,
+      "economic_event_key": [
+        "LIN",
+        "2026-09-03",
+        "2026-09-17",
+        "1.6"
+      ],
+      "ex_date_independently_verified": false,
+      "book_ready": false
+    }
+  ],
+  "issuer_quarterly_usd_per_share_evidence": {
+    "start": "2023-01-01",
+    "end": "2023-03-31",
+    "val": 1.275,
+    "accn": "0001628280-23-013457",
+    "fy": 2023,
+    "fp": "Q1",
+    "form": "10-Q",
+    "filed": "2023-04-27"
+  },
+  "duplicate_resolution": {
+    "canonical_event": {
+      "source_id": "27dbe90c-ac90-48cf-8617-f3dd553ef85a",
+      "cusip": "G54950103",
+      "ex_date": "2023-03-13",
+      "payable_date": "2023-03-28",
+      "rate": 1.275,
+      "issuer_matches": [
+        {
+          "declaration_date": "2023-02-28",
+          "record_date": "2023-03-14",
+          "payable_date": "2023-03-28",
+          "rate": "1.275"
+        }
+      ],
+      "issuer_record_amount_matches": [
+        {
+          "declaration_date": "2023-02-28",
+          "record_date": "2023-03-14",
+          "payable_date": "2023-03-28",
+          "rate": "1.275"
+        }
+      ],
+      "payment_date_conflict": false,
+      "active_security_after_reorganization": true,
+      "economic_event_key": [
+        "LIN",
+        "2023-03-14",
+        "2023-03-28",
+        "1.275"
+      ],
+      "ex_date_independently_verified": false,
+      "book_ready": false
+    },
+    "source_ids": [
+      "27dbe90c-ac90-48cf-8617-f3dd553ef85a",
+      "aea26e13-6bdd-420f-a819-3d5e9f76db16"
+    ],
+    "total_gross_per_share": "1.275",
+    "not_sum_of_source_rows": true,
+    "scope": "Declaration amount/payment and active security resolved; ex-date/tax/data-availability still separate"
+  },
+  "source_hashes": {
+    "artifacts/research/dividend-audit/linde-followup-1.html": "7ab4478e2c58e2d858807aff2a7ae18f8b2940d91c355c994cf0c49fee0f06ac",
+    "artifacts/research/dividend-audit/linde-followup-2.html": "0893b77d30835cbec7b4a21018f45cc4aa48e31df9fff3bf0443a959d1dfdf94",
+    "artifacts/research/dividend-audit/linde-8937.pdf": "18e11b681bc8204bc603104c003aa342d4b83f650b11ab7a19e4a6fa8693175b",
+    "artifacts/research/transfer12-sec/LIN-facts.json": "7e37e23f4aa27c781afce71ced1f6c4486a9a74fd412059dfabb463d767eda6d"
+  }
+}
