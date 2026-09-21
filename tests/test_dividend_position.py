@@ -117,3 +117,26 @@ def test_empty_book_reproduces_existing_engine_and_reuse_is_rejected():
         simulate_positions(
             f, c, "2024-01-02", "2024-01-12", daily_bars=True, research_dividends=book
         )
+
+
+def test_joint_interest_never_accrues_on_dividend_receivable():
+    from cash_interest_book import CashInterestBook
+    f,c,e=setup()
+    # No cash yield until after the account is fully invested; then 3.6%.
+    rates={'2023-12-29':0.,'2024-01-08':3.6}
+    interest=CashInterestBook(rates)
+    r=simulate_positions(f,c,'2024-01-02','2024-01-12',daily_bars=True,
+                         research_dividends=CashDividendBook([e]),research_cash_interest=interest)
+    events={x['day']:x for x in interest.audit}
+    assert events['2024-01-10']['cash_basis']==0
+    assert events['2024-01-10']['credit']==0
+    assert events['2024-01-11']['cash_basis']==3000
+    assert events['2024-01-11']['credit']==pytest.approx(.3)
+    for p in r['curve']:
+        assert p['equity']==pytest.approx(p['cash']+sum(a['market_value'] for a in p['assets'].values())+p['dividends']['receivable'])
+        assert p['equity']-100000==pytest.approx(p['realized_pnl']+p['unrealized_pnl']+p['dividends']['income']+p['cash_interest']['income'],abs=1e-8)
+    assert sum(x['net_profit'] for x in r['contributions'])+interest.income==pytest.approx(r['metrics']['final_equity']-100000,abs=1e-8)
+    old=simulate_positions(f,c,'2024-01-02','2024-01-12',daily_bars=True,research_dividends=CashDividendBook([e]))
+    zero=simulate_positions(f,c,'2024-01-02','2024-01-12',daily_bars=True,research_dividends=CashDividendBook([e]),research_cash_interest=CashInterestBook({'2023-12-29':0}))
+    assert old['metrics']=={k:v for k,v in zero['metrics'].items() if k!='cash_interest_income'}
+    assert old['trades']==zero['trades'] and old['contributions']==zero['contributions']

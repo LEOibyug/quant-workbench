@@ -175,9 +175,9 @@ def simulate_positions(
         raise ValueError("Research risk budget requires daily legacy execution")
     if research_cash_interest is not None and (
         not daily_bars or config.allocation.enabled or config.portfolio_policy != "legacy"
-        or research_dividends is not None or research_distributions is not None
+        or research_distributions is not None
     ):
-        raise ValueError("Research cash interest requires standalone daily legacy execution")
+        raise ValueError("Research cash interest requires daily legacy execution without distributions")
     if research_dividends is not None and (
         not daily_bars
         or config.allocation.enabled
