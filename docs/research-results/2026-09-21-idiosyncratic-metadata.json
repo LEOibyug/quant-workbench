@@ -1,0 +1,9 @@
+{
+  "source_sha256": {
+    "scripts/study_idiosyncratic_momentum.py": "eaf833131de85e95268a6567d6374e83749a6226f020de59933d71a168bed1a6",
+    "scripts/study_idiosyncratic_temporal.py": "57dcedc70f1a0beea8e8a36819e376c1f9fe819f4a024de0e83abdb7927ea3ad"
+  },
+  "development_runs": 18,
+  "temporal_runs": 24,
+  "exact_reproduced_development_controls": 12
+}
