@@ -1,0 +1,60 @@
+{
+  "source_sha256": "54cfefdda4a5c12e6f75e2c12453044922809153a52775d0597b98b16fdc3d85",
+  "splits": {
+    "train": {
+      "date_groups": 41,
+      "stock_windows": 820,
+      "first_window_start": "2020-11-30",
+      "last_signal": "2024-07-05",
+      "last_label_end": "2024-08-06"
+    },
+    "validation": {
+      "date_groups": 8,
+      "stock_windows": 160,
+      "first_window_start": "2024-09-04",
+      "last_signal": "2025-07-09",
+      "last_label_end": "2025-08-08"
+    }
+  },
+  "validation": {
+    "mean": {
+      "choice_counts": [
+        4,
+        23,
+        116,
+        17
+      ],
+      "mean_shadow_utility": 0.004543449622407873,
+      "mean_squared_error": 0.00342388445253466,
+      "note": "lower分位不是均值预测，其MSE仅作描述"
+    },
+    "lower": {
+      "choice_counts": [
+        116,
+        23,
+        17,
+        4
+      ],
+      "mean_shadow_utility": 0.004906689550073637,
+      "mean_squared_error": 0.0034758307629628774,
+      "note": "lower分位不是均值预测，其MSE仅作描述"
+    },
+    "constant": {
+      "choice_counts": [
+        0,
+        0,
+        160,
+        0
+      ],
+      "mean_shadow_utility": 0.0079516759291376,
+      "mean_squared_error": 0.0034217799311455506,
+      "note": "lower分位不是均值预测，其MSE仅作描述"
+    }
+  },
+  "train_mean_utility": [
+    0.002478997508034095,
+    0.007083936823889911,
+    0.0005362031670964855
+  ],
+  "artifact_sha256": "6e5971c8aee3e4823ee78555ccbf64d646d8a2e45e8c9ad1c2a0485213d8c4d4"
+}

@@ -1,0 +1,8 @@
+{
+  "source_sha256": {
+    "scripts/utility_router.py": "2fe57071edb908c4d6d26d0c27eddc4c2f260c895d0a02bc71560857d909817f",
+    "scripts/train_utility_router.py": "b12f33fe954aad9ab578aa13b42537c043f2eabec782ff5dda97c7b58bf6eec1",
+    "scripts/study_utility_router.py": "d4ac5ae696b2b426da6da2aa6d7eb4c6ab1eae50c5f1dfec4bbed2e8f8145d44"
+  },
+  "protocol": "2026-09-21-utility-router-protocol.md"
+}
