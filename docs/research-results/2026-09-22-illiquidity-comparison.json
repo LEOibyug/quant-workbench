@@ -1,0 +1,82 @@
+[
+  {
+    "pool": "merged62",
+    "start": "2025-09-01",
+    "end": "2026-09-01",
+    "cost": 1,
+    "high_negative": true,
+    "high_minus_eligible": -15.958326739762974
+  },
+  {
+    "pool": "merged62",
+    "start": "2025-09-01",
+    "end": "2026-09-01",
+    "cost": 2,
+    "high_negative": true,
+    "high_minus_eligible": -15.449560354113768
+  },
+  {
+    "pool": "merged22",
+    "start": "2022-09-01",
+    "end": "2023-09-01",
+    "cost": 1,
+    "high_negative": true,
+    "high_minus_eligible": -3.1726956873107004
+  },
+  {
+    "pool": "merged22",
+    "start": "2022-09-01",
+    "end": "2023-09-01",
+    "cost": 2,
+    "high_negative": true,
+    "high_minus_eligible": -2.468192405067859
+  },
+  {
+    "pool": "merged22",
+    "start": "2023-09-01",
+    "end": "2024-09-01",
+    "cost": 1,
+    "high_negative": false,
+    "high_minus_eligible": 1.421166652717389
+  },
+  {
+    "pool": "merged22",
+    "start": "2023-09-01",
+    "end": "2024-09-01",
+    "cost": 2,
+    "high_negative": false,
+    "high_minus_eligible": 1.4868981751246864
+  },
+  {
+    "pool": "merged22",
+    "start": "2024-09-01",
+    "end": "2025-09-01",
+    "cost": 1,
+    "high_negative": true,
+    "high_minus_eligible": 0.37891233760804965
+  },
+  {
+    "pool": "merged22",
+    "start": "2024-09-01",
+    "end": "2025-09-01",
+    "cost": 2,
+    "high_negative": true,
+    "high_minus_eligible": 1.1499485434850465
+  },
+  {
+    "pool": "merged22",
+    "start": "2022-09-01",
+    "end": "2025-09-01",
+    "cost": 1,
+    "high_negative": true,
+    "high_minus_eligible": -0.8983352909765827
+  },
+  {
+    "pool": "merged22",
+    "start": "2022-09-01",
+    "end": "2025-09-01",
+    "cost": 2,
+    "high_negative": true,
+    "high_minus_eligible": -0.7222353185468382
+  }
+]
