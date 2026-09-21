@@ -1,0 +1,225 @@
+{
+  "summary": {
+    "negative": 7,
+    "beat_high": 6,
+    "beat_eligible": 6
+  },
+  "comparisons": [
+    {
+      "pool": "original20",
+      "start": "2025-09-01",
+      "end": "2026-09-01",
+      "cost_multiplier": 1,
+      "negative": false,
+      "low_minus_high_pp": 9.730495191946575,
+      "low_minus_eligible_pp": -7.624466661188322
+    },
+    {
+      "pool": "original20",
+      "start": "2025-09-01",
+      "end": "2026-09-01",
+      "cost_multiplier": 2,
+      "negative": false,
+      "low_minus_high_pp": 9.180909250502612,
+      "low_minus_eligible_pp": -7.8776132484260195
+    },
+    {
+      "pool": "alternate20",
+      "start": "2025-09-01",
+      "end": "2026-09-01",
+      "cost_multiplier": 1,
+      "negative": false,
+      "low_minus_high_pp": -7.4424362669873965,
+      "low_minus_eligible_pp": -11.54227224619795
+    },
+    {
+      "pool": "alternate20",
+      "start": "2025-09-01",
+      "end": "2026-09-01",
+      "cost_multiplier": 2,
+      "negative": false,
+      "low_minus_high_pp": -7.506494739240075,
+      "low_minus_eligible_pp": -11.800867585866094
+    },
+    {
+      "pool": "random10",
+      "start": "2025-09-01",
+      "end": "2026-09-01",
+      "cost_multiplier": 1,
+      "negative": true,
+      "low_minus_high_pp": 0.3594948019215116,
+      "low_minus_eligible_pp": 3.3011050906597394
+    },
+    {
+      "pool": "random10",
+      "start": "2025-09-01",
+      "end": "2026-09-01",
+      "cost_multiplier": 2,
+      "negative": true,
+      "low_minus_high_pp": 0.1413539522281737,
+      "low_minus_eligible_pp": 3.167096053835372
+    },
+    {
+      "pool": "transfer12",
+      "start": "2025-09-01",
+      "end": "2026-09-01",
+      "cost_multiplier": 1,
+      "negative": true,
+      "low_minus_high_pp": 7.4447321753519535,
+      "low_minus_eligible_pp": -3.594642976108886
+    },
+    {
+      "pool": "transfer12",
+      "start": "2025-09-01",
+      "end": "2026-09-01",
+      "cost_multiplier": 2,
+      "negative": true,
+      "low_minus_high_pp": 7.2895581496203565,
+      "low_minus_eligible_pp": -3.8737029428742575
+    },
+    {
+      "pool": "random10_temporal",
+      "start": "2022-09-01",
+      "end": "2023-09-01",
+      "cost_multiplier": 1,
+      "negative": false,
+      "low_minus_high_pp": 7.105441445075099,
+      "low_minus_eligible_pp": 10.820676023371977
+    },
+    {
+      "pool": "random10_temporal",
+      "start": "2022-09-01",
+      "end": "2023-09-01",
+      "cost_multiplier": 2,
+      "negative": false,
+      "low_minus_high_pp": 7.050129556103112,
+      "low_minus_eligible_pp": 10.653847157867613
+    },
+    {
+      "pool": "random10_temporal",
+      "start": "2023-09-01",
+      "end": "2024-09-01",
+      "cost_multiplier": 1,
+      "negative": true,
+      "low_minus_high_pp": -8.799818103166935,
+      "low_minus_eligible_pp": -11.089480230743442
+    },
+    {
+      "pool": "random10_temporal",
+      "start": "2023-09-01",
+      "end": "2024-09-01",
+      "cost_multiplier": 2,
+      "negative": true,
+      "low_minus_high_pp": -8.633654088474607,
+      "low_minus_eligible_pp": -11.265934131099687
+    },
+    {
+      "pool": "random10_temporal",
+      "start": "2024-09-01",
+      "end": "2025-09-01",
+      "cost_multiplier": 1,
+      "negative": true,
+      "low_minus_high_pp": -4.841068977201868,
+      "low_minus_eligible_pp": 0.8577854864510899
+    },
+    {
+      "pool": "random10_temporal",
+      "start": "2024-09-01",
+      "end": "2025-09-01",
+      "cost_multiplier": 2,
+      "negative": true,
+      "low_minus_high_pp": -4.312042905558355,
+      "low_minus_eligible_pp": 1.0901702474069523
+    },
+    {
+      "pool": "random10_temporal",
+      "start": "2022-09-01",
+      "end": "2025-09-01",
+      "cost_multiplier": 1,
+      "negative": false,
+      "low_minus_high_pp": -5.939593863129211,
+      "low_minus_eligible_pp": 2.9521300408953954
+    },
+    {
+      "pool": "random10_temporal",
+      "start": "2022-09-01",
+      "end": "2025-09-01",
+      "cost_multiplier": 2,
+      "negative": false,
+      "low_minus_high_pp": -5.2905809360831,
+      "low_minus_eligible_pp": 3.159315393662454
+    },
+    {
+      "pool": "transfer12_temporal",
+      "start": "2022-09-01",
+      "end": "2023-09-01",
+      "cost_multiplier": 1,
+      "negative": true,
+      "low_minus_high_pp": -6.89559623729169,
+      "low_minus_eligible_pp": -4.319447197581439
+    },
+    {
+      "pool": "transfer12_temporal",
+      "start": "2022-09-01",
+      "end": "2023-09-01",
+      "cost_multiplier": 2,
+      "negative": true,
+      "low_minus_high_pp": -7.180574029658148,
+      "low_minus_eligible_pp": -5.090420182817012
+    },
+    {
+      "pool": "transfer12_temporal",
+      "start": "2023-09-01",
+      "end": "2024-09-01",
+      "cost_multiplier": 1,
+      "negative": false,
+      "low_minus_high_pp": 14.249252455034611,
+      "low_minus_eligible_pp": 5.717534101683341
+    },
+    {
+      "pool": "transfer12_temporal",
+      "start": "2023-09-01",
+      "end": "2024-09-01",
+      "cost_multiplier": 2,
+      "negative": false,
+      "low_minus_high_pp": 14.083282095660321,
+      "low_minus_eligible_pp": 5.317370451964521
+    },
+    {
+      "pool": "transfer12_temporal",
+      "start": "2024-09-01",
+      "end": "2025-09-01",
+      "cost_multiplier": 1,
+      "negative": true,
+      "low_minus_high_pp": 6.2921513281072325,
+      "low_minus_eligible_pp": -2.4386761017854086
+    },
+    {
+      "pool": "transfer12_temporal",
+      "start": "2024-09-01",
+      "end": "2025-09-01",
+      "cost_multiplier": 2,
+      "negative": true,
+      "low_minus_high_pp": 6.3046938698779424,
+      "low_minus_eligible_pp": -2.477341035355962
+    },
+    {
+      "pool": "transfer12_temporal",
+      "start": "2022-09-01",
+      "end": "2025-09-01",
+      "cost_multiplier": 1,
+      "negative": true,
+      "low_minus_high_pp": -1.4192579773422036,
+      "low_minus_eligible_pp": 1.5689738206552288
+    },
+    {
+      "pool": "transfer12_temporal",
+      "start": "2022-09-01",
+      "end": "2025-09-01",
+      "cost_multiplier": 2,
+      "negative": true,
+      "low_minus_high_pp": -1.6291329111673631,
+      "low_minus_eligible_pp": 0.8802601400063956
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "url": "https://www.nber.org/papers/w14804",
+  "doi": "10.3386/w14804",
+  "read_scope": "NBER abstract only",
+  "abstract": "Motivated by existing evidence of a preference among investors for assets with lottery-like payoffs and that many investors are poorly diversified, we investigate the significance of extreme positive returns in the cross-sectional pricing of stocks. Portfolio-level analyses and firm-level cross-sectional regressions indicate a negative and significant relation between the maximum daily return over the past one month (MAX) and expected stock returns. Average raw and risk-adjusted return differences between stocks in the lowest and highest MAX deciles exceed 1% per month. These results are robust to controls for size, book-to-market, momentum, short-term reversals, liquidity, and skewness. Of particular interest, including MAX reverses the puzzling negative relation between returns and idiosyncratic volatility recently documented in Ang et al. (2006, 2008). ",
+  "text_sha256": "a693111bb950534bd230be672a38eb7d471fd76ebb77d6e738183908f04fb0ab"
+}
