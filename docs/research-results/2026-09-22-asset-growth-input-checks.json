@@ -1,0 +1,302 @@
+[
+  {
+    "symbol": "AAPL",
+    "computable": true,
+    "future_invariance": true,
+    "missing_prior_rejected": true
+  },
+  {
+    "symbol": "MSFT",
+    "computable": true,
+    "future_invariance": true,
+    "missing_prior_rejected": true
+  },
+  {
+    "symbol": "NVDA",
+    "computable": true,
+    "future_invariance": true,
+    "missing_prior_rejected": true
+  },
+  {
+    "symbol": "AMZN",
+    "computable": true,
+    "future_invariance": true,
+    "missing_prior_rejected": true
+  },
+  {
+    "symbol": "META",
+    "computable": true,
+    "future_invariance": true,
+    "missing_prior_rejected": true
+  },
+  {
+    "symbol": "GOOGL",
+    "computable": true,
+    "future_invariance": true,
+    "missing_prior_rejected": true
+  },
+  {
+    "symbol": "AMD",
+    "computable": true,
+    "future_invariance": true,
+    "missing_prior_rejected": true
+  },
+  {
+    "symbol": "TSLA",
+    "computable": true,
+    "future_invariance": true,
+    "missing_prior_rejected": true
+  },
+  {
+    "symbol": "COST",
+    "computable": true,
+    "future_invariance": true,
+    "missing_prior_rejected": true
+  },
+  {
+    "symbol": "JNJ",
+    "computable": true,
+    "future_invariance": true,
+    "missing_prior_rejected": true
+  },
+  {
+    "symbol": "ACN",
+    "computable": true,
+    "future_invariance": true,
+    "missing_prior_rejected": true
+  },
+  {
+    "symbol": "GILD",
+    "computable": true,
+    "future_invariance": true,
+    "missing_prior_rejected": true
+  },
+  {
+    "symbol": "INTU",
+    "computable": true,
+    "future_invariance": true,
+    "missing_prior_rejected": true
+  },
+  {
+    "symbol": "LMT",
+    "computable": true,
+    "future_invariance": true,
+    "missing_prior_rejected": true
+  },
+  {
+    "symbol": "LOW",
+    "computable": true,
+    "future_invariance": true,
+    "missing_prior_rejected": true
+  },
+  {
+    "symbol": "MCD",
+    "computable": true,
+    "future_invariance": true,
+    "missing_prior_rejected": true
+  },
+  {
+    "symbol": "NEE",
+    "computable": false,
+    "future_invariance": true,
+    "missing_prior_rejected": false
+  },
+  {
+    "symbol": "NKE",
+    "computable": true,
+    "future_invariance": true,
+    "missing_prior_rejected": true
+  },
+  {
+    "symbol": "PLD",
+    "computable": false,
+    "future_invariance": true,
+    "missing_prior_rejected": false
+  },
+  {
+    "symbol": "SO",
+    "computable": false,
+    "future_invariance": true,
+    "missing_prior_rejected": false
+  },
+  {
+    "symbol": "ADBE",
+    "computable": true,
+    "future_invariance": true,
+    "missing_prior_rejected": true
+  },
+  {
+    "symbol": "CRM",
+    "computable": true,
+    "future_invariance": true,
+    "missing_prior_rejected": true
+  },
+  {
+    "symbol": "CSCO",
+    "computable": true,
+    "future_invariance": true,
+    "missing_prior_rejected": true
+  },
+  {
+    "symbol": "IBM",
+    "computable": true,
+    "future_invariance": true,
+    "missing_prior_rejected": true
+  },
+  {
+    "symbol": "INTC",
+    "computable": true,
+    "future_invariance": true,
+    "missing_prior_rejected": true
+  },
+  {
+    "symbol": "QCOM",
+    "computable": true,
+    "future_invariance": true,
+    "missing_prior_rejected": true
+  },
+  {
+    "symbol": "TXN",
+    "computable": true,
+    "future_invariance": true,
+    "missing_prior_rejected": true
+  },
+  {
+    "symbol": "MRK",
+    "computable": true,
+    "future_invariance": true,
+    "missing_prior_rejected": true
+  },
+  {
+    "symbol": "PG",
+    "computable": true,
+    "future_invariance": true,
+    "missing_prior_rejected": true
+  },
+  {
+    "symbol": "CAT",
+    "computable": true,
+    "future_invariance": true,
+    "missing_prior_rejected": true
+  },
+  {
+    "symbol": "AVGO",
+    "computable": true,
+    "future_invariance": true,
+    "missing_prior_rejected": true
+  },
+  {
+    "symbol": "BRK.B",
+    "computable": false,
+    "future_invariance": true,
+    "missing_prior_rejected": false
+  },
+  {
+    "symbol": "JPM",
+    "computable": false,
+    "future_invariance": true,
+    "missing_prior_rejected": false
+  },
+  {
+    "symbol": "LLY",
+    "computable": true,
+    "future_invariance": true,
+    "missing_prior_rejected": true
+  },
+  {
+    "symbol": "MA",
+    "computable": false,
+    "future_invariance": true,
+    "missing_prior_rejected": false
+  },
+  {
+    "symbol": "ORCL",
+    "computable": true,
+    "future_invariance": true,
+    "missing_prior_rejected": true
+  },
+  {
+    "symbol": "SOFI",
+    "computable": false,
+    "future_invariance": true,
+    "missing_prior_rejected": false
+  },
+  {
+    "symbol": "V",
+    "computable": false,
+    "future_invariance": true,
+    "missing_prior_rejected": false
+  },
+  {
+    "symbol": "WMT",
+    "computable": true,
+    "future_invariance": true,
+    "missing_prior_rejected": true
+  },
+  {
+    "symbol": "XOM",
+    "computable": false,
+    "future_invariance": true,
+    "missing_prior_rejected": false
+  },
+  {
+    "symbol": "BAC",
+    "computable": false,
+    "future_invariance": true,
+    "missing_prior_rejected": false
+  },
+  {
+    "symbol": "GS",
+    "computable": false,
+    "future_invariance": true,
+    "missing_prior_rejected": false
+  },
+  {
+    "symbol": "MS",
+    "computable": false,
+    "future_invariance": true,
+    "missing_prior_rejected": false
+  },
+  {
+    "symbol": "UNH",
+    "computable": true,
+    "future_invariance": true,
+    "missing_prior_rejected": true
+  },
+  {
+    "symbol": "ABBV",
+    "computable": true,
+    "future_invariance": true,
+    "missing_prior_rejected": true
+  },
+  {
+    "symbol": "PEP",
+    "computable": true,
+    "future_invariance": true,
+    "missing_prior_rejected": true
+  },
+  {
+    "symbol": "HD",
+    "computable": true,
+    "future_invariance": true,
+    "missing_prior_rejected": true
+  },
+  {
+    "symbol": "GE",
+    "computable": true,
+    "future_invariance": true,
+    "missing_prior_rejected": true
+  },
+  {
+    "symbol": "CVX",
+    "computable": true,
+    "future_invariance": true,
+    "missing_prior_rejected": true
+  },
+  {
+    "symbol": "KO",
+    "computable": true,
+    "future_invariance": true,
+    "missing_prior_rejected": true
+  }
+]

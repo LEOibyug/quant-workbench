@@ -1,0 +1,33 @@
+{
+  "symbol": "AAPL",
+  "asof": "2025-09-01",
+  "status": "证据不足",
+  "validated": false,
+  "computable": true,
+  "growth": 0.03516051539637477,
+  "accession": "0000320193-24-000123",
+  "sources": {
+    "current_assets": {
+      "end": "2024-09-28",
+      "val": 364980000000,
+      "accn": "0000320193-24-000123",
+      "fy": 2024,
+      "fp": "FY",
+      "form": "10-K",
+      "filed": "2024-11-01",
+      "tag": "Assets"
+    },
+    "prior_assets": {
+      "end": "2023-09-30",
+      "val": 352583000000,
+      "accn": "0000320193-24-000123",
+      "fy": 2024,
+      "fp": "FY",
+      "form": "10-K",
+      "filed": "2024-11-01",
+      "frame": "CY2023Q3I",
+      "tag": "Assets"
+    }
+  },
+  "reason": "资产增长可计算；低增长的策略适用性尚未验证，资格排名依赖股票池"
+}
