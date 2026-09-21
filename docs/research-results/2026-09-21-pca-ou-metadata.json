@@ -1,0 +1,9 @@
+{
+  "source_sha256": {
+    "scripts/study_pca_ou.py": "c3045086964f204b6812738bff8151397575dd71a3c6ac7ca49a772a1e9e2a1f",
+    "scripts/study_factor_ou.py": "03c8ae9d838e41866db06986fa3278686d5b8e68a09dca93917ec1c501646080",
+    "scripts/study_symmetric_trend.py": "d6beae62493831a67dcedc3ee896468a751fd3ca3fd704b127ce10550179c1ad"
+  },
+  "data_manifest": "2026-09-21-annual-momentum-data.json",
+  "protocol": "2026-09-21-pca-ou-protocol.md"
+}

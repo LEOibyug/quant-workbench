@@ -13,8 +13,8 @@ from sklearn.covariance import LedoitWolf
 ROOT = Path("docs/research-results")
 
 
-def residual_scores(history):
-    market = history.mean(axis=1)
+def residual_scores(history, factors=None):
+    market = history.mean(axis=1) if factors is None else factors
     design = np.column_stack([np.ones(len(history)), market])
     coefficients = np.linalg.lstsq(design, history, rcond=None)[0]
     x = (history - design @ coefficients).cumsum(axis=0)
@@ -33,7 +33,7 @@ def residual_scores(history):
     score = np.full_like(means, np.nan)
     if valid.any():
         score[valid] = (x[-1, valid] - (means[valid] - means[valid].mean())) / equilibrium[valid]
-    return score, coefficients[1]
+    return score, coefficients[1] if factors is None else coefficients[1:].T
 
 
 def hedge(raw, beta, cov, mode):
