@@ -1,0 +1,21 @@
+{
+  "status": "completed",
+  "real_controls": [
+    {
+      "source": "2026-09-21-transfer12",
+      "start": "2025-09-01",
+      "end": "2026-09-01",
+      "all_metrics_exact": true,
+      "contributions_exact": true,
+      "halted": false
+    },
+    {
+      "source": "2026-09-21-transfer12-temporal",
+      "start": "2022-09-01",
+      "end": "2025-09-01",
+      "all_metrics_exact": true,
+      "contributions_exact": true,
+      "halted": true
+    }
+  ]
+}

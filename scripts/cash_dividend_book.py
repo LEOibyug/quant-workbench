@@ -47,6 +47,32 @@ class CashDividendBook:
         self.total_earned = Decimal(0)
         self.total_paid = Decimal(0)
 
+    def start(self, symbols, days):
+        if self.last_day is not None or self.open_day is not None or self.claims:
+            raise ValueError("Dividend book cannot be reused")
+        if getattr(self, "started", False):
+            raise ValueError("Dividend book cannot be reused")
+        for event in self.events:
+            if event["symbol"] not in symbols or event["ex_date"] not in days:
+                raise ValueError("Event requires an included security and ex-date session")
+        self.started = True
+
+    def snapshot(self):
+        by_symbol = {}
+        for claim in self.claims.values():
+            entry = by_symbol.setdefault(
+                claim["symbol"], dict(income=0.0, paid=0.0, receivable=0.0)
+            )
+            amount = float(claim["amount"])
+            entry["income"] += amount
+            entry["paid" if claim["paid"] else "receivable"] += amount
+        return dict(
+            income=float(self.total_earned),
+            paid=float(self.total_paid),
+            receivable=float(self.receivable),
+            by_symbol=by_symbol,
+        )
+
     @property
     def receivable(self):
         return sum((c["amount"] for c in self.claims.values() if not c["paid"]), Decimal(0))

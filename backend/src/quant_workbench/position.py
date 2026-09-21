@@ -157,8 +157,23 @@ def daily_forecasts(daily, config):
 
 
 def simulate_positions(
-    frame, config, start, end, progress=None, *, daily_bars=False, research_distributions=None
+    frame,
+    config,
+    start,
+    end,
+    progress=None,
+    *,
+    daily_bars=False,
+    research_distributions=None,
+    research_dividends=None,
 ):
+    if research_dividends is not None and (
+        not daily_bars
+        or config.allocation.enabled
+        or config.portfolio_policy != "legacy"
+        or research_distributions is not None
+    ):
+        raise ValueError("Research dividends require standalone daily legacy execution")
     if research_distributions is not None and (
         not daily_bars or config.allocation.enabled or config.portfolio_policy != "legacy"
     ):
@@ -215,6 +230,10 @@ def simulate_positions(
         research_distributions.start(symbols, start, end)
     pivot = {day: group.set_index("symbol") for day, group in daily.groupby("day")}
     days = sorted(day for day in pivot if start <= day < end)
+    if research_dividends is not None:
+        research_dividends.start(symbols, days)
+    stop_credit = {s: 0.0 for s in symbols}
+    dividend_value = dict(income=0.0, paid=0.0, receivable=0.0, by_symbol={})
     costs = config.costs
     pooled_execution = config.allocation.enabled or config.portfolio_policy == "cost_aware"
     cash = peak = costs.initial_cash
@@ -240,6 +259,12 @@ def simulate_positions(
         prices = pivot[day]
         daily_turnover = 0.0
         distribution_value = dict(market_value=0.0, unrealized_pnl=0.0, by_parent={}, assets={})
+        if research_dividends is not None:
+            research_dividends.before_open(day, shares)
+            for event in research_dividends.events:
+                if event["ex_date"] == day and shares[event["symbol"]]:
+                    stop_credit[event["symbol"]] += float(event["rate"])
+            dividend_value = research_dividends.snapshot()
         if research_distributions is not None:
             changed = research_distributions.before_open(day, prices, shares, basis)
             # Cancel stale parent quantity orders on the distribution session.
@@ -251,11 +276,12 @@ def simulate_positions(
             opening_equity = (
                 cash
                 + distribution_value["market_value"]
+                + dividend_value["receivable"]
                 + sum(shares[s] * float(prices.loc[s, "open"]) for s in symbols)
             )
             halted = halted or opening_equity <= peak * (1 - config.max_drawdown_pct / 100)
             for symbol in symbols:
-                if shares[symbol] and float(prices.loc[symbol, "open"]) <= (
+                if shares[symbol] and float(prices.loc[symbol, "open"]) + stop_credit[symbol] <= (
                     basis[symbol] * (1 - config.stop_loss_pct / 100)
                 ):
                     forced_exit[symbol] = True
@@ -359,6 +385,7 @@ def simulate_positions(
                 fee += 0 if buying else quantity * price * costs.sell_fee_bps / 10000
                 trade_pnl = None
                 if buying:
+                    stop_credit[symbol] *= shares[symbol] / (shares[symbol] + quantity)
                     basis[symbol] = (basis[symbol] * shares[symbol] + quantity * price + fee) / (
                         shares[symbol] + quantity
                     )
@@ -373,6 +400,7 @@ def simulate_positions(
                     flows[symbol] += quantity * price - fee
                     if not shares[symbol]:
                         basis[symbol] = 0.0
+                        stop_credit[symbol] = 0.0
                 fees += fee
                 symbol_fees[symbol] += fee
                 symbol_impact[symbol] += quantity * impact
@@ -396,8 +424,12 @@ def simulate_positions(
                 )
         if research_distributions is not None:
             distribution_value = research_distributions.mark(day, "close")
+        if research_dividends is not None:
+            cash += float(research_dividends.after_close(day))
+            dividend_value = research_dividends.snapshot()
         equity = (
             cash
+            + dividend_value["receivable"]
             + distribution_value["market_value"]
             + sum(shares[s] * float(prices.loc[s, "close"]) for s in symbols)
         )
@@ -526,7 +558,7 @@ def simulate_positions(
                     )
 
         for symbol in symbols:
-            if shares[symbol] and float(prices.loc[symbol, "close"]) <= (
+            if shares[symbol] and float(prices.loc[symbol, "close"]) + stop_credit[symbol] <= (
                 basis[symbol] * (1 - config.stop_loss_pct / 100)
             ):
                 forced_exit[symbol] = True
@@ -539,13 +571,14 @@ def simulate_positions(
                 equity=equity,
                 cash=cash,
                 drawdown_pct=(1 - equity / peak) * 100,
-                gross_exposure=(equity - cash) / equity,
+                gross_exposure=(equity - cash - dividend_value["receivable"]) / equity,
                 halted=halted,
                 **(
                     {"distributed_assets": distribution_value}
                     if research_distributions is not None
                     else {}
                 ),
+                **({"dividends": dividend_value} if research_dividends is not None else {}),
                 positions=dict(shares),
                 cash_weight=cash / equity,
                 fees=fees,
@@ -564,6 +597,16 @@ def simulate_positions(
                         market_value=shares[s] * float(prices.loc[s, "close"]),
                         weight=shares[s] * float(prices.loc[s, "close"]) / equity,
                         target_weight=targets[s],
+                        **(
+                            {
+                                "dividend_income": dividend_value["by_symbol"]
+                                .get(s, {})
+                                .get("income", 0.0),
+                                "stop_dividend_credit_per_share": stop_credit[s],
+                            }
+                            if research_dividends is not None
+                            else {}
+                        ),
                         realized_pnl=realized[s],
                         unrealized_pnl=shares[s] * (float(prices.loc[s, "close"]) - basis[s]),
                         fees=symbol_fees[s],
@@ -608,12 +651,26 @@ def simulate_positions(
             if research_distributions is not None
             else {}
         ),
+        **(
+            {
+                "research_dividends": {
+                    "events": research_dividends.audit,
+                    "policy": (
+                        "gross USD; recognize ex-date; pay after close; "
+                        "retained-share dividend stop credit"
+                    ),
+                }
+            }
+            if research_dividends is not None
+            else {}
+        ),
         config=config.model_dump(),
         start=start,
         end=end,
         allocation_decisions=allocation_decisions,
         portfolio_enabled=pooled_execution,
         engine_version=("daily-position-v3-daily" if daily_bars else "daily-position-v2")
+        + ("-research-dividends-v1" if research_dividends is not None else "")
         + ("-portfolio-v1" if config.allocation.enabled else "")
         + ("-rules-v1" if config.model in DAILY_RULE_MODELS else "")
         + ("-cost-aware-v1" if config.portfolio_policy == "cost_aware" else "")
@@ -623,6 +680,15 @@ def simulate_positions(
             else ""
         ),
         metrics=dict(
+            **(
+                {
+                    "dividend_income": dividend_value["income"],
+                    "dividend_paid": dividend_value["paid"],
+                    "dividend_receivable": dividend_value["receivable"],
+                }
+                if research_dividends is not None
+                else {}
+            ),
             return_pct=(final / costs.initial_cash - 1) * 100,
             final_equity=final,
             max_drawdown_pct=max(row["drawdown_pct"] for row in curve),
@@ -645,7 +711,7 @@ def simulate_positions(
             ),
             estimated_liquidation_return_pct=(
                 ((final - liquidation_cost) / costs.initial_cash - 1) * 100
-                if research_distributions is None
+                if research_distributions is None and not dividend_value["receivable"]
                 else None
             ),
         ),
@@ -657,6 +723,7 @@ def simulate_positions(
             dict(
                 symbol=s,
                 net_profit=distribution_final["by_parent"].get(s, 0.0)
+                + dividend_value["by_symbol"].get(s, {}).get("income", 0.0)
                 + flows[s]
                 + shares[s]
                 * float(
@@ -693,7 +760,12 @@ def simulate_positions(
             ),
             "单股止损与组合回撤熔断优先；隔夜跳空可能穿透止损，熔断后本次回测不重启买入",
             "风险仅在开盘和收盘检查，非盘中实时止损；报告回撤为日终口径，可能低于盘中最大回撤",
-            "当前为原始价格快照，未计股息；疑似拆股/极端跳变会拒绝回测，非总回报口径",
+            (
+                "研究普通USD税前股息：除息应收、支付收盘后现金；单股止损含当前持股分红信用；"
+                "原价信号未调整，未证明事件完整或实盘到账时点"
+                if research_dividends is not None
+                else "当前为原始价格快照，未计股息；疑似拆股/极端跳变会拒绝回测，非总回报口径"
+            ),
             "贝叶斯训练仅使用截至决策日已成熟的目标；历史日期已暴露，非全新样本外验证",
         ],
     )
