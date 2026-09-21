@@ -1,0 +1,4789 @@
+{
+  "status": "completed",
+  "results": [
+    {
+      "pool": "original20",
+      "with_price": false,
+      "cost_multiplier": 1,
+      "metrics": {
+        "return_pct": 5.989392591830889,
+        "final_equity": 105989.39259183088,
+        "max_drawdown_pct": 4.405297861901991,
+        "fees": 290.53277606910706,
+        "impact_cost": 101.75163209999998,
+        "trade_count": 286,
+        "halted": false,
+        "turnover": 3.284646215305813,
+        "realized_pnl": 3223.0209948930983,
+        "unrealized_pnl": 2766.371596937794,
+        "trading_days": 251,
+        "daily_sharpe": 1.115820233501843,
+        "average_gross_exposure_pct": 35.834035248249,
+        "estimated_liquidation_return_pct": 5.963110841930885
+      },
+      "contributions": [
+        {
+          "symbol": "AAPL",
+          "net_profit": 1180.6417708717709
+        },
+        {
+          "symbol": "AMD",
+          "net_profit": 881.46728533996
+        },
+        {
+          "symbol": "AMZN",
+          "net_profit": -407.14990466797826
+        },
+        {
+          "symbol": "AVGO",
+          "net_profit": 481.6968377192743
+        },
+        {
+          "symbol": "BRK.B",
+          "net_profit": 61.23123831438943
+        },
+        {
+          "symbol": "COST",
+          "net_profit": 511.077314322084
+        },
+        {
+          "symbol": "GOOGL",
+          "net_profit": 212.70963348218538
+        },
+        {
+          "symbol": "JNJ",
+          "net_profit": 132.43667792450003
+        },
+        {
+          "symbol": "JPM",
+          "net_profit": 221.694611323569
+        },
+        {
+          "symbol": "LLY",
+          "net_profit": 2287.14436846903
+        },
+        {
+          "symbol": "MA",
+          "net_profit": 681.3704379578294
+        },
+        {
+          "symbol": "META",
+          "net_profit": -922.1913192997004
+        },
+        {
+          "symbol": "MSFT",
+          "net_profit": -154.41473250587387
+        },
+        {
+          "symbol": "NVDA",
+          "net_profit": 346.75651133220526
+        },
+        {
+          "symbol": "ORCL",
+          "net_profit": -350.81864768037985
+        },
+        {
+          "symbol": "SOFI",
+          "net_profit": 101.19456697045996
+        },
+        {
+          "symbol": "TSLA",
+          "net_profit": 0.0
+        },
+        {
+          "symbol": "V",
+          "net_profit": 336.1814482221698
+        },
+        {
+          "symbol": "WMT",
+          "net_profit": 388.3644937353955
+        },
+        {
+          "symbol": "XOM",
+          "net_profit": 0.0
+        }
+      ],
+      "coverage": {
+        "eligible": 3127,
+        "not_eligible": 465,
+        "missing": 422,
+        "expired": 1026
+      },
+      "initial_judgments": {
+        "AAPL": {
+          "status": "候选通过",
+          "signal": 0.3870392603384318,
+          "sue": 0.7740785206768636,
+          "quarter_end": "2025-06-28",
+          "first_filed": "2025-08-01",
+          "source_filed": "2025-08-01",
+          "accn": "0000320193-25-000073",
+          "tag": "NetIncomeLoss",
+          "net_income": 23434000000,
+          "delta": 1986000000.0,
+          "scale": 2565631194.9638104
+        },
+        "AMD": {
+          "status": "候选通过",
+          "signal": 0.5087574135284397,
+          "sue": 1.0175148270568795,
+          "quarter_end": "2025-06-28",
+          "first_filed": "2025-08-06",
+          "source_filed": "2025-08-06",
+          "accn": "0000002488-25-000108",
+          "tag": "NetIncomeLoss",
+          "net_income": 872000000,
+          "delta": 607000000.0,
+          "scale": 596551503.5842013
+        },
+        "AMZN": {
+          "status": "候选通过",
+          "signal": 0.8574407751622417,
+          "sue": 1.7148815503244834,
+          "quarter_end": "2025-06-30",
+          "first_filed": "2025-08-01",
+          "source_filed": "2025-08-01",
+          "accn": "0001018724-25-000086",
+          "tag": "NetIncomeLoss",
+          "net_income": 18164000000,
+          "delta": 4679000000.0,
+          "scale": 2728468330.1389866
+        },
+        "AVGO": {
+          "status": "候选通过",
+          "signal": 0.5031367820885673,
+          "sue": 1.0062735641771345,
+          "quarter_end": "2025-05-04",
+          "first_filed": "2025-06-11",
+          "source_filed": "2025-06-11",
+          "accn": "0001730168-25-000064",
+          "tag": "ProfitLoss",
+          "net_income": 4965000000,
+          "delta": 2844000000.0,
+          "scale": 2826269218.6747837
+        },
+        "BRK.B": {
+          "status": "候选未通过",
+          "signal": 0.0,
+          "sue": -0.51160157963725,
+          "quarter_end": "2025-06-30",
+          "first_filed": "2025-08-04",
+          "source_filed": "2025-08-04",
+          "accn": "0000950170-25-101578",
+          "tag": "NetIncomeLoss",
+          "net_income": 12370000000,
+          "delta": -17978000000.0,
+          "scale": 35140626447.5322
+        },
+        "COST": {
+          "status": "候选通过",
+          "signal": 0.7836137429025053,
+          "sue": 1.5672274858050106,
+          "quarter_end": "2025-05-11",
+          "first_filed": "2025-06-05",
+          "source_filed": "2025-06-05",
+          "accn": "0000909832-25-000033",
+          "tag": "NetIncomeLoss",
+          "net_income": 1903000000,
+          "delta": 222000000.0,
+          "scale": 141651420.74825794
+        },
+        "GOOGL": {
+          "status": "候选通过",
+          "signal": 0.4357100008612655,
+          "sue": 0.871420001722531,
+          "quarter_end": "2025-06-30",
+          "first_filed": "2025-07-24",
+          "source_filed": "2025-07-24",
+          "accn": "0001652044-25-000062",
+          "tag": "NetIncomeLoss",
+          "net_income": 28196000000,
+          "delta": 4577000000.0,
+          "scale": 5252346734.011923
+        },
+        "JNJ": {
+          "status": "候选通过",
+          "signal": 0.03384951438254464,
+          "sue": 0.06769902876508928,
+          "quarter_end": "2025-06-29",
+          "first_filed": "2025-07-24",
+          "source_filed": "2025-07-24",
+          "accn": "0000200406-25-000178",
+          "tag": "NetIncomeLoss",
+          "net_income": 5537000000,
+          "delta": 851000000.0,
+          "scale": 12570342817.662987
+        },
+        "JPM": {
+          "status": "候选未通过",
+          "signal": 0.0,
+          "sue": -1.214014785289967,
+          "quarter_end": "2025-06-30",
+          "first_filed": "2025-08-05",
+          "source_filed": "2025-08-05",
+          "accn": "0000019617-25-000615",
+          "tag": "NetIncomeLoss",
+          "net_income": 14987000000,
+          "delta": -3162000000.0,
+          "scale": 2604581128.923201
+        },
+        "LLY": {
+          "status": "候选通过",
+          "signal": 1.0,
+          "sue": 2.9072096279335478,
+          "quarter_end": "2025-06-30",
+          "first_filed": "2025-08-07",
+          "source_filed": "2025-08-07",
+          "accn": "0000059478-25-000204",
+          "tag": "NetIncomeLoss",
+          "net_income": 5660500000,
+          "delta": 2693500000.0,
+          "scale": 926489777.042513
+        },
+        "MA": {
+          "status": "候选通过",
+          "signal": 0.6577343923288086,
+          "sue": 1.3154687846576172,
+          "quarter_end": "2025-06-30",
+          "first_filed": "2025-07-31",
+          "source_filed": "2025-07-31",
+          "accn": "0001141391-25-000172",
+          "tag": "ProfitLoss",
+          "net_income": 3701000000,
+          "delta": 443000000.0,
+          "scale": 336762076.8859989
+        },
+        "META": {
+          "status": "候选通过",
+          "signal": 0.5703402546625328,
+          "sue": 1.1406805093250656,
+          "quarter_end": "2025-06-30",
+          "first_filed": "2025-07-31",
+          "source_filed": "2025-07-31",
+          "accn": "0001628280-25-036791",
+          "tag": "NetIncomeLoss",
+          "net_income": 18337000000,
+          "delta": 4872000000.0,
+          "scale": 4271134607.9567327
+        },
+        "MSFT": {
+          "status": "候选通过",
+          "signal": 0.6348192728180466,
+          "sue": 1.2696385456360932,
+          "quarter_end": "2025-03-31",
+          "first_filed": "2025-04-30",
+          "source_filed": "2025-04-30",
+          "accn": "0000950170-25-061046",
+          "tag": "NetIncomeLoss",
+          "net_income": 25824000000,
+          "delta": 3885000000.0,
+          "scale": 3059926002.8401246
+        },
+        "NVDA": {
+          "status": "候选通过",
+          "signal": 0.9549460760792218,
+          "sue": 1.9098921521584435,
+          "quarter_end": "2025-07-27",
+          "first_filed": "2025-08-27",
+          "source_filed": "2025-08-27",
+          "accn": "0001045810-25-000209",
+          "tag": "NetIncomeLoss",
+          "net_income": 26422000000,
+          "delta": 9823000000.0,
+          "scale": 5143222348.392104
+        },
+        "ORCL": {
+          "status": "候选通过",
+          "signal": 0.2340593402202354,
+          "sue": 0.4681186804404708,
+          "quarter_end": "2025-02-28",
+          "first_filed": "2025-03-11",
+          "source_filed": "2025-03-11",
+          "accn": "0000950170-25-037143",
+          "tag": "NetIncomeLoss",
+          "net_income": 2936000000,
+          "delta": 535000000.0,
+          "scale": 1142872571.32443
+        },
+        "SOFI": {
+          "status": "候选通过",
+          "signal": 0.26813531762926174,
+          "sue": 0.5362706352585235,
+          "quarter_end": "2025-06-30",
+          "first_filed": "2025-08-07",
+          "source_filed": "2025-08-07",
+          "accn": "0001818874-25-000180",
+          "tag": "NetIncomeLoss",
+          "net_income": 97263000,
+          "delta": 79859000.0,
+          "scale": 148915481.75391302
+        },
+        "TSLA": {
+          "status": "候选未通过",
+          "signal": 0.0,
+          "sue": -0.20760624516793436,
+          "quarter_end": "2025-06-30",
+          "first_filed": "2025-07-24",
+          "source_filed": "2025-07-24",
+          "accn": "0001628280-25-035806",
+          "tag": "NetIncomeLoss",
+          "net_income": 1172000000,
+          "delta": -228000000.0,
+          "scale": 1098232858.1472535
+        },
+        "V": {
+          "status": "候选通过",
+          "signal": 0.6603168210822221,
+          "sue": 1.3206336421644442,
+          "quarter_end": "2025-06-30",
+          "first_filed": "2025-07-30",
+          "source_filed": "2025-07-30",
+          "accn": "0001403161-25-000052",
+          "tag": "NetIncomeLoss",
+          "net_income": 5272000000,
+          "delta": 400000000.0,
+          "scale": 302884908.59919524
+        },
+        "WMT": {
+          "status": "候选通过",
+          "signal": 0.3829123165960953,
+          "sue": 0.7658246331921906,
+          "quarter_end": "2025-07-31",
+          "first_filed": "2025-08-29",
+          "source_filed": "2025-08-29",
+          "accn": "0000104169-25-000137",
+          "tag": "NetIncomeLoss",
+          "net_income": 7026000000,
+          "delta": 2525000000.0,
+          "scale": 3297099480.1708455
+        },
+        "XOM": {
+          "status": "证据不足",
+          "reason": "不足8个历史同比差及当前差",
+          "signal": 0.0
+        }
+      },
+      "config": {
+        "allocation": {
+          "enabled": false,
+          "symbols": [],
+          "lookback": 60,
+          "max_positions": 3,
+          "max_weight": 0.35,
+          "cash_reserve": 0.05,
+          "risk_aversion": 10.0,
+          "cost_penalty": 2.0,
+          "rebalance_band": 0.02,
+          "max_daily_turnover": 1.0,
+          "rebalance_minutes": 30
+        },
+        "model": "fixed_ensemble",
+        "lookback": 20,
+        "horizon": 5,
+        "rebalance_days": 5,
+        "confidence": 0.5,
+        "tranche_weight": 0.1,
+        "max_weight": 0.2,
+        "capital_mode": "signal_budget",
+        "classifier_sha256": null,
+        "portfolio_policy": "legacy",
+        "entry_band": 0.005,
+        "daily_vol_target": 0.015,
+        "stop_loss_pct": 10.0,
+        "max_drawdown_pct": 10.0,
+        "costs": {
+          "allocation": {
+            "enabled": false,
+            "symbols": [],
+            "lookback": 60,
+            "max_positions": 3,
+            "max_weight": 0.35,
+            "cash_reserve": 0.05,
+            "risk_aversion": 10.0,
+            "cost_penalty": 2.0,
+            "rebalance_band": 0.02,
+            "max_daily_turnover": 1.0,
+            "rebalance_minutes": 30
+          },
+          "strategy": "adaptive",
+          "fast": 5,
+          "stat_window": 120,
+          "stat_horizon": 15,
+          "stat_entry_z": 1.5,
+          "stat_confidence": 0.5,
+          "stat_process_noise": 0.001,
+          "slow": 20,
+          "flatten_minutes": 5,
+          "opening_minutes": 15,
+          "reversion_bps": 30.0,
+          "stop_loss_bps": 100.0,
+          "regime_window": 60,
+          "min_reward_risk": 1.2,
+          "atr_window": 14,
+          "stop_atr": 2.0,
+          "take_atr": 3.0,
+          "breakout_buffer_atr": 0.1,
+          "reversion_atr": 2.0,
+          "momentum_threshold_bps": 10.0,
+          "regime_gate": "off",
+          "regime_window_days": 10,
+          "regime_min_drift_bps": 0.0,
+          "regime_max_efficiency": 0.35,
+          "max_scaling_lots": 3,
+          "lot_breakeven_hold": false,
+          "lot_patience_minutes": 45,
+          "lot_hard_stop_atr": 4.0,
+          "tranche_requires_uptrend": false,
+          "min_relative_volume": 1.2,
+          "max_hold_minutes": 30,
+          "cooldown_minutes": 10,
+          "max_daily_entries": 4,
+          "daily_loss_bps": 100.0,
+          "risk_per_trade_bps": 25.0,
+          "rule_cost_multiplier": 1.5,
+          "initial_cash": 100000.0,
+          "spread_bps": 2.0,
+          "slippage_bps": 2.0,
+          "commission_per_share": 0.005,
+          "minimum_commission": 1.0,
+          "sell_fee_bps": 0.3,
+          "participation": 0.01
+        }
+      }
+    },
+    {
+      "pool": "original20",
+      "with_price": false,
+      "cost_multiplier": 2,
+      "metrics": {
+        "return_pct": 5.641771452784372,
+        "final_equity": 105641.77145278438,
+        "max_drawdown_pct": 4.519123773605738,
+        "fees": 591.191989015488,
+        "impact_cost": 206.05355819999994,
+        "trade_count": 291,
+        "halted": false,
+        "turnover": 3.3317713433645193,
+        "realized_pnl": 3043.218659493861,
+        "unrealized_pnl": 2598.552793290648,
+        "trading_days": 251,
+        "daily_sharpe": 1.04811126073221,
+        "average_gross_exposure_pct": 35.96948349157192,
+        "estimated_liquidation_return_pct": 5.589207952984365
+      },
+      "contributions": [
+        {
+          "symbol": "AAPL",
+          "net_profit": 1155.6936472870802
+        },
+        {
+          "symbol": "AMD",
+          "net_profit": 859.1946517598401
+        },
+        {
+          "symbol": "AMZN",
+          "net_profit": -407.9970295294697
+        },
+        {
+          "symbol": "AVGO",
+          "net_profit": 484.2845357508795
+        },
+        {
+          "symbol": "BRK.B",
+          "net_profit": 54.857494857559686
+        },
+        {
+          "symbol": "COST",
+          "net_profit": 493.92975218834
+        },
+        {
+          "symbol": "GOOGL",
+          "net_profit": 181.43958182873757
+        },
+        {
+          "symbol": "JNJ",
+          "net_profit": 126.92337169799998
+        },
+        {
+          "symbol": "JPM",
+          "net_profit": 215.54660403900016
+        },
+        {
+          "symbol": "LLY",
+          "net_profit": 2270.55393507612
+        },
+        {
+          "symbol": "MA",
+          "net_profit": 654.9005384284001
+        },
+        {
+          "symbol": "META",
+          "net_profit": -909.8214229663204
+        },
+        {
+          "symbol": "MSFT",
+          "net_profit": -207.25872848152085
+        },
+        {
+          "symbol": "NVDA",
+          "net_profit": 310.1873971232412
+        },
+        {
+          "symbol": "ORCL",
+          "net_profit": -373.77712792152056
+        },
+        {
+          "symbol": "SOFI",
+          "net_profit": 69.99390328183995
+        },
+        {
+          "symbol": "TSLA",
+          "net_profit": 0.0
+        },
+        {
+          "symbol": "V",
+          "net_profit": 305.0040178447598
+        },
+        {
+          "symbol": "WMT",
+          "net_profit": 358.11633051954016
+        },
+        {
+          "symbol": "XOM",
+          "net_profit": 0.0
+        }
+      ],
+      "coverage": {
+        "eligible": 3127,
+        "not_eligible": 465,
+        "missing": 422,
+        "expired": 1026
+      },
+      "initial_judgments": {
+        "AAPL": {
+          "status": "候选通过",
+          "signal": 0.3870392603384318,
+          "sue": 0.7740785206768636,
+          "quarter_end": "2025-06-28",
+          "first_filed": "2025-08-01",
+          "source_filed": "2025-08-01",
+          "accn": "0000320193-25-000073",
+          "tag": "NetIncomeLoss",
+          "net_income": 23434000000,
+          "delta": 1986000000.0,
+          "scale": 2565631194.9638104
+        },
+        "AMD": {
+          "status": "候选通过",
+          "signal": 0.5087574135284397,
+          "sue": 1.0175148270568795,
+          "quarter_end": "2025-06-28",
+          "first_filed": "2025-08-06",
+          "source_filed": "2025-08-06",
+          "accn": "0000002488-25-000108",
+          "tag": "NetIncomeLoss",
+          "net_income": 872000000,
+          "delta": 607000000.0,
+          "scale": 596551503.5842013
+        },
+        "AMZN": {
+          "status": "候选通过",
+          "signal": 0.8574407751622417,
+          "sue": 1.7148815503244834,
+          "quarter_end": "2025-06-30",
+          "first_filed": "2025-08-01",
+          "source_filed": "2025-08-01",
+          "accn": "0001018724-25-000086",
+          "tag": "NetIncomeLoss",
+          "net_income": 18164000000,
+          "delta": 4679000000.0,
+          "scale": 2728468330.1389866
+        },
+        "AVGO": {
+          "status": "候选通过",
+          "signal": 0.5031367820885673,
+          "sue": 1.0062735641771345,
+          "quarter_end": "2025-05-04",
+          "first_filed": "2025-06-11",
+          "source_filed": "2025-06-11",
+          "accn": "0001730168-25-000064",
+          "tag": "ProfitLoss",
+          "net_income": 4965000000,
+          "delta": 2844000000.0,
+          "scale": 2826269218.6747837
+        },
+        "BRK.B": {
+          "status": "候选未通过",
+          "signal": 0.0,
+          "sue": -0.51160157963725,
+          "quarter_end": "2025-06-30",
+          "first_filed": "2025-08-04",
+          "source_filed": "2025-08-04",
+          "accn": "0000950170-25-101578",
+          "tag": "NetIncomeLoss",
+          "net_income": 12370000000,
+          "delta": -17978000000.0,
+          "scale": 35140626447.5322
+        },
+        "COST": {
+          "status": "候选通过",
+          "signal": 0.7836137429025053,
+          "sue": 1.5672274858050106,
+          "quarter_end": "2025-05-11",
+          "first_filed": "2025-06-05",
+          "source_filed": "2025-06-05",
+          "accn": "0000909832-25-000033",
+          "tag": "NetIncomeLoss",
+          "net_income": 1903000000,
+          "delta": 222000000.0,
+          "scale": 141651420.74825794
+        },
+        "GOOGL": {
+          "status": "候选通过",
+          "signal": 0.4357100008612655,
+          "sue": 0.871420001722531,
+          "quarter_end": "2025-06-30",
+          "first_filed": "2025-07-24",
+          "source_filed": "2025-07-24",
+          "accn": "0001652044-25-000062",
+          "tag": "NetIncomeLoss",
+          "net_income": 28196000000,
+          "delta": 4577000000.0,
+          "scale": 5252346734.011923
+        },
+        "JNJ": {
+          "status": "候选通过",
+          "signal": 0.03384951438254464,
+          "sue": 0.06769902876508928,
+          "quarter_end": "2025-06-29",
+          "first_filed": "2025-07-24",
+          "source_filed": "2025-07-24",
+          "accn": "0000200406-25-000178",
+          "tag": "NetIncomeLoss",
+          "net_income": 5537000000,
+          "delta": 851000000.0,
+          "scale": 12570342817.662987
+        },
+        "JPM": {
+          "status": "候选未通过",
+          "signal": 0.0,
+          "sue": -1.214014785289967,
+          "quarter_end": "2025-06-30",
+          "first_filed": "2025-08-05",
+          "source_filed": "2025-08-05",
+          "accn": "0000019617-25-000615",
+          "tag": "NetIncomeLoss",
+          "net_income": 14987000000,
+          "delta": -3162000000.0,
+          "scale": 2604581128.923201
+        },
+        "LLY": {
+          "status": "候选通过",
+          "signal": 1.0,
+          "sue": 2.9072096279335478,
+          "quarter_end": "2025-06-30",
+          "first_filed": "2025-08-07",
+          "source_filed": "2025-08-07",
+          "accn": "0000059478-25-000204",
+          "tag": "NetIncomeLoss",
+          "net_income": 5660500000,
+          "delta": 2693500000.0,
+          "scale": 926489777.042513
+        },
+        "MA": {
+          "status": "候选通过",
+          "signal": 0.6577343923288086,
+          "sue": 1.3154687846576172,
+          "quarter_end": "2025-06-30",
+          "first_filed": "2025-07-31",
+          "source_filed": "2025-07-31",
+          "accn": "0001141391-25-000172",
+          "tag": "ProfitLoss",
+          "net_income": 3701000000,
+          "delta": 443000000.0,
+          "scale": 336762076.8859989
+        },
+        "META": {
+          "status": "候选通过",
+          "signal": 0.5703402546625328,
+          "sue": 1.1406805093250656,
+          "quarter_end": "2025-06-30",
+          "first_filed": "2025-07-31",
+          "source_filed": "2025-07-31",
+          "accn": "0001628280-25-036791",
+          "tag": "NetIncomeLoss",
+          "net_income": 18337000000,
+          "delta": 4872000000.0,
+          "scale": 4271134607.9567327
+        },
+        "MSFT": {
+          "status": "候选通过",
+          "signal": 0.6348192728180466,
+          "sue": 1.2696385456360932,
+          "quarter_end": "2025-03-31",
+          "first_filed": "2025-04-30",
+          "source_filed": "2025-04-30",
+          "accn": "0000950170-25-061046",
+          "tag": "NetIncomeLoss",
+          "net_income": 25824000000,
+          "delta": 3885000000.0,
+          "scale": 3059926002.8401246
+        },
+        "NVDA": {
+          "status": "候选通过",
+          "signal": 0.9549460760792218,
+          "sue": 1.9098921521584435,
+          "quarter_end": "2025-07-27",
+          "first_filed": "2025-08-27",
+          "source_filed": "2025-08-27",
+          "accn": "0001045810-25-000209",
+          "tag": "NetIncomeLoss",
+          "net_income": 26422000000,
+          "delta": 9823000000.0,
+          "scale": 5143222348.392104
+        },
+        "ORCL": {
+          "status": "候选通过",
+          "signal": 0.2340593402202354,
+          "sue": 0.4681186804404708,
+          "quarter_end": "2025-02-28",
+          "first_filed": "2025-03-11",
+          "source_filed": "2025-03-11",
+          "accn": "0000950170-25-037143",
+          "tag": "NetIncomeLoss",
+          "net_income": 2936000000,
+          "delta": 535000000.0,
+          "scale": 1142872571.32443
+        },
+        "SOFI": {
+          "status": "候选通过",
+          "signal": 0.26813531762926174,
+          "sue": 0.5362706352585235,
+          "quarter_end": "2025-06-30",
+          "first_filed": "2025-08-07",
+          "source_filed": "2025-08-07",
+          "accn": "0001818874-25-000180",
+          "tag": "NetIncomeLoss",
+          "net_income": 97263000,
+          "delta": 79859000.0,
+          "scale": 148915481.75391302
+        },
+        "TSLA": {
+          "status": "候选未通过",
+          "signal": 0.0,
+          "sue": -0.20760624516793436,
+          "quarter_end": "2025-06-30",
+          "first_filed": "2025-07-24",
+          "source_filed": "2025-07-24",
+          "accn": "0001628280-25-035806",
+          "tag": "NetIncomeLoss",
+          "net_income": 1172000000,
+          "delta": -228000000.0,
+          "scale": 1098232858.1472535
+        },
+        "V": {
+          "status": "候选通过",
+          "signal": 0.6603168210822221,
+          "sue": 1.3206336421644442,
+          "quarter_end": "2025-06-30",
+          "first_filed": "2025-07-30",
+          "source_filed": "2025-07-30",
+          "accn": "0001403161-25-000052",
+          "tag": "NetIncomeLoss",
+          "net_income": 5272000000,
+          "delta": 400000000.0,
+          "scale": 302884908.59919524
+        },
+        "WMT": {
+          "status": "候选通过",
+          "signal": 0.3829123165960953,
+          "sue": 0.7658246331921906,
+          "quarter_end": "2025-07-31",
+          "first_filed": "2025-08-29",
+          "source_filed": "2025-08-29",
+          "accn": "0000104169-25-000137",
+          "tag": "NetIncomeLoss",
+          "net_income": 7026000000,
+          "delta": 2525000000.0,
+          "scale": 3297099480.1708455
+        },
+        "XOM": {
+          "status": "证据不足",
+          "reason": "不足8个历史同比差及当前差",
+          "signal": 0.0
+        }
+      },
+      "config": {
+        "allocation": {
+          "enabled": false,
+          "symbols": [],
+          "lookback": 60,
+          "max_positions": 3,
+          "max_weight": 0.35,
+          "cash_reserve": 0.05,
+          "risk_aversion": 10.0,
+          "cost_penalty": 2.0,
+          "rebalance_band": 0.02,
+          "max_daily_turnover": 1.0,
+          "rebalance_minutes": 30
+        },
+        "model": "fixed_ensemble",
+        "lookback": 20,
+        "horizon": 5,
+        "rebalance_days": 5,
+        "confidence": 0.5,
+        "tranche_weight": 0.1,
+        "max_weight": 0.2,
+        "capital_mode": "signal_budget",
+        "classifier_sha256": null,
+        "portfolio_policy": "legacy",
+        "entry_band": 0.005,
+        "daily_vol_target": 0.015,
+        "stop_loss_pct": 10.0,
+        "max_drawdown_pct": 10.0,
+        "costs": {
+          "allocation": {
+            "enabled": false,
+            "symbols": [],
+            "lookback": 60,
+            "max_positions": 3,
+            "max_weight": 0.35,
+            "cash_reserve": 0.05,
+            "risk_aversion": 10.0,
+            "cost_penalty": 2.0,
+            "rebalance_band": 0.02,
+            "max_daily_turnover": 1.0,
+            "rebalance_minutes": 30
+          },
+          "strategy": "adaptive",
+          "fast": 5,
+          "stat_window": 120,
+          "stat_horizon": 15,
+          "stat_entry_z": 1.5,
+          "stat_confidence": 0.5,
+          "stat_process_noise": 0.001,
+          "slow": 20,
+          "flatten_minutes": 5,
+          "opening_minutes": 15,
+          "reversion_bps": 30.0,
+          "stop_loss_bps": 100.0,
+          "regime_window": 60,
+          "min_reward_risk": 1.2,
+          "atr_window": 14,
+          "stop_atr": 2.0,
+          "take_atr": 3.0,
+          "breakout_buffer_atr": 0.1,
+          "reversion_atr": 2.0,
+          "momentum_threshold_bps": 10.0,
+          "regime_gate": "off",
+          "regime_window_days": 10,
+          "regime_min_drift_bps": 0.0,
+          "regime_max_efficiency": 0.35,
+          "max_scaling_lots": 3,
+          "lot_breakeven_hold": false,
+          "lot_patience_minutes": 45,
+          "lot_hard_stop_atr": 4.0,
+          "tranche_requires_uptrend": false,
+          "min_relative_volume": 1.2,
+          "max_hold_minutes": 30,
+          "cooldown_minutes": 10,
+          "max_daily_entries": 4,
+          "daily_loss_bps": 100.0,
+          "risk_per_trade_bps": 25.0,
+          "rule_cost_multiplier": 1.5,
+          "initial_cash": 100000.0,
+          "spread_bps": 4.0,
+          "slippage_bps": 4.0,
+          "commission_per_share": 0.01,
+          "minimum_commission": 2.0,
+          "sell_fee_bps": 0.6,
+          "participation": 0.01
+        }
+      }
+    },
+    {
+      "pool": "original20",
+      "with_price": true,
+      "cost_multiplier": 1,
+      "metrics": {
+        "return_pct": -1.9190918305413196,
+        "final_equity": 98080.90816945868,
+        "max_drawdown_pct": 3.7118190897497683,
+        "fees": 296.53056904135997,
+        "impact_cost": 137.26626150000004,
+        "trade_count": 290,
+        "halted": false,
+        "turnover": 4.5956462736296695,
+        "realized_pnl": -2541.028594561259,
+        "unrealized_pnl": 621.9367640198982,
+        "trading_days": 251,
+        "daily_sharpe": -0.6297700811704574,
+        "average_gross_exposure_pct": 17.045280549503026,
+        "estimated_liquidation_return_pct": -1.9338789372413179
+      },
+      "contributions": [
+        {
+          "symbol": "AAPL",
+          "net_profit": 474.9496317999801
+        },
+        {
+          "symbol": "AMD",
+          "net_profit": 469.3339918453398
+        },
+        {
+          "symbol": "AMZN",
+          "net_profit": -1819.544901666246
+        },
+        {
+          "symbol": "AVGO",
+          "net_profit": -20.007828055451114
+        },
+        {
+          "symbol": "BRK.B",
+          "net_profit": 21.97316325443444
+        },
+        {
+          "symbol": "COST",
+          "net_profit": -281.5473359499597
+        },
+        {
+          "symbol": "GOOGL",
+          "net_profit": -85.27960715925474
+        },
+        {
+          "symbol": "JNJ",
+          "net_profit": 92.06530367071997
+        },
+        {
+          "symbol": "JPM",
+          "net_profit": 62.57075515389897
+        },
+        {
+          "symbol": "LLY",
+          "net_profit": 442.66827639159555
+        },
+        {
+          "symbol": "MA",
+          "net_profit": -203.69125896778132
+        },
+        {
+          "symbol": "META",
+          "net_profit": -360.58958294611966
+        },
+        {
+          "symbol": "MSFT",
+          "net_profit": -18.30986378600994
+        },
+        {
+          "symbol": "NVDA",
+          "net_profit": -767.0459291942163
+        },
+        {
+          "symbol": "ORCL",
+          "net_profit": -99.01384588218014
+        },
+        {
+          "symbol": "SOFI",
+          "net_profit": -44.07578317434513
+        },
+        {
+          "symbol": "TSLA",
+          "net_profit": 0.0
+        },
+        {
+          "symbol": "V",
+          "net_profit": 39.54272511322142
+        },
+        {
+          "symbol": "WMT",
+          "net_profit": 176.9102590110101
+        },
+        {
+          "symbol": "XOM",
+          "net_profit": 0.0
+        }
+      ],
+      "coverage": {
+        "eligible": 3127,
+        "not_eligible": 465,
+        "missing": 422,
+        "expired": 1026
+      },
+      "initial_judgments": {
+        "AAPL": {
+          "status": "候选通过",
+          "signal": 0.3870392603384318,
+          "sue": 0.7740785206768636,
+          "quarter_end": "2025-06-28",
+          "first_filed": "2025-08-01",
+          "source_filed": "2025-08-01",
+          "accn": "0000320193-25-000073",
+          "tag": "NetIncomeLoss",
+          "net_income": 23434000000,
+          "delta": 1986000000.0,
+          "scale": 2565631194.9638104
+        },
+        "AMD": {
+          "status": "候选通过",
+          "signal": 0.5087574135284397,
+          "sue": 1.0175148270568795,
+          "quarter_end": "2025-06-28",
+          "first_filed": "2025-08-06",
+          "source_filed": "2025-08-06",
+          "accn": "0000002488-25-000108",
+          "tag": "NetIncomeLoss",
+          "net_income": 872000000,
+          "delta": 607000000.0,
+          "scale": 596551503.5842013
+        },
+        "AMZN": {
+          "status": "候选通过",
+          "signal": 0.8574407751622417,
+          "sue": 1.7148815503244834,
+          "quarter_end": "2025-06-30",
+          "first_filed": "2025-08-01",
+          "source_filed": "2025-08-01",
+          "accn": "0001018724-25-000086",
+          "tag": "NetIncomeLoss",
+          "net_income": 18164000000,
+          "delta": 4679000000.0,
+          "scale": 2728468330.1389866
+        },
+        "AVGO": {
+          "status": "候选通过",
+          "signal": 0.5031367820885673,
+          "sue": 1.0062735641771345,
+          "quarter_end": "2025-05-04",
+          "first_filed": "2025-06-11",
+          "source_filed": "2025-06-11",
+          "accn": "0001730168-25-000064",
+          "tag": "ProfitLoss",
+          "net_income": 4965000000,
+          "delta": 2844000000.0,
+          "scale": 2826269218.6747837
+        },
+        "BRK.B": {
+          "status": "候选未通过",
+          "signal": 0.0,
+          "sue": -0.51160157963725,
+          "quarter_end": "2025-06-30",
+          "first_filed": "2025-08-04",
+          "source_filed": "2025-08-04",
+          "accn": "0000950170-25-101578",
+          "tag": "NetIncomeLoss",
+          "net_income": 12370000000,
+          "delta": -17978000000.0,
+          "scale": 35140626447.5322
+        },
+        "COST": {
+          "status": "候选通过",
+          "signal": 0.7836137429025053,
+          "sue": 1.5672274858050106,
+          "quarter_end": "2025-05-11",
+          "first_filed": "2025-06-05",
+          "source_filed": "2025-06-05",
+          "accn": "0000909832-25-000033",
+          "tag": "NetIncomeLoss",
+          "net_income": 1903000000,
+          "delta": 222000000.0,
+          "scale": 141651420.74825794
+        },
+        "GOOGL": {
+          "status": "候选通过",
+          "signal": 0.4357100008612655,
+          "sue": 0.871420001722531,
+          "quarter_end": "2025-06-30",
+          "first_filed": "2025-07-24",
+          "source_filed": "2025-07-24",
+          "accn": "0001652044-25-000062",
+          "tag": "NetIncomeLoss",
+          "net_income": 28196000000,
+          "delta": 4577000000.0,
+          "scale": 5252346734.011923
+        },
+        "JNJ": {
+          "status": "候选通过",
+          "signal": 0.03384951438254464,
+          "sue": 0.06769902876508928,
+          "quarter_end": "2025-06-29",
+          "first_filed": "2025-07-24",
+          "source_filed": "2025-07-24",
+          "accn": "0000200406-25-000178",
+          "tag": "NetIncomeLoss",
+          "net_income": 5537000000,
+          "delta": 851000000.0,
+          "scale": 12570342817.662987
+        },
+        "JPM": {
+          "status": "候选未通过",
+          "signal": 0.0,
+          "sue": -1.214014785289967,
+          "quarter_end": "2025-06-30",
+          "first_filed": "2025-08-05",
+          "source_filed": "2025-08-05",
+          "accn": "0000019617-25-000615",
+          "tag": "NetIncomeLoss",
+          "net_income": 14987000000,
+          "delta": -3162000000.0,
+          "scale": 2604581128.923201
+        },
+        "LLY": {
+          "status": "候选通过",
+          "signal": 1.0,
+          "sue": 2.9072096279335478,
+          "quarter_end": "2025-06-30",
+          "first_filed": "2025-08-07",
+          "source_filed": "2025-08-07",
+          "accn": "0000059478-25-000204",
+          "tag": "NetIncomeLoss",
+          "net_income": 5660500000,
+          "delta": 2693500000.0,
+          "scale": 926489777.042513
+        },
+        "MA": {
+          "status": "候选通过",
+          "signal": 0.6577343923288086,
+          "sue": 1.3154687846576172,
+          "quarter_end": "2025-06-30",
+          "first_filed": "2025-07-31",
+          "source_filed": "2025-07-31",
+          "accn": "0001141391-25-000172",
+          "tag": "ProfitLoss",
+          "net_income": 3701000000,
+          "delta": 443000000.0,
+          "scale": 336762076.8859989
+        },
+        "META": {
+          "status": "候选通过",
+          "signal": 0.5703402546625328,
+          "sue": 1.1406805093250656,
+          "quarter_end": "2025-06-30",
+          "first_filed": "2025-07-31",
+          "source_filed": "2025-07-31",
+          "accn": "0001628280-25-036791",
+          "tag": "NetIncomeLoss",
+          "net_income": 18337000000,
+          "delta": 4872000000.0,
+          "scale": 4271134607.9567327
+        },
+        "MSFT": {
+          "status": "候选通过",
+          "signal": 0.6348192728180466,
+          "sue": 1.2696385456360932,
+          "quarter_end": "2025-03-31",
+          "first_filed": "2025-04-30",
+          "source_filed": "2025-04-30",
+          "accn": "0000950170-25-061046",
+          "tag": "NetIncomeLoss",
+          "net_income": 25824000000,
+          "delta": 3885000000.0,
+          "scale": 3059926002.8401246
+        },
+        "NVDA": {
+          "status": "候选通过",
+          "signal": 0.9549460760792218,
+          "sue": 1.9098921521584435,
+          "quarter_end": "2025-07-27",
+          "first_filed": "2025-08-27",
+          "source_filed": "2025-08-27",
+          "accn": "0001045810-25-000209",
+          "tag": "NetIncomeLoss",
+          "net_income": 26422000000,
+          "delta": 9823000000.0,
+          "scale": 5143222348.392104
+        },
+        "ORCL": {
+          "status": "候选通过",
+          "signal": 0.2340593402202354,
+          "sue": 0.4681186804404708,
+          "quarter_end": "2025-02-28",
+          "first_filed": "2025-03-11",
+          "source_filed": "2025-03-11",
+          "accn": "0000950170-25-037143",
+          "tag": "NetIncomeLoss",
+          "net_income": 2936000000,
+          "delta": 535000000.0,
+          "scale": 1142872571.32443
+        },
+        "SOFI": {
+          "status": "候选通过",
+          "signal": 0.26813531762926174,
+          "sue": 0.5362706352585235,
+          "quarter_end": "2025-06-30",
+          "first_filed": "2025-08-07",
+          "source_filed": "2025-08-07",
+          "accn": "0001818874-25-000180",
+          "tag": "NetIncomeLoss",
+          "net_income": 97263000,
+          "delta": 79859000.0,
+          "scale": 148915481.75391302
+        },
+        "TSLA": {
+          "status": "候选未通过",
+          "signal": 0.0,
+          "sue": -0.20760624516793436,
+          "quarter_end": "2025-06-30",
+          "first_filed": "2025-07-24",
+          "source_filed": "2025-07-24",
+          "accn": "0001628280-25-035806",
+          "tag": "NetIncomeLoss",
+          "net_income": 1172000000,
+          "delta": -228000000.0,
+          "scale": 1098232858.1472535
+        },
+        "V": {
+          "status": "候选通过",
+          "signal": 0.6603168210822221,
+          "sue": 1.3206336421644442,
+          "quarter_end": "2025-06-30",
+          "first_filed": "2025-07-30",
+          "source_filed": "2025-07-30",
+          "accn": "0001403161-25-000052",
+          "tag": "NetIncomeLoss",
+          "net_income": 5272000000,
+          "delta": 400000000.0,
+          "scale": 302884908.59919524
+        },
+        "WMT": {
+          "status": "候选通过",
+          "signal": 0.3829123165960953,
+          "sue": 0.7658246331921906,
+          "quarter_end": "2025-07-31",
+          "first_filed": "2025-08-29",
+          "source_filed": "2025-08-29",
+          "accn": "0000104169-25-000137",
+          "tag": "NetIncomeLoss",
+          "net_income": 7026000000,
+          "delta": 2525000000.0,
+          "scale": 3297099480.1708455
+        },
+        "XOM": {
+          "status": "证据不足",
+          "reason": "不足8个历史同比差及当前差",
+          "signal": 0.0
+        }
+      },
+      "config": {
+        "allocation": {
+          "enabled": false,
+          "symbols": [],
+          "lookback": 60,
+          "max_positions": 3,
+          "max_weight": 0.35,
+          "cash_reserve": 0.05,
+          "risk_aversion": 10.0,
+          "cost_penalty": 2.0,
+          "rebalance_band": 0.02,
+          "max_daily_turnover": 1.0,
+          "rebalance_minutes": 30
+        },
+        "model": "fixed_ensemble",
+        "lookback": 20,
+        "horizon": 5,
+        "rebalance_days": 5,
+        "confidence": 0.5,
+        "tranche_weight": 0.1,
+        "max_weight": 0.2,
+        "capital_mode": "signal_budget",
+        "classifier_sha256": null,
+        "portfolio_policy": "legacy",
+        "entry_band": 0.005,
+        "daily_vol_target": 0.015,
+        "stop_loss_pct": 10.0,
+        "max_drawdown_pct": 10.0,
+        "costs": {
+          "allocation": {
+            "enabled": false,
+            "symbols": [],
+            "lookback": 60,
+            "max_positions": 3,
+            "max_weight": 0.35,
+            "cash_reserve": 0.05,
+            "risk_aversion": 10.0,
+            "cost_penalty": 2.0,
+            "rebalance_band": 0.02,
+            "max_daily_turnover": 1.0,
+            "rebalance_minutes": 30
+          },
+          "strategy": "adaptive",
+          "fast": 5,
+          "stat_window": 120,
+          "stat_horizon": 15,
+          "stat_entry_z": 1.5,
+          "stat_confidence": 0.5,
+          "stat_process_noise": 0.001,
+          "slow": 20,
+          "flatten_minutes": 5,
+          "opening_minutes": 15,
+          "reversion_bps": 30.0,
+          "stop_loss_bps": 100.0,
+          "regime_window": 60,
+          "min_reward_risk": 1.2,
+          "atr_window": 14,
+          "stop_atr": 2.0,
+          "take_atr": 3.0,
+          "breakout_buffer_atr": 0.1,
+          "reversion_atr": 2.0,
+          "momentum_threshold_bps": 10.0,
+          "regime_gate": "off",
+          "regime_window_days": 10,
+          "regime_min_drift_bps": 0.0,
+          "regime_max_efficiency": 0.35,
+          "max_scaling_lots": 3,
+          "lot_breakeven_hold": false,
+          "lot_patience_minutes": 45,
+          "lot_hard_stop_atr": 4.0,
+          "tranche_requires_uptrend": false,
+          "min_relative_volume": 1.2,
+          "max_hold_minutes": 30,
+          "cooldown_minutes": 10,
+          "max_daily_entries": 4,
+          "daily_loss_bps": 100.0,
+          "risk_per_trade_bps": 25.0,
+          "rule_cost_multiplier": 1.5,
+          "initial_cash": 100000.0,
+          "spread_bps": 2.0,
+          "slippage_bps": 2.0,
+          "commission_per_share": 0.005,
+          "minimum_commission": 1.0,
+          "sell_fee_bps": 0.3,
+          "participation": 0.01
+        }
+      }
+    },
+    {
+      "pool": "original20",
+      "with_price": true,
+      "cost_multiplier": 2,
+      "metrics": {
+        "return_pct": -2.5444647887934435,
+        "final_equity": 97455.53521120656,
+        "max_drawdown_pct": 4.135113813519419,
+        "fees": 592.9545667934798,
+        "impact_cost": 272.3702220000001,
+        "trade_count": 290,
+        "halted": false,
+        "turnover": 4.578074406964687,
+        "realized_pnl": -3153.6540679053255,
+        "unrealized_pnl": 609.189279111839,
+        "trading_days": 251,
+        "daily_sharpe": -0.8553520917168032,
+        "average_gross_exposure_pct": 16.901004797084425,
+        "estimated_liquidation_return_pct": -2.573792228193439
+      },
+      "contributions": [
+        {
+          "symbol": "AAPL",
+          "net_profit": 452.39977830192083
+        },
+        {
+          "symbol": "AMD",
+          "net_profit": 441.67812098135937
+        },
+        {
+          "symbol": "AMZN",
+          "net_profit": -1832.080731610642
+        },
+        {
+          "symbol": "AVGO",
+          "net_profit": -50.5754112217997
+        },
+        {
+          "symbol": "BRK.B",
+          "net_profit": 15.581344917739443
+        },
+        {
+          "symbol": "COST",
+          "net_profit": -303.1493711998396
+        },
+        {
+          "symbol": "GOOGL",
+          "net_profit": -117.93644505154202
+        },
+        {
+          "symbol": "JNJ",
+          "net_profit": 83.32062948287995
+        },
+        {
+          "symbol": "JPM",
+          "net_profit": 32.63860748479965
+        },
+        {
+          "symbol": "LLY",
+          "net_profit": 308.073405371179
+        },
+        {
+          "symbol": "MA",
+          "net_profit": -226.42245917044147
+        },
+        {
+          "symbol": "META",
+          "net_profit": -391.00843236336027
+        },
+        {
+          "symbol": "MSFT",
+          "net_profit": -23.609690544039722
+        },
+        {
+          "symbol": "NVDA",
+          "net_profit": -828.0835262175003
+        },
+        {
+          "symbol": "ORCL",
+          "net_profit": -105.98766472872012
+        },
+        {
+          "symbol": "SOFI",
+          "net_profit": -166.31763745780006
+        },
+        {
+          "symbol": "TSLA",
+          "net_profit": 0.0
+        },
+        {
+          "symbol": "V",
+          "net_profit": 12.419542645160618
+        },
+        {
+          "symbol": "WMT",
+          "net_profit": 154.59515158716
+        },
+        {
+          "symbol": "XOM",
+          "net_profit": 0.0
+        }
+      ],
+      "coverage": {
+        "eligible": 3127,
+        "not_eligible": 465,
+        "missing": 422,
+        "expired": 1026
+      },
+      "initial_judgments": {
+        "AAPL": {
+          "status": "候选通过",
+          "signal": 0.3870392603384318,
+          "sue": 0.7740785206768636,
+          "quarter_end": "2025-06-28",
+          "first_filed": "2025-08-01",
+          "source_filed": "2025-08-01",
+          "accn": "0000320193-25-000073",
+          "tag": "NetIncomeLoss",
+          "net_income": 23434000000,
+          "delta": 1986000000.0,
+          "scale": 2565631194.9638104
+        },
+        "AMD": {
+          "status": "候选通过",
+          "signal": 0.5087574135284397,
+          "sue": 1.0175148270568795,
+          "quarter_end": "2025-06-28",
+          "first_filed": "2025-08-06",
+          "source_filed": "2025-08-06",
+          "accn": "0000002488-25-000108",
+          "tag": "NetIncomeLoss",
+          "net_income": 872000000,
+          "delta": 607000000.0,
+          "scale": 596551503.5842013
+        },
+        "AMZN": {
+          "status": "候选通过",
+          "signal": 0.8574407751622417,
+          "sue": 1.7148815503244834,
+          "quarter_end": "2025-06-30",
+          "first_filed": "2025-08-01",
+          "source_filed": "2025-08-01",
+          "accn": "0001018724-25-000086",
+          "tag": "NetIncomeLoss",
+          "net_income": 18164000000,
+          "delta": 4679000000.0,
+          "scale": 2728468330.1389866
+        },
+        "AVGO": {
+          "status": "候选通过",
+          "signal": 0.5031367820885673,
+          "sue": 1.0062735641771345,
+          "quarter_end": "2025-05-04",
+          "first_filed": "2025-06-11",
+          "source_filed": "2025-06-11",
+          "accn": "0001730168-25-000064",
+          "tag": "ProfitLoss",
+          "net_income": 4965000000,
+          "delta": 2844000000.0,
+          "scale": 2826269218.6747837
+        },
+        "BRK.B": {
+          "status": "候选未通过",
+          "signal": 0.0,
+          "sue": -0.51160157963725,
+          "quarter_end": "2025-06-30",
+          "first_filed": "2025-08-04",
+          "source_filed": "2025-08-04",
+          "accn": "0000950170-25-101578",
+          "tag": "NetIncomeLoss",
+          "net_income": 12370000000,
+          "delta": -17978000000.0,
+          "scale": 35140626447.5322
+        },
+        "COST": {
+          "status": "候选通过",
+          "signal": 0.7836137429025053,
+          "sue": 1.5672274858050106,
+          "quarter_end": "2025-05-11",
+          "first_filed": "2025-06-05",
+          "source_filed": "2025-06-05",
+          "accn": "0000909832-25-000033",
+          "tag": "NetIncomeLoss",
+          "net_income": 1903000000,
+          "delta": 222000000.0,
+          "scale": 141651420.74825794
+        },
+        "GOOGL": {
+          "status": "候选通过",
+          "signal": 0.4357100008612655,
+          "sue": 0.871420001722531,
+          "quarter_end": "2025-06-30",
+          "first_filed": "2025-07-24",
+          "source_filed": "2025-07-24",
+          "accn": "0001652044-25-000062",
+          "tag": "NetIncomeLoss",
+          "net_income": 28196000000,
+          "delta": 4577000000.0,
+          "scale": 5252346734.011923
+        },
+        "JNJ": {
+          "status": "候选通过",
+          "signal": 0.03384951438254464,
+          "sue": 0.06769902876508928,
+          "quarter_end": "2025-06-29",
+          "first_filed": "2025-07-24",
+          "source_filed": "2025-07-24",
+          "accn": "0000200406-25-000178",
+          "tag": "NetIncomeLoss",
+          "net_income": 5537000000,
+          "delta": 851000000.0,
+          "scale": 12570342817.662987
+        },
+        "JPM": {
+          "status": "候选未通过",
+          "signal": 0.0,
+          "sue": -1.214014785289967,
+          "quarter_end": "2025-06-30",
+          "first_filed": "2025-08-05",
+          "source_filed": "2025-08-05",
+          "accn": "0000019617-25-000615",
+          "tag": "NetIncomeLoss",
+          "net_income": 14987000000,
+          "delta": -3162000000.0,
+          "scale": 2604581128.923201
+        },
+        "LLY": {
+          "status": "候选通过",
+          "signal": 1.0,
+          "sue": 2.9072096279335478,
+          "quarter_end": "2025-06-30",
+          "first_filed": "2025-08-07",
+          "source_filed": "2025-08-07",
+          "accn": "0000059478-25-000204",
+          "tag": "NetIncomeLoss",
+          "net_income": 5660500000,
+          "delta": 2693500000.0,
+          "scale": 926489777.042513
+        },
+        "MA": {
+          "status": "候选通过",
+          "signal": 0.6577343923288086,
+          "sue": 1.3154687846576172,
+          "quarter_end": "2025-06-30",
+          "first_filed": "2025-07-31",
+          "source_filed": "2025-07-31",
+          "accn": "0001141391-25-000172",
+          "tag": "ProfitLoss",
+          "net_income": 3701000000,
+          "delta": 443000000.0,
+          "scale": 336762076.8859989
+        },
+        "META": {
+          "status": "候选通过",
+          "signal": 0.5703402546625328,
+          "sue": 1.1406805093250656,
+          "quarter_end": "2025-06-30",
+          "first_filed": "2025-07-31",
+          "source_filed": "2025-07-31",
+          "accn": "0001628280-25-036791",
+          "tag": "NetIncomeLoss",
+          "net_income": 18337000000,
+          "delta": 4872000000.0,
+          "scale": 4271134607.9567327
+        },
+        "MSFT": {
+          "status": "候选通过",
+          "signal": 0.6348192728180466,
+          "sue": 1.2696385456360932,
+          "quarter_end": "2025-03-31",
+          "first_filed": "2025-04-30",
+          "source_filed": "2025-04-30",
+          "accn": "0000950170-25-061046",
+          "tag": "NetIncomeLoss",
+          "net_income": 25824000000,
+          "delta": 3885000000.0,
+          "scale": 3059926002.8401246
+        },
+        "NVDA": {
+          "status": "候选通过",
+          "signal": 0.9549460760792218,
+          "sue": 1.9098921521584435,
+          "quarter_end": "2025-07-27",
+          "first_filed": "2025-08-27",
+          "source_filed": "2025-08-27",
+          "accn": "0001045810-25-000209",
+          "tag": "NetIncomeLoss",
+          "net_income": 26422000000,
+          "delta": 9823000000.0,
+          "scale": 5143222348.392104
+        },
+        "ORCL": {
+          "status": "候选通过",
+          "signal": 0.2340593402202354,
+          "sue": 0.4681186804404708,
+          "quarter_end": "2025-02-28",
+          "first_filed": "2025-03-11",
+          "source_filed": "2025-03-11",
+          "accn": "0000950170-25-037143",
+          "tag": "NetIncomeLoss",
+          "net_income": 2936000000,
+          "delta": 535000000.0,
+          "scale": 1142872571.32443
+        },
+        "SOFI": {
+          "status": "候选通过",
+          "signal": 0.26813531762926174,
+          "sue": 0.5362706352585235,
+          "quarter_end": "2025-06-30",
+          "first_filed": "2025-08-07",
+          "source_filed": "2025-08-07",
+          "accn": "0001818874-25-000180",
+          "tag": "NetIncomeLoss",
+          "net_income": 97263000,
+          "delta": 79859000.0,
+          "scale": 148915481.75391302
+        },
+        "TSLA": {
+          "status": "候选未通过",
+          "signal": 0.0,
+          "sue": -0.20760624516793436,
+          "quarter_end": "2025-06-30",
+          "first_filed": "2025-07-24",
+          "source_filed": "2025-07-24",
+          "accn": "0001628280-25-035806",
+          "tag": "NetIncomeLoss",
+          "net_income": 1172000000,
+          "delta": -228000000.0,
+          "scale": 1098232858.1472535
+        },
+        "V": {
+          "status": "候选通过",
+          "signal": 0.6603168210822221,
+          "sue": 1.3206336421644442,
+          "quarter_end": "2025-06-30",
+          "first_filed": "2025-07-30",
+          "source_filed": "2025-07-30",
+          "accn": "0001403161-25-000052",
+          "tag": "NetIncomeLoss",
+          "net_income": 5272000000,
+          "delta": 400000000.0,
+          "scale": 302884908.59919524
+        },
+        "WMT": {
+          "status": "候选通过",
+          "signal": 0.3829123165960953,
+          "sue": 0.7658246331921906,
+          "quarter_end": "2025-07-31",
+          "first_filed": "2025-08-29",
+          "source_filed": "2025-08-29",
+          "accn": "0000104169-25-000137",
+          "tag": "NetIncomeLoss",
+          "net_income": 7026000000,
+          "delta": 2525000000.0,
+          "scale": 3297099480.1708455
+        },
+        "XOM": {
+          "status": "证据不足",
+          "reason": "不足8个历史同比差及当前差",
+          "signal": 0.0
+        }
+      },
+      "config": {
+        "allocation": {
+          "enabled": false,
+          "symbols": [],
+          "lookback": 60,
+          "max_positions": 3,
+          "max_weight": 0.35,
+          "cash_reserve": 0.05,
+          "risk_aversion": 10.0,
+          "cost_penalty": 2.0,
+          "rebalance_band": 0.02,
+          "max_daily_turnover": 1.0,
+          "rebalance_minutes": 30
+        },
+        "model": "fixed_ensemble",
+        "lookback": 20,
+        "horizon": 5,
+        "rebalance_days": 5,
+        "confidence": 0.5,
+        "tranche_weight": 0.1,
+        "max_weight": 0.2,
+        "capital_mode": "signal_budget",
+        "classifier_sha256": null,
+        "portfolio_policy": "legacy",
+        "entry_band": 0.005,
+        "daily_vol_target": 0.015,
+        "stop_loss_pct": 10.0,
+        "max_drawdown_pct": 10.0,
+        "costs": {
+          "allocation": {
+            "enabled": false,
+            "symbols": [],
+            "lookback": 60,
+            "max_positions": 3,
+            "max_weight": 0.35,
+            "cash_reserve": 0.05,
+            "risk_aversion": 10.0,
+            "cost_penalty": 2.0,
+            "rebalance_band": 0.02,
+            "max_daily_turnover": 1.0,
+            "rebalance_minutes": 30
+          },
+          "strategy": "adaptive",
+          "fast": 5,
+          "stat_window": 120,
+          "stat_horizon": 15,
+          "stat_entry_z": 1.5,
+          "stat_confidence": 0.5,
+          "stat_process_noise": 0.001,
+          "slow": 20,
+          "flatten_minutes": 5,
+          "opening_minutes": 15,
+          "reversion_bps": 30.0,
+          "stop_loss_bps": 100.0,
+          "regime_window": 60,
+          "min_reward_risk": 1.2,
+          "atr_window": 14,
+          "stop_atr": 2.0,
+          "take_atr": 3.0,
+          "breakout_buffer_atr": 0.1,
+          "reversion_atr": 2.0,
+          "momentum_threshold_bps": 10.0,
+          "regime_gate": "off",
+          "regime_window_days": 10,
+          "regime_min_drift_bps": 0.0,
+          "regime_max_efficiency": 0.35,
+          "max_scaling_lots": 3,
+          "lot_breakeven_hold": false,
+          "lot_patience_minutes": 45,
+          "lot_hard_stop_atr": 4.0,
+          "tranche_requires_uptrend": false,
+          "min_relative_volume": 1.2,
+          "max_hold_minutes": 30,
+          "cooldown_minutes": 10,
+          "max_daily_entries": 4,
+          "daily_loss_bps": 100.0,
+          "risk_per_trade_bps": 25.0,
+          "rule_cost_multiplier": 1.5,
+          "initial_cash": 100000.0,
+          "spread_bps": 4.0,
+          "slippage_bps": 4.0,
+          "commission_per_share": 0.01,
+          "minimum_commission": 2.0,
+          "sell_fee_bps": 0.6,
+          "participation": 0.01
+        }
+      }
+    },
+    {
+      "pool": "alternate20",
+      "with_price": false,
+      "cost_multiplier": 1,
+      "metrics": {
+        "return_pct": 5.057976052934721,
+        "final_equity": 105057.97605293471,
+        "max_drawdown_pct": 1.2426338856266317,
+        "fees": 227.1501704652871,
+        "impact_cost": 54.74577660000001,
+        "trade_count": 225,
+        "halted": false,
+        "turnover": 1.7783542319418255,
+        "realized_pnl": 3133.6040042523946,
+        "unrealized_pnl": 1924.3720486823172,
+        "trading_days": 251,
+        "daily_sharpe": 1.6673738185051359,
+        "average_gross_exposure_pct": 19.349079796280552,
+        "estimated_liquidation_return_pct": 5.032311486534713
+      },
+      "contributions": [
+        {
+          "symbol": "ABBV",
+          "net_profit": 202.71326876100102
+        },
+        {
+          "symbol": "ADBE",
+          "net_profit": -59.52202750741003
+        },
+        {
+          "symbol": "BAC",
+          "net_profit": 916.6431532978004
+        },
+        {
+          "symbol": "CAT",
+          "net_profit": -387.47196860792974
+        },
+        {
+          "symbol": "CRM",
+          "net_profit": 445.0873531727111
+        },
+        {
+          "symbol": "CSCO",
+          "net_profit": 901.7705100578698
+        },
+        {
+          "symbol": "CVX",
+          "net_profit": 366.4778498905398
+        },
+        {
+          "symbol": "GE",
+          "net_profit": 19.11222176839999
+        },
+        {
+          "symbol": "GS",
+          "net_profit": 421.6060250226001
+        },
+        {
+          "symbol": "HD",
+          "net_profit": 0.0
+        },
+        {
+          "symbol": "IBM",
+          "net_profit": 60.152497893349846
+        },
+        {
+          "symbol": "INTC",
+          "net_profit": 513.8685144427996
+        },
+        {
+          "symbol": "KO",
+          "net_profit": 857.5179466582595
+        },
+        {
+          "symbol": "MRK",
+          "net_profit": 273.04861013968514
+        },
+        {
+          "symbol": "MS",
+          "net_profit": 1201.4729193934936
+        },
+        {
+          "symbol": "PEP",
+          "net_profit": -208.64682539430942
+        },
+        {
+          "symbol": "PG",
+          "net_profit": -90.88718072015945
+        },
+        {
+          "symbol": "QCOM",
+          "net_profit": -167.43580836756973
+        },
+        {
+          "symbol": "TXN",
+          "net_profit": -182.11331996641638
+        },
+        {
+          "symbol": "UNH",
+          "net_profit": -25.417687000000114
+        }
+      ],
+      "coverage": {
+        "eligible": 2390,
+        "not_eligible": 1388,
+        "missing": 179,
+        "expired": 1083
+      },
+      "initial_judgments": {
+        "ABBV": {
+          "status": "候选未通过",
+          "signal": 0.0,
+          "sue": -0.23354001034161917,
+          "quarter_end": "2025-06-30",
+          "first_filed": "2025-08-04",
+          "source_filed": "2025-08-04",
+          "accn": "0001551152-25-000040",
+          "tag": "NetIncomeLoss",
+          "net_income": 938000000,
+          "delta": -432000000.0,
+          "scale": 1849790103.9229906
+        },
+        "ADBE": {
+          "status": "候选通过",
+          "signal": 0.11603566593152104,
+          "sue": 0.23207133186304207,
+          "quarter_end": "2025-05-30",
+          "first_filed": "2025-06-25",
+          "source_filed": "2025-06-25",
+          "accn": "0000796343-25-000073",
+          "tag": "NetIncomeLoss",
+          "net_income": 1691000000,
+          "delta": 118000000.0,
+          "scale": 508464354.6995207
+        },
+        "BAC": {
+          "status": "候选通过",
+          "signal": 0.10763845206688576,
+          "sue": 0.2152769041337715,
+          "quarter_end": "2025-06-30",
+          "first_filed": "2025-07-31",
+          "source_filed": "2025-07-31",
+          "accn": "0000070858-25-000268",
+          "tag": "NetIncomeLoss",
+          "net_income": 7116000000,
+          "delta": 219000000.0,
+          "scale": 1017294450.9826051
+        },
+        "CAT": {
+          "status": "候选未通过",
+          "signal": 0.0,
+          "sue": -0.6992690037513781,
+          "quarter_end": "2025-06-30",
+          "first_filed": "2025-08-06",
+          "source_filed": "2025-08-06",
+          "accn": "0000018230-25-000040",
+          "tag": "ProfitLoss",
+          "net_income": 2179000000,
+          "delta": -502000000.0,
+          "scale": 717892538.2176439
+        },
+        "CRM": {
+          "status": "候选通过",
+          "signal": 0.005932249123263534,
+          "sue": 0.011864498246527067,
+          "quarter_end": "2025-04-30",
+          "first_filed": "2025-05-29",
+          "source_filed": "2025-05-29",
+          "accn": "0001108524-25-000030",
+          "tag": "NetIncomeLoss",
+          "net_income": 1541000000,
+          "delta": 8000000.0,
+          "scale": 674280516.0211247
+        },
+        "CSCO": {
+          "status": "候选通过",
+          "signal": 0.440932652592348,
+          "sue": 0.881865305184696,
+          "quarter_end": "2025-04-26",
+          "first_filed": "2025-05-20",
+          "source_filed": "2025-05-20",
+          "accn": "0000858877-25-000033",
+          "tag": "NetIncomeLoss",
+          "net_income": 2491000000,
+          "delta": 605000000.0,
+          "scale": 686045812.7143239
+        },
+        "CVX": {
+          "status": "候选未通过",
+          "signal": 0.0,
+          "sue": -0.5938787843474844,
+          "quarter_end": "2025-06-30",
+          "first_filed": "2025-08-07",
+          "source_filed": "2025-08-07",
+          "accn": "0000093410-25-000062",
+          "tag": "NetIncomeLoss",
+          "net_income": 2490000000,
+          "delta": -1944000000.0,
+          "scale": 3273395263.8768554
+        },
+        "GE": {
+          "status": "候选通过",
+          "signal": 0.09523336585241542,
+          "sue": 0.19046673170483083,
+          "quarter_end": "2025-06-30",
+          "first_filed": "2025-07-21",
+          "source_filed": "2025-07-21",
+          "accn": "0000040545-25-000111",
+          "tag": "NetIncomeLoss",
+          "net_income": 2028000000,
+          "delta": 762000000.0,
+          "scale": 4000698668.8934364
+        },
+        "GS": {
+          "status": "候选通过",
+          "signal": 0.23314307563132752,
+          "sue": 0.46628615126265505,
+          "quarter_end": "2025-06-30",
+          "first_filed": "2025-08-01",
+          "source_filed": "2025-08-01",
+          "accn": "0000886982-25-000022",
+          "tag": "NetIncomeLoss",
+          "net_income": 3723000000,
+          "delta": 680000000.0,
+          "scale": 1458331966.6660264
+        },
+        "HD": {
+          "status": "候选未通过",
+          "signal": 0.0,
+          "sue": -0.04144208418145245,
+          "quarter_end": "2025-08-03",
+          "first_filed": "2025-08-26",
+          "source_filed": "2025-08-26",
+          "accn": "0000354950-25-000217",
+          "tag": "NetIncomeLoss",
+          "net_income": 4551000000,
+          "delta": -10000000.0,
+          "scale": 241300605.35120326
+        },
+        "IBM": {
+          "status": "候选通过",
+          "signal": 0.06895432429887093,
+          "sue": 0.13790864859774185,
+          "quarter_end": "2025-06-30",
+          "first_filed": "2025-07-24",
+          "source_filed": "2025-07-24",
+          "accn": "0000051143-25-000052",
+          "tag": "NetIncomeLoss",
+          "net_income": 2194000000,
+          "delta": 360000000.0,
+          "scale": 2610423665.6691794
+        },
+        "INTC": {
+          "status": "候选未通过",
+          "signal": 0.0,
+          "sue": -0.19417327457936942,
+          "quarter_end": "2025-06-28",
+          "first_filed": "2025-07-24",
+          "source_filed": "2025-07-24",
+          "accn": "0000050863-25-000109",
+          "tag": "NetIncomeLoss",
+          "net_income": -2918000000,
+          "delta": -1308000000.0,
+          "scale": 6736251437.451798
+        },
+        "KO": {
+          "status": "候选通过",
+          "signal": 1.0,
+          "sue": 4.946220766944871,
+          "quarter_end": "2025-06-27",
+          "first_filed": "2025-07-24",
+          "source_filed": "2025-07-24",
+          "accn": "0000021344-25-000061",
+          "tag": "NetIncomeLoss",
+          "net_income": 3810000000,
+          "delta": 1399000000.0,
+          "scale": 282842207.39789575
+        },
+        "MRK": {
+          "status": "候选未通过",
+          "signal": 0.0,
+          "sue": -0.17500948250443044,
+          "quarter_end": "2025-06-30",
+          "first_filed": "2025-08-05",
+          "source_filed": "2025-08-05",
+          "accn": "0000310158-25-000014",
+          "tag": "NetIncomeLoss",
+          "net_income": 4427000000,
+          "delta": -1028000000.0,
+          "scale": 5873967429.016172
+        },
+        "MS": {
+          "status": "候选通过",
+          "signal": 0.30172193358656,
+          "sue": 0.60344386717312,
+          "quarter_end": "2025-06-30",
+          "first_filed": "2025-08-04",
+          "source_filed": "2025-08-04",
+          "accn": "0000895421-25-000440",
+          "tag": "NetIncomeLoss",
+          "net_income": 3539000000,
+          "delta": 463000000.0,
+          "scale": 767262748.3463535
+        },
+        "PEP": {
+          "status": "候选未通过",
+          "signal": 0.0,
+          "sue": -1.7310516796761037,
+          "quarter_end": "2025-06-14",
+          "first_filed": "2025-07-17",
+          "source_filed": "2025-07-17",
+          "accn": "0000077476-25-000044",
+          "tag": "NetIncomeLoss",
+          "net_income": 1263000000,
+          "delta": -1820000000.0,
+          "scale": 1051383977.3637141
+        },
+        "PG": {
+          "status": "候选通过",
+          "signal": 0.012779494367860588,
+          "sue": 0.025558988735721176,
+          "quarter_end": "2025-03-31",
+          "first_filed": "2025-04-24",
+          "source_filed": "2025-04-24",
+          "accn": "0000080424-25-000037",
+          "tag": "NetIncomeLoss",
+          "net_income": 3769000000,
+          "delta": 15000000.0,
+          "scale": 586877679.5161711
+        },
+        "QCOM": {
+          "status": "候选通过",
+          "signal": 0.2630573982588033,
+          "sue": 0.5261147965176066,
+          "quarter_end": "2025-06-29",
+          "first_filed": "2025-07-30",
+          "source_filed": "2025-07-30",
+          "accn": "0000804328-25-000045",
+          "tag": "NetIncomeLoss",
+          "net_income": 2666000000,
+          "delta": 537000000.0,
+          "scale": 1020689787.7695959
+        },
+        "TXN": {
+          "status": "候选通过",
+          "signal": 0.23233363812094207,
+          "sue": 0.46466727624188414,
+          "quarter_end": "2025-06-30",
+          "first_filed": "2025-07-29",
+          "source_filed": "2025-07-29",
+          "accn": "0000097476-25-000036",
+          "tag": "NetIncomeLoss",
+          "net_income": 1295000000,
+          "delta": 168000000.0,
+          "scale": 361549023.5480818
+        },
+        "UNH": {
+          "status": "候选未通过",
+          "signal": 0.0,
+          "sue": -0.2027457972513032,
+          "quarter_end": "2025-06-30",
+          "first_filed": "2025-08-11",
+          "source_filed": "2025-08-11",
+          "accn": "0000731766-25-000236",
+          "tag": "NetIncomeLoss",
+          "net_income": 3406000000,
+          "delta": -810000000.0,
+          "scale": 3995150631.8821783
+        }
+      },
+      "config": {
+        "allocation": {
+          "enabled": false,
+          "symbols": [],
+          "lookback": 60,
+          "max_positions": 3,
+          "max_weight": 0.35,
+          "cash_reserve": 0.05,
+          "risk_aversion": 10.0,
+          "cost_penalty": 2.0,
+          "rebalance_band": 0.02,
+          "max_daily_turnover": 1.0,
+          "rebalance_minutes": 30
+        },
+        "model": "fixed_ensemble",
+        "lookback": 20,
+        "horizon": 5,
+        "rebalance_days": 5,
+        "confidence": 0.5,
+        "tranche_weight": 0.1,
+        "max_weight": 0.2,
+        "capital_mode": "signal_budget",
+        "classifier_sha256": null,
+        "portfolio_policy": "legacy",
+        "entry_band": 0.005,
+        "daily_vol_target": 0.015,
+        "stop_loss_pct": 10.0,
+        "max_drawdown_pct": 10.0,
+        "costs": {
+          "allocation": {
+            "enabled": false,
+            "symbols": [],
+            "lookback": 60,
+            "max_positions": 3,
+            "max_weight": 0.35,
+            "cash_reserve": 0.05,
+            "risk_aversion": 10.0,
+            "cost_penalty": 2.0,
+            "rebalance_band": 0.02,
+            "max_daily_turnover": 1.0,
+            "rebalance_minutes": 30
+          },
+          "strategy": "adaptive",
+          "fast": 5,
+          "stat_window": 120,
+          "stat_horizon": 15,
+          "stat_entry_z": 1.5,
+          "stat_confidence": 0.5,
+          "stat_process_noise": 0.001,
+          "slow": 20,
+          "flatten_minutes": 5,
+          "opening_minutes": 15,
+          "reversion_bps": 30.0,
+          "stop_loss_bps": 100.0,
+          "regime_window": 60,
+          "min_reward_risk": 1.2,
+          "atr_window": 14,
+          "stop_atr": 2.0,
+          "take_atr": 3.0,
+          "breakout_buffer_atr": 0.1,
+          "reversion_atr": 2.0,
+          "momentum_threshold_bps": 10.0,
+          "regime_gate": "off",
+          "regime_window_days": 10,
+          "regime_min_drift_bps": 0.0,
+          "regime_max_efficiency": 0.35,
+          "max_scaling_lots": 3,
+          "lot_breakeven_hold": false,
+          "lot_patience_minutes": 45,
+          "lot_hard_stop_atr": 4.0,
+          "tranche_requires_uptrend": false,
+          "min_relative_volume": 1.2,
+          "max_hold_minutes": 30,
+          "cooldown_minutes": 10,
+          "max_daily_entries": 4,
+          "daily_loss_bps": 100.0,
+          "risk_per_trade_bps": 25.0,
+          "rule_cost_multiplier": 1.5,
+          "initial_cash": 100000.0,
+          "spread_bps": 2.0,
+          "slippage_bps": 2.0,
+          "commission_per_share": 0.005,
+          "minimum_commission": 1.0,
+          "sell_fee_bps": 0.3,
+          "participation": 0.01
+        }
+      }
+    },
+    {
+      "pool": "alternate20",
+      "with_price": false,
+      "cost_multiplier": 2,
+      "metrics": {
+        "return_pct": 4.583212762731792,
+        "final_equity": 104583.21276273178,
+        "max_drawdown_pct": 1.2727410507184844,
+        "fees": 462.39561406818814,
+        "impact_cost": 111.53362320000004,
+        "trade_count": 229,
+        "halted": false,
+        "turnover": 1.8164946138147688,
+        "realized_pnl": 2686.0466831347694,
+        "unrealized_pnl": 1897.1660795970406,
+        "trading_days": 251,
+        "daily_sharpe": 1.510844234649789,
+        "average_gross_exposure_pct": 19.376827375265226,
+        "estimated_liquidation_return_pct": 4.531883629931777
+      },
+      "contributions": [
+        {
+          "symbol": "ABBV",
+          "net_profit": 198.82654704400102
+        },
+        {
+          "symbol": "ADBE",
+          "net_profit": -73.90750704129997
+        },
+        {
+          "symbol": "BAC",
+          "net_profit": 878.4885845636218
+        },
+        {
+          "symbol": "CAT",
+          "net_profit": -393.0539226317196
+        },
+        {
+          "symbol": "CRM",
+          "net_profit": 266.5991946544791
+        },
+        {
+          "symbol": "CSCO",
+          "net_profit": 875.8532570469993
+        },
+        {
+          "symbol": "CVX",
+          "net_profit": 350.94756958108064
+        },
+        {
+          "symbol": "GE",
+          "net_profit": 15.824449073600022
+        },
+        {
+          "symbol": "GS",
+          "net_profit": 414.3120840903998
+        },
+        {
+          "symbol": "HD",
+          "net_profit": 0.0
+        },
+        {
+          "symbol": "IBM",
+          "net_profit": 53.60504057339995
+        },
+        {
+          "symbol": "INTC",
+          "net_profit": 496.2171377712
+        },
+        {
+          "symbol": "KO",
+          "net_profit": 820.4208322485188
+        },
+        {
+          "symbol": "MRK",
+          "net_profit": 263.1822474587402
+        },
+        {
+          "symbol": "MS",
+          "net_profit": 1172.490241178979
+        },
+        {
+          "symbol": "PEP",
+          "net_profit": -215.58530197724122
+        },
+        {
+          "symbol": "PG",
+          "net_profit": -109.62425528064091
+        },
+        {
+          "symbol": "QCOM",
+          "net_profit": -203.77447117663974
+        },
+        {
+          "symbol": "TXN",
+          "net_profit": -200.83359044566805
+        },
+        {
+          "symbol": "UNH",
+          "net_profit": -26.77537399999983
+        }
+      ],
+      "coverage": {
+        "eligible": 2390,
+        "not_eligible": 1388,
+        "missing": 179,
+        "expired": 1083
+      },
+      "initial_judgments": {
+        "ABBV": {
+          "status": "候选未通过",
+          "signal": 0.0,
+          "sue": -0.23354001034161917,
+          "quarter_end": "2025-06-30",
+          "first_filed": "2025-08-04",
+          "source_filed": "2025-08-04",
+          "accn": "0001551152-25-000040",
+          "tag": "NetIncomeLoss",
+          "net_income": 938000000,
+          "delta": -432000000.0,
+          "scale": 1849790103.9229906
+        },
+        "ADBE": {
+          "status": "候选通过",
+          "signal": 0.11603566593152104,
+          "sue": 0.23207133186304207,
+          "quarter_end": "2025-05-30",
+          "first_filed": "2025-06-25",
+          "source_filed": "2025-06-25",
+          "accn": "0000796343-25-000073",
+          "tag": "NetIncomeLoss",
+          "net_income": 1691000000,
+          "delta": 118000000.0,
+          "scale": 508464354.6995207
+        },
+        "BAC": {
+          "status": "候选通过",
+          "signal": 0.10763845206688576,
+          "sue": 0.2152769041337715,
+          "quarter_end": "2025-06-30",
+          "first_filed": "2025-07-31",
+          "source_filed": "2025-07-31",
+          "accn": "0000070858-25-000268",
+          "tag": "NetIncomeLoss",
+          "net_income": 7116000000,
+          "delta": 219000000.0,
+          "scale": 1017294450.9826051
+        },
+        "CAT": {
+          "status": "候选未通过",
+          "signal": 0.0,
+          "sue": -0.6992690037513781,
+          "quarter_end": "2025-06-30",
+          "first_filed": "2025-08-06",
+          "source_filed": "2025-08-06",
+          "accn": "0000018230-25-000040",
+          "tag": "ProfitLoss",
+          "net_income": 2179000000,
+          "delta": -502000000.0,
+          "scale": 717892538.2176439
+        },
+        "CRM": {
+          "status": "候选通过",
+          "signal": 0.005932249123263534,
+          "sue": 0.011864498246527067,
+          "quarter_end": "2025-04-30",
+          "first_filed": "2025-05-29",
+          "source_filed": "2025-05-29",
+          "accn": "0001108524-25-000030",
+          "tag": "NetIncomeLoss",
+          "net_income": 1541000000,
+          "delta": 8000000.0,
+          "scale": 674280516.0211247
+        },
+        "CSCO": {
+          "status": "候选通过",
+          "signal": 0.440932652592348,
+          "sue": 0.881865305184696,
+          "quarter_end": "2025-04-26",
+          "first_filed": "2025-05-20",
+          "source_filed": "2025-05-20",
+          "accn": "0000858877-25-000033",
+          "tag": "NetIncomeLoss",
+          "net_income": 2491000000,
+          "delta": 605000000.0,
+          "scale": 686045812.7143239
+        },
+        "CVX": {
+          "status": "候选未通过",
+          "signal": 0.0,
+          "sue": -0.5938787843474844,
+          "quarter_end": "2025-06-30",
+          "first_filed": "2025-08-07",
+          "source_filed": "2025-08-07",
+          "accn": "0000093410-25-000062",
+          "tag": "NetIncomeLoss",
+          "net_income": 2490000000,
+          "delta": -1944000000.0,
+          "scale": 3273395263.8768554
+        },
+        "GE": {
+          "status": "候选通过",
+          "signal": 0.09523336585241542,
+          "sue": 0.19046673170483083,
+          "quarter_end": "2025-06-30",
+          "first_filed": "2025-07-21",
+          "source_filed": "2025-07-21",
+          "accn": "0000040545-25-000111",
+          "tag": "NetIncomeLoss",
+          "net_income": 2028000000,
+          "delta": 762000000.0,
+          "scale": 4000698668.8934364
+        },
+        "GS": {
+          "status": "候选通过",
+          "signal": 0.23314307563132752,
+          "sue": 0.46628615126265505,
+          "quarter_end": "2025-06-30",
+          "first_filed": "2025-08-01",
+          "source_filed": "2025-08-01",
+          "accn": "0000886982-25-000022",
+          "tag": "NetIncomeLoss",
+          "net_income": 3723000000,
+          "delta": 680000000.0,
+          "scale": 1458331966.6660264
+        },
+        "HD": {
+          "status": "候选未通过",
+          "signal": 0.0,
+          "sue": -0.04144208418145245,
+          "quarter_end": "2025-08-03",
+          "first_filed": "2025-08-26",
+          "source_filed": "2025-08-26",
+          "accn": "0000354950-25-000217",
+          "tag": "NetIncomeLoss",
+          "net_income": 4551000000,
+          "delta": -10000000.0,
+          "scale": 241300605.35120326
+        },
+        "IBM": {
+          "status": "候选通过",
+          "signal": 0.06895432429887093,
+          "sue": 0.13790864859774185,
+          "quarter_end": "2025-06-30",
+          "first_filed": "2025-07-24",
+          "source_filed": "2025-07-24",
+          "accn": "0000051143-25-000052",
+          "tag": "NetIncomeLoss",
+          "net_income": 2194000000,
+          "delta": 360000000.0,
+          "scale": 2610423665.6691794
+        },
+        "INTC": {
+          "status": "候选未通过",
+          "signal": 0.0,
+          "sue": -0.19417327457936942,
+          "quarter_end": "2025-06-28",
+          "first_filed": "2025-07-24",
+          "source_filed": "2025-07-24",
+          "accn": "0000050863-25-000109",
+          "tag": "NetIncomeLoss",
+          "net_income": -2918000000,
+          "delta": -1308000000.0,
+          "scale": 6736251437.451798
+        },
+        "KO": {
+          "status": "候选通过",
+          "signal": 1.0,
+          "sue": 4.946220766944871,
+          "quarter_end": "2025-06-27",
+          "first_filed": "2025-07-24",
+          "source_filed": "2025-07-24",
+          "accn": "0000021344-25-000061",
+          "tag": "NetIncomeLoss",
+          "net_income": 3810000000,
+          "delta": 1399000000.0,
+          "scale": 282842207.39789575
+        },
+        "MRK": {
+          "status": "候选未通过",
+          "signal": 0.0,
+          "sue": -0.17500948250443044,
+          "quarter_end": "2025-06-30",
+          "first_filed": "2025-08-05",
+          "source_filed": "2025-08-05",
+          "accn": "0000310158-25-000014",
+          "tag": "NetIncomeLoss",
+          "net_income": 4427000000,
+          "delta": -1028000000.0,
+          "scale": 5873967429.016172
+        },
+        "MS": {
+          "status": "候选通过",
+          "signal": 0.30172193358656,
+          "sue": 0.60344386717312,
+          "quarter_end": "2025-06-30",
+          "first_filed": "2025-08-04",
+          "source_filed": "2025-08-04",
+          "accn": "0000895421-25-000440",
+          "tag": "NetIncomeLoss",
+          "net_income": 3539000000,
+          "delta": 463000000.0,
+          "scale": 767262748.3463535
+        },
+        "PEP": {
+          "status": "候选未通过",
+          "signal": 0.0,
+          "sue": -1.7310516796761037,
+          "quarter_end": "2025-06-14",
+          "first_filed": "2025-07-17",
+          "source_filed": "2025-07-17",
+          "accn": "0000077476-25-000044",
+          "tag": "NetIncomeLoss",
+          "net_income": 1263000000,
+          "delta": -1820000000.0,
+          "scale": 1051383977.3637141
+        },
+        "PG": {
+          "status": "候选通过",
+          "signal": 0.012779494367860588,
+          "sue": 0.025558988735721176,
+          "quarter_end": "2025-03-31",
+          "first_filed": "2025-04-24",
+          "source_filed": "2025-04-24",
+          "accn": "0000080424-25-000037",
+          "tag": "NetIncomeLoss",
+          "net_income": 3769000000,
+          "delta": 15000000.0,
+          "scale": 586877679.5161711
+        },
+        "QCOM": {
+          "status": "候选通过",
+          "signal": 0.2630573982588033,
+          "sue": 0.5261147965176066,
+          "quarter_end": "2025-06-29",
+          "first_filed": "2025-07-30",
+          "source_filed": "2025-07-30",
+          "accn": "0000804328-25-000045",
+          "tag": "NetIncomeLoss",
+          "net_income": 2666000000,
+          "delta": 537000000.0,
+          "scale": 1020689787.7695959
+        },
+        "TXN": {
+          "status": "候选通过",
+          "signal": 0.23233363812094207,
+          "sue": 0.46466727624188414,
+          "quarter_end": "2025-06-30",
+          "first_filed": "2025-07-29",
+          "source_filed": "2025-07-29",
+          "accn": "0000097476-25-000036",
+          "tag": "NetIncomeLoss",
+          "net_income": 1295000000,
+          "delta": 168000000.0,
+          "scale": 361549023.5480818
+        },
+        "UNH": {
+          "status": "候选未通过",
+          "signal": 0.0,
+          "sue": -0.2027457972513032,
+          "quarter_end": "2025-06-30",
+          "first_filed": "2025-08-11",
+          "source_filed": "2025-08-11",
+          "accn": "0000731766-25-000236",
+          "tag": "NetIncomeLoss",
+          "net_income": 3406000000,
+          "delta": -810000000.0,
+          "scale": 3995150631.8821783
+        }
+      },
+      "config": {
+        "allocation": {
+          "enabled": false,
+          "symbols": [],
+          "lookback": 60,
+          "max_positions": 3,
+          "max_weight": 0.35,
+          "cash_reserve": 0.05,
+          "risk_aversion": 10.0,
+          "cost_penalty": 2.0,
+          "rebalance_band": 0.02,
+          "max_daily_turnover": 1.0,
+          "rebalance_minutes": 30
+        },
+        "model": "fixed_ensemble",
+        "lookback": 20,
+        "horizon": 5,
+        "rebalance_days": 5,
+        "confidence": 0.5,
+        "tranche_weight": 0.1,
+        "max_weight": 0.2,
+        "capital_mode": "signal_budget",
+        "classifier_sha256": null,
+        "portfolio_policy": "legacy",
+        "entry_band": 0.005,
+        "daily_vol_target": 0.015,
+        "stop_loss_pct": 10.0,
+        "max_drawdown_pct": 10.0,
+        "costs": {
+          "allocation": {
+            "enabled": false,
+            "symbols": [],
+            "lookback": 60,
+            "max_positions": 3,
+            "max_weight": 0.35,
+            "cash_reserve": 0.05,
+            "risk_aversion": 10.0,
+            "cost_penalty": 2.0,
+            "rebalance_band": 0.02,
+            "max_daily_turnover": 1.0,
+            "rebalance_minutes": 30
+          },
+          "strategy": "adaptive",
+          "fast": 5,
+          "stat_window": 120,
+          "stat_horizon": 15,
+          "stat_entry_z": 1.5,
+          "stat_confidence": 0.5,
+          "stat_process_noise": 0.001,
+          "slow": 20,
+          "flatten_minutes": 5,
+          "opening_minutes": 15,
+          "reversion_bps": 30.0,
+          "stop_loss_bps": 100.0,
+          "regime_window": 60,
+          "min_reward_risk": 1.2,
+          "atr_window": 14,
+          "stop_atr": 2.0,
+          "take_atr": 3.0,
+          "breakout_buffer_atr": 0.1,
+          "reversion_atr": 2.0,
+          "momentum_threshold_bps": 10.0,
+          "regime_gate": "off",
+          "regime_window_days": 10,
+          "regime_min_drift_bps": 0.0,
+          "regime_max_efficiency": 0.35,
+          "max_scaling_lots": 3,
+          "lot_breakeven_hold": false,
+          "lot_patience_minutes": 45,
+          "lot_hard_stop_atr": 4.0,
+          "tranche_requires_uptrend": false,
+          "min_relative_volume": 1.2,
+          "max_hold_minutes": 30,
+          "cooldown_minutes": 10,
+          "max_daily_entries": 4,
+          "daily_loss_bps": 100.0,
+          "risk_per_trade_bps": 25.0,
+          "rule_cost_multiplier": 1.5,
+          "initial_cash": 100000.0,
+          "spread_bps": 4.0,
+          "slippage_bps": 4.0,
+          "commission_per_share": 0.01,
+          "minimum_commission": 2.0,
+          "sell_fee_bps": 0.6,
+          "participation": 0.01
+        }
+      }
+    },
+    {
+      "pool": "alternate20",
+      "with_price": true,
+      "cost_multiplier": 1,
+      "metrics": {
+        "return_pct": 3.185944756240522,
+        "final_equity": 103185.94475624053,
+        "max_drawdown_pct": 1.2975579666441583,
+        "fees": 201.1326947595451,
+        "impact_cost": 68.65254900000002,
+        "trade_count": 198,
+        "halted": false,
+        "turnover": 2.259460409221173,
+        "realized_pnl": 1851.2843672148806,
+        "unrealized_pnl": 1334.6603890255735,
+        "trading_days": 251,
+        "daily_sharpe": 1.2053689322138563,
+        "average_gross_exposure_pct": 11.017378561495693,
+        "estimated_liquidation_return_pct": 3.171226528140525
+      },
+      "contributions": [
+        {
+          "symbol": "ABBV",
+          "net_profit": -58.79199399999925
+        },
+        {
+          "symbol": "ADBE",
+          "net_profit": 0.0
+        },
+        {
+          "symbol": "BAC",
+          "net_profit": 370.72030357373933
+        },
+        {
+          "symbol": "CAT",
+          "net_profit": -148.58950872478
+        },
+        {
+          "symbol": "CRM",
+          "net_profit": 520.2068645244904
+        },
+        {
+          "symbol": "CSCO",
+          "net_profit": 444.69016585577083
+        },
+        {
+          "symbol": "CVX",
+          "net_profit": 355.82378294526916
+        },
+        {
+          "symbol": "GE",
+          "net_profit": 5.486241031904967
+        },
+        {
+          "symbol": "GS",
+          "net_profit": 411.7023789608103
+        },
+        {
+          "symbol": "HD",
+          "net_profit": 0.0
+        },
+        {
+          "symbol": "IBM",
+          "net_profit": -164.5315576706397
+        },
+        {
+          "symbol": "INTC",
+          "net_profit": 165.12904346235996
+        },
+        {
+          "symbol": "KO",
+          "net_profit": 133.742878827426
+        },
+        {
+          "symbol": "MRK",
+          "net_profit": 270.9477102346551
+        },
+        {
+          "symbol": "MS",
+          "net_profit": 868.6046996035229
+        },
+        {
+          "symbol": "PEP",
+          "net_profit": -15.163769936760048
+        },
+        {
+          "symbol": "PG",
+          "net_profit": -16.74831496231991
+        },
+        {
+          "symbol": "QCOM",
+          "net_profit": 52.98826976080022
+        },
+        {
+          "symbol": "TXN",
+          "net_profit": -1.133208245795231
+        },
+        {
+          "symbol": "UNH",
+          "net_profit": -9.139229
+        }
+      ],
+      "coverage": {
+        "eligible": 2390,
+        "not_eligible": 1388,
+        "missing": 179,
+        "expired": 1083
+      },
+      "initial_judgments": {
+        "ABBV": {
+          "status": "候选未通过",
+          "signal": 0.0,
+          "sue": -0.23354001034161917,
+          "quarter_end": "2025-06-30",
+          "first_filed": "2025-08-04",
+          "source_filed": "2025-08-04",
+          "accn": "0001551152-25-000040",
+          "tag": "NetIncomeLoss",
+          "net_income": 938000000,
+          "delta": -432000000.0,
+          "scale": 1849790103.9229906
+        },
+        "ADBE": {
+          "status": "候选通过",
+          "signal": 0.11603566593152104,
+          "sue": 0.23207133186304207,
+          "quarter_end": "2025-05-30",
+          "first_filed": "2025-06-25",
+          "source_filed": "2025-06-25",
+          "accn": "0000796343-25-000073",
+          "tag": "NetIncomeLoss",
+          "net_income": 1691000000,
+          "delta": 118000000.0,
+          "scale": 508464354.6995207
+        },
+        "BAC": {
+          "status": "候选通过",
+          "signal": 0.10763845206688576,
+          "sue": 0.2152769041337715,
+          "quarter_end": "2025-06-30",
+          "first_filed": "2025-07-31",
+          "source_filed": "2025-07-31",
+          "accn": "0000070858-25-000268",
+          "tag": "NetIncomeLoss",
+          "net_income": 7116000000,
+          "delta": 219000000.0,
+          "scale": 1017294450.9826051
+        },
+        "CAT": {
+          "status": "候选未通过",
+          "signal": 0.0,
+          "sue": -0.6992690037513781,
+          "quarter_end": "2025-06-30",
+          "first_filed": "2025-08-06",
+          "source_filed": "2025-08-06",
+          "accn": "0000018230-25-000040",
+          "tag": "ProfitLoss",
+          "net_income": 2179000000,
+          "delta": -502000000.0,
+          "scale": 717892538.2176439
+        },
+        "CRM": {
+          "status": "候选通过",
+          "signal": 0.005932249123263534,
+          "sue": 0.011864498246527067,
+          "quarter_end": "2025-04-30",
+          "first_filed": "2025-05-29",
+          "source_filed": "2025-05-29",
+          "accn": "0001108524-25-000030",
+          "tag": "NetIncomeLoss",
+          "net_income": 1541000000,
+          "delta": 8000000.0,
+          "scale": 674280516.0211247
+        },
+        "CSCO": {
+          "status": "候选通过",
+          "signal": 0.440932652592348,
+          "sue": 0.881865305184696,
+          "quarter_end": "2025-04-26",
+          "first_filed": "2025-05-20",
+          "source_filed": "2025-05-20",
+          "accn": "0000858877-25-000033",
+          "tag": "NetIncomeLoss",
+          "net_income": 2491000000,
+          "delta": 605000000.0,
+          "scale": 686045812.7143239
+        },
+        "CVX": {
+          "status": "候选未通过",
+          "signal": 0.0,
+          "sue": -0.5938787843474844,
+          "quarter_end": "2025-06-30",
+          "first_filed": "2025-08-07",
+          "source_filed": "2025-08-07",
+          "accn": "0000093410-25-000062",
+          "tag": "NetIncomeLoss",
+          "net_income": 2490000000,
+          "delta": -1944000000.0,
+          "scale": 3273395263.8768554
+        },
+        "GE": {
+          "status": "候选通过",
+          "signal": 0.09523336585241542,
+          "sue": 0.19046673170483083,
+          "quarter_end": "2025-06-30",
+          "first_filed": "2025-07-21",
+          "source_filed": "2025-07-21",
+          "accn": "0000040545-25-000111",
+          "tag": "NetIncomeLoss",
+          "net_income": 2028000000,
+          "delta": 762000000.0,
+          "scale": 4000698668.8934364
+        },
+        "GS": {
+          "status": "候选通过",
+          "signal": 0.23314307563132752,
+          "sue": 0.46628615126265505,
+          "quarter_end": "2025-06-30",
+          "first_filed": "2025-08-01",
+          "source_filed": "2025-08-01",
+          "accn": "0000886982-25-000022",
+          "tag": "NetIncomeLoss",
+          "net_income": 3723000000,
+          "delta": 680000000.0,
+          "scale": 1458331966.6660264
+        },
+        "HD": {
+          "status": "候选未通过",
+          "signal": 0.0,
+          "sue": -0.04144208418145245,
+          "quarter_end": "2025-08-03",
+          "first_filed": "2025-08-26",
+          "source_filed": "2025-08-26",
+          "accn": "0000354950-25-000217",
+          "tag": "NetIncomeLoss",
+          "net_income": 4551000000,
+          "delta": -10000000.0,
+          "scale": 241300605.35120326
+        },
+        "IBM": {
+          "status": "候选通过",
+          "signal": 0.06895432429887093,
+          "sue": 0.13790864859774185,
+          "quarter_end": "2025-06-30",
+          "first_filed": "2025-07-24",
+          "source_filed": "2025-07-24",
+          "accn": "0000051143-25-000052",
+          "tag": "NetIncomeLoss",
+          "net_income": 2194000000,
+          "delta": 360000000.0,
+          "scale": 2610423665.6691794
+        },
+        "INTC": {
+          "status": "候选未通过",
+          "signal": 0.0,
+          "sue": -0.19417327457936942,
+          "quarter_end": "2025-06-28",
+          "first_filed": "2025-07-24",
+          "source_filed": "2025-07-24",
+          "accn": "0000050863-25-000109",
+          "tag": "NetIncomeLoss",
+          "net_income": -2918000000,
+          "delta": -1308000000.0,
+          "scale": 6736251437.451798
+        },
+        "KO": {
+          "status": "候选通过",
+          "signal": 1.0,
+          "sue": 4.946220766944871,
+          "quarter_end": "2025-06-27",
+          "first_filed": "2025-07-24",
+          "source_filed": "2025-07-24",
+          "accn": "0000021344-25-000061",
+          "tag": "NetIncomeLoss",
+          "net_income": 3810000000,
+          "delta": 1399000000.0,
+          "scale": 282842207.39789575
+        },
+        "MRK": {
+          "status": "候选未通过",
+          "signal": 0.0,
+          "sue": -0.17500948250443044,
+          "quarter_end": "2025-06-30",
+          "first_filed": "2025-08-05",
+          "source_filed": "2025-08-05",
+          "accn": "0000310158-25-000014",
+          "tag": "NetIncomeLoss",
+          "net_income": 4427000000,
+          "delta": -1028000000.0,
+          "scale": 5873967429.016172
+        },
+        "MS": {
+          "status": "候选通过",
+          "signal": 0.30172193358656,
+          "sue": 0.60344386717312,
+          "quarter_end": "2025-06-30",
+          "first_filed": "2025-08-04",
+          "source_filed": "2025-08-04",
+          "accn": "0000895421-25-000440",
+          "tag": "NetIncomeLoss",
+          "net_income": 3539000000,
+          "delta": 463000000.0,
+          "scale": 767262748.3463535
+        },
+        "PEP": {
+          "status": "候选未通过",
+          "signal": 0.0,
+          "sue": -1.7310516796761037,
+          "quarter_end": "2025-06-14",
+          "first_filed": "2025-07-17",
+          "source_filed": "2025-07-17",
+          "accn": "0000077476-25-000044",
+          "tag": "NetIncomeLoss",
+          "net_income": 1263000000,
+          "delta": -1820000000.0,
+          "scale": 1051383977.3637141
+        },
+        "PG": {
+          "status": "候选通过",
+          "signal": 0.012779494367860588,
+          "sue": 0.025558988735721176,
+          "quarter_end": "2025-03-31",
+          "first_filed": "2025-04-24",
+          "source_filed": "2025-04-24",
+          "accn": "0000080424-25-000037",
+          "tag": "NetIncomeLoss",
+          "net_income": 3769000000,
+          "delta": 15000000.0,
+          "scale": 586877679.5161711
+        },
+        "QCOM": {
+          "status": "候选通过",
+          "signal": 0.2630573982588033,
+          "sue": 0.5261147965176066,
+          "quarter_end": "2025-06-29",
+          "first_filed": "2025-07-30",
+          "source_filed": "2025-07-30",
+          "accn": "0000804328-25-000045",
+          "tag": "NetIncomeLoss",
+          "net_income": 2666000000,
+          "delta": 537000000.0,
+          "scale": 1020689787.7695959
+        },
+        "TXN": {
+          "status": "候选通过",
+          "signal": 0.23233363812094207,
+          "sue": 0.46466727624188414,
+          "quarter_end": "2025-06-30",
+          "first_filed": "2025-07-29",
+          "source_filed": "2025-07-29",
+          "accn": "0000097476-25-000036",
+          "tag": "NetIncomeLoss",
+          "net_income": 1295000000,
+          "delta": 168000000.0,
+          "scale": 361549023.5480818
+        },
+        "UNH": {
+          "status": "候选未通过",
+          "signal": 0.0,
+          "sue": -0.2027457972513032,
+          "quarter_end": "2025-06-30",
+          "first_filed": "2025-08-11",
+          "source_filed": "2025-08-11",
+          "accn": "0000731766-25-000236",
+          "tag": "NetIncomeLoss",
+          "net_income": 3406000000,
+          "delta": -810000000.0,
+          "scale": 3995150631.8821783
+        }
+      },
+      "config": {
+        "allocation": {
+          "enabled": false,
+          "symbols": [],
+          "lookback": 60,
+          "max_positions": 3,
+          "max_weight": 0.35,
+          "cash_reserve": 0.05,
+          "risk_aversion": 10.0,
+          "cost_penalty": 2.0,
+          "rebalance_band": 0.02,
+          "max_daily_turnover": 1.0,
+          "rebalance_minutes": 30
+        },
+        "model": "fixed_ensemble",
+        "lookback": 20,
+        "horizon": 5,
+        "rebalance_days": 5,
+        "confidence": 0.5,
+        "tranche_weight": 0.1,
+        "max_weight": 0.2,
+        "capital_mode": "signal_budget",
+        "classifier_sha256": null,
+        "portfolio_policy": "legacy",
+        "entry_band": 0.005,
+        "daily_vol_target": 0.015,
+        "stop_loss_pct": 10.0,
+        "max_drawdown_pct": 10.0,
+        "costs": {
+          "allocation": {
+            "enabled": false,
+            "symbols": [],
+            "lookback": 60,
+            "max_positions": 3,
+            "max_weight": 0.35,
+            "cash_reserve": 0.05,
+            "risk_aversion": 10.0,
+            "cost_penalty": 2.0,
+            "rebalance_band": 0.02,
+            "max_daily_turnover": 1.0,
+            "rebalance_minutes": 30
+          },
+          "strategy": "adaptive",
+          "fast": 5,
+          "stat_window": 120,
+          "stat_horizon": 15,
+          "stat_entry_z": 1.5,
+          "stat_confidence": 0.5,
+          "stat_process_noise": 0.001,
+          "slow": 20,
+          "flatten_minutes": 5,
+          "opening_minutes": 15,
+          "reversion_bps": 30.0,
+          "stop_loss_bps": 100.0,
+          "regime_window": 60,
+          "min_reward_risk": 1.2,
+          "atr_window": 14,
+          "stop_atr": 2.0,
+          "take_atr": 3.0,
+          "breakout_buffer_atr": 0.1,
+          "reversion_atr": 2.0,
+          "momentum_threshold_bps": 10.0,
+          "regime_gate": "off",
+          "regime_window_days": 10,
+          "regime_min_drift_bps": 0.0,
+          "regime_max_efficiency": 0.35,
+          "max_scaling_lots": 3,
+          "lot_breakeven_hold": false,
+          "lot_patience_minutes": 45,
+          "lot_hard_stop_atr": 4.0,
+          "tranche_requires_uptrend": false,
+          "min_relative_volume": 1.2,
+          "max_hold_minutes": 30,
+          "cooldown_minutes": 10,
+          "max_daily_entries": 4,
+          "daily_loss_bps": 100.0,
+          "risk_per_trade_bps": 25.0,
+          "rule_cost_multiplier": 1.5,
+          "initial_cash": 100000.0,
+          "spread_bps": 2.0,
+          "slippage_bps": 2.0,
+          "commission_per_share": 0.005,
+          "minimum_commission": 1.0,
+          "sell_fee_bps": 0.3,
+          "participation": 0.01
+        }
+      }
+    },
+    {
+      "pool": "alternate20",
+      "with_price": true,
+      "cost_multiplier": 2,
+      "metrics": {
+        "return_pct": 2.917635826380316,
+        "final_equity": 102917.63582638031,
+        "max_drawdown_pct": 1.3375486396411396,
+        "fees": 402.24072061962016,
+        "impact_cost": 136.84845300000003,
+        "trade_count": 198,
+        "halted": false,
+        "turnover": 2.2548121386333024,
+        "realized_pnl": 1606.8074882813298,
+        "unrealized_pnl": 1310.8283380990517,
+        "trading_days": 251,
+        "daily_sharpe": 1.1065783631842074,
+        "average_gross_exposure_pct": 11.01776387273711,
+        "estimated_liquidation_return_pct": 2.888199370180322
+      },
+      "contributions": [
+        {
+          "symbol": "ABBV",
+          "net_profit": -62.423987999999554
+        },
+        {
+          "symbol": "ADBE",
+          "net_profit": 0.0
+        },
+        {
+          "symbol": "BAC",
+          "net_profit": 338.6811023784394
+        },
+        {
+          "symbol": "CAT",
+          "net_profit": -156.2889700991201
+        },
+        {
+          "symbol": "CRM",
+          "net_profit": 516.6287662513203
+        },
+        {
+          "symbol": "CSCO",
+          "net_profit": 412.81553222308014
+        },
+        {
+          "symbol": "CVX",
+          "net_profit": 350.94756958108064
+        },
+        {
+          "symbol": "GE",
+          "net_profit": 1.07749382762006
+        },
+        {
+          "symbol": "GS",
+          "net_profit": 402.16482524324
+        },
+        {
+          "symbol": "HD",
+          "net_profit": 0.0
+        },
+        {
+          "symbol": "IBM",
+          "net_profit": -180.53300228256012
+        },
+        {
+          "symbol": "INTC",
+          "net_profit": 140.44739015219943
+        },
+        {
+          "symbol": "KO",
+          "net_profit": 89.86619658866039
+        },
+        {
+          "symbol": "MRK",
+          "net_profit": 263.1504456386202
+        },
+        {
+          "symbol": "MS",
+          "net_profit": 833.0347229141003
+        },
+        {
+          "symbol": "PEP",
+          "net_profit": -19.137512147040468
+        },
+        {
+          "symbol": "PG",
+          "net_profit": -21.216616649279842
+        },
+        {
+          "symbol": "QCOM",
+          "net_profit": 34.44167004319945
+        },
+        {
+          "symbol": "TXN",
+          "net_profit": -15.761341283180172
+        },
+        {
+          "symbol": "UNH",
+          "net_profit": -10.258457999999962
+        }
+      ],
+      "coverage": {
+        "eligible": 2390,
+        "not_eligible": 1388,
+        "missing": 179,
+        "expired": 1083
+      },
+      "initial_judgments": {
+        "ABBV": {
+          "status": "候选未通过",
+          "signal": 0.0,
+          "sue": -0.23354001034161917,
+          "quarter_end": "2025-06-30",
+          "first_filed": "2025-08-04",
+          "source_filed": "2025-08-04",
+          "accn": "0001551152-25-000040",
+          "tag": "NetIncomeLoss",
+          "net_income": 938000000,
+          "delta": -432000000.0,
+          "scale": 1849790103.9229906
+        },
+        "ADBE": {
+          "status": "候选通过",
+          "signal": 0.11603566593152104,
+          "sue": 0.23207133186304207,
+          "quarter_end": "2025-05-30",
+          "first_filed": "2025-06-25",
+          "source_filed": "2025-06-25",
+          "accn": "0000796343-25-000073",
+          "tag": "NetIncomeLoss",
+          "net_income": 1691000000,
+          "delta": 118000000.0,
+          "scale": 508464354.6995207
+        },
+        "BAC": {
+          "status": "候选通过",
+          "signal": 0.10763845206688576,
+          "sue": 0.2152769041337715,
+          "quarter_end": "2025-06-30",
+          "first_filed": "2025-07-31",
+          "source_filed": "2025-07-31",
+          "accn": "0000070858-25-000268",
+          "tag": "NetIncomeLoss",
+          "net_income": 7116000000,
+          "delta": 219000000.0,
+          "scale": 1017294450.9826051
+        },
+        "CAT": {
+          "status": "候选未通过",
+          "signal": 0.0,
+          "sue": -0.6992690037513781,
+          "quarter_end": "2025-06-30",
+          "first_filed": "2025-08-06",
+          "source_filed": "2025-08-06",
+          "accn": "0000018230-25-000040",
+          "tag": "ProfitLoss",
+          "net_income": 2179000000,
+          "delta": -502000000.0,
+          "scale": 717892538.2176439
+        },
+        "CRM": {
+          "status": "候选通过",
+          "signal": 0.005932249123263534,
+          "sue": 0.011864498246527067,
+          "quarter_end": "2025-04-30",
+          "first_filed": "2025-05-29",
+          "source_filed": "2025-05-29",
+          "accn": "0001108524-25-000030",
+          "tag": "NetIncomeLoss",
+          "net_income": 1541000000,
+          "delta": 8000000.0,
+          "scale": 674280516.0211247
+        },
+        "CSCO": {
+          "status": "候选通过",
+          "signal": 0.440932652592348,
+          "sue": 0.881865305184696,
+          "quarter_end": "2025-04-26",
+          "first_filed": "2025-05-20",
+          "source_filed": "2025-05-20",
+          "accn": "0000858877-25-000033",
+          "tag": "NetIncomeLoss",
+          "net_income": 2491000000,
+          "delta": 605000000.0,
+          "scale": 686045812.7143239
+        },
+        "CVX": {
+          "status": "候选未通过",
+          "signal": 0.0,
+          "sue": -0.5938787843474844,
+          "quarter_end": "2025-06-30",
+          "first_filed": "2025-08-07",
+          "source_filed": "2025-08-07",
+          "accn": "0000093410-25-000062",
+          "tag": "NetIncomeLoss",
+          "net_income": 2490000000,
+          "delta": -1944000000.0,
+          "scale": 3273395263.8768554
+        },
+        "GE": {
+          "status": "候选通过",
+          "signal": 0.09523336585241542,
+          "sue": 0.19046673170483083,
+          "quarter_end": "2025-06-30",
+          "first_filed": "2025-07-21",
+          "source_filed": "2025-07-21",
+          "accn": "0000040545-25-000111",
+          "tag": "NetIncomeLoss",
+          "net_income": 2028000000,
+          "delta": 762000000.0,
+          "scale": 4000698668.8934364
+        },
+        "GS": {
+          "status": "候选通过",
+          "signal": 0.23314307563132752,
+          "sue": 0.46628615126265505,
+          "quarter_end": "2025-06-30",
+          "first_filed": "2025-08-01",
+          "source_filed": "2025-08-01",
+          "accn": "0000886982-25-000022",
+          "tag": "NetIncomeLoss",
+          "net_income": 3723000000,
+          "delta": 680000000.0,
+          "scale": 1458331966.6660264
+        },
+        "HD": {
+          "status": "候选未通过",
+          "signal": 0.0,
+          "sue": -0.04144208418145245,
+          "quarter_end": "2025-08-03",
+          "first_filed": "2025-08-26",
+          "source_filed": "2025-08-26",
+          "accn": "0000354950-25-000217",
+          "tag": "NetIncomeLoss",
+          "net_income": 4551000000,
+          "delta": -10000000.0,
+          "scale": 241300605.35120326
+        },
+        "IBM": {
+          "status": "候选通过",
+          "signal": 0.06895432429887093,
+          "sue": 0.13790864859774185,
+          "quarter_end": "2025-06-30",
+          "first_filed": "2025-07-24",
+          "source_filed": "2025-07-24",
+          "accn": "0000051143-25-000052",
+          "tag": "NetIncomeLoss",
+          "net_income": 2194000000,
+          "delta": 360000000.0,
+          "scale": 2610423665.6691794
+        },
+        "INTC": {
+          "status": "候选未通过",
+          "signal": 0.0,
+          "sue": -0.19417327457936942,
+          "quarter_end": "2025-06-28",
+          "first_filed": "2025-07-24",
+          "source_filed": "2025-07-24",
+          "accn": "0000050863-25-000109",
+          "tag": "NetIncomeLoss",
+          "net_income": -2918000000,
+          "delta": -1308000000.0,
+          "scale": 6736251437.451798
+        },
+        "KO": {
+          "status": "候选通过",
+          "signal": 1.0,
+          "sue": 4.946220766944871,
+          "quarter_end": "2025-06-27",
+          "first_filed": "2025-07-24",
+          "source_filed": "2025-07-24",
+          "accn": "0000021344-25-000061",
+          "tag": "NetIncomeLoss",
+          "net_income": 3810000000,
+          "delta": 1399000000.0,
+          "scale": 282842207.39789575
+        },
+        "MRK": {
+          "status": "候选未通过",
+          "signal": 0.0,
+          "sue": -0.17500948250443044,
+          "quarter_end": "2025-06-30",
+          "first_filed": "2025-08-05",
+          "source_filed": "2025-08-05",
+          "accn": "0000310158-25-000014",
+          "tag": "NetIncomeLoss",
+          "net_income": 4427000000,
+          "delta": -1028000000.0,
+          "scale": 5873967429.016172
+        },
+        "MS": {
+          "status": "候选通过",
+          "signal": 0.30172193358656,
+          "sue": 0.60344386717312,
+          "quarter_end": "2025-06-30",
+          "first_filed": "2025-08-04",
+          "source_filed": "2025-08-04",
+          "accn": "0000895421-25-000440",
+          "tag": "NetIncomeLoss",
+          "net_income": 3539000000,
+          "delta": 463000000.0,
+          "scale": 767262748.3463535
+        },
+        "PEP": {
+          "status": "候选未通过",
+          "signal": 0.0,
+          "sue": -1.7310516796761037,
+          "quarter_end": "2025-06-14",
+          "first_filed": "2025-07-17",
+          "source_filed": "2025-07-17",
+          "accn": "0000077476-25-000044",
+          "tag": "NetIncomeLoss",
+          "net_income": 1263000000,
+          "delta": -1820000000.0,
+          "scale": 1051383977.3637141
+        },
+        "PG": {
+          "status": "候选通过",
+          "signal": 0.012779494367860588,
+          "sue": 0.025558988735721176,
+          "quarter_end": "2025-03-31",
+          "first_filed": "2025-04-24",
+          "source_filed": "2025-04-24",
+          "accn": "0000080424-25-000037",
+          "tag": "NetIncomeLoss",
+          "net_income": 3769000000,
+          "delta": 15000000.0,
+          "scale": 586877679.5161711
+        },
+        "QCOM": {
+          "status": "候选通过",
+          "signal": 0.2630573982588033,
+          "sue": 0.5261147965176066,
+          "quarter_end": "2025-06-29",
+          "first_filed": "2025-07-30",
+          "source_filed": "2025-07-30",
+          "accn": "0000804328-25-000045",
+          "tag": "NetIncomeLoss",
+          "net_income": 2666000000,
+          "delta": 537000000.0,
+          "scale": 1020689787.7695959
+        },
+        "TXN": {
+          "status": "候选通过",
+          "signal": 0.23233363812094207,
+          "sue": 0.46466727624188414,
+          "quarter_end": "2025-06-30",
+          "first_filed": "2025-07-29",
+          "source_filed": "2025-07-29",
+          "accn": "0000097476-25-000036",
+          "tag": "NetIncomeLoss",
+          "net_income": 1295000000,
+          "delta": 168000000.0,
+          "scale": 361549023.5480818
+        },
+        "UNH": {
+          "status": "候选未通过",
+          "signal": 0.0,
+          "sue": -0.2027457972513032,
+          "quarter_end": "2025-06-30",
+          "first_filed": "2025-08-11",
+          "source_filed": "2025-08-11",
+          "accn": "0000731766-25-000236",
+          "tag": "NetIncomeLoss",
+          "net_income": 3406000000,
+          "delta": -810000000.0,
+          "scale": 3995150631.8821783
+        }
+      },
+      "config": {
+        "allocation": {
+          "enabled": false,
+          "symbols": [],
+          "lookback": 60,
+          "max_positions": 3,
+          "max_weight": 0.35,
+          "cash_reserve": 0.05,
+          "risk_aversion": 10.0,
+          "cost_penalty": 2.0,
+          "rebalance_band": 0.02,
+          "max_daily_turnover": 1.0,
+          "rebalance_minutes": 30
+        },
+        "model": "fixed_ensemble",
+        "lookback": 20,
+        "horizon": 5,
+        "rebalance_days": 5,
+        "confidence": 0.5,
+        "tranche_weight": 0.1,
+        "max_weight": 0.2,
+        "capital_mode": "signal_budget",
+        "classifier_sha256": null,
+        "portfolio_policy": "legacy",
+        "entry_band": 0.005,
+        "daily_vol_target": 0.015,
+        "stop_loss_pct": 10.0,
+        "max_drawdown_pct": 10.0,
+        "costs": {
+          "allocation": {
+            "enabled": false,
+            "symbols": [],
+            "lookback": 60,
+            "max_positions": 3,
+            "max_weight": 0.35,
+            "cash_reserve": 0.05,
+            "risk_aversion": 10.0,
+            "cost_penalty": 2.0,
+            "rebalance_band": 0.02,
+            "max_daily_turnover": 1.0,
+            "rebalance_minutes": 30
+          },
+          "strategy": "adaptive",
+          "fast": 5,
+          "stat_window": 120,
+          "stat_horizon": 15,
+          "stat_entry_z": 1.5,
+          "stat_confidence": 0.5,
+          "stat_process_noise": 0.001,
+          "slow": 20,
+          "flatten_minutes": 5,
+          "opening_minutes": 15,
+          "reversion_bps": 30.0,
+          "stop_loss_bps": 100.0,
+          "regime_window": 60,
+          "min_reward_risk": 1.2,
+          "atr_window": 14,
+          "stop_atr": 2.0,
+          "take_atr": 3.0,
+          "breakout_buffer_atr": 0.1,
+          "reversion_atr": 2.0,
+          "momentum_threshold_bps": 10.0,
+          "regime_gate": "off",
+          "regime_window_days": 10,
+          "regime_min_drift_bps": 0.0,
+          "regime_max_efficiency": 0.35,
+          "max_scaling_lots": 3,
+          "lot_breakeven_hold": false,
+          "lot_patience_minutes": 45,
+          "lot_hard_stop_atr": 4.0,
+          "tranche_requires_uptrend": false,
+          "min_relative_volume": 1.2,
+          "max_hold_minutes": 30,
+          "cooldown_minutes": 10,
+          "max_daily_entries": 4,
+          "daily_loss_bps": 100.0,
+          "risk_per_trade_bps": 25.0,
+          "rule_cost_multiplier": 1.5,
+          "initial_cash": 100000.0,
+          "spread_bps": 4.0,
+          "slippage_bps": 4.0,
+          "commission_per_share": 0.01,
+          "minimum_commission": 2.0,
+          "sell_fee_bps": 0.6,
+          "participation": 0.01
+        }
+      }
+    },
+    {
+      "pool": "random10",
+      "with_price": false,
+      "cost_multiplier": 1,
+      "metrics": {
+        "return_pct": -1.9379649039303226,
+        "final_equity": 98062.03509606968,
+        "max_drawdown_pct": 4.110436181965693,
+        "fees": 122.48831893030501,
+        "impact_cost": 54.27658500000003,
+        "trade_count": 120,
+        "halted": false,
+        "turnover": 1.8394915793689737,
+        "realized_pnl": -2144.2488381787884,
+        "unrealized_pnl": 206.28393424848463,
+        "trading_days": 251,
+        "daily_sharpe": -0.693125869085286,
+        "average_gross_exposure_pct": 12.656830111918454,
+        "estimated_liquidation_return_pct": -1.9453285071303283
+      },
+      "contributions": [
+        {
+          "symbol": "ACN",
+          "net_profit": 141.32726483064107
+        },
+        {
+          "symbol": "GILD",
+          "net_profit": 681.2551607529157
+        },
+        {
+          "symbol": "INTU",
+          "net_profit": -1482.00589841293
+        },
+        {
+          "symbol": "LMT",
+          "net_profit": -382.3185968972093
+        },
+        {
+          "symbol": "LOW",
+          "net_profit": 0.0
+        },
+        {
+          "symbol": "MCD",
+          "net_profit": -201.51355450852043
+        },
+        {
+          "symbol": "NEE",
+          "net_profit": -399.43651845420027
+        },
+        {
+          "symbol": "NKE",
+          "net_profit": 0.0
+        },
+        {
+          "symbol": "PLD",
+          "net_profit": -207.35350623331942
+        },
+        {
+          "symbol": "SO",
+          "net_profit": -87.91925500767911
+        }
+      ],
+      "coverage": {
+        "eligible": 1131,
+        "not_eligible": 707,
+        "missing": 77,
+        "expired": 605
+      },
+      "initial_judgments": {
+        "ACN": {
+          "status": "候选通过",
+          "signal": 0.9048964449054472,
+          "sue": 1.8097928898108944,
+          "quarter_end": "2025-05-31",
+          "first_filed": "2025-06-20",
+          "source_filed": "2025-06-20",
+          "accn": "0001467373-25-000169",
+          "tag": "NetIncomeLoss",
+          "net_income": 2197501000,
+          "delta": 265318000.0,
+          "scale": 146601305.3171643
+        },
+        "GILD": {
+          "status": "候选通过",
+          "signal": 0.05915610575383923,
+          "sue": 0.11831221150767846,
+          "quarter_end": "2025-06-30",
+          "first_filed": "2025-08-07",
+          "source_filed": "2025-08-07",
+          "accn": "0000882095-25-000032",
+          "tag": "NetIncomeLoss",
+          "net_income": 1960000000,
+          "delta": 346000000.0,
+          "scale": 2924465662.4269476
+        },
+        "INTU": {
+          "status": "候选通过",
+          "signal": 1.0,
+          "sue": 2.5611961012103563,
+          "quarter_end": "2025-04-30",
+          "first_filed": "2025-05-22",
+          "source_filed": "2025-05-22",
+          "accn": "0000896878-25-000022",
+          "tag": "NetIncomeLoss",
+          "net_income": 2820000000,
+          "delta": 431000000.0,
+          "scale": 168280749.68422773
+        },
+        "LMT": {
+          "status": "候选未通过",
+          "signal": 0.0,
+          "sue": -2.119563950616036,
+          "quarter_end": "2025-06-29",
+          "first_filed": "2025-07-22",
+          "source_filed": "2025-07-22",
+          "accn": "0001628280-25-035565",
+          "tag": "NetIncomeLoss",
+          "net_income": 342000000,
+          "delta": -1299000000.0,
+          "scale": 612861904.7434049
+        },
+        "LOW": {
+          "status": "候选通过",
+          "signal": 0.008211837005397673,
+          "sue": 0.016423674010795346,
+          "quarter_end": "2025-08-01",
+          "first_filed": "2025-08-28",
+          "source_filed": "2025-08-28",
+          "accn": "0000060667-25-000174",
+          "tag": "NetIncomeLoss",
+          "net_income": 2398000000,
+          "delta": 15000000.0,
+          "scale": 913315741.0540687
+        },
+        "MCD": {
+          "status": "候选通过",
+          "signal": 0.2393089621822019,
+          "sue": 0.4786179243644038,
+          "quarter_end": "2025-06-30",
+          "first_filed": "2025-08-06",
+          "source_filed": "2025-08-06",
+          "accn": "0000063908-25-000039",
+          "tag": "NetIncomeLoss",
+          "net_income": 2253000000,
+          "delta": 231000000.0,
+          "scale": 482639676.11903363
+        },
+        "NEE": {
+          "status": "候选通过",
+          "signal": 0.14883970073183841,
+          "sue": 0.29767940146367683,
+          "quarter_end": "2025-06-30",
+          "first_filed": "2025-07-23",
+          "source_filed": "2025-07-23",
+          "accn": "0000753308-25-000040",
+          "tag": "NetIncomeLoss",
+          "net_income": 2028000000,
+          "delta": 406000000.0,
+          "scale": 1363883419.5571325
+        },
+        "NKE": {
+          "status": "候选未通过",
+          "signal": 0.0,
+          "sue": -1.5808214235252038,
+          "quarter_end": "2025-02-28",
+          "first_filed": "2025-04-03",
+          "source_filed": "2025-04-03",
+          "accn": "0000320187-25-000016",
+          "tag": "NetIncomeLoss",
+          "net_income": 794000000,
+          "delta": -378000000.0,
+          "scale": 239116192.61653647
+        },
+        "PLD": {
+          "status": "候选未通过",
+          "signal": 0.0,
+          "sue": -0.7005866954148178,
+          "quarter_end": "2025-06-30",
+          "first_filed": "2025-07-30",
+          "source_filed": "2025-07-30",
+          "accn": "0000950170-25-099770",
+          "tag": "NetIncomeLoss",
+          "net_income": 571229000,
+          "delta": -290119000.0,
+          "scale": 414108634.8038916
+        },
+        "SO": {
+          "status": "候选未通过",
+          "signal": 0.0,
+          "sue": -1.2831657517604151,
+          "quarter_end": "2025-06-30",
+          "first_filed": "2025-07-31",
+          "source_filed": "2025-07-31",
+          "accn": "0000092122-25-000076",
+          "tag": "NetIncomeLoss",
+          "net_income": 880000000,
+          "delta": -323000000.0,
+          "scale": 251721182.2064813
+        }
+      },
+      "config": {
+        "allocation": {
+          "enabled": false,
+          "symbols": [],
+          "lookback": 60,
+          "max_positions": 3,
+          "max_weight": 0.35,
+          "cash_reserve": 0.05,
+          "risk_aversion": 10.0,
+          "cost_penalty": 2.0,
+          "rebalance_band": 0.02,
+          "max_daily_turnover": 1.0,
+          "rebalance_minutes": 30
+        },
+        "model": "fixed_ensemble",
+        "lookback": 20,
+        "horizon": 5,
+        "rebalance_days": 5,
+        "confidence": 0.5,
+        "tranche_weight": 0.1,
+        "max_weight": 0.2,
+        "capital_mode": "signal_budget",
+        "classifier_sha256": null,
+        "portfolio_policy": "legacy",
+        "entry_band": 0.005,
+        "daily_vol_target": 0.015,
+        "stop_loss_pct": 10.0,
+        "max_drawdown_pct": 10.0,
+        "costs": {
+          "allocation": {
+            "enabled": false,
+            "symbols": [],
+            "lookback": 60,
+            "max_positions": 3,
+            "max_weight": 0.35,
+            "cash_reserve": 0.05,
+            "risk_aversion": 10.0,
+            "cost_penalty": 2.0,
+            "rebalance_band": 0.02,
+            "max_daily_turnover": 1.0,
+            "rebalance_minutes": 30
+          },
+          "strategy": "adaptive",
+          "fast": 5,
+          "stat_window": 120,
+          "stat_horizon": 15,
+          "stat_entry_z": 1.5,
+          "stat_confidence": 0.5,
+          "stat_process_noise": 0.001,
+          "slow": 20,
+          "flatten_minutes": 5,
+          "opening_minutes": 15,
+          "reversion_bps": 30.0,
+          "stop_loss_bps": 100.0,
+          "regime_window": 60,
+          "min_reward_risk": 1.2,
+          "atr_window": 14,
+          "stop_atr": 2.0,
+          "take_atr": 3.0,
+          "breakout_buffer_atr": 0.1,
+          "reversion_atr": 2.0,
+          "momentum_threshold_bps": 10.0,
+          "regime_gate": "off",
+          "regime_window_days": 10,
+          "regime_min_drift_bps": 0.0,
+          "regime_max_efficiency": 0.35,
+          "max_scaling_lots": 3,
+          "lot_breakeven_hold": false,
+          "lot_patience_minutes": 45,
+          "lot_hard_stop_atr": 4.0,
+          "tranche_requires_uptrend": false,
+          "min_relative_volume": 1.2,
+          "max_hold_minutes": 30,
+          "cooldown_minutes": 10,
+          "max_daily_entries": 4,
+          "daily_loss_bps": 100.0,
+          "risk_per_trade_bps": 25.0,
+          "rule_cost_multiplier": 1.5,
+          "initial_cash": 100000.0,
+          "spread_bps": 2.0,
+          "slippage_bps": 2.0,
+          "commission_per_share": 0.005,
+          "minimum_commission": 1.0,
+          "sell_fee_bps": 0.3,
+          "participation": 0.01
+        }
+      }
+    },
+    {
+      "pool": "random10",
+      "with_price": false,
+      "cost_multiplier": 2,
+      "metrics": {
+        "return_pct": -2.1449849688069067,
+        "final_equity": 97855.01503119309,
+        "max_drawdown_pct": 4.244547195340176,
+        "fees": 248.9823308067999,
+        "impact_cost": 108.71263800000006,
+        "trade_count": 122,
+        "halted": false,
+        "turnover": 1.8439396131540327,
+        "realized_pnl": -2343.014837303773,
+        "unrealized_pnl": 198.02986849697055,
+        "trading_days": 251,
+        "daily_sharpe": -0.7709181015499605,
+        "average_gross_exposure_pct": 12.641277927132933,
+        "estimated_liquidation_return_pct": -2.159712175206907
+      },
+      "contributions": [
+        {
+          "symbol": "ACN",
+          "net_profit": 111.41973592255863
+        },
+        {
+          "symbol": "GILD",
+          "net_profit": 659.0087017471599
+        },
+        {
+          "symbol": "INTU",
+          "net_profit": -1552.9589569946784
+        },
+        {
+          "symbol": "LMT",
+          "net_profit": -387.16718298883916
+        },
+        {
+          "symbol": "LOW",
+          "net_profit": 0.0
+        },
+        {
+          "symbol": "MCD",
+          "net_profit": -211.37205383408036
+        },
+        {
+          "symbol": "NEE",
+          "net_profit": -435.4911757747195
+        },
+        {
+          "symbol": "NKE",
+          "net_profit": 0.0
+        },
+        {
+          "symbol": "PLD",
+          "net_profit": -222.8961043761201
+        },
+        {
+          "symbol": "SO",
+          "net_profit": -105.52793250808105
+        }
+      ],
+      "coverage": {
+        "eligible": 1131,
+        "not_eligible": 707,
+        "missing": 77,
+        "expired": 605
+      },
+      "initial_judgments": {
+        "ACN": {
+          "status": "候选通过",
+          "signal": 0.9048964449054472,
+          "sue": 1.8097928898108944,
+          "quarter_end": "2025-05-31",
+          "first_filed": "2025-06-20",
+          "source_filed": "2025-06-20",
+          "accn": "0001467373-25-000169",
+          "tag": "NetIncomeLoss",
+          "net_income": 2197501000,
+          "delta": 265318000.0,
+          "scale": 146601305.3171643
+        },
+        "GILD": {
+          "status": "候选通过",
+          "signal": 0.05915610575383923,
+          "sue": 0.11831221150767846,
+          "quarter_end": "2025-06-30",
+          "first_filed": "2025-08-07",
+          "source_filed": "2025-08-07",
+          "accn": "0000882095-25-000032",
+          "tag": "NetIncomeLoss",
+          "net_income": 1960000000,
+          "delta": 346000000.0,
+          "scale": 2924465662.4269476
+        },
+        "INTU": {
+          "status": "候选通过",
+          "signal": 1.0,
+          "sue": 2.5611961012103563,
+          "quarter_end": "2025-04-30",
+          "first_filed": "2025-05-22",
+          "source_filed": "2025-05-22",
+          "accn": "0000896878-25-000022",
+          "tag": "NetIncomeLoss",
+          "net_income": 2820000000,
+          "delta": 431000000.0,
+          "scale": 168280749.68422773
+        },
+        "LMT": {
+          "status": "候选未通过",
+          "signal": 0.0,
+          "sue": -2.119563950616036,
+          "quarter_end": "2025-06-29",
+          "first_filed": "2025-07-22",
+          "source_filed": "2025-07-22",
+          "accn": "0001628280-25-035565",
+          "tag": "NetIncomeLoss",
+          "net_income": 342000000,
+          "delta": -1299000000.0,
+          "scale": 612861904.7434049
+        },
+        "LOW": {
+          "status": "候选通过",
+          "signal": 0.008211837005397673,
+          "sue": 0.016423674010795346,
+          "quarter_end": "2025-08-01",
+          "first_filed": "2025-08-28",
+          "source_filed": "2025-08-28",
+          "accn": "0000060667-25-000174",
+          "tag": "NetIncomeLoss",
+          "net_income": 2398000000,
+          "delta": 15000000.0,
+          "scale": 913315741.0540687
+        },
+        "MCD": {
+          "status": "候选通过",
+          "signal": 0.2393089621822019,
+          "sue": 0.4786179243644038,
+          "quarter_end": "2025-06-30",
+          "first_filed": "2025-08-06",
+          "source_filed": "2025-08-06",
+          "accn": "0000063908-25-000039",
+          "tag": "NetIncomeLoss",
+          "net_income": 2253000000,
+          "delta": 231000000.0,
+          "scale": 482639676.11903363
+        },
+        "NEE": {
+          "status": "候选通过",
+          "signal": 0.14883970073183841,
+          "sue": 0.29767940146367683,
+          "quarter_end": "2025-06-30",
+          "first_filed": "2025-07-23",
+          "source_filed": "2025-07-23",
+          "accn": "0000753308-25-000040",
+          "tag": "NetIncomeLoss",
+          "net_income": 2028000000,
+          "delta": 406000000.0,
+          "scale": 1363883419.5571325
+        },
+        "NKE": {
+          "status": "候选未通过",
+          "signal": 0.0,
+          "sue": -1.5808214235252038,
+          "quarter_end": "2025-02-28",
+          "first_filed": "2025-04-03",
+          "source_filed": "2025-04-03",
+          "accn": "0000320187-25-000016",
+          "tag": "NetIncomeLoss",
+          "net_income": 794000000,
+          "delta": -378000000.0,
+          "scale": 239116192.61653647
+        },
+        "PLD": {
+          "status": "候选未通过",
+          "signal": 0.0,
+          "sue": -0.7005866954148178,
+          "quarter_end": "2025-06-30",
+          "first_filed": "2025-07-30",
+          "source_filed": "2025-07-30",
+          "accn": "0000950170-25-099770",
+          "tag": "NetIncomeLoss",
+          "net_income": 571229000,
+          "delta": -290119000.0,
+          "scale": 414108634.8038916
+        },
+        "SO": {
+          "status": "候选未通过",
+          "signal": 0.0,
+          "sue": -1.2831657517604151,
+          "quarter_end": "2025-06-30",
+          "first_filed": "2025-07-31",
+          "source_filed": "2025-07-31",
+          "accn": "0000092122-25-000076",
+          "tag": "NetIncomeLoss",
+          "net_income": 880000000,
+          "delta": -323000000.0,
+          "scale": 251721182.2064813
+        }
+      },
+      "config": {
+        "allocation": {
+          "enabled": false,
+          "symbols": [],
+          "lookback": 60,
+          "max_positions": 3,
+          "max_weight": 0.35,
+          "cash_reserve": 0.05,
+          "risk_aversion": 10.0,
+          "cost_penalty": 2.0,
+          "rebalance_band": 0.02,
+          "max_daily_turnover": 1.0,
+          "rebalance_minutes": 30
+        },
+        "model": "fixed_ensemble",
+        "lookback": 20,
+        "horizon": 5,
+        "rebalance_days": 5,
+        "confidence": 0.5,
+        "tranche_weight": 0.1,
+        "max_weight": 0.2,
+        "capital_mode": "signal_budget",
+        "classifier_sha256": null,
+        "portfolio_policy": "legacy",
+        "entry_band": 0.005,
+        "daily_vol_target": 0.015,
+        "stop_loss_pct": 10.0,
+        "max_drawdown_pct": 10.0,
+        "costs": {
+          "allocation": {
+            "enabled": false,
+            "symbols": [],
+            "lookback": 60,
+            "max_positions": 3,
+            "max_weight": 0.35,
+            "cash_reserve": 0.05,
+            "risk_aversion": 10.0,
+            "cost_penalty": 2.0,
+            "rebalance_band": 0.02,
+            "max_daily_turnover": 1.0,
+            "rebalance_minutes": 30
+          },
+          "strategy": "adaptive",
+          "fast": 5,
+          "stat_window": 120,
+          "stat_horizon": 15,
+          "stat_entry_z": 1.5,
+          "stat_confidence": 0.5,
+          "stat_process_noise": 0.001,
+          "slow": 20,
+          "flatten_minutes": 5,
+          "opening_minutes": 15,
+          "reversion_bps": 30.0,
+          "stop_loss_bps": 100.0,
+          "regime_window": 60,
+          "min_reward_risk": 1.2,
+          "atr_window": 14,
+          "stop_atr": 2.0,
+          "take_atr": 3.0,
+          "breakout_buffer_atr": 0.1,
+          "reversion_atr": 2.0,
+          "momentum_threshold_bps": 10.0,
+          "regime_gate": "off",
+          "regime_window_days": 10,
+          "regime_min_drift_bps": 0.0,
+          "regime_max_efficiency": 0.35,
+          "max_scaling_lots": 3,
+          "lot_breakeven_hold": false,
+          "lot_patience_minutes": 45,
+          "lot_hard_stop_atr": 4.0,
+          "tranche_requires_uptrend": false,
+          "min_relative_volume": 1.2,
+          "max_hold_minutes": 30,
+          "cooldown_minutes": 10,
+          "max_daily_entries": 4,
+          "daily_loss_bps": 100.0,
+          "risk_per_trade_bps": 25.0,
+          "rule_cost_multiplier": 1.5,
+          "initial_cash": 100000.0,
+          "spread_bps": 4.0,
+          "slippage_bps": 4.0,
+          "commission_per_share": 0.01,
+          "minimum_commission": 2.0,
+          "sell_fee_bps": 0.6,
+          "participation": 0.01
+        }
+      }
+    },
+    {
+      "pool": "random10",
+      "with_price": true,
+      "cost_multiplier": 1,
+      "metrics": {
+        "return_pct": -0.39130825987216955,
+        "final_equity": 99608.69174012783,
+        "max_drawdown_pct": 1.3580498628771753,
+        "fees": 73.37834587214999,
+        "impact_cost": 27.889913999999994,
+        "trade_count": 72,
+        "halted": false,
+        "turnover": 0.9282828854738889,
+        "realized_pnl": -457.9008278721512,
+        "unrealized_pnl": 66.5925679999998,
+        "trading_days": 251,
+        "daily_sharpe": -0.3958832385726607,
+        "average_gross_exposure_pct": 3.547674059872735,
+        "estimated_liquidation_return_pct": -0.39255874307216887
+      },
+      "contributions": [
+        {
+          "symbol": "ACN",
+          "net_profit": 76.20006425401982
+        },
+        {
+          "symbol": "GILD",
+          "net_profit": 593.8872419357708
+        },
+        {
+          "symbol": "INTU",
+          "net_profit": 9.709418421250575
+        },
+        {
+          "symbol": "LMT",
+          "net_profit": -128.11430561370025
+        },
+        {
+          "symbol": "LOW",
+          "net_profit": 0.0
+        },
+        {
+          "symbol": "MCD",
+          "net_profit": -58.63809102465052
+        },
+        {
+          "symbol": "NEE",
+          "net_profit": -408.1689041545792
+        },
+        {
+          "symbol": "NKE",
+          "net_profit": 0.0
+        },
+        {
+          "symbol": "PLD",
+          "net_profit": -442.49296825592955
+        },
+        {
+          "symbol": "SO",
+          "net_profit": -33.69071543433006
+        }
+      ],
+      "coverage": {
+        "eligible": 1131,
+        "not_eligible": 707,
+        "missing": 77,
+        "expired": 605
+      },
+      "initial_judgments": {
+        "ACN": {
+          "status": "候选通过",
+          "signal": 0.9048964449054472,
+          "sue": 1.8097928898108944,
+          "quarter_end": "2025-05-31",
+          "first_filed": "2025-06-20",
+          "source_filed": "2025-06-20",
+          "accn": "0001467373-25-000169",
+          "tag": "NetIncomeLoss",
+          "net_income": 2197501000,
+          "delta": 265318000.0,
+          "scale": 146601305.3171643
+        },
+        "GILD": {
+          "status": "候选通过",
+          "signal": 0.05915610575383923,
+          "sue": 0.11831221150767846,
+          "quarter_end": "2025-06-30",
+          "first_filed": "2025-08-07",
+          "source_filed": "2025-08-07",
+          "accn": "0000882095-25-000032",
+          "tag": "NetIncomeLoss",
+          "net_income": 1960000000,
+          "delta": 346000000.0,
+          "scale": 2924465662.4269476
+        },
+        "INTU": {
+          "status": "候选通过",
+          "signal": 1.0,
+          "sue": 2.5611961012103563,
+          "quarter_end": "2025-04-30",
+          "first_filed": "2025-05-22",
+          "source_filed": "2025-05-22",
+          "accn": "0000896878-25-000022",
+          "tag": "NetIncomeLoss",
+          "net_income": 2820000000,
+          "delta": 431000000.0,
+          "scale": 168280749.68422773
+        },
+        "LMT": {
+          "status": "候选未通过",
+          "signal": 0.0,
+          "sue": -2.119563950616036,
+          "quarter_end": "2025-06-29",
+          "first_filed": "2025-07-22",
+          "source_filed": "2025-07-22",
+          "accn": "0001628280-25-035565",
+          "tag": "NetIncomeLoss",
+          "net_income": 342000000,
+          "delta": -1299000000.0,
+          "scale": 612861904.7434049
+        },
+        "LOW": {
+          "status": "候选通过",
+          "signal": 0.008211837005397673,
+          "sue": 0.016423674010795346,
+          "quarter_end": "2025-08-01",
+          "first_filed": "2025-08-28",
+          "source_filed": "2025-08-28",
+          "accn": "0000060667-25-000174",
+          "tag": "NetIncomeLoss",
+          "net_income": 2398000000,
+          "delta": 15000000.0,
+          "scale": 913315741.0540687
+        },
+        "MCD": {
+          "status": "候选通过",
+          "signal": 0.2393089621822019,
+          "sue": 0.4786179243644038,
+          "quarter_end": "2025-06-30",
+          "first_filed": "2025-08-06",
+          "source_filed": "2025-08-06",
+          "accn": "0000063908-25-000039",
+          "tag": "NetIncomeLoss",
+          "net_income": 2253000000,
+          "delta": 231000000.0,
+          "scale": 482639676.11903363
+        },
+        "NEE": {
+          "status": "候选通过",
+          "signal": 0.14883970073183841,
+          "sue": 0.29767940146367683,
+          "quarter_end": "2025-06-30",
+          "first_filed": "2025-07-23",
+          "source_filed": "2025-07-23",
+          "accn": "0000753308-25-000040",
+          "tag": "NetIncomeLoss",
+          "net_income": 2028000000,
+          "delta": 406000000.0,
+          "scale": 1363883419.5571325
+        },
+        "NKE": {
+          "status": "候选未通过",
+          "signal": 0.0,
+          "sue": -1.5808214235252038,
+          "quarter_end": "2025-02-28",
+          "first_filed": "2025-04-03",
+          "source_filed": "2025-04-03",
+          "accn": "0000320187-25-000016",
+          "tag": "NetIncomeLoss",
+          "net_income": 794000000,
+          "delta": -378000000.0,
+          "scale": 239116192.61653647
+        },
+        "PLD": {
+          "status": "候选未通过",
+          "signal": 0.0,
+          "sue": -0.7005866954148178,
+          "quarter_end": "2025-06-30",
+          "first_filed": "2025-07-30",
+          "source_filed": "2025-07-30",
+          "accn": "0000950170-25-099770",
+          "tag": "NetIncomeLoss",
+          "net_income": 571229000,
+          "delta": -290119000.0,
+          "scale": 414108634.8038916
+        },
+        "SO": {
+          "status": "候选未通过",
+          "signal": 0.0,
+          "sue": -1.2831657517604151,
+          "quarter_end": "2025-06-30",
+          "first_filed": "2025-07-31",
+          "source_filed": "2025-07-31",
+          "accn": "0000092122-25-000076",
+          "tag": "NetIncomeLoss",
+          "net_income": 880000000,
+          "delta": -323000000.0,
+          "scale": 251721182.2064813
+        }
+      },
+      "config": {
+        "allocation": {
+          "enabled": false,
+          "symbols": [],
+          "lookback": 60,
+          "max_positions": 3,
+          "max_weight": 0.35,
+          "cash_reserve": 0.05,
+          "risk_aversion": 10.0,
+          "cost_penalty": 2.0,
+          "rebalance_band": 0.02,
+          "max_daily_turnover": 1.0,
+          "rebalance_minutes": 30
+        },
+        "model": "fixed_ensemble",
+        "lookback": 20,
+        "horizon": 5,
+        "rebalance_days": 5,
+        "confidence": 0.5,
+        "tranche_weight": 0.1,
+        "max_weight": 0.2,
+        "capital_mode": "signal_budget",
+        "classifier_sha256": null,
+        "portfolio_policy": "legacy",
+        "entry_band": 0.005,
+        "daily_vol_target": 0.015,
+        "stop_loss_pct": 10.0,
+        "max_drawdown_pct": 10.0,
+        "costs": {
+          "allocation": {
+            "enabled": false,
+            "symbols": [],
+            "lookback": 60,
+            "max_positions": 3,
+            "max_weight": 0.35,
+            "cash_reserve": 0.05,
+            "risk_aversion": 10.0,
+            "cost_penalty": 2.0,
+            "rebalance_band": 0.02,
+            "max_daily_turnover": 1.0,
+            "rebalance_minutes": 30
+          },
+          "strategy": "adaptive",
+          "fast": 5,
+          "stat_window": 120,
+          "stat_horizon": 15,
+          "stat_entry_z": 1.5,
+          "stat_confidence": 0.5,
+          "stat_process_noise": 0.001,
+          "slow": 20,
+          "flatten_minutes": 5,
+          "opening_minutes": 15,
+          "reversion_bps": 30.0,
+          "stop_loss_bps": 100.0,
+          "regime_window": 60,
+          "min_reward_risk": 1.2,
+          "atr_window": 14,
+          "stop_atr": 2.0,
+          "take_atr": 3.0,
+          "breakout_buffer_atr": 0.1,
+          "reversion_atr": 2.0,
+          "momentum_threshold_bps": 10.0,
+          "regime_gate": "off",
+          "regime_window_days": 10,
+          "regime_min_drift_bps": 0.0,
+          "regime_max_efficiency": 0.35,
+          "max_scaling_lots": 3,
+          "lot_breakeven_hold": false,
+          "lot_patience_minutes": 45,
+          "lot_hard_stop_atr": 4.0,
+          "tranche_requires_uptrend": false,
+          "min_relative_volume": 1.2,
+          "max_hold_minutes": 30,
+          "cooldown_minutes": 10,
+          "max_daily_entries": 4,
+          "daily_loss_bps": 100.0,
+          "risk_per_trade_bps": 25.0,
+          "rule_cost_multiplier": 1.5,
+          "initial_cash": 100000.0,
+          "spread_bps": 2.0,
+          "slippage_bps": 2.0,
+          "commission_per_share": 0.005,
+          "minimum_commission": 1.0,
+          "sell_fee_bps": 0.3,
+          "participation": 0.01
+        }
+      }
+    },
+    {
+      "pool": "random10",
+      "with_price": true,
+      "cost_multiplier": 2,
+      "metrics": {
+        "return_pct": -0.4925756924885949,
+        "final_equity": 99507.4243075114,
+        "max_drawdown_pct": 1.4035447656843059,
+        "fees": 146.75586448860003,
+        "impact_cost": 55.77982799999999,
+        "trade_count": 72,
+        "halted": false,
+        "turnover": 0.9287773486878267,
+        "realized_pnl": -558.1608284886017,
+        "unrealized_pnl": 65.58513599999992,
+        "trading_days": 251,
+        "daily_sharpe": -0.49928638975621237,
+        "average_gross_exposure_pct": 3.549811846300721,
+        "estimated_liquidation_return_pct": -0.49507665888859353
+      },
+      "contributions": [
+        {
+          "symbol": "ACN",
+          "net_profit": 73.88013181607994
+        },
+        {
+          "symbol": "GILD",
+          "net_profit": 568.8696325430799
+        },
+        {
+          "symbol": "INTU",
+          "net_profit": 6.458872685000188
+        },
+        {
+          "symbol": "LMT",
+          "net_profit": -131.92856045479994
+        },
+        {
+          "symbol": "LOW",
+          "net_profit": 0.0
+        },
+        {
+          "symbol": "MCD",
+          "net_profit": -67.78612109860012
+        },
+        {
+          "symbol": "NEE",
+          "net_profit": -443.3924908183194
+        },
+        {
+          "symbol": "NKE",
+          "net_profit": 0.0
+        },
+        {
+          "symbol": "PLD",
+          "net_profit": -458.38574322372097
+        },
+        {
+          "symbol": "SO",
+          "net_profit": -40.2914139373201
+        }
+      ],
+      "coverage": {
+        "eligible": 1131,
+        "not_eligible": 707,
+        "missing": 77,
+        "expired": 605
+      },
+      "initial_judgments": {
+        "ACN": {
+          "status": "候选通过",
+          "signal": 0.9048964449054472,
+          "sue": 1.8097928898108944,
+          "quarter_end": "2025-05-31",
+          "first_filed": "2025-06-20",
+          "source_filed": "2025-06-20",
+          "accn": "0001467373-25-000169",
+          "tag": "NetIncomeLoss",
+          "net_income": 2197501000,
+          "delta": 265318000.0,
+          "scale": 146601305.3171643
+        },
+        "GILD": {
+          "status": "候选通过",
+          "signal": 0.05915610575383923,
+          "sue": 0.11831221150767846,
+          "quarter_end": "2025-06-30",
+          "first_filed": "2025-08-07",
+          "source_filed": "2025-08-07",
+          "accn": "0000882095-25-000032",
+          "tag": "NetIncomeLoss",
+          "net_income": 1960000000,
+          "delta": 346000000.0,
+          "scale": 2924465662.4269476
+        },
+        "INTU": {
+          "status": "候选通过",
+          "signal": 1.0,
+          "sue": 2.5611961012103563,
+          "quarter_end": "2025-04-30",
+          "first_filed": "2025-05-22",
+          "source_filed": "2025-05-22",
+          "accn": "0000896878-25-000022",
+          "tag": "NetIncomeLoss",
+          "net_income": 2820000000,
+          "delta": 431000000.0,
+          "scale": 168280749.68422773
+        },
+        "LMT": {
+          "status": "候选未通过",
+          "signal": 0.0,
+          "sue": -2.119563950616036,
+          "quarter_end": "2025-06-29",
+          "first_filed": "2025-07-22",
+          "source_filed": "2025-07-22",
+          "accn": "0001628280-25-035565",
+          "tag": "NetIncomeLoss",
+          "net_income": 342000000,
+          "delta": -1299000000.0,
+          "scale": 612861904.7434049
+        },
+        "LOW": {
+          "status": "候选通过",
+          "signal": 0.008211837005397673,
+          "sue": 0.016423674010795346,
+          "quarter_end": "2025-08-01",
+          "first_filed": "2025-08-28",
+          "source_filed": "2025-08-28",
+          "accn": "0000060667-25-000174",
+          "tag": "NetIncomeLoss",
+          "net_income": 2398000000,
+          "delta": 15000000.0,
+          "scale": 913315741.0540687
+        },
+        "MCD": {
+          "status": "候选通过",
+          "signal": 0.2393089621822019,
+          "sue": 0.4786179243644038,
+          "quarter_end": "2025-06-30",
+          "first_filed": "2025-08-06",
+          "source_filed": "2025-08-06",
+          "accn": "0000063908-25-000039",
+          "tag": "NetIncomeLoss",
+          "net_income": 2253000000,
+          "delta": 231000000.0,
+          "scale": 482639676.11903363
+        },
+        "NEE": {
+          "status": "候选通过",
+          "signal": 0.14883970073183841,
+          "sue": 0.29767940146367683,
+          "quarter_end": "2025-06-30",
+          "first_filed": "2025-07-23",
+          "source_filed": "2025-07-23",
+          "accn": "0000753308-25-000040",
+          "tag": "NetIncomeLoss",
+          "net_income": 2028000000,
+          "delta": 406000000.0,
+          "scale": 1363883419.5571325
+        },
+        "NKE": {
+          "status": "候选未通过",
+          "signal": 0.0,
+          "sue": -1.5808214235252038,
+          "quarter_end": "2025-02-28",
+          "first_filed": "2025-04-03",
+          "source_filed": "2025-04-03",
+          "accn": "0000320187-25-000016",
+          "tag": "NetIncomeLoss",
+          "net_income": 794000000,
+          "delta": -378000000.0,
+          "scale": 239116192.61653647
+        },
+        "PLD": {
+          "status": "候选未通过",
+          "signal": 0.0,
+          "sue": -0.7005866954148178,
+          "quarter_end": "2025-06-30",
+          "first_filed": "2025-07-30",
+          "source_filed": "2025-07-30",
+          "accn": "0000950170-25-099770",
+          "tag": "NetIncomeLoss",
+          "net_income": 571229000,
+          "delta": -290119000.0,
+          "scale": 414108634.8038916
+        },
+        "SO": {
+          "status": "候选未通过",
+          "signal": 0.0,
+          "sue": -1.2831657517604151,
+          "quarter_end": "2025-06-30",
+          "first_filed": "2025-07-31",
+          "source_filed": "2025-07-31",
+          "accn": "0000092122-25-000076",
+          "tag": "NetIncomeLoss",
+          "net_income": 880000000,
+          "delta": -323000000.0,
+          "scale": 251721182.2064813
+        }
+      },
+      "config": {
+        "allocation": {
+          "enabled": false,
+          "symbols": [],
+          "lookback": 60,
+          "max_positions": 3,
+          "max_weight": 0.35,
+          "cash_reserve": 0.05,
+          "risk_aversion": 10.0,
+          "cost_penalty": 2.0,
+          "rebalance_band": 0.02,
+          "max_daily_turnover": 1.0,
+          "rebalance_minutes": 30
+        },
+        "model": "fixed_ensemble",
+        "lookback": 20,
+        "horizon": 5,
+        "rebalance_days": 5,
+        "confidence": 0.5,
+        "tranche_weight": 0.1,
+        "max_weight": 0.2,
+        "capital_mode": "signal_budget",
+        "classifier_sha256": null,
+        "portfolio_policy": "legacy",
+        "entry_band": 0.005,
+        "daily_vol_target": 0.015,
+        "stop_loss_pct": 10.0,
+        "max_drawdown_pct": 10.0,
+        "costs": {
+          "allocation": {
+            "enabled": false,
+            "symbols": [],
+            "lookback": 60,
+            "max_positions": 3,
+            "max_weight": 0.35,
+            "cash_reserve": 0.05,
+            "risk_aversion": 10.0,
+            "cost_penalty": 2.0,
+            "rebalance_band": 0.02,
+            "max_daily_turnover": 1.0,
+            "rebalance_minutes": 30
+          },
+          "strategy": "adaptive",
+          "fast": 5,
+          "stat_window": 120,
+          "stat_horizon": 15,
+          "stat_entry_z": 1.5,
+          "stat_confidence": 0.5,
+          "stat_process_noise": 0.001,
+          "slow": 20,
+          "flatten_minutes": 5,
+          "opening_minutes": 15,
+          "reversion_bps": 30.0,
+          "stop_loss_bps": 100.0,
+          "regime_window": 60,
+          "min_reward_risk": 1.2,
+          "atr_window": 14,
+          "stop_atr": 2.0,
+          "take_atr": 3.0,
+          "breakout_buffer_atr": 0.1,
+          "reversion_atr": 2.0,
+          "momentum_threshold_bps": 10.0,
+          "regime_gate": "off",
+          "regime_window_days": 10,
+          "regime_min_drift_bps": 0.0,
+          "regime_max_efficiency": 0.35,
+          "max_scaling_lots": 3,
+          "lot_breakeven_hold": false,
+          "lot_patience_minutes": 45,
+          "lot_hard_stop_atr": 4.0,
+          "tranche_requires_uptrend": false,
+          "min_relative_volume": 1.2,
+          "max_hold_minutes": 30,
+          "cooldown_minutes": 10,
+          "max_daily_entries": 4,
+          "daily_loss_bps": 100.0,
+          "risk_per_trade_bps": 25.0,
+          "rule_cost_multiplier": 1.5,
+          "initial_cash": 100000.0,
+          "spread_bps": 4.0,
+          "slippage_bps": 4.0,
+          "commission_per_share": 0.01,
+          "minimum_commission": 2.0,
+          "sell_fee_bps": 0.6,
+          "participation": 0.01
+        }
+      }
+    }
+  ]
+}

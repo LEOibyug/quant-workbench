@@ -1,0 +1,454 @@
+{
+  "AAPL": {
+    "cik": 320193,
+    "entity": "Apple Inc.",
+    "identity_verified": true,
+    "current_tickers": [
+      "AAPL"
+    ]
+  },
+  "MSFT": {
+    "cik": 789019,
+    "entity": "MICROSOFT CORPORATION",
+    "identity_verified": true,
+    "current_tickers": [
+      "MSFT"
+    ]
+  },
+  "NVDA": {
+    "cik": 1045810,
+    "entity": "NVIDIA CORP",
+    "identity_verified": true,
+    "current_tickers": [
+      "NVDA"
+    ]
+  },
+  "AMZN": {
+    "cik": 1018724,
+    "entity": "AMAZON COM INC",
+    "identity_verified": true,
+    "current_tickers": [
+      "AMZN"
+    ]
+  },
+  "META": {
+    "cik": 1326801,
+    "entity": "Meta Platforms, Inc.",
+    "identity_verified": true,
+    "current_tickers": [
+      "META"
+    ]
+  },
+  "GOOGL": {
+    "cik": 1652044,
+    "entity": "Alphabet Inc.",
+    "identity_verified": true,
+    "current_tickers": [
+      "GOOGL",
+      "GOOG",
+      "GOOGM",
+      "GOOGN"
+    ]
+  },
+  "AMD": {
+    "cik": 2488,
+    "entity": "ADVANCED MICRO DEVICES INC",
+    "identity_verified": true,
+    "current_tickers": [
+      "AMD"
+    ]
+  },
+  "TSLA": {
+    "cik": 1318605,
+    "entity": "Tesla, Inc.",
+    "identity_verified": true,
+    "current_tickers": [
+      "TSLA"
+    ]
+  },
+  "COST": {
+    "cik": 909832,
+    "entity": "COSTCO WHOLESALE CORP /NEW",
+    "identity_verified": true,
+    "current_tickers": [
+      "COST"
+    ]
+  },
+  "JNJ": {
+    "cik": 200406,
+    "entity": "Johnson & Johnson",
+    "identity_verified": true,
+    "current_tickers": [
+      "JNJ"
+    ]
+  },
+  "ACN": {
+    "cik": 1467373,
+    "entity": "Accenture plc",
+    "identity_verified": true,
+    "current_tickers": [
+      "ACN"
+    ]
+  },
+  "GILD": {
+    "cik": 882095,
+    "entity": "GILEAD SCIENCES, INC.",
+    "identity_verified": true,
+    "current_tickers": [
+      "GILD"
+    ]
+  },
+  "INTU": {
+    "cik": 896878,
+    "entity": "INTUIT INC.",
+    "identity_verified": true,
+    "current_tickers": [
+      "INTU"
+    ]
+  },
+  "LMT": {
+    "cik": 936468,
+    "entity": "LOCKHEED MARTIN CORPORATION",
+    "identity_verified": true,
+    "current_tickers": [
+      "LMT"
+    ]
+  },
+  "LOW": {
+    "cik": 60667,
+    "entity": "LOWES COMPANIES INC",
+    "identity_verified": true,
+    "current_tickers": [
+      "LOW"
+    ]
+  },
+  "MCD": {
+    "cik": 63908,
+    "entity": "McDONALD\u2019S CORPORATION",
+    "identity_verified": true,
+    "current_tickers": [
+      "MCD"
+    ]
+  },
+  "NEE": {
+    "cik": 753308,
+    "entity": "NEXTERA ENERGY INC",
+    "identity_verified": true,
+    "current_tickers": [
+      "NEE",
+      "NEE.PN",
+      "NEE.PS",
+      "NEE.PT",
+      "NEE.PU",
+      "NEE.PV",
+      "NEE.PW"
+    ]
+  },
+  "NKE": {
+    "cik": 320187,
+    "entity": "NIKE, Inc.",
+    "identity_verified": true,
+    "current_tickers": [
+      "NKE"
+    ]
+  },
+  "PLD": {
+    "cik": 1045609,
+    "entity": "Prologis, Inc.",
+    "identity_verified": true,
+    "current_tickers": [
+      "PLD",
+      "PLDGP"
+    ]
+  },
+  "SO": {
+    "cik": 92122,
+    "entity": "SOUTHERN CO",
+    "identity_verified": true,
+    "current_tickers": [
+      "SO",
+      "SOJC",
+      "SOJD",
+      "SOJE",
+      "SOJF",
+      "SOMN"
+    ]
+  },
+  "ADBE": {
+    "cik": 796343,
+    "entity": "ADOBE INC.",
+    "identity_verified": true,
+    "current_tickers": [
+      "ADBE"
+    ]
+  },
+  "CRM": {
+    "cik": 1108524,
+    "entity": "Salesforce, Inc.",
+    "identity_verified": true,
+    "current_tickers": [
+      "CRM"
+    ]
+  },
+  "CSCO": {
+    "cik": 858877,
+    "entity": "CISCO SYSTEMS, INC.",
+    "identity_verified": true,
+    "current_tickers": [
+      "CSCO"
+    ]
+  },
+  "IBM": {
+    "cik": 51143,
+    "entity": "INTERNATIONAL BUSINESS MACHINES CORP",
+    "identity_verified": true,
+    "current_tickers": [
+      "IBM"
+    ]
+  },
+  "INTC": {
+    "cik": 50863,
+    "entity": "INTEL CORP",
+    "identity_verified": true,
+    "current_tickers": [
+      "INTC"
+    ]
+  },
+  "QCOM": {
+    "cik": 804328,
+    "entity": "QUALCOMM INC/DE",
+    "identity_verified": true,
+    "current_tickers": [
+      "QCOM"
+    ]
+  },
+  "TXN": {
+    "cik": 97476,
+    "entity": "TEXAS INSTRUMENTS INCORPORATED",
+    "identity_verified": true,
+    "current_tickers": [
+      "TXN"
+    ]
+  },
+  "MRK": {
+    "cik": 310158,
+    "entity": "Merck\u00a0& Co., Inc.",
+    "identity_verified": true,
+    "current_tickers": [
+      "MRK"
+    ]
+  },
+  "PG": {
+    "cik": 80424,
+    "entity": "The Procter & Gamble Company",
+    "identity_verified": true,
+    "current_tickers": [
+      "PG"
+    ]
+  },
+  "CAT": {
+    "cik": 18230,
+    "entity": "CATERPILLAR INC",
+    "identity_verified": true,
+    "current_tickers": [
+      "CAT"
+    ]
+  },
+  "AVGO": {
+    "cik": 1730168,
+    "entity": "Broadcom Inc.",
+    "identity_verified": true,
+    "current_tickers": [
+      "AVGO"
+    ]
+  },
+  "BRK.B": {
+    "cik": 1067983,
+    "entity": "BERKSHIRE HATHAWAY INC",
+    "identity_verified": true,
+    "current_tickers": [
+      "BRK.B",
+      "BRK.A"
+    ]
+  },
+  "JPM": {
+    "cik": 19617,
+    "entity": "JPMORGAN CHASE & CO",
+    "identity_verified": true,
+    "current_tickers": [
+      "JPM",
+      "JPM.PC",
+      "AMJB",
+      "JPM.PD",
+      "JPM.PJ",
+      "JPM.PK",
+      "JPM.PL",
+      "JPM.PM",
+      "VYLD"
+    ]
+  },
+  "LLY": {
+    "cik": 59478,
+    "entity": "ELI LILLY AND COMPANY",
+    "identity_verified": true,
+    "current_tickers": [
+      "LLY"
+    ]
+  },
+  "MA": {
+    "cik": 1141391,
+    "entity": "Mastercard Incorporated",
+    "identity_verified": true,
+    "current_tickers": [
+      "MA"
+    ]
+  },
+  "ORCL": {
+    "cik": 1341439,
+    "entity": "Oracle Corporation",
+    "identity_verified": true,
+    "current_tickers": [
+      "ORCL",
+      "ORCL.PD"
+    ]
+  },
+  "SOFI": {
+    "cik": 1818874,
+    "entity": "SoFi Technologies, Inc.",
+    "identity_verified": true,
+    "current_tickers": [
+      "SOFI"
+    ]
+  },
+  "V": {
+    "cik": 1403161,
+    "entity": "VISA INC.",
+    "identity_verified": true,
+    "current_tickers": [
+      "V"
+    ]
+  },
+  "WMT": {
+    "cik": 104169,
+    "entity": "WALMART INC.",
+    "identity_verified": true,
+    "current_tickers": [
+      "WMT"
+    ]
+  },
+  "XOM": {
+    "cik": 34088,
+    "entity": "Exxon Mobil Corporation",
+    "identity_verified": false,
+    "current_tickers": []
+  },
+  "BAC": {
+    "cik": 70858,
+    "entity": "BofA Finance LLC",
+    "identity_verified": true,
+    "current_tickers": [
+      "BAC",
+      "BML.PG",
+      "BML.PL",
+      "BAC.PB",
+      "BAC.PK",
+      "BAC.PE",
+      "BAC.PL",
+      "BAC.PM",
+      "BAC.PN",
+      "BAC.PO",
+      "BAC.PP",
+      "BAC.PQ",
+      "BAC.PS",
+      "BACRP",
+      "BML.PH",
+      "BML.PJ",
+      "MER.PK"
+    ]
+  },
+  "GS": {
+    "cik": 886982,
+    "entity": "The Goldman Sachs Group, Inc.",
+    "identity_verified": true,
+    "current_tickers": [
+      "GS",
+      "GSCE",
+      "GS.PA",
+      "GS.PC",
+      "GS.PD"
+    ]
+  },
+  "MS": {
+    "cik": 895421,
+    "entity": "MORGAN STANLEY",
+    "identity_verified": true,
+    "current_tickers": [
+      "MS",
+      "MS.PK",
+      "MS.PE",
+      "MS.PA",
+      "MS.PF",
+      "MS.PI",
+      "MS.PL",
+      "MS.PO",
+      "MS.PP",
+      "MS.PQ"
+    ]
+  },
+  "UNH": {
+    "cik": 731766,
+    "entity": "UnitedHealth Group Incorporated",
+    "identity_verified": true,
+    "current_tickers": [
+      "UNH"
+    ]
+  },
+  "ABBV": {
+    "cik": 1551152,
+    "entity": "AbbVie Inc.",
+    "identity_verified": true,
+    "current_tickers": [
+      "ABBV"
+    ]
+  },
+  "PEP": {
+    "cik": 77476,
+    "entity": "PepsiCo, Inc.",
+    "identity_verified": true,
+    "current_tickers": [
+      "PEP"
+    ]
+  },
+  "HD": {
+    "cik": 354950,
+    "entity": "The Home Depot, Inc.",
+    "identity_verified": true,
+    "current_tickers": [
+      "HD"
+    ]
+  },
+  "GE": {
+    "cik": 40545,
+    "entity": "GENERAL ELECTRIC CO",
+    "identity_verified": true,
+    "current_tickers": [
+      "GE"
+    ]
+  },
+  "CVX": {
+    "cik": 93410,
+    "entity": "Chevron Corp",
+    "identity_verified": true,
+    "current_tickers": [
+      "CVX"
+    ]
+  },
+  "KO": {
+    "cik": 21344,
+    "entity": "COCA COLA CO",
+    "identity_verified": true,
+    "current_tickers": [
+      "KO"
+    ]
+  }
+}
