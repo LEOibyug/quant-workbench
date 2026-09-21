@@ -1,0 +1,36 @@
+{
+  "url": "https://api.crossref.org/works/10.2139/ssrn.968338",
+  "title": [
+    "When Do Stop-Loss Rules Stop Losses?"
+  ],
+  "abstract": "<jats:p>Stop-loss rules - predetermined policies that reduce a portfolio's exposure after reaching a certain threshold of cumulative losses - are commonly used by retail and institutional investors to manage the risks of their investments, but have also been viewed with some skepticism by critics who question their efficacy. In this paper, we develop a simple framework for measuring the impact of stop-loss rules on the expected return and volatility of an arbitrary portfolio strategy, and derive conditions under which stop-loss rules add or subtract value to that portfolio strategy. We show that under the Random Walk Hypothesis, simple 0/1 stop-loss rules always decrease a strategy's expected return, but in the presence of momentum, stop-loss rules can add value. To illustrate the practical relevance of our framework, we provide an empirical analysis of a stop-loss policy applied to a buy-and-hold strategy in U.S. equities, where the stop-loss asset is U.S. long-term government bonds. Using monthly returns data from January 1950 to December 2004, we find that certain stop-loss rules add 50 to 100 basis points per month to the buy-and-hold portfolio during stop-out periods. By computing performance measures for several price processes, including a new regime-switching model that implies periodic Flights-to-quality, we provide a possible explanation for our empirical results and connections to the behavioral finance literature.</jats:p>",
+  "authors": [
+    {
+      "given": "Kathryn",
+      "family": "Kaminski",
+      "sequence": "first",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "ORCID": "https://orcid.org/0000-0003-2944-7773",
+      "authenticated-orcid": true,
+      "given": "Andrew W.",
+      "family": "Lo",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    }
+  ],
+  "full_text_read": false
+}
