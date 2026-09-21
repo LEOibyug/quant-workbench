@@ -1,0 +1,650 @@
+[
+  {
+    "pool": "original20",
+    "start": "2025-09-01",
+    "end": "2026-09-01",
+    "method": "low_growth",
+    "cost_multiplier": 1,
+    "identical_targets": true,
+    "exact_result_if_identical": true
+  },
+  {
+    "pool": "original20",
+    "start": "2025-09-01",
+    "end": "2026-09-01",
+    "method": "high_growth",
+    "cost_multiplier": 1,
+    "identical_targets": true,
+    "exact_result_if_identical": true
+  },
+  {
+    "pool": "original20",
+    "start": "2025-09-01",
+    "end": "2026-09-01",
+    "method": "eligible",
+    "cost_multiplier": 1,
+    "identical_targets": true,
+    "exact_result_if_identical": true
+  },
+  {
+    "pool": "original20",
+    "start": "2025-09-01",
+    "end": "2026-09-01",
+    "method": "low_growth",
+    "cost_multiplier": 2,
+    "identical_targets": true,
+    "exact_result_if_identical": true
+  },
+  {
+    "pool": "original20",
+    "start": "2025-09-01",
+    "end": "2026-09-01",
+    "method": "high_growth",
+    "cost_multiplier": 2,
+    "identical_targets": true,
+    "exact_result_if_identical": true
+  },
+  {
+    "pool": "original20",
+    "start": "2025-09-01",
+    "end": "2026-09-01",
+    "method": "eligible",
+    "cost_multiplier": 2,
+    "identical_targets": true,
+    "exact_result_if_identical": true
+  },
+  {
+    "pool": "alternate20",
+    "start": "2025-09-01",
+    "end": "2026-09-01",
+    "method": "low_growth",
+    "cost_multiplier": 1,
+    "identical_targets": true,
+    "exact_result_if_identical": true
+  },
+  {
+    "pool": "alternate20",
+    "start": "2025-09-01",
+    "end": "2026-09-01",
+    "method": "high_growth",
+    "cost_multiplier": 1,
+    "identical_targets": true,
+    "exact_result_if_identical": true
+  },
+  {
+    "pool": "alternate20",
+    "start": "2025-09-01",
+    "end": "2026-09-01",
+    "method": "eligible",
+    "cost_multiplier": 1,
+    "identical_targets": true,
+    "exact_result_if_identical": true
+  },
+  {
+    "pool": "alternate20",
+    "start": "2025-09-01",
+    "end": "2026-09-01",
+    "method": "low_growth",
+    "cost_multiplier": 2,
+    "identical_targets": true,
+    "exact_result_if_identical": true
+  },
+  {
+    "pool": "alternate20",
+    "start": "2025-09-01",
+    "end": "2026-09-01",
+    "method": "high_growth",
+    "cost_multiplier": 2,
+    "identical_targets": true,
+    "exact_result_if_identical": true
+  },
+  {
+    "pool": "alternate20",
+    "start": "2025-09-01",
+    "end": "2026-09-01",
+    "method": "eligible",
+    "cost_multiplier": 2,
+    "identical_targets": true,
+    "exact_result_if_identical": true
+  },
+  {
+    "pool": "random10",
+    "start": "2025-09-01",
+    "end": "2026-09-01",
+    "method": "low_growth",
+    "cost_multiplier": 1,
+    "identical_targets": true,
+    "exact_result_if_identical": true
+  },
+  {
+    "pool": "random10",
+    "start": "2025-09-01",
+    "end": "2026-09-01",
+    "method": "high_growth",
+    "cost_multiplier": 1,
+    "identical_targets": true,
+    "exact_result_if_identical": true
+  },
+  {
+    "pool": "random10",
+    "start": "2025-09-01",
+    "end": "2026-09-01",
+    "method": "eligible",
+    "cost_multiplier": 1,
+    "identical_targets": true,
+    "exact_result_if_identical": true
+  },
+  {
+    "pool": "random10",
+    "start": "2025-09-01",
+    "end": "2026-09-01",
+    "method": "low_growth",
+    "cost_multiplier": 2,
+    "identical_targets": true,
+    "exact_result_if_identical": true
+  },
+  {
+    "pool": "random10",
+    "start": "2025-09-01",
+    "end": "2026-09-01",
+    "method": "high_growth",
+    "cost_multiplier": 2,
+    "identical_targets": true,
+    "exact_result_if_identical": true
+  },
+  {
+    "pool": "random10",
+    "start": "2025-09-01",
+    "end": "2026-09-01",
+    "method": "eligible",
+    "cost_multiplier": 2,
+    "identical_targets": true,
+    "exact_result_if_identical": true
+  },
+  {
+    "pool": "transfer12",
+    "start": "2025-09-01",
+    "end": "2026-09-01",
+    "method": "low_growth",
+    "cost_multiplier": 1,
+    "identical_targets": true,
+    "exact_result_if_identical": true
+  },
+  {
+    "pool": "transfer12",
+    "start": "2025-09-01",
+    "end": "2026-09-01",
+    "method": "high_growth",
+    "cost_multiplier": 1,
+    "identical_targets": true,
+    "exact_result_if_identical": true
+  },
+  {
+    "pool": "transfer12",
+    "start": "2025-09-01",
+    "end": "2026-09-01",
+    "method": "eligible",
+    "cost_multiplier": 1,
+    "identical_targets": false,
+    "exact_result_if_identical": false
+  },
+  {
+    "pool": "transfer12",
+    "start": "2025-09-01",
+    "end": "2026-09-01",
+    "method": "low_growth",
+    "cost_multiplier": 2,
+    "identical_targets": true,
+    "exact_result_if_identical": true
+  },
+  {
+    "pool": "transfer12",
+    "start": "2025-09-01",
+    "end": "2026-09-01",
+    "method": "high_growth",
+    "cost_multiplier": 2,
+    "identical_targets": true,
+    "exact_result_if_identical": true
+  },
+  {
+    "pool": "transfer12",
+    "start": "2025-09-01",
+    "end": "2026-09-01",
+    "method": "eligible",
+    "cost_multiplier": 2,
+    "identical_targets": false,
+    "exact_result_if_identical": false
+  },
+  {
+    "pool": "random10_temporal",
+    "start": "2022-09-01",
+    "end": "2023-09-01",
+    "method": "low_growth",
+    "cost_multiplier": 1,
+    "identical_targets": true,
+    "exact_result_if_identical": true
+  },
+  {
+    "pool": "random10_temporal",
+    "start": "2022-09-01",
+    "end": "2023-09-01",
+    "method": "high_growth",
+    "cost_multiplier": 1,
+    "identical_targets": true,
+    "exact_result_if_identical": true
+  },
+  {
+    "pool": "random10_temporal",
+    "start": "2022-09-01",
+    "end": "2023-09-01",
+    "method": "eligible",
+    "cost_multiplier": 1,
+    "identical_targets": true,
+    "exact_result_if_identical": true
+  },
+  {
+    "pool": "random10_temporal",
+    "start": "2022-09-01",
+    "end": "2023-09-01",
+    "method": "low_growth",
+    "cost_multiplier": 2,
+    "identical_targets": true,
+    "exact_result_if_identical": true
+  },
+  {
+    "pool": "random10_temporal",
+    "start": "2022-09-01",
+    "end": "2023-09-01",
+    "method": "high_growth",
+    "cost_multiplier": 2,
+    "identical_targets": true,
+    "exact_result_if_identical": true
+  },
+  {
+    "pool": "random10_temporal",
+    "start": "2022-09-01",
+    "end": "2023-09-01",
+    "method": "eligible",
+    "cost_multiplier": 2,
+    "identical_targets": true,
+    "exact_result_if_identical": true
+  },
+  {
+    "pool": "random10_temporal",
+    "start": "2023-09-01",
+    "end": "2024-09-01",
+    "method": "low_growth",
+    "cost_multiplier": 1,
+    "identical_targets": true,
+    "exact_result_if_identical": true
+  },
+  {
+    "pool": "random10_temporal",
+    "start": "2023-09-01",
+    "end": "2024-09-01",
+    "method": "high_growth",
+    "cost_multiplier": 1,
+    "identical_targets": true,
+    "exact_result_if_identical": true
+  },
+  {
+    "pool": "random10_temporal",
+    "start": "2023-09-01",
+    "end": "2024-09-01",
+    "method": "eligible",
+    "cost_multiplier": 1,
+    "identical_targets": true,
+    "exact_result_if_identical": true
+  },
+  {
+    "pool": "random10_temporal",
+    "start": "2023-09-01",
+    "end": "2024-09-01",
+    "method": "low_growth",
+    "cost_multiplier": 2,
+    "identical_targets": true,
+    "exact_result_if_identical": true
+  },
+  {
+    "pool": "random10_temporal",
+    "start": "2023-09-01",
+    "end": "2024-09-01",
+    "method": "high_growth",
+    "cost_multiplier": 2,
+    "identical_targets": true,
+    "exact_result_if_identical": true
+  },
+  {
+    "pool": "random10_temporal",
+    "start": "2023-09-01",
+    "end": "2024-09-01",
+    "method": "eligible",
+    "cost_multiplier": 2,
+    "identical_targets": true,
+    "exact_result_if_identical": true
+  },
+  {
+    "pool": "random10_temporal",
+    "start": "2024-09-01",
+    "end": "2025-09-01",
+    "method": "low_growth",
+    "cost_multiplier": 1,
+    "identical_targets": true,
+    "exact_result_if_identical": true
+  },
+  {
+    "pool": "random10_temporal",
+    "start": "2024-09-01",
+    "end": "2025-09-01",
+    "method": "high_growth",
+    "cost_multiplier": 1,
+    "identical_targets": true,
+    "exact_result_if_identical": true
+  },
+  {
+    "pool": "random10_temporal",
+    "start": "2024-09-01",
+    "end": "2025-09-01",
+    "method": "eligible",
+    "cost_multiplier": 1,
+    "identical_targets": true,
+    "exact_result_if_identical": true
+  },
+  {
+    "pool": "random10_temporal",
+    "start": "2024-09-01",
+    "end": "2025-09-01",
+    "method": "low_growth",
+    "cost_multiplier": 2,
+    "identical_targets": true,
+    "exact_result_if_identical": true
+  },
+  {
+    "pool": "random10_temporal",
+    "start": "2024-09-01",
+    "end": "2025-09-01",
+    "method": "high_growth",
+    "cost_multiplier": 2,
+    "identical_targets": true,
+    "exact_result_if_identical": true
+  },
+  {
+    "pool": "random10_temporal",
+    "start": "2024-09-01",
+    "end": "2025-09-01",
+    "method": "eligible",
+    "cost_multiplier": 2,
+    "identical_targets": true,
+    "exact_result_if_identical": true
+  },
+  {
+    "pool": "random10_temporal",
+    "start": "2022-09-01",
+    "end": "2025-09-01",
+    "method": "low_growth",
+    "cost_multiplier": 1,
+    "identical_targets": true,
+    "exact_result_if_identical": true
+  },
+  {
+    "pool": "random10_temporal",
+    "start": "2022-09-01",
+    "end": "2025-09-01",
+    "method": "high_growth",
+    "cost_multiplier": 1,
+    "identical_targets": true,
+    "exact_result_if_identical": true
+  },
+  {
+    "pool": "random10_temporal",
+    "start": "2022-09-01",
+    "end": "2025-09-01",
+    "method": "eligible",
+    "cost_multiplier": 1,
+    "identical_targets": true,
+    "exact_result_if_identical": true
+  },
+  {
+    "pool": "random10_temporal",
+    "start": "2022-09-01",
+    "end": "2025-09-01",
+    "method": "low_growth",
+    "cost_multiplier": 2,
+    "identical_targets": true,
+    "exact_result_if_identical": true
+  },
+  {
+    "pool": "random10_temporal",
+    "start": "2022-09-01",
+    "end": "2025-09-01",
+    "method": "high_growth",
+    "cost_multiplier": 2,
+    "identical_targets": true,
+    "exact_result_if_identical": true
+  },
+  {
+    "pool": "random10_temporal",
+    "start": "2022-09-01",
+    "end": "2025-09-01",
+    "method": "eligible",
+    "cost_multiplier": 2,
+    "identical_targets": true,
+    "exact_result_if_identical": true
+  },
+  {
+    "pool": "transfer12_temporal",
+    "start": "2022-09-01",
+    "end": "2023-09-01",
+    "method": "low_growth",
+    "cost_multiplier": 1,
+    "identical_targets": true,
+    "exact_result_if_identical": true
+  },
+  {
+    "pool": "transfer12_temporal",
+    "start": "2022-09-01",
+    "end": "2023-09-01",
+    "method": "high_growth",
+    "cost_multiplier": 1,
+    "identical_targets": true,
+    "exact_result_if_identical": true
+  },
+  {
+    "pool": "transfer12_temporal",
+    "start": "2022-09-01",
+    "end": "2023-09-01",
+    "method": "eligible",
+    "cost_multiplier": 1,
+    "identical_targets": false,
+    "exact_result_if_identical": false
+  },
+  {
+    "pool": "transfer12_temporal",
+    "start": "2022-09-01",
+    "end": "2023-09-01",
+    "method": "low_growth",
+    "cost_multiplier": 2,
+    "identical_targets": true,
+    "exact_result_if_identical": true
+  },
+  {
+    "pool": "transfer12_temporal",
+    "start": "2022-09-01",
+    "end": "2023-09-01",
+    "method": "high_growth",
+    "cost_multiplier": 2,
+    "identical_targets": true,
+    "exact_result_if_identical": true
+  },
+  {
+    "pool": "transfer12_temporal",
+    "start": "2022-09-01",
+    "end": "2023-09-01",
+    "method": "eligible",
+    "cost_multiplier": 2,
+    "identical_targets": false,
+    "exact_result_if_identical": false
+  },
+  {
+    "pool": "transfer12_temporal",
+    "start": "2023-09-01",
+    "end": "2024-09-01",
+    "method": "low_growth",
+    "cost_multiplier": 1,
+    "identical_targets": true,
+    "exact_result_if_identical": true
+  },
+  {
+    "pool": "transfer12_temporal",
+    "start": "2023-09-01",
+    "end": "2024-09-01",
+    "method": "high_growth",
+    "cost_multiplier": 1,
+    "identical_targets": true,
+    "exact_result_if_identical": true
+  },
+  {
+    "pool": "transfer12_temporal",
+    "start": "2023-09-01",
+    "end": "2024-09-01",
+    "method": "eligible",
+    "cost_multiplier": 1,
+    "identical_targets": false,
+    "exact_result_if_identical": false
+  },
+  {
+    "pool": "transfer12_temporal",
+    "start": "2023-09-01",
+    "end": "2024-09-01",
+    "method": "low_growth",
+    "cost_multiplier": 2,
+    "identical_targets": true,
+    "exact_result_if_identical": true
+  },
+  {
+    "pool": "transfer12_temporal",
+    "start": "2023-09-01",
+    "end": "2024-09-01",
+    "method": "high_growth",
+    "cost_multiplier": 2,
+    "identical_targets": true,
+    "exact_result_if_identical": true
+  },
+  {
+    "pool": "transfer12_temporal",
+    "start": "2023-09-01",
+    "end": "2024-09-01",
+    "method": "eligible",
+    "cost_multiplier": 2,
+    "identical_targets": false,
+    "exact_result_if_identical": false
+  },
+  {
+    "pool": "transfer12_temporal",
+    "start": "2024-09-01",
+    "end": "2025-09-01",
+    "method": "low_growth",
+    "cost_multiplier": 1,
+    "identical_targets": true,
+    "exact_result_if_identical": true
+  },
+  {
+    "pool": "transfer12_temporal",
+    "start": "2024-09-01",
+    "end": "2025-09-01",
+    "method": "high_growth",
+    "cost_multiplier": 1,
+    "identical_targets": true,
+    "exact_result_if_identical": true
+  },
+  {
+    "pool": "transfer12_temporal",
+    "start": "2024-09-01",
+    "end": "2025-09-01",
+    "method": "eligible",
+    "cost_multiplier": 1,
+    "identical_targets": false,
+    "exact_result_if_identical": false
+  },
+  {
+    "pool": "transfer12_temporal",
+    "start": "2024-09-01",
+    "end": "2025-09-01",
+    "method": "low_growth",
+    "cost_multiplier": 2,
+    "identical_targets": true,
+    "exact_result_if_identical": true
+  },
+  {
+    "pool": "transfer12_temporal",
+    "start": "2024-09-01",
+    "end": "2025-09-01",
+    "method": "high_growth",
+    "cost_multiplier": 2,
+    "identical_targets": true,
+    "exact_result_if_identical": true
+  },
+  {
+    "pool": "transfer12_temporal",
+    "start": "2024-09-01",
+    "end": "2025-09-01",
+    "method": "eligible",
+    "cost_multiplier": 2,
+    "identical_targets": false,
+    "exact_result_if_identical": false
+  },
+  {
+    "pool": "transfer12_temporal",
+    "start": "2022-09-01",
+    "end": "2025-09-01",
+    "method": "low_growth",
+    "cost_multiplier": 1,
+    "identical_targets": true,
+    "exact_result_if_identical": true
+  },
+  {
+    "pool": "transfer12_temporal",
+    "start": "2022-09-01",
+    "end": "2025-09-01",
+    "method": "high_growth",
+    "cost_multiplier": 1,
+    "identical_targets": true,
+    "exact_result_if_identical": true
+  },
+  {
+    "pool": "transfer12_temporal",
+    "start": "2022-09-01",
+    "end": "2025-09-01",
+    "method": "eligible",
+    "cost_multiplier": 1,
+    "identical_targets": false,
+    "exact_result_if_identical": false
+  },
+  {
+    "pool": "transfer12_temporal",
+    "start": "2022-09-01",
+    "end": "2025-09-01",
+    "method": "low_growth",
+    "cost_multiplier": 2,
+    "identical_targets": true,
+    "exact_result_if_identical": true
+  },
+  {
+    "pool": "transfer12_temporal",
+    "start": "2022-09-01",
+    "end": "2025-09-01",
+    "method": "high_growth",
+    "cost_multiplier": 2,
+    "identical_targets": true,
+    "exact_result_if_identical": true
+  },
+  {
+    "pool": "transfer12_temporal",
+    "start": "2022-09-01",
+    "end": "2025-09-01",
+    "method": "eligible",
+    "cost_multiplier": 2,
+    "identical_targets": false,
+    "exact_result_if_identical": false
+  }
+]

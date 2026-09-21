@@ -1,0 +1,578 @@
+[
+  {
+    "pool": "original20",
+    "start": "2025-09-01",
+    "end": "2026-09-01",
+    "method": "low_liability",
+    "cost_multiplier": 1,
+    "return_difference_pp": 0.0
+  },
+  {
+    "pool": "original20",
+    "start": "2025-09-01",
+    "end": "2026-09-01",
+    "method": "high_liability",
+    "cost_multiplier": 1,
+    "return_difference_pp": 0.0
+  },
+  {
+    "pool": "original20",
+    "start": "2025-09-01",
+    "end": "2026-09-01",
+    "method": "eligible",
+    "cost_multiplier": 1,
+    "return_difference_pp": 0.0
+  },
+  {
+    "pool": "original20",
+    "start": "2025-09-01",
+    "end": "2026-09-01",
+    "method": "low_liability",
+    "cost_multiplier": 2,
+    "return_difference_pp": 0.0
+  },
+  {
+    "pool": "original20",
+    "start": "2025-09-01",
+    "end": "2026-09-01",
+    "method": "high_liability",
+    "cost_multiplier": 2,
+    "return_difference_pp": 0.0
+  },
+  {
+    "pool": "original20",
+    "start": "2025-09-01",
+    "end": "2026-09-01",
+    "method": "eligible",
+    "cost_multiplier": 2,
+    "return_difference_pp": 0.0
+  },
+  {
+    "pool": "alternate20",
+    "start": "2025-09-01",
+    "end": "2026-09-01",
+    "method": "low_liability",
+    "cost_multiplier": 1,
+    "return_difference_pp": 0.0
+  },
+  {
+    "pool": "alternate20",
+    "start": "2025-09-01",
+    "end": "2026-09-01",
+    "method": "high_liability",
+    "cost_multiplier": 1,
+    "return_difference_pp": 0.0
+  },
+  {
+    "pool": "alternate20",
+    "start": "2025-09-01",
+    "end": "2026-09-01",
+    "method": "eligible",
+    "cost_multiplier": 1,
+    "return_difference_pp": 0.0
+  },
+  {
+    "pool": "alternate20",
+    "start": "2025-09-01",
+    "end": "2026-09-01",
+    "method": "low_liability",
+    "cost_multiplier": 2,
+    "return_difference_pp": 0.0
+  },
+  {
+    "pool": "alternate20",
+    "start": "2025-09-01",
+    "end": "2026-09-01",
+    "method": "high_liability",
+    "cost_multiplier": 2,
+    "return_difference_pp": 0.0
+  },
+  {
+    "pool": "alternate20",
+    "start": "2025-09-01",
+    "end": "2026-09-01",
+    "method": "eligible",
+    "cost_multiplier": 2,
+    "return_difference_pp": 0.0
+  },
+  {
+    "pool": "random10",
+    "start": "2025-09-01",
+    "end": "2026-09-01",
+    "method": "low_liability",
+    "cost_multiplier": 1,
+    "return_difference_pp": 0.0
+  },
+  {
+    "pool": "random10",
+    "start": "2025-09-01",
+    "end": "2026-09-01",
+    "method": "high_liability",
+    "cost_multiplier": 1,
+    "return_difference_pp": 0.0
+  },
+  {
+    "pool": "random10",
+    "start": "2025-09-01",
+    "end": "2026-09-01",
+    "method": "eligible",
+    "cost_multiplier": 1,
+    "return_difference_pp": 0.0
+  },
+  {
+    "pool": "random10",
+    "start": "2025-09-01",
+    "end": "2026-09-01",
+    "method": "low_liability",
+    "cost_multiplier": 2,
+    "return_difference_pp": 0.0
+  },
+  {
+    "pool": "random10",
+    "start": "2025-09-01",
+    "end": "2026-09-01",
+    "method": "high_liability",
+    "cost_multiplier": 2,
+    "return_difference_pp": 0.0
+  },
+  {
+    "pool": "random10",
+    "start": "2025-09-01",
+    "end": "2026-09-01",
+    "method": "eligible",
+    "cost_multiplier": 2,
+    "return_difference_pp": 0.0
+  },
+  {
+    "pool": "transfer12",
+    "start": "2025-09-01",
+    "end": "2026-09-01",
+    "method": "low_liability",
+    "cost_multiplier": 1,
+    "return_difference_pp": 0.0
+  },
+  {
+    "pool": "transfer12",
+    "start": "2025-09-01",
+    "end": "2026-09-01",
+    "method": "high_liability",
+    "cost_multiplier": 1,
+    "return_difference_pp": 0.0
+  },
+  {
+    "pool": "transfer12",
+    "start": "2025-09-01",
+    "end": "2026-09-01",
+    "method": "eligible",
+    "cost_multiplier": 1,
+    "return_difference_pp": 0.7017560466675565
+  },
+  {
+    "pool": "transfer12",
+    "start": "2025-09-01",
+    "end": "2026-09-01",
+    "method": "low_liability",
+    "cost_multiplier": 2,
+    "return_difference_pp": 0.0
+  },
+  {
+    "pool": "transfer12",
+    "start": "2025-09-01",
+    "end": "2026-09-01",
+    "method": "high_liability",
+    "cost_multiplier": 2,
+    "return_difference_pp": 0.0
+  },
+  {
+    "pool": "transfer12",
+    "start": "2025-09-01",
+    "end": "2026-09-01",
+    "method": "eligible",
+    "cost_multiplier": 2,
+    "return_difference_pp": 0.6491743895852276
+  },
+  {
+    "pool": "random10_temporal",
+    "start": "2022-09-01",
+    "end": "2023-09-01",
+    "method": "low_liability",
+    "cost_multiplier": 1,
+    "return_difference_pp": 0.0
+  },
+  {
+    "pool": "random10_temporal",
+    "start": "2022-09-01",
+    "end": "2023-09-01",
+    "method": "high_liability",
+    "cost_multiplier": 1,
+    "return_difference_pp": 0.0
+  },
+  {
+    "pool": "random10_temporal",
+    "start": "2022-09-01",
+    "end": "2023-09-01",
+    "method": "eligible",
+    "cost_multiplier": 1,
+    "return_difference_pp": 0.0
+  },
+  {
+    "pool": "random10_temporal",
+    "start": "2022-09-01",
+    "end": "2023-09-01",
+    "method": "low_liability",
+    "cost_multiplier": 2,
+    "return_difference_pp": 0.0
+  },
+  {
+    "pool": "random10_temporal",
+    "start": "2022-09-01",
+    "end": "2023-09-01",
+    "method": "high_liability",
+    "cost_multiplier": 2,
+    "return_difference_pp": 0.0
+  },
+  {
+    "pool": "random10_temporal",
+    "start": "2022-09-01",
+    "end": "2023-09-01",
+    "method": "eligible",
+    "cost_multiplier": 2,
+    "return_difference_pp": 0.0
+  },
+  {
+    "pool": "random10_temporal",
+    "start": "2023-09-01",
+    "end": "2024-09-01",
+    "method": "low_liability",
+    "cost_multiplier": 1,
+    "return_difference_pp": 0.0
+  },
+  {
+    "pool": "random10_temporal",
+    "start": "2023-09-01",
+    "end": "2024-09-01",
+    "method": "high_liability",
+    "cost_multiplier": 1,
+    "return_difference_pp": 0.0
+  },
+  {
+    "pool": "random10_temporal",
+    "start": "2023-09-01",
+    "end": "2024-09-01",
+    "method": "eligible",
+    "cost_multiplier": 1,
+    "return_difference_pp": 0.0
+  },
+  {
+    "pool": "random10_temporal",
+    "start": "2023-09-01",
+    "end": "2024-09-01",
+    "method": "low_liability",
+    "cost_multiplier": 2,
+    "return_difference_pp": 0.0
+  },
+  {
+    "pool": "random10_temporal",
+    "start": "2023-09-01",
+    "end": "2024-09-01",
+    "method": "high_liability",
+    "cost_multiplier": 2,
+    "return_difference_pp": 0.0
+  },
+  {
+    "pool": "random10_temporal",
+    "start": "2023-09-01",
+    "end": "2024-09-01",
+    "method": "eligible",
+    "cost_multiplier": 2,
+    "return_difference_pp": 0.0
+  },
+  {
+    "pool": "random10_temporal",
+    "start": "2024-09-01",
+    "end": "2025-09-01",
+    "method": "low_liability",
+    "cost_multiplier": 1,
+    "return_difference_pp": 0.0
+  },
+  {
+    "pool": "random10_temporal",
+    "start": "2024-09-01",
+    "end": "2025-09-01",
+    "method": "high_liability",
+    "cost_multiplier": 1,
+    "return_difference_pp": 0.0
+  },
+  {
+    "pool": "random10_temporal",
+    "start": "2024-09-01",
+    "end": "2025-09-01",
+    "method": "eligible",
+    "cost_multiplier": 1,
+    "return_difference_pp": 0.0
+  },
+  {
+    "pool": "random10_temporal",
+    "start": "2024-09-01",
+    "end": "2025-09-01",
+    "method": "low_liability",
+    "cost_multiplier": 2,
+    "return_difference_pp": 0.0
+  },
+  {
+    "pool": "random10_temporal",
+    "start": "2024-09-01",
+    "end": "2025-09-01",
+    "method": "high_liability",
+    "cost_multiplier": 2,
+    "return_difference_pp": 0.0
+  },
+  {
+    "pool": "random10_temporal",
+    "start": "2024-09-01",
+    "end": "2025-09-01",
+    "method": "eligible",
+    "cost_multiplier": 2,
+    "return_difference_pp": 0.0
+  },
+  {
+    "pool": "random10_temporal",
+    "start": "2022-09-01",
+    "end": "2025-09-01",
+    "method": "low_liability",
+    "cost_multiplier": 1,
+    "return_difference_pp": 0.0
+  },
+  {
+    "pool": "random10_temporal",
+    "start": "2022-09-01",
+    "end": "2025-09-01",
+    "method": "high_liability",
+    "cost_multiplier": 1,
+    "return_difference_pp": 0.0
+  },
+  {
+    "pool": "random10_temporal",
+    "start": "2022-09-01",
+    "end": "2025-09-01",
+    "method": "eligible",
+    "cost_multiplier": 1,
+    "return_difference_pp": 0.0
+  },
+  {
+    "pool": "random10_temporal",
+    "start": "2022-09-01",
+    "end": "2025-09-01",
+    "method": "low_liability",
+    "cost_multiplier": 2,
+    "return_difference_pp": 0.0
+  },
+  {
+    "pool": "random10_temporal",
+    "start": "2022-09-01",
+    "end": "2025-09-01",
+    "method": "high_liability",
+    "cost_multiplier": 2,
+    "return_difference_pp": 0.0
+  },
+  {
+    "pool": "random10_temporal",
+    "start": "2022-09-01",
+    "end": "2025-09-01",
+    "method": "eligible",
+    "cost_multiplier": 2,
+    "return_difference_pp": 0.0
+  },
+  {
+    "pool": "transfer12_temporal",
+    "start": "2022-09-01",
+    "end": "2023-09-01",
+    "method": "low_liability",
+    "cost_multiplier": 1,
+    "return_difference_pp": 0.0
+  },
+  {
+    "pool": "transfer12_temporal",
+    "start": "2022-09-01",
+    "end": "2023-09-01",
+    "method": "high_liability",
+    "cost_multiplier": 1,
+    "return_difference_pp": 0.0
+  },
+  {
+    "pool": "transfer12_temporal",
+    "start": "2022-09-01",
+    "end": "2023-09-01",
+    "method": "eligible",
+    "cost_multiplier": 1,
+    "return_difference_pp": -1.1644726252742599
+  },
+  {
+    "pool": "transfer12_temporal",
+    "start": "2022-09-01",
+    "end": "2023-09-01",
+    "method": "low_liability",
+    "cost_multiplier": 2,
+    "return_difference_pp": 0.0
+  },
+  {
+    "pool": "transfer12_temporal",
+    "start": "2022-09-01",
+    "end": "2023-09-01",
+    "method": "high_liability",
+    "cost_multiplier": 2,
+    "return_difference_pp": 0.0
+  },
+  {
+    "pool": "transfer12_temporal",
+    "start": "2022-09-01",
+    "end": "2023-09-01",
+    "method": "eligible",
+    "cost_multiplier": 2,
+    "return_difference_pp": -1.2048732815206797
+  },
+  {
+    "pool": "transfer12_temporal",
+    "start": "2023-09-01",
+    "end": "2024-09-01",
+    "method": "low_liability",
+    "cost_multiplier": 1,
+    "return_difference_pp": 0.0
+  },
+  {
+    "pool": "transfer12_temporal",
+    "start": "2023-09-01",
+    "end": "2024-09-01",
+    "method": "high_liability",
+    "cost_multiplier": 1,
+    "return_difference_pp": 0.0
+  },
+  {
+    "pool": "transfer12_temporal",
+    "start": "2023-09-01",
+    "end": "2024-09-01",
+    "method": "eligible",
+    "cost_multiplier": 1,
+    "return_difference_pp": -0.37862337620409026
+  },
+  {
+    "pool": "transfer12_temporal",
+    "start": "2023-09-01",
+    "end": "2024-09-01",
+    "method": "low_liability",
+    "cost_multiplier": 2,
+    "return_difference_pp": 0.0
+  },
+  {
+    "pool": "transfer12_temporal",
+    "start": "2023-09-01",
+    "end": "2024-09-01",
+    "method": "high_liability",
+    "cost_multiplier": 2,
+    "return_difference_pp": 0.0
+  },
+  {
+    "pool": "transfer12_temporal",
+    "start": "2023-09-01",
+    "end": "2024-09-01",
+    "method": "eligible",
+    "cost_multiplier": 2,
+    "return_difference_pp": -0.38971526505739984
+  },
+  {
+    "pool": "transfer12_temporal",
+    "start": "2024-09-01",
+    "end": "2025-09-01",
+    "method": "low_liability",
+    "cost_multiplier": 1,
+    "return_difference_pp": 0.0
+  },
+  {
+    "pool": "transfer12_temporal",
+    "start": "2024-09-01",
+    "end": "2025-09-01",
+    "method": "high_liability",
+    "cost_multiplier": 1,
+    "return_difference_pp": 0.0
+  },
+  {
+    "pool": "transfer12_temporal",
+    "start": "2024-09-01",
+    "end": "2025-09-01",
+    "method": "eligible",
+    "cost_multiplier": 1,
+    "return_difference_pp": -0.14275330663566788
+  },
+  {
+    "pool": "transfer12_temporal",
+    "start": "2024-09-01",
+    "end": "2025-09-01",
+    "method": "low_liability",
+    "cost_multiplier": 2,
+    "return_difference_pp": 0.0
+  },
+  {
+    "pool": "transfer12_temporal",
+    "start": "2024-09-01",
+    "end": "2025-09-01",
+    "method": "high_liability",
+    "cost_multiplier": 2,
+    "return_difference_pp": 0.0
+  },
+  {
+    "pool": "transfer12_temporal",
+    "start": "2024-09-01",
+    "end": "2025-09-01",
+    "method": "eligible",
+    "cost_multiplier": 2,
+    "return_difference_pp": -0.15522943519263865
+  },
+  {
+    "pool": "transfer12_temporal",
+    "start": "2022-09-01",
+    "end": "2025-09-01",
+    "method": "low_liability",
+    "cost_multiplier": 1,
+    "return_difference_pp": 0.0
+  },
+  {
+    "pool": "transfer12_temporal",
+    "start": "2022-09-01",
+    "end": "2025-09-01",
+    "method": "high_liability",
+    "cost_multiplier": 1,
+    "return_difference_pp": 0.0
+  },
+  {
+    "pool": "transfer12_temporal",
+    "start": "2022-09-01",
+    "end": "2025-09-01",
+    "method": "eligible",
+    "cost_multiplier": 1,
+    "return_difference_pp": -0.9336992791964649
+  },
+  {
+    "pool": "transfer12_temporal",
+    "start": "2022-09-01",
+    "end": "2025-09-01",
+    "method": "low_liability",
+    "cost_multiplier": 2,
+    "return_difference_pp": 0.0
+  },
+  {
+    "pool": "transfer12_temporal",
+    "start": "2022-09-01",
+    "end": "2025-09-01",
+    "method": "high_liability",
+    "cost_multiplier": 2,
+    "return_difference_pp": 0.0
+  },
+  {
+    "pool": "transfer12_temporal",
+    "start": "2022-09-01",
+    "end": "2025-09-01",
+    "method": "eligible",
+    "cost_multiplier": 2,
+    "return_difference_pp": -1.0356631173627173
+  }
+]
