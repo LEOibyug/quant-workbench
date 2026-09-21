@@ -1,0 +1,21 @@
+import json, math
+from pathlib import Path
+from unittest.mock import patch
+import numpy as np,pandas as pd
+from sklearn.covariance import LedoitWolf
+from quant_workbench.position import PositionConfig,simulate_positions
+root=Path('/home/yangchunyi/quant-workbench'); import sys; sys.path.insert(0,str(root/'scripts'))
+old=json.loads((root/'docs/research-results/2026-09-18-pattern-policy-v2.json').read_text()); cfg=next(r['config'] for r in old['results'] if r['method']=='fixed_ensemble' and r['cost_multiplier']==1)
+path=root/'artifacts/research/annual-momentum/random10-temporal.parquet'; raw=pd.read_parquet(path)
+def maps(frame,gate):
+ p=frame.pivot(index='day',columns='symbol',values='close').sort_index().sort_index(axis=1); x=p.to_numpy(float); l=np.log(x); rr=np.diff(l,axis=0); out={}
+ for i in range(252,len(p)):
+  cov=LedoitWolf().fit(rr[i-63:i]).covariance_+np.eye(x.shape[1])*1e-12; sig=np.sqrt(np.diag(cov)); score=l[i-21]-l[i-252]; ch=np.argsort(-score,kind='stable')[:max(1,math.ceil(x.shape[1]/4))]; raww=np.zeros(x.shape[1]); raww[ch]=1/np.maximum(sig[ch],1e-12); w=np.minimum(.2,.95*raww/max(raww.sum(),1e-12)); market=np.exp(l[i].mean()); sma=np.exp(l[i-gate+1:i+1].mean()); w*=float(market>sma); w*=min(1,.1/max(np.sqrt(w@cov@w*252),1e-12));
+  for j,s in enumerate(p.columns): out[str(p.index[i]),s]={'target_weight':float(w[j]),'volatility':float(sig[j]),'status':'ok'}
+ return out
+for gate in [50,100,150,200]:
+ print('GATE',gate)
+ for start,end in [('2022-09-01','2023-09-01'),('2023-09-01','2024-09-01'),('2024-09-01','2025-09-01'),('2022-09-01','2025-09-01')]:
+  prior=sorted(raw.loc[raw.day<start,'day'].unique())[-273:]; f=raw[(raw.day>=prior[0])&(raw.day<end)]; mp=maps(f,gate); costs=dict(cfg['costs']); config=PositionConfig(**{**cfg,'costs':costs,'rebalance_days':20})
+  with patch('quant_workbench.position.daily_forecasts',return_value=mp): r=simulate_positions(f,config,start,end,daily_bars=True)
+  print(start,round(r['metrics']['return_pct'],3),round(r['metrics']['max_drawdown_pct'],3))

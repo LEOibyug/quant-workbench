@@ -1,0 +1,7 @@
+import pandas as pd,numpy as np,glob
+paths=['artifacts/research/alternate-history/daily.parquet','artifacts/research/multiscale-temporal-random10/daily.parquet','artifacts/research/annual-momentum/original20.parquet','artifacts/research/annual-momentum/alternate20.parquet']
+for path in paths:
+ f=pd.read_parquet(path); p=f.pivot(index='day',columns='symbol',values='close').sort_index(); v=f.pivot(index='day',columns='symbol',values='volume').reindex(index=p.index,columns=p.columns); x=p.to_numpy(float); n=len(p); rows=[]
+ for i in range(252,n-126,126):
+  mom=np.log(x[i]/x[i-252]); er=np.abs(x[i]/x[i-63]-1)/np.maximum(np.abs(np.diff(x[i-63:i],axis=0)/x[i-63:i-1]).sum(0),1e-12); liq=(p.iloc[i-20:i].to_numpy()*v.iloc[i-20:i].to_numpy()).median(0); fut=x[i+126]/x[i]-1; sel=(mom>0)&(er>0.25)&(liq>=1e7); rows.extend(zip(sel,mom,er,liq,fut))
+ a=pd.DataFrame(rows,columns=['sel','mom','er','liq','fut']); print(path,'N',len(a),'selected',a.sel.mean(),'sel_ret',a.loc[a.sel,'fut'].mean()*100 if a.sel.any() else None,'all',a.fut.mean()*100,'not',a.loc[~a.sel,'fut'].mean()*100 if (~a.sel).any() else None)

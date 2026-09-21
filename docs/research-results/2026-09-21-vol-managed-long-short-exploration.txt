@@ -1,0 +1,16 @@
+import pandas as pd,numpy as np,math,glob
+from pathlib import Path
+paths={'orig':'artifacts/research/annual-momentum/original20.parquet','alt':'artifacts/research/annual-momentum/alternate20.parquet','rand':'artifacts/research/annual-momentum/random10.parquet','randtemp':'artifacts/research/annual-momentum/random10-temporal.parquet'}
+def run(f,start,end):
+ p=f.pivot(index='day',columns='symbol',values='close').sort_index(); x=p.to_numpy(float); l=np.log(x); r=np.diff(l,axis=0); out=[]
+ for i in range(252,len(p)-1):
+  if str(p.index[i])<start or str(p.index[i])>=end: continue
+  score=l[i-21]-l[i-252]; q=max(1,math.ceil(x.shape[1]/4)); long=np.argsort(-score)[:q]; short=np.argsort(score)[:q]
+  vol=r[i-63:i].std(0,ddof=1); wl=1/np.maximum(vol[long],1e-8); ws=1/np.maximum(vol[short],1e-8); wl=0.475*wl/wl.sum(); ws=0.475*ws/ws.sum(); nxt=r[i]; pr=wl@nxt[long]-ws@nxt[short]; out.append(pr)
+ if not out:return None
+ w=np.exp(np.log1p(out).sum())-1; return w*100, (np.maximum.accumulate(np.cumprod(1+np.array(out)))/np.cumprod(1+np.array(out))-1).max()*-100,len(out)
+for name,path in paths.items():
+ f=pd.read_parquet(path)
+ if name=='randtemp': wins=[('2022-09-01','2023-09-01'),('2023-09-01','2024-09-01'),('2024-09-01','2025-09-01'),('2022-09-01','2025-09-01')]
+ else:wins=[('2025-09-01','2026-09-01')]
+ for s,e in wins:print(name,s,run(f,s,e))
