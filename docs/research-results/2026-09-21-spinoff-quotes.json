@@ -1,0 +1,35 @@
+[
+  {
+    "parent": "GE",
+    "child": "GEHC",
+    "first_regular_session": "2023-01-04",
+    "candidate_ratio": 0.3333333333333333,
+    "ratio_requires_source_verification": true,
+    "first_open": 54.13,
+    "first_close": 60.49,
+    "path": "artifacts/research/spinoff-quotes/GEHC/daily.parquet",
+    "sha256": "eedd154845f16d23cf5c86917f800447bf569da0a9950a27a63949110363560e"
+  },
+  {
+    "parent": "GE",
+    "child": "GEV",
+    "first_regular_session": "2024-04-02",
+    "candidate_ratio": 0.25,
+    "ratio_requires_source_verification": true,
+    "first_open": 142.85,
+    "first_close": 140.0,
+    "path": "artifacts/research/spinoff-quotes/GEV/daily.parquet",
+    "sha256": "12de3d854f68d5aa34c4ebff332b1b392bf2aa54f132196e1b942fe142aa9dff"
+  },
+  {
+    "parent": "IBM",
+    "child": "KD",
+    "first_regular_session": "2021-11-04",
+    "candidate_ratio": 0.2,
+    "ratio_requires_source_verification": true,
+    "first_open": 28.41,
+    "first_close": 26.38,
+    "path": "artifacts/research/spinoff-quotes/KD/daily.parquet",
+    "sha256": "00067efa88459720129386746abe91edb8277215cf1a1a745df647545a160fd8"
+  }
+]
