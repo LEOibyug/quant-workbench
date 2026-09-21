@@ -1,0 +1,21 @@
+{
+  "path": "artifacts/research/transfer12-temporal-2026-09-21/combined.parquet",
+  "sha256": "5877a055761a6915851917051db5b56121f96e9cf027c3e58729b0abe782e4b9",
+  "symbols": [
+    "ABT",
+    "ADP",
+    "AMT",
+    "BLK",
+    "CME",
+    "DUK",
+    "LIN",
+    "MDT",
+    "SPGI",
+    "UPS",
+    "USB",
+    "VZ"
+  ],
+  "rows": 12300,
+  "adjustment": "raw",
+  "full_corporate_action_audit": false
+}

@@ -1,0 +1,237 @@
+{
+  "accounts": 32,
+  "rows": 12300,
+  "protocol_commit": "a0fe026",
+  "halts": [
+    {
+      "start": "2022-09-01",
+      "end": "2023-09-01",
+      "method": "fixed_ensemble",
+      "cost_multiplier": 1,
+      "first_halt": "2023-03-17"
+    },
+    {
+      "start": "2022-09-01",
+      "end": "2023-09-01",
+      "method": "fixed_ensemble",
+      "cost_multiplier": 2,
+      "first_halt": "2023-03-17"
+    },
+    {
+      "start": "2022-09-01",
+      "end": "2023-09-01",
+      "method": "erc",
+      "cost_multiplier": 1,
+      "first_halt": null
+    },
+    {
+      "start": "2022-09-01",
+      "end": "2023-09-01",
+      "method": "erc",
+      "cost_multiplier": 2,
+      "first_halt": null
+    },
+    {
+      "start": "2022-09-01",
+      "end": "2023-09-01",
+      "method": "equal20",
+      "cost_multiplier": 1,
+      "first_halt": null
+    },
+    {
+      "start": "2022-09-01",
+      "end": "2023-09-01",
+      "method": "equal20",
+      "cost_multiplier": 2,
+      "first_halt": null
+    },
+    {
+      "start": "2022-09-01",
+      "end": "2023-09-01",
+      "method": "equal5",
+      "cost_multiplier": 1,
+      "first_halt": null
+    },
+    {
+      "start": "2022-09-01",
+      "end": "2023-09-01",
+      "method": "equal5",
+      "cost_multiplier": 2,
+      "first_halt": null
+    },
+    {
+      "start": "2023-09-01",
+      "end": "2024-09-01",
+      "method": "fixed_ensemble",
+      "cost_multiplier": 1,
+      "first_halt": null
+    },
+    {
+      "start": "2023-09-01",
+      "end": "2024-09-01",
+      "method": "fixed_ensemble",
+      "cost_multiplier": 2,
+      "first_halt": null
+    },
+    {
+      "start": "2023-09-01",
+      "end": "2024-09-01",
+      "method": "erc",
+      "cost_multiplier": 1,
+      "first_halt": null
+    },
+    {
+      "start": "2023-09-01",
+      "end": "2024-09-01",
+      "method": "erc",
+      "cost_multiplier": 2,
+      "first_halt": null
+    },
+    {
+      "start": "2023-09-01",
+      "end": "2024-09-01",
+      "method": "equal20",
+      "cost_multiplier": 1,
+      "first_halt": null
+    },
+    {
+      "start": "2023-09-01",
+      "end": "2024-09-01",
+      "method": "equal20",
+      "cost_multiplier": 2,
+      "first_halt": null
+    },
+    {
+      "start": "2023-09-01",
+      "end": "2024-09-01",
+      "method": "equal5",
+      "cost_multiplier": 1,
+      "first_halt": null
+    },
+    {
+      "start": "2023-09-01",
+      "end": "2024-09-01",
+      "method": "equal5",
+      "cost_multiplier": 2,
+      "first_halt": null
+    },
+    {
+      "start": "2024-09-01",
+      "end": "2025-09-01",
+      "method": "fixed_ensemble",
+      "cost_multiplier": 1,
+      "first_halt": null
+    },
+    {
+      "start": "2024-09-01",
+      "end": "2025-09-01",
+      "method": "fixed_ensemble",
+      "cost_multiplier": 2,
+      "first_halt": null
+    },
+    {
+      "start": "2024-09-01",
+      "end": "2025-09-01",
+      "method": "erc",
+      "cost_multiplier": 1,
+      "first_halt": "2025-04-08"
+    },
+    {
+      "start": "2024-09-01",
+      "end": "2025-09-01",
+      "method": "erc",
+      "cost_multiplier": 2,
+      "first_halt": "2025-04-08"
+    },
+    {
+      "start": "2024-09-01",
+      "end": "2025-09-01",
+      "method": "equal20",
+      "cost_multiplier": 1,
+      "first_halt": "2025-04-08"
+    },
+    {
+      "start": "2024-09-01",
+      "end": "2025-09-01",
+      "method": "equal20",
+      "cost_multiplier": 2,
+      "first_halt": "2025-04-08"
+    },
+    {
+      "start": "2024-09-01",
+      "end": "2025-09-01",
+      "method": "equal5",
+      "cost_multiplier": 1,
+      "first_halt": "2025-04-09"
+    },
+    {
+      "start": "2024-09-01",
+      "end": "2025-09-01",
+      "method": "equal5",
+      "cost_multiplier": 2,
+      "first_halt": "2025-04-09"
+    },
+    {
+      "start": "2022-09-01",
+      "end": "2025-09-01",
+      "method": "fixed_ensemble",
+      "cost_multiplier": 1,
+      "first_halt": "2023-03-17"
+    },
+    {
+      "start": "2022-09-01",
+      "end": "2025-09-01",
+      "method": "fixed_ensemble",
+      "cost_multiplier": 2,
+      "first_halt": "2023-03-17"
+    },
+    {
+      "start": "2022-09-01",
+      "end": "2025-09-01",
+      "method": "erc",
+      "cost_multiplier": 1,
+      "first_halt": "2023-10-02"
+    },
+    {
+      "start": "2022-09-01",
+      "end": "2025-09-01",
+      "method": "erc",
+      "cost_multiplier": 2,
+      "first_halt": "2023-10-02"
+    },
+    {
+      "start": "2022-09-01",
+      "end": "2025-09-01",
+      "method": "equal20",
+      "cost_multiplier": 1,
+      "first_halt": "2023-10-02"
+    },
+    {
+      "start": "2022-09-01",
+      "end": "2025-09-01",
+      "method": "equal20",
+      "cost_multiplier": 2,
+      "first_halt": "2023-09-27"
+    },
+    {
+      "start": "2022-09-01",
+      "end": "2025-09-01",
+      "method": "equal5",
+      "cost_multiplier": 1,
+      "first_halt": "2023-09-26"
+    },
+    {
+      "start": "2022-09-01",
+      "end": "2025-09-01",
+      "method": "equal5",
+      "cost_multiplier": 2,
+      "first_halt": "2023-09-21"
+    }
+  ],
+  "hashes": {
+    "scripts/study_transfer12_temporal.py": "a0384a509c20c34368bca4eecf62ed16d9b1c1bd14bd211abdf5942eb5f83093",
+    "scripts/study_erc.py": "c9af2d2176a78cf6c2c0bed6fb7db428ad7a1e484289afe1473a76f0dbf44cca",
+    "backend/src/quant_workbench/position.py": "1e6623296d3047befe148eb223908a473eb61c055cdaf6ee609723d658c2cab1",
+    "backend/src/quant_workbench/daily_strategies.py": "3f66ce4779a4714a66cfe1e4635c766d1f0b562702613680363d9a8e76ffc180"
+  }
+}
