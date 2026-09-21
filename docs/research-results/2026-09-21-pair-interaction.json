@@ -1,0 +1,349 @@
+{
+  "status": "completed",
+  "validated": false,
+  "config": {
+    "allocation": {
+      "enabled": false,
+      "symbols": [],
+      "lookback": 60,
+      "max_positions": 3,
+      "max_weight": 0.35,
+      "cash_reserve": 0.05,
+      "risk_aversion": 10.0,
+      "cost_penalty": 2.0,
+      "rebalance_band": 0.02,
+      "max_daily_turnover": 1.0,
+      "rebalance_minutes": 30
+    },
+    "model": "fixed_ensemble",
+    "lookback": 20,
+    "horizon": 5,
+    "rebalance_days": 5,
+    "confidence": 0.5,
+    "tranche_weight": 0.1,
+    "max_weight": 0.2,
+    "capital_mode": "signal_budget",
+    "classifier_sha256": null,
+    "portfolio_policy": "legacy",
+    "entry_band": 0.005,
+    "daily_vol_target": 0.015,
+    "stop_loss_pct": 10.0,
+    "max_drawdown_pct": 10.0,
+    "costs": {
+      "allocation": {
+        "enabled": false,
+        "symbols": [],
+        "lookback": 60,
+        "max_positions": 3,
+        "max_weight": 0.35,
+        "cash_reserve": 0.05,
+        "risk_aversion": 10.0,
+        "cost_penalty": 2.0,
+        "rebalance_band": 0.02,
+        "max_daily_turnover": 1.0,
+        "rebalance_minutes": 30
+      },
+      "strategy": "adaptive",
+      "fast": 5,
+      "stat_window": 120,
+      "stat_horizon": 15,
+      "stat_entry_z": 1.5,
+      "stat_confidence": 0.5,
+      "stat_process_noise": 0.001,
+      "slow": 20,
+      "flatten_minutes": 5,
+      "opening_minutes": 15,
+      "reversion_bps": 30.0,
+      "stop_loss_bps": 100.0,
+      "regime_window": 60,
+      "min_reward_risk": 1.2,
+      "atr_window": 14,
+      "stop_atr": 2.0,
+      "take_atr": 3.0,
+      "breakout_buffer_atr": 0.1,
+      "reversion_atr": 2.0,
+      "momentum_threshold_bps": 10.0,
+      "regime_gate": "off",
+      "regime_window_days": 10,
+      "regime_min_drift_bps": 0.0,
+      "regime_max_efficiency": 0.35,
+      "max_scaling_lots": 3,
+      "lot_breakeven_hold": false,
+      "lot_patience_minutes": 45,
+      "lot_hard_stop_atr": 4.0,
+      "tranche_requires_uptrend": false,
+      "min_relative_volume": 1.2,
+      "max_hold_minutes": 30,
+      "cooldown_minutes": 10,
+      "max_daily_entries": 4,
+      "daily_loss_bps": 100.0,
+      "risk_per_trade_bps": 25.0,
+      "rule_cost_multiplier": 1.5,
+      "initial_cash": 100000.0,
+      "spread_bps": 2.0,
+      "slippage_bps": 2.0,
+      "commission_per_share": 0.005,
+      "minimum_commission": 1.0,
+      "sell_fee_bps": 0.3,
+      "participation": 0.01
+    }
+  },
+  "source": "artifacts/models/conditional-policy-v2/history/daily.parquet",
+  "source_sha256": "54cfefdda4a5c12e6f75e2c12453044922809153a52775d0597b98b16fdc3d85",
+  "full_archive": "2026-09-21-pair-interaction.full.json.gz",
+  "accounts": 38,
+  "comparisons": [
+    {
+      "start": "2023-09-01",
+      "end_exclusive": "2024-09-01",
+      "mode": "cash",
+      "pair": [
+        "AAPL",
+        "AMD"
+      ],
+      "utility": {
+        "joint_delta_pp": -5.439780785593073,
+        "sum_single_delta_pp": -5.7684542429501615,
+        "interaction_pp": 0.3286734573570884,
+        "opposite_sign": false
+      },
+      "return": {
+        "joint_delta_pp": -4.771107757724179,
+        "sum_single_delta_pp": -4.742476870989366,
+        "interaction_pp": -0.028630886734813288,
+        "opposite_sign": false
+      }
+    },
+    {
+      "start": "2023-09-01",
+      "end_exclusive": "2024-09-01",
+      "mode": "cash",
+      "pair": [
+        "AMZN",
+        "AVGO"
+      ],
+      "utility": {
+        "joint_delta_pp": 2.3718841812589933,
+        "sum_single_delta_pp": 2.5052912057488106,
+        "interaction_pp": -0.13340702448981734,
+        "opposite_sign": false
+      },
+      "return": {
+        "joint_delta_pp": 2.777934215360922,
+        "sum_single_delta_pp": 2.894742694021568,
+        "interaction_pp": -0.11680847866064603,
+        "opposite_sign": false
+      }
+    },
+    {
+      "start": "2023-09-01",
+      "end_exclusive": "2024-09-01",
+      "mode": "cash",
+      "pair": [
+        "BRK.B",
+        "COST"
+      ],
+      "utility": {
+        "joint_delta_pp": 0.7592273195155377,
+        "sum_single_delta_pp": 0.6762815008059198,
+        "interaction_pp": 0.08294581870961792,
+        "opposite_sign": false
+      },
+      "return": {
+        "joint_delta_pp": 1.0462711478700593,
+        "sum_single_delta_pp": 0.9883793202672075,
+        "interaction_pp": 0.05789182760285172,
+        "opposite_sign": false
+      }
+    },
+    {
+      "start": "2023-09-01",
+      "end_exclusive": "2024-09-01",
+      "mode": "redistribute",
+      "pair": [
+        "AAPL",
+        "AMD"
+      ],
+      "utility": {
+        "joint_delta_pp": 0.504449830381887,
+        "sum_single_delta_pp": 0.8655770823411286,
+        "interaction_pp": -0.36112725195924167,
+        "opposite_sign": false
+      },
+      "return": {
+        "joint_delta_pp": 0.723137085150638,
+        "sum_single_delta_pp": 1.0621712797693084,
+        "interaction_pp": -0.33903419461867035,
+        "opposite_sign": false
+      }
+    },
+    {
+      "start": "2023-09-01",
+      "end_exclusive": "2024-09-01",
+      "mode": "redistribute",
+      "pair": [
+        "AMZN",
+        "AVGO"
+      ],
+      "utility": {
+        "joint_delta_pp": 1.4670969734127404,
+        "sum_single_delta_pp": 1.3547451882133688,
+        "interaction_pp": 0.11235178519937161,
+        "opposite_sign": false
+      },
+      "return": {
+        "joint_delta_pp": 1.400401112684313,
+        "sum_single_delta_pp": 1.2950604661583043,
+        "interaction_pp": 0.10534064652600872,
+        "opposite_sign": false
+      }
+    },
+    {
+      "start": "2023-09-01",
+      "end_exclusive": "2024-09-01",
+      "mode": "redistribute",
+      "pair": [
+        "BRK.B",
+        "COST"
+      ],
+      "utility": {
+        "joint_delta_pp": 0.3492097642542378,
+        "sum_single_delta_pp": 0.37315086837404454,
+        "interaction_pp": -0.023941104119806766,
+        "opposite_sign": false
+      },
+      "return": {
+        "joint_delta_pp": 0.4856771302951257,
+        "sum_single_delta_pp": 0.5354120960612052,
+        "interaction_pp": -0.0497349657660795,
+        "opposite_sign": false
+      }
+    },
+    {
+      "start": "2024-09-01",
+      "end_exclusive": "2025-09-01",
+      "mode": "cash",
+      "pair": [
+        "AAPL",
+        "AMD"
+      ],
+      "utility": {
+        "joint_delta_pp": 4.2503901948972596,
+        "sum_single_delta_pp": 4.161678450808709,
+        "interaction_pp": 0.08871174408855076,
+        "opposite_sign": false
+      },
+      "return": {
+        "joint_delta_pp": 2.911989950426486,
+        "sum_single_delta_pp": 2.851567721730963,
+        "interaction_pp": 0.06042222869552294,
+        "opposite_sign": false
+      }
+    },
+    {
+      "start": "2024-09-01",
+      "end_exclusive": "2025-09-01",
+      "mode": "cash",
+      "pair": [
+        "AMZN",
+        "AVGO"
+      ],
+      "utility": {
+        "joint_delta_pp": 4.940909887660616,
+        "sum_single_delta_pp": 4.985709666765409,
+        "interaction_pp": -0.04479977910479338,
+        "opposite_sign": false
+      },
+      "return": {
+        "joint_delta_pp": 3.470105620511199,
+        "sum_single_delta_pp": 3.50971514356283,
+        "interaction_pp": -0.0396095230516309,
+        "opposite_sign": false
+      }
+    },
+    {
+      "start": "2024-09-01",
+      "end_exclusive": "2025-09-01",
+      "mode": "cash",
+      "pair": [
+        "BRK.B",
+        "COST"
+      ],
+      "utility": {
+        "joint_delta_pp": 3.3070032816133024,
+        "sum_single_delta_pp": 4.8807085588053205,
+        "interaction_pp": -1.5737052771920181,
+        "opposite_sign": false
+      },
+      "return": {
+        "joint_delta_pp": 2.3097023234208147,
+        "sum_single_delta_pp": 3.396934365909798,
+        "interaction_pp": -1.0872320424889832,
+        "opposite_sign": false
+      }
+    },
+    {
+      "start": "2024-09-01",
+      "end_exclusive": "2025-09-01",
+      "mode": "redistribute",
+      "pair": [
+        "AAPL",
+        "AMD"
+      ],
+      "utility": {
+        "joint_delta_pp": 4.457261063949143,
+        "sum_single_delta_pp": -2.197191946001963,
+        "interaction_pp": 6.654453009951106,
+        "opposite_sign": true
+      },
+      "return": {
+        "joint_delta_pp": 2.851315749372174,
+        "sum_single_delta_pp": -1.6928831140717415,
+        "interaction_pp": 4.544198863443915,
+        "opposite_sign": true
+      }
+    },
+    {
+      "start": "2024-09-01",
+      "end_exclusive": "2025-09-01",
+      "mode": "redistribute",
+      "pair": [
+        "AMZN",
+        "AVGO"
+      ],
+      "utility": {
+        "joint_delta_pp": 4.464444922002813,
+        "sum_single_delta_pp": 4.79569736480554,
+        "interaction_pp": -0.33125244280272703,
+        "opposite_sign": false
+      },
+      "return": {
+        "joint_delta_pp": 2.950532827132612,
+        "sum_single_delta_pp": 3.196116373496827,
+        "interaction_pp": -0.2455835463642151,
+        "opposite_sign": false
+      }
+    },
+    {
+      "start": "2024-09-01",
+      "end_exclusive": "2025-09-01",
+      "mode": "redistribute",
+      "pair": [
+        "BRK.B",
+        "COST"
+      ],
+      "utility": {
+        "joint_delta_pp": 0.39475318989447583,
+        "sum_single_delta_pp": 6.381051161060958,
+        "interaction_pp": -5.986297971166482,
+        "opposite_sign": false
+      },
+      "return": {
+        "joint_delta_pp": -0.03173736245705161,
+        "sum_single_delta_pp": 4.1096602943172185,
+        "interaction_pp": -4.14139765677427,
+        "opposite_sign": true
+      }
+    }
+  ]
+}

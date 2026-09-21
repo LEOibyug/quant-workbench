@@ -1,0 +1,352 @@
+[
+  {
+    "start": "2023-09-01",
+    "mode": "baseline",
+    "excluded": [],
+    "halt_date": "2024-08-05",
+    "halt_drawdown": 10.85910297483177
+  },
+  {
+    "start": "2023-09-01",
+    "mode": "cash",
+    "excluded": [
+      "AAPL"
+    ],
+    "halt_date": null,
+    "halt_drawdown": null
+  },
+  {
+    "start": "2023-09-01",
+    "mode": "cash",
+    "excluded": [
+      "AMD"
+    ],
+    "halt_date": "2024-08-05",
+    "halt_drawdown": 10.144494286647966
+  },
+  {
+    "start": "2023-09-01",
+    "mode": "cash",
+    "excluded": [
+      "AMZN"
+    ],
+    "halt_date": "2024-08-05",
+    "halt_drawdown": 10.745101019326974
+  },
+  {
+    "start": "2023-09-01",
+    "mode": "cash",
+    "excluded": [
+      "AVGO"
+    ],
+    "halt_date": "2024-08-05",
+    "halt_drawdown": 10.19420195379105
+  },
+  {
+    "start": "2023-09-01",
+    "mode": "cash",
+    "excluded": [
+      "BRK.B"
+    ],
+    "halt_date": "2024-08-05",
+    "halt_drawdown": 10.600531091197052
+  },
+  {
+    "start": "2023-09-01",
+    "mode": "cash",
+    "excluded": [
+      "COST"
+    ],
+    "halt_date": "2024-08-05",
+    "halt_drawdown": 10.49347921954391
+  },
+  {
+    "start": "2023-09-01",
+    "mode": "cash",
+    "excluded": [
+      "AAPL",
+      "AMD"
+    ],
+    "halt_date": null,
+    "halt_drawdown": null
+  },
+  {
+    "start": "2023-09-01",
+    "mode": "cash",
+    "excluded": [
+      "AMZN",
+      "AVGO"
+    ],
+    "halt_date": "2024-08-05",
+    "halt_drawdown": 10.047002906627911
+  },
+  {
+    "start": "2023-09-01",
+    "mode": "cash",
+    "excluded": [
+      "BRK.B",
+      "COST"
+    ],
+    "halt_date": "2024-08-05",
+    "halt_drawdown": 10.285015318122726
+  },
+  {
+    "start": "2023-09-01",
+    "mode": "redistribute",
+    "excluded": [
+      "AAPL"
+    ],
+    "halt_date": "2024-08-05",
+    "halt_drawdown": 10.84056674196222
+  },
+  {
+    "start": "2023-09-01",
+    "mode": "redistribute",
+    "excluded": [
+      "AMD"
+    ],
+    "halt_date": "2024-08-05",
+    "halt_drawdown": 10.484450812844958
+  },
+  {
+    "start": "2023-09-01",
+    "mode": "redistribute",
+    "excluded": [
+      "AMZN"
+    ],
+    "halt_date": "2024-08-05",
+    "halt_drawdown": 10.75134528184285
+  },
+  {
+    "start": "2023-09-01",
+    "mode": "redistribute",
+    "excluded": [
+      "AVGO"
+    ],
+    "halt_date": "2024-08-05",
+    "halt_drawdown": 11.086230111930817
+  },
+  {
+    "start": "2023-09-01",
+    "mode": "redistribute",
+    "excluded": [
+      "BRK.B"
+    ],
+    "halt_date": "2024-08-05",
+    "halt_drawdown": 10.6423936286828
+  },
+  {
+    "start": "2023-09-01",
+    "mode": "redistribute",
+    "excluded": [
+      "COST"
+    ],
+    "halt_date": "2024-08-05",
+    "halt_drawdown": 10.751289865606417
+  },
+  {
+    "start": "2023-09-01",
+    "mode": "redistribute",
+    "excluded": [
+      "AAPL",
+      "AMD"
+    ],
+    "halt_date": "2024-08-05",
+    "halt_drawdown": 10.421728465294267
+  },
+  {
+    "start": "2023-09-01",
+    "mode": "redistribute",
+    "excluded": [
+      "AMZN",
+      "AVGO"
+    ],
+    "halt_date": "2024-08-05",
+    "halt_drawdown": 10.992494696288624
+  },
+  {
+    "start": "2023-09-01",
+    "mode": "redistribute",
+    "excluded": [
+      "BRK.B",
+      "COST"
+    ],
+    "halt_date": "2024-08-05",
+    "halt_drawdown": 10.586168242749993
+  },
+  {
+    "start": "2024-09-01",
+    "mode": "baseline",
+    "excluded": [],
+    "halt_date": "2025-04-04",
+    "halt_drawdown": 10.792798882687082
+  },
+  {
+    "start": "2024-09-01",
+    "mode": "cash",
+    "excluded": [
+      "AAPL"
+    ],
+    "halt_date": "2025-04-04",
+    "halt_drawdown": 10.470284358000036
+  },
+  {
+    "start": "2024-09-01",
+    "mode": "cash",
+    "excluded": [
+      "AMD"
+    ],
+    "halt_date": "2025-04-04",
+    "halt_drawdown": 11.9794669739684
+  },
+  {
+    "start": "2024-09-01",
+    "mode": "cash",
+    "excluded": [
+      "AMZN"
+    ],
+    "halt_date": "2025-04-04",
+    "halt_drawdown": 10.310503803965732
+  },
+  {
+    "start": "2024-09-01",
+    "mode": "cash",
+    "excluded": [
+      "AVGO"
+    ],
+    "halt_date": "2025-04-04",
+    "halt_drawdown": 12.165076473195302
+  },
+  {
+    "start": "2024-09-01",
+    "mode": "cash",
+    "excluded": [
+      "BRK.B"
+    ],
+    "halt_date": "2025-04-03",
+    "halt_drawdown": 10.083235035124794
+  },
+  {
+    "start": "2024-09-01",
+    "mode": "cash",
+    "excluded": [
+      "COST"
+    ],
+    "halt_date": "2025-04-04",
+    "halt_drawdown": 11.318167876227847
+  },
+  {
+    "start": "2024-09-01",
+    "mode": "cash",
+    "excluded": [
+      "AAPL",
+      "AMD"
+    ],
+    "halt_date": "2025-04-04",
+    "halt_drawdown": 11.706665256032567
+  },
+  {
+    "start": "2024-09-01",
+    "mode": "cash",
+    "excluded": [
+      "AMZN",
+      "AVGO"
+    ],
+    "halt_date": "2025-04-04",
+    "halt_drawdown": 11.660864344088118
+  },
+  {
+    "start": "2024-09-01",
+    "mode": "cash",
+    "excluded": [
+      "BRK.B",
+      "COST"
+    ],
+    "halt_date": "2025-04-04",
+    "halt_drawdown": 11.314267830226987
+  },
+  {
+    "start": "2024-09-01",
+    "mode": "redistribute",
+    "excluded": [
+      "AAPL"
+    ],
+    "halt_date": "2025-04-04",
+    "halt_drawdown": 10.350770486294403
+  },
+  {
+    "start": "2024-09-01",
+    "mode": "redistribute",
+    "excluded": [
+      "AMD"
+    ],
+    "halt_date": "2025-04-04",
+    "halt_drawdown": 10.226209615219318
+  },
+  {
+    "start": "2024-09-01",
+    "mode": "redistribute",
+    "excluded": [
+      "AMZN"
+    ],
+    "halt_date": "2025-04-04",
+    "halt_drawdown": 10.727993265378622
+  },
+  {
+    "start": "2024-09-01",
+    "mode": "redistribute",
+    "excluded": [
+      "AVGO"
+    ],
+    "halt_date": "2025-04-04",
+    "halt_drawdown": 11.996249027744277
+  },
+  {
+    "start": "2024-09-01",
+    "mode": "redistribute",
+    "excluded": [
+      "BRK.B"
+    ],
+    "halt_date": "2025-04-03",
+    "halt_drawdown": 10.540772231254802
+  },
+  {
+    "start": "2024-09-01",
+    "mode": "redistribute",
+    "excluded": [
+      "COST"
+    ],
+    "halt_date": "2025-04-04",
+    "halt_drawdown": 12.151819213290704
+  },
+  {
+    "start": "2024-09-01",
+    "mode": "redistribute",
+    "excluded": [
+      "AAPL",
+      "AMD"
+    ],
+    "halt_date": "2025-04-04",
+    "halt_drawdown": 12.049747557625757
+  },
+  {
+    "start": "2024-09-01",
+    "mode": "redistribute",
+    "excluded": [
+      "AMZN",
+      "AVGO"
+    ],
+    "halt_date": "2025-04-04",
+    "halt_drawdown": 11.755785994046065
+  },
+  {
+    "start": "2024-09-01",
+    "mode": "redistribute",
+    "excluded": [
+      "BRK.B",
+      "COST"
+    ],
+    "halt_date": "2025-04-03",
+    "halt_drawdown": 10.277005053997112
+  }
+]
