@@ -1,0 +1,36 @@
+{
+  "parent": "GE",
+  "child": "GEV",
+  "numerator": 1,
+  "denominator": 4,
+  "ratio_verified": true,
+  "record_date": "2024-03-19",
+  "distribution_session": "2024-04-02",
+  "distribution_timing": "before US market open",
+  "fractional_treatment": "agent market sale; actual net proceeds distributed later; no assumed immediate cash",
+  "sources": [
+    {
+      "url": "https://www.ge.com/news/press-releases/ge-board-of-directors-approves-spin-off-of-ge-vernova-ge-vernova-and-ge-aerospace-to",
+      "sha256": "c0298cf952e8ba360a167b3feec9ba0d387c29fc60e296d0cef366badaaef103",
+      "extracts": [
+        "E Vernova and GE Aerospace to Launch April 2, 2024 February 29, 2024 Board sets spin-off date for GE Vernova (NYSE: GEV) of April 2, 2024, pre-market Shareholders of record on March 19, 2024, will receive one share of GE Vernova for every four shares of GE owned Following the planned spin-off of GE Vernova, GE shareholders will continue to hold their GE shares as GE Aerospace shares BOSTON – February 29, 2024 – General Electric Company (“GE”) (NYSE: GE) today announced that its Board of Directors has approved the previously announced spin-off of GE Vernova. [1] The company is expected to begin trading on the New York Stock Exchange (“NYSE”) on April 2, 2024, under the ticker symbol “GEV”. GE Chairman and CEO and GE Aerospace CEO H. Lawrence Culp, Jr. said, “Today’s announcement clears the way for the historic launches of GE Vernova and GE Aerospace, completing our transformation into&nbsp; three independent, investment-grade industry leaders. Beginning April 2, both companies will be fully independent, with GE Vernova positioned to le"
+      ]
+    },
+    {
+      "url": "https://www.geaerospace.com/sites/default/files/ge-vernova-spin-off-faq.pdf",
+      "sha256": "ab31f0413eccd9dd5000128b515e88395394161023e561b2d03afccec5a8af6b",
+      "extracts": [
+        "ou to contact your\n    bank, broker, or other nominee if you have any questions concerning the mechanics of having\n    shares held in “street name.”\n\nHow were fractional shares of GE Vernova treated?\nShareholders did not receive fractional shares of GE Vernova in the spin-off. Shareholders instead\nreceived cash in lieu of the fractional shares. The distribution agent aggregated all fractional shares\ninto whole shares and sold the whole shares in the open market at prevailing market prices on\nbehalf of those who were entitled to receive a fractional share. The distribution agent then distributed\nthe aggregate cash proceeds of the sales, net of brokerage fees, transfer taxes and other costs, pro\nrata to these holders (net of any required withholding for taxes applicable to each holder).\n\nHow was the GE Vernova distribution ratio calculated/determined?\nThe distribution ratio was selected so that GE Vernova has an appropriate number of shares\noutstanding relative to companies of its size and scope on the S&P 500 and in the electric power\n",
+        "ed one share of GE Vernova common stock for every four shares of GE\ncommon stock held as of the close of business on the record date, March 19, 2024 (unless sold prior\nto April 2, 2024).\n\nFollowing the spin-off, GE Vernova became an independent, publicly traded company.\nWho serves on GE Vernova’s executive team and Board of Directors?\nGE Vernova’s global leadership team can be found here.\n\nWhen did GE Vernova spin-off from General Electric?\nThe GE Vernova spin-off occurred before the open of U.S. financial markets on April 2, 2024.\n\nWhat did GE stockholders receive in the proposed spin-off?\nEach holder of GE common stock received one share of GE Vernova common stock for every four\nshares of GE common stock held on March 19, 2024, the record date for the distribution, unless sold\nprior to April 2, 2024. The distribution applied to all shares of GE common stock held as of the record\ndate, unless sold prior to spin.\n\nWhat is the exchange and ticker symbol that GE Vernova trades under?\nShares of GE Vernova are listed on the New York Stock"
+      ]
+    },
+    {
+      "url": "https://www.ge.com/sites/default/files/ge_spin-off_faq_040224.pdf",
+      "sha256": "1b56229f1958aa92e75963a1a2bfd0548af5393f7480651858cff6318222af59",
+      "extracts": [
+        "ing its Lean transformation. With this momentum, GE\nsuccessfully separated into three independent, investment-grade, and industry leading\ncompanies.\n\nWhat was the timing of the spin-offs?\nGE executed the tax-free spin-off of GE HealthCare after market close on January 3, 2023, and\nits common stock began trading on Nasdaq on January 4, 2023. GE executed the tax-free spin-\noff of GE Vernova before market open on April 2, 2024, and its common stock began trading on\nNYSE the same day. Following this second spin-off, GE became an aviation-focused company\nknown as GE Aerospace.\n\nWhy did GE retain approximately a 19.9% stake in GE HealthCare?\nGE retained approximately a 19.9% stake in GE HealthCare upon its separation to provide\nfurther capital allocation flexibility.\n\nWho leads the three independent companies?\n  • Larry Culp is Chairman and CEO of GE Aerospace.\n  • Pete Arduini is President and CEO of GE HealthCare, and Larry Culp is non-executive\n      chairman of GE HealthCare.\n  • Scott Strazik is CEO of GE Vernova and Stephen Angel is n"
+      ]
+    }
+  ],
+  "engine_ready": false
+}
