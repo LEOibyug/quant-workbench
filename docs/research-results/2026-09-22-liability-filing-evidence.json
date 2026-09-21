@@ -1,0 +1,282 @@
+[
+  {
+    "symbol": "VZ",
+    "fiscal_end": "2021-12-31",
+    "accession": "0000732712-22-000008",
+    "url": "https://www.verizon.com/about/sites/default/files/2021-Annual-Report-on-Form-10-K.pdf",
+    "pdf_page": 53,
+    "pdf_sha256": "f7fcb508f920e3df9a07bc858a6d9f0d3cd1e976a46efe72375c9ffb983822ac",
+    "statement_text": "Consolidated Balance Sheets\nVerizon Communications Inc. and Subsidiaries\n\n                                                                                         (dollars in millions, except per share amounts)\nAt December 31,                                                                                                   2021             2020\nAssets\nCurrent assets\n   Cash and cash equivalents                                                                           $        2,921    $       22,171\n   Accounts receivable                                                                                         24,742            25,169\n    Less Allowance for credit losses                                                                              896             1,252\n   Accounts receivable, net                                                                                    23,846            23,917\n   Inventories                                                                                                  3,055             1,796\n   Prepaid expenses and other                                                                                   6,906             6,710\nTotal current assets                                                                                           36,728            54,594\n\nProperty, plant and equipment                                                                                 289,897          279,737\n   Less Accumulated depreciation                                                                              190,201          184,904\nProperty, plant and equipment, net                                                                             99,696           94,833\n\nInvestments in unconsolidated businesses                                                                        1,061              589\nWireless licenses                                                                                             147,619           96,097\nDeposits for wireless licenses                                                                                      —            2,772\nGoodwill                                                                                                       28,603           24,773\nOther intangible assets, net                                                                                   11,677            9,413\nOperating lease right-of-use assets                                                                            27,883           22,531\nOther assets                                                                                                   13,329           10,879\nTotal assets                                                                                           $      366,596    $     316,481\n\nLiabilities and Equity\nCurrent liabilities\n   Debt maturing within one year                                                                       $        7,443    $        5,889\n   Accounts payable and accrued liabilities                                                                    24,833            20,658\n   Current operating lease liabilities                                                                          3,859             3,485\n   Other current liabilities                                                                                   11,025             9,628\nTotal current liabilities                                                                                      47,160            39,660\n\nLong-term debt                                                                                                143,425          123,173\nEmployee benefit obligations                                                                                   15,410           18,657\nDeferred income taxes                                                                                          40,685           35,711\nNon-current operating lease liabilities                                                                        23,203           18,000\nOther liabilities                                                                                              13,513           12,008\nTotal long-term liabilities                                                                                   236,236          207,549\n\nCommitments and Contingencies (Note 16)\n\nEquity\n  Series preferred stock ($0.10 par value; 250,000,000 shares authorized; none issued)                             —                 —\n   Common stock ($0.10 par value; 6,250,000,000 shares authorized in each period; 4,291,433,646\n   shares issued in each period)                                                                                  429              429\n   Additional paid in capital                                                                                  13,861           13,404\n   Retained earnings                                                                                           71,993           60,464\n   Accumulated other comprehensive loss                                                                          (927)             (71)\n   Common stock in treasury, at cost (93,634,725 and 153,304,088 shares outstanding)                           (4,104)          (6,719)\n   Deferred compensation – employee stock ownership plans (ESOPs) and other                                       538              335\n   Noncontrolling interests                                                                                     1,410            1,430\nTotal equity                                                                                                   83,200           69,272\nTotal liabilities and equity                                                                           $      366,596 $        316,481\n                                             See Notes to Consolidated Financial Statements\n\n                                                                                                  Verizon 2021 Annual Report on Form 10-K\n\n                                                                   53\n",
+    "values": {
+      "Assets": {
+        "value_usd": 366596000000,
+        "line": "Total assets                                                                                           $      366,596    $     316,481",
+        "sec_source": {
+          "end": "2021-12-31",
+          "val": 366596000000,
+          "accn": "0000732712-22-000008",
+          "fy": 2021,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2022-02-11",
+          "tag": "Assets"
+        }
+      },
+      "LiabilitiesCurrent": {
+        "value_usd": 47160000000,
+        "line": "Total current liabilities                                                                                      47,160            39,660",
+        "sec_source": {
+          "end": "2021-12-31",
+          "val": 47160000000,
+          "accn": "0000732712-22-000008",
+          "fy": 2021,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2022-02-11",
+          "tag": "LiabilitiesCurrent"
+        }
+      },
+      "LiabilitiesNoncurrent": {
+        "value_usd": 236236000000,
+        "line": "Total long-term liabilities                                                                                   236,236          207,549",
+        "sec_source": {
+          "end": "2021-12-31",
+          "val": 236236000000,
+          "accn": "0000732712-22-000008",
+          "fy": 2021,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2022-02-11",
+          "tag": "LiabilitiesNoncurrent"
+        }
+      }
+    },
+    "liability_sum": 283396000000,
+    "burden": 0.7730471690907702,
+    "validation": "Report values match same-filing SEC components; not historical issuer continuity or strategy validation"
+  },
+  {
+    "symbol": "VZ",
+    "fiscal_end": "2022-12-31",
+    "accession": "0000732712-23-000012",
+    "url": "https://www.annualreports.com/HostedData/AnnualReportArchive/v/NYSE_VZ_2022.pdf",
+    "pdf_page": 56,
+    "pdf_sha256": "403d7346e8a059472863d1789527f16e5127a61c2f6c4429012e6227f27576d7",
+    "statement_text": "Consolidated Balance Sheets\nVerizon Communications Inc. and Subsidiaries\n\n                                                                                 (dollars in millions, except per share amounts)\nAt December 31,                                                                                             2022           2021\nAssets\nCurrent assets\n  Cash and cash equivalents                                                                      $       2,605   $       2,921\n  Accounts receivable                                                                                   25,332          24,742\n   Less Allowance for credit losses                                                                        826             896\n  Accounts receivable, net                                                                              24,506          23,846\n  Inventories                                                                                            2,388           3,055\n  Prepaid expenses and other                                                                             8,358           6,906\nTotal current assets                                                                                    37,857          36,728\n\nProperty, plant and equipment                                                                          307,689         289,897\n   Less Accumulated depreciation                                                                       200,255         190,201\nProperty, plant and equipment, net                                                                     107,434          99,696\n\nInvestments in unconsolidated businesses                                                                1,071            1,061\nWireless licenses                                                                                     149,796          147,619\nGoodwill                                                                                               28,671           28,603\nOther intangible assets, net                                                                           11,461           11,677\nOperating lease right-of-use assets                                                                    26,130           27,883\nOther assets                                                                                           17,260           13,329\nTotal assets                                                                                     $    379,680    $     366,596\n\nLiabilities and Equity\nCurrent liabilities\n   Debt maturing within one year                                                                 $       9,963   $       7,443\n   Accounts payable and accrued liabilities                                                             23,977          24,833\n   Current operating lease liabilities                                                                   4,134           3,859\n   Other current liabilities                                                                            12,097          11,025\nTotal current liabilities                                                                               50,171          47,160\n\nLong-term debt                                                                                         140,676         143,425\nEmployee benefit obligations                                                                            12,974          15,410\nDeferred income taxes                                                                                   43,441          40,685\nNon-current operating lease liabilities                                                                 21,558          23,203\nOther liabilities                                                                                       18,397          13,513\nTotal long-term liabilities                                                                            237,046         236,236\n\nCommitments and Contingencies (Note 16)\n\nEquity\n  Series preferred stock ($0.10 par value; 250,000,000 shares authorized; none issued)                       —               —\n   Common stock ($0.10 par value; 6,250,000,000 shares authorized in each period;\n   4,291,433,646 shares issued in each period)                                                             429             429\n   Additional paid in capital                                                                           13,420          13,861\n   Retained earnings                                                                                    82,380          71,993\n   Accumulated other comprehensive loss                                                                 (1,865)           (927)\n   Common stock in treasury, at cost (91,572,258 and 93,634,725 shares outstanding)                     (4,013)         (4,104)\n   Deferred compensation – employee stock ownership plans (ESOPs) and other                                793             538\n   Noncontrolling interests                                                                              1,319           1,410\nTotal equity                                                                                            92,463          83,200\nTotal liabilities and equity                                                                     $     379,680 $       366,596\n                                          See Notes to Consolidated Financial Statements\n\n\n\n\nVerizon 2022 Annual Report on Form 10-K                        56\n",
+    "values": {
+      "Assets": {
+        "value_usd": 379680000000,
+        "line": "Total assets                                                                                     $    379,680    $     366,596",
+        "sec_source": {
+          "end": "2022-12-31",
+          "val": 379680000000,
+          "accn": "0000732712-23-000012",
+          "fy": 2022,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2023-02-10",
+          "tag": "Assets"
+        }
+      },
+      "LiabilitiesCurrent": {
+        "value_usd": 50171000000,
+        "line": "Total current liabilities                                                                               50,171          47,160",
+        "sec_source": {
+          "end": "2022-12-31",
+          "val": 50171000000,
+          "accn": "0000732712-23-000012",
+          "fy": 2022,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2023-02-10",
+          "tag": "LiabilitiesCurrent"
+        }
+      },
+      "LiabilitiesNoncurrent": {
+        "value_usd": 237046000000,
+        "line": "Total long-term liabilities                                                                            237,046         236,236",
+        "sec_source": {
+          "end": "2022-12-31",
+          "val": 237046000000,
+          "accn": "0000732712-23-000012",
+          "fy": 2022,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2023-02-10",
+          "tag": "LiabilitiesNoncurrent"
+        }
+      }
+    },
+    "liability_sum": 287217000000,
+    "burden": 0.7564712389380531,
+    "validation": "Report values match same-filing SEC components; not historical issuer continuity or strategy validation"
+  },
+  {
+    "symbol": "VZ",
+    "fiscal_end": "2023-12-31",
+    "accession": "0000732712-24-000010",
+    "url": "https://www.annualreports.com/HostedData/AnnualReportArchive/v/NYSE_VZ_2023.pdf",
+    "pdf_page": 55,
+    "pdf_sha256": "8a5bd196e2f8ba3721ceaedd7f49f7aa5dab18a0d56f29c11f8cec620f7429a5",
+    "statement_text": "Consolidated Balance Sheets\nVerizon Communications Inc. and Subsidiaries\n\n                                                                                 (dollars in millions, except per share amounts)\nAt December 31,                                                                                             2023           2022\nAssets\nCurrent assets\n  Cash and cash equivalents                                                                      $       2,065   $       2,605\n  Accounts receivable                                                                                   26,102          25,332\n   Less Allowance for credit losses                                                                      1,017             826\n  Accounts receivable, net                                                                              25,085          24,506\n  Inventories                                                                                            2,057           2,388\n  Prepaid expenses and other                                                                             7,607           8,358\nTotal current assets                                                                                    36,814          37,857\n\nProperty, plant and equipment                                                                          320,108         307,689\n   Less Accumulated depreciation                                                                       211,798         200,255\nProperty, plant and equipment, net                                                                     108,310         107,434\n\nInvestments in unconsolidated businesses                                                                   953           1,071\nWireless licenses                                                                                      155,667         149,796\nGoodwill                                                                                                22,843          28,671\nOther intangible assets, net                                                                            11,057          11,461\nOperating lease right-of-use assets                                                                     24,726          26,130\nOther assets                                                                                            19,885          17,260\nTotal assets                                                                                     $     380,255   $     379,680\n\nLiabilities and Equity\nCurrent liabilities\n   Debt maturing within one year                                                                 $      12,973   $       9,963\n   Accounts payable and accrued liabilities                                                             23,453          23,977\n   Current operating lease liabilities                                                                   4,266           4,134\n   Other current liabilities                                                                            12,531          12,097\nTotal current liabilities                                                                               53,223          50,171\n\nLong-term debt                                                                                         137,701         140,676\nEmployee benefit obligations                                                                            13,189          12,974\nDeferred income taxes                                                                                   45,781          43,441\nNon-current operating lease liabilities                                                                 20,002          21,558\nOther liabilities                                                                                       16,560          18,397\nTotal long-term liabilities                                                                            233,233         237,046\n\nCommitments and Contingencies (Note 16)\n\nEquity\n  Series preferred stock ($0.10 par value; 250,000,000 shares authorized; none issued)                       —               —\n   Common stock ($0.10 par value; 6,250,000,000 shares authorized in each period;\n   4,291,433,646 shares issued in each period)                                                             429             429\n   Additional paid in capital                                                                           13,631          13,420\n   Retained earnings                                                                                    82,915          82,380\n   Accumulated other comprehensive loss                                                                 (1,380)         (1,865)\n   Common stock in treasury, at cost (87,172,997 and 91,572,258 shares outstanding)                     (3,821)         (4,013)\n   Deferred compensation – employee stock ownership plans (ESOPs) and other                                656             793\n   Noncontrolling interests                                                                              1,369           1,319\nTotal equity                                                                                            93,799          92,463\nTotal liabilities and equity                                                                     $     380,255 $       379,680\n                                          See Notes to Consolidated Financial Statements\n\n\n\n                                                                55                  Verizon 2023 Annual Report on Form 10-K\n",
+    "values": {
+      "Assets": {
+        "value_usd": 380255000000,
+        "line": "Total assets                                                                                     $     380,255   $     379,680",
+        "sec_source": {
+          "end": "2023-12-31",
+          "val": 380255000000,
+          "accn": "0000732712-24-000010",
+          "fy": 2023,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2024-02-09",
+          "tag": "Assets"
+        }
+      },
+      "LiabilitiesCurrent": {
+        "value_usd": 53223000000,
+        "line": "Total current liabilities                                                                               53,223          50,171",
+        "sec_source": {
+          "end": "2023-12-31",
+          "val": 53223000000,
+          "accn": "0000732712-24-000010",
+          "fy": 2023,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2024-02-09",
+          "tag": "LiabilitiesCurrent"
+        }
+      },
+      "LiabilitiesNoncurrent": {
+        "value_usd": 233233000000,
+        "line": "Total long-term liabilities                                                                            233,233         237,046",
+        "sec_source": {
+          "end": "2023-12-31",
+          "val": 233233000000,
+          "accn": "0000732712-24-000010",
+          "fy": 2023,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2024-02-09",
+          "tag": "LiabilitiesNoncurrent"
+        }
+      }
+    },
+    "liability_sum": 286456000000,
+    "burden": 0.7533260575140366,
+    "validation": "Report values match same-filing SEC components; not historical issuer continuity or strategy validation"
+  },
+  {
+    "symbol": "VZ",
+    "fiscal_end": "2024-12-31",
+    "accession": "0000732712-25-000006",
+    "url": "https://www.annualreports.com/HostedData/AnnualReportArchive/v/NYSE_VZ_2024.pdf",
+    "pdf_page": 56,
+    "pdf_sha256": "05ad83ec2279c04683b50878f8aa8ff8c868aad481b205f52e316df63c403318",
+    "statement_text": "Consolidated Balance Sheets\nVerizon Communications Inc. and Subsidiaries\n\n                                                                                 (dollars in millions, except per share amounts)\nAt December 31,                                                                                             2024           2023\nAssets\nCurrent assets\n  Cash and cash equivalents                                                                      $       4,194   $       2,065\n  Accounts receivable                                                                                   27,261          26,102\n   Less Allowance for credit losses                                                                      1,152           1,017\n  Accounts receivable, net                                                                              26,109          25,085\n  Inventories                                                                                            2,247           2,057\n  Prepaid expenses and other                                                                             7,973           7,607\nTotal current assets                                                                                    40,523          36,814\n\nProperty, plant and equipment                                                                          331,406         320,108\n   Less Accumulated depreciation                                                                       222,884         211,798\nProperty, plant and equipment, net                                                                     108,522         108,310\n\nInvestments in unconsolidated businesses                                                                  842              953\nWireless licenses                                                                                     156,613          155,667\nGoodwill                                                                                               22,841           22,843\nOther intangible assets, net                                                                           11,129           11,057\nOperating lease right-of-use assets                                                                    24,472           24,726\nOther assets                                                                                           19,769           19,885\nTotal assets                                                                                     $    384,711    $     380,255\n\nLiabilities and Equity\nCurrent liabilities\n   Debt maturing within one year                                                                 $      22,633   $      12,973\n   Accounts payable and accrued liabilities                                                             23,374          23,453\n   Current operating lease liabilities                                                                   4,415           4,266\n   Other current liabilities                                                                            14,349          12,531\nTotal current liabilities                                                                               64,771          53,223\n\nLong-term debt                                                                                        121,381          137,701\nEmployee benefit obligations                                                                           11,997           13,189\nDeferred income taxes                                                                                  46,732           45,781\nNon-current operating lease liabilities                                                                19,928           20,002\nOther liabilities                                                                                      19,327           16,560\nTotal long-term liabilities                                                                           219,365          233,233\n\nCommitments and Contingencies (Note 16)\n\nEquity\n  Series preferred stock ($0.10 par value; 250,000,000 shares authorized; none issued)                      —                —\n   Common stock ($0.10 par value; 6,250,000,000 shares authorized in each period;\n   4,291,433,646 shares issued in each period)                                                            429              429\n   Additional paid in capital                                                                          13,466           13,631\n   Retained earnings                                                                                   89,110           82,915\n   Accumulated other comprehensive loss                                                                  (923)          (1,380)\n   Common stock in treasury, at cost (81,753,488 and 87,172,997 shares outstanding)                    (3,583)          (3,821)\n   Deferred compensation – employee stock ownership plans (ESOPs) and other                               738              656\n   Noncontrolling interests                                                                             1,338            1,369\nTotal equity                                                                                          100,575           93,799\nTotal liabilities and equity                                                                     $    384,711 $        380,255\n                                          See Notes to Consolidated Financial Statements\n\n\n\nVerizon 2024 Annual Report on Form 10-K                         56\n",
+    "values": {
+      "Assets": {
+        "value_usd": 384711000000,
+        "line": "Total assets                                                                                     $    384,711    $     380,255",
+        "sec_source": {
+          "end": "2024-12-31",
+          "val": 384711000000,
+          "accn": "0000732712-25-000006",
+          "fy": 2024,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2025-02-12",
+          "tag": "Assets"
+        }
+      },
+      "LiabilitiesCurrent": {
+        "value_usd": 64771000000,
+        "line": "Total current liabilities                                                                               64,771          53,223",
+        "sec_source": {
+          "end": "2024-12-31",
+          "val": 64771000000,
+          "accn": "0000732712-25-000006",
+          "fy": 2024,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2025-02-12",
+          "tag": "LiabilitiesCurrent"
+        }
+      },
+      "LiabilitiesNoncurrent": {
+        "value_usd": 219365000000,
+        "line": "Total long-term liabilities                                                                           219,365          233,233",
+        "sec_source": {
+          "end": "2024-12-31",
+          "val": 219365000000,
+          "accn": "0000732712-25-000006",
+          "fy": 2024,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2025-02-12",
+          "tag": "LiabilitiesNoncurrent"
+        }
+      }
+    },
+    "liability_sum": 284136000000,
+    "burden": 0.738569991500113,
+    "validation": "Report values match same-filing SEC components; not historical issuer continuity or strategy validation"
+  },
+  {
+    "symbol": "ORCL",
+    "fiscal_end": "2024-05-31",
+    "accession": "0000950170-24-075605",
+    "url": "https://www.annualreports.com/HostedData/AnnualReportArchive/o/NYSE_ORCL_2024.pdf",
+    "pdf_page": 67,
+    "pdf_sha256": "70241530f3237a198d7bd51abf6d902a0d3afbacfee2698658361ee14fd87388",
+    "statement_text": "Table of Contents\nIndex to Financial Statements\n\n                                                                                   ORACLE CORPORATION\n                                                                              CONSOLIDATED BALANCE SHEETS\n                                                                                As of May 31, 2024 and 2023\n\n                                                                                                                                                              May 31,\n(in millions, except per share data)                                                                                                            2024                    2023\n                                                                    ASSETS\nCurrent assets:\n    Cash and cash equivalents                                                                                                               $           10,454      $            9,765\n    Marketable securities                                                                                                                                 207                     422\n    Trade receivables, net of allowances for credit losses of $485 and $428 as of May 31, 2024 and May 31, 2023, respectively                            7,874                   6,915\n    Prepaid expenses and other current assets                                                                                                            4,019                   3,902\n      Total current assets                                                                                                                              22,554                  21,004\nNon-current assets:\n    Property, plant and equipment, net                                                                                                                  21,536                  17,069\n    Intangible assets, net                                                                                                                               6,890                   9,837\n    Goodwill, net                                                                                                                                       62,230                  62,261\n    Deferred tax assets                                                                                                                                 12,273                  12,226\n    Other non-current assets                                                                                                                            15,493                  11,987\n      Total non-current assets                                                                                                                         118,422                 113,380\n         Total assets                                                                                                                       $          140,976      $          134,384\n                                                      LIABILITIES AND STOCKHOLDERS’ EQUITY\nCurrent liabilities:\n    Notes payable and other borrowings, current                                                                                             $           10,605      $            4,061\n    Accounts payable                                                                                                                                     2,357                   1,204\n    Accrued compensation and related benefits                                                                                                            1,916                   2,053\n    Deferred revenues                                                                                                                                    9,313                   8,970\n    Other current liabilities                                                                                                                            7,353                   6,802\n      Total current liabilities                                                                                                                         31,544                  23,090\nNon-current liabilities:\n    Notes payable and other borrowings, non-current                                                                                                     76,264                  86,420\n    Income taxes payable                                                                                                                                10,817                  11,077\n    Deferred tax liabilities                                                                                                                             3,692                   5,772\n    Other non-current liabilities                                                                                                                        9,420                   6,469\n      Total non-current liabilities                                                                                                                    100,193                 109,738\nCommitments and contingencies\nOracle Corporation stockholders’ equity:\n    Preferred stock, $0.01 par value—authorized: 1.0 shares; outstanding: none                                                                              —                       —\n    Common stock, $0.01 par value and additional paid in capital—authorized: 11,000 shares; outstanding: 2,755 shares and 2,713 shares as\n    of May 31, 2024 and 2023, respectively                                                                                                              32,764                  30,215\n    Accumulated deficit                                                                                                                                (22,628 )               (27,620 )\n    Accumulated other comprehensive loss                                                                                                                (1,432 )                (1,522 )\n      Total Oracle Corporation stockholders’ equity                                                                                                      8,704                   1,073\nNoncontrolling interests                                                                                                                                  535                     483\n      Total stockholders’ equity                                                                                                                         9,239                   1,556\n         Total liabilities and stockholders’ equity                                                                                         $          140,976      $          134,384\n\nSee notes to consolidated financial statements.\n\n\n                                                                                                 65\n",
+    "values": {
+      "Assets": {
+        "value_usd": 140976000000,
+        "line": "Total assets                                                                                                                       $          140,976      $          134,384",
+        "sec_source": {
+          "end": "2024-05-31",
+          "val": 140976000000,
+          "accn": "0000950170-24-075605",
+          "fy": 2024,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2024-06-20",
+          "tag": "Assets"
+        }
+      },
+      "LiabilitiesCurrent": {
+        "value_usd": 31544000000,
+        "line": "Total current liabilities                                                                                                                         31,544                  23,090",
+        "sec_source": {
+          "end": "2024-05-31",
+          "val": 31544000000,
+          "accn": "0000950170-24-075605",
+          "fy": 2024,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2024-06-20",
+          "tag": "LiabilitiesCurrent"
+        }
+      },
+      "LiabilitiesNoncurrent": {
+        "value_usd": 100193000000,
+        "line": "Total non-current liabilities                                                                                                                    100,193                 109,738",
+        "sec_source": {
+          "end": "2024-05-31",
+          "val": 100193000000,
+          "accn": "0000950170-24-075605",
+          "fy": 2024,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2024-06-20",
+          "tag": "LiabilitiesNoncurrent"
+        }
+      }
+    },
+    "liability_sum": 131737000000,
+    "burden": 0.9344640222449211,
+    "validation": "Report values match same-filing SEC components; not historical issuer continuity or strategy validation"
+  }
+]
