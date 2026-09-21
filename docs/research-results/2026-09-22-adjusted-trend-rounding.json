@@ -1,0 +1,20 @@
+[
+  {
+    "pool": "random10",
+    "decision_symbol_observations": 380,
+    "rounding_ambiguous": [],
+    "assumed_rounding_half_step": 0.005
+  },
+  {
+    "pool": "transfer12",
+    "decision_symbol_observations": 456,
+    "rounding_ambiguous": [],
+    "assumed_rounding_half_step": 0.005
+  },
+  {
+    "pool": "new12",
+    "decision_symbol_observations": 456,
+    "rounding_ambiguous": [],
+    "assumed_rounding_half_step": 0.005
+  }
+]

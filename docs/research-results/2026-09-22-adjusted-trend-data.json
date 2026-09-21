@@ -1,0 +1,224 @@
+{
+  "status": "completed",
+  "symbols": [
+    "ABT",
+    "ACN",
+    "ADP",
+    "AMGN",
+    "AMT",
+    "BLK",
+    "CMCSA",
+    "CME",
+    "COP",
+    "CSX",
+    "DE",
+    "DHR",
+    "DUK",
+    "FDX",
+    "GILD",
+    "HON",
+    "INTU",
+    "LIN",
+    "LMT",
+    "LOW",
+    "MCD",
+    "MDT",
+    "NEE",
+    "NKE",
+    "PLD",
+    "RTX",
+    "SBUX",
+    "SO",
+    "SPGI",
+    "TGT",
+    "TMO",
+    "UPS",
+    "USB",
+    "VZ"
+  ],
+  "rows_per_mode": {
+    "raw": 34850,
+    "dividend": 34850
+  },
+  "sources": [
+    {
+      "path": "artifacts/research/adjusted-trend/raw-2021-08-01-2021-11-01-0.json",
+      "sha256": "cc81531f7e1b8c517eade768d3c38e76f50b08466109624a1c361484ef02e6cd"
+    },
+    {
+      "path": "artifacts/research/adjusted-trend/raw-2021-11-01-2022-02-01-0.json",
+      "sha256": "83cd0ddd95790a48e54a1e6062dd47e48d62885d59ae00d750de45c4830c54bb"
+    },
+    {
+      "path": "artifacts/research/adjusted-trend/raw-2022-02-01-2022-05-01-0.json",
+      "sha256": "9552991fcd846157289881ecd96fa34d24cd46b24b2f49fb8d9f70b94711b6b9"
+    },
+    {
+      "path": "artifacts/research/adjusted-trend/raw-2022-05-01-2022-08-01-0.json",
+      "sha256": "9394d08be04e3e941badfe991997405f0b760796ba54b38a38ed7df3484dba75"
+    },
+    {
+      "path": "artifacts/research/adjusted-trend/raw-2022-08-01-2022-11-01-0.json",
+      "sha256": "4553f26200f2e17908e356385757dfb17e91cc08ae1c0c9e523bfb577f155a7f"
+    },
+    {
+      "path": "artifacts/research/adjusted-trend/raw-2022-11-01-2023-02-01-0.json",
+      "sha256": "153623382ccb1d617029d39603c3fa7d6e725756ef04f832009c904b191fbfa0"
+    },
+    {
+      "path": "artifacts/research/adjusted-trend/raw-2023-02-01-2023-05-01-0.json",
+      "sha256": "71e4d5cfee62c0830bcefe07fed91afe902911e23c51e12ad64d2cb20e8c4da4"
+    },
+    {
+      "path": "artifacts/research/adjusted-trend/raw-2023-05-01-2023-08-01-0.json",
+      "sha256": "18e7fdbb3355e06ae7b4156ac3a1c15f47f2371bd6e4873513e9798382761b2c"
+    },
+    {
+      "path": "artifacts/research/adjusted-trend/raw-2023-08-01-2023-11-01-0.json",
+      "sha256": "50cad6018cc18ea1436c408b49a879508a2101202225c52bccc26398089804b4"
+    },
+    {
+      "path": "artifacts/research/adjusted-trend/raw-2023-11-01-2024-02-01-0.json",
+      "sha256": "0f438758671565f23f8c3b7dc89d80682be50d13b35718d734b020b5d3a7235f"
+    },
+    {
+      "path": "artifacts/research/adjusted-trend/raw-2024-02-01-2024-05-01-0.json",
+      "sha256": "221e8e70d0dc9be968f1b230cd195291007b2164cf181f1ed09d313440315e4f"
+    },
+    {
+      "path": "artifacts/research/adjusted-trend/raw-2024-05-01-2024-08-01-0.json",
+      "sha256": "3d06d105e3cc8840a32761cf6f9098e14b0a56d4394105baa72bc52574309112"
+    },
+    {
+      "path": "artifacts/research/adjusted-trend/raw-2024-08-01-2024-11-01-0.json",
+      "sha256": "6eef394aefc893b5c1c334d875d4e1417b8b9eeecd8e7106bd0552aa3ca782b1"
+    },
+    {
+      "path": "artifacts/research/adjusted-trend/raw-2024-11-01-2025-02-01-0.json",
+      "sha256": "a24ed01e93229563de33ef76a9f342ea039c382e4c8991278e0491b6492309ba"
+    },
+    {
+      "path": "artifacts/research/adjusted-trend/raw-2025-02-01-2025-05-01-0.json",
+      "sha256": "c3398acb7f5ea4ac1afcf450046103a2d60bc7752c5c77b39f8c42d835cae641"
+    },
+    {
+      "path": "artifacts/research/adjusted-trend/raw-2025-05-01-2025-08-01-0.json",
+      "sha256": "adaddeb7615b938c5d0517136fc064bf1fc491c4a96e17d3d0e81818ba82ca41"
+    },
+    {
+      "path": "artifacts/research/adjusted-trend/raw-2025-08-01-2025-09-01-0.json",
+      "sha256": "c8d2ede80d43513b509b7685fb9f609b26f42bc2238ef1e8c68aefb325d0322d"
+    },
+    {
+      "path": "artifacts/research/adjusted-trend/dividend-2021-08-01-2021-11-01-0.json",
+      "sha256": "a0ed9c10bb11dac0529236c28b36dc3aebde40c48c991808d20478f4d8658b7a"
+    },
+    {
+      "path": "artifacts/research/adjusted-trend/dividend-2021-11-01-2022-02-01-0.json",
+      "sha256": "b577b561b262b51c29fd5e8a41aeeea6aedd077cc48c683897010b1c649cea4b"
+    },
+    {
+      "path": "artifacts/research/adjusted-trend/dividend-2022-02-01-2022-05-01-0.json",
+      "sha256": "2ee86305b38a54bf93ec9a0ac60461ece57582f1a8017b08871936abd4f13041"
+    },
+    {
+      "path": "artifacts/research/adjusted-trend/dividend-2022-05-01-2022-08-01-0.json",
+      "sha256": "392c418f6c7d70966ae0094adfa6ffa94cd4672e1db2333756e3f3309642f95f"
+    },
+    {
+      "path": "artifacts/research/adjusted-trend/dividend-2022-08-01-2022-11-01-0.json",
+      "sha256": "3dc8a076a181808597ddd1b9c932774be36bf6a3817d34b47931bebc7841e46a"
+    },
+    {
+      "path": "artifacts/research/adjusted-trend/dividend-2022-11-01-2023-02-01-0.json",
+      "sha256": "138888f0746ce0748d2b279cbe6ac5260dfc4e86a97a92522871207b3a389aa4"
+    },
+    {
+      "path": "artifacts/research/adjusted-trend/dividend-2023-02-01-2023-05-01-0.json",
+      "sha256": "edb5c63a1a3f7fc41a32f086916b84e3faee25444a03673727d23b8ea282d4a5"
+    },
+    {
+      "path": "artifacts/research/adjusted-trend/dividend-2023-05-01-2023-08-01-0.json",
+      "sha256": "19df46a97a6e5bc1a91d2451103a675b5ce14c408e7b0916f7938fb32531406b"
+    },
+    {
+      "path": "artifacts/research/adjusted-trend/dividend-2023-08-01-2023-11-01-0.json",
+      "sha256": "13bfbd79936f3f3583798dccf6823c3f504f2149d32cfb3ac6481ecfa19f9542"
+    },
+    {
+      "path": "artifacts/research/adjusted-trend/dividend-2023-11-01-2024-02-01-0.json",
+      "sha256": "c11d3f09ab64027424566b49e2e685642f8eb6f8aa94554961814f31978c657c"
+    },
+    {
+      "path": "artifacts/research/adjusted-trend/dividend-2024-02-01-2024-05-01-0.json",
+      "sha256": "f4b3591c082f5c01c4f0d3ea66409ac6cc76d978c46d8440b8e75177c7e4b8a2"
+    },
+    {
+      "path": "artifacts/research/adjusted-trend/dividend-2024-05-01-2024-08-01-0.json",
+      "sha256": "6a2dbd0518ca6604062a97f98e7d8d23a6e30a619bdfef4a5b6c0babb26567d6"
+    },
+    {
+      "path": "artifacts/research/adjusted-trend/dividend-2024-08-01-2024-11-01-0.json",
+      "sha256": "5388cf480f08a8b45ae12665757da4c94401dbf24b73eb34551ba0bcab697474"
+    },
+    {
+      "path": "artifacts/research/adjusted-trend/dividend-2024-11-01-2025-02-01-0.json",
+      "sha256": "d20de383c7b2f6dbf88cd2b04bb832b39f5777ff5bb81be1510a60cdd527a7c7"
+    },
+    {
+      "path": "artifacts/research/adjusted-trend/dividend-2025-02-01-2025-05-01-0.json",
+      "sha256": "73472aed3354dbcd34c50945c917c17384005af72e9849e42a79981aef6c8995"
+    },
+    {
+      "path": "artifacts/research/adjusted-trend/dividend-2025-05-01-2025-08-01-0.json",
+      "sha256": "10702252f65fbcc68c53b037fb8328e59abad0e1b7ba8a307ad7bf07ec4c3ab9"
+    },
+    {
+      "path": "artifacts/research/adjusted-trend/dividend-2025-08-01-2025-09-01-0.json",
+      "sha256": "cd2b0e4abce6e2b9b74680b9e42cbd3278d205691d2afaaef3c812ce2714e74e"
+    }
+  ],
+  "raw_comparisons": [
+    {
+      "pool": "random10",
+      "matched_rows": 10250,
+      "differences": {
+        "open": 0,
+        "high": 0,
+        "low": 0,
+        "close": 0,
+        "volume": 0
+      },
+      "old_path": "artifacts/research/annual-momentum/random10-temporal.parquet",
+      "old_sha256": "e1f9fee2a0e61ecf4784ba74f29b7fd582a1689d154f8754ca710ade536ea52b"
+    },
+    {
+      "pool": "transfer12",
+      "matched_rows": 12300,
+      "differences": {
+        "open": 0,
+        "high": 0,
+        "low": 0,
+        "close": 0,
+        "volume": 0
+      },
+      "old_path": "artifacts/research/transfer12-temporal-2026-09-21/combined.parquet",
+      "old_sha256": "5877a055761a6915851917051db5b56121f96e9cf027c3e58729b0abe782e4b9"
+    },
+    {
+      "pool": "new12",
+      "matched_rows": 12300,
+      "differences": {
+        "open": 0,
+        "high": 0,
+        "low": 0,
+        "close": 0,
+        "volume": 0
+      },
+      "old_path": "artifacts/research/liability-transfer-temporal/combined.parquet",
+      "old_sha256": "b56fac40139435a7c4477e4b886332a06eb889b911a5dac3c043c4c0bf5e32eb"
+    }
+  ],
+  "evidence": "docs/research-results/2026-09-22-adjusted-trend-bars.json.gz",
+  "evidence_sha256": "f005bfef9ab179425a6b5e64e5c36705ba717d93dea27adeedf39a0475240c2e"
+}
