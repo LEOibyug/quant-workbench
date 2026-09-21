@@ -168,7 +168,14 @@ def simulate_positions(
     research_dividends=None,
     research_cash_interest=None,
     research_risk_budget=None,
+    research_reentry=None,
 ):
+    if research_reentry is not None and (
+        not daily_bars or config.allocation.enabled or config.portfolio_policy != "legacy"
+        or research_distributions is not None or research_dividends is not None
+        or research_risk_budget is not None
+    ):
+        raise ValueError("Research reentry requires daily legacy execution without other risk or distribution hooks")
     if research_risk_budget is not None and (
         not daily_bars or config.allocation.enabled or config.portfolio_policy != "legacy"
     ):
@@ -250,6 +257,8 @@ def simulate_positions(
     costs = config.costs
     pooled_execution = config.allocation.enabled or config.portfolio_policy == "cost_aware"
     cash = peak = costs.initial_cash
+    risk_peak = peak
+    reentry_events = []
     shares = {s: 0 for s in symbols}
     basis = {s: 0.0 for s in symbols}
     flows = {s: 0.0 for s in symbols}
@@ -295,7 +304,7 @@ def simulate_positions(
                 + dividend_value["receivable"]
                 + sum(shares[s] * float(prices.loc[s, "open"]) for s in symbols)
             )
-            halted = halted or opening_equity <= peak * (1 - config.max_drawdown_pct / 100)
+            halted = halted or opening_equity <= risk_peak * (1 - config.max_drawdown_pct / 100)
             for symbol in symbols:
                 if shares[symbol] and float(prices.loc[symbol, "open"]) + stop_credit[symbol] <= (
                     basis[symbol] * (1 - config.stop_loss_pct / 100)
@@ -450,7 +459,17 @@ def simulate_positions(
             + sum(shares[s] * float(prices.loc[s, "close"]) for s in symbols)
         )
         peak = max(peak, equity)
-        halted = halted or equity <= peak * (1 - config.max_drawdown_pct / 100)
+        risk_peak = max(risk_peak, equity)
+        halted = halted or equity <= risk_peak * (1 - config.max_drawdown_pct / 100)
+        if research_reentry is not None and halted and not any(shares.values()):
+            restart = research_reentry(day)
+            if not isinstance(restart, bool):
+                raise ValueError("Research reentry must return a boolean")
+            reentry_events.append(dict(date=day, restart=restart, equity=equity, global_peak=peak, previous_risk_peak=risk_peak))
+            if restart:
+                # Reset only the next risk episode, never reported global drawdown.
+                risk_peak = equity
+                halted = False
         # A stock stop persists until liquidation completes, not until a future
         # signal happens to be zero. Release it before processing fresh targets
         # so daily rebalancing cannot turn a completed exit into a permanent ban.
@@ -697,6 +716,7 @@ def simulate_positions(
         ),
         **({"research_cash_interest": {**research_cash_interest.snapshot(), "events": research_cash_interest.audit}} if research_cash_interest is not None else {}),
         **({"research_risk_budget": research_budget_decisions} if research_risk_budget is not None else {}),
+        **({"research_reentry": reentry_events} if research_reentry is not None else {}),
         config=config.model_dump(),
         start=start,
         end=end,
@@ -704,6 +724,7 @@ def simulate_positions(
         portfolio_enabled=pooled_execution,
         engine_version=("daily-position-v3-daily" if daily_bars else "daily-position-v2")
         + ("-research-risk-budget-v1" if research_risk_budget is not None else "")
+        + ("-research-reentry-v1" if research_reentry is not None else "")
         + ("-research-cash-interest-v1" if research_cash_interest is not None else "")
         + ("-research-dividends-v1" if research_dividends is not None else "")
         + ("-portfolio-v1" if config.allocation.enabled else "")

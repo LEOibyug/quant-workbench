@@ -1,0 +1,64 @@
+{
+  "checks": [
+    {
+      "pool": "random10",
+      "cost_multiplier": 1,
+      "old_control_exact": true,
+      "false_callback_exact": true,
+      "shadow_and_actual_prefix_exact": true,
+      "global_drawdown_preserved": true,
+      "conservation": true
+    },
+    {
+      "pool": "random10",
+      "cost_multiplier": 2,
+      "old_control_exact": true,
+      "false_callback_exact": true,
+      "shadow_and_actual_prefix_exact": true,
+      "global_drawdown_preserved": true,
+      "conservation": true
+    },
+    {
+      "pool": "transfer12",
+      "cost_multiplier": 1,
+      "old_control_exact": true,
+      "false_callback_exact": true,
+      "shadow_and_actual_prefix_exact": true,
+      "global_drawdown_preserved": true,
+      "conservation": true
+    },
+    {
+      "pool": "transfer12",
+      "cost_multiplier": 2,
+      "old_control_exact": true,
+      "false_callback_exact": true,
+      "shadow_and_actual_prefix_exact": true,
+      "global_drawdown_preserved": true,
+      "conservation": true
+    },
+    {
+      "pool": "new12",
+      "cost_multiplier": 1,
+      "old_control_exact": true,
+      "false_callback_exact": true,
+      "shadow_and_actual_prefix_exact": true,
+      "global_drawdown_preserved": true,
+      "conservation": true
+    },
+    {
+      "pool": "new12",
+      "cost_multiplier": 2,
+      "old_control_exact": true,
+      "false_callback_exact": true,
+      "shadow_and_actual_prefix_exact": true,
+      "global_drawdown_preserved": true,
+      "conservation": true
+    }
+  ],
+  "hashes": {
+    "artifacts/research/cash-benchmark/sofr-extended.json": "71664827bc110de08ca3ffefb00bdcac0c9c5e2abf0051de2a4feebe67f7d796",
+    "artifacts/research/annual-momentum/random10-temporal.parquet": "e1f9fee2a0e61ecf4784ba74f29b7fd582a1689d154f8754ca710ade536ea52b",
+    "artifacts/research/transfer12-temporal-2026-09-21/combined.parquet": "5877a055761a6915851917051db5b56121f96e9cf027c3e58729b0abe782e4b9",
+    "artifacts/research/liability-transfer-temporal/combined.parquet": "b56fac40139435a7c4477e4b886332a06eb889b911a5dac3c043c4c0bf5e32eb"
+  }
+}
