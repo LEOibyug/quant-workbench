@@ -1,0 +1,48 @@
+{
+  "title": [
+    "Rebalance Timing Luck: The (Dumb) Luck of Smart Beta"
+  ],
+  "DOI": "10.2139/ssrn.3673910",
+  "abstract": "<jats:p>Prior research and empirical investment results have shown that portfolio construction choices related to rebalance schedules may have non-trivial impacts on realized performance. We construct long-only indices that provide exposures to popular U.S. equity factors (value, size, momentum, quality, and low volatility) and vary their rebalance schedules to isolate the effects of “rebalance timing luck.” Our constructed indices exhibit high levels of rebalance timing luck, often exceeding 100 basis points annualized, with total impact dependent upon the frequency of rebalancing, portfolio concentration, and the nature of the underlying strategy. As a case study, we replicate popular factor-based index funds and similarly find meaningful performance impacts due to rebalance timing luck. For example, a strategy replicating the S&amp;amp;P Enhanced Value index saw calendar year return differentials above 40% strictly due to the rebalance schedule implemented. Our results suggest substantial problems for analyzing any investment when the strategy, its peer group, or its benchmark is susceptible to performance impacts driven by the choice of rebalance schedule.</jats:p>",
+  "author": [
+    {
+      "given": "Corey",
+      "family": "Hoffstein",
+      "sequence": "first",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Nathan",
+      "family": "Faber",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Steven",
+      "family": "Braun",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    }
+  ],
+  "URL": "https://doi.org/10.2139/ssrn.3673910",
+  "access": "Crossref metadata and abstract only",
+  "blog_attempt": "https://blog.thinknewfound.com/2019/01/quantifying-timing-luck/ HTTP403"
+}

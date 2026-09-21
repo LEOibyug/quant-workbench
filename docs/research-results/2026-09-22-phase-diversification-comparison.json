@@ -1,0 +1,92 @@
+[
+  {
+    "pool": "merged62",
+    "start": "2025-09-01",
+    "end": "2026-09-01",
+    "cost_multiplier": 1,
+    "phase_minus_baseline_pp": -4.455095353622809,
+    "phase_minus_daily_hold_pp": -3.973383834836852,
+    "phase_minus_eligible_pp": 2.1643104908136017
+  },
+  {
+    "pool": "merged62",
+    "start": "2025-09-01",
+    "end": "2026-09-01",
+    "cost_multiplier": 2,
+    "phase_minus_baseline_pp": -6.027447148430886,
+    "phase_minus_daily_hold_pp": -4.413079435420331,
+    "phase_minus_eligible_pp": 1.4038831152198181
+  },
+  {
+    "pool": "merged22",
+    "start": "2022-09-01",
+    "end": "2023-09-01",
+    "cost_multiplier": 1,
+    "phase_minus_baseline_pp": 0.6024593492093056,
+    "phase_minus_daily_hold_pp": 1.455651791194712,
+    "phase_minus_eligible_pp": 4.235444361331098
+  },
+  {
+    "pool": "merged22",
+    "start": "2022-09-01",
+    "end": "2023-09-01",
+    "cost_multiplier": 2,
+    "phase_minus_baseline_pp": -0.1318953790106825,
+    "phase_minus_daily_hold_pp": 1.3231301913505522,
+    "phase_minus_eligible_pp": 3.5896893606920166
+  },
+  {
+    "pool": "merged22",
+    "start": "2023-09-01",
+    "end": "2024-09-01",
+    "cost_multiplier": 1,
+    "phase_minus_baseline_pp": -11.668882254476454,
+    "phase_minus_daily_hold_pp": -12.241118457835189,
+    "phase_minus_eligible_pp": -12.390576405906007
+  },
+  {
+    "pool": "merged22",
+    "start": "2023-09-01",
+    "end": "2024-09-01",
+    "cost_multiplier": 2,
+    "phase_minus_baseline_pp": -12.056322076527238,
+    "phase_minus_daily_hold_pp": -12.113903256056869,
+    "phase_minus_eligible_pp": -12.724341558799946
+  },
+  {
+    "pool": "merged22",
+    "start": "2024-09-01",
+    "end": "2025-09-01",
+    "cost_multiplier": 1,
+    "phase_minus_baseline_pp": -4.032726382236806,
+    "phase_minus_daily_hold_pp": -0.01333007370755146,
+    "phase_minus_eligible_pp": 6.253392507372213
+  },
+  {
+    "pool": "merged22",
+    "start": "2024-09-01",
+    "end": "2025-09-01",
+    "cost_multiplier": 2,
+    "phase_minus_baseline_pp": -4.395354299928145,
+    "phase_minus_daily_hold_pp": -0.08426772991234621,
+    "phase_minus_eligible_pp": 5.905730655469332
+  },
+  {
+    "pool": "merged22",
+    "start": "2022-09-01",
+    "end": "2025-09-01",
+    "cost_multiplier": 1,
+    "phase_minus_baseline_pp": 0.8391187426039726,
+    "phase_minus_daily_hold_pp": -7.927676063464717,
+    "phase_minus_eligible_pp": 5.6854064087189515
+  },
+  {
+    "pool": "merged22",
+    "start": "2022-09-01",
+    "end": "2025-09-01",
+    "cost_multiplier": 2,
+    "phase_minus_baseline_pp": 0.135818221626538,
+    "phase_minus_daily_hold_pp": 1.6268697234449458,
+    "phase_minus_eligible_pp": 5.057984141599459
+  }
+]

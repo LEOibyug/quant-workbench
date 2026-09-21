@@ -19,6 +19,7 @@ def forecasts(
     excluded=(),
     judge_fn=judge,
     ratio_key="growth",
+    decision_stride=20,
 ):
     p = frame.pivot(index="day", columns="symbol", values="close").sort_index().sort_index(axis=1)
     syms = list(p.columns)
@@ -33,7 +34,9 @@ def forecasts(
     diagnostics = []
     example = None
     evaluation_days = [str(d) for d in p.index if start <= str(d) < end]
-    decisions = set(evaluation_days[::20])
+    if decision_stride < 1:
+        raise ValueError("decision_stride must be positive")
+    decisions = set(evaluation_days[::decision_stride])
     for i in range(63, len(p)):
         day = str(p.index[i])
         if day not in decisions:

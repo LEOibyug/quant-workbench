@@ -1,0 +1,53 @@
+{
+  "checks": [
+    {
+      "pool": "merged62",
+      "start": "2025-09-01",
+      "end": "2026-09-01",
+      "baseline_exact": true,
+      "prefix_invariant": true,
+      "phase_identity": true,
+      "weight_bounds": true
+    },
+    {
+      "pool": "merged22",
+      "start": "2022-09-01",
+      "end": "2023-09-01",
+      "baseline_exact": true,
+      "prefix_invariant": true,
+      "phase_identity": true,
+      "weight_bounds": true
+    },
+    {
+      "pool": "merged22",
+      "start": "2023-09-01",
+      "end": "2024-09-01",
+      "baseline_exact": true,
+      "prefix_invariant": true,
+      "phase_identity": true,
+      "weight_bounds": true
+    },
+    {
+      "pool": "merged22",
+      "start": "2024-09-01",
+      "end": "2025-09-01",
+      "baseline_exact": true,
+      "prefix_invariant": true,
+      "phase_identity": true,
+      "weight_bounds": true
+    },
+    {
+      "pool": "merged22",
+      "start": "2022-09-01",
+      "end": "2025-09-01",
+      "baseline_exact": true,
+      "prefix_invariant": true,
+      "phase_identity": true,
+      "weight_bounds": true
+    }
+  ],
+  "data_sha256": {
+    "artifacts/research/asset-pool/merged62.parquet": "0bcd81c300f3c2c5890ba9a6f13f1cadb4235a3a67c17a142240e75bbb1545f1",
+    "artifacts/research/asset-pool/merged22.parquet": "939e1729d5eabe0469264636cd99bf2986d39265f61c76be98e1e3a71321ce3c"
+  }
+}
