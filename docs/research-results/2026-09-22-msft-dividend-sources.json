@@ -1,0 +1,34 @@
+{
+  "sources": [
+    {
+      "url": "https://www.microsoft.com/en-us/Investor/earnings-and-financials/dividends-and-stock-history",
+      "final_url": "https://www.microsoft.com/en-us/Investor/earnings-and-financials/dividends-and-stock-history",
+      "status": 404,
+      "path": "artifacts/research/issuer-dividends/source-0.html",
+      "bytes": 784306,
+      "sha256": "aea1b5ffa595d49b40acfd3599d5c6a9ffeb6e43b9174f6ca2369f1b0951bee0"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/Investor/dividends-and-stock-history.aspx",
+      "final_url": "https://www.microsoft.com/en-us/investor/dividends-and-stock-history",
+      "status": 200,
+      "path": "artifacts/research/issuer-dividends/source-1.html",
+      "bytes": 161474,
+      "sha256": "010dd6f0e0a9d22539a755fa42e9e2f0463d0eb8a1e5feb02a6bdd9e16bf284d"
+    },
+    {
+      "url": "https://investor.apple.com/dividend-history/default.aspx",
+      "final_url": "https://investor.apple.com/dividend-history/default.aspx",
+      "status": 429,
+      "path": "artifacts/research/issuer-dividends/source-2.html",
+      "bytes": 5539,
+      "sha256": "7513216d42c86f9a22136e2bbf6565aadf5aa40f6839984253d39a24e2fa9ccc"
+    },
+    {
+      "url": "https://cdn-dynmedia-1.microsoft.com/is/content/microsoftcorp/Microsofts-Dividend-History",
+      "status": 200,
+      "path": "artifacts/research/issuer-dividends/msft-history.xlsx",
+      "sha256": "3c6b9f1aac489b672a2a69514182edbb2757a13059d2c5549783de340c4025e0"
+    }
+  ]
+}

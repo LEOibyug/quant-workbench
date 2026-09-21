@@ -1,0 +1,918 @@
+{
+  "status": "completed",
+  "events": [
+    {
+      "id": "MSFT-issuer-2021-08-18",
+      "symbol": "MSFT",
+      "rate": "0.56",
+      "source_cell_numeric": "0.56000000000000005",
+      "announcement_date": "2021-06-16",
+      "ex_date": "2021-08-18",
+      "record_date": "2021-08-19",
+      "payable_date": "2021-09-09",
+      "kind": "ordinary_cash",
+      "amount_basis": "gross",
+      "currency": "USD",
+      "verified": true,
+      "evidence": [
+        "https://cdn-dynmedia-1.microsoft.com/is/content/microsoftcorp/Microsofts-Dividend-History",
+        "SEC companyfacts MSFT CommonStockDividendsPerShareDeclared USD/shares"
+      ],
+      "historical_provider_visibility_verified": false
+    },
+    {
+      "id": "MSFT-issuer-2021-11-17",
+      "symbol": "MSFT",
+      "rate": "0.62",
+      "source_cell_numeric": "0.62",
+      "announcement_date": "2021-09-14",
+      "ex_date": "2021-11-17",
+      "record_date": "2021-11-18",
+      "payable_date": "2021-12-09",
+      "kind": "ordinary_cash",
+      "amount_basis": "gross",
+      "currency": "USD",
+      "verified": true,
+      "evidence": [
+        "https://cdn-dynmedia-1.microsoft.com/is/content/microsoftcorp/Microsofts-Dividend-History",
+        "SEC companyfacts MSFT CommonStockDividendsPerShareDeclared USD/shares"
+      ],
+      "historical_provider_visibility_verified": false
+    },
+    {
+      "id": "MSFT-issuer-2022-02-16",
+      "symbol": "MSFT",
+      "rate": "0.62",
+      "source_cell_numeric": "0.62",
+      "announcement_date": "2021-12-07",
+      "ex_date": "2022-02-16",
+      "record_date": "2022-02-17",
+      "payable_date": "2022-03-10",
+      "kind": "ordinary_cash",
+      "amount_basis": "gross",
+      "currency": "USD",
+      "verified": true,
+      "evidence": [
+        "https://cdn-dynmedia-1.microsoft.com/is/content/microsoftcorp/Microsofts-Dividend-History",
+        "SEC companyfacts MSFT CommonStockDividendsPerShareDeclared USD/shares"
+      ],
+      "historical_provider_visibility_verified": false
+    },
+    {
+      "id": "MSFT-issuer-2022-05-18",
+      "symbol": "MSFT",
+      "rate": "0.62",
+      "source_cell_numeric": "0.62",
+      "announcement_date": "2022-03-14",
+      "ex_date": "2022-05-18",
+      "record_date": "2022-05-19",
+      "payable_date": "2022-06-09",
+      "kind": "ordinary_cash",
+      "amount_basis": "gross",
+      "currency": "USD",
+      "verified": true,
+      "evidence": [
+        "https://cdn-dynmedia-1.microsoft.com/is/content/microsoftcorp/Microsofts-Dividend-History",
+        "SEC companyfacts MSFT CommonStockDividendsPerShareDeclared USD/shares"
+      ],
+      "historical_provider_visibility_verified": false
+    },
+    {
+      "id": "MSFT-issuer-2022-08-17",
+      "symbol": "MSFT",
+      "rate": "0.62",
+      "source_cell_numeric": "0.62",
+      "announcement_date": "2022-06-14",
+      "ex_date": "2022-08-17",
+      "record_date": "2022-08-18",
+      "payable_date": "2022-09-08",
+      "kind": "ordinary_cash",
+      "amount_basis": "gross",
+      "currency": "USD",
+      "verified": true,
+      "evidence": [
+        "https://cdn-dynmedia-1.microsoft.com/is/content/microsoftcorp/Microsofts-Dividend-History",
+        "SEC companyfacts MSFT CommonStockDividendsPerShareDeclared USD/shares"
+      ],
+      "historical_provider_visibility_verified": false
+    },
+    {
+      "id": "MSFT-issuer-2022-11-16",
+      "symbol": "MSFT",
+      "rate": "0.68",
+      "source_cell_numeric": "0.68",
+      "announcement_date": "2022-09-20",
+      "ex_date": "2022-11-16",
+      "record_date": "2022-11-17",
+      "payable_date": "2022-12-08",
+      "kind": "ordinary_cash",
+      "amount_basis": "gross",
+      "currency": "USD",
+      "verified": true,
+      "evidence": [
+        "https://cdn-dynmedia-1.microsoft.com/is/content/microsoftcorp/Microsofts-Dividend-History",
+        "SEC companyfacts MSFT CommonStockDividendsPerShareDeclared USD/shares"
+      ],
+      "historical_provider_visibility_verified": false
+    },
+    {
+      "id": "MSFT-issuer-2023-02-15",
+      "symbol": "MSFT",
+      "rate": "0.68",
+      "source_cell_numeric": "0.68",
+      "announcement_date": "2022-11-29",
+      "ex_date": "2023-02-15",
+      "record_date": "2023-02-16",
+      "payable_date": "2023-03-09",
+      "kind": "ordinary_cash",
+      "amount_basis": "gross",
+      "currency": "USD",
+      "verified": true,
+      "evidence": [
+        "https://cdn-dynmedia-1.microsoft.com/is/content/microsoftcorp/Microsofts-Dividend-History",
+        "SEC companyfacts MSFT CommonStockDividendsPerShareDeclared USD/shares"
+      ],
+      "historical_provider_visibility_verified": false
+    },
+    {
+      "id": "MSFT-issuer-2023-05-17",
+      "symbol": "MSFT",
+      "rate": "0.68",
+      "source_cell_numeric": "0.68",
+      "announcement_date": "2023-03-14",
+      "ex_date": "2023-05-17",
+      "record_date": "2023-05-18",
+      "payable_date": "2023-06-08",
+      "kind": "ordinary_cash",
+      "amount_basis": "gross",
+      "currency": "USD",
+      "verified": true,
+      "evidence": [
+        "https://cdn-dynmedia-1.microsoft.com/is/content/microsoftcorp/Microsofts-Dividend-History",
+        "SEC companyfacts MSFT CommonStockDividendsPerShareDeclared USD/shares"
+      ],
+      "historical_provider_visibility_verified": false
+    },
+    {
+      "id": "MSFT-issuer-2023-08-16",
+      "symbol": "MSFT",
+      "rate": "0.68",
+      "source_cell_numeric": "0.68",
+      "announcement_date": "2023-06-16",
+      "ex_date": "2023-08-16",
+      "record_date": "2023-08-17",
+      "payable_date": "2023-09-14",
+      "kind": "ordinary_cash",
+      "amount_basis": "gross",
+      "currency": "USD",
+      "verified": true,
+      "evidence": [
+        "https://cdn-dynmedia-1.microsoft.com/is/content/microsoftcorp/Microsofts-Dividend-History",
+        "SEC companyfacts MSFT CommonStockDividendsPerShareDeclared USD/shares"
+      ],
+      "historical_provider_visibility_verified": false
+    },
+    {
+      "id": "MSFT-issuer-2023-11-15",
+      "symbol": "MSFT",
+      "rate": "0.75",
+      "source_cell_numeric": "0.75",
+      "announcement_date": "2023-09-19",
+      "ex_date": "2023-11-15",
+      "record_date": "2023-11-16",
+      "payable_date": "2023-12-14",
+      "kind": "ordinary_cash",
+      "amount_basis": "gross",
+      "currency": "USD",
+      "verified": true,
+      "evidence": [
+        "https://cdn-dynmedia-1.microsoft.com/is/content/microsoftcorp/Microsofts-Dividend-History",
+        "SEC companyfacts MSFT CommonStockDividendsPerShareDeclared USD/shares"
+      ],
+      "historical_provider_visibility_verified": false
+    },
+    {
+      "id": "MSFT-issuer-2024-02-14",
+      "symbol": "MSFT",
+      "rate": "0.75",
+      "source_cell_numeric": "0.75",
+      "announcement_date": "2023-11-28",
+      "ex_date": "2024-02-14",
+      "record_date": "2024-02-15",
+      "payable_date": "2024-03-14",
+      "kind": "ordinary_cash",
+      "amount_basis": "gross",
+      "currency": "USD",
+      "verified": true,
+      "evidence": [
+        "https://cdn-dynmedia-1.microsoft.com/is/content/microsoftcorp/Microsofts-Dividend-History",
+        "SEC companyfacts MSFT CommonStockDividendsPerShareDeclared USD/shares"
+      ],
+      "historical_provider_visibility_verified": false
+    },
+    {
+      "id": "MSFT-issuer-2024-05-15",
+      "symbol": "MSFT",
+      "rate": "0.75",
+      "source_cell_numeric": "0.75",
+      "announcement_date": "2024-03-12",
+      "ex_date": "2024-05-15",
+      "record_date": "2024-05-16",
+      "payable_date": "2024-06-13",
+      "kind": "ordinary_cash",
+      "amount_basis": "gross",
+      "currency": "USD",
+      "verified": true,
+      "evidence": [
+        "https://cdn-dynmedia-1.microsoft.com/is/content/microsoftcorp/Microsofts-Dividend-History",
+        "SEC companyfacts MSFT CommonStockDividendsPerShareDeclared USD/shares"
+      ],
+      "historical_provider_visibility_verified": false
+    },
+    {
+      "id": "MSFT-issuer-2024-08-15",
+      "symbol": "MSFT",
+      "rate": "0.75",
+      "source_cell_numeric": "0.75",
+      "announcement_date": "2024-06-12",
+      "ex_date": "2024-08-15",
+      "record_date": "2024-08-15",
+      "payable_date": "2024-09-12",
+      "kind": "ordinary_cash",
+      "amount_basis": "gross",
+      "currency": "USD",
+      "verified": true,
+      "evidence": [
+        "https://cdn-dynmedia-1.microsoft.com/is/content/microsoftcorp/Microsofts-Dividend-History",
+        "SEC companyfacts MSFT CommonStockDividendsPerShareDeclared USD/shares"
+      ],
+      "historical_provider_visibility_verified": false
+    },
+    {
+      "id": "MSFT-issuer-2024-11-21",
+      "symbol": "MSFT",
+      "rate": "0.83",
+      "source_cell_numeric": "0.83",
+      "announcement_date": "2024-09-16",
+      "ex_date": "2024-11-21",
+      "record_date": "2024-11-21",
+      "payable_date": "2024-12-12",
+      "kind": "ordinary_cash",
+      "amount_basis": "gross",
+      "currency": "USD",
+      "verified": true,
+      "evidence": [
+        "https://cdn-dynmedia-1.microsoft.com/is/content/microsoftcorp/Microsofts-Dividend-History",
+        "SEC companyfacts MSFT CommonStockDividendsPerShareDeclared USD/shares"
+      ],
+      "historical_provider_visibility_verified": false
+    },
+    {
+      "id": "MSFT-issuer-2025-02-20",
+      "symbol": "MSFT",
+      "rate": "0.83",
+      "source_cell_numeric": "0.83",
+      "announcement_date": "2024-12-03",
+      "ex_date": "2025-02-20",
+      "record_date": "2025-02-20",
+      "payable_date": "2025-03-13",
+      "kind": "ordinary_cash",
+      "amount_basis": "gross",
+      "currency": "USD",
+      "verified": true,
+      "evidence": [
+        "https://cdn-dynmedia-1.microsoft.com/is/content/microsoftcorp/Microsofts-Dividend-History",
+        "SEC companyfacts MSFT CommonStockDividendsPerShareDeclared USD/shares"
+      ],
+      "historical_provider_visibility_verified": false
+    },
+    {
+      "id": "MSFT-issuer-2025-05-15",
+      "symbol": "MSFT",
+      "rate": "0.83",
+      "source_cell_numeric": "0.83",
+      "announcement_date": "2025-03-11",
+      "ex_date": "2025-05-15",
+      "record_date": "2025-05-15",
+      "payable_date": "2025-06-12",
+      "kind": "ordinary_cash",
+      "amount_basis": "gross",
+      "currency": "USD",
+      "verified": true,
+      "evidence": [
+        "https://cdn-dynmedia-1.microsoft.com/is/content/microsoftcorp/Microsofts-Dividend-History",
+        "SEC companyfacts MSFT CommonStockDividendsPerShareDeclared USD/shares"
+      ],
+      "historical_provider_visibility_verified": false
+    },
+    {
+      "id": "MSFT-issuer-2025-08-21",
+      "symbol": "MSFT",
+      "rate": "0.83",
+      "source_cell_numeric": "0.83",
+      "announcement_date": "2025-06-10",
+      "ex_date": "2025-08-21",
+      "record_date": "2025-08-21",
+      "payable_date": "2025-09-11",
+      "kind": "ordinary_cash",
+      "amount_basis": "gross",
+      "currency": "USD",
+      "verified": true,
+      "evidence": [
+        "https://cdn-dynmedia-1.microsoft.com/is/content/microsoftcorp/Microsofts-Dividend-History",
+        "SEC companyfacts MSFT CommonStockDividendsPerShareDeclared USD/shares"
+      ],
+      "historical_provider_visibility_verified": false
+    },
+    {
+      "id": "MSFT-issuer-2025-11-20",
+      "symbol": "MSFT",
+      "rate": "0.91",
+      "source_cell_numeric": "0.91",
+      "announcement_date": "2025-09-15",
+      "ex_date": "2025-11-20",
+      "record_date": "2025-11-20",
+      "payable_date": "2025-12-11",
+      "kind": "ordinary_cash",
+      "amount_basis": "gross",
+      "currency": "USD",
+      "verified": true,
+      "evidence": [
+        "https://cdn-dynmedia-1.microsoft.com/is/content/microsoftcorp/Microsofts-Dividend-History",
+        "SEC companyfacts MSFT CommonStockDividendsPerShareDeclared USD/shares"
+      ],
+      "historical_provider_visibility_verified": false
+    },
+    {
+      "id": "MSFT-issuer-2026-02-19",
+      "symbol": "MSFT",
+      "rate": "0.91",
+      "source_cell_numeric": "0.91",
+      "announcement_date": "2025-12-02",
+      "ex_date": "2026-02-19",
+      "record_date": "2026-02-19",
+      "payable_date": "2026-03-12",
+      "kind": "ordinary_cash",
+      "amount_basis": "gross",
+      "currency": "USD",
+      "verified": true,
+      "evidence": [
+        "https://cdn-dynmedia-1.microsoft.com/is/content/microsoftcorp/Microsofts-Dividend-History",
+        "SEC companyfacts MSFT CommonStockDividendsPerShareDeclared USD/shares"
+      ],
+      "historical_provider_visibility_verified": false
+    },
+    {
+      "id": "MSFT-issuer-2026-05-21",
+      "symbol": "MSFT",
+      "rate": "0.91",
+      "source_cell_numeric": "0.91",
+      "announcement_date": "2026-03-10",
+      "ex_date": "2026-05-21",
+      "record_date": "2026-05-21",
+      "payable_date": "2026-06-11",
+      "kind": "ordinary_cash",
+      "amount_basis": "gross",
+      "currency": "USD",
+      "verified": true,
+      "evidence": [
+        "https://cdn-dynmedia-1.microsoft.com/is/content/microsoftcorp/Microsofts-Dividend-History",
+        "SEC companyfacts MSFT CommonStockDividendsPerShareDeclared USD/shares"
+      ],
+      "historical_provider_visibility_verified": false
+    },
+    {
+      "id": "MSFT-issuer-2026-08-20",
+      "symbol": "MSFT",
+      "rate": "0.91",
+      "source_cell_numeric": "0.91",
+      "announcement_date": "2026-06-10",
+      "ex_date": "2026-08-20",
+      "record_date": "2026-08-20",
+      "payable_date": "2026-09-10",
+      "kind": "ordinary_cash",
+      "amount_basis": "gross",
+      "currency": "USD",
+      "verified": true,
+      "evidence": [
+        "https://cdn-dynmedia-1.microsoft.com/is/content/microsoftcorp/Microsofts-Dividend-History",
+        "SEC companyfacts MSFT CommonStockDividendsPerShareDeclared USD/shares"
+      ],
+      "historical_provider_visibility_verified": false
+    }
+  ],
+  "comparison": [
+    {
+      "ex_date": "2021-08-18",
+      "supplier_records": 1,
+      "matching_amount_record_payment": true,
+      "supplier": [
+        {
+          "cusip": "594918104",
+          "ex_date": "2021-08-18",
+          "foreign": false,
+          "id": "fff02e16-41f5-4402-9ef0-93ac431b2a0e",
+          "payable_date": "2021-09-09",
+          "process_date": "2021-09-09",
+          "rate": 0.56,
+          "record_date": "2021-08-19",
+          "special": false,
+          "symbol": "MSFT",
+          "process_minus_ex_days": 22,
+          "issues": [
+            "currency_unspecified"
+          ],
+          "point_in_time_verified": false
+        }
+      ]
+    },
+    {
+      "ex_date": "2021-11-17",
+      "supplier_records": 1,
+      "matching_amount_record_payment": true,
+      "supplier": [
+        {
+          "cusip": "594918104",
+          "ex_date": "2021-11-17",
+          "foreign": false,
+          "id": "478ad092-b545-4a08-9022-938d2aac0fcc",
+          "payable_date": "2021-12-09",
+          "process_date": "2021-12-09",
+          "rate": 0.62,
+          "record_date": "2021-11-18",
+          "special": false,
+          "symbol": "MSFT",
+          "process_minus_ex_days": 22,
+          "issues": [
+            "currency_unspecified"
+          ],
+          "point_in_time_verified": false
+        }
+      ]
+    },
+    {
+      "ex_date": "2022-02-16",
+      "supplier_records": 1,
+      "matching_amount_record_payment": true,
+      "supplier": [
+        {
+          "cusip": "594918104",
+          "ex_date": "2022-02-16",
+          "foreign": false,
+          "id": "25bec3b7-c360-4864-8bfe-4dfce11b94cb",
+          "payable_date": "2022-03-10",
+          "process_date": "2022-03-10",
+          "rate": 0.62,
+          "record_date": "2022-02-17",
+          "special": false,
+          "symbol": "MSFT",
+          "process_minus_ex_days": 22,
+          "issues": [
+            "currency_unspecified"
+          ],
+          "point_in_time_verified": false
+        }
+      ]
+    },
+    {
+      "ex_date": "2022-05-18",
+      "supplier_records": 1,
+      "matching_amount_record_payment": true,
+      "supplier": [
+        {
+          "cusip": "594918104",
+          "ex_date": "2022-05-18",
+          "foreign": false,
+          "id": "41211093-15b8-4e07-ad30-0efd0c48c45c",
+          "payable_date": "2022-06-09",
+          "process_date": "2022-06-09",
+          "rate": 0.62,
+          "record_date": "2022-05-19",
+          "special": false,
+          "symbol": "MSFT",
+          "process_minus_ex_days": 22,
+          "issues": [
+            "currency_unspecified"
+          ],
+          "point_in_time_verified": false
+        }
+      ]
+    },
+    {
+      "ex_date": "2022-08-17",
+      "supplier_records": 1,
+      "matching_amount_record_payment": true,
+      "supplier": [
+        {
+          "cusip": "594918104",
+          "ex_date": "2022-08-17",
+          "foreign": false,
+          "id": "2645ab36-89b8-4607-8952-ba5e9a53a499",
+          "payable_date": "2022-09-08",
+          "process_date": "2022-09-08",
+          "rate": 0.62,
+          "record_date": "2022-08-18",
+          "special": false,
+          "symbol": "MSFT",
+          "process_minus_ex_days": 22,
+          "issues": [
+            "currency_unspecified"
+          ],
+          "point_in_time_verified": false
+        }
+      ]
+    },
+    {
+      "ex_date": "2022-11-16",
+      "supplier_records": 1,
+      "matching_amount_record_payment": true,
+      "supplier": [
+        {
+          "cusip": "594918104",
+          "ex_date": "2022-11-16",
+          "foreign": false,
+          "id": "f9a5a75c-5c0a-4741-8941-f880d1f5cc6c",
+          "payable_date": "2022-12-08",
+          "process_date": "2022-12-08",
+          "rate": 0.68,
+          "record_date": "2022-11-17",
+          "special": false,
+          "symbol": "MSFT",
+          "process_minus_ex_days": 22,
+          "issues": [
+            "currency_unspecified"
+          ],
+          "point_in_time_verified": false
+        }
+      ]
+    },
+    {
+      "ex_date": "2023-02-15",
+      "supplier_records": 1,
+      "matching_amount_record_payment": true,
+      "supplier": [
+        {
+          "cusip": "594918104",
+          "ex_date": "2023-02-15",
+          "foreign": false,
+          "id": "f7f149db-cd90-4e89-a85c-3978015a6e93",
+          "payable_date": "2023-03-09",
+          "process_date": "2023-03-09",
+          "rate": 0.68,
+          "record_date": "2023-02-16",
+          "special": false,
+          "symbol": "MSFT",
+          "process_minus_ex_days": 22,
+          "issues": [
+            "currency_unspecified"
+          ],
+          "point_in_time_verified": false
+        }
+      ]
+    },
+    {
+      "ex_date": "2023-05-17",
+      "supplier_records": 1,
+      "matching_amount_record_payment": true,
+      "supplier": [
+        {
+          "cusip": "594918104",
+          "ex_date": "2023-05-17",
+          "foreign": false,
+          "id": "cd97b69b-36dd-4171-93fe-c7a4f54e3c91",
+          "payable_date": "2023-06-08",
+          "process_date": "2023-06-08",
+          "rate": 0.68,
+          "record_date": "2023-05-18",
+          "special": false,
+          "symbol": "MSFT",
+          "process_minus_ex_days": 22,
+          "issues": [
+            "currency_unspecified"
+          ],
+          "point_in_time_verified": false
+        }
+      ]
+    },
+    {
+      "ex_date": "2023-08-16",
+      "supplier_records": 1,
+      "matching_amount_record_payment": true,
+      "supplier": [
+        {
+          "cusip": "594918104",
+          "ex_date": "2023-08-16",
+          "foreign": false,
+          "id": "4a787bd1-3b51-4864-b34f-c698fda28a0e",
+          "payable_date": "2023-09-14",
+          "process_date": "2023-09-14",
+          "rate": 0.68,
+          "record_date": "2023-08-17",
+          "special": false,
+          "symbol": "MSFT",
+          "process_minus_ex_days": 29,
+          "issues": [
+            "currency_unspecified"
+          ],
+          "point_in_time_verified": false
+        }
+      ]
+    },
+    {
+      "ex_date": "2023-11-15",
+      "supplier_records": 1,
+      "matching_amount_record_payment": true,
+      "supplier": [
+        {
+          "cusip": "594918104",
+          "ex_date": "2023-11-15",
+          "foreign": false,
+          "id": "10674092-ee0a-46f8-b818-fc5c47823342",
+          "payable_date": "2023-12-14",
+          "process_date": "2023-12-14",
+          "rate": 0.75,
+          "record_date": "2023-11-16",
+          "special": false,
+          "symbol": "MSFT",
+          "process_minus_ex_days": 29,
+          "issues": [
+            "currency_unspecified"
+          ],
+          "point_in_time_verified": false
+        }
+      ]
+    },
+    {
+      "ex_date": "2024-02-14",
+      "supplier_records": 1,
+      "matching_amount_record_payment": true,
+      "supplier": [
+        {
+          "cusip": "594918104",
+          "ex_date": "2024-02-14",
+          "foreign": false,
+          "id": "17f21508-0084-4a58-a8c4-6a42eee0ba41",
+          "payable_date": "2024-03-14",
+          "process_date": "2024-03-14",
+          "rate": 0.75,
+          "record_date": "2024-02-15",
+          "special": false,
+          "symbol": "MSFT",
+          "process_minus_ex_days": 29,
+          "issues": [
+            "currency_unspecified"
+          ],
+          "point_in_time_verified": false
+        }
+      ]
+    },
+    {
+      "ex_date": "2024-05-15",
+      "supplier_records": 1,
+      "matching_amount_record_payment": true,
+      "supplier": [
+        {
+          "cusip": "594918104",
+          "ex_date": "2024-05-15",
+          "foreign": false,
+          "id": "c6ba6cca-566d-47e7-ab5a-48653230c9fa",
+          "payable_date": "2024-06-13",
+          "process_date": "2024-06-13",
+          "rate": 0.75,
+          "record_date": "2024-05-16",
+          "special": false,
+          "symbol": "MSFT",
+          "process_minus_ex_days": 29,
+          "issues": [
+            "currency_unspecified"
+          ],
+          "point_in_time_verified": false
+        }
+      ]
+    },
+    {
+      "ex_date": "2024-08-15",
+      "supplier_records": 1,
+      "matching_amount_record_payment": true,
+      "supplier": [
+        {
+          "cusip": "594918104",
+          "ex_date": "2024-08-15",
+          "foreign": false,
+          "id": "82506a95-0f4d-4c4e-bb51-cfe4692b1723",
+          "payable_date": "2024-09-12",
+          "process_date": "2024-09-12",
+          "rate": 0.75,
+          "record_date": "2024-08-15",
+          "special": false,
+          "symbol": "MSFT",
+          "process_minus_ex_days": 28,
+          "issues": [
+            "currency_unspecified"
+          ],
+          "point_in_time_verified": false
+        }
+      ]
+    },
+    {
+      "ex_date": "2024-11-21",
+      "supplier_records": 1,
+      "matching_amount_record_payment": true,
+      "supplier": [
+        {
+          "cusip": "594918104",
+          "ex_date": "2024-11-21",
+          "foreign": false,
+          "id": "2ae6b37a-ceef-4487-a927-e38b3af701da",
+          "payable_date": "2024-12-12",
+          "process_date": "2024-12-12",
+          "rate": 0.83,
+          "record_date": "2024-11-21",
+          "special": false,
+          "symbol": "MSFT",
+          "process_minus_ex_days": 21,
+          "issues": [
+            "currency_unspecified"
+          ],
+          "point_in_time_verified": false
+        }
+      ]
+    },
+    {
+      "ex_date": "2025-02-20",
+      "supplier_records": 1,
+      "matching_amount_record_payment": true,
+      "supplier": [
+        {
+          "cusip": "594918104",
+          "ex_date": "2025-02-20",
+          "foreign": false,
+          "id": "166c0744-411e-44cb-91c0-d1b63804c47a",
+          "payable_date": "2025-03-13",
+          "process_date": "2025-03-13",
+          "rate": 0.83,
+          "record_date": "2025-02-20",
+          "special": false,
+          "symbol": "MSFT",
+          "process_minus_ex_days": 21,
+          "issues": [
+            "currency_unspecified"
+          ],
+          "point_in_time_verified": false
+        }
+      ]
+    },
+    {
+      "ex_date": "2025-05-15",
+      "supplier_records": 1,
+      "matching_amount_record_payment": true,
+      "supplier": [
+        {
+          "cusip": "594918104",
+          "ex_date": "2025-05-15",
+          "foreign": false,
+          "id": "18d5a027-9a6b-4c12-b6bc-1fe48b3fc89d",
+          "payable_date": "2025-06-12",
+          "process_date": "2025-06-12",
+          "rate": 0.83,
+          "record_date": "2025-05-15",
+          "special": false,
+          "symbol": "MSFT",
+          "process_minus_ex_days": 28,
+          "issues": [
+            "currency_unspecified"
+          ],
+          "point_in_time_verified": false
+        }
+      ]
+    },
+    {
+      "ex_date": "2025-08-21",
+      "supplier_records": 1,
+      "matching_amount_record_payment": true,
+      "supplier": [
+        {
+          "cusip": "594918104",
+          "ex_date": "2025-08-21",
+          "foreign": false,
+          "id": "20933a69-0fa0-4c7a-87e2-4fa7477b25bf",
+          "payable_date": "2025-09-11",
+          "process_date": "2025-09-11",
+          "rate": 0.83,
+          "record_date": "2025-08-21",
+          "special": false,
+          "symbol": "MSFT",
+          "process_minus_ex_days": 21,
+          "issues": [
+            "currency_unspecified"
+          ],
+          "point_in_time_verified": false
+        }
+      ]
+    },
+    {
+      "ex_date": "2025-11-20",
+      "supplier_records": 1,
+      "matching_amount_record_payment": true,
+      "supplier": [
+        {
+          "cusip": "594918104",
+          "ex_date": "2025-11-20",
+          "foreign": false,
+          "id": "ebb89895-2a5a-4f20-ba92-319ce8dbf63e",
+          "payable_date": "2025-12-11",
+          "process_date": "2025-12-11",
+          "rate": 0.91,
+          "record_date": "2025-11-20",
+          "special": false,
+          "symbol": "MSFT",
+          "process_minus_ex_days": 21,
+          "issues": [
+            "currency_unspecified"
+          ],
+          "point_in_time_verified": false
+        }
+      ]
+    },
+    {
+      "ex_date": "2026-02-19",
+      "supplier_records": 1,
+      "matching_amount_record_payment": true,
+      "supplier": [
+        {
+          "cusip": "594918104",
+          "ex_date": "2026-02-19",
+          "foreign": false,
+          "id": "14ae4df4-a75c-4133-94e1-6ddbb50ff352",
+          "payable_date": "2026-03-12",
+          "process_date": "2026-03-12",
+          "rate": 0.91,
+          "record_date": "2026-02-19",
+          "special": false,
+          "symbol": "MSFT",
+          "process_minus_ex_days": 21,
+          "issues": [
+            "currency_unspecified"
+          ],
+          "point_in_time_verified": false
+        }
+      ]
+    },
+    {
+      "ex_date": "2026-05-21",
+      "supplier_records": 1,
+      "matching_amount_record_payment": true,
+      "supplier": [
+        {
+          "cusip": "594918104",
+          "ex_date": "2026-05-21",
+          "foreign": false,
+          "id": "2f7b532a-22e3-42f2-bc25-5782786e028f",
+          "payable_date": "2026-06-11",
+          "process_date": "2026-06-11",
+          "rate": 0.91,
+          "record_date": "2026-05-21",
+          "special": false,
+          "symbol": "MSFT",
+          "process_minus_ex_days": 21,
+          "issues": [
+            "currency_unspecified"
+          ],
+          "point_in_time_verified": false
+        }
+      ]
+    },
+    {
+      "ex_date": "2026-08-20",
+      "supplier_records": 1,
+      "matching_amount_record_payment": true,
+      "supplier": [
+        {
+          "cusip": "594918104",
+          "ex_date": "2026-08-20",
+          "foreign": false,
+          "id": "d8002a63-ba52-4a4c-83e6-0710b31d29b2",
+          "payable_date": "2026-09-10",
+          "process_date": "2026-09-10",
+          "rate": 0.91,
+          "record_date": "2026-08-20",
+          "special": false,
+          "symbol": "MSFT",
+          "process_minus_ex_days": 21,
+          "issues": [
+            "currency_unspecified"
+          ],
+          "point_in_time_verified": false
+        }
+      ]
+    }
+  ],
+  "source_url": "https://cdn-dynmedia-1.microsoft.com/is/content/microsoftcorp/Microsofts-Dividend-History",
+  "issuer_link_page": "https://www.microsoft.com/en-us/investor/dividends-and-stock-history",
+  "source_hashes": {
+    "artifacts/research/issuer-dividends/msft-history.xlsx": "3c6b9f1aac489b672a2a69514182edbb2757a13059d2c5549783de340c4025e0",
+    "artifacts/research/sec-quality/MSFT-facts.json": "f8aae2965b20ad0df44bdf7ccbedf797d275b6b8dc030154a7a311361bb7246f",
+    "artifacts/research/issuer-dividends/source-1.html": "010dd6f0e0a9d22539a755fa42e9e2f0463d0eb8a1e5feb02a6bdd9e16bf284d"
+  },
+  "caveat": "Issuer current historical table and announcement dates; not archived vendor first-visibility data or tax/account cash receipts"
+}
