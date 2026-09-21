@@ -1,0 +1,8 @@
+{
+  "source": "artifacts/models/conditional-policy-v2/history/daily.parquet",
+  "source_sha256": "54cfefdda4a5c12e6f75e2c12453044922809153a52775d0597b98b16fdc3d85",
+  "script_sha256": "dad3010c067a28b8cf591d936913f0071d1f79a5c175a9d8400e07f4253cbd8d",
+  "runs": 82,
+  "labels": 80,
+  "independent_date_groups": 2
+}

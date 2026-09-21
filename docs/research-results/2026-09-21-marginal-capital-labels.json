@@ -1,0 +1,642 @@
+[
+  {
+    "start": "2023-09-01",
+    "label_available_after": "2024-09-01",
+    "symbol": "AAPL",
+    "mode": "cash",
+    "delta_return_pp": -5.873049237054696,
+    "delta_utility_pp": -6.54172226492359
+  },
+  {
+    "start": "2023-09-01",
+    "label_available_after": "2024-09-01",
+    "symbol": "AMD",
+    "mode": "cash",
+    "delta_return_pp": 1.13057236606533,
+    "delta_utility_pp": 0.7732680219734283
+  },
+  {
+    "start": "2023-09-01",
+    "label_available_after": "2024-09-01",
+    "symbol": "AMZN",
+    "mode": "cash",
+    "delta_return_pp": 0.42299392183247075,
+    "delta_utility_pp": 0.3659929440800731
+  },
+  {
+    "start": "2023-09-01",
+    "label_available_after": "2024-09-01",
+    "symbol": "AVGO",
+    "mode": "cash",
+    "delta_return_pp": 2.4717487721890974,
+    "delta_utility_pp": 2.1392982616687375
+  },
+  {
+    "start": "2023-09-01",
+    "label_available_after": "2024-09-01",
+    "symbol": "BRK.B",
+    "mode": "cash",
+    "delta_return_pp": -0.6458240014448391,
+    "delta_utility_pp": -0.7751099432621977
+  },
+  {
+    "start": "2023-09-01",
+    "label_available_after": "2024-09-01",
+    "symbol": "COST",
+    "mode": "cash",
+    "delta_return_pp": 1.6342033217120466,
+    "delta_utility_pp": 1.4513914440681175
+  },
+  {
+    "start": "2023-09-01",
+    "label_available_after": "2024-09-01",
+    "symbol": "GOOGL",
+    "mode": "cash",
+    "delta_return_pp": 0.6147723729979404,
+    "delta_utility_pp": 0.37692371775998
+  },
+  {
+    "start": "2023-09-01",
+    "label_available_after": "2024-09-01",
+    "symbol": "JNJ",
+    "mode": "cash",
+    "delta_return_pp": 0.19206983157640245,
+    "delta_utility_pp": 0.32780468986048383
+  },
+  {
+    "start": "2023-09-01",
+    "label_available_after": "2024-09-01",
+    "symbol": "JPM",
+    "mode": "cash",
+    "delta_return_pp": 0.593935525835243,
+    "delta_utility_pp": 0.39617439331295934
+  },
+  {
+    "start": "2023-09-01",
+    "label_available_after": "2024-09-01",
+    "symbol": "LLY",
+    "mode": "cash",
+    "delta_return_pp": -7.927760267436401,
+    "delta_utility_pp": -9.112274711865016
+  },
+  {
+    "start": "2023-09-01",
+    "label_available_after": "2024-09-01",
+    "symbol": "MA",
+    "mode": "cash",
+    "delta_return_pp": -0.69123057214866,
+    "delta_utility_pp": -0.7108549253899312
+  },
+  {
+    "start": "2023-09-01",
+    "label_available_after": "2024-09-01",
+    "symbol": "META",
+    "mode": "cash",
+    "delta_return_pp": 1.5871360584859273,
+    "delta_utility_pp": 1.461843986356925
+  },
+  {
+    "start": "2023-09-01",
+    "label_available_after": "2024-09-01",
+    "symbol": "MSFT",
+    "mode": "cash",
+    "delta_return_pp": 1.804672738120483,
+    "delta_utility_pp": 1.6752774405355275
+  },
+  {
+    "start": "2023-09-01",
+    "label_available_after": "2024-09-01",
+    "symbol": "NVDA",
+    "mode": "cash",
+    "delta_return_pp": -4.859900990172683,
+    "delta_utility_pp": -5.761544650011952
+  },
+  {
+    "start": "2023-09-01",
+    "label_available_after": "2024-09-01",
+    "symbol": "ORCL",
+    "mode": "cash",
+    "delta_return_pp": -0.994825316859238,
+    "delta_utility_pp": -1.2740315724618148
+  },
+  {
+    "start": "2023-09-01",
+    "label_available_after": "2024-09-01",
+    "symbol": "SOFI",
+    "mode": "cash",
+    "delta_return_pp": -0.5657397686053001,
+    "delta_utility_pp": -0.579622630486087
+  },
+  {
+    "start": "2023-09-01",
+    "label_available_after": "2024-09-01",
+    "symbol": "TSLA",
+    "mode": "cash",
+    "delta_return_pp": -9.797368217523816,
+    "delta_utility_pp": -10.528223515935508
+  },
+  {
+    "start": "2023-09-01",
+    "label_available_after": "2024-09-01",
+    "symbol": "V",
+    "mode": "cash",
+    "delta_return_pp": 0.4806760070059424,
+    "delta_utility_pp": 0.49630594845851395
+  },
+  {
+    "start": "2023-09-01",
+    "label_available_after": "2024-09-01",
+    "symbol": "WMT",
+    "mode": "cash",
+    "delta_return_pp": 0.2034683581272123,
+    "delta_utility_pp": 0.11972463073304773
+  },
+  {
+    "start": "2023-09-01",
+    "label_available_after": "2024-09-01",
+    "symbol": "XOM",
+    "mode": "cash",
+    "delta_return_pp": -1.3804458853539536,
+    "delta_utility_pp": -1.400350204009687
+  },
+  {
+    "start": "2023-09-01",
+    "label_available_after": "2024-09-01",
+    "symbol": "AAPL",
+    "mode": "redistribute",
+    "delta_return_pp": 0.5212291773388555,
+    "delta_utility_pp": 0.5119610609040812
+  },
+  {
+    "start": "2023-09-01",
+    "label_available_after": "2024-09-01",
+    "symbol": "AMD",
+    "mode": "redistribute",
+    "delta_return_pp": 0.5409421024304528,
+    "delta_utility_pp": 0.3536160214370474
+  },
+  {
+    "start": "2023-09-01",
+    "label_available_after": "2024-09-01",
+    "symbol": "AMZN",
+    "mode": "redistribute",
+    "delta_return_pp": -0.44104479284861053,
+    "delta_utility_pp": -0.49492363934307004
+  },
+  {
+    "start": "2023-09-01",
+    "label_available_after": "2024-09-01",
+    "symbol": "AVGO",
+    "mode": "redistribute",
+    "delta_return_pp": 1.7361052590069148,
+    "delta_utility_pp": 1.8496688275564388
+  },
+  {
+    "start": "2023-09-01",
+    "label_available_after": "2024-09-01",
+    "symbol": "BRK.B",
+    "mode": "redistribute",
+    "delta_return_pp": -0.6613148877446573,
+    "delta_utility_pp": -0.7696695608191417
+  },
+  {
+    "start": "2023-09-01",
+    "label_available_after": "2024-09-01",
+    "symbol": "COST",
+    "mode": "redistribute",
+    "delta_return_pp": 1.1967269838058625,
+    "delta_utility_pp": 1.1428204291931863
+  },
+  {
+    "start": "2023-09-01",
+    "label_available_after": "2024-09-01",
+    "symbol": "GOOGL",
+    "mode": "redistribute",
+    "delta_return_pp": -0.27545671079276524,
+    "delta_utility_pp": -0.2483491057071685
+  },
+  {
+    "start": "2023-09-01",
+    "label_available_after": "2024-09-01",
+    "symbol": "JNJ",
+    "mode": "redistribute",
+    "delta_return_pp": -0.3183874412597376,
+    "delta_utility_pp": -0.2934861002078293
+  },
+  {
+    "start": "2023-09-01",
+    "label_available_after": "2024-09-01",
+    "symbol": "JPM",
+    "mode": "redistribute",
+    "delta_return_pp": -0.03273379280537281,
+    "delta_utility_pp": -0.17783601741332955
+  },
+  {
+    "start": "2023-09-01",
+    "label_available_after": "2024-09-01",
+    "symbol": "LLY",
+    "mode": "redistribute",
+    "delta_return_pp": 13.654488772183182,
+    "delta_utility_pp": 13.254984069302523
+  },
+  {
+    "start": "2023-09-01",
+    "label_available_after": "2024-09-01",
+    "symbol": "MA",
+    "mode": "redistribute",
+    "delta_return_pp": -0.41028939580174395,
+    "delta_utility_pp": -0.4213351229881761
+  },
+  {
+    "start": "2023-09-01",
+    "label_available_after": "2024-09-01",
+    "symbol": "META",
+    "mode": "redistribute",
+    "delta_return_pp": 2.064233638816493,
+    "delta_utility_pp": 2.0340833568359864
+  },
+  {
+    "start": "2023-09-01",
+    "label_available_after": "2024-09-01",
+    "symbol": "MSFT",
+    "mode": "redistribute",
+    "delta_return_pp": -0.016054779648011497,
+    "delta_utility_pp": -0.04541187132556779
+  },
+  {
+    "start": "2023-09-01",
+    "label_available_after": "2024-09-01",
+    "symbol": "NVDA",
+    "mode": "redistribute",
+    "delta_return_pp": 2.2236143274922515,
+    "delta_utility_pp": 1.8950285259678568
+  },
+  {
+    "start": "2023-09-01",
+    "label_available_after": "2024-09-01",
+    "symbol": "ORCL",
+    "mode": "redistribute",
+    "delta_return_pp": -0.44129922254199094,
+    "delta_utility_pp": -0.2933308200674336
+  },
+  {
+    "start": "2023-09-01",
+    "label_available_after": "2024-09-01",
+    "symbol": "SOFI",
+    "mode": "redistribute",
+    "delta_return_pp": -0.8845139705911276,
+    "delta_utility_pp": -0.9072367830241124
+  },
+  {
+    "start": "2023-09-01",
+    "label_available_after": "2024-09-01",
+    "symbol": "TSLA",
+    "mode": "redistribute",
+    "delta_return_pp": -9.748747155951065,
+    "delta_utility_pp": -10.37114935102269
+  },
+  {
+    "start": "2023-09-01",
+    "label_available_after": "2024-09-01",
+    "symbol": "V",
+    "mode": "redistribute",
+    "delta_return_pp": 0.04278606504122262,
+    "delta_utility_pp": 0.04476142838025243
+  },
+  {
+    "start": "2023-09-01",
+    "label_available_after": "2024-09-01",
+    "symbol": "WMT",
+    "mode": "redistribute",
+    "delta_return_pp": -0.2869337259099103,
+    "delta_utility_pp": -0.353471164731328
+  },
+  {
+    "start": "2023-09-01",
+    "label_available_after": "2024-09-01",
+    "symbol": "XOM",
+    "mode": "redistribute",
+    "delta_return_pp": -2.1843003993477605,
+    "delta_utility_pp": -2.1859851367935947
+  },
+  {
+    "start": "2024-09-01",
+    "label_available_after": "2025-09-01",
+    "symbol": "AAPL",
+    "mode": "cash",
+    "delta_return_pp": -0.17696760166414638,
+    "delta_utility_pp": -0.33822486400766927
+  },
+  {
+    "start": "2024-09-01",
+    "label_available_after": "2025-09-01",
+    "symbol": "AMD",
+    "mode": "cash",
+    "delta_return_pp": 3.0285353233951096,
+    "delta_utility_pp": 4.499903314816378
+  },
+  {
+    "start": "2024-09-01",
+    "label_available_after": "2025-09-01",
+    "symbol": "AMZN",
+    "mode": "cash",
+    "delta_return_pp": 0.02546501513360777,
+    "delta_utility_pp": -0.21568252422706724
+  },
+  {
+    "start": "2024-09-01",
+    "label_available_after": "2025-09-01",
+    "symbol": "AVGO",
+    "mode": "cash",
+    "delta_return_pp": 3.484250128429222,
+    "delta_utility_pp": 5.201392190992476
+  },
+  {
+    "start": "2024-09-01",
+    "label_available_after": "2025-09-01",
+    "symbol": "BRK.B",
+    "mode": "cash",
+    "delta_return_pp": 0.17804325545917044,
+    "delta_utility_pp": 0.35875140149168105
+  },
+  {
+    "start": "2024-09-01",
+    "label_available_after": "2025-09-01",
+    "symbol": "COST",
+    "mode": "cash",
+    "delta_return_pp": 3.2188911104506275,
+    "delta_utility_pp": 4.521957157313638
+  },
+  {
+    "start": "2024-09-01",
+    "label_available_after": "2025-09-01",
+    "symbol": "GOOGL",
+    "mode": "cash",
+    "delta_return_pp": -0.038735348284513194,
+    "delta_utility_pp": -0.0729464208135413
+  },
+  {
+    "start": "2024-09-01",
+    "label_available_after": "2025-09-01",
+    "symbol": "JNJ",
+    "mode": "cash",
+    "delta_return_pp": -0.5742655068195934,
+    "delta_utility_pp": -0.6592123689772964
+  },
+  {
+    "start": "2024-09-01",
+    "label_available_after": "2025-09-01",
+    "symbol": "JPM",
+    "mode": "cash",
+    "delta_return_pp": -0.5099525000126337,
+    "delta_utility_pp": -0.8070633726040275
+  },
+  {
+    "start": "2024-09-01",
+    "label_available_after": "2025-09-01",
+    "symbol": "LLY",
+    "mode": "cash",
+    "delta_return_pp": 3.4294845487407137,
+    "delta_utility_pp": 4.844483234185632
+  },
+  {
+    "start": "2024-09-01",
+    "label_available_after": "2025-09-01",
+    "symbol": "MA",
+    "mode": "cash",
+    "delta_return_pp": 0.32408730844017963,
+    "delta_utility_pp": 0.2003276647980945
+  },
+  {
+    "start": "2024-09-01",
+    "label_available_after": "2025-09-01",
+    "symbol": "META",
+    "mode": "cash",
+    "delta_return_pp": 3.389758797112208,
+    "delta_utility_pp": 4.871135137705729
+  },
+  {
+    "start": "2024-09-01",
+    "label_available_after": "2025-09-01",
+    "symbol": "MSFT",
+    "mode": "cash",
+    "delta_return_pp": -0.18011130828412547,
+    "delta_utility_pp": -0.2595755798229016
+  },
+  {
+    "start": "2024-09-01",
+    "label_available_after": "2025-09-01",
+    "symbol": "NVDA",
+    "mode": "cash",
+    "delta_return_pp": 0.553353566489001,
+    "delta_utility_pp": 0.3349939785186331
+  },
+  {
+    "start": "2024-09-01",
+    "label_available_after": "2025-09-01",
+    "symbol": "ORCL",
+    "mode": "cash",
+    "delta_return_pp": 1.3421265547678196,
+    "delta_utility_pp": 1.286170969631784
+  },
+  {
+    "start": "2024-09-01",
+    "label_available_after": "2025-09-01",
+    "symbol": "SOFI",
+    "mode": "cash",
+    "delta_return_pp": 7.127860954706321,
+    "delta_utility_pp": 8.802451826361734
+  },
+  {
+    "start": "2024-09-01",
+    "label_available_after": "2025-09-01",
+    "symbol": "TSLA",
+    "mode": "cash",
+    "delta_return_pp": 4.900409587028243,
+    "delta_utility_pp": 6.487682635595283
+  },
+  {
+    "start": "2024-09-01",
+    "label_available_after": "2025-09-01",
+    "symbol": "V",
+    "mode": "cash",
+    "delta_return_pp": -0.5148962291501746,
+    "delta_utility_pp": -0.8723622824457156
+  },
+  {
+    "start": "2024-09-01",
+    "label_available_after": "2025-09-01",
+    "symbol": "WMT",
+    "mode": "cash",
+    "delta_return_pp": 5.009741299796788,
+    "delta_utility_pp": 6.703713244349263
+  },
+  {
+    "start": "2024-09-01",
+    "label_available_after": "2025-09-01",
+    "symbol": "XOM",
+    "mode": "cash",
+    "delta_return_pp": 2.604306711575455,
+    "delta_utility_pp": 3.8692040585211034
+  },
+  {
+    "start": "2024-09-01",
+    "label_available_after": "2025-09-01",
+    "symbol": "AAPL",
+    "mode": "redistribute",
+    "delta_return_pp": -0.634826744849637,
+    "delta_utility_pp": -0.8558409430459766
+  },
+  {
+    "start": "2024-09-01",
+    "label_available_after": "2025-09-01",
+    "symbol": "AMD",
+    "mode": "redistribute",
+    "delta_return_pp": -1.0580563692221046,
+    "delta_utility_pp": -1.3413510029559865
+  },
+  {
+    "start": "2024-09-01",
+    "label_available_after": "2025-09-01",
+    "symbol": "AMZN",
+    "mode": "redistribute",
+    "delta_return_pp": 0.18329341079212913,
+    "delta_utility_pp": 0.15089060213789907
+  },
+  {
+    "start": "2024-09-01",
+    "label_available_after": "2025-09-01",
+    "symbol": "AVGO",
+    "mode": "redistribute",
+    "delta_return_pp": 3.012822962704698,
+    "delta_utility_pp": 4.644806762667642
+  },
+  {
+    "start": "2024-09-01",
+    "label_available_after": "2025-09-01",
+    "symbol": "BRK.B",
+    "mode": "redistribute",
+    "delta_return_pp": 0.27080839726953965,
+    "delta_utility_pp": 0.8277725727488088
+  },
+  {
+    "start": "2024-09-01",
+    "label_available_after": "2025-09-01",
+    "symbol": "COST",
+    "mode": "redistribute",
+    "delta_return_pp": 3.838851897047679,
+    "delta_utility_pp": 5.553278588312149
+  },
+  {
+    "start": "2024-09-01",
+    "label_available_after": "2025-09-01",
+    "symbol": "GOOGL",
+    "mode": "redistribute",
+    "delta_return_pp": 3.383937322516884,
+    "delta_utility_pp": 5.018554342573712
+  },
+  {
+    "start": "2024-09-01",
+    "label_available_after": "2025-09-01",
+    "symbol": "JNJ",
+    "mode": "redistribute",
+    "delta_return_pp": -0.060339500821571246,
+    "delta_utility_pp": 0.19379277355556246
+  },
+  {
+    "start": "2024-09-01",
+    "label_available_after": "2025-09-01",
+    "symbol": "JPM",
+    "mode": "redistribute",
+    "delta_return_pp": -0.6189188122913358,
+    "delta_utility_pp": -0.851457529454136
+  },
+  {
+    "start": "2024-09-01",
+    "label_available_after": "2025-09-01",
+    "symbol": "LLY",
+    "mode": "redistribute",
+    "delta_return_pp": -0.23867243963715534,
+    "delta_utility_pp": -0.3972875882973952
+  },
+  {
+    "start": "2024-09-01",
+    "label_available_after": "2025-09-01",
+    "symbol": "MA",
+    "mode": "redistribute",
+    "delta_return_pp": 4.003646877618605,
+    "delta_utility_pp": 5.729467404554217
+  },
+  {
+    "start": "2024-09-01",
+    "label_available_after": "2025-09-01",
+    "symbol": "META",
+    "mode": "redistribute",
+    "delta_return_pp": 3.879320921927576,
+    "delta_utility_pp": 5.6840436202034885
+  },
+  {
+    "start": "2024-09-01",
+    "label_available_after": "2025-09-01",
+    "symbol": "MSFT",
+    "mode": "redistribute",
+    "delta_return_pp": -0.19712449960184175,
+    "delta_utility_pp": -0.2475488005905242
+  },
+  {
+    "start": "2024-09-01",
+    "label_available_after": "2025-09-01",
+    "symbol": "NVDA",
+    "mode": "redistribute",
+    "delta_return_pp": 0.3665259351147365,
+    "delta_utility_pp": 0.32133462236579335
+  },
+  {
+    "start": "2024-09-01",
+    "label_available_after": "2025-09-01",
+    "symbol": "ORCL",
+    "mode": "redistribute",
+    "delta_return_pp": 0.48542616287633455,
+    "delta_utility_pp": 0.46501272421731743
+  },
+  {
+    "start": "2024-09-01",
+    "label_available_after": "2025-09-01",
+    "symbol": "SOFI",
+    "mode": "redistribute",
+    "delta_return_pp": 6.216012721231667,
+    "delta_utility_pp": 7.725789212055778
+  },
+  {
+    "start": "2024-09-01",
+    "label_available_after": "2025-09-01",
+    "symbol": "TSLA",
+    "mode": "redistribute",
+    "delta_return_pp": 4.6271793641674,
+    "delta_utility_pp": 6.338782285176737
+  },
+  {
+    "start": "2024-09-01",
+    "label_available_after": "2025-09-01",
+    "symbol": "V",
+    "mode": "redistribute",
+    "delta_return_pp": 0.7022120079703598,
+    "delta_utility_pp": 1.0065505278931193
+  },
+  {
+    "start": "2024-09-01",
+    "label_available_after": "2025-09-01",
+    "symbol": "WMT",
+    "mode": "redistribute",
+    "delta_return_pp": 0.38713235203627905,
+    "delta_utility_pp": 0.20914107009356053
+  },
+  {
+    "start": "2024-09-01",
+    "label_available_after": "2025-09-01",
+    "symbol": "XOM",
+    "mode": "redistribute",
+    "delta_return_pp": -0.508956404429961,
+    "delta_utility_pp": -0.5932362854599855
+  }
+]
