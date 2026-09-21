@@ -1,0 +1,57 @@
+{
+  "source_sha256": "54cfefdda4a5c12e6f75e2c12453044922809153a52775d0597b98b16fdc3d85",
+  "classes": [
+    "cash",
+    "cross_momentum",
+    "channel_trend",
+    "residual_reversal"
+  ],
+  "history_start": "2020-11-30",
+  "history_end": "2025-08-29",
+  "splits": {
+    "train": {
+      "rows": 3440,
+      "class_counts": [
+        1335,
+        456,
+        722,
+        927
+      ],
+      "first_window_start": "2020-11-30",
+      "last_signal": "2024-07-26",
+      "last_label_end": "2024-08-27"
+    },
+    "validation": {
+      "rows": 660,
+      "class_counts": [
+        284,
+        102,
+        126,
+        148
+      ],
+      "first_window_start": "2024-09-04",
+      "last_signal": "2025-07-28",
+      "last_label_end": "2025-08-27"
+    }
+  },
+  "models": {
+    "logistic": {
+      "accuracy": 0.4575757575757576,
+      "balanced_accuracy": 0.402596732132772,
+      "log_loss": 1.1762239933013916,
+      "artifact_sha256": "a5528ca9a986b3390d3cb750d40505a49f3db614bfe5b607809a60b648d5d9aa"
+    },
+    "hist_gradient": {
+      "accuracy": 0.44242424242424244,
+      "balanced_accuracy": 0.38195777295818717,
+      "log_loss": 1.1917336998211931,
+      "artifact_sha256": "c64459a7c560287276917eac69796d5a1573c0bab72a8e359585a26f88f864fa"
+    }
+  },
+  "majority_baseline": {
+    "class": 0,
+    "accuracy": 0.4303030303030303,
+    "balanced_accuracy": 0.25
+  },
+  "selected": "logistic"
+}
