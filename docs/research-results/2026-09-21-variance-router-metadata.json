@@ -1,0 +1,8 @@
+{
+  "source_sha256": {
+    "scripts/variance_applicability.py": "54126f547595444094c6c424c9be879d7752637de30d6f1057c30d1f695011cc",
+    "scripts/study_variance_router.py": "d41d2a3079bd75c3e9f5061e82326c0e98057002c170da91dc9fd6299d85c3ef",
+    "scripts/calibrate_variance_ratio.py": "bdeeffcce3d32fa9a73f6b7cc9f9f2414de3b935eb2d41e48b6e4f375b09df32"
+  },
+  "protocol": "2026-09-21-variance-router-protocol.md"
+}

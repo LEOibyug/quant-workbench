@@ -1,0 +1,29 @@
+{
+  "seed": 20250921,
+  "threshold": 1.96,
+  "results": [
+    {
+      "null": "iid_gaussian",
+      "paths": 5000,
+      "rejection_rate": 0.0628,
+      "monte_carlo_standard_error": 0.0034309229079068507,
+      "z_quantiles": [
+        -1.8073444538991132,
+        -0.05565093064028298,
+        2.3206433831649442
+      ]
+    },
+    {
+      "null": "independent_volatility_shift",
+      "paths": 5000,
+      "rejection_rate": 0.0556,
+      "monte_carlo_standard_error": 0.0032406369744233925,
+      "z_quantiles": [
+        -1.725687405911767,
+        -0.07688562452031308,
+        2.4108279490724756
+      ]
+    }
+  ],
+  "note": "有限样本诊断；没有按模拟结果改阈值，不能作为实际市场概率校准"
+}
