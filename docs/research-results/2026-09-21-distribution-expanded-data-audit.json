@@ -1,0 +1,24 @@
+{
+  "full_corporate_action_audit": false,
+  "threshold_is_only_diagnostic": true,
+  "rows": [
+    {
+      "path": "artifacts/models/conditional-policy-v2/history/daily.parquet",
+      "sha256": "54cfefdda4a5c12e6f75e2c12453044922809153a52775d0597b98b16fdc3d85",
+      "absolute_gap_over_35pct": [],
+      "observations": 25038
+    },
+    {
+      "path": "artifacts/research/annual-momentum/random10-temporal.parquet",
+      "sha256": "e1f9fee2a0e61ecf4784ba74f29b7fd582a1689d154f8754ca710ade536ea52b",
+      "absolute_gap_over_35pct": [],
+      "observations": 10250
+    },
+    {
+      "path": "artifacts/research/alternate-history/daily.parquet",
+      "sha256": "efd05af560d11ea5875d0913ed1ee52fb49fd7e748e810a68c10968fbd4e2c33",
+      "absolute_gap_over_35pct": [],
+      "observations": 20500
+    }
+  ]
+}
