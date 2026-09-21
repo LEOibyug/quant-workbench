@@ -1,0 +1,8 @@
+{
+  "source_sha256": {
+    "scripts/study_pool_trend.py": "2addf7581a616da236af4c65193d501c492a3694595a4de687766766a4dc1bf6",
+    "scripts/study_pool_trend_temporal.py": "8ca6ed53697bce218efee2e09e6b7ca50a2f429462f05754770a10a2ad6b4247"
+  },
+  "runs": 34,
+  "exact_development_control_matches": 6
+}
