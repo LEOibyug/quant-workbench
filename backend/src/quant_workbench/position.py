@@ -156,7 +156,13 @@ def daily_forecasts(daily, config):
     return output
 
 
-def simulate_positions(frame, config, start, end, progress=None, *, daily_bars=False):
+def simulate_positions(
+    frame, config, start, end, progress=None, *, daily_bars=False, research_distributions=None
+):
+    if research_distributions is not None and (
+        not daily_bars or config.allocation.enabled or config.portfolio_policy != "legacy"
+    ):
+        raise ValueError("Research distributions require daily legacy execution")
     if config.model in {"generated_policy", "pattern_policy"}:
         if config.model == "pattern_policy":
             from quant_workbench.conditional_policy import artifact_digest
@@ -205,6 +211,8 @@ def simulate_positions(frame, config, start, end, progress=None, *, daily_bars=F
         daily = daily_inputs(frame[frame.timestamp < cutoff])
     forecasts = daily_forecasts(daily, config) if config.model != "equal_weight" else {}
     symbols = sorted(daily.symbol.unique())
+    if research_distributions is not None:
+        research_distributions.start(symbols, start, end)
     pivot = {day: group.set_index("symbol") for day, group in daily.groupby("day")}
     days = sorted(day for day in pivot if start <= day < end)
     costs = config.costs
@@ -231,8 +239,20 @@ def simulate_positions(frame, config, start, end, progress=None, *, daily_bars=F
     for i, day in enumerate(days):
         prices = pivot[day]
         daily_turnover = 0.0
+        distribution_value = dict(market_value=0.0, unrealized_pnl=0.0, by_parent={}, assets={})
+        if research_distributions is not None:
+            changed = research_distributions.before_open(day, prices, shares, basis)
+            # Cancel stale parent quantity orders on the distribution session.
+            # Fresh close signals may schedule subsequent-session orders.
+            for symbol in changed:
+                target_shares[symbol] = shares[symbol]
+            distribution_value = research_distributions.mark(day, "open")
         if previous is not None:
-            opening_equity = cash + sum(shares[s] * float(prices.loc[s, "open"]) for s in symbols)
+            opening_equity = (
+                cash
+                + distribution_value["market_value"]
+                + sum(shares[s] * float(prices.loc[s, "open"]) for s in symbols)
+            )
             halted = halted or opening_equity <= peak * (1 - config.max_drawdown_pct / 100)
             for symbol in symbols:
                 if shares[symbol] and float(prices.loc[symbol, "open"]) <= (
@@ -374,7 +394,13 @@ def simulate_positions(frame, config, start, end, progress=None, *, daily_bars=F
                         reason="risk_exit" if halted or forced_exit[symbol] else "staged_rebalance",
                     )
                 )
-        equity = cash + sum(shares[s] * float(prices.loc[s, "close"]) for s in symbols)
+        if research_distributions is not None:
+            distribution_value = research_distributions.mark(day, "close")
+        equity = (
+            cash
+            + distribution_value["market_value"]
+            + sum(shares[s] * float(prices.loc[s, "close"]) for s in symbols)
+        )
         peak = max(peak, equity)
         halted = halted or equity <= peak * (1 - config.max_drawdown_pct / 100)
         # A stock stop persists until liquidation completes, not until a future
@@ -515,14 +541,18 @@ def simulate_positions(frame, config, start, end, progress=None, *, daily_bars=F
                 drawdown_pct=(1 - equity / peak) * 100,
                 gross_exposure=(equity - cash) / equity,
                 halted=halted,
+                **(
+                    {"distributed_assets": distribution_value}
+                    if research_distributions is not None
+                    else {}
+                ),
                 positions=dict(shares),
                 cash_weight=cash / equity,
                 fees=fees,
                 impact_cost=impact_total,
                 realized_pnl=sum(realized.values()),
-                unrealized_pnl=sum(
-                    shares[s] * (float(prices.loc[s, "close"]) - basis[s]) for s in symbols
-                ),
+                unrealized_pnl=distribution_value["unrealized_pnl"]
+                + sum(shares[s] * (float(prices.loc[s, "close"]) - basis[s]) for s in symbols),
                 assets={
                     s: dict(
                         open=float(prices.loc[s, "open"]),
@@ -548,6 +578,7 @@ def simulate_positions(frame, config, start, end, progress=None, *, daily_bars=F
         if progress:
             progress("跨日持仓与分批调仓", i + 1, len(days), "交易日")
     final = curve[-1]["equity"]
+    distribution_final = distribution_value
     liquidation_cost = sum(
         shares[s]
         * float(pivot[days[-1]].loc[s, "close"])
@@ -565,6 +596,18 @@ def simulate_positions(frame, config, start, end, progress=None, *, daily_bars=F
         ]
     )
     return dict(
+        **(
+            {
+                "research_distributions": {
+                    "events": research_distributions.audit,
+                    "policy": (
+                        "hold side assets to end; no forced exit; no fractional cash settlement"
+                    ),
+                }
+            }
+            if research_distributions is not None
+            else {}
+        ),
         config=config.model_dump(),
         start=start,
         end=end,
@@ -600,8 +643,11 @@ def simulate_positions(frame, config, start, end, progress=None, *, daily_bars=F
                 )
                 * 100
             ),
-            estimated_liquidation_return_pct=((final - liquidation_cost) / costs.initial_cash - 1)
-            * 100,
+            estimated_liquidation_return_pct=(
+                ((final - liquidation_cost) / costs.initial_cash - 1) * 100
+                if research_distributions is None
+                else None
+            ),
         ),
         curve=curve,
         trades=trades,
@@ -610,7 +656,8 @@ def simulate_positions(frame, config, start, end, progress=None, *, daily_bars=F
         contributions=[
             dict(
                 symbol=s,
-                net_profit=flows[s]
+                net_profit=distribution_final["by_parent"].get(s, 0.0)
+                + flows[s]
                 + shares[s]
                 * float(
                     pivot[days[-1]].loc[s, "close"],
@@ -622,6 +669,13 @@ def simulate_positions(frame, config, start, end, progress=None, *, daily_bars=F
             dict(date=d, return_pct=float(r * 100)) for d, r in zip(days, returns, strict=True)
         ],
         assumptions=[
+            *(
+                [
+                    "研究分拆权益持有至期末；附属资产不受母股止损/组合停机卖出；零股估值非可用现金；未提供完整清算收益"
+                ]
+                if research_distributions is not None
+                else []
+            ),
             *(
                 [
                     "组合分配仅调整原策略允许的股票；收缩协方差与成本惩罚、现金缓冲、先卖后买；常规成交受日换手预算限制，风险退出优先"
