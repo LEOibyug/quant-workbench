@@ -1,0 +1,11 @@
+{
+  "source_sha256": {
+    "scripts/study_factor_ou.py": "a927cacced80ccff3bb7ca1f2bcaae3e56952d64dcd561e636c62be1eeedf976",
+    "scripts/study_symmetric_trend.py": "d6beae62493831a67dcedc3ee896468a751fd3ca3fd704b127ce10550179c1ad"
+  },
+  "protocol": "2026-09-21-factor-ou-protocol.md",
+  "rebalance_days": 1,
+  "borrow_annual": 0.03,
+  "short_dividend_reserve_annual": 0.02,
+  "multiplier_applies_to_carry": true
+}

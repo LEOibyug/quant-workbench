@@ -31,7 +31,7 @@ def forecasts(frame, mode):
     return out
 
 
-def simulate(frame, mode, multiplier=1, start="2025-09-01", end="2026-09-01"):
+def simulate(frame, mode, multiplier=1, start="2025-09-01", end="2026-09-01", rebalance_days=5):
     frame = frame[frame.day < end].sort_values(["day", "symbol"])
     fc = forecasts(frame, mode)
     symbols = sorted(frame.symbol.unique())
@@ -129,7 +129,7 @@ def simulate(frame, mode, multiplier=1, start="2025-09-01", end="2026-09-01"):
         equity = cash + sum(shares[s] * closes[s] for s in symbols)
         peak = max(peak, equity)
         halted = halted or equity <= 0.9 * peak
-        if i % 5 == 0:
+        if i % rebalance_days == 0:
             w = fc.get(day, {})
             target = {
                 s: int(np.sign(w.get(s, 0)) * np.floor(abs(w.get(s, 0)) * equity / closes[s]))
