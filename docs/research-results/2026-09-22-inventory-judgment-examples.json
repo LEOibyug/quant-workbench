@@ -1,0 +1,144 @@
+{
+  "candidate_fail": {
+    "symbol": "AAPL",
+    "asof": "2025-09-01",
+    "status": "证据不足",
+    "validated": false,
+    "computable": true,
+    "inventory_cost_ratio": 1.1715529497280168,
+    "candidate_rule": {
+      "version": "inventory-cost-nonincrease-v1",
+      "strategy": "20日调仓共享资金逆波动组合",
+      "metric": "inventory_cost_ratio",
+      "operator": "<=",
+      "threshold": 1.0,
+      "value": 1.1715529497280168,
+      "passed": false,
+      "validation": "仅候选条件；尚无可靠适用性确认",
+      "reassess": "每次调仓重新查询当时已公开财报；公司行动或口径变化需复核"
+    },
+    "fiscal_end": "2024-09-28",
+    "accession": "0000320193-24-000123",
+    "sources": {
+      "cost": {
+        "start": "2023-10-01",
+        "end": "2024-09-28",
+        "val": 210352000000,
+        "accn": "0000320193-24-000123",
+        "fy": 2024,
+        "fp": "FY",
+        "form": "10-K",
+        "filed": "2024-11-01",
+        "tag": "CostOfGoodsAndServicesSold"
+      },
+      "prior_cost": {
+        "start": "2022-09-25",
+        "end": "2023-09-30",
+        "val": 214137000000,
+        "accn": "0000320193-24-000123",
+        "fy": 2024,
+        "fp": "FY",
+        "form": "10-K",
+        "filed": "2024-11-01",
+        "tag": "CostOfGoodsAndServicesSold"
+      },
+      "inventory": {
+        "end": "2024-09-28",
+        "val": 7286000000,
+        "accn": "0000320193-24-000123",
+        "fy": 2024,
+        "fp": "FY",
+        "form": "10-K",
+        "filed": "2024-11-01",
+        "tag": "InventoryNet"
+      },
+      "prior_inventory": {
+        "end": "2023-09-30",
+        "val": 6331000000,
+        "accn": "0000320193-24-000123",
+        "fy": 2024,
+        "fp": "FY",
+        "form": "10-K",
+        "filed": "2024-11-01",
+        "frame": "CY2023Q3I",
+        "tag": "InventoryNet"
+      }
+    },
+    "reason": "同年报可计算的存货/销售成本代理，不是操纵判定或盈利概率"
+  },
+  "candidate_pass": {
+    "symbol": "MSFT",
+    "asof": "2025-09-01",
+    "status": "证据不足",
+    "validated": false,
+    "computable": true,
+    "inventory_cost_ratio": 0.6352391000131892,
+    "candidate_rule": {
+      "version": "inventory-cost-nonincrease-v1",
+      "strategy": "20日调仓共享资金逆波动组合",
+      "metric": "inventory_cost_ratio",
+      "operator": "<=",
+      "threshold": 1.0,
+      "value": 0.6352391000131892,
+      "passed": true,
+      "validation": "仅候选条件；尚无可靠适用性确认",
+      "reassess": "每次调仓重新查询当时已公开财报；公司行动或口径变化需复核"
+    },
+    "fiscal_end": "2025-06-30",
+    "accession": "0000950170-25-100235",
+    "sources": {
+      "cost": {
+        "start": "2024-07-01",
+        "end": "2025-06-30",
+        "val": 87831000000,
+        "accn": "0000950170-25-100235",
+        "fy": 2025,
+        "fp": "FY",
+        "form": "10-K",
+        "filed": "2025-07-30",
+        "tag": "CostOfGoodsAndServicesSold"
+      },
+      "prior_cost": {
+        "start": "2023-07-01",
+        "end": "2024-06-30",
+        "val": 74114000000,
+        "accn": "0000950170-25-100235",
+        "fy": 2025,
+        "fp": "FY",
+        "form": "10-K",
+        "filed": "2025-07-30",
+        "tag": "CostOfGoodsAndServicesSold"
+      },
+      "inventory": {
+        "end": "2025-06-30",
+        "val": 938000000,
+        "accn": "0000950170-25-100235",
+        "fy": 2025,
+        "fp": "FY",
+        "form": "10-K",
+        "filed": "2025-07-30",
+        "tag": "InventoryNet"
+      },
+      "prior_inventory": {
+        "end": "2024-06-30",
+        "val": 1246000000,
+        "accn": "0000950170-25-100235",
+        "fy": 2025,
+        "fp": "FY",
+        "form": "10-K",
+        "filed": "2025-07-30",
+        "frame": "CY2024Q2I",
+        "tag": "InventoryNet"
+      }
+    },
+    "reason": "同年报可计算的存货/销售成本代理，不是操纵判定或盈利概率"
+  },
+  "missing": {
+    "symbol": "AAPL",
+    "asof": "2025-09-01",
+    "status": "证据不足",
+    "validated": false,
+    "computable": false,
+    "reason": "缺少已公开年度销售成本"
+  }
+}

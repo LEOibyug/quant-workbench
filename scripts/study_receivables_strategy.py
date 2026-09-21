@@ -21,6 +21,8 @@ def forecasts(
     facts_root=Path("artifacts/research/sec-quality"),
     identities=None,
     excluded=(),
+    judge_fn=judge,
+    ratio_key="dsri",
 ):
     p = frame.pivot(index="day", columns="symbol", values="close").sort_index().sort_index(axis=1)
     syms = list(p.columns)
@@ -41,12 +43,12 @@ def forecasts(
         if day not in decisions:
             continue
         judgments = {
-            s: judge(facts[s], s, day, verified[s]["identity_verified"] and s not in excluded)
+            s: judge_fn(facts[s], s, day, verified[s]["identity_verified"] and s not in excluded)
             for s in syms
         }
         eligible = sorted(s for s in syms if judgments[s].get("computable"))
-        low = [s for s in eligible if judgments[s]["dsri"] <= 1]
-        high = [s for s in eligible if judgments[s]["dsri"] > 1]
+        low = [s for s in eligible if judgments[s][ratio_key] <= 1]
+        high = [s for s in eligible if judgments[s][ratio_key] > 1]
         n = min(len(low), len(high))
         sets = dict(nonincrease=low, increase=high, eligible=eligible)
         if not n:

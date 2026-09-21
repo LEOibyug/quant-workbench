@@ -87,6 +87,17 @@ def judge(facts, symbol, cutoff, verified=False):
         out.update(
             computable=True,
             inventory_cost_ratio=inventory_cost_ratio,
+            candidate_rule=dict(
+                version="inventory-cost-nonincrease-v1",
+                strategy="20日调仓共享资金逆波动组合",
+                metric="inventory_cost_ratio",
+                operator="<=",
+                threshold=1.0,
+                value=inventory_cost_ratio,
+                passed=inventory_cost_ratio <= 1,
+                validation="仅候选条件；尚无可靠适用性确认",
+                reassess="每次调仓重新查询当时已公开财报；公司行动或口径变化需复核",
+            ),
             fiscal_end=end,
             accession=accn,
             sources=dict(
