@@ -1,0 +1,10 @@
+{
+  "source_sha256": {
+    "scripts/study_cost_execution.py": "3aac0ccd907f67066d83d27506bb7f23b4931ab6c338ab2f2a396f1796ede191",
+    "scripts/study_cost_execution_temporal.py": "eea973a7a790d8d4d59828f656ac7c3a753ff8b793a2627a149855a0088e89f3",
+    "backend/src/quant_workbench/position.py": "5e77eac1558a3d3cbc515417c12af2a783aea4756a62db9b7c5f67425952785c",
+    "backend/src/quant_workbench/daily_strategies.py": "3f66ce4779a4714a66cfe1e4635c766d1f0b562702613680363d9a8e76ffc180"
+  },
+  "new_runs": 52,
+  "reused_legacy_temporal_baselines": 8
+}
