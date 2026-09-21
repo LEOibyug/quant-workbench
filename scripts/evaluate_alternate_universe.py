@@ -20,7 +20,7 @@ ROOT = Path("artifacts/research/alternate-universe-2025")
 REPORT = Path("docs/research-results/2026-09-18-alternate-universe.json")
 
 
-def download():
+def download(start_date="2025-02-28", end_date="2026-09-01"):
     ROOT.mkdir(parents=True, exist_ok=True)
     frames = []
     headers = {
@@ -28,7 +28,7 @@ def download():
         "APCA-API-SECRET-KEY": os.environ["APCA_API_SECRET_KEY"],
     }
     with httpx.Client(timeout=45) as client:
-        for start, end in quarter_windows("2025-02-28", "2026-09-01"):
+        for start, end in quarter_windows(start_date, end_date):
             path = ROOT / f"{start}-{end}-raw.parquet"
             if path.exists():
                 frame = pd.read_parquet(path)
@@ -87,7 +87,7 @@ def download():
             frames.append(frame)
             print(f"{start}—{end}: {len(frame)} rows", flush=True)
     frame = normalize_daily(pd.concat(frames, ignore_index=True))
-    expected = set(schedule("2025-02-28", "2026-09-01").index.strftime("%Y-%m-%d"))
+    expected = set(schedule(start_date, end_date).index.strftime("%Y-%m-%d"))
     if set(frame.symbol) != set(SYMBOLS):
         raise ValueError("Incomplete universe")
     gaps = []
