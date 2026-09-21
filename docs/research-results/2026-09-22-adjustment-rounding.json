@@ -1,0 +1,57 @@
+{
+  "status": "completed",
+  "input_sha256": {
+    "docs/research-results/2026-09-22-dividend-adjustment.json": "608e047571321bbd74547505caf362a4bbfe3acb61ca165a0aa30d9a15097a4d",
+    "artifacts/research/adjustment-audit/raw.parquet": "7ab091f572b2097227f432b12eca9491ab452da4de13b29c8065f0ce9c216ede",
+    "artifacts/research/adjustment-audit/dividend.parquet": "19e553f8c4b48c9d015ebfb3ff8052aa3848b780b01389a0528c488568a42c5b"
+  },
+  "assumed_price_rounding_step": 0.01,
+  "ohlc_observations": 1084,
+  "issuer_dividend_events": 5,
+  "common_anchor_interval": [
+    0.9918394377694711,
+    0.9918394607047787
+  ],
+  "common_anchor_selected_for_audit": 0.991839449237125,
+  "all_observations_within_half_cent": true,
+  "maximum_absolute_residual_dollars": 0.004994578748664935,
+  "no_dividend_step_control_feasible": false,
+  "unrounded_return_differences": [
+    {
+      "day": "2024-08-15",
+      "dividend": 0.75,
+      "unrounded_adjusted_return": 0.011823796592247193,
+      "gross_entitlement_return": 0.011802523629036,
+      "difference_bps": 0.21272963211194096
+    },
+    {
+      "day": "2024-11-21",
+      "dividend": 0.83,
+      "unrounded_adjusted_return": -0.004316789658997733,
+      "gross_entitlement_return": -0.004308166261522639,
+      "difference_bps": -0.08623397475093775
+    },
+    {
+      "day": "2025-02-20",
+      "dividend": 0.83,
+      "unrounded_adjusted_return": 0.0052906218292505525,
+      "gross_entitlement_return": 0.005280034718036397,
+      "difference_bps": 0.10587111214155343
+    },
+    {
+      "day": "2025-05-15",
+      "dividend": 0.83,
+      "unrounded_adjusted_return": 0.002256088120147881,
+      "gross_entitlement_return": 0.002251953901178938,
+      "difference_bps": 0.0413421896894306
+    },
+    {
+      "day": "2025-08-21",
+      "dividend": 0.83,
+      "unrounded_adjusted_return": -0.0012874091386243514,
+      "gross_entitlement_return": -0.0012852962113423239,
+      "difference_bps": -0.02112927282027499
+    }
+  ],
+  "formal_use": "arithmetic audit only, not a fitted trading signal or verified total-return account"
+}
