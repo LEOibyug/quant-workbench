@@ -1,0 +1,9 @@
+{
+  "controls_reproduced": 8,
+  "hashes": {
+    "artifacts/research/alternate-history/daily.parquet": "efd05af560d11ea5875d0913ed1ee52fb49fd7e748e810a68c10968fbd4e2c33",
+    "scripts/study_distribution_signal_eval.py": "27224c1ba0601498283fe3df94bb994294dab56cce5198818723a4076ac16ba7",
+    "scripts/spinoff_signal.py": "ff24b3af1aee66892d70b7aa5df1033e3c1a557d0b9b3f7ea854799550544272",
+    "docs/research-results/2026-09-21-spinoff-history.json": "3e0697fce2ccd7cbb73e156cc157ceb7740ff1cbc0870039be4cd665a0b890a7"
+  }
+}
