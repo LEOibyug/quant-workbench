@@ -1,0 +1,21 @@
+{
+  "path": "artifacts/research/liability-transfer-temporal/combined.parquet",
+  "sha256": "b56fac40139435a7c4477e4b886332a06eb889b911a5dac3c043c4c0bf5e32eb",
+  "symbols": [
+    "DE",
+    "HON",
+    "RTX",
+    "TMO",
+    "DHR",
+    "AMGN",
+    "SBUX",
+    "TGT",
+    "CSX",
+    "FDX",
+    "CMCSA",
+    "COP"
+  ],
+  "rows": 12300,
+  "adjustment": "raw",
+  "full_corporate_action_audit": false
+}
