@@ -1,0 +1,7053 @@
+{
+  "status": "completed",
+  "results": [
+    {
+      "symbol": "AAPL",
+      "asof": "2022-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": true,
+      "inventory_cost_ratio": 1.2899500357283895,
+      "fiscal_end": "2021-09-25",
+      "accession": "0000320193-21-000105",
+      "sources": {
+        "cost": {
+          "start": "2020-09-27",
+          "end": "2021-09-25",
+          "val": 212981000000,
+          "accn": "0000320193-21-000105",
+          "fy": 2021,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2021-10-29",
+          "tag": "CostOfGoodsAndServicesSold"
+        },
+        "prior_cost": {
+          "start": "2019-09-29",
+          "end": "2020-09-26",
+          "val": 169559000000,
+          "accn": "0000320193-21-000105",
+          "fy": 2021,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2021-10-29",
+          "tag": "CostOfGoodsAndServicesSold"
+        },
+        "inventory": {
+          "end": "2021-09-25",
+          "val": 6580000000,
+          "accn": "0000320193-21-000105",
+          "fy": 2021,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2021-10-29",
+          "tag": "InventoryNet"
+        },
+        "prior_inventory": {
+          "end": "2020-09-26",
+          "val": 4061000000,
+          "accn": "0000320193-21-000105",
+          "fy": 2021,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2021-10-29",
+          "frame": "CY2020Q3I",
+          "tag": "InventoryNet"
+        }
+      },
+      "reason": "同年报可计算的存货/销售成本代理，不是操纵判定或盈利概率"
+    },
+    {
+      "symbol": "AAPL",
+      "asof": "2023-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": true,
+      "inventory_cost_ratio": 0.7161470000109046,
+      "fiscal_end": "2022-09-24",
+      "accession": "0000320193-22-000108",
+      "sources": {
+        "cost": {
+          "start": "2021-09-26",
+          "end": "2022-09-24",
+          "val": 223546000000,
+          "accn": "0000320193-22-000108",
+          "fy": 2022,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2022-10-28",
+          "tag": "CostOfGoodsAndServicesSold"
+        },
+        "prior_cost": {
+          "start": "2020-09-27",
+          "end": "2021-09-25",
+          "val": 212981000000,
+          "accn": "0000320193-22-000108",
+          "fy": 2022,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2022-10-28",
+          "tag": "CostOfGoodsAndServicesSold"
+        },
+        "inventory": {
+          "end": "2022-09-24",
+          "val": 4946000000,
+          "accn": "0000320193-22-000108",
+          "fy": 2022,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2022-10-28",
+          "tag": "InventoryNet"
+        },
+        "prior_inventory": {
+          "end": "2021-09-25",
+          "val": 6580000000,
+          "accn": "0000320193-22-000108",
+          "fy": 2022,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2022-10-28",
+          "frame": "CY2021Q3I",
+          "tag": "InventoryNet"
+        }
+      },
+      "reason": "同年报可计算的存货/销售成本代理，不是操纵判定或盈利概率"
+    },
+    {
+      "symbol": "AAPL",
+      "asof": "2024-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": true,
+      "inventory_cost_ratio": 1.3362674534514878,
+      "fiscal_end": "2023-09-30",
+      "accession": "0000320193-23-000106",
+      "sources": {
+        "cost": {
+          "start": "2022-09-25",
+          "end": "2023-09-30",
+          "val": 214137000000,
+          "accn": "0000320193-23-000106",
+          "fy": 2023,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2023-11-03",
+          "tag": "CostOfGoodsAndServicesSold"
+        },
+        "prior_cost": {
+          "start": "2021-09-26",
+          "end": "2022-09-24",
+          "val": 223546000000,
+          "accn": "0000320193-23-000106",
+          "fy": 2023,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2023-11-03",
+          "tag": "CostOfGoodsAndServicesSold"
+        },
+        "inventory": {
+          "end": "2023-09-30",
+          "val": 6331000000,
+          "accn": "0000320193-23-000106",
+          "fy": 2023,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2023-11-03",
+          "tag": "InventoryNet"
+        },
+        "prior_inventory": {
+          "end": "2022-09-24",
+          "val": 4946000000,
+          "accn": "0000320193-23-000106",
+          "fy": 2023,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2023-11-03",
+          "frame": "CY2022Q3I",
+          "tag": "InventoryNet"
+        }
+      },
+      "reason": "同年报可计算的存货/销售成本代理，不是操纵判定或盈利概率"
+    },
+    {
+      "symbol": "AAPL",
+      "asof": "2025-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": true,
+      "inventory_cost_ratio": 1.1715529497280168,
+      "fiscal_end": "2024-09-28",
+      "accession": "0000320193-24-000123",
+      "sources": {
+        "cost": {
+          "start": "2023-10-01",
+          "end": "2024-09-28",
+          "val": 210352000000,
+          "accn": "0000320193-24-000123",
+          "fy": 2024,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2024-11-01",
+          "tag": "CostOfGoodsAndServicesSold"
+        },
+        "prior_cost": {
+          "start": "2022-09-25",
+          "end": "2023-09-30",
+          "val": 214137000000,
+          "accn": "0000320193-24-000123",
+          "fy": 2024,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2024-11-01",
+          "tag": "CostOfGoodsAndServicesSold"
+        },
+        "inventory": {
+          "end": "2024-09-28",
+          "val": 7286000000,
+          "accn": "0000320193-24-000123",
+          "fy": 2024,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2024-11-01",
+          "tag": "InventoryNet"
+        },
+        "prior_inventory": {
+          "end": "2023-09-30",
+          "val": 6331000000,
+          "accn": "0000320193-24-000123",
+          "fy": 2024,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2024-11-01",
+          "frame": "CY2023Q3I",
+          "tag": "InventoryNet"
+        }
+      },
+      "reason": "同年报可计算的存货/销售成本代理，不是操纵判定或盈利概率"
+    },
+    {
+      "symbol": "ABBV",
+      "asof": "2022-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": true,
+      "inventory_cost_ratio": 0.8334831727630498,
+      "fiscal_end": "2021-12-31",
+      "accession": "0001551152-22-000007",
+      "sources": {
+        "cost": {
+          "start": "2021-01-01",
+          "end": "2021-12-31",
+          "val": 17446000000,
+          "accn": "0001551152-22-000007",
+          "fy": 2021,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2022-02-18",
+          "tag": "CostOfGoodsAndServicesSold"
+        },
+        "prior_cost": {
+          "start": "2020-01-01",
+          "end": "2020-12-31",
+          "val": 15387000000,
+          "accn": "0001551152-22-000007",
+          "fy": 2021,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2022-02-18",
+          "tag": "CostOfGoodsAndServicesSold"
+        },
+        "inventory": {
+          "end": "2021-12-31",
+          "val": 3128000000,
+          "accn": "0001551152-22-000007",
+          "fy": 2021,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2022-02-18",
+          "tag": "InventoryNet"
+        },
+        "prior_inventory": {
+          "end": "2020-12-31",
+          "val": 3310000000,
+          "accn": "0001551152-22-000007",
+          "fy": 2021,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2022-02-18",
+          "frame": "CY2020Q4I",
+          "tag": "InventoryNet"
+        }
+      },
+      "reason": "同年报可计算的存货/销售成本代理，不是操纵判定或盈利概率"
+    },
+    {
+      "symbol": "ABBV",
+      "asof": "2023-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": true,
+      "inventory_cost_ratio": 1.1462841359672686,
+      "fiscal_end": "2022-12-31",
+      "accession": "0001551152-23-000011",
+      "sources": {
+        "cost": {
+          "start": "2022-01-01",
+          "end": "2022-12-31",
+          "val": 17414000000,
+          "accn": "0001551152-23-000011",
+          "fy": 2022,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2023-02-17",
+          "tag": "CostOfGoodsAndServicesSold"
+        },
+        "prior_cost": {
+          "start": "2021-01-01",
+          "end": "2021-12-31",
+          "val": 17446000000,
+          "accn": "0001551152-23-000011",
+          "fy": 2022,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2023-02-17",
+          "tag": "CostOfGoodsAndServicesSold"
+        },
+        "inventory": {
+          "end": "2022-12-31",
+          "val": 3579000000,
+          "accn": "0001551152-23-000011",
+          "fy": 2022,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2023-02-17",
+          "tag": "InventoryNet"
+        },
+        "prior_inventory": {
+          "end": "2021-12-31",
+          "val": 3128000000,
+          "accn": "0001551152-23-000011",
+          "fy": 2022,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2023-02-17",
+          "frame": "CY2021Q4I",
+          "tag": "InventoryNet"
+        }
+      },
+      "reason": "同年报可计算的存货/销售成本代理，不是操纵判定或盈利概率"
+    },
+    {
+      "symbol": "ABBV",
+      "asof": "2024-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": true,
+      "inventory_cost_ratio": 0.9769343402958054,
+      "fiscal_end": "2023-12-31",
+      "accession": "0001551152-24-000011",
+      "sources": {
+        "cost": {
+          "start": "2023-01-01",
+          "end": "2023-12-31",
+          "val": 20415000000,
+          "accn": "0001551152-24-000011",
+          "fy": 2023,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2024-02-20",
+          "tag": "CostOfGoodsAndServicesSold"
+        },
+        "prior_cost": {
+          "start": "2022-01-01",
+          "end": "2022-12-31",
+          "val": 17414000000,
+          "accn": "0001551152-24-000011",
+          "fy": 2023,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2024-02-20",
+          "tag": "CostOfGoodsAndServicesSold"
+        },
+        "inventory": {
+          "end": "2023-12-31",
+          "val": 4099000000,
+          "accn": "0001551152-24-000011",
+          "fy": 2023,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2024-02-20",
+          "tag": "InventoryNet"
+        },
+        "prior_inventory": {
+          "end": "2022-12-31",
+          "val": 3579000000,
+          "accn": "0001551152-24-000011",
+          "fy": 2023,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2024-02-20",
+          "frame": "CY2022Q4I",
+          "tag": "InventoryNet"
+        }
+      },
+      "reason": "同年报可计算的存货/销售成本代理，不是操纵判定或盈利概率"
+    },
+    {
+      "symbol": "ABBV",
+      "asof": "2025-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": true,
+      "inventory_cost_ratio": 1.2318622580253722,
+      "fiscal_end": "2024-12-31",
+      "accession": "0001551152-25-000020",
+      "sources": {
+        "cost": {
+          "start": "2024-01-01",
+          "end": "2024-12-31",
+          "val": 16904000000,
+          "accn": "0001551152-25-000020",
+          "fy": 2024,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2025-02-14",
+          "tag": "CostOfGoodsAndServicesSold"
+        },
+        "prior_cost": {
+          "start": "2023-01-01",
+          "end": "2023-12-31",
+          "val": 20415000000,
+          "accn": "0001551152-25-000020",
+          "fy": 2024,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2025-02-14",
+          "tag": "CostOfGoodsAndServicesSold"
+        },
+        "inventory": {
+          "end": "2024-12-31",
+          "val": 4181000000,
+          "accn": "0001551152-25-000020",
+          "fy": 2024,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2025-02-14",
+          "tag": "InventoryNet"
+        },
+        "prior_inventory": {
+          "end": "2023-12-31",
+          "val": 4099000000,
+          "accn": "0001551152-25-000020",
+          "fy": 2024,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2025-02-14",
+          "frame": "CY2023Q4I",
+          "tag": "InventoryNet"
+        }
+      },
+      "reason": "同年报可计算的存货/销售成本代理，不是操纵判定或盈利概率"
+    },
+    {
+      "symbol": "ACN",
+      "asof": "2022-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": false,
+      "reason": "最新年报缺少或冲突的净存货",
+      "accession": "0001467373-21-000229"
+    },
+    {
+      "symbol": "ACN",
+      "asof": "2023-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": false,
+      "reason": "最新年报缺少或冲突的净存货",
+      "accession": "0001467373-22-000295"
+    },
+    {
+      "symbol": "ACN",
+      "asof": "2024-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": false,
+      "reason": "最新年报缺少或冲突的净存货",
+      "accession": "0001467373-23-000324"
+    },
+    {
+      "symbol": "ACN",
+      "asof": "2025-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": false,
+      "reason": "最新年报缺少或冲突的净存货",
+      "accession": "0001467373-24-000278"
+    },
+    {
+      "symbol": "ADBE",
+      "asof": "2022-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": false,
+      "reason": "最新年报缺少或冲突的净存货",
+      "accession": "0000796343-22-000032"
+    },
+    {
+      "symbol": "ADBE",
+      "asof": "2023-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": false,
+      "reason": "最新年报缺少或冲突的净存货",
+      "accession": "0000796343-23-000007"
+    },
+    {
+      "symbol": "ADBE",
+      "asof": "2024-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": false,
+      "reason": "最新年报缺少或冲突的净存货",
+      "accession": "0000796343-24-000006"
+    },
+    {
+      "symbol": "ADBE",
+      "asof": "2025-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": false,
+      "reason": "最新年报缺少或冲突的净存货",
+      "accession": "0000796343-25-000004"
+    },
+    {
+      "symbol": "AMD",
+      "asof": "2022-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": true,
+      "inventory_cost_ratio": 0.8898839727209198,
+      "fiscal_end": "2021-12-25",
+      "accession": "0000002488-22-000016",
+      "sources": {
+        "cost": {
+          "start": "2020-12-27",
+          "end": "2021-12-25",
+          "val": 8505000000,
+          "accn": "0000002488-22-000016",
+          "fy": 2021,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2022-02-03",
+          "tag": "CostOfGoodsAndServicesSold"
+        },
+        "prior_cost": {
+          "start": "2019-12-29",
+          "end": "2020-12-26",
+          "val": 5416000000,
+          "accn": "0000002488-22-000016",
+          "fy": 2021,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2022-02-03",
+          "tag": "CostOfGoodsAndServicesSold"
+        },
+        "inventory": {
+          "end": "2021-12-25",
+          "val": 1955000000,
+          "accn": "0000002488-22-000016",
+          "fy": 2021,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2022-02-03",
+          "tag": "InventoryNet"
+        },
+        "prior_inventory": {
+          "end": "2020-12-26",
+          "val": 1399000000,
+          "accn": "0000002488-22-000016",
+          "fy": 2021,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2022-02-03",
+          "frame": "CY2020Q4I",
+          "tag": "InventoryNet"
+        }
+      },
+      "reason": "同年报可计算的存货/销售成本代理，不是操纵判定或盈利概率"
+    },
+    {
+      "symbol": "AMD",
+      "asof": "2023-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": true,
+      "inventory_cost_ratio": 1.2621400734875994,
+      "fiscal_end": "2022-12-31",
+      "accession": "0000002488-23-000047",
+      "sources": {
+        "cost": {
+          "start": "2021-12-26",
+          "end": "2022-12-31",
+          "val": 12998000000,
+          "accn": "0000002488-23-000047",
+          "fy": 2022,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2023-02-27",
+          "tag": "CostOfGoodsAndServicesSold"
+        },
+        "prior_cost": {
+          "start": "2020-12-27",
+          "end": "2021-12-25",
+          "val": 8505000000,
+          "accn": "0000002488-23-000047",
+          "fy": 2022,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2023-02-27",
+          "tag": "CostOfGoodsAndServicesSold"
+        },
+        "inventory": {
+          "end": "2022-12-31",
+          "val": 3771000000,
+          "accn": "0000002488-23-000047",
+          "fy": 2022,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2023-02-27",
+          "tag": "InventoryNet"
+        },
+        "prior_inventory": {
+          "end": "2021-12-25",
+          "val": 1955000000,
+          "accn": "0000002488-23-000047",
+          "fy": 2022,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2023-02-27",
+          "frame": "CY2021Q4I",
+          "tag": "InventoryNet"
+        }
+      },
+      "reason": "同年报可计算的存货/销售成本代理，不是操纵判定或盈利概率"
+    },
+    {
+      "symbol": "AMD",
+      "asof": "2024-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": true,
+      "inventory_cost_ratio": 1.2272636682477742,
+      "fiscal_end": "2023-12-30",
+      "accession": "0000002488-24-000012",
+      "sources": {
+        "cost": {
+          "start": "2023-01-01",
+          "end": "2023-12-30",
+          "val": 12220000000,
+          "accn": "0000002488-24-000012",
+          "fy": 2023,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2024-01-31",
+          "tag": "CostOfGoodsAndServicesSold"
+        },
+        "prior_cost": {
+          "start": "2021-12-26",
+          "end": "2022-12-31",
+          "val": 12998000000,
+          "accn": "0000002488-24-000012",
+          "fy": 2023,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2024-01-31",
+          "tag": "CostOfGoodsAndServicesSold"
+        },
+        "inventory": {
+          "end": "2023-12-30",
+          "val": 4351000000,
+          "accn": "0000002488-24-000012",
+          "fy": 2023,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2024-01-31",
+          "tag": "InventoryNet"
+        },
+        "prior_inventory": {
+          "end": "2022-12-31",
+          "val": 3771000000,
+          "accn": "0000002488-24-000012",
+          "fy": 2023,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2024-01-31",
+          "frame": "CY2022Q4I",
+          "tag": "InventoryNet"
+        }
+      },
+      "reason": "同年报可计算的存货/销售成本代理，不是操纵判定或盈利概率"
+    },
+    {
+      "symbol": "AMD",
+      "asof": "2025-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": true,
+      "inventory_cost_ratio": 1.2330952768950336,
+      "fiscal_end": "2024-12-28",
+      "accession": "0000002488-25-000012",
+      "sources": {
+        "cost": {
+          "start": "2023-12-31",
+          "end": "2024-12-28",
+          "val": 13060000000,
+          "accn": "0000002488-25-000012",
+          "fy": 2024,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2025-02-05",
+          "tag": "CostOfGoodsAndServicesSold"
+        },
+        "prior_cost": {
+          "start": "2023-01-01",
+          "end": "2023-12-30",
+          "val": 12220000000,
+          "accn": "0000002488-25-000012",
+          "fy": 2024,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2025-02-05",
+          "tag": "CostOfGoodsAndServicesSold"
+        },
+        "inventory": {
+          "end": "2024-12-28",
+          "val": 5734000000,
+          "accn": "0000002488-25-000012",
+          "fy": 2024,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2025-02-05",
+          "tag": "InventoryNet"
+        },
+        "prior_inventory": {
+          "end": "2023-12-30",
+          "val": 4351000000,
+          "accn": "0000002488-25-000012",
+          "fy": 2024,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2025-02-05",
+          "frame": "CY2023Q4I",
+          "tag": "InventoryNet"
+        }
+      },
+      "reason": "同年报可计算的存货/销售成本代理，不是操纵判定或盈利概率"
+    },
+    {
+      "symbol": "AMZN",
+      "asof": "2022-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": true,
+      "inventory_cost_ratio": 1.1750988424297104,
+      "fiscal_end": "2021-12-31",
+      "accession": "0001018724-22-000005",
+      "sources": {
+        "cost": {
+          "start": "2021-01-01",
+          "end": "2021-12-31",
+          "val": 272344000000,
+          "accn": "0001018724-22-000005",
+          "fy": 2021,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2022-02-04",
+          "tag": "CostOfGoodsAndServicesSold"
+        },
+        "prior_cost": {
+          "start": "2020-01-01",
+          "end": "2020-12-31",
+          "val": 233307000000,
+          "accn": "0001018724-22-000005",
+          "fy": 2021,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2022-02-04",
+          "tag": "CostOfGoodsAndServicesSold"
+        },
+        "inventory": {
+          "end": "2021-12-31",
+          "val": 32640000000,
+          "accn": "0001018724-22-000005",
+          "fy": 2021,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2022-02-04",
+          "tag": "InventoryNet"
+        },
+        "prior_inventory": {
+          "end": "2020-12-31",
+          "val": 23795000000,
+          "accn": "0001018724-22-000005",
+          "fy": 2021,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2022-02-04",
+          "frame": "CY2020Q4I",
+          "tag": "InventoryNet"
+        }
+      },
+      "reason": "同年报可计算的存货/销售成本代理，不是操纵判定或盈利概率"
+    },
+    {
+      "symbol": "AMZN",
+      "asof": "2023-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": true,
+      "inventory_cost_ratio": 0.9939062463829007,
+      "fiscal_end": "2022-12-31",
+      "accession": "0001018724-23-000004",
+      "sources": {
+        "cost": {
+          "start": "2022-01-01",
+          "end": "2022-12-31",
+          "val": 288831000000,
+          "accn": "0001018724-23-000004",
+          "fy": 2022,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2023-02-03",
+          "tag": "CostOfGoodsAndServicesSold"
+        },
+        "prior_cost": {
+          "start": "2021-01-01",
+          "end": "2021-12-31",
+          "val": 272344000000,
+          "accn": "0001018724-23-000004",
+          "fy": 2022,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2023-02-03",
+          "tag": "CostOfGoodsAndServicesSold"
+        },
+        "inventory": {
+          "end": "2022-12-31",
+          "val": 34405000000,
+          "accn": "0001018724-23-000004",
+          "fy": 2022,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2023-02-03",
+          "tag": "InventoryNet"
+        },
+        "prior_inventory": {
+          "end": "2021-12-31",
+          "val": 32640000000,
+          "accn": "0001018724-23-000004",
+          "fy": 2022,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2023-02-03",
+          "frame": "CY2021Q4I",
+          "tag": "InventoryNet"
+        }
+      },
+      "reason": "同年报可计算的存货/销售成本代理，不是操纵判定或盈利概率"
+    },
+    {
+      "symbol": "AMZN",
+      "asof": "2024-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": true,
+      "inventory_cost_ratio": 0.9178529909722709,
+      "fiscal_end": "2023-12-31",
+      "accession": "0001018724-24-000008",
+      "sources": {
+        "cost": {
+          "start": "2023-01-01",
+          "end": "2023-12-31",
+          "val": 304739000000,
+          "accn": "0001018724-24-000008",
+          "fy": 2023,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2024-02-02",
+          "tag": "CostOfGoodsAndServicesSold"
+        },
+        "prior_cost": {
+          "start": "2022-01-01",
+          "end": "2022-12-31",
+          "val": 288831000000,
+          "accn": "0001018724-24-000008",
+          "fy": 2023,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2024-02-02",
+          "tag": "CostOfGoodsAndServicesSold"
+        },
+        "inventory": {
+          "end": "2023-12-31",
+          "val": 33318000000,
+          "accn": "0001018724-24-000008",
+          "fy": 2023,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2024-02-02",
+          "tag": "InventoryNet"
+        },
+        "prior_inventory": {
+          "end": "2022-12-31",
+          "val": 34405000000,
+          "accn": "0001018724-24-000008",
+          "fy": 2023,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2024-02-02",
+          "frame": "CY2022Q4I",
+          "tag": "InventoryNet"
+        }
+      },
+      "reason": "同年报可计算的存货/销售成本代理，不是操纵判定或盈利概率"
+    },
+    {
+      "symbol": "AMZN",
+      "asof": "2025-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": true,
+      "inventory_cost_ratio": 0.9590734384681073,
+      "fiscal_end": "2024-12-31",
+      "accession": "0001018724-25-000004",
+      "sources": {
+        "cost": {
+          "start": "2024-01-01",
+          "end": "2024-12-31",
+          "val": 326288000000,
+          "accn": "0001018724-25-000004",
+          "fy": 2024,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2025-02-07",
+          "tag": "CostOfGoodsAndServicesSold"
+        },
+        "prior_cost": {
+          "start": "2023-01-01",
+          "end": "2023-12-31",
+          "val": 304739000000,
+          "accn": "0001018724-25-000004",
+          "fy": 2024,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2025-02-07",
+          "tag": "CostOfGoodsAndServicesSold"
+        },
+        "inventory": {
+          "end": "2024-12-31",
+          "val": 34214000000,
+          "accn": "0001018724-25-000004",
+          "fy": 2024,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2025-02-07",
+          "tag": "InventoryNet"
+        },
+        "prior_inventory": {
+          "end": "2023-12-31",
+          "val": 33318000000,
+          "accn": "0001018724-25-000004",
+          "fy": 2024,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2025-02-07",
+          "frame": "CY2023Q4I",
+          "tag": "InventoryNet"
+        }
+      },
+      "reason": "同年报可计算的存货/销售成本代理，不是操纵判定或盈利概率"
+    },
+    {
+      "symbol": "AVGO",
+      "asof": "2022-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": true,
+      "inventory_cost_ratio": 1.2645905391500398,
+      "fiscal_end": "2021-10-31",
+      "accession": "0001730168-21-000153",
+      "sources": {
+        "cost": {
+          "start": "2020-11-02",
+          "end": "2021-10-31",
+          "val": 10606000000,
+          "accn": "0001730168-21-000153",
+          "fy": 2021,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2021-12-17",
+          "tag": "CostOfRevenue"
+        },
+        "prior_cost": {
+          "start": "2019-11-04",
+          "end": "2020-11-01",
+          "val": 10372000000,
+          "accn": "0001730168-21-000153",
+          "fy": 2021,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2021-12-17",
+          "tag": "CostOfRevenue"
+        },
+        "inventory": {
+          "end": "2021-10-31",
+          "val": 1297000000,
+          "accn": "0001730168-21-000153",
+          "fy": 2021,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2021-12-17",
+          "tag": "InventoryNet"
+        },
+        "prior_inventory": {
+          "end": "2020-11-01",
+          "val": 1003000000,
+          "accn": "0001730168-21-000153",
+          "fy": 2021,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2021-12-17",
+          "frame": "CY2020Q3I",
+          "tag": "InventoryNet"
+        }
+      },
+      "reason": "同年报可计算的存货/销售成本代理，不是操纵判定或盈利概率"
+    },
+    {
+      "symbol": "AVGO",
+      "asof": "2023-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": true,
+      "inventory_cost_ratio": 1.4171196153889936,
+      "fiscal_end": "2022-10-30",
+      "accession": "0001730168-22-000118",
+      "sources": {
+        "cost": {
+          "start": "2021-11-01",
+          "end": "2022-10-30",
+          "val": 11108000000,
+          "accn": "0001730168-22-000118",
+          "fy": 2022,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2022-12-16",
+          "tag": "CostOfRevenue"
+        },
+        "prior_cost": {
+          "start": "2020-11-02",
+          "end": "2021-10-31",
+          "val": 10606000000,
+          "accn": "0001730168-22-000118",
+          "fy": 2022,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2022-12-16",
+          "tag": "CostOfRevenue"
+        },
+        "inventory": {
+          "end": "2022-10-30",
+          "val": 1925000000,
+          "accn": "0001730168-22-000118",
+          "fy": 2022,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2022-12-16",
+          "tag": "InventoryNet"
+        },
+        "prior_inventory": {
+          "end": "2021-10-31",
+          "val": 1297000000,
+          "accn": "0001730168-22-000118",
+          "fy": 2022,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2022-12-16",
+          "frame": "CY2021Q3I",
+          "tag": "InventoryNet"
+        }
+      },
+      "reason": "同年报可计算的存货/销售成本代理，不是操纵判定或盈利概率"
+    },
+    {
+      "symbol": "AVGO",
+      "asof": "2024-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": true,
+      "inventory_cost_ratio": 0.9841135304627083,
+      "fiscal_end": "2023-10-29",
+      "accession": "0001730168-23-000096",
+      "sources": {
+        "cost": {
+          "start": "2022-10-31",
+          "end": "2023-10-29",
+          "val": 11129000000,
+          "accn": "0001730168-23-000096",
+          "fy": 2023,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2023-12-14",
+          "tag": "CostOfRevenue"
+        },
+        "prior_cost": {
+          "start": "2021-11-01",
+          "end": "2022-10-30",
+          "val": 11108000000,
+          "accn": "0001730168-23-000096",
+          "fy": 2023,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2023-12-14",
+          "tag": "CostOfRevenue"
+        },
+        "inventory": {
+          "end": "2023-10-29",
+          "val": 1898000000,
+          "accn": "0001730168-23-000096",
+          "fy": 2023,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2023-12-14",
+          "tag": "InventoryNet"
+        },
+        "prior_inventory": {
+          "end": "2022-10-30",
+          "val": 1925000000,
+          "accn": "0001730168-23-000096",
+          "fy": 2023,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2023-12-14",
+          "frame": "CY2022Q3I",
+          "tag": "InventoryNet"
+        }
+      },
+      "reason": "同年报可计算的存货/销售成本代理，不是操纵判定或盈利概率"
+    },
+    {
+      "symbol": "AVGO",
+      "asof": "2025-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": true,
+      "inventory_cost_ratio": 0.541297214868882,
+      "fiscal_end": "2024-11-03",
+      "accession": "0001730168-24-000139",
+      "sources": {
+        "cost": {
+          "start": "2023-10-30",
+          "end": "2024-11-03",
+          "val": 19065000000,
+          "accn": "0001730168-24-000139",
+          "fy": 2024,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2024-12-20",
+          "tag": "CostOfRevenue"
+        },
+        "prior_cost": {
+          "start": "2022-10-31",
+          "end": "2023-10-29",
+          "val": 11129000000,
+          "accn": "0001730168-24-000139",
+          "fy": 2024,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2024-12-20",
+          "tag": "CostOfRevenue"
+        },
+        "inventory": {
+          "end": "2024-11-03",
+          "val": 1760000000,
+          "accn": "0001730168-24-000139",
+          "fy": 2024,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2024-12-20",
+          "tag": "InventoryNet"
+        },
+        "prior_inventory": {
+          "end": "2023-10-29",
+          "val": 1898000000,
+          "accn": "0001730168-24-000139",
+          "fy": 2024,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2024-12-20",
+          "frame": "CY2023Q3I",
+          "tag": "InventoryNet"
+        }
+      },
+      "reason": "同年报可计算的存货/销售成本代理，不是操纵判定或盈利概率"
+    },
+    {
+      "symbol": "BAC",
+      "asof": "2022-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": false,
+      "reason": "身份未核验或不在会计可比范围"
+    },
+    {
+      "symbol": "BAC",
+      "asof": "2023-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": false,
+      "reason": "身份未核验或不在会计可比范围"
+    },
+    {
+      "symbol": "BAC",
+      "asof": "2024-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": false,
+      "reason": "身份未核验或不在会计可比范围"
+    },
+    {
+      "symbol": "BAC",
+      "asof": "2025-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": false,
+      "reason": "身份未核验或不在会计可比范围"
+    },
+    {
+      "symbol": "BRK.B",
+      "asof": "2022-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": false,
+      "reason": "身份未核验或不在会计可比范围"
+    },
+    {
+      "symbol": "BRK.B",
+      "asof": "2023-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": false,
+      "reason": "身份未核验或不在会计可比范围"
+    },
+    {
+      "symbol": "BRK.B",
+      "asof": "2024-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": false,
+      "reason": "身份未核验或不在会计可比范围"
+    },
+    {
+      "symbol": "BRK.B",
+      "asof": "2025-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": false,
+      "reason": "身份未核验或不在会计可比范围"
+    },
+    {
+      "symbol": "CAT",
+      "asof": "2022-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": true,
+      "inventory_cost_ratio": 1.0082334692598667,
+      "fiscal_end": "2021-12-31",
+      "accession": "0000018230-22-000050",
+      "sources": {
+        "cost": {
+          "start": "2021-01-01",
+          "end": "2021-12-31",
+          "val": 35513000000,
+          "accn": "0000018230-22-000050",
+          "fy": 2021,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2022-02-16",
+          "tag": "CostOfRevenue"
+        },
+        "prior_cost": {
+          "start": "2020-01-01",
+          "end": "2020-12-31",
+          "val": 29082000000,
+          "accn": "0000018230-22-000050",
+          "fy": 2021,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2022-02-16",
+          "tag": "CostOfRevenue"
+        },
+        "inventory": {
+          "end": "2021-12-31",
+          "val": 14038000000,
+          "accn": "0000018230-22-000050",
+          "fy": 2021,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2022-02-16",
+          "tag": "InventoryNet"
+        },
+        "prior_inventory": {
+          "end": "2020-12-31",
+          "val": 11402000000,
+          "accn": "0000018230-22-000050",
+          "fy": 2021,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2022-02-16",
+          "frame": "CY2020Q4I",
+          "tag": "InventoryNet"
+        }
+      },
+      "reason": "同年报可计算的存货/销售成本代理，不是操纵判定或盈利概率"
+    },
+    {
+      "symbol": "CAT",
+      "asof": "2023-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": true,
+      "inventory_cost_ratio": 0.995392037470242,
+      "fiscal_end": "2022-12-31",
+      "accession": "0000018230-23-000011",
+      "sources": {
+        "cost": {
+          "start": "2022-01-01",
+          "end": "2022-12-31",
+          "val": 41350000000,
+          "accn": "0000018230-23-000011",
+          "fy": 2022,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2023-02-15",
+          "tag": "CostOfRevenue"
+        },
+        "prior_cost": {
+          "start": "2021-01-01",
+          "end": "2021-12-31",
+          "val": 35513000000,
+          "accn": "0000018230-23-000011",
+          "fy": 2022,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2023-02-15",
+          "tag": "CostOfRevenue"
+        },
+        "inventory": {
+          "end": "2022-12-31",
+          "val": 16270000000,
+          "accn": "0000018230-23-000011",
+          "fy": 2022,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2023-02-15",
+          "tag": "InventoryNet"
+        },
+        "prior_inventory": {
+          "end": "2021-12-31",
+          "val": 14038000000,
+          "accn": "0000018230-23-000011",
+          "fy": 2022,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2023-02-15",
+          "frame": "CY2021Q4I",
+          "tag": "InventoryNet"
+        }
+      },
+      "reason": "同年报可计算的存货/销售成本代理，不是操纵判定或盈利概率"
+    },
+    {
+      "symbol": "CAT",
+      "asof": "2024-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": true,
+      "inventory_cost_ratio": 0.9843977548819478,
+      "fiscal_end": "2023-12-31",
+      "accession": "0000018230-24-000009",
+      "sources": {
+        "cost": {
+          "start": "2023-01-01",
+          "end": "2023-12-31",
+          "val": 42767000000,
+          "accn": "0000018230-24-000009",
+          "fy": 2023,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2024-02-16",
+          "tag": "CostOfRevenue"
+        },
+        "prior_cost": {
+          "start": "2022-01-01",
+          "end": "2022-12-31",
+          "val": 41350000000,
+          "accn": "0000018230-24-000009",
+          "fy": 2023,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2024-02-16",
+          "tag": "CostOfRevenue"
+        },
+        "inventory": {
+          "end": "2023-12-31",
+          "val": 16565000000,
+          "accn": "0000018230-24-000009",
+          "fy": 2023,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2024-02-16",
+          "tag": "InventoryNet"
+        },
+        "prior_inventory": {
+          "end": "2022-12-31",
+          "val": 16270000000,
+          "accn": "0000018230-24-000009",
+          "fy": 2023,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2024-02-16",
+          "frame": "CY2022Q4I",
+          "tag": "InventoryNet"
+        }
+      },
+      "reason": "同年报可计算的存货/销售成本代理，不是操纵判定或盈利概率"
+    },
+    {
+      "symbol": "CAT",
+      "asof": "2025-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": true,
+      "inventory_cost_ratio": 1.0807090580083973,
+      "fiscal_end": "2024-12-31",
+      "accession": "0000018230-25-000008",
+      "sources": {
+        "cost": {
+          "start": "2024-01-01",
+          "end": "2024-12-31",
+          "val": 40199000000,
+          "accn": "0000018230-25-000008",
+          "fy": 2024,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2025-02-14",
+          "tag": "CostOfRevenue"
+        },
+        "prior_cost": {
+          "start": "2023-01-01",
+          "end": "2023-12-31",
+          "val": 42767000000,
+          "accn": "0000018230-25-000008",
+          "fy": 2024,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2025-02-14",
+          "tag": "CostOfRevenue"
+        },
+        "inventory": {
+          "end": "2024-12-31",
+          "val": 16827000000,
+          "accn": "0000018230-25-000008",
+          "fy": 2024,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2025-02-14",
+          "tag": "InventoryNet"
+        },
+        "prior_inventory": {
+          "end": "2023-12-31",
+          "val": 16565000000,
+          "accn": "0000018230-25-000008",
+          "fy": 2024,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2025-02-14",
+          "frame": "CY2023Q4I",
+          "tag": "InventoryNet"
+        }
+      },
+      "reason": "同年报可计算的存货/销售成本代理，不是操纵判定或盈利概率"
+    },
+    {
+      "symbol": "COST",
+      "asof": "2022-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": true,
+      "inventory_cost_ratio": 0.9860227547662952,
+      "fiscal_end": "2021-08-29",
+      "accession": "0000909832-21-000014",
+      "sources": {
+        "cost": {
+          "start": "2020-08-31",
+          "end": "2021-08-29",
+          "val": 170684000000,
+          "accn": "0000909832-21-000014",
+          "fy": 2021,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2021-10-06",
+          "tag": "CostOfGoodsAndServicesSold"
+        },
+        "prior_cost": {
+          "start": "2019-09-02",
+          "end": "2020-08-30",
+          "val": 144939000000,
+          "accn": "0000909832-21-000014",
+          "fy": 2021,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2021-10-06",
+          "tag": "CostOfGoodsAndServicesSold"
+        },
+        "inventory": {
+          "end": "2021-08-29",
+          "val": 14215000000,
+          "accn": "0000909832-21-000014",
+          "fy": 2021,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2021-10-06",
+          "tag": "InventoryNet"
+        },
+        "prior_inventory": {
+          "end": "2020-08-30",
+          "val": 12242000000,
+          "accn": "0000909832-21-000014",
+          "fy": 2021,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2021-10-06",
+          "frame": "CY2020Q3I",
+          "tag": "InventoryNet"
+        }
+      },
+      "reason": "同年报可计算的存货/销售成本代理，不是操纵判定或盈利概率"
+    },
+    {
+      "symbol": "COST",
+      "asof": "2023-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": true,
+      "inventory_cost_ratio": 1.0784073360020487,
+      "fiscal_end": "2022-08-28",
+      "accession": "0000909832-22-000021",
+      "sources": {
+        "cost": {
+          "start": "2021-08-30",
+          "end": "2022-08-28",
+          "val": 199382000000,
+          "accn": "0000909832-22-000021",
+          "fy": 2022,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2022-10-05",
+          "tag": "CostOfGoodsAndServicesSold"
+        },
+        "prior_cost": {
+          "start": "2020-08-31",
+          "end": "2021-08-29",
+          "val": 170684000000,
+          "accn": "0000909832-22-000021",
+          "fy": 2022,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2022-10-05",
+          "tag": "CostOfGoodsAndServicesSold"
+        },
+        "inventory": {
+          "end": "2022-08-28",
+          "val": 17907000000,
+          "accn": "0000909832-22-000021",
+          "fy": 2022,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2022-10-05",
+          "tag": "InventoryNet"
+        },
+        "prior_inventory": {
+          "end": "2021-08-29",
+          "val": 14215000000,
+          "accn": "0000909832-22-000021",
+          "fy": 2022,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2022-10-05",
+          "frame": "CY2021Q3I",
+          "tag": "InventoryNet"
+        }
+      },
+      "reason": "同年报可计算的存货/销售成本代理，不是操纵判定或盈利概率"
+    },
+    {
+      "symbol": "COST",
+      "asof": "2024-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": true,
+      "inventory_cost_ratio": 0.8721049970101457,
+      "fiscal_end": "2023-09-03",
+      "accession": "0000909832-23-000042",
+      "sources": {
+        "cost": {
+          "start": "2022-08-29",
+          "end": "2023-09-03",
+          "val": 212586000000,
+          "accn": "0000909832-23-000042",
+          "fy": 2023,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2023-10-11",
+          "tag": "CostOfGoodsAndServicesSold"
+        },
+        "prior_cost": {
+          "start": "2021-08-30",
+          "end": "2022-08-28",
+          "val": 199382000000,
+          "accn": "0000909832-23-000042",
+          "fy": 2023,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2023-10-11",
+          "tag": "CostOfGoodsAndServicesSold"
+        },
+        "inventory": {
+          "end": "2023-09-03",
+          "val": 16651000000,
+          "accn": "0000909832-23-000042",
+          "fy": 2023,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2023-10-11",
+          "tag": "InventoryNet"
+        },
+        "prior_inventory": {
+          "end": "2022-08-28",
+          "val": 17907000000,
+          "accn": "0000909832-23-000042",
+          "fy": 2023,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2023-10-11",
+          "frame": "CY2022Q3I",
+          "tag": "InventoryNet"
+        }
+      },
+      "reason": "同年报可计算的存货/销售成本代理，不是操纵判定或盈利概率"
+    },
+    {
+      "symbol": "COST",
+      "asof": "2025-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": true,
+      "inventory_cost_ratio": 1.0706574695688993,
+      "fiscal_end": "2024-09-01",
+      "accession": "0000909832-24-000049",
+      "sources": {
+        "cost": {
+          "start": "2023-09-04",
+          "end": "2024-09-01",
+          "val": 222358000000,
+          "accn": "0000909832-24-000049",
+          "fy": 2024,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2024-10-09",
+          "tag": "CostOfGoodsAndServicesSold"
+        },
+        "prior_cost": {
+          "start": "2022-08-29",
+          "end": "2023-09-03",
+          "val": 212586000000,
+          "accn": "0000909832-24-000049",
+          "fy": 2024,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2024-10-09",
+          "tag": "CostOfGoodsAndServicesSold"
+        },
+        "inventory": {
+          "end": "2024-09-01",
+          "val": 18647000000,
+          "accn": "0000909832-24-000049",
+          "fy": 2024,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2024-10-09",
+          "tag": "InventoryNet"
+        },
+        "prior_inventory": {
+          "end": "2023-09-03",
+          "val": 16651000000,
+          "accn": "0000909832-24-000049",
+          "fy": 2024,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2024-10-09",
+          "frame": "CY2023Q3I",
+          "tag": "InventoryNet"
+        }
+      },
+      "reason": "同年报可计算的存货/销售成本代理，不是操纵判定或盈利概率"
+    },
+    {
+      "symbol": "CRM",
+      "asof": "2022-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": false,
+      "reason": "最新年报缺少或冲突的净存货",
+      "accession": "0001108524-22-000013"
+    },
+    {
+      "symbol": "CRM",
+      "asof": "2023-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": false,
+      "reason": "最新年报缺少或冲突的净存货",
+      "accession": "0001108524-23-000011"
+    },
+    {
+      "symbol": "CRM",
+      "asof": "2024-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": false,
+      "reason": "最新年报缺少或冲突的净存货",
+      "accession": "0001108524-24-000005"
+    },
+    {
+      "symbol": "CRM",
+      "asof": "2025-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": false,
+      "reason": "最新年报缺少或冲突的净存货",
+      "accession": "0001108524-25-000006"
+    },
+    {
+      "symbol": "CSCO",
+      "asof": "2022-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": true,
+      "inventory_cost_ratio": 1.1953078190076944,
+      "fiscal_end": "2021-07-31",
+      "accession": "0000858877-21-000013",
+      "sources": {
+        "cost": {
+          "start": "2020-07-26",
+          "end": "2021-07-31",
+          "val": 17924000000,
+          "accn": "0000858877-21-000013",
+          "fy": 2021,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2021-09-09",
+          "tag": "CostOfGoodsAndServicesSold"
+        },
+        "prior_cost": {
+          "start": "2019-07-28",
+          "end": "2020-07-25",
+          "val": 17618000000,
+          "accn": "0000858877-21-000013",
+          "fy": 2021,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2021-09-09",
+          "tag": "CostOfGoodsAndServicesSold"
+        },
+        "inventory": {
+          "end": "2021-07-31",
+          "val": 1559000000,
+          "accn": "0000858877-21-000013",
+          "fy": 2021,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2021-09-09",
+          "tag": "InventoryNet"
+        },
+        "prior_inventory": {
+          "end": "2020-07-25",
+          "val": 1282000000,
+          "accn": "0000858877-21-000013",
+          "fy": 2021,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2021-09-09",
+          "frame": "CY2020Q2I",
+          "tag": "InventoryNet"
+        }
+      },
+      "reason": "同年报可计算的存货/销售成本代理，不是操纵判定或盈利概率"
+    },
+    {
+      "symbol": "CSCO",
+      "asof": "2023-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": true,
+      "inventory_cost_ratio": 1.5290583435768668,
+      "fiscal_end": "2022-07-30",
+      "accession": "0000858877-22-000013",
+      "sources": {
+        "cost": {
+          "start": "2021-08-01",
+          "end": "2022-07-30",
+          "val": 19309000000,
+          "accn": "0000858877-22-000013",
+          "fy": 2022,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2022-09-08",
+          "tag": "CostOfGoodsAndServicesSold"
+        },
+        "prior_cost": {
+          "start": "2020-07-26",
+          "end": "2021-07-31",
+          "val": 17924000000,
+          "accn": "0000858877-22-000013",
+          "fy": 2022,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2022-09-08",
+          "tag": "CostOfGoodsAndServicesSold"
+        },
+        "inventory": {
+          "end": "2022-07-30",
+          "val": 2568000000,
+          "accn": "0000858877-22-000013",
+          "fy": 2022,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2022-09-08",
+          "tag": "InventoryNet"
+        },
+        "prior_inventory": {
+          "end": "2021-07-31",
+          "val": 1559000000,
+          "accn": "0000858877-22-000013",
+          "fy": 2022,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2022-09-08",
+          "frame": "CY2021Q2I",
+          "tag": "InventoryNet"
+        }
+      },
+      "reason": "同年报可计算的存货/销售成本代理，不是操纵判定或盈利概率"
+    },
+    {
+      "symbol": "CSCO",
+      "asof": "2024-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": true,
+      "inventory_cost_ratio": 1.2896931585148494,
+      "fiscal_end": "2023-07-29",
+      "accession": "0000858877-23-000023",
+      "sources": {
+        "cost": {
+          "start": "2022-07-31",
+          "end": "2023-07-29",
+          "val": 21245000000,
+          "accn": "0000858877-23-000023",
+          "fy": 2023,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2023-09-07",
+          "tag": "CostOfGoodsAndServicesSold"
+        },
+        "prior_cost": {
+          "start": "2021-08-01",
+          "end": "2022-07-30",
+          "val": 19309000000,
+          "accn": "0000858877-23-000023",
+          "fy": 2023,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2023-09-07",
+          "tag": "CostOfGoodsAndServicesSold"
+        },
+        "inventory": {
+          "end": "2023-07-29",
+          "val": 3644000000,
+          "accn": "0000858877-23-000023",
+          "fy": 2023,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2023-09-07",
+          "tag": "InventoryNet"
+        },
+        "prior_inventory": {
+          "end": "2022-07-30",
+          "val": 2568000000,
+          "accn": "0000858877-23-000023",
+          "fy": 2023,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2023-09-07",
+          "frame": "CY2022Q2I",
+          "tag": "InventoryNet"
+        }
+      },
+      "reason": "同年报可计算的存货/销售成本代理，不是操纵判定或盈利概率"
+    },
+    {
+      "symbol": "CSCO",
+      "asof": "2025-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": true,
+      "inventory_cost_ratio": 1.0363654441614638,
+      "fiscal_end": "2024-07-27",
+      "accession": "0000858877-24-000017",
+      "sources": {
+        "cost": {
+          "start": "2023-07-30",
+          "end": "2024-07-27",
+          "val": 18975000000,
+          "accn": "0000858877-24-000017",
+          "fy": 2024,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2024-09-05",
+          "tag": "CostOfGoodsAndServicesSold"
+        },
+        "prior_cost": {
+          "start": "2022-07-31",
+          "end": "2023-07-29",
+          "val": 21245000000,
+          "accn": "0000858877-24-000017",
+          "fy": 2024,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2024-09-05",
+          "tag": "CostOfGoodsAndServicesSold"
+        },
+        "inventory": {
+          "end": "2024-07-27",
+          "val": 3373000000,
+          "accn": "0000858877-24-000017",
+          "fy": 2024,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2024-09-05",
+          "tag": "InventoryNet"
+        },
+        "prior_inventory": {
+          "end": "2023-07-29",
+          "val": 3644000000,
+          "accn": "0000858877-24-000017",
+          "fy": 2024,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2024-09-05",
+          "frame": "CY2023Q2I",
+          "tag": "InventoryNet"
+        }
+      },
+      "reason": "同年报可计算的存货/销售成本代理，不是操纵判定或盈利概率"
+    },
+    {
+      "symbol": "CVX",
+      "asof": "2022-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": true,
+      "inventory_cost_ratio": 0.62752263330406,
+      "fiscal_end": "2021-12-31",
+      "accession": "0000093410-22-000019",
+      "sources": {
+        "cost": {
+          "start": "2021-01-01",
+          "end": "2021-12-31",
+          "val": 89372000000,
+          "accn": "0000093410-22-000019",
+          "fy": 2021,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2022-02-24",
+          "tag": "CostOfGoodsAndServicesSold"
+        },
+        "prior_cost": {
+          "start": "2020-01-01",
+          "end": "2020-12-31",
+          "val": 50488000000,
+          "accn": "0000093410-22-000019",
+          "fy": 2021,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2022-02-24",
+          "tag": "CostOfGoodsAndServicesSold"
+        },
+        "inventory": {
+          "end": "2021-12-31",
+          "val": 6305000000,
+          "accn": "0000093410-22-000019",
+          "fy": 2021,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2022-02-24",
+          "tag": "InventoryNet"
+        },
+        "prior_inventory": {
+          "end": "2020-12-31",
+          "val": 5676000000,
+          "accn": "0000093410-22-000019",
+          "fy": 2021,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2022-02-24",
+          "frame": "CY2020Q4I",
+          "tag": "InventoryNet"
+        }
+      },
+      "reason": "同年报可计算的存货/销售成本代理，不是操纵判定或盈利概率"
+    },
+    {
+      "symbol": "CVX",
+      "asof": "2023-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": true,
+      "inventory_cost_ratio": 0.7699384462158411,
+      "fiscal_end": "2022-12-31",
+      "accession": "0000093410-23-000009",
+      "sources": {
+        "cost": {
+          "start": "2022-01-01",
+          "end": "2022-12-31",
+          "val": 145416000000,
+          "accn": "0000093410-23-000009",
+          "fy": 2022,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2023-02-23",
+          "tag": "CostOfGoodsAndServicesSold"
+        },
+        "prior_cost": {
+          "start": "2021-01-01",
+          "end": "2021-12-31",
+          "val": 92249000000,
+          "accn": "0000093410-23-000009",
+          "fy": 2022,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2023-02-23",
+          "tag": "CostOfGoodsAndServicesSold"
+        },
+        "inventory": {
+          "end": "2022-12-31",
+          "val": 8247000000,
+          "accn": "0000093410-23-000009",
+          "fy": 2022,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2023-02-23",
+          "tag": "InventoryNet"
+        },
+        "prior_inventory": {
+          "end": "2021-12-31",
+          "val": 6795000000,
+          "accn": "0000093410-23-000009",
+          "fy": 2022,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2023-02-23",
+          "frame": "CY2021Q4I",
+          "tag": "InventoryNet"
+        }
+      },
+      "reason": "同年报可计算的存货/销售成本代理，不是操纵判定或盈利概率"
+    },
+    {
+      "symbol": "CVX",
+      "asof": "2024-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": true,
+      "inventory_cost_ratio": 1.2739680584055282,
+      "fiscal_end": "2023-12-31",
+      "accession": "0000093410-24-000013",
+      "sources": {
+        "cost": {
+          "start": "2023-01-01",
+          "end": "2023-12-31",
+          "val": 119196000000,
+          "accn": "0000093410-24-000013",
+          "fy": 2023,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2024-02-26",
+          "tag": "CostOfGoodsAndServicesSold"
+        },
+        "prior_cost": {
+          "start": "2022-01-01",
+          "end": "2022-12-31",
+          "val": 145416000000,
+          "accn": "0000093410-24-000013",
+          "fy": 2023,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2024-02-26",
+          "tag": "CostOfGoodsAndServicesSold"
+        },
+        "inventory": {
+          "end": "2023-12-31",
+          "val": 8612000000,
+          "accn": "0000093410-24-000013",
+          "fy": 2023,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2024-02-26",
+          "tag": "InventoryNet"
+        },
+        "prior_inventory": {
+          "end": "2022-12-31",
+          "val": 8247000000,
+          "accn": "0000093410-24-000013",
+          "fy": 2023,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2024-02-26",
+          "frame": "CY2022Q4I",
+          "tag": "InventoryNet"
+        }
+      },
+      "reason": "同年报可计算的存货/销售成本代理，不是操纵判定或盈利概率"
+    },
+    {
+      "symbol": "CVX",
+      "asof": "2025-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": true,
+      "inventory_cost_ratio": 1.0535576865658225,
+      "fiscal_end": "2024-12-31",
+      "accession": "0000093410-25-000009",
+      "sources": {
+        "cost": {
+          "start": "2024-01-01",
+          "end": "2024-12-31",
+          "val": 119206000000,
+          "accn": "0000093410-25-000009",
+          "fy": 2024,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2025-02-21",
+          "tag": "CostOfGoodsAndServicesSold"
+        },
+        "prior_cost": {
+          "start": "2023-01-01",
+          "end": "2023-12-31",
+          "val": 119196000000,
+          "accn": "0000093410-25-000009",
+          "fy": 2024,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2025-02-21",
+          "tag": "CostOfGoodsAndServicesSold"
+        },
+        "inventory": {
+          "end": "2024-12-31",
+          "val": 9074000000,
+          "accn": "0000093410-25-000009",
+          "fy": 2024,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2025-02-21",
+          "tag": "InventoryNet"
+        },
+        "prior_inventory": {
+          "end": "2023-12-31",
+          "val": 8612000000,
+          "accn": "0000093410-25-000009",
+          "fy": 2024,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2025-02-21",
+          "frame": "CY2023Q4I",
+          "tag": "InventoryNet"
+        }
+      },
+      "reason": "同年报可计算的存货/销售成本代理，不是操纵判定或盈利概率"
+    },
+    {
+      "symbol": "GE",
+      "asof": "2022-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": false,
+      "reason": "最新可用年度陈旧"
+    },
+    {
+      "symbol": "GE",
+      "asof": "2023-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": false,
+      "reason": "最新可用年度陈旧"
+    },
+    {
+      "symbol": "GE",
+      "asof": "2024-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": false,
+      "reason": "最新可用年度陈旧"
+    },
+    {
+      "symbol": "GE",
+      "asof": "2025-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": false,
+      "reason": "最新可用年度陈旧"
+    },
+    {
+      "symbol": "GILD",
+      "asof": "2022-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": true,
+      "inventory_cost_ratio": 0.6658722102549687,
+      "fiscal_end": "2021-12-31",
+      "accession": "0000882095-22-000007",
+      "sources": {
+        "cost": {
+          "start": "2021-01-01",
+          "end": "2021-12-31",
+          "val": 6601000000,
+          "accn": "0000882095-22-000007",
+          "fy": 2021,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2022-02-23",
+          "tag": "CostOfGoodsAndServicesSold"
+        },
+        "prior_cost": {
+          "start": "2020-01-01",
+          "end": "2020-12-31",
+          "val": 4572000000,
+          "accn": "0000882095-22-000007",
+          "fy": 2021,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2022-02-23",
+          "tag": "CostOfGoodsAndServicesSold"
+        },
+        "inventory": {
+          "end": "2021-12-31",
+          "val": 1618000000,
+          "accn": "0000882095-22-000007",
+          "fy": 2021,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2022-02-23",
+          "tag": "InventoryNet"
+        },
+        "prior_inventory": {
+          "end": "2020-12-31",
+          "val": 1683000000,
+          "accn": "0000882095-22-000007",
+          "fy": 2021,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2022-02-23",
+          "frame": "CY2020Q4I",
+          "tag": "InventoryNet"
+        }
+      },
+      "reason": "同年报可计算的存货/销售成本代理，不是操纵判定或盈利概率"
+    },
+    {
+      "symbol": "GILD",
+      "asof": "2023-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": true,
+      "inventory_cost_ratio": 1.0868216696860689,
+      "fiscal_end": "2022-12-31",
+      "accession": "0000882095-23-000007",
+      "sources": {
+        "cost": {
+          "start": "2022-01-01",
+          "end": "2022-12-31",
+          "val": 5657000000,
+          "accn": "0000882095-23-000007",
+          "fy": 2022,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2023-02-22",
+          "tag": "CostOfGoodsAndServicesSold"
+        },
+        "prior_cost": {
+          "start": "2021-01-01",
+          "end": "2021-12-31",
+          "val": 6601000000,
+          "accn": "0000882095-23-000007",
+          "fy": 2022,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2023-02-22",
+          "tag": "CostOfGoodsAndServicesSold"
+        },
+        "inventory": {
+          "end": "2022-12-31",
+          "val": 1507000000,
+          "accn": "0000882095-23-000007",
+          "fy": 2022,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2023-02-22",
+          "tag": "InventoryNet"
+        },
+        "prior_inventory": {
+          "end": "2021-12-31",
+          "val": 1618000000,
+          "accn": "0000882095-23-000007",
+          "fy": 2022,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2023-02-22",
+          "frame": "CY2021Q4I",
+          "tag": "InventoryNet"
+        }
+      },
+      "reason": "同年报可计算的存货/销售成本代理，不是操纵判定或盈利概率"
+    },
+    {
+      "symbol": "GILD",
+      "asof": "2024-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": true,
+      "inventory_cost_ratio": 1.0323281544645557,
+      "fiscal_end": "2023-12-31",
+      "accession": "0000882095-24-000007",
+      "sources": {
+        "cost": {
+          "start": "2023-01-01",
+          "end": "2023-12-31",
+          "val": 6498000000,
+          "accn": "0000882095-24-000007",
+          "fy": 2023,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2024-02-23",
+          "tag": "CostOfGoodsAndServicesSold"
+        },
+        "prior_cost": {
+          "start": "2022-01-01",
+          "end": "2022-12-31",
+          "val": 5657000000,
+          "accn": "0000882095-24-000007",
+          "fy": 2023,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2024-02-23",
+          "tag": "CostOfGoodsAndServicesSold"
+        },
+        "inventory": {
+          "end": "2023-12-31",
+          "val": 1787000000,
+          "accn": "0000882095-24-000007",
+          "fy": 2023,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2024-02-23",
+          "tag": "InventoryNet"
+        },
+        "prior_inventory": {
+          "end": "2022-12-31",
+          "val": 1507000000,
+          "accn": "0000882095-24-000007",
+          "fy": 2023,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2024-02-23",
+          "frame": "CY2022Q4I",
+          "tag": "InventoryNet"
+        }
+      },
+      "reason": "同年报可计算的存货/销售成本代理，不是操纵判定或盈利概率"
+    },
+    {
+      "symbol": "GILD",
+      "asof": "2025-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": true,
+      "inventory_cost_ratio": 0.9947220979618079,
+      "fiscal_end": "2024-12-31",
+      "accession": "0000882095-25-000006",
+      "sources": {
+        "cost": {
+          "start": "2024-01-01",
+          "end": "2024-12-31",
+          "val": 6251000000,
+          "accn": "0000882095-25-000006",
+          "fy": 2024,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2025-02-28",
+          "tag": "CostOfGoodsAndServicesSold"
+        },
+        "prior_cost": {
+          "start": "2023-01-01",
+          "end": "2023-12-31",
+          "val": 6498000000,
+          "accn": "0000882095-25-000006",
+          "fy": 2024,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2025-02-28",
+          "tag": "CostOfGoodsAndServicesSold"
+        },
+        "inventory": {
+          "end": "2024-12-31",
+          "val": 1710000000,
+          "accn": "0000882095-25-000006",
+          "fy": 2024,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2025-02-28",
+          "tag": "InventoryNet"
+        },
+        "prior_inventory": {
+          "end": "2023-12-31",
+          "val": 1787000000,
+          "accn": "0000882095-25-000006",
+          "fy": 2024,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2025-02-28",
+          "frame": "CY2023Q4I",
+          "tag": "InventoryNet"
+        }
+      },
+      "reason": "同年报可计算的存货/销售成本代理，不是操纵判定或盈利概率"
+    },
+    {
+      "symbol": "GOOGL",
+      "asof": "2022-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": true,
+      "inventory_cost_ratio": 1.2274892379724764,
+      "fiscal_end": "2021-12-31",
+      "accession": "0001652044-22-000019",
+      "sources": {
+        "cost": {
+          "start": "2021-01-01",
+          "end": "2021-12-31",
+          "val": 110939000000,
+          "accn": "0001652044-22-000019",
+          "fy": 2021,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2022-02-02",
+          "tag": "CostOfRevenue"
+        },
+        "prior_cost": {
+          "start": "2020-01-01",
+          "end": "2020-12-31",
+          "val": 84732000000,
+          "accn": "0001652044-22-000019",
+          "fy": 2021,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2022-02-02",
+          "tag": "CostOfRevenue"
+        },
+        "inventory": {
+          "end": "2021-12-31",
+          "val": 1170000000,
+          "accn": "0001652044-22-000019",
+          "fy": 2021,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2022-02-02",
+          "tag": "InventoryNet"
+        },
+        "prior_inventory": {
+          "end": "2020-12-31",
+          "val": 728000000,
+          "accn": "0001652044-22-000019",
+          "fy": 2021,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2022-02-02",
+          "frame": "CY2020Q4I",
+          "tag": "InventoryNet"
+        }
+      },
+      "reason": "同年报可计算的存货/销售成本代理，不是操纵判定或盈利概率"
+    },
+    {
+      "symbol": "GOOGL",
+      "asof": "2023-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": true,
+      "inventory_cost_ratio": 2.006041751618323,
+      "fiscal_end": "2022-12-31",
+      "accession": "0001652044-23-000016",
+      "sources": {
+        "cost": {
+          "start": "2022-01-01",
+          "end": "2022-12-31",
+          "val": 126203000000,
+          "accn": "0001652044-23-000016",
+          "fy": 2022,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2023-02-03",
+          "tag": "CostOfRevenue"
+        },
+        "prior_cost": {
+          "start": "2021-01-01",
+          "end": "2021-12-31",
+          "val": 110939000000,
+          "accn": "0001652044-23-000016",
+          "fy": 2022,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2023-02-03",
+          "tag": "CostOfRevenue"
+        },
+        "inventory": {
+          "end": "2022-12-31",
+          "val": 2670000000,
+          "accn": "0001652044-23-000016",
+          "fy": 2022,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2023-02-03",
+          "tag": "InventoryNet"
+        },
+        "prior_inventory": {
+          "end": "2021-12-31",
+          "val": 1170000000,
+          "accn": "0001652044-23-000016",
+          "fy": 2022,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2023-02-03",
+          "frame": "CY2021Q4I",
+          "tag": "InventoryNet"
+        }
+      },
+      "reason": "同年报可计算的存货/销售成本代理，不是操纵判定或盈利概率"
+    },
+    {
+      "symbol": "GOOGL",
+      "asof": "2024-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": false,
+      "reason": "最新年报缺少或冲突的净存货",
+      "accession": "0001652044-24-000022"
+    },
+    {
+      "symbol": "GOOGL",
+      "asof": "2025-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": false,
+      "reason": "最新年报缺少或冲突的净存货",
+      "accession": "0001652044-25-000014"
+    },
+    {
+      "symbol": "GS",
+      "asof": "2022-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": false,
+      "reason": "身份未核验或不在会计可比范围"
+    },
+    {
+      "symbol": "GS",
+      "asof": "2023-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": false,
+      "reason": "身份未核验或不在会计可比范围"
+    },
+    {
+      "symbol": "GS",
+      "asof": "2024-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": false,
+      "reason": "身份未核验或不在会计可比范围"
+    },
+    {
+      "symbol": "GS",
+      "asof": "2025-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": false,
+      "reason": "身份未核验或不在会计可比范围"
+    },
+    {
+      "symbol": "HD",
+      "asof": "2022-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": true,
+      "inventory_cost_ratio": 1.1543571238545995,
+      "fiscal_end": "2022-01-30",
+      "accession": "0000354950-22-000070",
+      "sources": {
+        "cost": {
+          "start": "2021-02-01",
+          "end": "2022-01-30",
+          "val": 100325000000,
+          "accn": "0000354950-22-000070",
+          "fy": 2021,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2022-03-23",
+          "tag": "CostOfRevenue"
+        },
+        "prior_cost": {
+          "start": "2020-02-03",
+          "end": "2021-01-31",
+          "val": 87257000000,
+          "accn": "0000354950-22-000070",
+          "fy": 2021,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2022-03-23",
+          "tag": "CostOfRevenue"
+        },
+        "inventory": {
+          "end": "2022-01-30",
+          "val": 22068000000,
+          "accn": "0000354950-22-000070",
+          "fy": 2021,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2022-03-23",
+          "tag": "InventoryNet"
+        },
+        "prior_inventory": {
+          "end": "2021-01-31",
+          "val": 16627000000,
+          "accn": "0000354950-22-000070",
+          "fy": 2021,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2022-03-23",
+          "frame": "CY2020Q4I",
+          "tag": "InventoryNet"
+        }
+      },
+      "reason": "同年报可计算的存货/销售成本代理，不是操纵判定或盈利概率"
+    },
+    {
+      "symbol": "HD",
+      "asof": "2023-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": true,
+      "inventory_cost_ratio": 1.081348840523123,
+      "fiscal_end": "2023-01-29",
+      "accession": "0000354950-23-000059",
+      "sources": {
+        "cost": {
+          "start": "2022-01-31",
+          "end": "2023-01-29",
+          "val": 104625000000,
+          "accn": "0000354950-23-000059",
+          "fy": 2022,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2023-03-15",
+          "tag": "CostOfRevenue"
+        },
+        "prior_cost": {
+          "start": "2021-02-01",
+          "end": "2022-01-30",
+          "val": 100325000000,
+          "accn": "0000354950-23-000059",
+          "fy": 2022,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2023-03-15",
+          "tag": "CostOfRevenue"
+        },
+        "inventory": {
+          "end": "2023-01-29",
+          "val": 24886000000,
+          "accn": "0000354950-23-000059",
+          "fy": 2022,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2023-03-15",
+          "tag": "InventoryNet"
+        },
+        "prior_inventory": {
+          "end": "2022-01-30",
+          "val": 22068000000,
+          "accn": "0000354950-23-000059",
+          "fy": 2022,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2023-03-15",
+          "frame": "CY2021Q4I",
+          "tag": "InventoryNet"
+        }
+      },
+      "reason": "同年报可计算的存货/销售成本代理，不是操纵判定或盈利概率"
+    },
+    {
+      "symbol": "HD",
+      "asof": "2024-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": true,
+      "inventory_cost_ratio": 0.8670490449457223,
+      "fiscal_end": "2024-01-28",
+      "accession": "0000354950-24-000062",
+      "sources": {
+        "cost": {
+          "start": "2023-01-30",
+          "end": "2024-01-28",
+          "val": 101709000000,
+          "accn": "0000354950-24-000062",
+          "fy": 2023,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2024-03-13",
+          "tag": "CostOfRevenue"
+        },
+        "prior_cost": {
+          "start": "2022-01-31",
+          "end": "2023-01-29",
+          "val": 104625000000,
+          "accn": "0000354950-24-000062",
+          "fy": 2023,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2024-03-13",
+          "tag": "CostOfRevenue"
+        },
+        "inventory": {
+          "end": "2024-01-28",
+          "val": 20976000000,
+          "accn": "0000354950-24-000062",
+          "fy": 2023,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2024-03-13",
+          "tag": "InventoryNet"
+        },
+        "prior_inventory": {
+          "end": "2023-01-29",
+          "val": 24886000000,
+          "accn": "0000354950-24-000062",
+          "fy": 2023,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2024-03-13",
+          "frame": "CY2022Q4I",
+          "tag": "InventoryNet"
+        }
+      },
+      "reason": "同年报可计算的存货/销售成本代理，不是操纵判定或盈利概率"
+    },
+    {
+      "symbol": "HD",
+      "asof": "2025-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": true,
+      "inventory_cost_ratio": 1.0706537050357339,
+      "fiscal_end": "2025-02-02",
+      "accession": "0000354950-25-000085",
+      "sources": {
+        "cost": {
+          "start": "2024-01-29",
+          "end": "2025-02-02",
+          "val": 106206000000,
+          "accn": "0000354950-25-000085",
+          "fy": 2024,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2025-03-21",
+          "tag": "CostOfRevenue"
+        },
+        "prior_cost": {
+          "start": "2023-01-30",
+          "end": "2024-01-28",
+          "val": 101709000000,
+          "accn": "0000354950-25-000085",
+          "fy": 2024,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2025-03-21",
+          "tag": "CostOfRevenue"
+        },
+        "inventory": {
+          "end": "2025-02-02",
+          "val": 23451000000,
+          "accn": "0000354950-25-000085",
+          "fy": 2024,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2025-03-21",
+          "tag": "InventoryNet"
+        },
+        "prior_inventory": {
+          "end": "2024-01-28",
+          "val": 20976000000,
+          "accn": "0000354950-25-000085",
+          "fy": 2024,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2025-03-21",
+          "frame": "CY2023Q4I",
+          "tag": "InventoryNet"
+        }
+      },
+      "reason": "同年报可计算的存货/销售成本代理，不是操纵判定或盈利概率"
+    },
+    {
+      "symbol": "IBM",
+      "asof": "2022-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": true,
+      "inventory_cost_ratio": 0.8554731670513692,
+      "fiscal_end": "2021-12-31",
+      "accession": "0001558370-22-001584",
+      "sources": {
+        "cost": {
+          "start": "2021-01-01",
+          "end": "2021-12-31",
+          "val": 25865000000,
+          "accn": "0001558370-22-001584",
+          "fy": 2021,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2022-02-22",
+          "tag": "CostOfRevenue"
+        },
+        "prior_cost": {
+          "start": "2020-01-01",
+          "end": "2020-12-31",
+          "val": 24314000000,
+          "accn": "0001558370-22-001584",
+          "fy": 2021,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2022-02-22",
+          "tag": "CostOfRevenue"
+        },
+        "inventory": {
+          "end": "2021-12-31",
+          "val": 1649000000,
+          "accn": "0001558370-22-001584",
+          "fy": 2021,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2022-02-22",
+          "tag": "InventoryNet"
+        },
+        "prior_inventory": {
+          "end": "2020-12-31",
+          "val": 1812000000,
+          "accn": "0001558370-22-001584",
+          "fy": 2021,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2022-02-22",
+          "frame": "CY2020Q4I",
+          "tag": "InventoryNet"
+        }
+      },
+      "reason": "同年报可计算的存货/销售成本代理，不是操纵判定或盈利概率"
+    },
+    {
+      "symbol": "IBM",
+      "asof": "2023-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": true,
+      "inventory_cost_ratio": 0.874345571861386,
+      "fiscal_end": "2022-12-31",
+      "accession": "0001558370-23-002376",
+      "sources": {
+        "cost": {
+          "start": "2022-01-01",
+          "end": "2022-12-31",
+          "val": 27842000000,
+          "accn": "0001558370-23-002376",
+          "fy": 2022,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2023-02-28",
+          "tag": "CostOfRevenue"
+        },
+        "prior_cost": {
+          "start": "2021-01-01",
+          "end": "2021-12-31",
+          "val": 25865000000,
+          "accn": "0001558370-23-002376",
+          "fy": 2022,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2023-02-28",
+          "tag": "CostOfRevenue"
+        },
+        "inventory": {
+          "end": "2022-12-31",
+          "val": 1552000000,
+          "accn": "0001558370-23-002376",
+          "fy": 2022,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2023-02-28",
+          "tag": "InventoryNet"
+        },
+        "prior_inventory": {
+          "end": "2021-12-31",
+          "val": 1649000000,
+          "accn": "0001558370-23-002376",
+          "fy": 2022,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2023-02-28",
+          "frame": "CY2021Q4I",
+          "tag": "InventoryNet"
+        }
+      },
+      "reason": "同年报可计算的存货/销售成本代理，不是操纵判定或盈利概率"
+    },
+    {
+      "symbol": "IBM",
+      "asof": "2024-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": true,
+      "inventory_cost_ratio": 0.7557213969895112,
+      "fiscal_end": "2023-12-31",
+      "accession": "0000051143-24-000012",
+      "sources": {
+        "cost": {
+          "start": "2023-01-01",
+          "end": "2023-12-31",
+          "val": 27560000000,
+          "accn": "0000051143-24-000012",
+          "fy": 2023,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2024-02-26",
+          "tag": "CostOfRevenue"
+        },
+        "prior_cost": {
+          "start": "2022-01-01",
+          "end": "2022-12-31",
+          "val": 27842000000,
+          "accn": "0000051143-24-000012",
+          "fy": 2023,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2024-02-26",
+          "tag": "CostOfRevenue"
+        },
+        "inventory": {
+          "end": "2023-12-31",
+          "val": 1161000000,
+          "accn": "0000051143-24-000012",
+          "fy": 2023,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2024-02-26",
+          "tag": "InventoryNet"
+        },
+        "prior_inventory": {
+          "end": "2022-12-31",
+          "val": 1552000000,
+          "accn": "0000051143-24-000012",
+          "fy": 2023,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2024-02-26",
+          "frame": "CY2022Q4I",
+          "tag": "InventoryNet"
+        }
+      },
+      "reason": "同年报可计算的存货/销售成本代理，不是操纵判定或盈利概率"
+    },
+    {
+      "symbol": "IBM",
+      "asof": "2025-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": true,
+      "inventory_cost_ratio": 1.1249029103878831,
+      "fiscal_end": "2024-12-31",
+      "accession": "0000051143-25-000015",
+      "sources": {
+        "cost": {
+          "start": "2024-01-01",
+          "end": "2024-12-31",
+          "val": 27201000000,
+          "accn": "0000051143-25-000015",
+          "fy": 2024,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2025-02-25",
+          "tag": "CostOfRevenue"
+        },
+        "prior_cost": {
+          "start": "2023-01-01",
+          "end": "2023-12-31",
+          "val": 27560000000,
+          "accn": "0000051143-25-000015",
+          "fy": 2024,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2025-02-25",
+          "tag": "CostOfRevenue"
+        },
+        "inventory": {
+          "end": "2024-12-31",
+          "val": 1289000000,
+          "accn": "0000051143-25-000015",
+          "fy": 2024,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2025-02-25",
+          "tag": "InventoryNet"
+        },
+        "prior_inventory": {
+          "end": "2023-12-31",
+          "val": 1161000000,
+          "accn": "0000051143-25-000015",
+          "fy": 2024,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2025-02-25",
+          "frame": "CY2023Q4I",
+          "tag": "InventoryNet"
+        }
+      },
+      "reason": "同年报可计算的存货/销售成本代理，不是操纵判定或盈利概率"
+    },
+    {
+      "symbol": "INTC",
+      "asof": "2022-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": true,
+      "inventory_cost_ratio": 1.2440987970718231,
+      "fiscal_end": "2021-12-25",
+      "accession": "0000050863-22-000007",
+      "sources": {
+        "cost": {
+          "start": "2020-12-27",
+          "end": "2021-12-25",
+          "val": 35209000000,
+          "accn": "0000050863-22-000007",
+          "fy": 2021,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2022-01-27",
+          "tag": "CostOfGoodsAndServicesSold"
+        },
+        "prior_cost": {
+          "start": "2019-12-29",
+          "end": "2020-12-26",
+          "val": 34255000000,
+          "accn": "0000050863-22-000007",
+          "fy": 2021,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2022-01-27",
+          "tag": "CostOfGoodsAndServicesSold"
+        },
+        "inventory": {
+          "end": "2021-12-25",
+          "val": 10776000000,
+          "accn": "0000050863-22-000007",
+          "fy": 2021,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2022-01-27",
+          "tag": "InventoryNet"
+        },
+        "prior_inventory": {
+          "end": "2020-12-26",
+          "val": 8427000000,
+          "accn": "0000050863-22-000007",
+          "fy": 2021,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2022-01-27",
+          "frame": "CY2020Q4I",
+          "tag": "InventoryNet"
+        }
+      },
+      "reason": "同年报可计算的存货/销售成本代理，不是操纵判定或盈利概率"
+    },
+    {
+      "symbol": "INTC",
+      "asof": "2023-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": true,
+      "inventory_cost_ratio": 1.1939726171394471,
+      "fiscal_end": "2022-12-31",
+      "accession": "0000050863-23-000006",
+      "sources": {
+        "cost": {
+          "start": "2021-12-26",
+          "end": "2022-12-31",
+          "val": 36188000000,
+          "accn": "0000050863-23-000006",
+          "fy": 2022,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2023-01-27",
+          "tag": "CostOfGoodsAndServicesSold"
+        },
+        "prior_cost": {
+          "start": "2020-12-27",
+          "end": "2021-12-25",
+          "val": 35209000000,
+          "accn": "0000050863-23-000006",
+          "fy": 2022,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2023-01-27",
+          "tag": "CostOfGoodsAndServicesSold"
+        },
+        "inventory": {
+          "end": "2022-12-31",
+          "val": 13224000000,
+          "accn": "0000050863-23-000006",
+          "fy": 2022,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2023-01-27",
+          "tag": "InventoryNet"
+        },
+        "prior_inventory": {
+          "end": "2021-12-25",
+          "val": 10776000000,
+          "accn": "0000050863-23-000006",
+          "fy": 2022,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2023-01-27",
+          "frame": "CY2021Q4I",
+          "tag": "InventoryNet"
+        }
+      },
+      "reason": "同年报可计算的存货/销售成本代理，不是操纵判定或盈利概率"
+    },
+    {
+      "symbol": "INTC",
+      "asof": "2024-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": true,
+      "inventory_cost_ratio": 0.9364171481543063,
+      "fiscal_end": "2023-12-30",
+      "accession": "0000050863-24-000010",
+      "sources": {
+        "cost": {
+          "start": "2023-01-01",
+          "end": "2023-12-30",
+          "val": 32517000000,
+          "accn": "0000050863-24-000010",
+          "fy": 2023,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2024-01-26",
+          "tag": "CostOfGoodsAndServicesSold"
+        },
+        "prior_cost": {
+          "start": "2021-12-26",
+          "end": "2022-12-31",
+          "val": 36188000000,
+          "accn": "0000050863-24-000010",
+          "fy": 2023,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2024-01-26",
+          "tag": "CostOfGoodsAndServicesSold"
+        },
+        "inventory": {
+          "end": "2023-12-30",
+          "val": 11127000000,
+          "accn": "0000050863-24-000010",
+          "fy": 2023,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2024-01-26",
+          "tag": "InventoryNet"
+        },
+        "prior_inventory": {
+          "end": "2022-12-31",
+          "val": 13224000000,
+          "accn": "0000050863-24-000010",
+          "fy": 2023,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2024-01-26",
+          "frame": "CY2022Q4I",
+          "tag": "InventoryNet"
+        }
+      },
+      "reason": "同年报可计算的存货/销售成本代理，不是操纵判定或盈利概率"
+    },
+    {
+      "symbol": "INTC",
+      "asof": "2025-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": true,
+      "inventory_cost_ratio": 0.9969470287983765,
+      "fiscal_end": "2024-12-28",
+      "accession": "0000050863-25-000009",
+      "sources": {
+        "cost": {
+          "start": "2023-12-31",
+          "end": "2024-12-28",
+          "val": 35756000000,
+          "accn": "0000050863-25-000009",
+          "fy": 2024,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2025-01-31",
+          "tag": "CostOfGoodsAndServicesSold"
+        },
+        "prior_cost": {
+          "start": "2023-01-01",
+          "end": "2023-12-30",
+          "val": 32517000000,
+          "accn": "0000050863-25-000009",
+          "fy": 2024,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2025-01-31",
+          "tag": "CostOfGoodsAndServicesSold"
+        },
+        "inventory": {
+          "end": "2024-12-28",
+          "val": 12198000000,
+          "accn": "0000050863-25-000009",
+          "fy": 2024,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2025-01-31",
+          "tag": "InventoryNet"
+        },
+        "prior_inventory": {
+          "end": "2023-12-30",
+          "val": 11127000000,
+          "accn": "0000050863-25-000009",
+          "fy": 2024,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2025-01-31",
+          "frame": "CY2023Q4I",
+          "tag": "InventoryNet"
+        }
+      },
+      "reason": "同年报可计算的存货/销售成本代理，不是操纵判定或盈利概率"
+    },
+    {
+      "symbol": "INTU",
+      "asof": "2022-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": false,
+      "reason": "最新可用年度陈旧"
+    },
+    {
+      "symbol": "INTU",
+      "asof": "2023-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": false,
+      "reason": "最新可用年度陈旧"
+    },
+    {
+      "symbol": "INTU",
+      "asof": "2024-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": false,
+      "reason": "最新可用年度陈旧"
+    },
+    {
+      "symbol": "INTU",
+      "asof": "2025-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": false,
+      "reason": "最新可用年度陈旧"
+    },
+    {
+      "symbol": "JNJ",
+      "asof": "2022-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": true,
+      "inventory_cost_ratio": 1.0584522143843647,
+      "fiscal_end": "2022-01-02",
+      "accession": "0000200406-22-000022",
+      "sources": {
+        "cost": {
+          "start": "2021-01-04",
+          "end": "2022-01-02",
+          "val": 29855000000,
+          "accn": "0000200406-22-000022",
+          "fy": 2021,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2022-02-17",
+          "tag": "CostOfGoodsAndServicesSold"
+        },
+        "prior_cost": {
+          "start": "2019-12-30",
+          "end": "2021-01-03",
+          "val": 28427000000,
+          "accn": "0000200406-22-000022",
+          "fy": 2021,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2022-02-17",
+          "tag": "CostOfGoodsAndServicesSold"
+        },
+        "inventory": {
+          "end": "2022-01-02",
+          "val": 10387000000,
+          "accn": "0000200406-22-000022",
+          "fy": 2021,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2022-02-17",
+          "tag": "InventoryNet"
+        },
+        "prior_inventory": {
+          "end": "2021-01-03",
+          "val": 9344000000,
+          "accn": "0000200406-22-000022",
+          "fy": 2021,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2022-02-17",
+          "frame": "CY2020Q4I",
+          "tag": "InventoryNet"
+        }
+      },
+      "reason": "同年报可计算的存货/销售成本代理，不是操纵判定或盈利概率"
+    },
+    {
+      "symbol": "JNJ",
+      "asof": "2023-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": true,
+      "inventory_cost_ratio": 1.1540886276790234,
+      "fiscal_end": "2023-01-01",
+      "accession": "0000200406-23-000016",
+      "sources": {
+        "cost": {
+          "start": "2022-01-03",
+          "end": "2023-01-01",
+          "val": 31089000000,
+          "accn": "0000200406-23-000016",
+          "fy": 2022,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2023-02-16",
+          "tag": "CostOfGoodsAndServicesSold"
+        },
+        "prior_cost": {
+          "start": "2021-01-04",
+          "end": "2022-01-02",
+          "val": 29855000000,
+          "accn": "0000200406-23-000016",
+          "fy": 2022,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2023-02-16",
+          "tag": "CostOfGoodsAndServicesSold"
+        },
+        "inventory": {
+          "end": "2023-01-01",
+          "val": 12483000000,
+          "accn": "0000200406-23-000016",
+          "fy": 2022,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2023-02-16",
+          "tag": "InventoryNet"
+        },
+        "prior_inventory": {
+          "end": "2022-01-02",
+          "val": 10387000000,
+          "accn": "0000200406-23-000016",
+          "fy": 2022,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2023-02-16",
+          "frame": "CY2021Q4I",
+          "tag": "InventoryNet"
+        }
+      },
+      "reason": "同年报可计算的存货/销售成本代理，不是操纵判定或盈利概率"
+    },
+    {
+      "symbol": "JNJ",
+      "asof": "2024-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": true,
+      "inventory_cost_ratio": 1.00866203880836,
+      "fiscal_end": "2023-12-31",
+      "accession": "0000200406-24-000013",
+      "sources": {
+        "cost": {
+          "start": "2023-01-02",
+          "end": "2023-12-31",
+          "val": 26553000000,
+          "accn": "0000200406-24-000013",
+          "fy": 2023,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2024-02-16",
+          "tag": "CostOfGoodsAndServicesSold"
+        },
+        "prior_cost": {
+          "start": "2022-01-03",
+          "end": "2023-01-01",
+          "val": 24596000000,
+          "accn": "0000200406-24-000013",
+          "fy": 2023,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2024-02-16",
+          "tag": "CostOfGoodsAndServicesSold"
+        },
+        "inventory": {
+          "end": "2023-12-31",
+          "val": 11181000000,
+          "accn": "0000200406-24-000013",
+          "fy": 2023,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2024-02-16",
+          "tag": "InventoryNet"
+        },
+        "prior_inventory": {
+          "end": "2023-01-01",
+          "val": 10268000000,
+          "accn": "0000200406-24-000013",
+          "fy": 2023,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2024-02-16",
+          "frame": "CY2022Q4I",
+          "tag": "InventoryNet"
+        }
+      },
+      "reason": "同年报可计算的存货/销售成本代理，不是操纵判定或盈利概率"
+    },
+    {
+      "symbol": "JNJ",
+      "asof": "2025-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": true,
+      "inventory_cost_ratio": 1.0757676531966773,
+      "fiscal_end": "2024-12-29",
+      "accession": "0000200406-25-000038",
+      "sources": {
+        "cost": {
+          "start": "2024-01-01",
+          "end": "2024-12-29",
+          "val": 27471000000,
+          "accn": "0000200406-25-000038",
+          "fy": 2024,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2025-02-13",
+          "tag": "CostOfGoodsAndServicesSold"
+        },
+        "prior_cost": {
+          "start": "2023-01-02",
+          "end": "2023-12-31",
+          "val": 26553000000,
+          "accn": "0000200406-25-000038",
+          "fy": 2024,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2025-02-13",
+          "tag": "CostOfGoodsAndServicesSold"
+        },
+        "inventory": {
+          "end": "2024-12-29",
+          "val": 12444000000,
+          "accn": "0000200406-25-000038",
+          "fy": 2024,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2025-02-13",
+          "tag": "InventoryNet"
+        },
+        "prior_inventory": {
+          "end": "2023-12-31",
+          "val": 11181000000,
+          "accn": "0000200406-25-000038",
+          "fy": 2024,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2025-02-13",
+          "frame": "CY2023Q4I",
+          "tag": "InventoryNet"
+        }
+      },
+      "reason": "同年报可计算的存货/销售成本代理，不是操纵判定或盈利概率"
+    },
+    {
+      "symbol": "JPM",
+      "asof": "2022-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": false,
+      "reason": "身份未核验或不在会计可比范围"
+    },
+    {
+      "symbol": "JPM",
+      "asof": "2023-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": false,
+      "reason": "身份未核验或不在会计可比范围"
+    },
+    {
+      "symbol": "JPM",
+      "asof": "2024-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": false,
+      "reason": "身份未核验或不在会计可比范围"
+    },
+    {
+      "symbol": "JPM",
+      "asof": "2025-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": false,
+      "reason": "身份未核验或不在会计可比范围"
+    },
+    {
+      "symbol": "KO",
+      "asof": "2022-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": true,
+      "inventory_cost_ratio": 0.9143531530708153,
+      "fiscal_end": "2021-12-31",
+      "accession": "0000021344-22-000009",
+      "sources": {
+        "cost": {
+          "start": "2021-01-01",
+          "end": "2021-12-31",
+          "val": 15357000000,
+          "accn": "0000021344-22-000009",
+          "fy": 2021,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2022-02-22",
+          "tag": "CostOfGoodsAndServicesSold"
+        },
+        "prior_cost": {
+          "start": "2020-01-01",
+          "end": "2020-12-31",
+          "val": 13433000000,
+          "accn": "0000021344-22-000009",
+          "fy": 2021,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2022-02-22",
+          "tag": "CostOfGoodsAndServicesSold"
+        },
+        "inventory": {
+          "end": "2021-12-31",
+          "val": 3414000000,
+          "accn": "0000021344-22-000009",
+          "fy": 2021,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2022-02-22",
+          "tag": "InventoryNet"
+        },
+        "prior_inventory": {
+          "end": "2020-12-31",
+          "val": 3266000000,
+          "accn": "0000021344-22-000009",
+          "fy": 2021,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2022-02-22",
+          "frame": "CY2020Q4I",
+          "tag": "InventoryNet"
+        }
+      },
+      "reason": "同年报可计算的存货/销售成本代理，不是操纵判定或盈利概率"
+    },
+    {
+      "symbol": "KO",
+      "asof": "2023-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": true,
+      "inventory_cost_ratio": 1.0578367018160515,
+      "fiscal_end": "2022-12-31",
+      "accession": "0000021344-23-000011",
+      "sources": {
+        "cost": {
+          "start": "2022-01-01",
+          "end": "2022-12-31",
+          "val": 18000000000,
+          "accn": "0000021344-23-000011",
+          "fy": 2022,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2023-02-21",
+          "tag": "CostOfGoodsAndServicesSold"
+        },
+        "prior_cost": {
+          "start": "2021-01-01",
+          "end": "2021-12-31",
+          "val": 15357000000,
+          "accn": "0000021344-23-000011",
+          "fy": 2022,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2023-02-21",
+          "tag": "CostOfGoodsAndServicesSold"
+        },
+        "inventory": {
+          "end": "2022-12-31",
+          "val": 4233000000,
+          "accn": "0000021344-23-000011",
+          "fy": 2022,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2023-02-21",
+          "tag": "InventoryNet"
+        },
+        "prior_inventory": {
+          "end": "2021-12-31",
+          "val": 3414000000,
+          "accn": "0000021344-23-000011",
+          "fy": 2022,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2023-02-21",
+          "frame": "CY2021Q4I",
+          "tag": "InventoryNet"
+        }
+      },
+      "reason": "同年报可计算的存货/销售成本代理，不是操纵判定或盈利概率"
+    },
+    {
+      "symbol": "KO",
+      "asof": "2024-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": true,
+      "inventory_cost_ratio": 1.0157769943960826,
+      "fiscal_end": "2023-12-31",
+      "accession": "0000021344-24-000009",
+      "sources": {
+        "cost": {
+          "start": "2023-01-01",
+          "end": "2023-12-31",
+          "val": 18520000000,
+          "accn": "0000021344-24-000009",
+          "fy": 2023,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2024-02-20",
+          "tag": "CostOfGoodsAndServicesSold"
+        },
+        "prior_cost": {
+          "start": "2022-01-01",
+          "end": "2022-12-31",
+          "val": 18000000000,
+          "accn": "0000021344-24-000009",
+          "fy": 2023,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2024-02-20",
+          "tag": "CostOfGoodsAndServicesSold"
+        },
+        "inventory": {
+          "end": "2023-12-31",
+          "val": 4424000000,
+          "accn": "0000021344-24-000009",
+          "fy": 2023,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2024-02-20",
+          "tag": "InventoryNet"
+        },
+        "prior_inventory": {
+          "end": "2022-12-31",
+          "val": 4233000000,
+          "accn": "0000021344-24-000009",
+          "fy": 2023,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2024-02-20",
+          "frame": "CY2022Q4I",
+          "tag": "InventoryNet"
+        }
+      },
+      "reason": "同年报可计算的存货/销售成本代理，不是操纵判定或盈利概率"
+    },
+    {
+      "symbol": "KO",
+      "asof": "2025-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": true,
+      "inventory_cost_ratio": 1.0801474602424592,
+      "fiscal_end": "2024-12-31",
+      "accession": "0000021344-25-000011",
+      "sources": {
+        "cost": {
+          "start": "2024-01-01",
+          "end": "2024-12-31",
+          "val": 18324000000,
+          "accn": "0000021344-25-000011",
+          "fy": 2024,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2025-02-20",
+          "tag": "CostOfGoodsAndServicesSold"
+        },
+        "prior_cost": {
+          "start": "2023-01-01",
+          "end": "2023-12-31",
+          "val": 18520000000,
+          "accn": "0000021344-25-000011",
+          "fy": 2024,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2025-02-20",
+          "tag": "CostOfGoodsAndServicesSold"
+        },
+        "inventory": {
+          "end": "2024-12-31",
+          "val": 4728000000,
+          "accn": "0000021344-25-000011",
+          "fy": 2024,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2025-02-20",
+          "tag": "InventoryNet"
+        },
+        "prior_inventory": {
+          "end": "2023-12-31",
+          "val": 4424000000,
+          "accn": "0000021344-25-000011",
+          "fy": 2024,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2025-02-20",
+          "tag": "InventoryNet"
+        }
+      },
+      "reason": "同年报可计算的存货/销售成本代理，不是操纵判定或盈利概率"
+    },
+    {
+      "symbol": "LLY",
+      "asof": "2022-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": true,
+      "inventory_cost_ratio": 0.7320576800484208,
+      "fiscal_end": "2021-12-31",
+      "accession": "0000059478-22-000068",
+      "sources": {
+        "cost": {
+          "start": "2021-01-01",
+          "end": "2021-12-31",
+          "val": 7312800000,
+          "accn": "0000059478-22-000068",
+          "fy": 2021,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2022-02-23",
+          "tag": "CostOfGoodsAndServicesSold"
+        },
+        "prior_cost": {
+          "start": "2020-01-01",
+          "end": "2020-12-31",
+          "val": 5483300000,
+          "accn": "0000059478-22-000068",
+          "fy": 2021,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2022-02-23",
+          "tag": "CostOfGoodsAndServicesSold"
+        },
+        "inventory": {
+          "end": "2021-12-31",
+          "val": 3886000000,
+          "accn": "0000059478-22-000068",
+          "fy": 2021,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2022-02-23",
+          "tag": "InventoryNet"
+        },
+        "prior_inventory": {
+          "end": "2020-12-31",
+          "val": 3980300000,
+          "accn": "0000059478-22-000068",
+          "fy": 2021,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2022-02-23",
+          "frame": "CY2020Q4I",
+          "tag": "InventoryNet"
+        }
+      },
+      "reason": "同年报可计算的存货/销售成本代理，不是操纵判定或盈利概率"
+    },
+    {
+      "symbol": "LLY",
+      "asof": "2023-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": true,
+      "inventory_cost_ratio": 1.2232846105251283,
+      "fiscal_end": "2022-12-31",
+      "accession": "0000059478-23-000082",
+      "sources": {
+        "cost": {
+          "start": "2022-01-01",
+          "end": "2022-12-31",
+          "val": 6629800000,
+          "accn": "0000059478-23-000082",
+          "fy": 2022,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2023-02-22",
+          "tag": "CostOfGoodsAndServicesSold"
+        },
+        "prior_cost": {
+          "start": "2021-01-01",
+          "end": "2021-12-31",
+          "val": 7312800000,
+          "accn": "0000059478-23-000082",
+          "fy": 2022,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2023-02-22",
+          "tag": "CostOfGoodsAndServicesSold"
+        },
+        "inventory": {
+          "end": "2022-12-31",
+          "val": 4309700000,
+          "accn": "0000059478-23-000082",
+          "fy": 2022,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2023-02-22",
+          "tag": "InventoryNet"
+        },
+        "prior_inventory": {
+          "end": "2021-12-31",
+          "val": 3886000000,
+          "accn": "0000059478-23-000082",
+          "fy": 2022,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2023-02-22",
+          "frame": "CY2021Q4I",
+          "tag": "InventoryNet"
+        }
+      },
+      "reason": "同年报可计算的存货/销售成本代理，不是操纵判定或盈利概率"
+    },
+    {
+      "symbol": "LLY",
+      "asof": "2024-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": true,
+      "inventory_cost_ratio": 1.2539254356651581,
+      "fiscal_end": "2023-12-31",
+      "accession": "0000059478-24-000065",
+      "sources": {
+        "cost": {
+          "start": "2023-01-01",
+          "end": "2023-12-31",
+          "val": 7082200000,
+          "accn": "0000059478-24-000065",
+          "fy": 2023,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2024-02-21",
+          "tag": "CostOfGoodsAndServicesSold"
+        },
+        "prior_cost": {
+          "start": "2022-01-01",
+          "end": "2022-12-31",
+          "val": 6629800000,
+          "accn": "0000059478-24-000065",
+          "fy": 2023,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2024-02-21",
+          "tag": "CostOfGoodsAndServicesSold"
+        },
+        "inventory": {
+          "end": "2023-12-31",
+          "val": 5772800000,
+          "accn": "0000059478-24-000065",
+          "fy": 2023,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2024-02-21",
+          "tag": "InventoryNet"
+        },
+        "prior_inventory": {
+          "end": "2022-12-31",
+          "val": 4309700000,
+          "accn": "0000059478-24-000065",
+          "fy": 2023,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2024-02-21",
+          "frame": "CY2022Q4I",
+          "tag": "InventoryNet"
+        }
+      },
+      "reason": "同年报可计算的存货/销售成本代理，不是操纵判定或盈利概率"
+    },
+    {
+      "symbol": "LLY",
+      "asof": "2025-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": true,
+      "inventory_cost_ratio": 1.1059952837279086,
+      "fiscal_end": "2024-12-31",
+      "accession": "0000059478-25-000067",
+      "sources": {
+        "cost": {
+          "start": "2024-01-01",
+          "end": "2024-12-31",
+          "val": 8418300000,
+          "accn": "0000059478-25-000067",
+          "fy": 2024,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2025-02-19",
+          "tag": "CostOfGoodsAndServicesSold"
+        },
+        "prior_cost": {
+          "start": "2023-01-01",
+          "end": "2023-12-31",
+          "val": 7082200000,
+          "accn": "0000059478-25-000067",
+          "fy": 2024,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2025-02-19",
+          "tag": "CostOfGoodsAndServicesSold"
+        },
+        "inventory": {
+          "end": "2024-12-31",
+          "val": 7589200000,
+          "accn": "0000059478-25-000067",
+          "fy": 2024,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2025-02-19",
+          "tag": "InventoryNet"
+        },
+        "prior_inventory": {
+          "end": "2023-12-31",
+          "val": 5772800000,
+          "accn": "0000059478-25-000067",
+          "fy": 2024,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2025-02-19",
+          "frame": "CY2023Q4I",
+          "tag": "InventoryNet"
+        }
+      },
+      "reason": "同年报可计算的存货/销售成本代理，不是操纵判定或盈利概率"
+    },
+    {
+      "symbol": "LMT",
+      "asof": "2022-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": true,
+      "inventory_cost_ratio": 0.8229339921065818,
+      "fiscal_end": "2021-12-31",
+      "accession": "0000936468-22-000008",
+      "sources": {
+        "cost": {
+          "start": "2021-01-01",
+          "end": "2021-12-31",
+          "val": 57983000000,
+          "accn": "0000936468-22-000008",
+          "fy": 2021,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2022-01-25",
+          "frame": "CY2021",
+          "tag": "CostOfGoodsAndServicesSold"
+        },
+        "prior_cost": {
+          "start": "2020-01-01",
+          "end": "2020-12-31",
+          "val": 56744000000,
+          "accn": "0000936468-22-000008",
+          "fy": 2021,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2022-01-25",
+          "frame": "CY2020",
+          "tag": "CostOfGoodsAndServicesSold"
+        },
+        "inventory": {
+          "end": "2021-12-31",
+          "val": 2981000000,
+          "accn": "0000936468-22-000008",
+          "fy": 2021,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2022-01-25",
+          "tag": "InventoryNet"
+        },
+        "prior_inventory": {
+          "end": "2020-12-31",
+          "val": 3545000000,
+          "accn": "0000936468-22-000008",
+          "fy": 2021,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2022-01-25",
+          "frame": "CY2020Q4I",
+          "tag": "InventoryNet"
+        }
+      },
+      "reason": "同年报可计算的存货/销售成本代理，不是操纵判定或盈利概率"
+    },
+    {
+      "symbol": "LMT",
+      "asof": "2023-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": true,
+      "inventory_cost_ratio": 1.0410288495014997,
+      "fiscal_end": "2022-12-31",
+      "accession": "0000936468-23-000009",
+      "sources": {
+        "cost": {
+          "start": "2022-01-01",
+          "end": "2022-12-31",
+          "val": 57697000000,
+          "accn": "0000936468-23-000009",
+          "fy": 2022,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2023-01-26",
+          "tag": "CostOfRevenue"
+        },
+        "prior_cost": {
+          "start": "2021-01-01",
+          "end": "2021-12-31",
+          "val": 57983000000,
+          "accn": "0000936468-23-000009",
+          "fy": 2022,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2023-01-26",
+          "tag": "CostOfRevenue"
+        },
+        "inventory": {
+          "end": "2022-12-31",
+          "val": 3088000000,
+          "accn": "0000936468-23-000009",
+          "fy": 2022,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2023-01-26",
+          "tag": "InventoryNet"
+        },
+        "prior_inventory": {
+          "end": "2021-12-31",
+          "val": 2981000000,
+          "accn": "0000936468-23-000009",
+          "fy": 2022,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2023-01-26",
+          "frame": "CY2021Q4I",
+          "tag": "InventoryNet"
+        }
+      },
+      "reason": "同年报可计算的存货/销售成本代理，不是操纵判定或盈利概率"
+    },
+    {
+      "symbol": "LMT",
+      "asof": "2024-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": true,
+      "inventory_cost_ratio": 0.9903050753562813,
+      "fiscal_end": "2023-12-31",
+      "accession": "0000936468-24-000010",
+      "sources": {
+        "cost": {
+          "start": "2023-01-01",
+          "end": "2023-12-31",
+          "val": 59092000000,
+          "accn": "0000936468-24-000010",
+          "fy": 2023,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2024-01-23",
+          "tag": "CostOfRevenue"
+        },
+        "prior_cost": {
+          "start": "2022-01-01",
+          "end": "2022-12-31",
+          "val": 57697000000,
+          "accn": "0000936468-24-000010",
+          "fy": 2023,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2024-01-23",
+          "tag": "CostOfRevenue"
+        },
+        "inventory": {
+          "end": "2023-12-31",
+          "val": 3132000000,
+          "accn": "0000936468-24-000010",
+          "fy": 2023,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2024-01-23",
+          "tag": "InventoryNet"
+        },
+        "prior_inventory": {
+          "end": "2022-12-31",
+          "val": 3088000000,
+          "accn": "0000936468-24-000010",
+          "fy": 2023,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2024-01-23",
+          "frame": "CY2022Q4I",
+          "tag": "InventoryNet"
+        }
+      },
+      "reason": "同年报可计算的存货/销售成本代理，不是操纵判定或盈利概率"
+    },
+    {
+      "symbol": "LMT",
+      "asof": "2025-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": true,
+      "inventory_cost_ratio": 1.0223289303673775,
+      "fiscal_end": "2024-12-31",
+      "accession": "0000936468-25-000009",
+      "sources": {
+        "cost": {
+          "start": "2024-01-01",
+          "end": "2024-12-31",
+          "val": 64113000000,
+          "accn": "0000936468-25-000009",
+          "fy": 2024,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2025-01-28",
+          "tag": "CostOfRevenue"
+        },
+        "prior_cost": {
+          "start": "2023-01-01",
+          "end": "2023-12-31",
+          "val": 59092000000,
+          "accn": "0000936468-25-000009",
+          "fy": 2024,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2025-01-28",
+          "tag": "CostOfRevenue"
+        },
+        "inventory": {
+          "end": "2024-12-31",
+          "val": 3474000000,
+          "accn": "0000936468-25-000009",
+          "fy": 2024,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2025-01-28",
+          "tag": "InventoryNet"
+        },
+        "prior_inventory": {
+          "end": "2023-12-31",
+          "val": 3132000000,
+          "accn": "0000936468-25-000009",
+          "fy": 2024,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2025-01-28",
+          "frame": "CY2023Q4I",
+          "tag": "InventoryNet"
+        }
+      },
+      "reason": "同年报可计算的存货/销售成本代理，不是操纵判定或盈利概率"
+    },
+    {
+      "symbol": "LOW",
+      "asof": "2022-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": true,
+      "inventory_cost_ratio": 1.0165914303093795,
+      "fiscal_end": "2022-01-28",
+      "accession": "0000060667-22-000038",
+      "sources": {
+        "cost": {
+          "start": "2021-01-30",
+          "end": "2022-01-28",
+          "val": 64194000000,
+          "accn": "0000060667-22-000038",
+          "fy": 2021,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2022-03-21",
+          "tag": "CostOfGoodsAndServicesSold"
+        },
+        "prior_cost": {
+          "start": "2020-02-01",
+          "end": "2021-01-29",
+          "val": 60025000000,
+          "accn": "0000060667-22-000038",
+          "fy": 2021,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2022-03-21",
+          "tag": "CostOfGoodsAndServicesSold"
+        },
+        "inventory": {
+          "end": "2022-01-28",
+          "val": 17605000000,
+          "accn": "0000060667-22-000038",
+          "fy": 2021,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2022-03-21",
+          "tag": "InventoryNet"
+        },
+        "prior_inventory": {
+          "end": "2021-01-29",
+          "val": 16193000000,
+          "accn": "0000060667-22-000038",
+          "fy": 2021,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2022-03-21",
+          "frame": "CY2020Q4I",
+          "tag": "InventoryNet"
+        }
+      },
+      "reason": "同年报可计算的存货/销售成本代理，不是操纵判定或盈利概率"
+    },
+    {
+      "symbol": "LOW",
+      "asof": "2023-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": true,
+      "inventory_cost_ratio": 1.0427790328139228,
+      "fiscal_end": "2023-02-03",
+      "accession": "0000060667-23-000034",
+      "sources": {
+        "cost": {
+          "start": "2022-01-29",
+          "end": "2023-02-03",
+          "val": 64802000000,
+          "accn": "0000060667-23-000034",
+          "fy": 2022,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2023-03-27",
+          "tag": "CostOfGoodsAndServicesSold"
+        },
+        "prior_cost": {
+          "start": "2021-01-30",
+          "end": "2022-01-28",
+          "val": 64194000000,
+          "accn": "0000060667-23-000034",
+          "fy": 2022,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2023-03-27",
+          "tag": "CostOfGoodsAndServicesSold"
+        },
+        "inventory": {
+          "end": "2023-02-03",
+          "val": 18532000000,
+          "accn": "0000060667-23-000034",
+          "fy": 2022,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2023-03-27",
+          "tag": "InventoryNet"
+        },
+        "prior_inventory": {
+          "end": "2022-01-28",
+          "val": 17605000000,
+          "accn": "0000060667-23-000034",
+          "fy": 2022,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2023-03-27",
+          "frame": "CY2021Q4I",
+          "tag": "InventoryNet"
+        }
+      },
+      "reason": "同年报可计算的存货/销售成本代理，不是操纵判定或盈利概率"
+    },
+    {
+      "symbol": "LOW",
+      "asof": "2024-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": true,
+      "inventory_cost_ratio": 1.0267898990010478,
+      "fiscal_end": "2024-02-02",
+      "accession": "0000060667-24-000033",
+      "sources": {
+        "cost": {
+          "start": "2023-02-04",
+          "end": "2024-02-02",
+          "val": 57533000000,
+          "accn": "0000060667-24-000033",
+          "fy": 2023,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2024-03-25",
+          "tag": "CostOfGoodsAndServicesSold"
+        },
+        "prior_cost": {
+          "start": "2022-01-29",
+          "end": "2023-02-03",
+          "val": 64802000000,
+          "accn": "0000060667-24-000033",
+          "fy": 2023,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2024-03-25",
+          "tag": "CostOfGoodsAndServicesSold"
+        },
+        "inventory": {
+          "end": "2024-02-02",
+          "val": 16894000000,
+          "accn": "0000060667-24-000033",
+          "fy": 2023,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2024-03-25",
+          "tag": "InventoryNet"
+        },
+        "prior_inventory": {
+          "end": "2023-02-03",
+          "val": 18532000000,
+          "accn": "0000060667-24-000033",
+          "fy": 2023,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2024-03-25",
+          "frame": "CY2022Q4I",
+          "tag": "InventoryNet"
+        }
+      },
+      "reason": "同年报可计算的存货/销售成本代理，不是操纵判定或盈利概率"
+    },
+    {
+      "symbol": "LOW",
+      "asof": "2025-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": true,
+      "inventory_cost_ratio": 1.0625454276012414,
+      "fiscal_end": "2025-01-31",
+      "accession": "0000060667-25-000049",
+      "sources": {
+        "cost": {
+          "start": "2024-02-03",
+          "end": "2025-01-31",
+          "val": 55797000000,
+          "accn": "0000060667-25-000049",
+          "fy": 2024,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2025-03-24",
+          "tag": "CostOfGoodsAndServicesSold"
+        },
+        "prior_cost": {
+          "start": "2023-02-04",
+          "end": "2024-02-02",
+          "val": 57533000000,
+          "accn": "0000060667-25-000049",
+          "fy": 2024,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2025-03-24",
+          "tag": "CostOfGoodsAndServicesSold"
+        },
+        "inventory": {
+          "end": "2025-01-31",
+          "val": 17409000000,
+          "accn": "0000060667-25-000049",
+          "fy": 2024,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2025-03-24",
+          "tag": "InventoryNet"
+        },
+        "prior_inventory": {
+          "end": "2024-02-02",
+          "val": 16894000000,
+          "accn": "0000060667-25-000049",
+          "fy": 2024,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2025-03-24",
+          "frame": "CY2023Q4I",
+          "tag": "InventoryNet"
+        }
+      },
+      "reason": "同年报可计算的存货/销售成本代理，不是操纵判定或盈利概率"
+    },
+    {
+      "symbol": "MA",
+      "asof": "2022-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": false,
+      "reason": "身份未核验或不在会计可比范围"
+    },
+    {
+      "symbol": "MA",
+      "asof": "2023-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": false,
+      "reason": "身份未核验或不在会计可比范围"
+    },
+    {
+      "symbol": "MA",
+      "asof": "2024-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": false,
+      "reason": "身份未核验或不在会计可比范围"
+    },
+    {
+      "symbol": "MA",
+      "asof": "2025-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": false,
+      "reason": "身份未核验或不在会计可比范围"
+    },
+    {
+      "symbol": "MCD",
+      "asof": "2022-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": false,
+      "reason": "缺少已公开年度销售成本"
+    },
+    {
+      "symbol": "MCD",
+      "asof": "2023-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": false,
+      "reason": "缺少已公开年度销售成本"
+    },
+    {
+      "symbol": "MCD",
+      "asof": "2024-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": false,
+      "reason": "缺少已公开年度销售成本"
+    },
+    {
+      "symbol": "MCD",
+      "asof": "2025-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": false,
+      "reason": "缺少已公开年度销售成本"
+    },
+    {
+      "symbol": "META",
+      "asof": "2022-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": false,
+      "reason": "最新年报缺少或冲突的净存货",
+      "accession": "0001326801-22-000018"
+    },
+    {
+      "symbol": "META",
+      "asof": "2023-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": false,
+      "reason": "最新年报缺少或冲突的净存货",
+      "accession": "0001326801-23-000013"
+    },
+    {
+      "symbol": "META",
+      "asof": "2024-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": false,
+      "reason": "最新年报缺少或冲突的净存货",
+      "accession": "0001326801-24-000012"
+    },
+    {
+      "symbol": "META",
+      "asof": "2025-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": false,
+      "reason": "最新年报缺少或冲突的净存货",
+      "accession": "0001326801-25-000017"
+    },
+    {
+      "symbol": "MRK",
+      "asof": "2022-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": true,
+      "inventory_cost_ratio": 1.0712108241034042,
+      "fiscal_end": "2021-12-31",
+      "accession": "0000310158-22-000003",
+      "sources": {
+        "cost": {
+          "start": "2021-01-01",
+          "end": "2021-12-31",
+          "val": 13626000000,
+          "accn": "0000310158-22-000003",
+          "fy": 2021,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2022-02-25",
+          "tag": "CostOfGoodsAndServicesSold"
+        },
+        "prior_cost": {
+          "start": "2020-01-01",
+          "end": "2020-12-31",
+          "val": 13618000000,
+          "accn": "0000310158-22-000003",
+          "fy": 2021,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2022-02-25",
+          "tag": "CostOfGoodsAndServicesSold"
+        },
+        "inventory": {
+          "end": "2021-12-31",
+          "val": 5953000000,
+          "accn": "0000310158-22-000003",
+          "fy": 2021,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2022-02-25",
+          "tag": "InventoryNet"
+        },
+        "prior_inventory": {
+          "end": "2020-12-31",
+          "val": 5554000000,
+          "accn": "0000310158-22-000003",
+          "fy": 2021,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2022-02-25",
+          "frame": "CY2020Q4I",
+          "tag": "InventoryNet"
+        }
+      },
+      "reason": "同年报可计算的存货/销售成本代理，不是操纵判定或盈利概率"
+    },
+    {
+      "symbol": "MRK",
+      "asof": "2023-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": true,
+      "inventory_cost_ratio": 0.777087182932975,
+      "fiscal_end": "2022-12-31",
+      "accession": "0001628280-23-005061",
+      "sources": {
+        "cost": {
+          "start": "2022-01-01",
+          "end": "2022-12-31",
+          "val": 17411000000,
+          "accn": "0001628280-23-005061",
+          "fy": 2022,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2023-02-24",
+          "tag": "CostOfGoodsAndServicesSold"
+        },
+        "prior_cost": {
+          "start": "2021-01-01",
+          "end": "2021-12-31",
+          "val": 13626000000,
+          "accn": "0001628280-23-005061",
+          "fy": 2022,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2023-02-24",
+          "tag": "CostOfGoodsAndServicesSold"
+        },
+        "inventory": {
+          "end": "2022-12-31",
+          "val": 5911000000,
+          "accn": "0001628280-23-005061",
+          "fy": 2022,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2023-02-24",
+          "tag": "InventoryNet"
+        },
+        "prior_inventory": {
+          "end": "2021-12-31",
+          "val": 5953000000,
+          "accn": "0001628280-23-005061",
+          "fy": 2022,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2023-02-24",
+          "frame": "CY2021Q4I",
+          "tag": "InventoryNet"
+        }
+      },
+      "reason": "同年报可计算的存货/销售成本代理，不是操纵判定或盈利概率"
+    },
+    {
+      "symbol": "MRK",
+      "asof": "2024-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": true,
+      "inventory_cost_ratio": 1.1613326184700155,
+      "fiscal_end": "2023-12-31",
+      "accession": "0001628280-24-006850",
+      "sources": {
+        "cost": {
+          "start": "2023-01-01",
+          "end": "2023-12-31",
+          "val": 16126000000,
+          "accn": "0001628280-24-006850",
+          "fy": 2023,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2024-02-26",
+          "tag": "CostOfGoodsAndServicesSold"
+        },
+        "prior_cost": {
+          "start": "2022-01-01",
+          "end": "2022-12-31",
+          "val": 17411000000,
+          "accn": "0001628280-24-006850",
+          "fy": 2023,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2024-02-26",
+          "tag": "CostOfGoodsAndServicesSold"
+        },
+        "inventory": {
+          "end": "2023-12-31",
+          "val": 6358000000,
+          "accn": "0001628280-24-006850",
+          "fy": 2023,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2024-02-26",
+          "tag": "InventoryNet"
+        },
+        "prior_inventory": {
+          "end": "2022-12-31",
+          "val": 5911000000,
+          "accn": "0001628280-24-006850",
+          "fy": 2023,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2024-02-26",
+          "frame": "CY2022Q4I",
+          "tag": "InventoryNet"
+        }
+      },
+      "reason": "同年报可计算的存货/销售成本代理，不是操纵判定或盈利概率"
+    },
+    {
+      "symbol": "MRK",
+      "asof": "2025-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": true,
+      "inventory_cost_ratio": 1.0198415906797362,
+      "fiscal_end": "2024-12-31",
+      "accession": "0001628280-25-007732",
+      "sources": {
+        "cost": {
+          "start": "2024-01-01",
+          "end": "2024-12-31",
+          "val": 15193000000,
+          "accn": "0001628280-25-007732",
+          "fy": 2024,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2025-02-25",
+          "tag": "CostOfGoodsAndServicesSold"
+        },
+        "prior_cost": {
+          "start": "2023-01-01",
+          "end": "2023-12-31",
+          "val": 16126000000,
+          "accn": "0001628280-25-007732",
+          "fy": 2024,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2025-02-25",
+          "tag": "CostOfGoodsAndServicesSold"
+        },
+        "inventory": {
+          "end": "2024-12-31",
+          "val": 6109000000,
+          "accn": "0001628280-25-007732",
+          "fy": 2024,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2025-02-25",
+          "tag": "InventoryNet"
+        },
+        "prior_inventory": {
+          "end": "2023-12-31",
+          "val": 6358000000,
+          "accn": "0001628280-25-007732",
+          "fy": 2024,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2025-02-25",
+          "frame": "CY2023Q4I",
+          "tag": "InventoryNet"
+        }
+      },
+      "reason": "同年报可计算的存货/销售成本代理，不是操纵判定或盈利概率"
+    },
+    {
+      "symbol": "MS",
+      "asof": "2022-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": false,
+      "reason": "身份未核验或不在会计可比范围"
+    },
+    {
+      "symbol": "MS",
+      "asof": "2023-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": false,
+      "reason": "身份未核验或不在会计可比范围"
+    },
+    {
+      "symbol": "MS",
+      "asof": "2024-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": false,
+      "reason": "身份未核验或不在会计可比范围"
+    },
+    {
+      "symbol": "MS",
+      "asof": "2025-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": false,
+      "reason": "身份未核验或不在会计可比范围"
+    },
+    {
+      "symbol": "MSFT",
+      "asof": "2022-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": true,
+      "inventory_cost_ratio": 1.1835155202627503,
+      "fiscal_end": "2022-06-30",
+      "accession": "0001564590-22-026876",
+      "sources": {
+        "cost": {
+          "start": "2021-07-01",
+          "end": "2022-06-30",
+          "val": 62650000000,
+          "accn": "0001564590-22-026876",
+          "fy": 2022,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2022-07-28",
+          "tag": "CostOfGoodsAndServicesSold"
+        },
+        "prior_cost": {
+          "start": "2020-07-01",
+          "end": "2021-06-30",
+          "val": 52232000000,
+          "accn": "0001564590-22-026876",
+          "fy": 2022,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2022-07-28",
+          "tag": "CostOfGoodsAndServicesSold"
+        },
+        "inventory": {
+          "end": "2022-06-30",
+          "val": 3742000000,
+          "accn": "0001564590-22-026876",
+          "fy": 2022,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2022-07-28",
+          "tag": "InventoryNet"
+        },
+        "prior_inventory": {
+          "end": "2021-06-30",
+          "val": 2636000000,
+          "accn": "0001564590-22-026876",
+          "fy": 2022,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2022-07-28",
+          "frame": "CY2021Q2I",
+          "tag": "InventoryNet"
+        }
+      },
+      "reason": "同年报可计算的存货/销售成本代理，不是操纵判定或盈利概率"
+    },
+    {
+      "symbol": "MSFT",
+      "asof": "2023-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": true,
+      "inventory_cost_ratio": 0.6355003473879217,
+      "fiscal_end": "2023-06-30",
+      "accession": "0000950170-23-035122",
+      "sources": {
+        "cost": {
+          "start": "2022-07-01",
+          "end": "2023-06-30",
+          "val": 65863000000,
+          "accn": "0000950170-23-035122",
+          "fy": 2023,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2023-07-27",
+          "tag": "CostOfGoodsAndServicesSold"
+        },
+        "prior_cost": {
+          "start": "2021-07-01",
+          "end": "2022-06-30",
+          "val": 62650000000,
+          "accn": "0000950170-23-035122",
+          "fy": 2023,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2023-07-27",
+          "tag": "CostOfGoodsAndServicesSold"
+        },
+        "inventory": {
+          "end": "2023-06-30",
+          "val": 2500000000,
+          "accn": "0000950170-23-035122",
+          "fy": 2023,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2023-07-27",
+          "tag": "InventoryNet"
+        },
+        "prior_inventory": {
+          "end": "2022-06-30",
+          "val": 3742000000,
+          "accn": "0000950170-23-035122",
+          "fy": 2023,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2023-07-27",
+          "frame": "CY2022Q2I",
+          "tag": "InventoryNet"
+        }
+      },
+      "reason": "同年报可计算的存货/销售成本代理，不是操纵判定或盈利概率"
+    },
+    {
+      "symbol": "MSFT",
+      "asof": "2024-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": true,
+      "inventory_cost_ratio": 0.44291387861942416,
+      "fiscal_end": "2024-06-30",
+      "accession": "0000950170-24-087843",
+      "sources": {
+        "cost": {
+          "start": "2023-07-01",
+          "end": "2024-06-30",
+          "val": 74114000000,
+          "accn": "0000950170-24-087843",
+          "fy": 2024,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2024-07-30",
+          "tag": "CostOfGoodsAndServicesSold"
+        },
+        "prior_cost": {
+          "start": "2022-07-01",
+          "end": "2023-06-30",
+          "val": 65863000000,
+          "accn": "0000950170-24-087843",
+          "fy": 2024,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2024-07-30",
+          "tag": "CostOfGoodsAndServicesSold"
+        },
+        "inventory": {
+          "end": "2024-06-30",
+          "val": 1246000000,
+          "accn": "0000950170-24-087843",
+          "fy": 2024,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2024-07-30",
+          "tag": "InventoryNet"
+        },
+        "prior_inventory": {
+          "end": "2023-06-30",
+          "val": 2500000000,
+          "accn": "0000950170-24-087843",
+          "fy": 2024,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2024-07-30",
+          "tag": "InventoryNet"
+        }
+      },
+      "reason": "同年报可计算的存货/销售成本代理，不是操纵判定或盈利概率"
+    },
+    {
+      "symbol": "MSFT",
+      "asof": "2025-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": true,
+      "inventory_cost_ratio": 0.6352391000131892,
+      "fiscal_end": "2025-06-30",
+      "accession": "0000950170-25-100235",
+      "sources": {
+        "cost": {
+          "start": "2024-07-01",
+          "end": "2025-06-30",
+          "val": 87831000000,
+          "accn": "0000950170-25-100235",
+          "fy": 2025,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2025-07-30",
+          "tag": "CostOfGoodsAndServicesSold"
+        },
+        "prior_cost": {
+          "start": "2023-07-01",
+          "end": "2024-06-30",
+          "val": 74114000000,
+          "accn": "0000950170-25-100235",
+          "fy": 2025,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2025-07-30",
+          "tag": "CostOfGoodsAndServicesSold"
+        },
+        "inventory": {
+          "end": "2025-06-30",
+          "val": 938000000,
+          "accn": "0000950170-25-100235",
+          "fy": 2025,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2025-07-30",
+          "tag": "InventoryNet"
+        },
+        "prior_inventory": {
+          "end": "2024-06-30",
+          "val": 1246000000,
+          "accn": "0000950170-25-100235",
+          "fy": 2025,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2025-07-30",
+          "frame": "CY2024Q2I",
+          "tag": "InventoryNet"
+        }
+      },
+      "reason": "同年报可计算的存货/销售成本代理，不是操纵判定或盈利概率"
+    },
+    {
+      "symbol": "NEE",
+      "asof": "2022-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": false,
+      "reason": "身份未核验或不在会计可比范围"
+    },
+    {
+      "symbol": "NEE",
+      "asof": "2023-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": false,
+      "reason": "身份未核验或不在会计可比范围"
+    },
+    {
+      "symbol": "NEE",
+      "asof": "2024-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": false,
+      "reason": "身份未核验或不在会计可比范围"
+    },
+    {
+      "symbol": "NEE",
+      "asof": "2025-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": false,
+      "reason": "身份未核验或不在会计可比范围"
+    },
+    {
+      "symbol": "NKE",
+      "asof": "2022-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": false,
+      "reason": "最新年报缺少或冲突的净存货",
+      "accession": "0000320187-22-000038"
+    },
+    {
+      "symbol": "NKE",
+      "asof": "2023-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": false,
+      "reason": "最新年报缺少或冲突的净存货",
+      "accession": "0000320187-23-000039"
+    },
+    {
+      "symbol": "NKE",
+      "asof": "2024-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": false,
+      "reason": "最新年报缺少或冲突的净存货",
+      "accession": "0000320187-24-000044"
+    },
+    {
+      "symbol": "NKE",
+      "asof": "2025-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": false,
+      "reason": "最新年报缺少或冲突的净存货",
+      "accession": "0000320187-25-000047"
+    },
+    {
+      "symbol": "NVDA",
+      "asof": "2022-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": true,
+      "inventory_cost_ratio": 0.9490114480400872,
+      "fiscal_end": "2022-01-30",
+      "accession": "0001045810-22-000036",
+      "sources": {
+        "cost": {
+          "start": "2021-02-01",
+          "end": "2022-01-30",
+          "val": 9439000000,
+          "accn": "0001045810-22-000036",
+          "fy": 2022,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2022-03-18",
+          "tag": "CostOfRevenue"
+        },
+        "prior_cost": {
+          "start": "2020-01-27",
+          "end": "2021-01-31",
+          "val": 6279000000,
+          "accn": "0001045810-22-000036",
+          "fy": 2022,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2022-03-18",
+          "tag": "CostOfRevenue"
+        },
+        "inventory": {
+          "end": "2022-01-30",
+          "val": 2605000000,
+          "accn": "0001045810-22-000036",
+          "fy": 2022,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2022-03-18",
+          "tag": "InventoryNet"
+        },
+        "prior_inventory": {
+          "end": "2021-01-31",
+          "val": 1826000000,
+          "accn": "0001045810-22-000036",
+          "fy": 2022,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2022-03-18",
+          "frame": "CY2020Q4I",
+          "tag": "InventoryNet"
+        }
+      },
+      "reason": "同年报可计算的存货/销售成本代理，不是操纵判定或盈利概率"
+    },
+    {
+      "symbol": "NVDA",
+      "asof": "2023-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": true,
+      "inventory_cost_ratio": 1.6089865517436213,
+      "fiscal_end": "2023-01-29",
+      "accession": "0001045810-23-000017",
+      "sources": {
+        "cost": {
+          "start": "2022-01-31",
+          "end": "2023-01-29",
+          "val": 11618000000,
+          "accn": "0001045810-23-000017",
+          "fy": 2023,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2023-02-24",
+          "tag": "CostOfRevenue"
+        },
+        "prior_cost": {
+          "start": "2021-02-01",
+          "end": "2022-01-30",
+          "val": 9439000000,
+          "accn": "0001045810-23-000017",
+          "fy": 2023,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2023-02-24",
+          "tag": "CostOfRevenue"
+        },
+        "inventory": {
+          "end": "2023-01-29",
+          "val": 5159000000,
+          "accn": "0001045810-23-000017",
+          "fy": 2023,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2023-02-24",
+          "tag": "InventoryNet"
+        },
+        "prior_inventory": {
+          "end": "2022-01-30",
+          "val": 2605000000,
+          "accn": "0001045810-23-000017",
+          "fy": 2023,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2023-02-24",
+          "frame": "CY2021Q4I",
+          "tag": "InventoryNet"
+        }
+      },
+      "reason": "同年报可计算的存货/销售成本代理，不是操纵判定或盈利概率"
+    },
+    {
+      "symbol": "NVDA",
+      "asof": "2024-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": true,
+      "inventory_cost_ratio": 0.7156605726945173,
+      "fiscal_end": "2024-01-28",
+      "accession": "0001045810-24-000029",
+      "sources": {
+        "cost": {
+          "start": "2023-01-30",
+          "end": "2024-01-28",
+          "val": 16621000000,
+          "accn": "0001045810-24-000029",
+          "fy": 2024,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2024-02-21",
+          "tag": "CostOfRevenue"
+        },
+        "prior_cost": {
+          "start": "2022-01-31",
+          "end": "2023-01-29",
+          "val": 11618000000,
+          "accn": "0001045810-24-000029",
+          "fy": 2024,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2024-02-21",
+          "tag": "CostOfRevenue"
+        },
+        "inventory": {
+          "end": "2024-01-28",
+          "val": 5282000000,
+          "accn": "0001045810-24-000029",
+          "fy": 2024,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2024-02-21",
+          "tag": "InventoryNet"
+        },
+        "prior_inventory": {
+          "end": "2023-01-29",
+          "val": 5159000000,
+          "accn": "0001045810-24-000029",
+          "fy": 2024,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2024-02-21",
+          "frame": "CY2022Q4I",
+          "tag": "InventoryNet"
+        }
+      },
+      "reason": "同年报可计算的存货/销售成本代理，不是操纵判定或盈利概率"
+    },
+    {
+      "symbol": "NVDA",
+      "asof": "2025-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": true,
+      "inventory_cost_ratio": 0.9718124094753618,
+      "fiscal_end": "2025-01-26",
+      "accession": "0001045810-25-000023",
+      "sources": {
+        "cost": {
+          "start": "2024-01-29",
+          "end": "2025-01-26",
+          "val": 32639000000,
+          "accn": "0001045810-25-000023",
+          "fy": 2025,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2025-02-26",
+          "tag": "CostOfRevenue"
+        },
+        "prior_cost": {
+          "start": "2023-01-30",
+          "end": "2024-01-28",
+          "val": 16621000000,
+          "accn": "0001045810-25-000023",
+          "fy": 2025,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2025-02-26",
+          "tag": "CostOfRevenue"
+        },
+        "inventory": {
+          "end": "2025-01-26",
+          "val": 10080000000,
+          "accn": "0001045810-25-000023",
+          "fy": 2025,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2025-02-26",
+          "tag": "InventoryNet"
+        },
+        "prior_inventory": {
+          "end": "2024-01-28",
+          "val": 5282000000,
+          "accn": "0001045810-25-000023",
+          "fy": 2025,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2025-02-26",
+          "frame": "CY2023Q4I",
+          "tag": "InventoryNet"
+        }
+      },
+      "reason": "同年报可计算的存货/销售成本代理，不是操纵判定或盈利概率"
+    },
+    {
+      "symbol": "ORCL",
+      "asof": "2022-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": false,
+      "reason": "最新可用年度陈旧"
+    },
+    {
+      "symbol": "ORCL",
+      "asof": "2023-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": false,
+      "reason": "最新可用年度陈旧"
+    },
+    {
+      "symbol": "ORCL",
+      "asof": "2024-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": false,
+      "reason": "最新可用年度陈旧"
+    },
+    {
+      "symbol": "ORCL",
+      "asof": "2025-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": false,
+      "reason": "最新可用年度陈旧"
+    },
+    {
+      "symbol": "PEP",
+      "asof": "2022-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": true,
+      "inventory_cost_ratio": 0.893614747903533,
+      "fiscal_end": "2021-12-25",
+      "accession": "0000077476-22-000010",
+      "sources": {
+        "cost": {
+          "start": "2020-12-27",
+          "end": "2021-12-25",
+          "val": 37075000000,
+          "accn": "0000077476-22-000010",
+          "fy": 2021,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2022-02-10",
+          "tag": "CostOfGoodsAndServicesSold"
+        },
+        "prior_cost": {
+          "start": "2019-12-29",
+          "end": "2020-12-26",
+          "val": 31797000000,
+          "accn": "0000077476-22-000010",
+          "fy": 2021,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2022-02-10",
+          "tag": "CostOfGoodsAndServicesSold"
+        },
+        "inventory": {
+          "end": "2021-12-25",
+          "val": 4347000000,
+          "accn": "0000077476-22-000010",
+          "fy": 2021,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2022-02-10",
+          "tag": "InventoryNet"
+        },
+        "prior_inventory": {
+          "end": "2020-12-26",
+          "val": 4172000000,
+          "accn": "0000077476-22-000010",
+          "fy": 2021,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2022-02-10",
+          "frame": "CY2020Q4I",
+          "tag": "InventoryNet"
+        }
+      },
+      "reason": "同年报可计算的存货/销售成本代理，不是操纵判定或盈利概率"
+    },
+    {
+      "symbol": "PEP",
+      "asof": "2023-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": true,
+      "inventory_cost_ratio": 1.0976380538919113,
+      "fiscal_end": "2022-12-31",
+      "accession": "0000077476-23-000007",
+      "sources": {
+        "cost": {
+          "start": "2021-12-26",
+          "end": "2022-12-31",
+          "val": 40576000000,
+          "accn": "0000077476-23-000007",
+          "fy": 2022,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2023-02-09",
+          "tag": "CostOfGoodsAndServicesSold"
+        },
+        "prior_cost": {
+          "start": "2020-12-27",
+          "end": "2021-12-25",
+          "val": 37075000000,
+          "accn": "0000077476-23-000007",
+          "fy": 2022,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2023-02-09",
+          "tag": "CostOfGoodsAndServicesSold"
+        },
+        "inventory": {
+          "end": "2022-12-31",
+          "val": 5222000000,
+          "accn": "0000077476-23-000007",
+          "fy": 2022,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2023-02-09",
+          "tag": "InventoryNet"
+        },
+        "prior_inventory": {
+          "end": "2021-12-25",
+          "val": 4347000000,
+          "accn": "0000077476-23-000007",
+          "fy": 2022,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2023-02-09",
+          "frame": "CY2021Q4I",
+          "tag": "InventoryNet"
+        }
+      },
+      "reason": "同年报可计算的存货/销售成本代理，不是操纵判定或盈利概率"
+    },
+    {
+      "symbol": "PEP",
+      "asof": "2024-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": true,
+      "inventory_cost_ratio": 0.989619701883538,
+      "fiscal_end": "2023-12-30",
+      "accession": "0000077476-24-000008",
+      "sources": {
+        "cost": {
+          "start": "2023-01-01",
+          "end": "2023-12-30",
+          "val": 41881000000,
+          "accn": "0000077476-24-000008",
+          "fy": 2023,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2024-02-09",
+          "tag": "CostOfGoodsAndServicesSold"
+        },
+        "prior_cost": {
+          "start": "2021-12-26",
+          "end": "2022-12-31",
+          "val": 40576000000,
+          "accn": "0000077476-24-000008",
+          "fy": 2023,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2024-02-09",
+          "tag": "CostOfGoodsAndServicesSold"
+        },
+        "inventory": {
+          "end": "2023-12-30",
+          "val": 5334000000,
+          "accn": "0000077476-24-000008",
+          "fy": 2023,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2024-02-09",
+          "tag": "InventoryNet"
+        },
+        "prior_inventory": {
+          "end": "2022-12-31",
+          "val": 5222000000,
+          "accn": "0000077476-24-000008",
+          "fy": 2023,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2024-02-09",
+          "frame": "CY2022Q4I",
+          "tag": "InventoryNet"
+        }
+      },
+      "reason": "同年报可计算的存货/销售成本代理，不是操纵判定或盈利概率"
+    },
+    {
+      "symbol": "PEP",
+      "asof": "2025-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": true,
+      "inventory_cost_ratio": 0.998015337077691,
+      "fiscal_end": "2024-12-28",
+      "accession": "0000077476-25-000007",
+      "sources": {
+        "cost": {
+          "start": "2023-12-31",
+          "end": "2024-12-28",
+          "val": 41744000000,
+          "accn": "0000077476-25-000007",
+          "fy": 2024,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2025-02-04",
+          "tag": "CostOfGoodsAndServicesSold"
+        },
+        "prior_cost": {
+          "start": "2023-01-01",
+          "end": "2023-12-30",
+          "val": 41881000000,
+          "accn": "0000077476-25-000007",
+          "fy": 2024,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2025-02-04",
+          "tag": "CostOfGoodsAndServicesSold"
+        },
+        "inventory": {
+          "end": "2024-12-28",
+          "val": 5306000000,
+          "accn": "0000077476-25-000007",
+          "fy": 2024,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2025-02-04",
+          "tag": "InventoryNet"
+        },
+        "prior_inventory": {
+          "end": "2023-12-30",
+          "val": 5334000000,
+          "accn": "0000077476-25-000007",
+          "fy": 2024,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2025-02-04",
+          "tag": "InventoryNet"
+        }
+      },
+      "reason": "同年报可计算的存货/销售成本代理，不是操纵判定或盈利概率"
+    },
+    {
+      "symbol": "PG",
+      "asof": "2022-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": true,
+      "inventory_cost_ratio": 1.0186756063767441,
+      "fiscal_end": "2022-06-30",
+      "accession": "0000080424-22-000064",
+      "sources": {
+        "cost": {
+          "start": "2021-07-01",
+          "end": "2022-06-30",
+          "val": 42157000000,
+          "accn": "0000080424-22-000064",
+          "fy": 2022,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2022-08-05",
+          "tag": "CostOfGoodsAndServicesSold"
+        },
+        "prior_cost": {
+          "start": "2020-07-01",
+          "end": "2021-06-30",
+          "val": 37108000000,
+          "accn": "0000080424-22-000064",
+          "fy": 2022,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2022-08-05",
+          "tag": "CostOfGoodsAndServicesSold"
+        },
+        "inventory": {
+          "end": "2022-06-30",
+          "val": 6924000000,
+          "accn": "0000080424-22-000064",
+          "fy": 2022,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2022-08-05",
+          "tag": "InventoryNet"
+        },
+        "prior_inventory": {
+          "end": "2021-06-30",
+          "val": 5983000000,
+          "accn": "0000080424-22-000064",
+          "fy": 2022,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2022-08-05",
+          "frame": "CY2021Q2I",
+          "tag": "InventoryNet"
+        }
+      },
+      "reason": "同年报可计算的存货/销售成本代理，不是操纵判定或盈利概率"
+    },
+    {
+      "symbol": "PG",
+      "asof": "2023-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": true,
+      "inventory_cost_ratio": 1.0071139233716973,
+      "fiscal_end": "2023-06-30",
+      "accession": "0000080424-23-000073",
+      "sources": {
+        "cost": {
+          "start": "2022-07-01",
+          "end": "2023-06-30",
+          "val": 42760000000,
+          "accn": "0000080424-23-000073",
+          "fy": 2023,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2023-08-04",
+          "tag": "CostOfGoodsAndServicesSold"
+        },
+        "prior_cost": {
+          "start": "2021-07-01",
+          "end": "2022-06-30",
+          "val": 42157000000,
+          "accn": "0000080424-23-000073",
+          "fy": 2023,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2023-08-04",
+          "tag": "CostOfGoodsAndServicesSold"
+        },
+        "inventory": {
+          "end": "2023-06-30",
+          "val": 7073000000,
+          "accn": "0000080424-23-000073",
+          "fy": 2023,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2023-08-04",
+          "tag": "InventoryNet"
+        },
+        "prior_inventory": {
+          "end": "2022-06-30",
+          "val": 6924000000,
+          "accn": "0000080424-23-000073",
+          "fy": 2023,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2023-08-04",
+          "frame": "CY2022Q2I",
+          "tag": "InventoryNet"
+        }
+      },
+      "reason": "同年报可计算的存货/销售成本代理，不是操纵判定或盈利概率"
+    },
+    {
+      "symbol": "PG",
+      "asof": "2024-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": true,
+      "inventory_cost_ratio": 1.0383716476082423,
+      "fiscal_end": "2024-06-30",
+      "accession": "0000080424-24-000083",
+      "sources": {
+        "cost": {
+          "start": "2023-07-01",
+          "end": "2024-06-30",
+          "val": 40848000000,
+          "accn": "0000080424-24-000083",
+          "fy": 2024,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2024-08-05",
+          "tag": "CostOfGoodsAndServicesSold"
+        },
+        "prior_cost": {
+          "start": "2022-07-01",
+          "end": "2023-06-30",
+          "val": 42760000000,
+          "accn": "0000080424-24-000083",
+          "fy": 2024,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2024-08-05",
+          "tag": "CostOfGoodsAndServicesSold"
+        },
+        "inventory": {
+          "end": "2024-06-30",
+          "val": 7016000000,
+          "accn": "0000080424-24-000083",
+          "fy": 2024,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2024-08-05",
+          "tag": "InventoryNet"
+        },
+        "prior_inventory": {
+          "end": "2023-06-30",
+          "val": 7073000000,
+          "accn": "0000080424-24-000083",
+          "fy": 2024,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2024-08-05",
+          "frame": "CY2023Q2I",
+          "tag": "InventoryNet"
+        }
+      },
+      "reason": "同年报可计算的存货/销售成本代理，不是操纵判定或盈利概率"
+    },
+    {
+      "symbol": "PG",
+      "asof": "2025-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": true,
+      "inventory_cost_ratio": 1.0679922909247401,
+      "fiscal_end": "2025-06-30",
+      "accession": "0000080424-25-000076",
+      "sources": {
+        "cost": {
+          "start": "2024-07-01",
+          "end": "2025-06-30",
+          "val": 41164000000,
+          "accn": "0000080424-25-000076",
+          "fy": 2025,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2025-08-04",
+          "tag": "CostOfGoodsAndServicesSold"
+        },
+        "prior_cost": {
+          "start": "2023-07-01",
+          "end": "2024-06-30",
+          "val": 40848000000,
+          "accn": "0000080424-25-000076",
+          "fy": 2025,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2025-08-04",
+          "tag": "CostOfGoodsAndServicesSold"
+        },
+        "inventory": {
+          "end": "2025-06-30",
+          "val": 7551000000,
+          "accn": "0000080424-25-000076",
+          "fy": 2025,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2025-08-04",
+          "tag": "InventoryNet"
+        },
+        "prior_inventory": {
+          "end": "2024-06-30",
+          "val": 7016000000,
+          "accn": "0000080424-25-000076",
+          "fy": 2025,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2025-08-04",
+          "frame": "CY2024Q2I",
+          "tag": "InventoryNet"
+        }
+      },
+      "reason": "同年报可计算的存货/销售成本代理，不是操纵判定或盈利概率"
+    },
+    {
+      "symbol": "PLD",
+      "asof": "2022-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": false,
+      "reason": "身份未核验或不在会计可比范围"
+    },
+    {
+      "symbol": "PLD",
+      "asof": "2023-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": false,
+      "reason": "身份未核验或不在会计可比范围"
+    },
+    {
+      "symbol": "PLD",
+      "asof": "2024-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": false,
+      "reason": "身份未核验或不在会计可比范围"
+    },
+    {
+      "symbol": "PLD",
+      "asof": "2025-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": false,
+      "reason": "身份未核验或不在会计可比范围"
+    },
+    {
+      "symbol": "QCOM",
+      "asof": "2022-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": true,
+      "inventory_cost_ratio": 0.8062883231429762,
+      "fiscal_end": "2021-09-26",
+      "accession": "0001728949-21-000076",
+      "sources": {
+        "cost": {
+          "start": "2020-09-28",
+          "end": "2021-09-26",
+          "val": 14262000000,
+          "accn": "0001728949-21-000076",
+          "fy": 2021,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2021-11-03",
+          "tag": "CostOfRevenue"
+        },
+        "prior_cost": {
+          "start": "2019-09-30",
+          "end": "2020-09-27",
+          "val": 9255000000,
+          "accn": "0001728949-21-000076",
+          "fy": 2021,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2021-11-03",
+          "tag": "CostOfRevenue"
+        },
+        "inventory": {
+          "end": "2021-09-26",
+          "val": 3228000000,
+          "accn": "0001728949-21-000076",
+          "fy": 2021,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2021-11-03",
+          "tag": "InventoryNet"
+        },
+        "prior_inventory": {
+          "end": "2020-09-27",
+          "val": 2598000000,
+          "accn": "0001728949-21-000076",
+          "fy": 2021,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2021-11-03",
+          "frame": "CY2020Q3I",
+          "tag": "InventoryNet"
+        }
+      },
+      "reason": "同年报可计算的存货/销售成本代理，不是操纵判定或盈利概率"
+    },
+    {
+      "symbol": "QCOM",
+      "asof": "2023-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": true,
+      "inventory_cost_ratio": 1.503402479445182,
+      "fiscal_end": "2022-09-25",
+      "accession": "0000804328-22-000021",
+      "sources": {
+        "cost": {
+          "start": "2021-09-27",
+          "end": "2022-09-25",
+          "val": 18635000000,
+          "accn": "0000804328-22-000021",
+          "fy": 2022,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2022-11-02",
+          "tag": "CostOfRevenue"
+        },
+        "prior_cost": {
+          "start": "2020-09-28",
+          "end": "2021-09-26",
+          "val": 14262000000,
+          "accn": "0000804328-22-000021",
+          "fy": 2022,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2022-11-02",
+          "tag": "CostOfRevenue"
+        },
+        "inventory": {
+          "end": "2022-09-25",
+          "val": 6341000000,
+          "accn": "0000804328-22-000021",
+          "fy": 2022,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2022-11-02",
+          "tag": "InventoryNet"
+        },
+        "prior_inventory": {
+          "end": "2021-09-26",
+          "val": 3228000000,
+          "accn": "0000804328-22-000021",
+          "fy": 2022,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2022-11-02",
+          "frame": "CY2021Q3I",
+          "tag": "InventoryNet"
+        }
+      },
+      "reason": "同年报可计算的存货/销售成本代理，不是操纵判定或盈利概率"
+    },
+    {
+      "symbol": "QCOM",
+      "asof": "2024-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": true,
+      "inventory_cost_ratio": 1.1893026456589275,
+      "fiscal_end": "2023-09-24",
+      "accession": "0000804328-23-000055",
+      "sources": {
+        "cost": {
+          "start": "2022-09-26",
+          "end": "2023-09-24",
+          "val": 15869000000,
+          "accn": "0000804328-23-000055",
+          "fy": 2023,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2023-11-01",
+          "tag": "CostOfRevenue"
+        },
+        "prior_cost": {
+          "start": "2021-09-27",
+          "end": "2022-09-25",
+          "val": 18635000000,
+          "accn": "0000804328-23-000055",
+          "fy": 2023,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2023-11-01",
+          "tag": "CostOfRevenue"
+        },
+        "inventory": {
+          "end": "2023-09-24",
+          "val": 6422000000,
+          "accn": "0000804328-23-000055",
+          "fy": 2023,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2023-11-01",
+          "tag": "InventoryNet"
+        },
+        "prior_inventory": {
+          "end": "2022-09-25",
+          "val": 6341000000,
+          "accn": "0000804328-23-000055",
+          "fy": 2023,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2023-11-01",
+          "frame": "CY2022Q3I",
+          "tag": "InventoryNet"
+        }
+      },
+      "reason": "同年报可计算的存货/销售成本代理，不是操纵判定或盈利概率"
+    },
+    {
+      "symbol": "QCOM",
+      "asof": "2025-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": true,
+      "inventory_cost_ratio": 0.9303324171782009,
+      "fiscal_end": "2024-09-29",
+      "accession": "0000804328-24-000075",
+      "sources": {
+        "cost": {
+          "start": "2023-09-25",
+          "end": "2024-09-29",
+          "val": 17060000000,
+          "accn": "0000804328-24-000075",
+          "fy": 2024,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2024-11-06",
+          "tag": "CostOfRevenue"
+        },
+        "prior_cost": {
+          "start": "2022-09-26",
+          "end": "2023-09-24",
+          "val": 15869000000,
+          "accn": "0000804328-24-000075",
+          "fy": 2024,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2024-11-06",
+          "tag": "CostOfRevenue"
+        },
+        "inventory": {
+          "end": "2024-09-29",
+          "val": 6423000000,
+          "accn": "0000804328-24-000075",
+          "fy": 2024,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2024-11-06",
+          "tag": "InventoryNet"
+        },
+        "prior_inventory": {
+          "end": "2023-09-24",
+          "val": 6422000000,
+          "accn": "0000804328-24-000075",
+          "fy": 2024,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2024-11-06",
+          "frame": "CY2023Q3I",
+          "tag": "InventoryNet"
+        }
+      },
+      "reason": "同年报可计算的存货/销售成本代理，不是操纵判定或盈利概率"
+    },
+    {
+      "symbol": "SO",
+      "asof": "2022-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": false,
+      "reason": "身份未核验或不在会计可比范围"
+    },
+    {
+      "symbol": "SO",
+      "asof": "2023-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": false,
+      "reason": "身份未核验或不在会计可比范围"
+    },
+    {
+      "symbol": "SO",
+      "asof": "2024-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": false,
+      "reason": "身份未核验或不在会计可比范围"
+    },
+    {
+      "symbol": "SO",
+      "asof": "2025-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": false,
+      "reason": "身份未核验或不在会计可比范围"
+    },
+    {
+      "symbol": "SOFI",
+      "asof": "2022-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": false,
+      "reason": "身份未核验或不在会计可比范围"
+    },
+    {
+      "symbol": "SOFI",
+      "asof": "2023-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": false,
+      "reason": "身份未核验或不在会计可比范围"
+    },
+    {
+      "symbol": "SOFI",
+      "asof": "2024-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": false,
+      "reason": "身份未核验或不在会计可比范围"
+    },
+    {
+      "symbol": "SOFI",
+      "asof": "2025-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": false,
+      "reason": "身份未核验或不在会计可比范围"
+    },
+    {
+      "symbol": "TSLA",
+      "asof": "2022-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": true,
+      "inventory_cost_ratio": 0.8693622394777534,
+      "fiscal_end": "2021-12-31",
+      "accession": "0000950170-22-000796",
+      "sources": {
+        "cost": {
+          "start": "2021-01-01",
+          "end": "2021-12-31",
+          "val": 40217000000,
+          "accn": "0000950170-22-000796",
+          "fy": 2021,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2022-02-07",
+          "tag": "CostOfRevenue"
+        },
+        "prior_cost": {
+          "start": "2020-01-01",
+          "end": "2020-12-31",
+          "val": 24906000000,
+          "accn": "0000950170-22-000796",
+          "fy": 2021,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2022-02-07",
+          "tag": "CostOfRevenue"
+        },
+        "inventory": {
+          "end": "2021-12-31",
+          "val": 5757000000,
+          "accn": "0000950170-22-000796",
+          "fy": 2021,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2022-02-07",
+          "tag": "InventoryNet"
+        },
+        "prior_inventory": {
+          "end": "2020-12-31",
+          "val": 4101000000,
+          "accn": "0000950170-22-000796",
+          "fy": 2021,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2022-02-07",
+          "frame": "CY2020Q4I",
+          "tag": "InventoryNet"
+        }
+      },
+      "reason": "同年报可计算的存货/销售成本代理，不是操纵判定或盈利概率"
+    },
+    {
+      "symbol": "TSLA",
+      "asof": "2023-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": true,
+      "inventory_cost_ratio": 1.4798153297902727,
+      "fiscal_end": "2022-12-31",
+      "accession": "0000950170-23-001409",
+      "sources": {
+        "cost": {
+          "start": "2022-01-01",
+          "end": "2022-12-31",
+          "val": 60609000000,
+          "accn": "0000950170-23-001409",
+          "fy": 2022,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2023-01-31",
+          "tag": "CostOfRevenue"
+        },
+        "prior_cost": {
+          "start": "2021-01-01",
+          "end": "2021-12-31",
+          "val": 40217000000,
+          "accn": "0000950170-23-001409",
+          "fy": 2022,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2023-01-31",
+          "tag": "CostOfRevenue"
+        },
+        "inventory": {
+          "end": "2022-12-31",
+          "val": 12839000000,
+          "accn": "0000950170-23-001409",
+          "fy": 2022,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2023-01-31",
+          "tag": "InventoryNet"
+        },
+        "prior_inventory": {
+          "end": "2021-12-31",
+          "val": 5757000000,
+          "accn": "0000950170-23-001409",
+          "fy": 2022,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2023-01-31",
+          "frame": "CY2021Q4I",
+          "tag": "InventoryNet"
+        }
+      },
+      "reason": "同年报可计算的存货/销售成本代理，不是操纵判定或盈利概率"
+    },
+    {
+      "symbol": "TSLA",
+      "asof": "2024-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": true,
+      "inventory_cost_ratio": 0.8130672174569405,
+      "fiscal_end": "2023-12-31",
+      "accession": "0001628280-24-002390",
+      "sources": {
+        "cost": {
+          "start": "2023-01-01",
+          "end": "2023-12-31",
+          "val": 79113000000,
+          "accn": "0001628280-24-002390",
+          "fy": 2023,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2024-01-29",
+          "tag": "CostOfRevenue"
+        },
+        "prior_cost": {
+          "start": "2022-01-01",
+          "end": "2022-12-31",
+          "val": 60609000000,
+          "accn": "0001628280-24-002390",
+          "fy": 2023,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2024-01-29",
+          "tag": "CostOfRevenue"
+        },
+        "inventory": {
+          "end": "2023-12-31",
+          "val": 13626000000,
+          "accn": "0001628280-24-002390",
+          "fy": 2023,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2024-01-29",
+          "tag": "InventoryNet"
+        },
+        "prior_inventory": {
+          "end": "2022-12-31",
+          "val": 12839000000,
+          "accn": "0001628280-24-002390",
+          "fy": 2023,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2024-01-29",
+          "frame": "CY2022Q4I",
+          "tag": "InventoryNet"
+        }
+      },
+      "reason": "同年报可计算的存货/销售成本代理，不是操纵判定或盈利概率"
+    },
+    {
+      "symbol": "TSLA",
+      "asof": "2025-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": true,
+      "inventory_cost_ratio": 0.8695300794007234,
+      "fiscal_end": "2024-12-31",
+      "accession": "0001628280-25-003063",
+      "sources": {
+        "cost": {
+          "start": "2024-01-01",
+          "end": "2024-12-31",
+          "val": 80240000000,
+          "accn": "0001628280-25-003063",
+          "fy": 2024,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2025-01-30",
+          "tag": "CostOfRevenue"
+        },
+        "prior_cost": {
+          "start": "2023-01-01",
+          "end": "2023-12-31",
+          "val": 79113000000,
+          "accn": "0001628280-25-003063",
+          "fy": 2024,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2025-01-30",
+          "tag": "CostOfRevenue"
+        },
+        "inventory": {
+          "end": "2024-12-31",
+          "val": 12017000000,
+          "accn": "0001628280-25-003063",
+          "fy": 2024,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2025-01-30",
+          "tag": "InventoryNet"
+        },
+        "prior_inventory": {
+          "end": "2023-12-31",
+          "val": 13626000000,
+          "accn": "0001628280-25-003063",
+          "fy": 2024,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2025-01-30",
+          "frame": "CY2023Q4I",
+          "tag": "InventoryNet"
+        }
+      },
+      "reason": "同年报可计算的存货/销售成本代理，不是操纵判定或盈利概率"
+    },
+    {
+      "symbol": "TXN",
+      "asof": "2022-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": true,
+      "inventory_cost_ratio": 0.8499482320029074,
+      "fiscal_end": "2021-12-31",
+      "accession": "0000097476-22-000009",
+      "sources": {
+        "cost": {
+          "start": "2021-01-01",
+          "end": "2021-12-31",
+          "val": 5968000000,
+          "accn": "0000097476-22-000009",
+          "fy": 2021,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2022-02-04",
+          "tag": "CostOfRevenue"
+        },
+        "prior_cost": {
+          "start": "2020-01-01",
+          "end": "2020-12-31",
+          "val": 5192000000,
+          "accn": "0000097476-22-000009",
+          "fy": 2021,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2022-02-04",
+          "tag": "CostOfRevenue"
+        },
+        "inventory": {
+          "end": "2021-12-31",
+          "val": 1910000000,
+          "accn": "0000097476-22-000009",
+          "fy": 2021,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2022-02-04",
+          "tag": "InventoryNet"
+        },
+        "prior_inventory": {
+          "end": "2020-12-31",
+          "val": 1955000000,
+          "accn": "0000097476-22-000009",
+          "fy": 2021,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2022-02-04",
+          "frame": "CY2020Q4I",
+          "tag": "InventoryNet"
+        }
+      },
+      "reason": "同年报可计算的存货/销售成本代理，不是操纵判定或盈利概率"
+    },
+    {
+      "symbol": "TXN",
+      "asof": "2023-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": true,
+      "inventory_cost_ratio": 1.376784786379569,
+      "fiscal_end": "2022-12-31",
+      "accession": "0000097476-23-000007",
+      "sources": {
+        "cost": {
+          "start": "2022-01-01",
+          "end": "2022-12-31",
+          "val": 6257000000,
+          "accn": "0000097476-23-000007",
+          "fy": 2022,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2023-02-03",
+          "frame": "CY2022",
+          "tag": "CostOfRevenue"
+        },
+        "prior_cost": {
+          "start": "2021-01-01",
+          "end": "2021-12-31",
+          "val": 5968000000,
+          "accn": "0000097476-23-000007",
+          "fy": 2022,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2023-02-03",
+          "frame": "CY2021",
+          "tag": "CostOfRevenue"
+        },
+        "inventory": {
+          "end": "2022-12-31",
+          "val": 2757000000,
+          "accn": "0000097476-23-000007",
+          "fy": 2022,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2023-02-03",
+          "tag": "InventoryNet"
+        },
+        "prior_inventory": {
+          "end": "2021-12-31",
+          "val": 1910000000,
+          "accn": "0000097476-23-000007",
+          "fy": 2022,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2023-02-03",
+          "frame": "CY2021Q4I",
+          "tag": "InventoryNet"
+        }
+      },
+      "reason": "同年报可计算的存货/销售成本代理，不是操纵判定或盈利概率"
+    },
+    {
+      "symbol": "TXN",
+      "asof": "2024-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": true,
+      "inventory_cost_ratio": 1.396263664518289,
+      "fiscal_end": "2023-12-31",
+      "accession": "0000097476-24-000007",
+      "sources": {
+        "cost": {
+          "start": "2023-01-01",
+          "end": "2023-12-31",
+          "val": 6500000000,
+          "accn": "0000097476-24-000007",
+          "fy": 2023,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2024-02-02",
+          "tag": "CostOfGoodsAndServicesSold"
+        },
+        "prior_cost": {
+          "start": "2022-01-01",
+          "end": "2022-12-31",
+          "val": 6257000000,
+          "accn": "0000097476-24-000007",
+          "fy": 2023,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2024-02-02",
+          "tag": "CostOfGoodsAndServicesSold"
+        },
+        "inventory": {
+          "end": "2023-12-31",
+          "val": 3999000000,
+          "accn": "0000097476-24-000007",
+          "fy": 2023,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2024-02-02",
+          "tag": "InventoryNet"
+        },
+        "prior_inventory": {
+          "end": "2022-12-31",
+          "val": 2757000000,
+          "accn": "0000097476-24-000007",
+          "fy": 2023,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2024-02-02",
+          "frame": "CY2022Q4I",
+          "tag": "InventoryNet"
+        }
+      },
+      "reason": "同年报可计算的存货/销售成本代理，不是操纵判定或盈利概率"
+    },
+    {
+      "symbol": "TXN",
+      "asof": "2025-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": true,
+      "inventory_cost_ratio": 1.1239063011514294,
+      "fiscal_end": "2024-12-31",
+      "accession": "0000097476-25-000007",
+      "sources": {
+        "cost": {
+          "start": "2024-01-01",
+          "end": "2024-12-31",
+          "val": 6547000000,
+          "accn": "0000097476-25-000007",
+          "fy": 2024,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2025-02-14",
+          "tag": "CostOfGoodsAndServicesSold"
+        },
+        "prior_cost": {
+          "start": "2023-01-01",
+          "end": "2023-12-31",
+          "val": 6500000000,
+          "accn": "0000097476-25-000007",
+          "fy": 2024,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2025-02-14",
+          "tag": "CostOfGoodsAndServicesSold"
+        },
+        "inventory": {
+          "end": "2024-12-31",
+          "val": 4527000000,
+          "accn": "0000097476-25-000007",
+          "fy": 2024,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2025-02-14",
+          "tag": "InventoryNet"
+        },
+        "prior_inventory": {
+          "end": "2023-12-31",
+          "val": 3999000000,
+          "accn": "0000097476-25-000007",
+          "fy": 2024,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2025-02-14",
+          "frame": "CY2023Q4I",
+          "tag": "InventoryNet"
+        }
+      },
+      "reason": "同年报可计算的存货/销售成本代理，不是操纵判定或盈利概率"
+    },
+    {
+      "symbol": "UNH",
+      "asof": "2022-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": false,
+      "reason": "最新年报缺少或冲突的净存货",
+      "accession": "0000731766-22-000008"
+    },
+    {
+      "symbol": "UNH",
+      "asof": "2023-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": true,
+      "inventory_cost_ratio": 1.1113202856186957,
+      "fiscal_end": "2022-12-31",
+      "accession": "0000731766-23-000008",
+      "sources": {
+        "cost": {
+          "start": "2022-01-01",
+          "end": "2022-12-31",
+          "val": 33703000000,
+          "accn": "0000731766-23-000008",
+          "fy": 2022,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2023-02-24",
+          "tag": "CostOfGoodsAndServicesSold"
+        },
+        "prior_cost": {
+          "start": "2021-01-01",
+          "end": "2021-12-31",
+          "val": 31034000000,
+          "accn": "0000731766-23-000008",
+          "fy": 2022,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2023-02-24",
+          "tag": "CostOfGoodsAndServicesSold"
+        },
+        "inventory": {
+          "end": "2022-12-31",
+          "val": 3500000000,
+          "accn": "0000731766-23-000008",
+          "fy": 2022,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2023-02-24",
+          "tag": "InventoryNet"
+        },
+        "prior_inventory": {
+          "end": "2021-12-31",
+          "val": 2900000000,
+          "accn": "0000731766-23-000008",
+          "fy": 2022,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2023-02-24",
+          "frame": "CY2021Q4I",
+          "tag": "InventoryNet"
+        }
+      },
+      "reason": "同年报可计算的存货/销售成本代理，不是操纵判定或盈利概率"
+    },
+    {
+      "symbol": "UNH",
+      "asof": "2024-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": true,
+      "inventory_cost_ratio": 0.6954449316481816,
+      "fiscal_end": "2023-12-31",
+      "accession": "0000731766-24-000081",
+      "sources": {
+        "cost": {
+          "start": "2023-01-01",
+          "end": "2023-12-31",
+          "val": 38770000000,
+          "accn": "0000731766-24-000081",
+          "fy": 2023,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2024-02-28",
+          "tag": "CostOfGoodsAndServicesSold"
+        },
+        "prior_cost": {
+          "start": "2022-01-01",
+          "end": "2022-12-31",
+          "val": 33703000000,
+          "accn": "0000731766-24-000081",
+          "fy": 2023,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2024-02-28",
+          "tag": "CostOfGoodsAndServicesSold"
+        },
+        "inventory": {
+          "end": "2023-12-31",
+          "val": 2800000000,
+          "accn": "0000731766-24-000081",
+          "fy": 2023,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2024-02-28",
+          "tag": "InventoryNet"
+        },
+        "prior_inventory": {
+          "end": "2022-12-31",
+          "val": 3500000000,
+          "accn": "0000731766-24-000081",
+          "fy": 2023,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2024-02-28",
+          "frame": "CY2022Q4I",
+          "tag": "InventoryNet"
+        }
+      },
+      "reason": "同年报可计算的存货/销售成本代理，不是操纵判定或盈利概率"
+    },
+    {
+      "symbol": "UNH",
+      "asof": "2025-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": true,
+      "inventory_cost_ratio": 1.1268348946637377,
+      "fiscal_end": "2024-12-31",
+      "accession": "0000731766-25-000063",
+      "sources": {
+        "cost": {
+          "start": "2024-01-01",
+          "end": "2024-12-31",
+          "val": 46694000000,
+          "accn": "0000731766-25-000063",
+          "fy": 2024,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2025-02-27",
+          "tag": "CostOfGoodsAndServicesSold"
+        },
+        "prior_cost": {
+          "start": "2023-01-01",
+          "end": "2023-12-31",
+          "val": 38770000000,
+          "accn": "0000731766-25-000063",
+          "fy": 2024,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2025-02-27",
+          "tag": "CostOfGoodsAndServicesSold"
+        },
+        "inventory": {
+          "end": "2024-12-31",
+          "val": 3800000000,
+          "accn": "0000731766-25-000063",
+          "fy": 2024,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2025-02-27",
+          "tag": "InventoryNet"
+        },
+        "prior_inventory": {
+          "end": "2023-12-31",
+          "val": 2800000000,
+          "accn": "0000731766-25-000063",
+          "fy": 2024,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2025-02-27",
+          "frame": "CY2023Q4I",
+          "tag": "InventoryNet"
+        }
+      },
+      "reason": "同年报可计算的存货/销售成本代理，不是操纵判定或盈利概率"
+    },
+    {
+      "symbol": "V",
+      "asof": "2022-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": false,
+      "reason": "身份未核验或不在会计可比范围"
+    },
+    {
+      "symbol": "V",
+      "asof": "2023-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": false,
+      "reason": "身份未核验或不在会计可比范围"
+    },
+    {
+      "symbol": "V",
+      "asof": "2024-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": false,
+      "reason": "身份未核验或不在会计可比范围"
+    },
+    {
+      "symbol": "V",
+      "asof": "2025-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": false,
+      "reason": "身份未核验或不在会计可比范围"
+    },
+    {
+      "symbol": "WMT",
+      "asof": "2022-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": true,
+      "inventory_cost_ratio": 1.2317726453617128,
+      "fiscal_end": "2022-01-31",
+      "accession": "0000104169-22-000012",
+      "sources": {
+        "cost": {
+          "start": "2021-02-01",
+          "end": "2022-01-31",
+          "val": 429000000000,
+          "accn": "0000104169-22-000012",
+          "fy": 2022,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2022-03-18",
+          "tag": "CostOfRevenue"
+        },
+        "prior_cost": {
+          "start": "2020-02-01",
+          "end": "2021-01-31",
+          "val": 420315000000,
+          "accn": "0000104169-22-000012",
+          "fy": 2022,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2022-03-18",
+          "tag": "CostOfRevenue"
+        },
+        "inventory": {
+          "end": "2022-01-31",
+          "val": 56511000000,
+          "accn": "0000104169-22-000012",
+          "fy": 2022,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2022-03-18",
+          "tag": "InventoryNet"
+        },
+        "prior_inventory": {
+          "end": "2021-01-31",
+          "val": 44949000000,
+          "accn": "0000104169-22-000012",
+          "fy": 2022,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2022-03-18",
+          "frame": "CY2020Q4I",
+          "tag": "InventoryNet"
+        }
+      },
+      "reason": "同年报可计算的存货/销售成本代理，不是操纵判定或盈利概率"
+    },
+    {
+      "symbol": "WMT",
+      "asof": "2023-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": true,
+      "inventory_cost_ratio": 0.926189333142802,
+      "fiscal_end": "2023-01-31",
+      "accession": "0000104169-23-000020",
+      "sources": {
+        "cost": {
+          "start": "2022-02-01",
+          "end": "2023-01-31",
+          "val": 463721000000,
+          "accn": "0000104169-23-000020",
+          "fy": 2023,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2023-03-17",
+          "tag": "CostOfRevenue"
+        },
+        "prior_cost": {
+          "start": "2021-02-01",
+          "end": "2022-01-31",
+          "val": 429000000000,
+          "accn": "0000104169-23-000020",
+          "fy": 2023,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2023-03-17",
+          "tag": "CostOfRevenue"
+        },
+        "inventory": {
+          "end": "2023-01-31",
+          "val": 56576000000,
+          "accn": "0000104169-23-000020",
+          "fy": 2023,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2023-03-17",
+          "tag": "InventoryNet"
+        },
+        "prior_inventory": {
+          "end": "2022-01-31",
+          "val": 56511000000,
+          "accn": "0000104169-23-000020",
+          "fy": 2023,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2023-03-17",
+          "frame": "CY2021Q4I",
+          "tag": "InventoryNet"
+        }
+      },
+      "reason": "同年报可计算的存货/销售成本代理，不是操纵判定或盈利概率"
+    },
+    {
+      "symbol": "WMT",
+      "asof": "2024-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": true,
+      "inventory_cost_ratio": 0.9179344323438839,
+      "fiscal_end": "2024-01-31",
+      "accession": "0000104169-24-000056",
+      "sources": {
+        "cost": {
+          "start": "2023-02-01",
+          "end": "2024-01-31",
+          "val": 490142000000,
+          "accn": "0000104169-24-000056",
+          "fy": 2024,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2024-03-15",
+          "tag": "CostOfRevenue"
+        },
+        "prior_cost": {
+          "start": "2022-02-01",
+          "end": "2023-01-31",
+          "val": 463721000000,
+          "accn": "0000104169-24-000056",
+          "fy": 2024,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2024-03-15",
+          "tag": "CostOfRevenue"
+        },
+        "inventory": {
+          "end": "2024-01-31",
+          "val": 54892000000,
+          "accn": "0000104169-24-000056",
+          "fy": 2024,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2024-03-15",
+          "tag": "InventoryNet"
+        },
+        "prior_inventory": {
+          "end": "2023-01-31",
+          "val": 56576000000,
+          "accn": "0000104169-24-000056",
+          "fy": 2024,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2024-03-15",
+          "frame": "CY2022Q4I",
+          "tag": "InventoryNet"
+        }
+      },
+      "reason": "同年报可计算的存货/销售成本代理，不是操纵判定或盈利概率"
+    },
+    {
+      "symbol": "WMT",
+      "asof": "2025-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": true,
+      "inventory_cost_ratio": 0.9846933296719413,
+      "fiscal_end": "2025-01-31",
+      "accession": "0000104169-25-000021",
+      "sources": {
+        "cost": {
+          "start": "2024-02-01",
+          "end": "2025-01-31",
+          "val": 511753000000,
+          "accn": "0000104169-25-000021",
+          "fy": 2025,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2025-03-14",
+          "tag": "CostOfRevenue"
+        },
+        "prior_cost": {
+          "start": "2023-02-01",
+          "end": "2024-01-31",
+          "val": 490142000000,
+          "accn": "0000104169-25-000021",
+          "fy": 2025,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2025-03-14",
+          "tag": "CostOfRevenue"
+        },
+        "inventory": {
+          "end": "2025-01-31",
+          "val": 56435000000,
+          "accn": "0000104169-25-000021",
+          "fy": 2025,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2025-03-14",
+          "tag": "InventoryNet"
+        },
+        "prior_inventory": {
+          "end": "2024-01-31",
+          "val": 54892000000,
+          "accn": "0000104169-25-000021",
+          "fy": 2025,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2025-03-14",
+          "frame": "CY2023Q4I",
+          "tag": "InventoryNet"
+        }
+      },
+      "reason": "同年报可计算的存货/销售成本代理，不是操纵判定或盈利概率"
+    },
+    {
+      "symbol": "XOM",
+      "asof": "2022-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": false,
+      "reason": "身份未核验或不在会计可比范围"
+    },
+    {
+      "symbol": "XOM",
+      "asof": "2023-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": false,
+      "reason": "身份未核验或不在会计可比范围"
+    },
+    {
+      "symbol": "XOM",
+      "asof": "2024-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": false,
+      "reason": "身份未核验或不在会计可比范围"
+    },
+    {
+      "symbol": "XOM",
+      "asof": "2025-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": false,
+      "reason": "身份未核验或不在会计可比范围"
+    }
+  ]
+}

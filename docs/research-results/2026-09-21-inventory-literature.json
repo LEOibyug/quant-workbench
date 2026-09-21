@@ -1,0 +1,104 @@
+[
+  {
+    "title": [
+      "Inventory Changes and Future Returns"
+    ],
+    "author": [
+      {
+        "given": "Jacob K.",
+        "family": "Thomas",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Huai",
+        "family": "Zhang",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "DOI": "10.1023/a:1020221918065",
+    "abstract": null,
+    "URL": "https://doi.org/10.1023/a:1020221918065"
+  },
+  {
+    "title": [
+      "Discussion of \u201cInventory Changes and Future Returns\u201d"
+    ],
+    "author": [
+      {
+        "given": "Paul",
+        "family": "Hribar",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      }
+    ],
+    "DOI": "10.1023/a:1020274002135",
+    "abstract": null,
+    "URL": "https://doi.org/10.1023/a:1020274002135"
+  },
+  {
+    "title": [
+      "Does Inventory Turnover Predict Future Stock Returns?"
+    ],
+    "author": [
+      {
+        "given": "Yasin",
+        "family": "Alan",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      },
+      {
+        "given": "Vishal",
+        "family": "Gaur",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      },
+      {
+        "given": "George",
+        "family": "Gao",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      }
+    ],
+    "DOI": "10.2139/ssrn.1971774",
+    "abstract": null,
+    "URL": "https://doi.org/10.2139/ssrn.1971774"
+  }
+]
