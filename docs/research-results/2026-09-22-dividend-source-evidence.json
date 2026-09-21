@@ -1,0 +1,261 @@
+{
+  "official_docs": {
+    "url": "https://docs.alpaca.markets/reference/corporateactions-1",
+    "sha256": "440b054018d44c00843614c4aa3074b85e776c55b0ac7fa82cea2a6304f7e4ed",
+    "definitions": {
+      "parameters": {
+        "cas_start": {
+          "description": "The inclusive start of the interval. The corporate actions are sorted by their `process_date`. Format: YYYY-MM-DD. Default: current day.\n",
+          "examples": {
+            "date": {
+              "value": "2024-08-14"
+            }
+          },
+          "in": "query",
+          "name": "start",
+          "schema": {
+            "format": "date",
+            "type": "string"
+          }
+        },
+        "cas_end": {
+          "description": "The inclusive end of the interval. The corporate actions are sorted by their `process_date`. Format: YYYY-MM-DD. Default: current day.\n",
+          "examples": {
+            "date": {
+              "summary": "Date",
+              "value": "2024-08-25"
+            }
+          },
+          "in": "query",
+          "name": "end",
+          "schema": {
+            "format": "date",
+            "type": "string"
+          }
+        },
+        "cas_types": {
+          "description": "A comma-separated list of types. If not provided, search all types.\n\nThe following types are supported:\n  - reverse_split\n  - forward_split\n  - unit_split\n  - cash_dividend\n  - stock_dividend\n  - spin_off\n  - cash_merger\n  - stock_merger\n  - stock_and_cash_merger\n  - redemption\n  - name_change\n  - worthless_removal\n  - rights_distribution\n  - partial_call\n  - reorganization\n  - capital_gains_distribution\n",
+          "example": "forward_split,reverse_split",
+          "in": "query",
+          "name": "types",
+          "schema": {
+            "type": "string"
+          }
+        },
+        "cas_limit": {
+          "description": "Maximum number of corporate actions to return in a response.\nThe limit applies to the total number of data points, not the count per symbol!\nUse `next_page_token` to fetch the next set of corporate actions.\n",
+          "in": "query",
+          "name": "limit",
+          "schema": {
+            "default": 100,
+            "maximum": 1000,
+            "minimum": 1,
+            "type": "integer"
+          }
+        }
+      },
+      "schemas": {
+        "cash_dividend": {
+          "description": "Cash dividend.",
+          "examples": [
+            {
+              "cusip": "319829107",
+              "ex_date": "2023-05-04",
+              "foreign": false,
+              "id": "11cfd108-292e-4cc6-bfbf-5999cdbc4029",
+              "payable_date": "2023-05-19",
+              "process_date": "2023-05-19",
+              "rate": 0.125,
+              "record_date": "2023-05-05",
+              "special": false,
+              "symbol": "FCF"
+            }
+          ],
+          "properties": {
+            "currency": {
+              "$ref": "#/components/schemas/currency"
+            },
+            "cusip": {
+              "type": "string"
+            },
+            "due_bill_off_date": {
+              "format": "date",
+              "type": "string"
+            },
+            "due_bill_on_date": {
+              "format": "date",
+              "type": "string"
+            },
+            "ex_date": {
+              "$ref": "#/components/schemas/ex_date"
+            },
+            "foreign": {
+              "type": "boolean"
+            },
+            "id": {
+              "$ref": "#/components/schemas/ca_id"
+            },
+            "isin": {
+              "$ref": "#/components/schemas/isin"
+            },
+            "payable_date": {
+              "$ref": "#/components/schemas/payable_date"
+            },
+            "process_date": {
+              "$ref": "#/components/schemas/process_date"
+            },
+            "rate": {
+              "format": "double",
+              "type": "number"
+            },
+            "record_date": {
+              "$ref": "#/components/schemas/record_date"
+            },
+            "special": {
+              "type": "boolean"
+            },
+            "sub_type": {
+              "description": "Sub-type of the cash dividend.",
+              "enum": [
+                "interest",
+                "return_of_capital"
+              ],
+              "type": "string"
+            },
+            "symbol": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "id",
+            "symbol",
+            "cusip",
+            "rate",
+            "special",
+            "foreign",
+            "process_date",
+            "ex_date"
+          ],
+          "type": "object"
+        },
+        "process_date": {
+          "description": "The date when the corporate action is processed by Alpaca.",
+          "format": "date",
+          "type": "string"
+        },
+        "currency": {
+          "description": "The ISO 4217 currency code associated with the corporate action.\nEmpty value can mean USD, non-applicable (e.g. for name changes) or unknown\n(can change later to a valid currency).\n",
+          "type": "string"
+        }
+      },
+      "endpoint": {
+        "get": {
+          "description": "This endpoint provides data about the corporate actions for each given symbol over a specified time period.\n\nBy default (`data_quality=complete`), corporate actions that are still incomplete (for example, missing required fields such as ex-date or CUSIP/ISIN) and have not yet been processed are excluded from the response. Pass `data_quality=all` to also receive those early, incomplete records. Already-processed corporate actions are always returned when `data_quality=complete`, even if they would otherwise be considered incomplete.\n\n> ⚠️ Warning\n>\n> Currently Alpaca has no guarantees on the creation time of corporate actions. There may be delays in receiving corporate actions from our data providers, and there may be delays in processing and making them available via this API. As a result, corporate actions may not be available immediately after they are announced.\n",
+          "operationId": "CorporateActions",
+          "parameters": [
+            {
+              "$ref": "#/components/parameters/cas_symbols"
+            },
+            {
+              "$ref": "#/components/parameters/cas_cusips"
+            },
+            {
+              "$ref": "#/components/parameters/cas_types"
+            },
+            {
+              "$ref": "#/components/parameters/cas_region"
+            },
+            {
+              "$ref": "#/components/parameters/cas_start"
+            },
+            {
+              "$ref": "#/components/parameters/cas_end"
+            },
+            {
+              "$ref": "#/components/parameters/cas_ids"
+            },
+            {
+              "$ref": "#/components/parameters/cas_limit"
+            },
+            {
+              "$ref": "#/components/parameters/cas_data_quality"
+            },
+            {
+              "$ref": "#/components/parameters/page_token"
+            },
+            {
+              "$ref": "#/components/parameters/sort"
+            }
+          ],
+          "responses": {
+            "200": {
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/corporate_actions_resp"
+                  }
+                }
+              },
+              "description": "OK",
+              "headers": {
+                "X-RateLimit-Limit": {
+                  "$ref": "#/components/headers/ratelimit_limit"
+                },
+                "X-RateLimit-Remaining": {
+                  "$ref": "#/components/headers/ratelimit_remaining"
+                },
+                "X-RateLimit-Reset": {
+                  "$ref": "#/components/headers/ratelimit_reset"
+                }
+              }
+            },
+            "400": {
+              "$ref": "#/components/responses/400"
+            },
+            "401": {
+              "$ref": "#/components/responses/401"
+            },
+            "403": {
+              "$ref": "#/components/responses/403"
+            },
+            "429": {
+              "$ref": "#/components/responses/429"
+            },
+            "500": {
+              "$ref": "#/components/responses/500"
+            }
+          },
+          "security": [
+            {
+              "apiKey": [],
+              "apiSecret": []
+            },
+            {
+              "BasicAuth": []
+            }
+          ],
+          "summary": "Corporate actions",
+          "tags": [
+            "Corporate actions"
+          ]
+        }
+      }
+    }
+  },
+  "issuer_example": {
+    "url": "https://www.apple.com/newsroom/2024/02/apple-reports-first-quarter-results/",
+    "status": 200,
+    "path": "artifacts/research/dividend-audit/apple-2024-q1.html",
+    "sha256": "e4609ca44c6d653801fb1ba664c99ca24078e09be2e20acff698cd227976c538",
+    "verified_fields": {
+      "symbol": "AAPL",
+      "rate": 0.24,
+      "currency": "USD",
+      "announcement_date": "2024-02-01",
+      "record_date": "2024-02-12",
+      "payable_date": "2024-02-15"
+    },
+    "ex_date_verified_by_this_page": false,
+    "scope": "One issuer announcement; no extrapolation to other events or API availability history"
+  }
+}
