@@ -1,0 +1,48 @@
+{
+  "source_sha256": "efd05af560d11ea5875d0913ed1ee52fb49fd7e748e810a68c10968fbd4e2c33",
+  "events": [
+    {
+      "id": "GEHC",
+      "parent": "GE",
+      "day": "2023-01-04",
+      "numerator": 1,
+      "denominator": 3,
+      "child_close": 60.49,
+      "child_price_day": "2023-01-04",
+      "verified": true,
+      "parent_previous_close": 84.98,
+      "parent_close": 70.2,
+      "raw_close_return_pct": -17.39232760649565,
+      "corrected_close_return_pct": 6.3348238801286705
+    },
+    {
+      "id": "GEV",
+      "parent": "GE",
+      "day": "2024-04-02",
+      "numerator": 1,
+      "denominator": 4,
+      "child_close": 140.0,
+      "child_price_day": "2024-04-02",
+      "verified": true,
+      "parent_previous_close": 175.36,
+      "parent_close": 136.47,
+      "raw_close_return_pct": -22.17723540145986,
+      "corrected_close_return_pct": -2.2182937956204407
+    },
+    {
+      "id": "KD",
+      "parent": "IBM",
+      "day": "2021-11-04",
+      "numerator": 1,
+      "denominator": 5,
+      "child_close": 26.38,
+      "child_price_day": "2021-11-04",
+      "verified": true,
+      "parent_previous_close": 127.13,
+      "parent_close": 120.85,
+      "raw_close_return_pct": -4.939825375599782,
+      "corrected_close_return_pct": -0.7897427829780534
+    }
+  ],
+  "scope": "Only three known spinoffs; theoretical close reinvestment signal index, not account PnL"
+}
