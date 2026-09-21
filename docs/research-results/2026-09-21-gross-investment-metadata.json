@@ -1,0 +1,7 @@
+{
+  "source_sha256": {
+    "scripts/gross_investment_features.py": "85d3365cb92aa70b755e9ed03e6a0f9592e4f570191882602511b3865c9560aa",
+    "scripts/study_gross_investment.py": "a44a36aa31625e1ad55d0561f21f16041f15171d3fabf1a415f61286af91b20c"
+  },
+  "protocol": "2026-09-21-gross-investment-protocol.md"
+}

@@ -1,0 +1,3769 @@
+{
+  "original20": {
+    "coverage": [
+      {
+        "day": "2025-09-02",
+        "eligible": [
+          "AAPL",
+          "AMD",
+          "AMZN",
+          "AVGO",
+          "COST",
+          "GOOGL",
+          "JNJ",
+          "LLY",
+          "META",
+          "MSFT",
+          "NVDA",
+          "TSLA",
+          "WMT"
+        ],
+        "selected": {
+          "gross": [
+            "NVDA",
+            "WMT",
+            "AMZN",
+            "AAPL",
+            "META"
+          ],
+          "combined": [
+            "WMT",
+            "AAPL",
+            "COST",
+            "AMZN",
+            "NVDA"
+          ],
+          "eligible": [
+            "AAPL",
+            "AMD",
+            "AMZN",
+            "AVGO",
+            "COST",
+            "GOOGL",
+            "JNJ",
+            "LLY",
+            "META",
+            "MSFT",
+            "NVDA",
+            "TSLA",
+            "WMT"
+          ]
+        }
+      },
+      {
+        "day": "2025-09-30",
+        "eligible": [
+          "AAPL",
+          "AMD",
+          "AMZN",
+          "AVGO",
+          "COST",
+          "GOOGL",
+          "JNJ",
+          "LLY",
+          "META",
+          "MSFT",
+          "NVDA",
+          "TSLA",
+          "WMT"
+        ],
+        "selected": {
+          "gross": [
+            "NVDA",
+            "WMT",
+            "AMZN",
+            "AAPL",
+            "META"
+          ],
+          "combined": [
+            "WMT",
+            "AAPL",
+            "COST",
+            "AMZN",
+            "NVDA"
+          ],
+          "eligible": [
+            "AAPL",
+            "AMD",
+            "AMZN",
+            "AVGO",
+            "COST",
+            "GOOGL",
+            "JNJ",
+            "LLY",
+            "META",
+            "MSFT",
+            "NVDA",
+            "TSLA",
+            "WMT"
+          ]
+        }
+      },
+      {
+        "day": "2025-10-28",
+        "eligible": [
+          "AAPL",
+          "AMD",
+          "AMZN",
+          "AVGO",
+          "COST",
+          "GOOGL",
+          "JNJ",
+          "LLY",
+          "META",
+          "MSFT",
+          "NVDA",
+          "TSLA",
+          "WMT"
+        ],
+        "selected": {
+          "gross": [
+            "NVDA",
+            "WMT",
+            "AMZN",
+            "AAPL",
+            "META"
+          ],
+          "combined": [
+            "WMT",
+            "AAPL",
+            "AMZN",
+            "COST",
+            "AMD"
+          ],
+          "eligible": [
+            "AAPL",
+            "AMD",
+            "AMZN",
+            "AVGO",
+            "COST",
+            "GOOGL",
+            "JNJ",
+            "LLY",
+            "META",
+            "MSFT",
+            "NVDA",
+            "TSLA",
+            "WMT"
+          ]
+        }
+      },
+      {
+        "day": "2025-11-25",
+        "eligible": [
+          "AAPL",
+          "AMD",
+          "AMZN",
+          "AVGO",
+          "COST",
+          "GOOGL",
+          "JNJ",
+          "LLY",
+          "META",
+          "MSFT",
+          "NVDA",
+          "TSLA",
+          "WMT"
+        ],
+        "selected": {
+          "gross": [
+            "NVDA",
+            "WMT",
+            "AAPL",
+            "AMZN",
+            "META"
+          ],
+          "combined": [
+            "AAPL",
+            "WMT",
+            "AMZN",
+            "COST",
+            "JNJ"
+          ],
+          "eligible": [
+            "AAPL",
+            "AMD",
+            "AMZN",
+            "AVGO",
+            "COST",
+            "GOOGL",
+            "JNJ",
+            "LLY",
+            "META",
+            "MSFT",
+            "NVDA",
+            "TSLA",
+            "WMT"
+          ]
+        }
+      },
+      {
+        "day": "2025-12-24",
+        "eligible": [
+          "AAPL",
+          "AMD",
+          "AMZN",
+          "AVGO",
+          "COST",
+          "GOOGL",
+          "JNJ",
+          "LLY",
+          "META",
+          "MSFT",
+          "NVDA",
+          "TSLA",
+          "WMT"
+        ],
+        "selected": {
+          "gross": [
+            "NVDA",
+            "WMT",
+            "AAPL",
+            "AMZN",
+            "META"
+          ],
+          "combined": [
+            "AAPL",
+            "WMT",
+            "AMZN",
+            "COST",
+            "AMD"
+          ],
+          "eligible": [
+            "AAPL",
+            "AMD",
+            "AMZN",
+            "AVGO",
+            "COST",
+            "GOOGL",
+            "JNJ",
+            "LLY",
+            "META",
+            "MSFT",
+            "NVDA",
+            "TSLA",
+            "WMT"
+          ]
+        }
+      },
+      {
+        "day": "2026-01-26",
+        "eligible": [
+          "AAPL",
+          "AMD",
+          "AMZN",
+          "AVGO",
+          "COST",
+          "GOOGL",
+          "JNJ",
+          "LLY",
+          "META",
+          "MSFT",
+          "NVDA",
+          "TSLA",
+          "WMT"
+        ],
+        "selected": {
+          "gross": [
+            "NVDA",
+            "WMT",
+            "AAPL",
+            "AMZN",
+            "META"
+          ],
+          "combined": [
+            "AAPL",
+            "WMT",
+            "AMZN",
+            "COST",
+            "AMD"
+          ],
+          "eligible": [
+            "AAPL",
+            "AMD",
+            "AMZN",
+            "AVGO",
+            "COST",
+            "GOOGL",
+            "JNJ",
+            "LLY",
+            "META",
+            "MSFT",
+            "NVDA",
+            "TSLA",
+            "WMT"
+          ]
+        }
+      },
+      {
+        "day": "2026-02-24",
+        "eligible": [
+          "AAPL",
+          "AMD",
+          "AMZN",
+          "AVGO",
+          "COST",
+          "GOOGL",
+          "JNJ",
+          "LLY",
+          "META",
+          "MSFT",
+          "NVDA",
+          "TSLA",
+          "WMT"
+        ],
+        "selected": {
+          "gross": [
+            "NVDA",
+            "WMT",
+            "AAPL",
+            "LLY",
+            "COST"
+          ],
+          "combined": [
+            "AAPL",
+            "WMT",
+            "COST",
+            "AVGO",
+            "JNJ"
+          ],
+          "eligible": [
+            "AAPL",
+            "AMD",
+            "AMZN",
+            "AVGO",
+            "COST",
+            "GOOGL",
+            "JNJ",
+            "LLY",
+            "META",
+            "MSFT",
+            "NVDA",
+            "TSLA",
+            "WMT"
+          ]
+        }
+      },
+      {
+        "day": "2026-03-24",
+        "eligible": [
+          "AAPL",
+          "AMD",
+          "AMZN",
+          "AVGO",
+          "COST",
+          "GOOGL",
+          "JNJ",
+          "LLY",
+          "META",
+          "MSFT",
+          "NVDA",
+          "TSLA",
+          "WMT"
+        ],
+        "selected": {
+          "gross": [
+            "NVDA",
+            "WMT",
+            "AAPL",
+            "LLY",
+            "COST"
+          ],
+          "combined": [
+            "AAPL",
+            "WMT",
+            "COST",
+            "AVGO",
+            "JNJ"
+          ],
+          "eligible": [
+            "AAPL",
+            "AMD",
+            "AMZN",
+            "AVGO",
+            "COST",
+            "GOOGL",
+            "JNJ",
+            "LLY",
+            "META",
+            "MSFT",
+            "NVDA",
+            "TSLA",
+            "WMT"
+          ]
+        }
+      },
+      {
+        "day": "2026-04-22",
+        "eligible": [
+          "AAPL",
+          "AMD",
+          "AMZN",
+          "AVGO",
+          "COST",
+          "GOOGL",
+          "JNJ",
+          "LLY",
+          "META",
+          "MSFT",
+          "NVDA",
+          "TSLA",
+          "WMT"
+        ],
+        "selected": {
+          "gross": [
+            "NVDA",
+            "WMT",
+            "AAPL",
+            "LLY",
+            "COST"
+          ],
+          "combined": [
+            "AAPL",
+            "WMT",
+            "COST",
+            "AVGO",
+            "JNJ"
+          ],
+          "eligible": [
+            "AAPL",
+            "AMD",
+            "AMZN",
+            "AVGO",
+            "COST",
+            "GOOGL",
+            "JNJ",
+            "LLY",
+            "META",
+            "MSFT",
+            "NVDA",
+            "TSLA",
+            "WMT"
+          ]
+        }
+      },
+      {
+        "day": "2026-05-20",
+        "eligible": [
+          "AAPL",
+          "AMD",
+          "AMZN",
+          "AVGO",
+          "COST",
+          "GOOGL",
+          "JNJ",
+          "LLY",
+          "META",
+          "MSFT",
+          "NVDA",
+          "TSLA",
+          "WMT"
+        ],
+        "selected": {
+          "gross": [
+            "NVDA",
+            "WMT",
+            "AAPL",
+            "LLY",
+            "COST"
+          ],
+          "combined": [
+            "AAPL",
+            "WMT",
+            "COST",
+            "AVGO",
+            "JNJ"
+          ],
+          "eligible": [
+            "AAPL",
+            "AMD",
+            "AMZN",
+            "AVGO",
+            "COST",
+            "GOOGL",
+            "JNJ",
+            "LLY",
+            "META",
+            "MSFT",
+            "NVDA",
+            "TSLA",
+            "WMT"
+          ]
+        }
+      },
+      {
+        "day": "2026-06-18",
+        "eligible": [
+          "AAPL",
+          "AMD",
+          "AMZN",
+          "AVGO",
+          "COST",
+          "GOOGL",
+          "JNJ",
+          "LLY",
+          "META",
+          "MSFT",
+          "NVDA",
+          "TSLA",
+          "WMT"
+        ],
+        "selected": {
+          "gross": [
+            "NVDA",
+            "WMT",
+            "AAPL",
+            "LLY",
+            "COST"
+          ],
+          "combined": [
+            "AAPL",
+            "WMT",
+            "COST",
+            "AVGO",
+            "JNJ"
+          ],
+          "eligible": [
+            "AAPL",
+            "AMD",
+            "AMZN",
+            "AVGO",
+            "COST",
+            "GOOGL",
+            "JNJ",
+            "LLY",
+            "META",
+            "MSFT",
+            "NVDA",
+            "TSLA",
+            "WMT"
+          ]
+        }
+      },
+      {
+        "day": "2026-07-20",
+        "eligible": [
+          "AAPL",
+          "AMD",
+          "AMZN",
+          "AVGO",
+          "COST",
+          "GOOGL",
+          "JNJ",
+          "LLY",
+          "META",
+          "MSFT",
+          "NVDA",
+          "TSLA",
+          "WMT"
+        ],
+        "selected": {
+          "gross": [
+            "NVDA",
+            "WMT",
+            "AAPL",
+            "LLY",
+            "COST"
+          ],
+          "combined": [
+            "AAPL",
+            "WMT",
+            "COST",
+            "AVGO",
+            "JNJ"
+          ],
+          "eligible": [
+            "AAPL",
+            "AMD",
+            "AMZN",
+            "AVGO",
+            "COST",
+            "GOOGL",
+            "JNJ",
+            "LLY",
+            "META",
+            "MSFT",
+            "NVDA",
+            "TSLA",
+            "WMT"
+          ]
+        }
+      },
+      {
+        "day": "2026-08-17",
+        "eligible": [
+          "AAPL",
+          "AMD",
+          "AMZN",
+          "AVGO",
+          "COST",
+          "GOOGL",
+          "JNJ",
+          "LLY",
+          "META",
+          "MSFT",
+          "NVDA",
+          "TSLA",
+          "WMT"
+        ],
+        "selected": {
+          "gross": [
+            "NVDA",
+            "WMT",
+            "AAPL",
+            "LLY",
+            "COST"
+          ],
+          "combined": [
+            "AAPL",
+            "WMT",
+            "COST",
+            "AVGO",
+            "JNJ"
+          ],
+          "eligible": [
+            "AAPL",
+            "AMD",
+            "AMZN",
+            "AVGO",
+            "COST",
+            "GOOGL",
+            "JNJ",
+            "LLY",
+            "META",
+            "MSFT",
+            "NVDA",
+            "TSLA",
+            "WMT"
+          ]
+        }
+      }
+    ],
+    "example": {
+      "day": "2025-09-02",
+      "judgments": {
+        "AAPL": {
+          "symbol": "AAPL",
+          "asof": "2025-09-02",
+          "status": "证据不足",
+          "method": "gross_investment_v0",
+          "candidate_eligible": true,
+          "gross": 0.495049043783221,
+          "growth": 0.03516051539637477,
+          "fiscal_end": "2024-09-28",
+          "sources": {
+            "gross_profit": {
+              "start": "2023-10-01",
+              "end": "2024-09-28",
+              "val": 180683000000,
+              "accn": "0000320193-24-000123",
+              "fy": 2024,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2024-11-01",
+              "tag": "GrossProfit",
+              "priority": 0
+            },
+            "assets": {
+              "end": "2024-09-28",
+              "val": 364980000000,
+              "accn": "0000320193-24-000123",
+              "fy": 2024,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2024-11-01",
+              "tag": "Assets",
+              "priority": 0
+            },
+            "prior_assets": {
+              "end": "2023-09-30",
+              "val": 352583000000,
+              "accn": "0000320193-24-000123",
+              "fy": 2024,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2024-11-01",
+              "frame": "CY2023Q3I",
+              "tag": "Assets",
+              "priority": 0
+            }
+          },
+          "reason": "财务代理可计算，策略适用性未验证"
+        },
+        "AMD": {
+          "symbol": "AMD",
+          "asof": "2025-09-02",
+          "status": "证据不足",
+          "method": "gross_investment_v0",
+          "candidate_eligible": true,
+          "gross": 0.18381821858839165,
+          "growth": 0.019753995728069462,
+          "fiscal_end": "2024-12-28",
+          "sources": {
+            "gross_profit": {
+              "start": "2023-12-31",
+              "end": "2024-12-28",
+              "val": 12725000000,
+              "accn": "0000002488-25-000012",
+              "fy": 2024,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2025-02-05",
+              "tag": "GrossProfit",
+              "priority": 0
+            },
+            "assets": {
+              "end": "2024-12-28",
+              "val": 69226000000,
+              "accn": "0000002488-25-000012",
+              "fy": 2024,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2025-02-05",
+              "tag": "Assets",
+              "priority": 0
+            },
+            "prior_assets": {
+              "end": "2023-12-30",
+              "val": 67885000000,
+              "accn": "0000002488-25-000012",
+              "fy": 2024,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2025-02-05",
+              "frame": "CY2023Q4I",
+              "tag": "Assets",
+              "priority": 0
+            }
+          },
+          "reason": "财务代理可计算，策略适用性未验证"
+        },
+        "AMZN": {
+          "symbol": "AMZN",
+          "asof": "2025-09-02",
+          "status": "证据不足",
+          "method": "gross_investment_v0",
+          "candidate_eligible": true,
+          "gross": 0.49875818938892036,
+          "growth": 0.18383871297745213,
+          "fiscal_end": "2024-12-31",
+          "sources": {
+            "gross_profit": {
+              "start": "2024-01-01",
+              "end": "2024-12-31",
+              "val": 311671000000,
+              "accn": "0001018724-25-000004",
+              "fy": 2024,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2025-02-07",
+              "derivation": "same_filing_revenue_minus_cost",
+              "component_sources": {
+                "revenue": {
+                  "start": "2024-01-01",
+                  "end": "2024-12-31",
+                  "val": 637959000000,
+                  "accn": "0001018724-25-000004",
+                  "fy": 2024,
+                  "fp": "FY",
+                  "form": "10-K",
+                  "filed": "2025-02-07",
+                  "tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+                  "priority": 0
+                },
+                "cost": {
+                  "start": "2024-01-01",
+                  "end": "2024-12-31",
+                  "val": 326288000000,
+                  "accn": "0001018724-25-000004",
+                  "fy": 2024,
+                  "fp": "FY",
+                  "form": "10-K",
+                  "filed": "2025-02-07",
+                  "tag": "CostOfGoodsAndServicesSold"
+                }
+              },
+              "tag": "GrossProfit",
+              "priority": 0
+            },
+            "assets": {
+              "end": "2024-12-31",
+              "val": 624894000000,
+              "accn": "0001018724-25-000004",
+              "fy": 2024,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2025-02-07",
+              "tag": "Assets",
+              "priority": 0
+            },
+            "prior_assets": {
+              "end": "2023-12-31",
+              "val": 527854000000,
+              "accn": "0001018724-25-000004",
+              "fy": 2024,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2025-02-07",
+              "tag": "Assets",
+              "priority": 0
+            }
+          },
+          "reason": "财务代理可计算，策略适用性未验证"
+        },
+        "AVGO": {
+          "symbol": "AVGO",
+          "asof": "2025-09-02",
+          "status": "证据不足",
+          "method": "gross_investment_v0",
+          "candidate_eligible": true,
+          "gross": 0.19625705575175828,
+          "growth": 1.2734384650224402,
+          "fiscal_end": "2024-11-03",
+          "sources": {
+            "gross_profit": {
+              "start": "2023-10-30",
+              "end": "2024-11-03",
+              "val": 32509000000,
+              "accn": "0001730168-24-000139",
+              "fy": 2024,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2024-12-20",
+              "tag": "GrossProfit",
+              "priority": 0
+            },
+            "assets": {
+              "end": "2024-11-03",
+              "val": 165645000000,
+              "accn": "0001730168-24-000139",
+              "fy": 2024,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2024-12-20",
+              "tag": "Assets",
+              "priority": 0
+            },
+            "prior_assets": {
+              "end": "2023-10-29",
+              "val": 72861000000,
+              "accn": "0001730168-24-000139",
+              "fy": 2024,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2024-12-20",
+              "frame": "CY2023Q3I",
+              "tag": "Assets",
+              "priority": 0
+            }
+          },
+          "reason": "财务代理可计算，策略适用性未验证"
+        },
+        "BRK.B": {
+          "symbol": "BRK.B",
+          "asof": "2025-09-02",
+          "status": "证据不足",
+          "method": "gross_investment_v0",
+          "reason": "会计范围或发行人身份不满足"
+        },
+        "COST": {
+          "symbol": "COST",
+          "asof": "2025-09-02",
+          "status": "证据不足",
+          "method": "gross_investment_v0",
+          "candidate_eligible": true,
+          "gross": 0.45960962896134955,
+          "growth": 0.01213148969475597,
+          "fiscal_end": "2024-09-01",
+          "sources": {
+            "gross_profit": {
+              "start": "2023-09-04",
+              "end": "2024-09-01",
+              "val": 32095000000,
+              "accn": "0000909832-24-000049",
+              "fy": 2024,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2024-10-09",
+              "derivation": "same_filing_revenue_minus_cost",
+              "component_sources": {
+                "revenue": {
+                  "start": "2023-09-04",
+                  "end": "2024-09-01",
+                  "val": 254453000000,
+                  "accn": "0000909832-24-000049",
+                  "fy": 2024,
+                  "fp": "FY",
+                  "form": "10-K",
+                  "filed": "2024-10-09",
+                  "tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+                  "priority": 0
+                },
+                "cost": {
+                  "start": "2023-09-04",
+                  "end": "2024-09-01",
+                  "val": 222358000000,
+                  "accn": "0000909832-24-000049",
+                  "fy": 2024,
+                  "fp": "FY",
+                  "form": "10-K",
+                  "filed": "2024-10-09",
+                  "tag": "CostOfGoodsAndServicesSold"
+                }
+              },
+              "tag": "GrossProfit",
+              "priority": 0
+            },
+            "assets": {
+              "end": "2024-09-01",
+              "val": 69831000000,
+              "accn": "0000909832-24-000049",
+              "fy": 2024,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2024-10-09",
+              "tag": "Assets",
+              "priority": 0
+            },
+            "prior_assets": {
+              "end": "2023-09-03",
+              "val": 68994000000,
+              "accn": "0000909832-24-000049",
+              "fy": 2024,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2024-10-09",
+              "tag": "Assets",
+              "priority": 0
+            }
+          },
+          "reason": "财务代理可计算，策略适用性未验证"
+        },
+        "GOOGL": {
+          "symbol": "GOOGL",
+          "asof": "2025-09-02",
+          "status": "证据不足",
+          "method": "gross_investment_v0",
+          "candidate_eligible": true,
+          "gross": 0.4524359475498383,
+          "growth": 0.11894868685262128,
+          "fiscal_end": "2024-12-31",
+          "sources": {
+            "gross_profit": {
+              "start": "2024-01-01",
+              "end": "2024-12-31",
+              "val": 203712000000,
+              "accn": "0001652044-25-000014",
+              "fy": 2024,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2025-02-05",
+              "frame": "CY2024",
+              "derivation": "same_filing_revenue_minus_cost",
+              "component_sources": {
+                "revenue": {
+                  "start": "2024-01-01",
+                  "end": "2024-12-31",
+                  "val": 350018000000,
+                  "accn": "0001652044-25-000014",
+                  "fy": 2024,
+                  "fp": "FY",
+                  "form": "10-K",
+                  "filed": "2025-02-05",
+                  "frame": "CY2024",
+                  "tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+                  "priority": 0
+                },
+                "cost": {
+                  "start": "2024-01-01",
+                  "end": "2024-12-31",
+                  "val": 146306000000,
+                  "accn": "0001652044-25-000014",
+                  "fy": 2024,
+                  "fp": "FY",
+                  "form": "10-K",
+                  "filed": "2025-02-05",
+                  "tag": "CostOfRevenue"
+                }
+              },
+              "tag": "GrossProfit",
+              "priority": 0
+            },
+            "assets": {
+              "end": "2024-12-31",
+              "val": 450256000000,
+              "accn": "0001652044-25-000014",
+              "fy": 2024,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2025-02-05",
+              "tag": "Assets",
+              "priority": 0
+            },
+            "prior_assets": {
+              "end": "2023-12-31",
+              "val": 402392000000,
+              "accn": "0001652044-25-000014",
+              "fy": 2024,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2025-02-05",
+              "frame": "CY2023Q4I",
+              "tag": "Assets",
+              "priority": 0
+            }
+          },
+          "reason": "财务代理可计算，策略适用性未验证"
+        },
+        "JNJ": {
+          "symbol": "JNJ",
+          "asof": "2025-09-02",
+          "status": "证据不足",
+          "method": "gross_investment_v0",
+          "candidate_eligible": true,
+          "gross": 0.34063652112113,
+          "growth": 0.07487556547583529,
+          "fiscal_end": "2024-12-29",
+          "sources": {
+            "gross_profit": {
+              "start": "2024-01-01",
+              "end": "2024-12-29",
+              "val": 61350000000,
+              "accn": "0000200406-25-000038",
+              "fy": 2024,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2025-02-13",
+              "tag": "GrossProfit",
+              "priority": 0
+            },
+            "assets": {
+              "end": "2024-12-29",
+              "val": 180104000000,
+              "accn": "0000200406-25-000038",
+              "fy": 2024,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2025-02-13",
+              "tag": "Assets",
+              "priority": 0
+            },
+            "prior_assets": {
+              "end": "2023-12-31",
+              "val": 167558000000,
+              "accn": "0000200406-25-000038",
+              "fy": 2024,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2025-02-13",
+              "frame": "CY2023Q4I",
+              "tag": "Assets",
+              "priority": 0
+            }
+          },
+          "reason": "财务代理可计算，策略适用性未验证"
+        },
+        "JPM": {
+          "symbol": "JPM",
+          "asof": "2025-09-02",
+          "status": "证据不足",
+          "method": "gross_investment_v0",
+          "reason": "会计范围或发行人身份不满足"
+        },
+        "LLY": {
+          "symbol": "LLY",
+          "asof": "2025-09-02",
+          "status": "证据不足",
+          "method": "gross_investment_v0",
+          "candidate_eligible": true,
+          "gross": 0.4652791275857557,
+          "growth": 0.22979925413592106,
+          "fiscal_end": "2024-12-31",
+          "sources": {
+            "gross_profit": {
+              "start": "2024-01-01",
+              "end": "2024-12-31",
+              "val": 36624400000,
+              "accn": "0000059478-25-000067",
+              "fy": 2024,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2025-02-19",
+              "derivation": "same_filing_revenue_minus_cost",
+              "component_sources": {
+                "revenue": {
+                  "start": "2024-01-01",
+                  "end": "2024-12-31",
+                  "val": 45042700000,
+                  "accn": "0000059478-25-000067",
+                  "fy": 2024,
+                  "fp": "FY",
+                  "form": "10-K",
+                  "filed": "2025-02-19",
+                  "tag": "Revenues",
+                  "priority": 1
+                },
+                "cost": {
+                  "start": "2024-01-01",
+                  "end": "2024-12-31",
+                  "val": 8418300000,
+                  "accn": "0000059478-25-000067",
+                  "fy": 2024,
+                  "fp": "FY",
+                  "form": "10-K",
+                  "filed": "2025-02-19",
+                  "tag": "CostOfGoodsAndServicesSold"
+                }
+              },
+              "tag": "GrossProfit",
+              "priority": 0
+            },
+            "assets": {
+              "end": "2024-12-31",
+              "val": 78714900000,
+              "accn": "0000059478-25-000067",
+              "fy": 2024,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2025-02-19",
+              "tag": "Assets",
+              "priority": 0
+            },
+            "prior_assets": {
+              "end": "2023-12-31",
+              "val": 64006300000,
+              "accn": "0000059478-25-000067",
+              "fy": 2024,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2025-02-19",
+              "frame": "CY2023Q4I",
+              "tag": "Assets",
+              "priority": 0
+            }
+          },
+          "reason": "财务代理可计算，策略适用性未验证"
+        },
+        "MA": {
+          "symbol": "MA",
+          "asof": "2025-09-02",
+          "status": "证据不足",
+          "method": "gross_investment_v0",
+          "reason": "会计范围或发行人身份不满足"
+        },
+        "META": {
+          "symbol": "META",
+          "asof": "2025-09-02",
+          "status": "证据不足",
+          "method": "gross_investment_v0",
+          "candidate_eligible": true,
+          "gross": 0.4866439174944033,
+          "growth": 0.20220535399328465,
+          "fiscal_end": "2024-12-31",
+          "sources": {
+            "gross_profit": {
+              "start": "2024-01-01",
+              "end": "2024-12-31",
+              "val": 134340000000,
+              "accn": "0001326801-25-000017",
+              "fy": 2024,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2025-01-30",
+              "derivation": "same_filing_revenue_minus_cost",
+              "component_sources": {
+                "revenue": {
+                  "start": "2024-01-01",
+                  "end": "2024-12-31",
+                  "val": 164501000000,
+                  "accn": "0001326801-25-000017",
+                  "fy": 2024,
+                  "fp": "FY",
+                  "form": "10-K",
+                  "filed": "2025-01-30",
+                  "tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+                  "priority": 0
+                },
+                "cost": {
+                  "start": "2024-01-01",
+                  "end": "2024-12-31",
+                  "val": 30161000000,
+                  "accn": "0001326801-25-000017",
+                  "fy": 2024,
+                  "fp": "FY",
+                  "form": "10-K",
+                  "filed": "2025-01-30",
+                  "tag": "CostOfRevenue"
+                }
+              },
+              "tag": "GrossProfit",
+              "priority": 0
+            },
+            "assets": {
+              "end": "2024-12-31",
+              "val": 276054000000,
+              "accn": "0001326801-25-000017",
+              "fy": 2024,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2025-01-30",
+              "tag": "Assets",
+              "priority": 0
+            },
+            "prior_assets": {
+              "end": "2023-12-31",
+              "val": 229623000000,
+              "accn": "0001326801-25-000017",
+              "fy": 2024,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2025-01-30",
+              "frame": "CY2023Q4I",
+              "tag": "Assets",
+              "priority": 0
+            }
+          },
+          "reason": "财务代理可计算，策略适用性未验证"
+        },
+        "MSFT": {
+          "symbol": "MSFT",
+          "asof": "2025-09-02",
+          "status": "证据不足",
+          "method": "gross_investment_v0",
+          "candidate_eligible": true,
+          "gross": 0.31323434619864526,
+          "growth": 0.20860546349502007,
+          "fiscal_end": "2025-06-30",
+          "sources": {
+            "gross_profit": {
+              "start": "2024-07-01",
+              "end": "2025-06-30",
+              "val": 193893000000,
+              "accn": "0000950170-25-100235",
+              "fy": 2025,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2025-07-30",
+              "tag": "GrossProfit",
+              "priority": 0
+            },
+            "assets": {
+              "end": "2025-06-30",
+              "val": 619003000000,
+              "accn": "0000950170-25-100235",
+              "fy": 2025,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2025-07-30",
+              "tag": "Assets",
+              "priority": 0
+            },
+            "prior_assets": {
+              "end": "2024-06-30",
+              "val": 512163000000,
+              "accn": "0000950170-25-100235",
+              "fy": 2025,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2025-07-30",
+              "frame": "CY2024Q2I",
+              "tag": "Assets",
+              "priority": 0
+            }
+          },
+          "reason": "财务代理可计算，策略适用性未验证"
+        },
+        "NVDA": {
+          "symbol": "NVDA",
+          "asof": "2025-09-02",
+          "status": "证据不足",
+          "method": "gross_investment_v0",
+          "candidate_eligible": true,
+          "gross": 0.876855942151056,
+          "growth": 0.6979217380720546,
+          "fiscal_end": "2025-01-26",
+          "sources": {
+            "gross_profit": {
+              "start": "2024-01-29",
+              "end": "2025-01-26",
+              "val": 97858000000,
+              "accn": "0001045810-25-000023",
+              "fy": 2025,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2025-02-26",
+              "tag": "GrossProfit",
+              "priority": 0
+            },
+            "assets": {
+              "end": "2025-01-26",
+              "val": 111601000000,
+              "accn": "0001045810-25-000023",
+              "fy": 2025,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2025-02-26",
+              "tag": "Assets",
+              "priority": 0
+            },
+            "prior_assets": {
+              "end": "2024-01-28",
+              "val": 65728000000,
+              "accn": "0001045810-25-000023",
+              "fy": 2025,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2025-02-26",
+              "frame": "CY2023Q4I",
+              "tag": "Assets",
+              "priority": 0
+            }
+          },
+          "reason": "财务代理可计算，策略适用性未验证"
+        },
+        "ORCL": {
+          "symbol": "ORCL",
+          "asof": "2025-09-02",
+          "status": "证据不足",
+          "method": "gross_investment_v0",
+          "reason": "年度不可比或陈旧"
+        },
+        "SOFI": {
+          "symbol": "SOFI",
+          "asof": "2025-09-02",
+          "status": "证据不足",
+          "method": "gross_investment_v0",
+          "reason": "会计范围或发行人身份不满足"
+        },
+        "TSLA": {
+          "symbol": "TSLA",
+          "asof": "2025-09-02",
+          "status": "证据不足",
+          "method": "gross_investment_v0",
+          "candidate_eligible": true,
+          "gross": 0.14295076595396083,
+          "growth": 0.14492862368455617,
+          "fiscal_end": "2024-12-31",
+          "sources": {
+            "gross_profit": {
+              "start": "2024-01-01",
+              "end": "2024-12-31",
+              "val": 17450000000,
+              "accn": "0001628280-25-003063",
+              "fy": 2024,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2025-01-30",
+              "tag": "GrossProfit",
+              "priority": 0
+            },
+            "assets": {
+              "end": "2024-12-31",
+              "val": 122070000000,
+              "accn": "0001628280-25-003063",
+              "fy": 2024,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2025-01-30",
+              "tag": "Assets",
+              "priority": 0
+            },
+            "prior_assets": {
+              "end": "2023-12-31",
+              "val": 106618000000,
+              "accn": "0001628280-25-003063",
+              "fy": 2024,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2025-01-30",
+              "frame": "CY2023Q4I",
+              "tag": "Assets",
+              "priority": 0
+            }
+          },
+          "reason": "财务代理可计算，策略适用性未验证"
+        },
+        "V": {
+          "symbol": "V",
+          "asof": "2025-09-02",
+          "status": "证据不足",
+          "method": "gross_investment_v0",
+          "reason": "会计范围或发行人身份不满足"
+        },
+        "WMT": {
+          "symbol": "WMT",
+          "asof": "2025-09-02",
+          "status": "证据不足",
+          "method": "gross_investment_v0",
+          "candidate_eligible": true,
+          "gross": 0.6241205721888023,
+          "growth": 0.03337572652823506,
+          "fiscal_end": "2025-01-31",
+          "sources": {
+            "gross_profit": {
+              "start": "2024-02-01",
+              "end": "2025-01-31",
+              "val": 162785000000,
+              "accn": "0000104169-25-000021",
+              "fy": 2025,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2025-03-14",
+              "derivation": "same_filing_revenue_minus_cost",
+              "component_sources": {
+                "revenue": {
+                  "start": "2024-02-01",
+                  "end": "2025-01-31",
+                  "val": 674538000000,
+                  "accn": "0000104169-25-000021",
+                  "fy": 2025,
+                  "fp": "FY",
+                  "form": "10-K",
+                  "filed": "2025-03-14",
+                  "tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+                  "priority": 0
+                },
+                "cost": {
+                  "start": "2024-02-01",
+                  "end": "2025-01-31",
+                  "val": 511753000000,
+                  "accn": "0000104169-25-000021",
+                  "fy": 2025,
+                  "fp": "FY",
+                  "form": "10-K",
+                  "filed": "2025-03-14",
+                  "tag": "CostOfRevenue"
+                }
+              },
+              "tag": "GrossProfit",
+              "priority": 0
+            },
+            "assets": {
+              "end": "2025-01-31",
+              "val": 260823000000,
+              "accn": "0000104169-25-000021",
+              "fy": 2025,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2025-03-14",
+              "tag": "Assets",
+              "priority": 0
+            },
+            "prior_assets": {
+              "end": "2024-01-31",
+              "val": 252399000000,
+              "accn": "0000104169-25-000021",
+              "fy": 2025,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2025-03-14",
+              "tag": "Assets",
+              "priority": 0
+            }
+          },
+          "reason": "财务代理可计算，策略适用性未验证"
+        },
+        "XOM": {
+          "symbol": "XOM",
+          "asof": "2025-09-02",
+          "status": "证据不足",
+          "method": "gross_investment_v0",
+          "reason": "会计范围或发行人身份不满足"
+        }
+      }
+    }
+  },
+  "alternate20": {
+    "coverage": [
+      {
+        "day": "2025-09-02",
+        "eligible": [
+          "ABBV",
+          "ADBE",
+          "CRM",
+          "CSCO",
+          "CVX",
+          "HD",
+          "IBM",
+          "INTC",
+          "KO",
+          "MRK",
+          "PEP",
+          "PG",
+          "QCOM",
+          "TXN",
+          "UNH"
+        ],
+        "selected": {
+          "gross": [
+            "UNH",
+            "ADBE",
+            "HD",
+            "PEP",
+            "MRK"
+          ],
+          "combined": [
+            "PEP",
+            "ADBE",
+            "CVX",
+            "ABBV",
+            "UNH"
+          ],
+          "eligible": [
+            "ABBV",
+            "ADBE",
+            "CRM",
+            "CSCO",
+            "CVX",
+            "HD",
+            "IBM",
+            "INTC",
+            "KO",
+            "MRK",
+            "PEP",
+            "PG",
+            "QCOM",
+            "TXN",
+            "UNH"
+          ]
+        }
+      },
+      {
+        "day": "2025-09-30",
+        "eligible": [
+          "ABBV",
+          "ADBE",
+          "CRM",
+          "CSCO",
+          "CVX",
+          "HD",
+          "IBM",
+          "INTC",
+          "KO",
+          "MRK",
+          "PEP",
+          "PG",
+          "QCOM",
+          "TXN",
+          "UNH"
+        ],
+        "selected": {
+          "gross": [
+            "UNH",
+            "ADBE",
+            "HD",
+            "PEP",
+            "MRK"
+          ],
+          "combined": [
+            "PEP",
+            "ADBE",
+            "CSCO",
+            "CVX",
+            "ABBV"
+          ],
+          "eligible": [
+            "ABBV",
+            "ADBE",
+            "CRM",
+            "CSCO",
+            "CVX",
+            "HD",
+            "IBM",
+            "INTC",
+            "KO",
+            "MRK",
+            "PEP",
+            "PG",
+            "QCOM",
+            "TXN",
+            "UNH"
+          ]
+        }
+      },
+      {
+        "day": "2025-10-28",
+        "eligible": [
+          "ABBV",
+          "ADBE",
+          "CRM",
+          "CSCO",
+          "CVX",
+          "HD",
+          "IBM",
+          "INTC",
+          "KO",
+          "MRK",
+          "PEP",
+          "PG",
+          "QCOM",
+          "TXN",
+          "UNH"
+        ],
+        "selected": {
+          "gross": [
+            "UNH",
+            "ADBE",
+            "HD",
+            "PEP",
+            "MRK"
+          ],
+          "combined": [
+            "PEP",
+            "ADBE",
+            "CSCO",
+            "CVX",
+            "ABBV"
+          ],
+          "eligible": [
+            "ABBV",
+            "ADBE",
+            "CRM",
+            "CSCO",
+            "CVX",
+            "HD",
+            "IBM",
+            "INTC",
+            "KO",
+            "MRK",
+            "PEP",
+            "PG",
+            "QCOM",
+            "TXN",
+            "UNH"
+          ]
+        }
+      },
+      {
+        "day": "2025-11-25",
+        "eligible": [
+          "ABBV",
+          "ADBE",
+          "CRM",
+          "CSCO",
+          "CVX",
+          "HD",
+          "IBM",
+          "INTC",
+          "KO",
+          "MRK",
+          "PEP",
+          "PG",
+          "QCOM",
+          "TXN",
+          "UNH"
+        ],
+        "selected": {
+          "gross": [
+            "UNH",
+            "ADBE",
+            "HD",
+            "PEP",
+            "QCOM"
+          ],
+          "combined": [
+            "QCOM",
+            "PEP",
+            "ADBE",
+            "CSCO",
+            "CVX"
+          ],
+          "eligible": [
+            "ABBV",
+            "ADBE",
+            "CRM",
+            "CSCO",
+            "CVX",
+            "HD",
+            "IBM",
+            "INTC",
+            "KO",
+            "MRK",
+            "PEP",
+            "PG",
+            "QCOM",
+            "TXN",
+            "UNH"
+          ]
+        }
+      },
+      {
+        "day": "2025-12-24",
+        "eligible": [
+          "ABBV",
+          "ADBE",
+          "CRM",
+          "CSCO",
+          "CVX",
+          "HD",
+          "IBM",
+          "INTC",
+          "KO",
+          "MRK",
+          "PEP",
+          "PG",
+          "QCOM",
+          "TXN",
+          "UNH"
+        ],
+        "selected": {
+          "gross": [
+            "UNH",
+            "ADBE",
+            "HD",
+            "PEP",
+            "QCOM"
+          ],
+          "combined": [
+            "QCOM",
+            "PEP",
+            "ADBE",
+            "CSCO",
+            "CVX"
+          ],
+          "eligible": [
+            "ABBV",
+            "ADBE",
+            "CRM",
+            "CSCO",
+            "CVX",
+            "HD",
+            "IBM",
+            "INTC",
+            "KO",
+            "MRK",
+            "PEP",
+            "PG",
+            "QCOM",
+            "TXN",
+            "UNH"
+          ]
+        }
+      },
+      {
+        "day": "2026-01-26",
+        "eligible": [
+          "ABBV",
+          "ADBE",
+          "CRM",
+          "CSCO",
+          "CVX",
+          "HD",
+          "IBM",
+          "INTC",
+          "KO",
+          "MRK",
+          "PEP",
+          "PG",
+          "QCOM",
+          "TXN",
+          "UNH"
+        ],
+        "selected": {
+          "gross": [
+            "UNH",
+            "ADBE",
+            "HD",
+            "PEP",
+            "QCOM"
+          ],
+          "combined": [
+            "ADBE",
+            "QCOM",
+            "PEP",
+            "CSCO",
+            "CVX"
+          ],
+          "eligible": [
+            "ABBV",
+            "ADBE",
+            "CRM",
+            "CSCO",
+            "CVX",
+            "HD",
+            "IBM",
+            "INTC",
+            "KO",
+            "MRK",
+            "PEP",
+            "PG",
+            "QCOM",
+            "TXN",
+            "UNH"
+          ]
+        }
+      },
+      {
+        "day": "2026-02-24",
+        "eligible": [
+          "ABBV",
+          "ADBE",
+          "CRM",
+          "CSCO",
+          "CVX",
+          "HD",
+          "IBM",
+          "INTC",
+          "KO",
+          "MRK",
+          "PEP",
+          "PG",
+          "QCOM",
+          "TXN",
+          "UNH"
+        ],
+        "selected": {
+          "gross": [
+            "UNH",
+            "ADBE",
+            "HD",
+            "QCOM",
+            "PEP"
+          ],
+          "combined": [
+            "ADBE",
+            "QCOM",
+            "TXN",
+            "ABBV",
+            "CSCO"
+          ],
+          "eligible": [
+            "ABBV",
+            "ADBE",
+            "CRM",
+            "CSCO",
+            "CVX",
+            "HD",
+            "IBM",
+            "INTC",
+            "KO",
+            "MRK",
+            "PEP",
+            "PG",
+            "QCOM",
+            "TXN",
+            "UNH"
+          ]
+        }
+      },
+      {
+        "day": "2026-03-24",
+        "eligible": [
+          "ABBV",
+          "ADBE",
+          "CRM",
+          "CSCO",
+          "CVX",
+          "HD",
+          "IBM",
+          "INTC",
+          "KO",
+          "MRK",
+          "PEP",
+          "PG",
+          "QCOM",
+          "TXN",
+          "UNH"
+        ],
+        "selected": {
+          "gross": [
+            "UNH",
+            "ADBE",
+            "HD",
+            "QCOM",
+            "PEP"
+          ],
+          "combined": [
+            "ADBE",
+            "QCOM",
+            "UNH",
+            "TXN",
+            "ABBV"
+          ],
+          "eligible": [
+            "ABBV",
+            "ADBE",
+            "CRM",
+            "CSCO",
+            "CVX",
+            "HD",
+            "IBM",
+            "INTC",
+            "KO",
+            "MRK",
+            "PEP",
+            "PG",
+            "QCOM",
+            "TXN",
+            "UNH"
+          ]
+        }
+      },
+      {
+        "day": "2026-04-22",
+        "eligible": [
+          "ABBV",
+          "ADBE",
+          "CRM",
+          "CSCO",
+          "CVX",
+          "HD",
+          "IBM",
+          "INTC",
+          "KO",
+          "MRK",
+          "PEP",
+          "PG",
+          "QCOM",
+          "TXN",
+          "UNH"
+        ],
+        "selected": {
+          "gross": [
+            "UNH",
+            "ADBE",
+            "HD",
+            "QCOM",
+            "PEP"
+          ],
+          "combined": [
+            "ADBE",
+            "QCOM",
+            "UNH",
+            "TXN",
+            "ABBV"
+          ],
+          "eligible": [
+            "ABBV",
+            "ADBE",
+            "CRM",
+            "CSCO",
+            "CVX",
+            "HD",
+            "IBM",
+            "INTC",
+            "KO",
+            "MRK",
+            "PEP",
+            "PG",
+            "QCOM",
+            "TXN",
+            "UNH"
+          ]
+        }
+      },
+      {
+        "day": "2026-05-20",
+        "eligible": [
+          "ABBV",
+          "ADBE",
+          "CRM",
+          "CSCO",
+          "CVX",
+          "HD",
+          "IBM",
+          "INTC",
+          "KO",
+          "MRK",
+          "PEP",
+          "PG",
+          "QCOM",
+          "TXN",
+          "UNH"
+        ],
+        "selected": {
+          "gross": [
+            "UNH",
+            "ADBE",
+            "HD",
+            "QCOM",
+            "PEP"
+          ],
+          "combined": [
+            "ADBE",
+            "QCOM",
+            "UNH",
+            "TXN",
+            "ABBV"
+          ],
+          "eligible": [
+            "ABBV",
+            "ADBE",
+            "CRM",
+            "CSCO",
+            "CVX",
+            "HD",
+            "IBM",
+            "INTC",
+            "KO",
+            "MRK",
+            "PEP",
+            "PG",
+            "QCOM",
+            "TXN",
+            "UNH"
+          ]
+        }
+      },
+      {
+        "day": "2026-06-18",
+        "eligible": [
+          "ABBV",
+          "ADBE",
+          "CRM",
+          "CSCO",
+          "CVX",
+          "HD",
+          "IBM",
+          "INTC",
+          "KO",
+          "MRK",
+          "PEP",
+          "PG",
+          "QCOM",
+          "TXN",
+          "UNH"
+        ],
+        "selected": {
+          "gross": [
+            "UNH",
+            "ADBE",
+            "HD",
+            "QCOM",
+            "PEP"
+          ],
+          "combined": [
+            "ADBE",
+            "QCOM",
+            "UNH",
+            "TXN",
+            "ABBV"
+          ],
+          "eligible": [
+            "ABBV",
+            "ADBE",
+            "CRM",
+            "CSCO",
+            "CVX",
+            "HD",
+            "IBM",
+            "INTC",
+            "KO",
+            "MRK",
+            "PEP",
+            "PG",
+            "QCOM",
+            "TXN",
+            "UNH"
+          ]
+        }
+      },
+      {
+        "day": "2026-07-20",
+        "eligible": [
+          "ABBV",
+          "ADBE",
+          "CRM",
+          "CSCO",
+          "CVX",
+          "HD",
+          "IBM",
+          "INTC",
+          "KO",
+          "MRK",
+          "PEP",
+          "PG",
+          "QCOM",
+          "TXN",
+          "UNH"
+        ],
+        "selected": {
+          "gross": [
+            "UNH",
+            "ADBE",
+            "HD",
+            "QCOM",
+            "PEP"
+          ],
+          "combined": [
+            "ADBE",
+            "QCOM",
+            "UNH",
+            "TXN",
+            "ABBV"
+          ],
+          "eligible": [
+            "ABBV",
+            "ADBE",
+            "CRM",
+            "CSCO",
+            "CVX",
+            "HD",
+            "IBM",
+            "INTC",
+            "KO",
+            "MRK",
+            "PEP",
+            "PG",
+            "QCOM",
+            "TXN",
+            "UNH"
+          ]
+        }
+      },
+      {
+        "day": "2026-08-17",
+        "eligible": [
+          "ABBV",
+          "ADBE",
+          "CRM",
+          "CSCO",
+          "CVX",
+          "HD",
+          "IBM",
+          "INTC",
+          "KO",
+          "MRK",
+          "PEP",
+          "PG",
+          "QCOM",
+          "TXN",
+          "UNH"
+        ],
+        "selected": {
+          "gross": [
+            "UNH",
+            "ADBE",
+            "HD",
+            "QCOM",
+            "PEP"
+          ],
+          "combined": [
+            "ADBE",
+            "QCOM",
+            "UNH",
+            "TXN",
+            "ABBV"
+          ],
+          "eligible": [
+            "ABBV",
+            "ADBE",
+            "CRM",
+            "CSCO",
+            "CVX",
+            "HD",
+            "IBM",
+            "INTC",
+            "KO",
+            "MRK",
+            "PEP",
+            "PG",
+            "QCOM",
+            "TXN",
+            "UNH"
+          ]
+        }
+      }
+    ],
+    "example": {
+      "day": "2025-09-02",
+      "judgments": {
+        "ABBV": {
+          "symbol": "ABBV",
+          "asof": "2025-09-02",
+          "status": "证据不足",
+          "method": "gross_investment_v0",
+          "candidate_eligible": true,
+          "gross": 0.2917261636122846,
+          "growth": 0.0033404844444775428,
+          "fiscal_end": "2024-12-31",
+          "sources": {
+            "gross_profit": {
+              "start": "2024-01-01",
+              "end": "2024-12-31",
+              "val": 39430000000,
+              "accn": "0001551152-25-000020",
+              "fy": 2024,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2025-02-14",
+              "derivation": "same_filing_revenue_minus_cost",
+              "component_sources": {
+                "revenue": {
+                  "start": "2024-01-01",
+                  "end": "2024-12-31",
+                  "val": 56334000000,
+                  "accn": "0001551152-25-000020",
+                  "fy": 2024,
+                  "fp": "FY",
+                  "form": "10-K",
+                  "filed": "2025-02-14",
+                  "tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+                  "priority": 0
+                },
+                "cost": {
+                  "start": "2024-01-01",
+                  "end": "2024-12-31",
+                  "val": 16904000000,
+                  "accn": "0001551152-25-000020",
+                  "fy": 2024,
+                  "fp": "FY",
+                  "form": "10-K",
+                  "filed": "2025-02-14",
+                  "tag": "CostOfGoodsAndServicesSold"
+                }
+              },
+              "tag": "GrossProfit",
+              "priority": 0
+            },
+            "assets": {
+              "end": "2024-12-31",
+              "val": 135161000000,
+              "accn": "0001551152-25-000020",
+              "fy": 2024,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2025-02-14",
+              "tag": "Assets",
+              "priority": 0
+            },
+            "prior_assets": {
+              "end": "2023-12-31",
+              "val": 134711000000,
+              "accn": "0001551152-25-000020",
+              "fy": 2024,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2025-02-14",
+              "frame": "CY2023Q4I",
+              "tag": "Assets",
+              "priority": 0
+            }
+          },
+          "reason": "财务代理可计算，策略适用性未验证"
+        },
+        "ADBE": {
+          "symbol": "ADBE",
+          "asof": "2025-09-02",
+          "status": "证据不足",
+          "method": "gross_investment_v0",
+          "candidate_eligible": true,
+          "gross": 0.6333774396295071,
+          "growth": 0.015144900768998326,
+          "fiscal_end": "2024-11-29",
+          "sources": {
+            "gross_profit": {
+              "start": "2023-12-02",
+              "end": "2024-11-29",
+              "val": 19147000000,
+              "accn": "0000796343-25-000004",
+              "fy": 2024,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2025-01-13",
+              "tag": "GrossProfit",
+              "priority": 0
+            },
+            "assets": {
+              "end": "2024-11-29",
+              "val": 30230000000,
+              "accn": "0000796343-25-000004",
+              "fy": 2024,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2025-01-13",
+              "tag": "Assets",
+              "priority": 0
+            },
+            "prior_assets": {
+              "end": "2023-12-01",
+              "val": 29779000000,
+              "accn": "0000796343-25-000004",
+              "fy": 2024,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2025-01-13",
+              "frame": "CY2023Q4I",
+              "tag": "Assets",
+              "priority": 0
+            }
+          },
+          "reason": "财务代理可计算，策略适用性未验证"
+        },
+        "BAC": {
+          "symbol": "BAC",
+          "asof": "2025-09-02",
+          "status": "证据不足",
+          "method": "gross_investment_v0",
+          "reason": "会计范围或发行人身份不满足"
+        },
+        "CAT": {
+          "symbol": "CAT",
+          "asof": "2025-09-02",
+          "status": "证据不足",
+          "method": "gross_investment_v0",
+          "reason": "年度不可比或陈旧"
+        },
+        "CRM": {
+          "symbol": "CRM",
+          "asof": "2025-09-02",
+          "status": "证据不足",
+          "method": "gross_investment_v0",
+          "candidate_eligible": true,
+          "gross": 0.28419866314316805,
+          "growth": 0.031105055949029792,
+          "fiscal_end": "2025-01-31",
+          "sources": {
+            "gross_profit": {
+              "start": "2024-02-01",
+              "end": "2025-01-31",
+              "val": 29252000000,
+              "accn": "0001108524-25-000006",
+              "fy": 2025,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2025-03-05",
+              "tag": "GrossProfit",
+              "priority": 0
+            },
+            "assets": {
+              "end": "2025-01-31",
+              "val": 102928000000,
+              "accn": "0001108524-25-000006",
+              "fy": 2025,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2025-03-05",
+              "tag": "Assets",
+              "priority": 0
+            },
+            "prior_assets": {
+              "end": "2024-01-31",
+              "val": 99823000000,
+              "accn": "0001108524-25-000006",
+              "fy": 2025,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2025-03-05",
+              "frame": "CY2023Q4I",
+              "tag": "Assets",
+              "priority": 0
+            }
+          },
+          "reason": "财务代理可计算，策略适用性未验证"
+        },
+        "CSCO": {
+          "symbol": "CSCO",
+          "asof": "2025-09-02",
+          "status": "证据不足",
+          "method": "gross_investment_v0",
+          "candidate_eligible": true,
+          "gross": 0.279938591626277,
+          "growth": 0.2215076778070142,
+          "fiscal_end": "2024-07-27",
+          "sources": {
+            "gross_profit": {
+              "start": "2023-07-30",
+              "end": "2024-07-27",
+              "val": 34828000000,
+              "accn": "0000858877-24-000017",
+              "fy": 2024,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2024-09-05",
+              "tag": "GrossProfit",
+              "priority": 0
+            },
+            "assets": {
+              "end": "2024-07-27",
+              "val": 124413000000,
+              "accn": "0000858877-24-000017",
+              "fy": 2024,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2024-09-05",
+              "tag": "Assets",
+              "priority": 0
+            },
+            "prior_assets": {
+              "end": "2023-07-29",
+              "val": 101852000000,
+              "accn": "0000858877-24-000017",
+              "fy": 2024,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2024-09-05",
+              "frame": "CY2023Q2I",
+              "tag": "Assets",
+              "priority": 0
+            }
+          },
+          "reason": "财务代理可计算，策略适用性未验证"
+        },
+        "CVX": {
+          "symbol": "CVX",
+          "asof": "2025-09-02",
+          "status": "证据不足",
+          "method": "gross_investment_v0",
+          "candidate_eligible": true,
+          "gross": 0.28881675735002216,
+          "growth": -0.01794123043052842,
+          "fiscal_end": "2024-12-31",
+          "sources": {
+            "gross_profit": {
+              "start": "2024-01-01",
+              "end": "2024-12-31",
+              "val": 74208000000,
+              "accn": "0000093410-25-000009",
+              "fy": 2024,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2025-02-21",
+              "derivation": "same_filing_revenue_minus_cost",
+              "component_sources": {
+                "revenue": {
+                  "start": "2024-01-01",
+                  "end": "2024-12-31",
+                  "val": 193414000000,
+                  "accn": "0000093410-25-000009",
+                  "fy": 2024,
+                  "fp": "FY",
+                  "form": "10-K",
+                  "filed": "2025-02-21",
+                  "tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+                  "priority": 0
+                },
+                "cost": {
+                  "start": "2024-01-01",
+                  "end": "2024-12-31",
+                  "val": 119206000000,
+                  "accn": "0000093410-25-000009",
+                  "fy": 2024,
+                  "fp": "FY",
+                  "form": "10-K",
+                  "filed": "2025-02-21",
+                  "tag": "CostOfGoodsAndServicesSold"
+                }
+              },
+              "tag": "GrossProfit",
+              "priority": 0
+            },
+            "assets": {
+              "end": "2024-12-31",
+              "val": 256938000000,
+              "accn": "0000093410-25-000009",
+              "fy": 2024,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2025-02-21",
+              "tag": "Assets",
+              "priority": 0
+            },
+            "prior_assets": {
+              "end": "2023-12-31",
+              "val": 261632000000,
+              "accn": "0000093410-25-000009",
+              "fy": 2024,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2025-02-21",
+              "frame": "CY2023Q4I",
+              "tag": "Assets",
+              "priority": 0
+            }
+          },
+          "reason": "财务代理可计算，策略适用性未验证"
+        },
+        "GE": {
+          "symbol": "GE",
+          "asof": "2025-09-02",
+          "status": "证据不足",
+          "method": "gross_investment_v0",
+          "reason": "无同年度毛利润/资产"
+        },
+        "GS": {
+          "symbol": "GS",
+          "asof": "2025-09-02",
+          "status": "证据不足",
+          "method": "gross_investment_v0",
+          "reason": "会计范围或发行人身份不满足"
+        },
+        "HD": {
+          "symbol": "HD",
+          "asof": "2025-09-02",
+          "status": "证据不足",
+          "method": "gross_investment_v0",
+          "candidate_eligible": true,
+          "gross": 0.5546041885579334,
+          "growth": 0.25596498105318166,
+          "fiscal_end": "2025-02-02",
+          "sources": {
+            "gross_profit": {
+              "start": "2024-01-29",
+              "end": "2025-02-02",
+              "val": 53308000000,
+              "accn": "0000354950-25-000085",
+              "fy": 2024,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2025-03-21",
+              "tag": "GrossProfit",
+              "priority": 0
+            },
+            "assets": {
+              "end": "2025-02-02",
+              "val": 96119000000,
+              "accn": "0000354950-25-000085",
+              "fy": 2024,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2025-03-21",
+              "tag": "Assets",
+              "priority": 0
+            },
+            "prior_assets": {
+              "end": "2024-01-28",
+              "val": 76530000000,
+              "accn": "0000354950-25-000085",
+              "fy": 2024,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2025-03-21",
+              "frame": "CY2023Q4I",
+              "tag": "Assets",
+              "priority": 0
+            }
+          },
+          "reason": "财务代理可计算，策略适用性未验证"
+        },
+        "IBM": {
+          "symbol": "IBM",
+          "asof": "2025-09-02",
+          "status": "证据不足",
+          "method": "gross_investment_v0",
+          "candidate_eligible": true,
+          "gross": 0.2591652997995261,
+          "growth": 0.014300397068936155,
+          "fiscal_end": "2024-12-31",
+          "sources": {
+            "gross_profit": {
+              "start": "2024-01-01",
+              "end": "2024-12-31",
+              "val": 35551000000,
+              "accn": "0000051143-25-000015",
+              "fy": 2024,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2025-02-25",
+              "tag": "GrossProfit",
+              "priority": 0
+            },
+            "assets": {
+              "end": "2024-12-31",
+              "val": 137175000000,
+              "accn": "0000051143-25-000015",
+              "fy": 2024,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2025-02-25",
+              "tag": "Assets",
+              "priority": 0
+            },
+            "prior_assets": {
+              "end": "2023-12-31",
+              "val": 135241000000,
+              "accn": "0000051143-25-000015",
+              "fy": 2024,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2025-02-25",
+              "frame": "CY2023Q4I",
+              "tag": "Assets",
+              "priority": 0
+            }
+          },
+          "reason": "财务代理可计算，策略适用性未验证"
+        },
+        "INTC": {
+          "symbol": "INTC",
+          "asof": "2025-09-02",
+          "status": "证据不足",
+          "method": "gross_investment_v0",
+          "candidate_eligible": true,
+          "gross": 0.08827645876275543,
+          "growth": 0.025645710229052154,
+          "fiscal_end": "2024-12-28",
+          "sources": {
+            "gross_profit": {
+              "start": "2023-12-31",
+              "end": "2024-12-28",
+              "val": 17345000000,
+              "accn": "0000050863-25-000009",
+              "fy": 2024,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2025-01-31",
+              "tag": "GrossProfit",
+              "priority": 0
+            },
+            "assets": {
+              "end": "2024-12-28",
+              "val": 196485000000,
+              "accn": "0000050863-25-000009",
+              "fy": 2024,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2025-01-31",
+              "tag": "Assets",
+              "priority": 0
+            },
+            "prior_assets": {
+              "end": "2023-12-30",
+              "val": 191572000000,
+              "accn": "0000050863-25-000009",
+              "fy": 2024,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2025-01-31",
+              "frame": "CY2023Q4I",
+              "tag": "Assets",
+              "priority": 0
+            }
+          },
+          "reason": "财务代理可计算，策略适用性未验证"
+        },
+        "KO": {
+          "symbol": "KO",
+          "asof": "2025-09-02",
+          "status": "证据不足",
+          "method": "gross_investment_v0",
+          "candidate_eligible": true,
+          "gross": 0.28580095276929657,
+          "growth": 0.029129095319488707,
+          "fiscal_end": "2024-12-31",
+          "sources": {
+            "gross_profit": {
+              "start": "2024-01-01",
+              "end": "2024-12-31",
+              "val": 28737000000,
+              "accn": "0000021344-25-000011",
+              "fy": 2024,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2025-02-20",
+              "tag": "GrossProfit",
+              "priority": 0
+            },
+            "assets": {
+              "end": "2024-12-31",
+              "val": 100549000000,
+              "accn": "0000021344-25-000011",
+              "fy": 2024,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2025-02-20",
+              "tag": "Assets",
+              "priority": 0
+            },
+            "prior_assets": {
+              "end": "2023-12-31",
+              "val": 97703000000,
+              "accn": "0000021344-25-000011",
+              "fy": 2024,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2025-02-20",
+              "tag": "Assets",
+              "priority": 0
+            }
+          },
+          "reason": "财务代理可计算，策略适用性未验证"
+        },
+        "MRK": {
+          "symbol": "MRK",
+          "asof": "2025-09-02",
+          "status": "证据不足",
+          "method": "gross_investment_v0",
+          "candidate_eligible": true,
+          "gross": 0.4182108517070005,
+          "growth": 0.09778298570424182,
+          "fiscal_end": "2024-12-31",
+          "sources": {
+            "gross_profit": {
+              "start": "2024-01-01",
+              "end": "2024-12-31",
+              "val": 48975000000,
+              "accn": "0001628280-25-007732",
+              "fy": 2024,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2025-02-25",
+              "derivation": "same_filing_revenue_minus_cost",
+              "component_sources": {
+                "revenue": {
+                  "start": "2024-01-01",
+                  "end": "2024-12-31",
+                  "val": 64168000000,
+                  "accn": "0001628280-25-007732",
+                  "fy": 2024,
+                  "fp": "FY",
+                  "form": "10-K",
+                  "filed": "2025-02-25",
+                  "tag": "Revenues",
+                  "priority": 1
+                },
+                "cost": {
+                  "start": "2024-01-01",
+                  "end": "2024-12-31",
+                  "val": 15193000000,
+                  "accn": "0001628280-25-007732",
+                  "fy": 2024,
+                  "fp": "FY",
+                  "form": "10-K",
+                  "filed": "2025-02-25",
+                  "tag": "CostOfGoodsAndServicesSold"
+                }
+              },
+              "tag": "GrossProfit",
+              "priority": 0
+            },
+            "assets": {
+              "end": "2024-12-31",
+              "val": 117106000000,
+              "accn": "0001628280-25-007732",
+              "fy": 2024,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2025-02-25",
+              "tag": "Assets",
+              "priority": 0
+            },
+            "prior_assets": {
+              "end": "2023-12-31",
+              "val": 106675000000,
+              "accn": "0001628280-25-007732",
+              "fy": 2024,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2025-02-25",
+              "frame": "CY2023Q4I",
+              "tag": "Assets",
+              "priority": 0
+            }
+          },
+          "reason": "财务代理可计算，策略适用性未验证"
+        },
+        "MS": {
+          "symbol": "MS",
+          "asof": "2025-09-02",
+          "status": "证据不足",
+          "method": "gross_investment_v0",
+          "reason": "会计范围或发行人身份不满足"
+        },
+        "PEP": {
+          "symbol": "PEP",
+          "asof": "2025-09-02",
+          "status": "证据不足",
+          "method": "gross_investment_v0",
+          "candidate_eligible": true,
+          "gross": 0.5037851749826575,
+          "growth": -0.010229364645007233,
+          "fiscal_end": "2024-12-28",
+          "sources": {
+            "gross_profit": {
+              "start": "2023-12-31",
+              "end": "2024-12-28",
+              "val": 50110000000,
+              "accn": "0000077476-25-000007",
+              "fy": 2024,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2025-02-04",
+              "tag": "GrossProfit",
+              "priority": 0
+            },
+            "assets": {
+              "end": "2024-12-28",
+              "val": 99467000000,
+              "accn": "0000077476-25-000007",
+              "fy": 2024,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2025-02-04",
+              "tag": "Assets",
+              "priority": 0
+            },
+            "prior_assets": {
+              "end": "2023-12-30",
+              "val": 100495000000,
+              "accn": "0000077476-25-000007",
+              "fy": 2024,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2025-02-04",
+              "tag": "Assets",
+              "priority": 0
+            }
+          },
+          "reason": "财务代理可计算，策略适用性未验证"
+        },
+        "PG": {
+          "symbol": "PG",
+          "asof": "2025-09-02",
+          "status": "证据不足",
+          "method": "gross_investment_v0",
+          "candidate_eligible": true,
+          "gross": 0.3443236898212104,
+          "growth": 0.023379913377461703,
+          "fiscal_end": "2025-06-30",
+          "sources": {
+            "gross_profit": {
+              "start": "2024-07-01",
+              "end": "2025-06-30",
+              "val": 43120000000,
+              "accn": "0000080424-25-000076",
+              "fy": 2025,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2025-08-04",
+              "derivation": "same_filing_revenue_minus_cost",
+              "component_sources": {
+                "revenue": {
+                  "start": "2024-07-01",
+                  "end": "2025-06-30",
+                  "val": 84284000000,
+                  "accn": "0000080424-25-000076",
+                  "fy": 2025,
+                  "fp": "FY",
+                  "form": "10-K",
+                  "filed": "2025-08-04",
+                  "tag": "Revenues",
+                  "priority": 1
+                },
+                "cost": {
+                  "start": "2024-07-01",
+                  "end": "2025-06-30",
+                  "val": 41164000000,
+                  "accn": "0000080424-25-000076",
+                  "fy": 2025,
+                  "fp": "FY",
+                  "form": "10-K",
+                  "filed": "2025-08-04",
+                  "tag": "CostOfGoodsAndServicesSold"
+                }
+              },
+              "tag": "GrossProfit",
+              "priority": 0
+            },
+            "assets": {
+              "end": "2025-06-30",
+              "val": 125231000000,
+              "accn": "0000080424-25-000076",
+              "fy": 2025,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2025-08-04",
+              "tag": "Assets",
+              "priority": 0
+            },
+            "prior_assets": {
+              "end": "2024-06-30",
+              "val": 122370000000,
+              "accn": "0000080424-25-000076",
+              "fy": 2025,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2025-08-04",
+              "frame": "CY2024Q2I",
+              "tag": "Assets",
+              "priority": 0
+            }
+          },
+          "reason": "财务代理可计算，策略适用性未验证"
+        },
+        "QCOM": {
+          "symbol": "QCOM",
+          "asof": "2025-09-02",
+          "status": "证据不足",
+          "method": "gross_investment_v0",
+          "candidate_eligible": true,
+          "gross": 0.3971062842223592,
+          "growth": 0.08060344827586197,
+          "fiscal_end": "2024-09-29",
+          "sources": {
+            "gross_profit": {
+              "start": "2023-09-25",
+              "end": "2024-09-29",
+              "val": 21902000000,
+              "accn": "0000804328-24-000075",
+              "fy": 2024,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2024-11-06",
+              "derivation": "same_filing_revenue_minus_cost",
+              "component_sources": {
+                "revenue": {
+                  "start": "2023-09-25",
+                  "end": "2024-09-29",
+                  "val": 38962000000,
+                  "accn": "0000804328-24-000075",
+                  "fy": 2024,
+                  "fp": "FY",
+                  "form": "10-K",
+                  "filed": "2024-11-06",
+                  "tag": "Revenues",
+                  "priority": 1
+                },
+                "cost": {
+                  "start": "2023-09-25",
+                  "end": "2024-09-29",
+                  "val": 17060000000,
+                  "accn": "0000804328-24-000075",
+                  "fy": 2024,
+                  "fp": "FY",
+                  "form": "10-K",
+                  "filed": "2024-11-06",
+                  "tag": "CostOfRevenue"
+                }
+              },
+              "tag": "GrossProfit",
+              "priority": 0
+            },
+            "assets": {
+              "end": "2024-09-29",
+              "val": 55154000000,
+              "accn": "0000804328-24-000075",
+              "fy": 2024,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2024-11-06",
+              "tag": "Assets",
+              "priority": 0
+            },
+            "prior_assets": {
+              "end": "2023-09-24",
+              "val": 51040000000,
+              "accn": "0000804328-24-000075",
+              "fy": 2024,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2024-11-06",
+              "frame": "CY2023Q3I",
+              "tag": "Assets",
+              "priority": 0
+            }
+          },
+          "reason": "财务代理可计算，策略适用性未验证"
+        },
+        "TXN": {
+          "symbol": "TXN",
+          "asof": "2025-09-02",
+          "status": "证据不足",
+          "method": "gross_investment_v0",
+          "candidate_eligible": true,
+          "gross": 0.2561040862879833,
+          "growth": 0.09771856065289963,
+          "fiscal_end": "2024-12-31",
+          "sources": {
+            "gross_profit": {
+              "start": "2024-01-01",
+              "end": "2024-12-31",
+              "val": 9094000000,
+              "accn": "0000097476-25-000007",
+              "fy": 2024,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2025-02-14",
+              "tag": "GrossProfit",
+              "priority": 0
+            },
+            "assets": {
+              "end": "2024-12-31",
+              "val": 35509000000,
+              "accn": "0000097476-25-000007",
+              "fy": 2024,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2025-02-14",
+              "tag": "Assets",
+              "priority": 0
+            },
+            "prior_assets": {
+              "end": "2023-12-31",
+              "val": 32348000000,
+              "accn": "0000097476-25-000007",
+              "fy": 2024,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2025-02-14",
+              "frame": "CY2023Q4I",
+              "tag": "Assets",
+              "priority": 0
+            }
+          },
+          "reason": "财务代理可计算，策略适用性未验证"
+        },
+        "UNH": {
+          "symbol": "UNH",
+          "asof": "2025-09-02",
+          "status": "证据不足",
+          "method": "gross_investment_v0",
+          "candidate_eligible": true,
+          "gross": 1.1854176305325903,
+          "growth": 0.0897194213064445,
+          "fiscal_end": "2024-12-31",
+          "sources": {
+            "gross_profit": {
+              "start": "2024-01-01",
+              "end": "2024-12-31",
+              "val": 353584000000,
+              "accn": "0000731766-25-000063",
+              "fy": 2024,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2025-02-27",
+              "derivation": "same_filing_revenue_minus_cost",
+              "component_sources": {
+                "revenue": {
+                  "start": "2024-01-01",
+                  "end": "2024-12-31",
+                  "val": 400278000000,
+                  "accn": "0000731766-25-000063",
+                  "fy": 2024,
+                  "fp": "FY",
+                  "form": "10-K",
+                  "filed": "2025-02-27",
+                  "tag": "Revenues",
+                  "priority": 1
+                },
+                "cost": {
+                  "start": "2024-01-01",
+                  "end": "2024-12-31",
+                  "val": 46694000000,
+                  "accn": "0000731766-25-000063",
+                  "fy": 2024,
+                  "fp": "FY",
+                  "form": "10-K",
+                  "filed": "2025-02-27",
+                  "tag": "CostOfGoodsAndServicesSold"
+                }
+              },
+              "tag": "GrossProfit",
+              "priority": 0
+            },
+            "assets": {
+              "end": "2024-12-31",
+              "val": 298278000000,
+              "accn": "0000731766-25-000063",
+              "fy": 2024,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2025-02-27",
+              "tag": "Assets",
+              "priority": 0
+            },
+            "prior_assets": {
+              "end": "2023-12-31",
+              "val": 273720000000,
+              "accn": "0000731766-25-000063",
+              "fy": 2024,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2025-02-27",
+              "tag": "Assets",
+              "priority": 0
+            }
+          },
+          "reason": "财务代理可计算，策略适用性未验证"
+        }
+      }
+    }
+  },
+  "random10": {
+    "coverage": [
+      {
+        "day": "2025-09-02",
+        "eligible": [
+          "ACN",
+          "GILD",
+          "LMT",
+          "LOW",
+          "NKE"
+        ],
+        "selected": {
+          "gross": [
+            "LOW",
+            "NKE"
+          ],
+          "combined": [
+            "GILD",
+            "LOW"
+          ],
+          "eligible": [
+            "ACN",
+            "GILD",
+            "LMT",
+            "LOW",
+            "NKE"
+          ]
+        }
+      },
+      {
+        "day": "2025-09-30",
+        "eligible": [
+          "ACN",
+          "GILD",
+          "LMT",
+          "LOW",
+          "NKE"
+        ],
+        "selected": {
+          "gross": [
+            "LOW",
+            "NKE"
+          ],
+          "combined": [
+            "GILD",
+            "LOW"
+          ],
+          "eligible": [
+            "ACN",
+            "GILD",
+            "LMT",
+            "LOW",
+            "NKE"
+          ]
+        }
+      },
+      {
+        "day": "2025-10-28",
+        "eligible": [
+          "ACN",
+          "GILD",
+          "LMT",
+          "LOW",
+          "NKE"
+        ],
+        "selected": {
+          "gross": [
+            "LOW",
+            "NKE"
+          ],
+          "combined": [
+            "GILD",
+            "LOW"
+          ],
+          "eligible": [
+            "ACN",
+            "GILD",
+            "LMT",
+            "LOW",
+            "NKE"
+          ]
+        }
+      },
+      {
+        "day": "2025-11-25",
+        "eligible": [
+          "ACN",
+          "GILD",
+          "LMT",
+          "LOW",
+          "NKE"
+        ],
+        "selected": {
+          "gross": [
+            "LOW",
+            "NKE"
+          ],
+          "combined": [
+            "GILD",
+            "LOW"
+          ],
+          "eligible": [
+            "ACN",
+            "GILD",
+            "LMT",
+            "LOW",
+            "NKE"
+          ]
+        }
+      },
+      {
+        "day": "2025-12-24",
+        "eligible": [
+          "ACN",
+          "GILD",
+          "LMT",
+          "LOW",
+          "NKE"
+        ],
+        "selected": {
+          "gross": [
+            "LOW",
+            "NKE"
+          ],
+          "combined": [
+            "GILD",
+            "LOW"
+          ],
+          "eligible": [
+            "ACN",
+            "GILD",
+            "LMT",
+            "LOW",
+            "NKE"
+          ]
+        }
+      },
+      {
+        "day": "2026-01-26",
+        "eligible": [
+          "ACN",
+          "GILD",
+          "LMT",
+          "LOW",
+          "NKE"
+        ],
+        "selected": {
+          "gross": [
+            "LOW",
+            "NKE"
+          ],
+          "combined": [
+            "GILD",
+            "LOW"
+          ],
+          "eligible": [
+            "ACN",
+            "GILD",
+            "LMT",
+            "LOW",
+            "NKE"
+          ]
+        }
+      },
+      {
+        "day": "2026-02-24",
+        "eligible": [
+          "ACN",
+          "GILD",
+          "LMT",
+          "LOW",
+          "NKE"
+        ],
+        "selected": {
+          "gross": [
+            "LOW",
+            "NKE"
+          ],
+          "combined": [
+            "GILD",
+            "LOW"
+          ],
+          "eligible": [
+            "ACN",
+            "GILD",
+            "LMT",
+            "LOW",
+            "NKE"
+          ]
+        }
+      },
+      {
+        "day": "2026-03-24",
+        "eligible": [
+          "ACN",
+          "GILD",
+          "LMT",
+          "LOW",
+          "NKE"
+        ],
+        "selected": {
+          "gross": [
+            "NKE",
+            "LOW"
+          ],
+          "combined": [
+            "NKE",
+            "GILD"
+          ],
+          "eligible": [
+            "ACN",
+            "GILD",
+            "LMT",
+            "LOW",
+            "NKE"
+          ]
+        }
+      },
+      {
+        "day": "2026-04-22",
+        "eligible": [
+          "ACN",
+          "GILD",
+          "LMT",
+          "LOW",
+          "NKE"
+        ],
+        "selected": {
+          "gross": [
+            "NKE",
+            "LOW"
+          ],
+          "combined": [
+            "NKE",
+            "GILD"
+          ],
+          "eligible": [
+            "ACN",
+            "GILD",
+            "LMT",
+            "LOW",
+            "NKE"
+          ]
+        }
+      },
+      {
+        "day": "2026-05-20",
+        "eligible": [
+          "ACN",
+          "GILD",
+          "LMT",
+          "LOW",
+          "NKE"
+        ],
+        "selected": {
+          "gross": [
+            "NKE",
+            "LOW"
+          ],
+          "combined": [
+            "NKE",
+            "GILD"
+          ],
+          "eligible": [
+            "ACN",
+            "GILD",
+            "LMT",
+            "LOW",
+            "NKE"
+          ]
+        }
+      },
+      {
+        "day": "2026-06-18",
+        "eligible": [
+          "ACN",
+          "GILD",
+          "LMT",
+          "LOW",
+          "NKE"
+        ],
+        "selected": {
+          "gross": [
+            "NKE",
+            "LOW"
+          ],
+          "combined": [
+            "NKE",
+            "GILD"
+          ],
+          "eligible": [
+            "ACN",
+            "GILD",
+            "LMT",
+            "LOW",
+            "NKE"
+          ]
+        }
+      },
+      {
+        "day": "2026-07-20",
+        "eligible": [
+          "ACN",
+          "GILD",
+          "LMT",
+          "LOW",
+          "NKE"
+        ],
+        "selected": {
+          "gross": [
+            "LOW",
+            "NKE"
+          ],
+          "combined": [
+            "GILD",
+            "NKE"
+          ],
+          "eligible": [
+            "ACN",
+            "GILD",
+            "LMT",
+            "LOW",
+            "NKE"
+          ]
+        }
+      },
+      {
+        "day": "2026-08-17",
+        "eligible": [
+          "ACN",
+          "GILD",
+          "LMT",
+          "LOW",
+          "NKE"
+        ],
+        "selected": {
+          "gross": [
+            "LOW",
+            "NKE"
+          ],
+          "combined": [
+            "GILD",
+            "NKE"
+          ],
+          "eligible": [
+            "ACN",
+            "GILD",
+            "LMT",
+            "LOW",
+            "NKE"
+          ]
+        }
+      }
+    ],
+    "example": {
+      "day": "2025-09-02",
+      "judgments": {
+        "ACN": {
+          "symbol": "ACN",
+          "asof": "2025-09-02",
+          "status": "证据不足",
+          "method": "gross_investment_v0",
+          "candidate_eligible": true,
+          "gross": 0.37835549697766213,
+          "growth": 0.0914631691625214,
+          "fiscal_end": "2024-08-31",
+          "sources": {
+            "gross_profit": {
+              "start": "2023-09-01",
+              "end": "2024-08-31",
+              "val": 21162317000,
+              "accn": "0001467373-24-000278",
+              "fy": 2024,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2024-10-10",
+              "derivation": "same_filing_revenue_minus_cost",
+              "component_sources": {
+                "revenue": {
+                  "start": "2023-09-01",
+                  "end": "2024-08-31",
+                  "val": 64896464000,
+                  "accn": "0001467373-24-000278",
+                  "fy": 2024,
+                  "fp": "FY",
+                  "form": "10-K",
+                  "filed": "2024-10-10",
+                  "tag": "Revenues",
+                  "priority": 1
+                },
+                "cost": {
+                  "start": "2023-09-01",
+                  "end": "2024-08-31",
+                  "val": 43734147000,
+                  "accn": "0001467373-24-000278",
+                  "fy": 2024,
+                  "fp": "FY",
+                  "form": "10-K",
+                  "filed": "2024-10-10",
+                  "tag": "CostOfGoodsAndServicesSold"
+                }
+              },
+              "tag": "GrossProfit",
+              "priority": 0
+            },
+            "assets": {
+              "end": "2024-08-31",
+              "val": 55932363000,
+              "accn": "0001467373-24-000278",
+              "fy": 2024,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2024-10-10",
+              "tag": "Assets",
+              "priority": 0
+            },
+            "prior_assets": {
+              "end": "2023-08-31",
+              "val": 51245305000,
+              "accn": "0001467373-24-000278",
+              "fy": 2024,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2024-10-10",
+              "frame": "CY2023Q3I",
+              "tag": "Assets",
+              "priority": 0
+            }
+          },
+          "reason": "财务代理可计算，策略适用性未验证"
+        },
+        "GILD": {
+          "symbol": "GILD",
+          "asof": "2025-09-02",
+          "status": "证据不足",
+          "method": "gross_investment_v0",
+          "candidate_eligible": true,
+          "gross": 0.38143910500889905,
+          "growth": -0.050382293762575414,
+          "fiscal_end": "2024-12-31",
+          "sources": {
+            "gross_profit": {
+              "start": "2024-01-01",
+              "end": "2024-12-31",
+              "val": 22503000000,
+              "accn": "0000882095-25-000006",
+              "fy": 2024,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2025-02-28",
+              "derivation": "same_filing_revenue_minus_cost",
+              "component_sources": {
+                "revenue": {
+                  "start": "2024-01-01",
+                  "end": "2024-12-31",
+                  "val": 28754000000,
+                  "accn": "0000882095-25-000006",
+                  "fy": 2024,
+                  "fp": "FY",
+                  "form": "10-K",
+                  "filed": "2025-02-28",
+                  "tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+                  "priority": 0
+                },
+                "cost": {
+                  "start": "2024-01-01",
+                  "end": "2024-12-31",
+                  "val": 6251000000,
+                  "accn": "0000882095-25-000006",
+                  "fy": 2024,
+                  "fp": "FY",
+                  "form": "10-K",
+                  "filed": "2025-02-28",
+                  "tag": "CostOfGoodsAndServicesSold"
+                }
+              },
+              "tag": "GrossProfit",
+              "priority": 0
+            },
+            "assets": {
+              "end": "2024-12-31",
+              "val": 58995000000,
+              "accn": "0000882095-25-000006",
+              "fy": 2024,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2025-02-28",
+              "tag": "Assets",
+              "priority": 0
+            },
+            "prior_assets": {
+              "end": "2023-12-31",
+              "val": 62125000000,
+              "accn": "0000882095-25-000006",
+              "fy": 2024,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2025-02-28",
+              "frame": "CY2023Q4I",
+              "tag": "Assets",
+              "priority": 0
+            }
+          },
+          "reason": "财务代理可计算，策略适用性未验证"
+        },
+        "INTU": {
+          "symbol": "INTU",
+          "asof": "2025-09-02",
+          "status": "证据不足",
+          "method": "gross_investment_v0",
+          "reason": "无同年度毛利润/资产"
+        },
+        "LMT": {
+          "symbol": "LMT",
+          "asof": "2025-09-02",
+          "status": "证据不足",
+          "method": "gross_investment_v0",
+          "candidate_eligible": true,
+          "gross": 0.12460218997788446,
+          "growth": 0.060260027451578546,
+          "fiscal_end": "2024-12-31",
+          "sources": {
+            "gross_profit": {
+              "start": "2024-01-01",
+              "end": "2024-12-31",
+              "val": 6930000000,
+              "accn": "0000936468-25-000009",
+              "fy": 2024,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2025-01-28",
+              "tag": "GrossProfit",
+              "priority": 0
+            },
+            "assets": {
+              "end": "2024-12-31",
+              "val": 55617000000,
+              "accn": "0000936468-25-000009",
+              "fy": 2024,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2025-01-28",
+              "tag": "Assets",
+              "priority": 0
+            },
+            "prior_assets": {
+              "end": "2023-12-31",
+              "val": 52456000000,
+              "accn": "0000936468-25-000009",
+              "fy": 2024,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2025-01-28",
+              "frame": "CY2023Q4I",
+              "tag": "Assets",
+              "priority": 0
+            }
+          },
+          "reason": "财务代理可计算，策略适用性未验证"
+        },
+        "LOW": {
+          "symbol": "LOW",
+          "asof": "2025-09-02",
+          "status": "证据不足",
+          "method": "gross_investment_v0",
+          "candidate_eligible": true,
+          "gross": 0.6467681314092153,
+          "growth": 0.03127168321569562,
+          "fiscal_end": "2025-01-31",
+          "sources": {
+            "gross_profit": {
+              "start": "2024-02-03",
+              "end": "2025-01-31",
+              "val": 27877000000,
+              "accn": "0000060667-25-000049",
+              "fy": 2024,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2025-03-24",
+              "tag": "GrossProfit",
+              "priority": 0
+            },
+            "assets": {
+              "end": "2025-01-31",
+              "val": 43102000000,
+              "accn": "0000060667-25-000049",
+              "fy": 2024,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2025-03-24",
+              "tag": "Assets",
+              "priority": 0
+            },
+            "prior_assets": {
+              "end": "2024-02-02",
+              "val": 41795000000,
+              "accn": "0000060667-25-000049",
+              "fy": 2024,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2025-03-24",
+              "frame": "CY2023Q4I",
+              "tag": "Assets",
+              "priority": 0
+            }
+          },
+          "reason": "财务代理可计算，策略适用性未验证"
+        },
+        "MCD": {
+          "symbol": "MCD",
+          "asof": "2025-09-02",
+          "status": "证据不足",
+          "method": "gross_investment_v0",
+          "reason": "无同年度毛利润/资产"
+        },
+        "NEE": {
+          "symbol": "NEE",
+          "asof": "2025-09-02",
+          "status": "证据不足",
+          "method": "gross_investment_v0",
+          "reason": "会计范围或发行人身份不满足"
+        },
+        "NKE": {
+          "symbol": "NKE",
+          "asof": "2025-09-02",
+          "status": "证据不足",
+          "method": "gross_investment_v0",
+          "candidate_eligible": true,
+          "gross": 0.5410208042866126,
+          "growth": -0.04017318289162952,
+          "fiscal_end": "2025-05-31",
+          "sources": {
+            "gross_profit": {
+              "start": "2024-06-01",
+              "end": "2025-05-31",
+              "val": 19790000000,
+              "accn": "0000320187-25-000047",
+              "fy": 2025,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2025-07-17",
+              "tag": "GrossProfit",
+              "priority": 0
+            },
+            "assets": {
+              "end": "2025-05-31",
+              "val": 36579000000,
+              "accn": "0000320187-25-000047",
+              "fy": 2025,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2025-07-17",
+              "tag": "Assets",
+              "priority": 0
+            },
+            "prior_assets": {
+              "end": "2024-05-31",
+              "val": 38110000000,
+              "accn": "0000320187-25-000047",
+              "fy": 2025,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2025-07-17",
+              "frame": "CY2024Q2I",
+              "tag": "Assets",
+              "priority": 0
+            }
+          },
+          "reason": "财务代理可计算，策略适用性未验证"
+        },
+        "PLD": {
+          "symbol": "PLD",
+          "asof": "2025-09-02",
+          "status": "证据不足",
+          "method": "gross_investment_v0",
+          "reason": "会计范围或发行人身份不满足"
+        },
+        "SO": {
+          "symbol": "SO",
+          "asof": "2025-09-02",
+          "status": "证据不足",
+          "method": "gross_investment_v0",
+          "reason": "会计范围或发行人身份不满足"
+        }
+      }
+    }
+  }
+}
