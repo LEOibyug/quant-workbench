@@ -1,0 +1,46 @@
+{
+  "title": [
+    "Asset Growth and the Cross‐Section of Stock Returns"
+  ],
+  "author": [
+    {
+      "given": "MICHAEL J.",
+      "family": "COOPER",
+      "sequence": "first",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "HUSEYIN",
+      "family": "GULEN",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "MICHAEL J.",
+      "family": "SCHILL",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    }
+  ],
+  "DOI": "10.1111/j.1540-6261.2008.01370.x",
+  "abstract": "<jats:title>ABSTRACT</jats:title><jats:p>We test for firm‐level asset investment effects in returns by examining the cross‐sectional relation between firm asset growth and subsequent stock returns. Asset growth rates are strong predictors of future abnormal returns. Asset growth retains its forecasting ability even on large capitalization stocks. When we compare asset growth rates with the previously documented determinants of the cross‐section of returns (i.e., book‐to‐market ratios, firm capitalization, lagged returns, accruals, and other growth measures), we find that a firm's annual asset growth rate emerges as an economically and statistically significant predictor of the cross‐section of U.S. stock returns.</jats:p>",
+  "URL": "https://doi.org/10.1111/j.1540-6261.2008.01370.x"
+}
