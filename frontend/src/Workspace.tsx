@@ -4,6 +4,7 @@ import type { Dataset } from "./types";
 import { SimulationPanel } from "./SimulationPanel";
 import { api } from "./api";
 import { strategyNames } from "./types";
+import { LivePreview } from "./LivePreview";
 interface Deployment {
   horizon_type?: "short" | "long";
   position_config?: PositionDeployment["position_config"];
@@ -36,6 +37,7 @@ export function Workspace() {
     new URLSearchParams(location.search).get("deployment") || "",
   );
   const [error, setError] = useState("");
+  const [live, setLive] = useState<Deployment | null>(null);
   useEffect(() => {
     let active = true;
     const refresh = () => {
@@ -63,6 +65,7 @@ export function Workspace() {
     };
   }, []);
   const selected = items.find((d) => d.id === id);
+  if (live) return <LivePreview deployment={live} onBack={() => setLive(null)} />;
   return (
     <>
       <div className="page-title">
@@ -96,6 +99,12 @@ export function Workspace() {
             <p>
               {selected.name} · 版本 {selected.version}
             </p>
+            <div className="live-entry" data-report-exclude>
+              <button type="button" onClick={() => setLive(structuredClone(selected))}>
+                应用策略到 live
+              </button>
+              <span className="muted">查看账户与策略部署</span>
+            </div>
             <small>
               发布时间：{new Date(selected.published_at).toLocaleString()}
             </small>

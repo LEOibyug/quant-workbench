@@ -748,6 +748,8 @@ pre {
 
 .report-export { display: flex; align-items: center; flex-wrap: wrap; gap: 10px; padding: 16px 0; }
 .report-export small { color: var(--muted); }
+.live-entry { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; margin: 16px 0; }
+.live-summary { display: flex; flex-wrap: wrap; gap: 16px 40px; }
 @media print {
   @page { size: A3 portrait; margin: 10mm; }
   html, body { print-color-adjust: exact; -webkit-print-color-adjust: exact; }
