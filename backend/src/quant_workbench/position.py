@@ -167,7 +167,12 @@ def simulate_positions(
     research_distributions=None,
     research_dividends=None,
     research_cash_interest=None,
+    research_risk_budget=None,
 ):
+    if research_risk_budget is not None and (
+        not daily_bars or config.allocation.enabled or config.portfolio_policy != "legacy"
+    ):
+        raise ValueError("Research risk budget requires daily legacy execution")
     if research_cash_interest is not None and (
         not daily_bars or config.allocation.enabled or config.portfolio_policy != "legacy"
         or research_dividends is not None or research_distributions is not None
@@ -253,6 +258,7 @@ def simulate_positions(
     forced_exit = {s: False for s in symbols}
     halted = False
     allocation_decisions = []
+    research_budget_decisions = []
     allocation_returns = daily.pivot(index="day", columns="symbol", values="close").pct_change(
         fill_method=None
     )
@@ -495,6 +501,19 @@ def simulate_positions(
                 signals.append(
                     dict(date=day, symbol=symbol, target_weight=weight, forecast=forecast)
                 )
+            if research_risk_budget is not None:
+                cap = float(research_risk_budget(day, equity, peak))
+                if not math.isfinite(cap) or not 0 <= cap <= 1:
+                    raise ValueError("Invalid research risk budget")
+                before_budget = sum(targets.values())
+                scale = min(1.0, cap / max(before_budget, 1e-12))
+                for s in symbols:
+                    targets[s] *= scale
+                    target_shares[s] = math.floor(equity * targets[s] / float(prices.loc[s, "close"]))
+                # Preserve raw model forecast while reporting the executable target.
+                for signal in signals[-len(symbols):]:
+                    signal["target_weight"] = targets[signal["symbol"]]
+                research_budget_decisions.append(dict(date=day, equity=equity, peak=peak, cap=cap, raw_budget=before_budget, final_budget=sum(targets.values())))
             if config.allocation.enabled:
                 eligible = {s: (0.0 if halted or forced_exit[s] else targets[s]) for s in symbols}
                 current = {s: shares[s] * float(prices.loc[s, "close"]) / equity for s in symbols}
@@ -677,12 +696,14 @@ def simulate_positions(
             else {}
         ),
         **({"research_cash_interest": {**research_cash_interest.snapshot(), "events": research_cash_interest.audit}} if research_cash_interest is not None else {}),
+        **({"research_risk_budget": research_budget_decisions} if research_risk_budget is not None else {}),
         config=config.model_dump(),
         start=start,
         end=end,
         allocation_decisions=allocation_decisions,
         portfolio_enabled=pooled_execution,
         engine_version=("daily-position-v3-daily" if daily_bars else "daily-position-v2")
+        + ("-research-risk-budget-v1" if research_risk_budget is not None else "")
         + ("-research-cash-interest-v1" if research_cash_interest is not None else "")
         + ("-research-dividends-v1" if research_dividends is not None else "")
         + ("-portfolio-v1" if config.allocation.enabled else "")

@@ -1,0 +1,44 @@
+[
+  {
+    "pool": "random10",
+    "cost_multiplier": 1,
+    "cushion_minus_cash_pp": -4.505337850746805,
+    "cushion_minus_constant_pp": -1.3146887486898535,
+    "cushion_minus_uncapped_pp": 10.782375963779423
+  },
+  {
+    "pool": "random10",
+    "cost_multiplier": 2,
+    "cushion_minus_cash_pp": -7.969902080861635,
+    "cushion_minus_constant_pp": -2.47458065942474,
+    "cushion_minus_uncapped_pp": 7.357682864119974
+  },
+  {
+    "pool": "transfer12",
+    "cost_multiplier": 1,
+    "cushion_minus_cash_pp": -3.5227867278325498,
+    "cushion_minus_constant_pp": -1.9688406297306393,
+    "cushion_minus_uncapped_pp": 7.342091187319233
+  },
+  {
+    "pool": "transfer12",
+    "cost_multiplier": 2,
+    "cushion_minus_cash_pp": -6.4338514230643185,
+    "cushion_minus_constant_pp": -1.8306731284985176,
+    "cushion_minus_uncapped_pp": 4.732656773121935
+  },
+  {
+    "pool": "new12",
+    "cost_multiplier": 1,
+    "cushion_minus_cash_pp": -7.316431417956238,
+    "cushion_minus_constant_pp": -2.4087622069367782,
+    "cushion_minus_uncapped_pp": 6.660506339642168
+  },
+  {
+    "pool": "new12",
+    "cost_multiplier": 2,
+    "cushion_minus_cash_pp": -10.851715929304095,
+    "cushion_minus_constant_pp": -3.696246730616682,
+    "cushion_minus_uncapped_pp": 3.6801871154364063
+  }
+]
