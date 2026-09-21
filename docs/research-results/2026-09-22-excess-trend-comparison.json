@@ -1,0 +1,218 @@
+[
+  {
+    "pool": "random10",
+    "start": "2022-09-01",
+    "end": "2023-09-01",
+    "cost_multiplier": 1,
+    "excess_minus_cash_pp": -4.637393060555606,
+    "excess_minus_raw_pp": 0.8085031346328209,
+    "excess_minus_unfiltered_pp": -0.4624535025025689
+  },
+  {
+    "pool": "random10",
+    "start": "2022-09-01",
+    "end": "2023-09-01",
+    "cost_multiplier": 2,
+    "excess_minus_cash_pp": -4.848502247866026,
+    "excess_minus_raw_pp": 0.8109971145395134,
+    "excess_minus_unfiltered_pp": -0.5548986084207619
+  },
+  {
+    "pool": "random10",
+    "start": "2023-09-01",
+    "end": "2024-09-01",
+    "cost_multiplier": 1,
+    "excess_minus_cash_pp": -6.21136994907554,
+    "excess_minus_raw_pp": -3.7505568958817737,
+    "excess_minus_unfiltered_pp": -10.717168926632215
+  },
+  {
+    "pool": "random10",
+    "start": "2023-09-01",
+    "end": "2024-09-01",
+    "cost_multiplier": 2,
+    "excess_minus_cash_pp": -6.413653546347975,
+    "excess_minus_raw_pp": -3.731176742074327,
+    "excess_minus_unfiltered_pp": -10.663468638619245
+  },
+  {
+    "pool": "random10",
+    "start": "2024-09-01",
+    "end": "2025-09-01",
+    "cost_multiplier": 1,
+    "excess_minus_cash_pp": -5.306725790761768,
+    "excess_minus_raw_pp": 1.3973615467127276,
+    "excess_minus_unfiltered_pp": 2.0352898137375286
+  },
+  {
+    "pool": "random10",
+    "start": "2024-09-01",
+    "end": "2025-09-01",
+    "cost_multiplier": 2,
+    "excess_minus_cash_pp": -5.461784664074232,
+    "excess_minus_raw_pp": 1.4848334129407226,
+    "excess_minus_unfiltered_pp": 2.026980424233882
+  },
+  {
+    "pool": "random10",
+    "start": "2022-09-01",
+    "end": "2025-09-01",
+    "cost_multiplier": 1,
+    "excess_minus_cash_pp": -15.21762975131904,
+    "excess_minus_raw_pp": 3.8169920763985066,
+    "excess_minus_unfiltered_pp": -1.7215756143349914
+  },
+  {
+    "pool": "random10",
+    "start": "2022-09-01",
+    "end": "2025-09-01",
+    "cost_multiplier": 2,
+    "excess_minus_cash_pp": -15.733621884051852,
+    "excess_minus_raw_pp": 3.7856437672364684,
+    "excess_minus_unfiltered_pp": -2.199560435391179
+  },
+  {
+    "pool": "transfer12",
+    "start": "2022-09-01",
+    "end": "2023-09-01",
+    "cost_multiplier": 1,
+    "excess_minus_cash_pp": 0.3038661663896436,
+    "excess_minus_raw_pp": 2.6129203200259132,
+    "excess_minus_unfiltered_pp": 6.837553530456653
+  },
+  {
+    "pool": "transfer12",
+    "start": "2022-09-01",
+    "end": "2023-09-01",
+    "cost_multiplier": 2,
+    "excess_minus_cash_pp": 0.21834513540732736,
+    "excess_minus_raw_pp": 2.6571001107865477,
+    "excess_minus_unfiltered_pp": 6.689160748471323
+  },
+  {
+    "pool": "transfer12",
+    "start": "2023-09-01",
+    "end": "2024-09-01",
+    "cost_multiplier": 1,
+    "excess_minus_cash_pp": 1.979746543601535,
+    "excess_minus_raw_pp": -0.9458019174666701,
+    "excess_minus_unfiltered_pp": -8.14977876362233
+  },
+  {
+    "pool": "transfer12",
+    "start": "2023-09-01",
+    "end": "2024-09-01",
+    "cost_multiplier": 2,
+    "excess_minus_cash_pp": 1.789850883555788,
+    "excess_minus_raw_pp": -0.9522512770336213,
+    "excess_minus_unfiltered_pp": -8.29441783552689
+  },
+  {
+    "pool": "transfer12",
+    "start": "2024-09-01",
+    "end": "2025-09-01",
+    "cost_multiplier": 1,
+    "excess_minus_cash_pp": -1.8340351415987666,
+    "excess_minus_raw_pp": 1.3849736902146415,
+    "excess_minus_unfiltered_pp": 7.196693030185608
+  },
+  {
+    "pool": "transfer12",
+    "start": "2024-09-01",
+    "end": "2025-09-01",
+    "cost_multiplier": 2,
+    "excess_minus_cash_pp": -2.055253164590276,
+    "excess_minus_raw_pp": 1.3882092415426595,
+    "excess_minus_unfiltered_pp": 7.17736173925867
+  },
+  {
+    "pool": "transfer12",
+    "start": "2022-09-01",
+    "end": "2025-09-01",
+    "cost_multiplier": 1,
+    "excess_minus_cash_pp": 0.22275076405069427,
+    "excess_minus_raw_pp": 1.0145169663795741,
+    "excess_minus_unfiltered_pp": 16.079501600865232
+  },
+  {
+    "pool": "transfer12",
+    "start": "2022-09-01",
+    "end": "2025-09-01",
+    "cost_multiplier": 2,
+    "excess_minus_cash_pp": -0.2218691271101747,
+    "excess_minus_raw_pp": 1.0674236745324084,
+    "excess_minus_unfiltered_pp": 15.654154928016917
+  },
+  {
+    "pool": "new12",
+    "start": "2022-09-01",
+    "end": "2023-09-01",
+    "cost_multiplier": 1,
+    "excess_minus_cash_pp": -3.9794463943332747,
+    "excess_minus_raw_pp": 1.8344440492745862,
+    "excess_minus_unfiltered_pp": -4.765152690356955
+  },
+  {
+    "pool": "new12",
+    "start": "2022-09-01",
+    "end": "2023-09-01",
+    "cost_multiplier": 2,
+    "excess_minus_cash_pp": -4.795835051021147,
+    "excess_minus_raw_pp": 1.8666789614186663,
+    "excess_minus_unfiltered_pp": -5.190611018952951
+  },
+  {
+    "pool": "new12",
+    "start": "2023-09-01",
+    "end": "2024-09-01",
+    "cost_multiplier": 1,
+    "excess_minus_cash_pp": -2.194030640501121,
+    "excess_minus_raw_pp": 1.2182832696396195,
+    "excess_minus_unfiltered_pp": -5.971287962813565
+  },
+  {
+    "pool": "new12",
+    "start": "2023-09-01",
+    "end": "2024-09-01",
+    "cost_multiplier": 2,
+    "excess_minus_cash_pp": -2.202642110852171,
+    "excess_minus_raw_pp": 1.4368785412597118,
+    "excess_minus_unfiltered_pp": -5.61393138829156
+  },
+  {
+    "pool": "new12",
+    "start": "2024-09-01",
+    "end": "2025-09-01",
+    "cost_multiplier": 1,
+    "excess_minus_cash_pp": -10.225653773052102,
+    "excess_minus_raw_pp": 2.593422844530547,
+    "excess_minus_unfiltered_pp": 4.132638882885487
+  },
+  {
+    "pool": "new12",
+    "start": "2024-09-01",
+    "end": "2025-09-01",
+    "cost_multiplier": 2,
+    "excess_minus_cash_pp": -12.791746185126275,
+    "excess_minus_raw_pp": 0.19123806044910552,
+    "excess_minus_unfiltered_pp": 1.7923187595152985
+  },
+  {
+    "pool": "new12",
+    "start": "2022-09-01",
+    "end": "2025-09-01",
+    "cost_multiplier": 1,
+    "excess_minus_cash_pp": -19.084713855848978,
+    "excess_minus_raw_pp": 0.4543908215554282,
+    "excess_minus_unfiltered_pp": -8.50938537990842
+  },
+  {
+    "pool": "new12",
+    "start": "2022-09-01",
+    "end": "2025-09-01",
+    "cost_multiplier": 2,
+    "excess_minus_cash_pp": -18.681785374644132,
+    "excess_minus_raw_pp": -5.2658778656474725,
+    "excess_minus_unfiltered_pp": -7.264741210083647
+  }
+]
