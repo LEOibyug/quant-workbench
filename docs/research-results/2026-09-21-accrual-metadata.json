@@ -1,0 +1,8 @@
+{
+  "source_sha256": {
+    "scripts/accrual_features.py": "fdaef8977b75ff63bf7c90a5aa1de512a92821915cb8079ffd11c58930f21b09",
+    "scripts/study_accrual.py": "6e93888dad902dfa9ba10850c0aa0fbe3204f8c35bfc7b5f50d21f6759e545f6",
+    "backend/src/quant_workbench/position.py": "5e77eac1558a3d3cbc515417c12af2a783aea4756a62db9b7c5f67425952785c"
+  },
+  "protocol": "2026-09-21-accrual-protocol.md"
+}
