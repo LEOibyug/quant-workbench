@@ -1,0 +1,36 @@
+{
+  "url": "https://api.crossref.org/works/10.2139/ssrn.927305",
+  "title": [
+    "Earnings Volatility and Earnings Predictability"
+  ],
+  "abstract": "<jats:p>Survey evidence indicates widely held managerial beliefs that earnings volatility is negatively related to earnings predictability.  In addition, existing research suggests that earnings volatility is determined by economic and accounting factors, and both of these factors reduce earnings predictability.  We find that the consideration of earnings volatility brings substantial improvements in the prediction of both short and long-term earnings.  Conditioning on volatility information also allows one to identify systematic errors in analyst forecasts, which implies that analysts do not fully understand the implications of earnings volatility for earnings predictability.</jats:p>",
+  "authors": [
+    {
+      "ORCID": "https://orcid.org/0000-0001-7787-8987",
+      "authenticated-orcid": true,
+      "given": "Ilia D.",
+      "family": "Dichev",
+      "sequence": "first",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Vicki Wei",
+      "family": "Tang",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    }
+  ],
+  "full_text_read": false
+}
