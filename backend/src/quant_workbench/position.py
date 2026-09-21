@@ -166,7 +166,13 @@ def simulate_positions(
     daily_bars=False,
     research_distributions=None,
     research_dividends=None,
+    research_cash_interest=None,
 ):
+    if research_cash_interest is not None and (
+        not daily_bars or config.allocation.enabled or config.portfolio_policy != "legacy"
+        or research_dividends is not None or research_distributions is not None
+    ):
+        raise ValueError("Research cash interest requires standalone daily legacy execution")
     if research_dividends is not None and (
         not daily_bars
         or config.allocation.enabled
@@ -232,6 +238,8 @@ def simulate_positions(
     days = sorted(day for day in pivot if start <= day < end)
     if research_dividends is not None:
         research_dividends.start(symbols, days)
+    if research_cash_interest is not None:
+        research_cash_interest.start(days)
     stop_credit = {s: 0.0 for s in symbols}
     dividend_value = dict(income=0.0, paid=0.0, receivable=0.0, by_symbol={})
     costs = config.costs
@@ -256,6 +264,8 @@ def simulate_positions(
     fees = impact_total = 0.0
     previous = None
     for i, day in enumerate(days):
+        if research_cash_interest is not None:
+            cash += research_cash_interest.before_open(day, cash)
         prices = pivot[day]
         daily_turnover = 0.0
         distribution_value = dict(market_value=0.0, unrealized_pnl=0.0, by_parent={}, assets={})
@@ -579,6 +589,7 @@ def simulate_positions(
                     else {}
                 ),
                 **({"dividends": dividend_value} if research_dividends is not None else {}),
+                **({"cash_interest": research_cash_interest.snapshot()} if research_cash_interest is not None else {}),
                 positions=dict(shares),
                 cash_weight=cash / equity,
                 fees=fees,
@@ -665,12 +676,14 @@ def simulate_positions(
             if research_dividends is not None
             else {}
         ),
+        **({"research_cash_interest": {**research_cash_interest.snapshot(), "events": research_cash_interest.audit}} if research_cash_interest is not None else {}),
         config=config.model_dump(),
         start=start,
         end=end,
         allocation_decisions=allocation_decisions,
         portfolio_enabled=pooled_execution,
         engine_version=("daily-position-v3-daily" if daily_bars else "daily-position-v2")
+        + ("-research-cash-interest-v1" if research_cash_interest is not None else "")
         + ("-research-dividends-v1" if research_dividends is not None else "")
         + ("-portfolio-v1" if config.allocation.enabled else "")
         + ("-rules-v1" if config.model in DAILY_RULE_MODELS else "")
@@ -681,6 +694,7 @@ def simulate_positions(
             else ""
         ),
         metrics=dict(
+            **({"cash_interest_income": research_cash_interest.income} if research_cash_interest is not None else {}),
             **(
                 {
                     "dividend_income": dividend_value["income"],

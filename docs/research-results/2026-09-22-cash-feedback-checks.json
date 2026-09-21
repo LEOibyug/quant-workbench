@@ -1,0 +1,104 @@
+{
+  "checks": [
+    {
+      "method": "low_liability",
+      "cost_multiplier": 1,
+      "scenario": "zero",
+      "conservation": true,
+      "zero_control": true
+    },
+    {
+      "method": "low_liability",
+      "cost_multiplier": 1,
+      "scenario": "sofr",
+      "conservation": true,
+      "zero_control": false
+    },
+    {
+      "method": "low_liability",
+      "cost_multiplier": 1,
+      "scenario": "sofr_minus1",
+      "conservation": true,
+      "zero_control": false
+    },
+    {
+      "method": "low_liability",
+      "cost_multiplier": 2,
+      "scenario": "zero",
+      "conservation": true,
+      "zero_control": true
+    },
+    {
+      "method": "low_liability",
+      "cost_multiplier": 2,
+      "scenario": "sofr",
+      "conservation": true,
+      "zero_control": false
+    },
+    {
+      "method": "low_liability",
+      "cost_multiplier": 2,
+      "scenario": "sofr_minus1",
+      "conservation": true,
+      "zero_control": false
+    },
+    {
+      "method": "eligible",
+      "cost_multiplier": 1,
+      "scenario": "zero",
+      "conservation": true,
+      "zero_control": true
+    },
+    {
+      "method": "eligible",
+      "cost_multiplier": 1,
+      "scenario": "sofr",
+      "conservation": true,
+      "zero_control": false
+    },
+    {
+      "method": "eligible",
+      "cost_multiplier": 1,
+      "scenario": "sofr_minus1",
+      "conservation": true,
+      "zero_control": false
+    },
+    {
+      "method": "eligible",
+      "cost_multiplier": 2,
+      "scenario": "zero",
+      "conservation": true,
+      "zero_control": true
+    },
+    {
+      "method": "eligible",
+      "cost_multiplier": 2,
+      "scenario": "sofr",
+      "conservation": true,
+      "zero_control": false
+    },
+    {
+      "method": "eligible",
+      "cost_multiplier": 2,
+      "scenario": "sofr_minus1",
+      "conservation": true,
+      "zero_control": false
+    }
+  ],
+  "pure_cash": [
+    {
+      "haircut": 0,
+      "first_close": "2022-09-01",
+      "last_close": "2025-08-29",
+      "return_pct": 15.392865630166952,
+      "income": 15392.865630166994
+    },
+    {
+      "haircut": 1,
+      "first_close": "2022-09-01",
+      "last_close": "2025-08-29",
+      "return_pct": 11.942852180292007,
+      "income": 11942.852180291928
+    }
+  ]
+}
