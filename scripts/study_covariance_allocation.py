@@ -1,5 +1,6 @@
 """Predeclared covariance-only shared-cash portfolios; no return forecasts."""
 
+import gzip
 import json
 from pathlib import Path
 from unittest.mock import patch
@@ -12,6 +13,26 @@ from scipy.optimize import minimize
 from sklearn.covariance import LedoitWolf
 
 ROOT = Path("docs/research-results")
+
+
+def save_results(path, results, completed=False):
+    payload = dict(status="completed" if completed else "running", results=results)
+    if completed:
+        archive = path.with_suffix(".full.json.gz")
+        archive.write_bytes(
+            gzip.compress(json.dumps(payload, separators=(",", ":")).encode(), mtime=0)
+        )
+    compact = []
+    for row in results:
+        curve = [
+            {k: v for k, v in point.items() if k not in ("positions", "assets")}
+            for point in row["curve"]
+        ]
+        compact.append({**row, "curve": curve})
+    payload["results"] = compact
+    if completed:
+        payload["full_archive"] = archive.name
+    path.write_text(json.dumps(payload, indent=2))
 
 
 def allocate(cov, method):
@@ -118,7 +139,7 @@ def main():
                         curve=r["curve"],
                     )
                 )
-                out.write_text(json.dumps(dict(status="running", results=results), indent=2))
+                save_results(out, results)
                 print(
                     pool,
                     method,
@@ -127,7 +148,7 @@ def main():
                     r["metrics"]["max_drawdown_pct"],
                     flush=True,
                 )
-    out.write_text(json.dumps(dict(status="completed", results=results), indent=2))
+    save_results(out, results, completed=True)
 
 
 if __name__ == "__main__":

@@ -42,3 +42,5 @@
 ## 可复现性
 
 运行 `uv run --locked python scripts/study_covariance_allocation.py`。完整每日净值、配置、逐股贡献、失败计数在同名JSON，原行情沿用之前已审计三池。2项针对性测试通过：对角协方差下最小方差解析解为逆方差、最大分散化为逆波动；高波动例验证总仓、单股上限与波动预算。没有接入网页或真实账户。
+
+为避免逐日嵌套资产明细使可读JSON膨胀，JSON保留全部指标、配置、逐股贡献与每日净值字段；逐日positions/assets明细无损存入 `2026-09-21-covariance-allocation.full.json.gz`，与摘要同时纳入Git。解压后是完整JSON，无删减实验。
