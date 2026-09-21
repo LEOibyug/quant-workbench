@@ -1,0 +1,3403 @@
+{
+  "pure_cash": [
+    {
+      "start": "2022-09-01",
+      "end": "2025-09-01",
+      "last_close": "2025-08-29",
+      "return_pct": 15.392865630166952
+    },
+    {
+      "start": "2025-09-01",
+      "end": "2026-09-01",
+      "last_close": "2026-08-31",
+      "return_pct": 3.8843134204588514
+    }
+  ],
+  "event_sets": [
+    {
+      "start": "2022-09-01",
+      "end": "2025-09-01",
+      "offset": null,
+      "cost_multiplier": 1,
+      "events": []
+    },
+    {
+      "start": "2022-09-01",
+      "end": "2025-09-01",
+      "offset": -1,
+      "cost_multiplier": 1,
+      "events": [
+        {
+          "id": "COP-scenario-2022-09-27-2022-10-14",
+          "symbol": "COP",
+          "ex_date": "2022-09-27",
+          "payable_date": "2022-10-14",
+          "rate": "1.4",
+          "currency": null,
+          "kind": "ordinary_cash",
+          "amount_basis": "gross",
+          "verified": false,
+          "scenario_assumption": "USD gross source rate",
+          "evidence": [
+            "2026-09-22-cop-dividend-api.json",
+            "2026-09-22-cop-components-confirmed.json"
+          ],
+          "entitlement_rule_assumption": "Treat all components, including VROC, as standard cash rights; not verified legal classification",
+          "components": [
+            {
+              "id": "d88c086b-11f3-438a-9679-57617013ca50",
+              "rate": 1.4,
+              "source_ex_date": "2022-09-28",
+              "issuer_classification": "unverified"
+            }
+          ]
+        },
+        {
+          "id": "COP-scenario-2022-11-11-2022-12-01",
+          "symbol": "COP",
+          "ex_date": "2022-11-11",
+          "payable_date": "2022-12-01",
+          "rate": "0.51",
+          "currency": null,
+          "kind": "ordinary_cash",
+          "amount_basis": "gross",
+          "verified": false,
+          "scenario_assumption": "USD gross source rate",
+          "evidence": [
+            "2026-09-22-cop-dividend-api.json",
+            "2026-09-22-cop-components-confirmed.json"
+          ],
+          "entitlement_rule_assumption": "Treat all components, including VROC, as standard cash rights; not verified legal classification",
+          "components": [
+            {
+              "id": "fd6e2804-6e1d-4385-9aef-d6d74920ebd6",
+              "rate": 0.51,
+              "source_ex_date": "2022-11-14",
+              "issuer_classification": "unverified"
+            }
+          ]
+        },
+        {
+          "id": "COP-scenario-2022-12-22-2023-01-13",
+          "symbol": "COP",
+          "ex_date": "2022-12-22",
+          "payable_date": "2023-01-13",
+          "rate": "0.7",
+          "currency": null,
+          "kind": "ordinary_cash",
+          "amount_basis": "gross",
+          "verified": false,
+          "scenario_assumption": "USD gross source rate",
+          "evidence": [
+            "2026-09-22-cop-dividend-api.json",
+            "2026-09-22-cop-components-confirmed.json"
+          ],
+          "entitlement_rule_assumption": "Treat all components, including VROC, as standard cash rights; not verified legal classification",
+          "components": [
+            {
+              "id": "a15927b2-6c34-47b3-9ccd-42642fb9e18d",
+              "rate": 0.7,
+              "source_ex_date": "2022-12-23",
+              "issuer_classification": "unverified"
+            }
+          ]
+        },
+        {
+          "id": "COP-scenario-2023-02-10-2023-03-01",
+          "symbol": "COP",
+          "ex_date": "2023-02-10",
+          "payable_date": "2023-03-01",
+          "rate": "0.51",
+          "currency": null,
+          "kind": "ordinary_cash",
+          "amount_basis": "gross",
+          "verified": false,
+          "scenario_assumption": "USD gross source rate",
+          "evidence": [
+            "2026-09-22-cop-dividend-api.json",
+            "2026-09-22-cop-components-confirmed.json"
+          ],
+          "entitlement_rule_assumption": "Treat all components, including VROC, as standard cash rights; not verified legal classification",
+          "components": [
+            {
+              "id": "89c747ba-252b-41ba-b205-86b9a6a9c782",
+              "rate": 0.51,
+              "source_ex_date": "2023-02-13",
+              "issuer_classification": "unverified"
+            }
+          ]
+        },
+        {
+          "id": "COP-scenario-2023-03-27-2023-04-14",
+          "symbol": "COP",
+          "ex_date": "2023-03-27",
+          "payable_date": "2023-04-14",
+          "rate": "0.6",
+          "currency": null,
+          "kind": "ordinary_cash",
+          "amount_basis": "gross",
+          "verified": false,
+          "scenario_assumption": "USD gross source rate",
+          "evidence": [
+            "2026-09-22-cop-dividend-api.json",
+            "2026-09-22-cop-components-confirmed.json"
+          ],
+          "entitlement_rule_assumption": "Treat all components, including VROC, as standard cash rights; not verified legal classification",
+          "components": [
+            {
+              "id": "db90b5c2-474b-4bb1-b32e-ff32b7e6436a",
+              "rate": 0.6,
+              "source_ex_date": "2023-03-28",
+              "issuer_classification": "unverified"
+            }
+          ]
+        },
+        {
+          "id": "COP-scenario-2023-05-12-2023-06-01",
+          "symbol": "COP",
+          "ex_date": "2023-05-12",
+          "payable_date": "2023-06-01",
+          "rate": "0.51",
+          "currency": null,
+          "kind": "ordinary_cash",
+          "amount_basis": "gross",
+          "verified": false,
+          "scenario_assumption": "USD gross source rate",
+          "evidence": [
+            "2026-09-22-cop-dividend-api.json",
+            "2026-09-22-cop-components-confirmed.json"
+          ],
+          "entitlement_rule_assumption": "Treat all components, including VROC, as standard cash rights; not verified legal classification",
+          "components": [
+            {
+              "id": "15417b72-ccc1-43b8-b259-885d434742c2",
+              "rate": 0.51,
+              "source_ex_date": "2023-05-15",
+              "issuer_classification": "unverified"
+            }
+          ]
+        },
+        {
+          "id": "COP-scenario-2023-06-23-2023-07-14",
+          "symbol": "COP",
+          "ex_date": "2023-06-23",
+          "payable_date": "2023-07-14",
+          "rate": "0.6",
+          "currency": null,
+          "kind": "ordinary_cash",
+          "amount_basis": "gross",
+          "verified": false,
+          "scenario_assumption": "USD gross source rate",
+          "evidence": [
+            "2026-09-22-cop-dividend-api.json",
+            "2026-09-22-cop-components-confirmed.json"
+          ],
+          "entitlement_rule_assumption": "Treat all components, including VROC, as standard cash rights; not verified legal classification",
+          "components": [
+            {
+              "id": "de7d244f-3ccd-42f5-b133-bf52feb70479",
+              "rate": 0.6,
+              "source_ex_date": "2023-06-26",
+              "issuer_classification": "unverified"
+            }
+          ]
+        },
+        {
+          "id": "COP-scenario-2023-08-14-2023-09-01",
+          "symbol": "COP",
+          "ex_date": "2023-08-14",
+          "payable_date": "2023-09-01",
+          "rate": "0.51",
+          "currency": null,
+          "kind": "ordinary_cash",
+          "amount_basis": "gross",
+          "verified": false,
+          "scenario_assumption": "USD gross source rate",
+          "evidence": [
+            "2026-09-22-cop-dividend-api.json",
+            "2026-09-22-cop-components-confirmed.json"
+          ],
+          "entitlement_rule_assumption": "Treat all components, including VROC, as standard cash rights; not verified legal classification",
+          "components": [
+            {
+              "id": "48765bff-bef4-4576-98e7-440398d38196",
+              "rate": 0.51,
+              "source_ex_date": "2023-08-15",
+              "issuer_classification": "unverified"
+            }
+          ]
+        },
+        {
+          "id": "COP-scenario-2023-09-26-2023-10-16",
+          "symbol": "COP",
+          "ex_date": "2023-09-26",
+          "payable_date": "2023-10-16",
+          "rate": "0.6",
+          "currency": null,
+          "kind": "ordinary_cash",
+          "amount_basis": "gross",
+          "verified": false,
+          "scenario_assumption": "USD gross source rate",
+          "evidence": [
+            "2026-09-22-cop-dividend-api.json",
+            "2026-09-22-cop-components-confirmed.json"
+          ],
+          "entitlement_rule_assumption": "Treat all components, including VROC, as standard cash rights; not verified legal classification",
+          "components": [
+            {
+              "id": "8286b895-ea21-4767-96e5-e417f35d051d",
+              "rate": 0.6,
+              "source_ex_date": "2023-09-27",
+              "issuer_classification": "unverified"
+            }
+          ]
+        },
+        {
+          "id": "COP-scenario-2023-11-10-2023-12-01",
+          "symbol": "COP",
+          "ex_date": "2023-11-10",
+          "payable_date": "2023-12-01",
+          "rate": "0.58",
+          "currency": null,
+          "kind": "ordinary_cash",
+          "amount_basis": "gross",
+          "verified": false,
+          "scenario_assumption": "USD gross source rate",
+          "evidence": [
+            "2026-09-22-cop-dividend-api.json",
+            "2026-09-22-cop-components-confirmed.json"
+          ],
+          "entitlement_rule_assumption": "Treat all components, including VROC, as standard cash rights; not verified legal classification",
+          "components": [
+            {
+              "id": "91da9730-7fdd-47c2-a36e-f31da4c32850",
+              "rate": 0.58,
+              "source_ex_date": "2023-11-13",
+              "issuer_classification": "unverified"
+            }
+          ]
+        },
+        {
+          "id": "COP-scenario-2024-02-14-2024-03-01",
+          "symbol": "COP",
+          "ex_date": "2024-02-14",
+          "payable_date": "2024-03-01",
+          "rate": "0.78",
+          "currency": null,
+          "kind": "ordinary_cash",
+          "amount_basis": "gross",
+          "verified": false,
+          "scenario_assumption": "USD gross source rate",
+          "evidence": [
+            "2026-09-22-cop-dividend-api.json",
+            "2026-09-22-cop-components-confirmed.json"
+          ],
+          "entitlement_rule_assumption": "Treat all components, including VROC, as standard cash rights; not verified legal classification",
+          "components": [
+            {
+              "id": "70803c87-07f0-44c2-ab95-e66af555e7b1",
+              "rate": 0.58,
+              "source_ex_date": "2024-02-15",
+              "issuer_classification": "ordinary_dividend"
+            },
+            {
+              "id": "b50cc03b-b43f-4635-bb6c-f7cfe4bf842c",
+              "rate": 0.2,
+              "source_ex_date": "2024-02-15",
+              "issuer_classification": "variable_return_of_cash"
+            }
+          ]
+        },
+        {
+          "id": "COP-scenario-2024-05-09-2024-06-03",
+          "symbol": "COP",
+          "ex_date": "2024-05-09",
+          "payable_date": "2024-06-03",
+          "rate": "0.78",
+          "currency": null,
+          "kind": "ordinary_cash",
+          "amount_basis": "gross",
+          "verified": false,
+          "scenario_assumption": "USD gross source rate",
+          "evidence": [
+            "2026-09-22-cop-dividend-api.json",
+            "2026-09-22-cop-components-confirmed.json"
+          ],
+          "entitlement_rule_assumption": "Treat all components, including VROC, as standard cash rights; not verified legal classification",
+          "components": [
+            {
+              "id": "65a7d241-a415-4a4a-b3a7-0e2a9e373420",
+              "rate": 0.2,
+              "source_ex_date": "2024-05-10",
+              "issuer_classification": "variable_return_of_cash"
+            },
+            {
+              "id": "6b3e32c9-4e48-4436-b11d-0b8e6c6ea798",
+              "rate": 0.58,
+              "source_ex_date": "2024-05-10",
+              "issuer_classification": "ordinary_dividend"
+            }
+          ]
+        },
+        {
+          "id": "COP-scenario-2024-08-09-2024-09-03",
+          "symbol": "COP",
+          "ex_date": "2024-08-09",
+          "payable_date": "2024-09-03",
+          "rate": "0.78",
+          "currency": null,
+          "kind": "ordinary_cash",
+          "amount_basis": "gross",
+          "verified": false,
+          "scenario_assumption": "USD gross source rate",
+          "evidence": [
+            "2026-09-22-cop-dividend-api.json",
+            "2026-09-22-cop-components-confirmed.json"
+          ],
+          "entitlement_rule_assumption": "Treat all components, including VROC, as standard cash rights; not verified legal classification",
+          "components": [
+            {
+              "id": "75593cde-60eb-47d4-b28f-dce6cbecf1cf",
+              "rate": 0.2,
+              "source_ex_date": "2024-08-12",
+              "issuer_classification": "variable_return_of_cash"
+            },
+            {
+              "id": "8318b86a-41ff-4573-b009-5242f57efa30",
+              "rate": 0.58,
+              "source_ex_date": "2024-08-12",
+              "issuer_classification": "ordinary_dividend"
+            }
+          ]
+        },
+        {
+          "id": "COP-scenario-2024-11-07-2024-12-02",
+          "symbol": "COP",
+          "ex_date": "2024-11-07",
+          "payable_date": "2024-12-02",
+          "rate": "0.78",
+          "currency": null,
+          "kind": "ordinary_cash",
+          "amount_basis": "gross",
+          "verified": false,
+          "scenario_assumption": "USD gross source rate",
+          "evidence": [
+            "2026-09-22-cop-dividend-api.json",
+            "2026-09-22-cop-components-confirmed.json"
+          ],
+          "entitlement_rule_assumption": "Treat all components, including VROC, as standard cash rights; not verified legal classification",
+          "components": [
+            {
+              "id": "3012c6ac-1b2c-4100-84e2-010bdaf10bb6",
+              "rate": 0.78,
+              "source_ex_date": "2024-11-08",
+              "issuer_classification": "ordinary_dividend"
+            }
+          ]
+        },
+        {
+          "id": "COP-scenario-2025-02-13-2025-03-03",
+          "symbol": "COP",
+          "ex_date": "2025-02-13",
+          "payable_date": "2025-03-03",
+          "rate": "0.78",
+          "currency": null,
+          "kind": "ordinary_cash",
+          "amount_basis": "gross",
+          "verified": false,
+          "scenario_assumption": "USD gross source rate",
+          "evidence": [
+            "2026-09-22-cop-dividend-api.json",
+            "2026-09-22-cop-components-confirmed.json"
+          ],
+          "entitlement_rule_assumption": "Treat all components, including VROC, as standard cash rights; not verified legal classification",
+          "components": [
+            {
+              "id": "c6d42a0e-7659-436a-bf2e-8d1227ce5001",
+              "rate": 0.78,
+              "source_ex_date": "2025-02-14",
+              "issuer_classification": "ordinary_dividend"
+            }
+          ]
+        },
+        {
+          "id": "COP-scenario-2025-05-16-2025-06-02",
+          "symbol": "COP",
+          "ex_date": "2025-05-16",
+          "payable_date": "2025-06-02",
+          "rate": "0.78",
+          "currency": null,
+          "kind": "ordinary_cash",
+          "amount_basis": "gross",
+          "verified": false,
+          "scenario_assumption": "USD gross source rate",
+          "evidence": [
+            "2026-09-22-cop-dividend-api.json",
+            "2026-09-22-cop-components-confirmed.json"
+          ],
+          "entitlement_rule_assumption": "Treat all components, including VROC, as standard cash rights; not verified legal classification",
+          "components": [
+            {
+              "id": "66909c44-230e-4020-a4c4-b6148eb00ac1",
+              "rate": 0.78,
+              "source_ex_date": "2025-05-19",
+              "issuer_classification": "unverified"
+            }
+          ]
+        },
+        {
+          "id": "COP-scenario-2025-08-15-2025-09-02",
+          "symbol": "COP",
+          "ex_date": "2025-08-15",
+          "payable_date": "2025-09-02",
+          "rate": "0.78",
+          "currency": null,
+          "kind": "ordinary_cash",
+          "amount_basis": "gross",
+          "verified": false,
+          "scenario_assumption": "USD gross source rate",
+          "evidence": [
+            "2026-09-22-cop-dividend-api.json",
+            "2026-09-22-cop-components-confirmed.json"
+          ],
+          "entitlement_rule_assumption": "Treat all components, including VROC, as standard cash rights; not verified legal classification",
+          "components": [
+            {
+              "id": "fefd575f-aa2e-48a6-b078-3e8033462e9e",
+              "rate": 0.78,
+              "source_ex_date": "2025-08-18",
+              "issuer_classification": "unverified"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "start": "2022-09-01",
+      "end": "2025-09-01",
+      "offset": 0,
+      "cost_multiplier": 1,
+      "events": [
+        {
+          "id": "COP-scenario-2022-09-28-2022-10-14",
+          "symbol": "COP",
+          "ex_date": "2022-09-28",
+          "payable_date": "2022-10-14",
+          "rate": "1.4",
+          "currency": null,
+          "kind": "ordinary_cash",
+          "amount_basis": "gross",
+          "verified": false,
+          "scenario_assumption": "USD gross source rate",
+          "evidence": [
+            "2026-09-22-cop-dividend-api.json",
+            "2026-09-22-cop-components-confirmed.json"
+          ],
+          "entitlement_rule_assumption": "Treat all components, including VROC, as standard cash rights; not verified legal classification",
+          "components": [
+            {
+              "id": "d88c086b-11f3-438a-9679-57617013ca50",
+              "rate": 1.4,
+              "source_ex_date": "2022-09-28",
+              "issuer_classification": "unverified"
+            }
+          ]
+        },
+        {
+          "id": "COP-scenario-2022-11-14-2022-12-01",
+          "symbol": "COP",
+          "ex_date": "2022-11-14",
+          "payable_date": "2022-12-01",
+          "rate": "0.51",
+          "currency": null,
+          "kind": "ordinary_cash",
+          "amount_basis": "gross",
+          "verified": false,
+          "scenario_assumption": "USD gross source rate",
+          "evidence": [
+            "2026-09-22-cop-dividend-api.json",
+            "2026-09-22-cop-components-confirmed.json"
+          ],
+          "entitlement_rule_assumption": "Treat all components, including VROC, as standard cash rights; not verified legal classification",
+          "components": [
+            {
+              "id": "fd6e2804-6e1d-4385-9aef-d6d74920ebd6",
+              "rate": 0.51,
+              "source_ex_date": "2022-11-14",
+              "issuer_classification": "unverified"
+            }
+          ]
+        },
+        {
+          "id": "COP-scenario-2022-12-23-2023-01-13",
+          "symbol": "COP",
+          "ex_date": "2022-12-23",
+          "payable_date": "2023-01-13",
+          "rate": "0.7",
+          "currency": null,
+          "kind": "ordinary_cash",
+          "amount_basis": "gross",
+          "verified": false,
+          "scenario_assumption": "USD gross source rate",
+          "evidence": [
+            "2026-09-22-cop-dividend-api.json",
+            "2026-09-22-cop-components-confirmed.json"
+          ],
+          "entitlement_rule_assumption": "Treat all components, including VROC, as standard cash rights; not verified legal classification",
+          "components": [
+            {
+              "id": "a15927b2-6c34-47b3-9ccd-42642fb9e18d",
+              "rate": 0.7,
+              "source_ex_date": "2022-12-23",
+              "issuer_classification": "unverified"
+            }
+          ]
+        },
+        {
+          "id": "COP-scenario-2023-02-13-2023-03-01",
+          "symbol": "COP",
+          "ex_date": "2023-02-13",
+          "payable_date": "2023-03-01",
+          "rate": "0.51",
+          "currency": null,
+          "kind": "ordinary_cash",
+          "amount_basis": "gross",
+          "verified": false,
+          "scenario_assumption": "USD gross source rate",
+          "evidence": [
+            "2026-09-22-cop-dividend-api.json",
+            "2026-09-22-cop-components-confirmed.json"
+          ],
+          "entitlement_rule_assumption": "Treat all components, including VROC, as standard cash rights; not verified legal classification",
+          "components": [
+            {
+              "id": "89c747ba-252b-41ba-b205-86b9a6a9c782",
+              "rate": 0.51,
+              "source_ex_date": "2023-02-13",
+              "issuer_classification": "unverified"
+            }
+          ]
+        },
+        {
+          "id": "COP-scenario-2023-03-28-2023-04-14",
+          "symbol": "COP",
+          "ex_date": "2023-03-28",
+          "payable_date": "2023-04-14",
+          "rate": "0.6",
+          "currency": null,
+          "kind": "ordinary_cash",
+          "amount_basis": "gross",
+          "verified": false,
+          "scenario_assumption": "USD gross source rate",
+          "evidence": [
+            "2026-09-22-cop-dividend-api.json",
+            "2026-09-22-cop-components-confirmed.json"
+          ],
+          "entitlement_rule_assumption": "Treat all components, including VROC, as standard cash rights; not verified legal classification",
+          "components": [
+            {
+              "id": "db90b5c2-474b-4bb1-b32e-ff32b7e6436a",
+              "rate": 0.6,
+              "source_ex_date": "2023-03-28",
+              "issuer_classification": "unverified"
+            }
+          ]
+        },
+        {
+          "id": "COP-scenario-2023-05-15-2023-06-01",
+          "symbol": "COP",
+          "ex_date": "2023-05-15",
+          "payable_date": "2023-06-01",
+          "rate": "0.51",
+          "currency": null,
+          "kind": "ordinary_cash",
+          "amount_basis": "gross",
+          "verified": false,
+          "scenario_assumption": "USD gross source rate",
+          "evidence": [
+            "2026-09-22-cop-dividend-api.json",
+            "2026-09-22-cop-components-confirmed.json"
+          ],
+          "entitlement_rule_assumption": "Treat all components, including VROC, as standard cash rights; not verified legal classification",
+          "components": [
+            {
+              "id": "15417b72-ccc1-43b8-b259-885d434742c2",
+              "rate": 0.51,
+              "source_ex_date": "2023-05-15",
+              "issuer_classification": "unverified"
+            }
+          ]
+        },
+        {
+          "id": "COP-scenario-2023-06-26-2023-07-14",
+          "symbol": "COP",
+          "ex_date": "2023-06-26",
+          "payable_date": "2023-07-14",
+          "rate": "0.6",
+          "currency": null,
+          "kind": "ordinary_cash",
+          "amount_basis": "gross",
+          "verified": false,
+          "scenario_assumption": "USD gross source rate",
+          "evidence": [
+            "2026-09-22-cop-dividend-api.json",
+            "2026-09-22-cop-components-confirmed.json"
+          ],
+          "entitlement_rule_assumption": "Treat all components, including VROC, as standard cash rights; not verified legal classification",
+          "components": [
+            {
+              "id": "de7d244f-3ccd-42f5-b133-bf52feb70479",
+              "rate": 0.6,
+              "source_ex_date": "2023-06-26",
+              "issuer_classification": "unverified"
+            }
+          ]
+        },
+        {
+          "id": "COP-scenario-2023-08-15-2023-09-01",
+          "symbol": "COP",
+          "ex_date": "2023-08-15",
+          "payable_date": "2023-09-01",
+          "rate": "0.51",
+          "currency": null,
+          "kind": "ordinary_cash",
+          "amount_basis": "gross",
+          "verified": false,
+          "scenario_assumption": "USD gross source rate",
+          "evidence": [
+            "2026-09-22-cop-dividend-api.json",
+            "2026-09-22-cop-components-confirmed.json"
+          ],
+          "entitlement_rule_assumption": "Treat all components, including VROC, as standard cash rights; not verified legal classification",
+          "components": [
+            {
+              "id": "48765bff-bef4-4576-98e7-440398d38196",
+              "rate": 0.51,
+              "source_ex_date": "2023-08-15",
+              "issuer_classification": "unverified"
+            }
+          ]
+        },
+        {
+          "id": "COP-scenario-2023-09-27-2023-10-16",
+          "symbol": "COP",
+          "ex_date": "2023-09-27",
+          "payable_date": "2023-10-16",
+          "rate": "0.6",
+          "currency": null,
+          "kind": "ordinary_cash",
+          "amount_basis": "gross",
+          "verified": false,
+          "scenario_assumption": "USD gross source rate",
+          "evidence": [
+            "2026-09-22-cop-dividend-api.json",
+            "2026-09-22-cop-components-confirmed.json"
+          ],
+          "entitlement_rule_assumption": "Treat all components, including VROC, as standard cash rights; not verified legal classification",
+          "components": [
+            {
+              "id": "8286b895-ea21-4767-96e5-e417f35d051d",
+              "rate": 0.6,
+              "source_ex_date": "2023-09-27",
+              "issuer_classification": "unverified"
+            }
+          ]
+        },
+        {
+          "id": "COP-scenario-2023-11-13-2023-12-01",
+          "symbol": "COP",
+          "ex_date": "2023-11-13",
+          "payable_date": "2023-12-01",
+          "rate": "0.58",
+          "currency": null,
+          "kind": "ordinary_cash",
+          "amount_basis": "gross",
+          "verified": false,
+          "scenario_assumption": "USD gross source rate",
+          "evidence": [
+            "2026-09-22-cop-dividend-api.json",
+            "2026-09-22-cop-components-confirmed.json"
+          ],
+          "entitlement_rule_assumption": "Treat all components, including VROC, as standard cash rights; not verified legal classification",
+          "components": [
+            {
+              "id": "91da9730-7fdd-47c2-a36e-f31da4c32850",
+              "rate": 0.58,
+              "source_ex_date": "2023-11-13",
+              "issuer_classification": "unverified"
+            }
+          ]
+        },
+        {
+          "id": "COP-scenario-2024-02-15-2024-03-01",
+          "symbol": "COP",
+          "ex_date": "2024-02-15",
+          "payable_date": "2024-03-01",
+          "rate": "0.78",
+          "currency": null,
+          "kind": "ordinary_cash",
+          "amount_basis": "gross",
+          "verified": false,
+          "scenario_assumption": "USD gross source rate",
+          "evidence": [
+            "2026-09-22-cop-dividend-api.json",
+            "2026-09-22-cop-components-confirmed.json"
+          ],
+          "entitlement_rule_assumption": "Treat all components, including VROC, as standard cash rights; not verified legal classification",
+          "components": [
+            {
+              "id": "70803c87-07f0-44c2-ab95-e66af555e7b1",
+              "rate": 0.58,
+              "source_ex_date": "2024-02-15",
+              "issuer_classification": "ordinary_dividend"
+            },
+            {
+              "id": "b50cc03b-b43f-4635-bb6c-f7cfe4bf842c",
+              "rate": 0.2,
+              "source_ex_date": "2024-02-15",
+              "issuer_classification": "variable_return_of_cash"
+            }
+          ]
+        },
+        {
+          "id": "COP-scenario-2024-05-10-2024-06-03",
+          "symbol": "COP",
+          "ex_date": "2024-05-10",
+          "payable_date": "2024-06-03",
+          "rate": "0.78",
+          "currency": null,
+          "kind": "ordinary_cash",
+          "amount_basis": "gross",
+          "verified": false,
+          "scenario_assumption": "USD gross source rate",
+          "evidence": [
+            "2026-09-22-cop-dividend-api.json",
+            "2026-09-22-cop-components-confirmed.json"
+          ],
+          "entitlement_rule_assumption": "Treat all components, including VROC, as standard cash rights; not verified legal classification",
+          "components": [
+            {
+              "id": "65a7d241-a415-4a4a-b3a7-0e2a9e373420",
+              "rate": 0.2,
+              "source_ex_date": "2024-05-10",
+              "issuer_classification": "variable_return_of_cash"
+            },
+            {
+              "id": "6b3e32c9-4e48-4436-b11d-0b8e6c6ea798",
+              "rate": 0.58,
+              "source_ex_date": "2024-05-10",
+              "issuer_classification": "ordinary_dividend"
+            }
+          ]
+        },
+        {
+          "id": "COP-scenario-2024-08-12-2024-09-03",
+          "symbol": "COP",
+          "ex_date": "2024-08-12",
+          "payable_date": "2024-09-03",
+          "rate": "0.78",
+          "currency": null,
+          "kind": "ordinary_cash",
+          "amount_basis": "gross",
+          "verified": false,
+          "scenario_assumption": "USD gross source rate",
+          "evidence": [
+            "2026-09-22-cop-dividend-api.json",
+            "2026-09-22-cop-components-confirmed.json"
+          ],
+          "entitlement_rule_assumption": "Treat all components, including VROC, as standard cash rights; not verified legal classification",
+          "components": [
+            {
+              "id": "75593cde-60eb-47d4-b28f-dce6cbecf1cf",
+              "rate": 0.2,
+              "source_ex_date": "2024-08-12",
+              "issuer_classification": "variable_return_of_cash"
+            },
+            {
+              "id": "8318b86a-41ff-4573-b009-5242f57efa30",
+              "rate": 0.58,
+              "source_ex_date": "2024-08-12",
+              "issuer_classification": "ordinary_dividend"
+            }
+          ]
+        },
+        {
+          "id": "COP-scenario-2024-11-08-2024-12-02",
+          "symbol": "COP",
+          "ex_date": "2024-11-08",
+          "payable_date": "2024-12-02",
+          "rate": "0.78",
+          "currency": null,
+          "kind": "ordinary_cash",
+          "amount_basis": "gross",
+          "verified": false,
+          "scenario_assumption": "USD gross source rate",
+          "evidence": [
+            "2026-09-22-cop-dividend-api.json",
+            "2026-09-22-cop-components-confirmed.json"
+          ],
+          "entitlement_rule_assumption": "Treat all components, including VROC, as standard cash rights; not verified legal classification",
+          "components": [
+            {
+              "id": "3012c6ac-1b2c-4100-84e2-010bdaf10bb6",
+              "rate": 0.78,
+              "source_ex_date": "2024-11-08",
+              "issuer_classification": "ordinary_dividend"
+            }
+          ]
+        },
+        {
+          "id": "COP-scenario-2025-02-14-2025-03-03",
+          "symbol": "COP",
+          "ex_date": "2025-02-14",
+          "payable_date": "2025-03-03",
+          "rate": "0.78",
+          "currency": null,
+          "kind": "ordinary_cash",
+          "amount_basis": "gross",
+          "verified": false,
+          "scenario_assumption": "USD gross source rate",
+          "evidence": [
+            "2026-09-22-cop-dividend-api.json",
+            "2026-09-22-cop-components-confirmed.json"
+          ],
+          "entitlement_rule_assumption": "Treat all components, including VROC, as standard cash rights; not verified legal classification",
+          "components": [
+            {
+              "id": "c6d42a0e-7659-436a-bf2e-8d1227ce5001",
+              "rate": 0.78,
+              "source_ex_date": "2025-02-14",
+              "issuer_classification": "ordinary_dividend"
+            }
+          ]
+        },
+        {
+          "id": "COP-scenario-2025-05-19-2025-06-02",
+          "symbol": "COP",
+          "ex_date": "2025-05-19",
+          "payable_date": "2025-06-02",
+          "rate": "0.78",
+          "currency": null,
+          "kind": "ordinary_cash",
+          "amount_basis": "gross",
+          "verified": false,
+          "scenario_assumption": "USD gross source rate",
+          "evidence": [
+            "2026-09-22-cop-dividend-api.json",
+            "2026-09-22-cop-components-confirmed.json"
+          ],
+          "entitlement_rule_assumption": "Treat all components, including VROC, as standard cash rights; not verified legal classification",
+          "components": [
+            {
+              "id": "66909c44-230e-4020-a4c4-b6148eb00ac1",
+              "rate": 0.78,
+              "source_ex_date": "2025-05-19",
+              "issuer_classification": "unverified"
+            }
+          ]
+        },
+        {
+          "id": "COP-scenario-2025-08-18-2025-09-02",
+          "symbol": "COP",
+          "ex_date": "2025-08-18",
+          "payable_date": "2025-09-02",
+          "rate": "0.78",
+          "currency": null,
+          "kind": "ordinary_cash",
+          "amount_basis": "gross",
+          "verified": false,
+          "scenario_assumption": "USD gross source rate",
+          "evidence": [
+            "2026-09-22-cop-dividend-api.json",
+            "2026-09-22-cop-components-confirmed.json"
+          ],
+          "entitlement_rule_assumption": "Treat all components, including VROC, as standard cash rights; not verified legal classification",
+          "components": [
+            {
+              "id": "fefd575f-aa2e-48a6-b078-3e8033462e9e",
+              "rate": 0.78,
+              "source_ex_date": "2025-08-18",
+              "issuer_classification": "unverified"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "start": "2022-09-01",
+      "end": "2025-09-01",
+      "offset": 1,
+      "cost_multiplier": 1,
+      "events": [
+        {
+          "id": "COP-scenario-2022-09-29-2022-10-14",
+          "symbol": "COP",
+          "ex_date": "2022-09-29",
+          "payable_date": "2022-10-14",
+          "rate": "1.4",
+          "currency": null,
+          "kind": "ordinary_cash",
+          "amount_basis": "gross",
+          "verified": false,
+          "scenario_assumption": "USD gross source rate",
+          "evidence": [
+            "2026-09-22-cop-dividend-api.json",
+            "2026-09-22-cop-components-confirmed.json"
+          ],
+          "entitlement_rule_assumption": "Treat all components, including VROC, as standard cash rights; not verified legal classification",
+          "components": [
+            {
+              "id": "d88c086b-11f3-438a-9679-57617013ca50",
+              "rate": 1.4,
+              "source_ex_date": "2022-09-28",
+              "issuer_classification": "unverified"
+            }
+          ]
+        },
+        {
+          "id": "COP-scenario-2022-11-15-2022-12-01",
+          "symbol": "COP",
+          "ex_date": "2022-11-15",
+          "payable_date": "2022-12-01",
+          "rate": "0.51",
+          "currency": null,
+          "kind": "ordinary_cash",
+          "amount_basis": "gross",
+          "verified": false,
+          "scenario_assumption": "USD gross source rate",
+          "evidence": [
+            "2026-09-22-cop-dividend-api.json",
+            "2026-09-22-cop-components-confirmed.json"
+          ],
+          "entitlement_rule_assumption": "Treat all components, including VROC, as standard cash rights; not verified legal classification",
+          "components": [
+            {
+              "id": "fd6e2804-6e1d-4385-9aef-d6d74920ebd6",
+              "rate": 0.51,
+              "source_ex_date": "2022-11-14",
+              "issuer_classification": "unverified"
+            }
+          ]
+        },
+        {
+          "id": "COP-scenario-2022-12-27-2023-01-13",
+          "symbol": "COP",
+          "ex_date": "2022-12-27",
+          "payable_date": "2023-01-13",
+          "rate": "0.7",
+          "currency": null,
+          "kind": "ordinary_cash",
+          "amount_basis": "gross",
+          "verified": false,
+          "scenario_assumption": "USD gross source rate",
+          "evidence": [
+            "2026-09-22-cop-dividend-api.json",
+            "2026-09-22-cop-components-confirmed.json"
+          ],
+          "entitlement_rule_assumption": "Treat all components, including VROC, as standard cash rights; not verified legal classification",
+          "components": [
+            {
+              "id": "a15927b2-6c34-47b3-9ccd-42642fb9e18d",
+              "rate": 0.7,
+              "source_ex_date": "2022-12-23",
+              "issuer_classification": "unverified"
+            }
+          ]
+        },
+        {
+          "id": "COP-scenario-2023-02-14-2023-03-01",
+          "symbol": "COP",
+          "ex_date": "2023-02-14",
+          "payable_date": "2023-03-01",
+          "rate": "0.51",
+          "currency": null,
+          "kind": "ordinary_cash",
+          "amount_basis": "gross",
+          "verified": false,
+          "scenario_assumption": "USD gross source rate",
+          "evidence": [
+            "2026-09-22-cop-dividend-api.json",
+            "2026-09-22-cop-components-confirmed.json"
+          ],
+          "entitlement_rule_assumption": "Treat all components, including VROC, as standard cash rights; not verified legal classification",
+          "components": [
+            {
+              "id": "89c747ba-252b-41ba-b205-86b9a6a9c782",
+              "rate": 0.51,
+              "source_ex_date": "2023-02-13",
+              "issuer_classification": "unverified"
+            }
+          ]
+        },
+        {
+          "id": "COP-scenario-2023-03-29-2023-04-14",
+          "symbol": "COP",
+          "ex_date": "2023-03-29",
+          "payable_date": "2023-04-14",
+          "rate": "0.6",
+          "currency": null,
+          "kind": "ordinary_cash",
+          "amount_basis": "gross",
+          "verified": false,
+          "scenario_assumption": "USD gross source rate",
+          "evidence": [
+            "2026-09-22-cop-dividend-api.json",
+            "2026-09-22-cop-components-confirmed.json"
+          ],
+          "entitlement_rule_assumption": "Treat all components, including VROC, as standard cash rights; not verified legal classification",
+          "components": [
+            {
+              "id": "db90b5c2-474b-4bb1-b32e-ff32b7e6436a",
+              "rate": 0.6,
+              "source_ex_date": "2023-03-28",
+              "issuer_classification": "unverified"
+            }
+          ]
+        },
+        {
+          "id": "COP-scenario-2023-05-16-2023-06-01",
+          "symbol": "COP",
+          "ex_date": "2023-05-16",
+          "payable_date": "2023-06-01",
+          "rate": "0.51",
+          "currency": null,
+          "kind": "ordinary_cash",
+          "amount_basis": "gross",
+          "verified": false,
+          "scenario_assumption": "USD gross source rate",
+          "evidence": [
+            "2026-09-22-cop-dividend-api.json",
+            "2026-09-22-cop-components-confirmed.json"
+          ],
+          "entitlement_rule_assumption": "Treat all components, including VROC, as standard cash rights; not verified legal classification",
+          "components": [
+            {
+              "id": "15417b72-ccc1-43b8-b259-885d434742c2",
+              "rate": 0.51,
+              "source_ex_date": "2023-05-15",
+              "issuer_classification": "unverified"
+            }
+          ]
+        },
+        {
+          "id": "COP-scenario-2023-06-27-2023-07-14",
+          "symbol": "COP",
+          "ex_date": "2023-06-27",
+          "payable_date": "2023-07-14",
+          "rate": "0.6",
+          "currency": null,
+          "kind": "ordinary_cash",
+          "amount_basis": "gross",
+          "verified": false,
+          "scenario_assumption": "USD gross source rate",
+          "evidence": [
+            "2026-09-22-cop-dividend-api.json",
+            "2026-09-22-cop-components-confirmed.json"
+          ],
+          "entitlement_rule_assumption": "Treat all components, including VROC, as standard cash rights; not verified legal classification",
+          "components": [
+            {
+              "id": "de7d244f-3ccd-42f5-b133-bf52feb70479",
+              "rate": 0.6,
+              "source_ex_date": "2023-06-26",
+              "issuer_classification": "unverified"
+            }
+          ]
+        },
+        {
+          "id": "COP-scenario-2023-08-16-2023-09-01",
+          "symbol": "COP",
+          "ex_date": "2023-08-16",
+          "payable_date": "2023-09-01",
+          "rate": "0.51",
+          "currency": null,
+          "kind": "ordinary_cash",
+          "amount_basis": "gross",
+          "verified": false,
+          "scenario_assumption": "USD gross source rate",
+          "evidence": [
+            "2026-09-22-cop-dividend-api.json",
+            "2026-09-22-cop-components-confirmed.json"
+          ],
+          "entitlement_rule_assumption": "Treat all components, including VROC, as standard cash rights; not verified legal classification",
+          "components": [
+            {
+              "id": "48765bff-bef4-4576-98e7-440398d38196",
+              "rate": 0.51,
+              "source_ex_date": "2023-08-15",
+              "issuer_classification": "unverified"
+            }
+          ]
+        },
+        {
+          "id": "COP-scenario-2023-09-28-2023-10-16",
+          "symbol": "COP",
+          "ex_date": "2023-09-28",
+          "payable_date": "2023-10-16",
+          "rate": "0.6",
+          "currency": null,
+          "kind": "ordinary_cash",
+          "amount_basis": "gross",
+          "verified": false,
+          "scenario_assumption": "USD gross source rate",
+          "evidence": [
+            "2026-09-22-cop-dividend-api.json",
+            "2026-09-22-cop-components-confirmed.json"
+          ],
+          "entitlement_rule_assumption": "Treat all components, including VROC, as standard cash rights; not verified legal classification",
+          "components": [
+            {
+              "id": "8286b895-ea21-4767-96e5-e417f35d051d",
+              "rate": 0.6,
+              "source_ex_date": "2023-09-27",
+              "issuer_classification": "unverified"
+            }
+          ]
+        },
+        {
+          "id": "COP-scenario-2023-11-14-2023-12-01",
+          "symbol": "COP",
+          "ex_date": "2023-11-14",
+          "payable_date": "2023-12-01",
+          "rate": "0.58",
+          "currency": null,
+          "kind": "ordinary_cash",
+          "amount_basis": "gross",
+          "verified": false,
+          "scenario_assumption": "USD gross source rate",
+          "evidence": [
+            "2026-09-22-cop-dividend-api.json",
+            "2026-09-22-cop-components-confirmed.json"
+          ],
+          "entitlement_rule_assumption": "Treat all components, including VROC, as standard cash rights; not verified legal classification",
+          "components": [
+            {
+              "id": "91da9730-7fdd-47c2-a36e-f31da4c32850",
+              "rate": 0.58,
+              "source_ex_date": "2023-11-13",
+              "issuer_classification": "unverified"
+            }
+          ]
+        },
+        {
+          "id": "COP-scenario-2024-02-16-2024-03-01",
+          "symbol": "COP",
+          "ex_date": "2024-02-16",
+          "payable_date": "2024-03-01",
+          "rate": "0.78",
+          "currency": null,
+          "kind": "ordinary_cash",
+          "amount_basis": "gross",
+          "verified": false,
+          "scenario_assumption": "USD gross source rate",
+          "evidence": [
+            "2026-09-22-cop-dividend-api.json",
+            "2026-09-22-cop-components-confirmed.json"
+          ],
+          "entitlement_rule_assumption": "Treat all components, including VROC, as standard cash rights; not verified legal classification",
+          "components": [
+            {
+              "id": "70803c87-07f0-44c2-ab95-e66af555e7b1",
+              "rate": 0.58,
+              "source_ex_date": "2024-02-15",
+              "issuer_classification": "ordinary_dividend"
+            },
+            {
+              "id": "b50cc03b-b43f-4635-bb6c-f7cfe4bf842c",
+              "rate": 0.2,
+              "source_ex_date": "2024-02-15",
+              "issuer_classification": "variable_return_of_cash"
+            }
+          ]
+        },
+        {
+          "id": "COP-scenario-2024-05-13-2024-06-03",
+          "symbol": "COP",
+          "ex_date": "2024-05-13",
+          "payable_date": "2024-06-03",
+          "rate": "0.78",
+          "currency": null,
+          "kind": "ordinary_cash",
+          "amount_basis": "gross",
+          "verified": false,
+          "scenario_assumption": "USD gross source rate",
+          "evidence": [
+            "2026-09-22-cop-dividend-api.json",
+            "2026-09-22-cop-components-confirmed.json"
+          ],
+          "entitlement_rule_assumption": "Treat all components, including VROC, as standard cash rights; not verified legal classification",
+          "components": [
+            {
+              "id": "65a7d241-a415-4a4a-b3a7-0e2a9e373420",
+              "rate": 0.2,
+              "source_ex_date": "2024-05-10",
+              "issuer_classification": "variable_return_of_cash"
+            },
+            {
+              "id": "6b3e32c9-4e48-4436-b11d-0b8e6c6ea798",
+              "rate": 0.58,
+              "source_ex_date": "2024-05-10",
+              "issuer_classification": "ordinary_dividend"
+            }
+          ]
+        },
+        {
+          "id": "COP-scenario-2024-08-13-2024-09-03",
+          "symbol": "COP",
+          "ex_date": "2024-08-13",
+          "payable_date": "2024-09-03",
+          "rate": "0.78",
+          "currency": null,
+          "kind": "ordinary_cash",
+          "amount_basis": "gross",
+          "verified": false,
+          "scenario_assumption": "USD gross source rate",
+          "evidence": [
+            "2026-09-22-cop-dividend-api.json",
+            "2026-09-22-cop-components-confirmed.json"
+          ],
+          "entitlement_rule_assumption": "Treat all components, including VROC, as standard cash rights; not verified legal classification",
+          "components": [
+            {
+              "id": "75593cde-60eb-47d4-b28f-dce6cbecf1cf",
+              "rate": 0.2,
+              "source_ex_date": "2024-08-12",
+              "issuer_classification": "variable_return_of_cash"
+            },
+            {
+              "id": "8318b86a-41ff-4573-b009-5242f57efa30",
+              "rate": 0.58,
+              "source_ex_date": "2024-08-12",
+              "issuer_classification": "ordinary_dividend"
+            }
+          ]
+        },
+        {
+          "id": "COP-scenario-2024-11-11-2024-12-02",
+          "symbol": "COP",
+          "ex_date": "2024-11-11",
+          "payable_date": "2024-12-02",
+          "rate": "0.78",
+          "currency": null,
+          "kind": "ordinary_cash",
+          "amount_basis": "gross",
+          "verified": false,
+          "scenario_assumption": "USD gross source rate",
+          "evidence": [
+            "2026-09-22-cop-dividend-api.json",
+            "2026-09-22-cop-components-confirmed.json"
+          ],
+          "entitlement_rule_assumption": "Treat all components, including VROC, as standard cash rights; not verified legal classification",
+          "components": [
+            {
+              "id": "3012c6ac-1b2c-4100-84e2-010bdaf10bb6",
+              "rate": 0.78,
+              "source_ex_date": "2024-11-08",
+              "issuer_classification": "ordinary_dividend"
+            }
+          ]
+        },
+        {
+          "id": "COP-scenario-2025-02-18-2025-03-03",
+          "symbol": "COP",
+          "ex_date": "2025-02-18",
+          "payable_date": "2025-03-03",
+          "rate": "0.78",
+          "currency": null,
+          "kind": "ordinary_cash",
+          "amount_basis": "gross",
+          "verified": false,
+          "scenario_assumption": "USD gross source rate",
+          "evidence": [
+            "2026-09-22-cop-dividend-api.json",
+            "2026-09-22-cop-components-confirmed.json"
+          ],
+          "entitlement_rule_assumption": "Treat all components, including VROC, as standard cash rights; not verified legal classification",
+          "components": [
+            {
+              "id": "c6d42a0e-7659-436a-bf2e-8d1227ce5001",
+              "rate": 0.78,
+              "source_ex_date": "2025-02-14",
+              "issuer_classification": "ordinary_dividend"
+            }
+          ]
+        },
+        {
+          "id": "COP-scenario-2025-05-20-2025-06-02",
+          "symbol": "COP",
+          "ex_date": "2025-05-20",
+          "payable_date": "2025-06-02",
+          "rate": "0.78",
+          "currency": null,
+          "kind": "ordinary_cash",
+          "amount_basis": "gross",
+          "verified": false,
+          "scenario_assumption": "USD gross source rate",
+          "evidence": [
+            "2026-09-22-cop-dividend-api.json",
+            "2026-09-22-cop-components-confirmed.json"
+          ],
+          "entitlement_rule_assumption": "Treat all components, including VROC, as standard cash rights; not verified legal classification",
+          "components": [
+            {
+              "id": "66909c44-230e-4020-a4c4-b6148eb00ac1",
+              "rate": 0.78,
+              "source_ex_date": "2025-05-19",
+              "issuer_classification": "unverified"
+            }
+          ]
+        },
+        {
+          "id": "COP-scenario-2025-08-19-2025-09-02",
+          "symbol": "COP",
+          "ex_date": "2025-08-19",
+          "payable_date": "2025-09-02",
+          "rate": "0.78",
+          "currency": null,
+          "kind": "ordinary_cash",
+          "amount_basis": "gross",
+          "verified": false,
+          "scenario_assumption": "USD gross source rate",
+          "evidence": [
+            "2026-09-22-cop-dividend-api.json",
+            "2026-09-22-cop-components-confirmed.json"
+          ],
+          "entitlement_rule_assumption": "Treat all components, including VROC, as standard cash rights; not verified legal classification",
+          "components": [
+            {
+              "id": "fefd575f-aa2e-48a6-b078-3e8033462e9e",
+              "rate": 0.78,
+              "source_ex_date": "2025-08-18",
+              "issuer_classification": "unverified"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "start": "2022-09-01",
+      "end": "2025-09-01",
+      "offset": null,
+      "cost_multiplier": 2,
+      "events": []
+    },
+    {
+      "start": "2022-09-01",
+      "end": "2025-09-01",
+      "offset": -1,
+      "cost_multiplier": 2,
+      "events": [
+        {
+          "id": "COP-scenario-2022-09-27-2022-10-14",
+          "symbol": "COP",
+          "ex_date": "2022-09-27",
+          "payable_date": "2022-10-14",
+          "rate": "1.4",
+          "currency": null,
+          "kind": "ordinary_cash",
+          "amount_basis": "gross",
+          "verified": false,
+          "scenario_assumption": "USD gross source rate",
+          "evidence": [
+            "2026-09-22-cop-dividend-api.json",
+            "2026-09-22-cop-components-confirmed.json"
+          ],
+          "entitlement_rule_assumption": "Treat all components, including VROC, as standard cash rights; not verified legal classification",
+          "components": [
+            {
+              "id": "d88c086b-11f3-438a-9679-57617013ca50",
+              "rate": 1.4,
+              "source_ex_date": "2022-09-28",
+              "issuer_classification": "unverified"
+            }
+          ]
+        },
+        {
+          "id": "COP-scenario-2022-11-11-2022-12-01",
+          "symbol": "COP",
+          "ex_date": "2022-11-11",
+          "payable_date": "2022-12-01",
+          "rate": "0.51",
+          "currency": null,
+          "kind": "ordinary_cash",
+          "amount_basis": "gross",
+          "verified": false,
+          "scenario_assumption": "USD gross source rate",
+          "evidence": [
+            "2026-09-22-cop-dividend-api.json",
+            "2026-09-22-cop-components-confirmed.json"
+          ],
+          "entitlement_rule_assumption": "Treat all components, including VROC, as standard cash rights; not verified legal classification",
+          "components": [
+            {
+              "id": "fd6e2804-6e1d-4385-9aef-d6d74920ebd6",
+              "rate": 0.51,
+              "source_ex_date": "2022-11-14",
+              "issuer_classification": "unverified"
+            }
+          ]
+        },
+        {
+          "id": "COP-scenario-2022-12-22-2023-01-13",
+          "symbol": "COP",
+          "ex_date": "2022-12-22",
+          "payable_date": "2023-01-13",
+          "rate": "0.7",
+          "currency": null,
+          "kind": "ordinary_cash",
+          "amount_basis": "gross",
+          "verified": false,
+          "scenario_assumption": "USD gross source rate",
+          "evidence": [
+            "2026-09-22-cop-dividend-api.json",
+            "2026-09-22-cop-components-confirmed.json"
+          ],
+          "entitlement_rule_assumption": "Treat all components, including VROC, as standard cash rights; not verified legal classification",
+          "components": [
+            {
+              "id": "a15927b2-6c34-47b3-9ccd-42642fb9e18d",
+              "rate": 0.7,
+              "source_ex_date": "2022-12-23",
+              "issuer_classification": "unverified"
+            }
+          ]
+        },
+        {
+          "id": "COP-scenario-2023-02-10-2023-03-01",
+          "symbol": "COP",
+          "ex_date": "2023-02-10",
+          "payable_date": "2023-03-01",
+          "rate": "0.51",
+          "currency": null,
+          "kind": "ordinary_cash",
+          "amount_basis": "gross",
+          "verified": false,
+          "scenario_assumption": "USD gross source rate",
+          "evidence": [
+            "2026-09-22-cop-dividend-api.json",
+            "2026-09-22-cop-components-confirmed.json"
+          ],
+          "entitlement_rule_assumption": "Treat all components, including VROC, as standard cash rights; not verified legal classification",
+          "components": [
+            {
+              "id": "89c747ba-252b-41ba-b205-86b9a6a9c782",
+              "rate": 0.51,
+              "source_ex_date": "2023-02-13",
+              "issuer_classification": "unverified"
+            }
+          ]
+        },
+        {
+          "id": "COP-scenario-2023-03-27-2023-04-14",
+          "symbol": "COP",
+          "ex_date": "2023-03-27",
+          "payable_date": "2023-04-14",
+          "rate": "0.6",
+          "currency": null,
+          "kind": "ordinary_cash",
+          "amount_basis": "gross",
+          "verified": false,
+          "scenario_assumption": "USD gross source rate",
+          "evidence": [
+            "2026-09-22-cop-dividend-api.json",
+            "2026-09-22-cop-components-confirmed.json"
+          ],
+          "entitlement_rule_assumption": "Treat all components, including VROC, as standard cash rights; not verified legal classification",
+          "components": [
+            {
+              "id": "db90b5c2-474b-4bb1-b32e-ff32b7e6436a",
+              "rate": 0.6,
+              "source_ex_date": "2023-03-28",
+              "issuer_classification": "unverified"
+            }
+          ]
+        },
+        {
+          "id": "COP-scenario-2023-05-12-2023-06-01",
+          "symbol": "COP",
+          "ex_date": "2023-05-12",
+          "payable_date": "2023-06-01",
+          "rate": "0.51",
+          "currency": null,
+          "kind": "ordinary_cash",
+          "amount_basis": "gross",
+          "verified": false,
+          "scenario_assumption": "USD gross source rate",
+          "evidence": [
+            "2026-09-22-cop-dividend-api.json",
+            "2026-09-22-cop-components-confirmed.json"
+          ],
+          "entitlement_rule_assumption": "Treat all components, including VROC, as standard cash rights; not verified legal classification",
+          "components": [
+            {
+              "id": "15417b72-ccc1-43b8-b259-885d434742c2",
+              "rate": 0.51,
+              "source_ex_date": "2023-05-15",
+              "issuer_classification": "unverified"
+            }
+          ]
+        },
+        {
+          "id": "COP-scenario-2023-06-23-2023-07-14",
+          "symbol": "COP",
+          "ex_date": "2023-06-23",
+          "payable_date": "2023-07-14",
+          "rate": "0.6",
+          "currency": null,
+          "kind": "ordinary_cash",
+          "amount_basis": "gross",
+          "verified": false,
+          "scenario_assumption": "USD gross source rate",
+          "evidence": [
+            "2026-09-22-cop-dividend-api.json",
+            "2026-09-22-cop-components-confirmed.json"
+          ],
+          "entitlement_rule_assumption": "Treat all components, including VROC, as standard cash rights; not verified legal classification",
+          "components": [
+            {
+              "id": "de7d244f-3ccd-42f5-b133-bf52feb70479",
+              "rate": 0.6,
+              "source_ex_date": "2023-06-26",
+              "issuer_classification": "unverified"
+            }
+          ]
+        },
+        {
+          "id": "COP-scenario-2023-08-14-2023-09-01",
+          "symbol": "COP",
+          "ex_date": "2023-08-14",
+          "payable_date": "2023-09-01",
+          "rate": "0.51",
+          "currency": null,
+          "kind": "ordinary_cash",
+          "amount_basis": "gross",
+          "verified": false,
+          "scenario_assumption": "USD gross source rate",
+          "evidence": [
+            "2026-09-22-cop-dividend-api.json",
+            "2026-09-22-cop-components-confirmed.json"
+          ],
+          "entitlement_rule_assumption": "Treat all components, including VROC, as standard cash rights; not verified legal classification",
+          "components": [
+            {
+              "id": "48765bff-bef4-4576-98e7-440398d38196",
+              "rate": 0.51,
+              "source_ex_date": "2023-08-15",
+              "issuer_classification": "unverified"
+            }
+          ]
+        },
+        {
+          "id": "COP-scenario-2023-09-26-2023-10-16",
+          "symbol": "COP",
+          "ex_date": "2023-09-26",
+          "payable_date": "2023-10-16",
+          "rate": "0.6",
+          "currency": null,
+          "kind": "ordinary_cash",
+          "amount_basis": "gross",
+          "verified": false,
+          "scenario_assumption": "USD gross source rate",
+          "evidence": [
+            "2026-09-22-cop-dividend-api.json",
+            "2026-09-22-cop-components-confirmed.json"
+          ],
+          "entitlement_rule_assumption": "Treat all components, including VROC, as standard cash rights; not verified legal classification",
+          "components": [
+            {
+              "id": "8286b895-ea21-4767-96e5-e417f35d051d",
+              "rate": 0.6,
+              "source_ex_date": "2023-09-27",
+              "issuer_classification": "unverified"
+            }
+          ]
+        },
+        {
+          "id": "COP-scenario-2023-11-10-2023-12-01",
+          "symbol": "COP",
+          "ex_date": "2023-11-10",
+          "payable_date": "2023-12-01",
+          "rate": "0.58",
+          "currency": null,
+          "kind": "ordinary_cash",
+          "amount_basis": "gross",
+          "verified": false,
+          "scenario_assumption": "USD gross source rate",
+          "evidence": [
+            "2026-09-22-cop-dividend-api.json",
+            "2026-09-22-cop-components-confirmed.json"
+          ],
+          "entitlement_rule_assumption": "Treat all components, including VROC, as standard cash rights; not verified legal classification",
+          "components": [
+            {
+              "id": "91da9730-7fdd-47c2-a36e-f31da4c32850",
+              "rate": 0.58,
+              "source_ex_date": "2023-11-13",
+              "issuer_classification": "unverified"
+            }
+          ]
+        },
+        {
+          "id": "COP-scenario-2024-02-14-2024-03-01",
+          "symbol": "COP",
+          "ex_date": "2024-02-14",
+          "payable_date": "2024-03-01",
+          "rate": "0.78",
+          "currency": null,
+          "kind": "ordinary_cash",
+          "amount_basis": "gross",
+          "verified": false,
+          "scenario_assumption": "USD gross source rate",
+          "evidence": [
+            "2026-09-22-cop-dividend-api.json",
+            "2026-09-22-cop-components-confirmed.json"
+          ],
+          "entitlement_rule_assumption": "Treat all components, including VROC, as standard cash rights; not verified legal classification",
+          "components": [
+            {
+              "id": "70803c87-07f0-44c2-ab95-e66af555e7b1",
+              "rate": 0.58,
+              "source_ex_date": "2024-02-15",
+              "issuer_classification": "ordinary_dividend"
+            },
+            {
+              "id": "b50cc03b-b43f-4635-bb6c-f7cfe4bf842c",
+              "rate": 0.2,
+              "source_ex_date": "2024-02-15",
+              "issuer_classification": "variable_return_of_cash"
+            }
+          ]
+        },
+        {
+          "id": "COP-scenario-2024-05-09-2024-06-03",
+          "symbol": "COP",
+          "ex_date": "2024-05-09",
+          "payable_date": "2024-06-03",
+          "rate": "0.78",
+          "currency": null,
+          "kind": "ordinary_cash",
+          "amount_basis": "gross",
+          "verified": false,
+          "scenario_assumption": "USD gross source rate",
+          "evidence": [
+            "2026-09-22-cop-dividend-api.json",
+            "2026-09-22-cop-components-confirmed.json"
+          ],
+          "entitlement_rule_assumption": "Treat all components, including VROC, as standard cash rights; not verified legal classification",
+          "components": [
+            {
+              "id": "65a7d241-a415-4a4a-b3a7-0e2a9e373420",
+              "rate": 0.2,
+              "source_ex_date": "2024-05-10",
+              "issuer_classification": "variable_return_of_cash"
+            },
+            {
+              "id": "6b3e32c9-4e48-4436-b11d-0b8e6c6ea798",
+              "rate": 0.58,
+              "source_ex_date": "2024-05-10",
+              "issuer_classification": "ordinary_dividend"
+            }
+          ]
+        },
+        {
+          "id": "COP-scenario-2024-08-09-2024-09-03",
+          "symbol": "COP",
+          "ex_date": "2024-08-09",
+          "payable_date": "2024-09-03",
+          "rate": "0.78",
+          "currency": null,
+          "kind": "ordinary_cash",
+          "amount_basis": "gross",
+          "verified": false,
+          "scenario_assumption": "USD gross source rate",
+          "evidence": [
+            "2026-09-22-cop-dividend-api.json",
+            "2026-09-22-cop-components-confirmed.json"
+          ],
+          "entitlement_rule_assumption": "Treat all components, including VROC, as standard cash rights; not verified legal classification",
+          "components": [
+            {
+              "id": "75593cde-60eb-47d4-b28f-dce6cbecf1cf",
+              "rate": 0.2,
+              "source_ex_date": "2024-08-12",
+              "issuer_classification": "variable_return_of_cash"
+            },
+            {
+              "id": "8318b86a-41ff-4573-b009-5242f57efa30",
+              "rate": 0.58,
+              "source_ex_date": "2024-08-12",
+              "issuer_classification": "ordinary_dividend"
+            }
+          ]
+        },
+        {
+          "id": "COP-scenario-2024-11-07-2024-12-02",
+          "symbol": "COP",
+          "ex_date": "2024-11-07",
+          "payable_date": "2024-12-02",
+          "rate": "0.78",
+          "currency": null,
+          "kind": "ordinary_cash",
+          "amount_basis": "gross",
+          "verified": false,
+          "scenario_assumption": "USD gross source rate",
+          "evidence": [
+            "2026-09-22-cop-dividend-api.json",
+            "2026-09-22-cop-components-confirmed.json"
+          ],
+          "entitlement_rule_assumption": "Treat all components, including VROC, as standard cash rights; not verified legal classification",
+          "components": [
+            {
+              "id": "3012c6ac-1b2c-4100-84e2-010bdaf10bb6",
+              "rate": 0.78,
+              "source_ex_date": "2024-11-08",
+              "issuer_classification": "ordinary_dividend"
+            }
+          ]
+        },
+        {
+          "id": "COP-scenario-2025-02-13-2025-03-03",
+          "symbol": "COP",
+          "ex_date": "2025-02-13",
+          "payable_date": "2025-03-03",
+          "rate": "0.78",
+          "currency": null,
+          "kind": "ordinary_cash",
+          "amount_basis": "gross",
+          "verified": false,
+          "scenario_assumption": "USD gross source rate",
+          "evidence": [
+            "2026-09-22-cop-dividend-api.json",
+            "2026-09-22-cop-components-confirmed.json"
+          ],
+          "entitlement_rule_assumption": "Treat all components, including VROC, as standard cash rights; not verified legal classification",
+          "components": [
+            {
+              "id": "c6d42a0e-7659-436a-bf2e-8d1227ce5001",
+              "rate": 0.78,
+              "source_ex_date": "2025-02-14",
+              "issuer_classification": "ordinary_dividend"
+            }
+          ]
+        },
+        {
+          "id": "COP-scenario-2025-05-16-2025-06-02",
+          "symbol": "COP",
+          "ex_date": "2025-05-16",
+          "payable_date": "2025-06-02",
+          "rate": "0.78",
+          "currency": null,
+          "kind": "ordinary_cash",
+          "amount_basis": "gross",
+          "verified": false,
+          "scenario_assumption": "USD gross source rate",
+          "evidence": [
+            "2026-09-22-cop-dividend-api.json",
+            "2026-09-22-cop-components-confirmed.json"
+          ],
+          "entitlement_rule_assumption": "Treat all components, including VROC, as standard cash rights; not verified legal classification",
+          "components": [
+            {
+              "id": "66909c44-230e-4020-a4c4-b6148eb00ac1",
+              "rate": 0.78,
+              "source_ex_date": "2025-05-19",
+              "issuer_classification": "unverified"
+            }
+          ]
+        },
+        {
+          "id": "COP-scenario-2025-08-15-2025-09-02",
+          "symbol": "COP",
+          "ex_date": "2025-08-15",
+          "payable_date": "2025-09-02",
+          "rate": "0.78",
+          "currency": null,
+          "kind": "ordinary_cash",
+          "amount_basis": "gross",
+          "verified": false,
+          "scenario_assumption": "USD gross source rate",
+          "evidence": [
+            "2026-09-22-cop-dividend-api.json",
+            "2026-09-22-cop-components-confirmed.json"
+          ],
+          "entitlement_rule_assumption": "Treat all components, including VROC, as standard cash rights; not verified legal classification",
+          "components": [
+            {
+              "id": "fefd575f-aa2e-48a6-b078-3e8033462e9e",
+              "rate": 0.78,
+              "source_ex_date": "2025-08-18",
+              "issuer_classification": "unverified"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "start": "2022-09-01",
+      "end": "2025-09-01",
+      "offset": 0,
+      "cost_multiplier": 2,
+      "events": [
+        {
+          "id": "COP-scenario-2022-09-28-2022-10-14",
+          "symbol": "COP",
+          "ex_date": "2022-09-28",
+          "payable_date": "2022-10-14",
+          "rate": "1.4",
+          "currency": null,
+          "kind": "ordinary_cash",
+          "amount_basis": "gross",
+          "verified": false,
+          "scenario_assumption": "USD gross source rate",
+          "evidence": [
+            "2026-09-22-cop-dividend-api.json",
+            "2026-09-22-cop-components-confirmed.json"
+          ],
+          "entitlement_rule_assumption": "Treat all components, including VROC, as standard cash rights; not verified legal classification",
+          "components": [
+            {
+              "id": "d88c086b-11f3-438a-9679-57617013ca50",
+              "rate": 1.4,
+              "source_ex_date": "2022-09-28",
+              "issuer_classification": "unverified"
+            }
+          ]
+        },
+        {
+          "id": "COP-scenario-2022-11-14-2022-12-01",
+          "symbol": "COP",
+          "ex_date": "2022-11-14",
+          "payable_date": "2022-12-01",
+          "rate": "0.51",
+          "currency": null,
+          "kind": "ordinary_cash",
+          "amount_basis": "gross",
+          "verified": false,
+          "scenario_assumption": "USD gross source rate",
+          "evidence": [
+            "2026-09-22-cop-dividend-api.json",
+            "2026-09-22-cop-components-confirmed.json"
+          ],
+          "entitlement_rule_assumption": "Treat all components, including VROC, as standard cash rights; not verified legal classification",
+          "components": [
+            {
+              "id": "fd6e2804-6e1d-4385-9aef-d6d74920ebd6",
+              "rate": 0.51,
+              "source_ex_date": "2022-11-14",
+              "issuer_classification": "unverified"
+            }
+          ]
+        },
+        {
+          "id": "COP-scenario-2022-12-23-2023-01-13",
+          "symbol": "COP",
+          "ex_date": "2022-12-23",
+          "payable_date": "2023-01-13",
+          "rate": "0.7",
+          "currency": null,
+          "kind": "ordinary_cash",
+          "amount_basis": "gross",
+          "verified": false,
+          "scenario_assumption": "USD gross source rate",
+          "evidence": [
+            "2026-09-22-cop-dividend-api.json",
+            "2026-09-22-cop-components-confirmed.json"
+          ],
+          "entitlement_rule_assumption": "Treat all components, including VROC, as standard cash rights; not verified legal classification",
+          "components": [
+            {
+              "id": "a15927b2-6c34-47b3-9ccd-42642fb9e18d",
+              "rate": 0.7,
+              "source_ex_date": "2022-12-23",
+              "issuer_classification": "unverified"
+            }
+          ]
+        },
+        {
+          "id": "COP-scenario-2023-02-13-2023-03-01",
+          "symbol": "COP",
+          "ex_date": "2023-02-13",
+          "payable_date": "2023-03-01",
+          "rate": "0.51",
+          "currency": null,
+          "kind": "ordinary_cash",
+          "amount_basis": "gross",
+          "verified": false,
+          "scenario_assumption": "USD gross source rate",
+          "evidence": [
+            "2026-09-22-cop-dividend-api.json",
+            "2026-09-22-cop-components-confirmed.json"
+          ],
+          "entitlement_rule_assumption": "Treat all components, including VROC, as standard cash rights; not verified legal classification",
+          "components": [
+            {
+              "id": "89c747ba-252b-41ba-b205-86b9a6a9c782",
+              "rate": 0.51,
+              "source_ex_date": "2023-02-13",
+              "issuer_classification": "unverified"
+            }
+          ]
+        },
+        {
+          "id": "COP-scenario-2023-03-28-2023-04-14",
+          "symbol": "COP",
+          "ex_date": "2023-03-28",
+          "payable_date": "2023-04-14",
+          "rate": "0.6",
+          "currency": null,
+          "kind": "ordinary_cash",
+          "amount_basis": "gross",
+          "verified": false,
+          "scenario_assumption": "USD gross source rate",
+          "evidence": [
+            "2026-09-22-cop-dividend-api.json",
+            "2026-09-22-cop-components-confirmed.json"
+          ],
+          "entitlement_rule_assumption": "Treat all components, including VROC, as standard cash rights; not verified legal classification",
+          "components": [
+            {
+              "id": "db90b5c2-474b-4bb1-b32e-ff32b7e6436a",
+              "rate": 0.6,
+              "source_ex_date": "2023-03-28",
+              "issuer_classification": "unverified"
+            }
+          ]
+        },
+        {
+          "id": "COP-scenario-2023-05-15-2023-06-01",
+          "symbol": "COP",
+          "ex_date": "2023-05-15",
+          "payable_date": "2023-06-01",
+          "rate": "0.51",
+          "currency": null,
+          "kind": "ordinary_cash",
+          "amount_basis": "gross",
+          "verified": false,
+          "scenario_assumption": "USD gross source rate",
+          "evidence": [
+            "2026-09-22-cop-dividend-api.json",
+            "2026-09-22-cop-components-confirmed.json"
+          ],
+          "entitlement_rule_assumption": "Treat all components, including VROC, as standard cash rights; not verified legal classification",
+          "components": [
+            {
+              "id": "15417b72-ccc1-43b8-b259-885d434742c2",
+              "rate": 0.51,
+              "source_ex_date": "2023-05-15",
+              "issuer_classification": "unverified"
+            }
+          ]
+        },
+        {
+          "id": "COP-scenario-2023-06-26-2023-07-14",
+          "symbol": "COP",
+          "ex_date": "2023-06-26",
+          "payable_date": "2023-07-14",
+          "rate": "0.6",
+          "currency": null,
+          "kind": "ordinary_cash",
+          "amount_basis": "gross",
+          "verified": false,
+          "scenario_assumption": "USD gross source rate",
+          "evidence": [
+            "2026-09-22-cop-dividend-api.json",
+            "2026-09-22-cop-components-confirmed.json"
+          ],
+          "entitlement_rule_assumption": "Treat all components, including VROC, as standard cash rights; not verified legal classification",
+          "components": [
+            {
+              "id": "de7d244f-3ccd-42f5-b133-bf52feb70479",
+              "rate": 0.6,
+              "source_ex_date": "2023-06-26",
+              "issuer_classification": "unverified"
+            }
+          ]
+        },
+        {
+          "id": "COP-scenario-2023-08-15-2023-09-01",
+          "symbol": "COP",
+          "ex_date": "2023-08-15",
+          "payable_date": "2023-09-01",
+          "rate": "0.51",
+          "currency": null,
+          "kind": "ordinary_cash",
+          "amount_basis": "gross",
+          "verified": false,
+          "scenario_assumption": "USD gross source rate",
+          "evidence": [
+            "2026-09-22-cop-dividend-api.json",
+            "2026-09-22-cop-components-confirmed.json"
+          ],
+          "entitlement_rule_assumption": "Treat all components, including VROC, as standard cash rights; not verified legal classification",
+          "components": [
+            {
+              "id": "48765bff-bef4-4576-98e7-440398d38196",
+              "rate": 0.51,
+              "source_ex_date": "2023-08-15",
+              "issuer_classification": "unverified"
+            }
+          ]
+        },
+        {
+          "id": "COP-scenario-2023-09-27-2023-10-16",
+          "symbol": "COP",
+          "ex_date": "2023-09-27",
+          "payable_date": "2023-10-16",
+          "rate": "0.6",
+          "currency": null,
+          "kind": "ordinary_cash",
+          "amount_basis": "gross",
+          "verified": false,
+          "scenario_assumption": "USD gross source rate",
+          "evidence": [
+            "2026-09-22-cop-dividend-api.json",
+            "2026-09-22-cop-components-confirmed.json"
+          ],
+          "entitlement_rule_assumption": "Treat all components, including VROC, as standard cash rights; not verified legal classification",
+          "components": [
+            {
+              "id": "8286b895-ea21-4767-96e5-e417f35d051d",
+              "rate": 0.6,
+              "source_ex_date": "2023-09-27",
+              "issuer_classification": "unverified"
+            }
+          ]
+        },
+        {
+          "id": "COP-scenario-2023-11-13-2023-12-01",
+          "symbol": "COP",
+          "ex_date": "2023-11-13",
+          "payable_date": "2023-12-01",
+          "rate": "0.58",
+          "currency": null,
+          "kind": "ordinary_cash",
+          "amount_basis": "gross",
+          "verified": false,
+          "scenario_assumption": "USD gross source rate",
+          "evidence": [
+            "2026-09-22-cop-dividend-api.json",
+            "2026-09-22-cop-components-confirmed.json"
+          ],
+          "entitlement_rule_assumption": "Treat all components, including VROC, as standard cash rights; not verified legal classification",
+          "components": [
+            {
+              "id": "91da9730-7fdd-47c2-a36e-f31da4c32850",
+              "rate": 0.58,
+              "source_ex_date": "2023-11-13",
+              "issuer_classification": "unverified"
+            }
+          ]
+        },
+        {
+          "id": "COP-scenario-2024-02-15-2024-03-01",
+          "symbol": "COP",
+          "ex_date": "2024-02-15",
+          "payable_date": "2024-03-01",
+          "rate": "0.78",
+          "currency": null,
+          "kind": "ordinary_cash",
+          "amount_basis": "gross",
+          "verified": false,
+          "scenario_assumption": "USD gross source rate",
+          "evidence": [
+            "2026-09-22-cop-dividend-api.json",
+            "2026-09-22-cop-components-confirmed.json"
+          ],
+          "entitlement_rule_assumption": "Treat all components, including VROC, as standard cash rights; not verified legal classification",
+          "components": [
+            {
+              "id": "70803c87-07f0-44c2-ab95-e66af555e7b1",
+              "rate": 0.58,
+              "source_ex_date": "2024-02-15",
+              "issuer_classification": "ordinary_dividend"
+            },
+            {
+              "id": "b50cc03b-b43f-4635-bb6c-f7cfe4bf842c",
+              "rate": 0.2,
+              "source_ex_date": "2024-02-15",
+              "issuer_classification": "variable_return_of_cash"
+            }
+          ]
+        },
+        {
+          "id": "COP-scenario-2024-05-10-2024-06-03",
+          "symbol": "COP",
+          "ex_date": "2024-05-10",
+          "payable_date": "2024-06-03",
+          "rate": "0.78",
+          "currency": null,
+          "kind": "ordinary_cash",
+          "amount_basis": "gross",
+          "verified": false,
+          "scenario_assumption": "USD gross source rate",
+          "evidence": [
+            "2026-09-22-cop-dividend-api.json",
+            "2026-09-22-cop-components-confirmed.json"
+          ],
+          "entitlement_rule_assumption": "Treat all components, including VROC, as standard cash rights; not verified legal classification",
+          "components": [
+            {
+              "id": "65a7d241-a415-4a4a-b3a7-0e2a9e373420",
+              "rate": 0.2,
+              "source_ex_date": "2024-05-10",
+              "issuer_classification": "variable_return_of_cash"
+            },
+            {
+              "id": "6b3e32c9-4e48-4436-b11d-0b8e6c6ea798",
+              "rate": 0.58,
+              "source_ex_date": "2024-05-10",
+              "issuer_classification": "ordinary_dividend"
+            }
+          ]
+        },
+        {
+          "id": "COP-scenario-2024-08-12-2024-09-03",
+          "symbol": "COP",
+          "ex_date": "2024-08-12",
+          "payable_date": "2024-09-03",
+          "rate": "0.78",
+          "currency": null,
+          "kind": "ordinary_cash",
+          "amount_basis": "gross",
+          "verified": false,
+          "scenario_assumption": "USD gross source rate",
+          "evidence": [
+            "2026-09-22-cop-dividend-api.json",
+            "2026-09-22-cop-components-confirmed.json"
+          ],
+          "entitlement_rule_assumption": "Treat all components, including VROC, as standard cash rights; not verified legal classification",
+          "components": [
+            {
+              "id": "75593cde-60eb-47d4-b28f-dce6cbecf1cf",
+              "rate": 0.2,
+              "source_ex_date": "2024-08-12",
+              "issuer_classification": "variable_return_of_cash"
+            },
+            {
+              "id": "8318b86a-41ff-4573-b009-5242f57efa30",
+              "rate": 0.58,
+              "source_ex_date": "2024-08-12",
+              "issuer_classification": "ordinary_dividend"
+            }
+          ]
+        },
+        {
+          "id": "COP-scenario-2024-11-08-2024-12-02",
+          "symbol": "COP",
+          "ex_date": "2024-11-08",
+          "payable_date": "2024-12-02",
+          "rate": "0.78",
+          "currency": null,
+          "kind": "ordinary_cash",
+          "amount_basis": "gross",
+          "verified": false,
+          "scenario_assumption": "USD gross source rate",
+          "evidence": [
+            "2026-09-22-cop-dividend-api.json",
+            "2026-09-22-cop-components-confirmed.json"
+          ],
+          "entitlement_rule_assumption": "Treat all components, including VROC, as standard cash rights; not verified legal classification",
+          "components": [
+            {
+              "id": "3012c6ac-1b2c-4100-84e2-010bdaf10bb6",
+              "rate": 0.78,
+              "source_ex_date": "2024-11-08",
+              "issuer_classification": "ordinary_dividend"
+            }
+          ]
+        },
+        {
+          "id": "COP-scenario-2025-02-14-2025-03-03",
+          "symbol": "COP",
+          "ex_date": "2025-02-14",
+          "payable_date": "2025-03-03",
+          "rate": "0.78",
+          "currency": null,
+          "kind": "ordinary_cash",
+          "amount_basis": "gross",
+          "verified": false,
+          "scenario_assumption": "USD gross source rate",
+          "evidence": [
+            "2026-09-22-cop-dividend-api.json",
+            "2026-09-22-cop-components-confirmed.json"
+          ],
+          "entitlement_rule_assumption": "Treat all components, including VROC, as standard cash rights; not verified legal classification",
+          "components": [
+            {
+              "id": "c6d42a0e-7659-436a-bf2e-8d1227ce5001",
+              "rate": 0.78,
+              "source_ex_date": "2025-02-14",
+              "issuer_classification": "ordinary_dividend"
+            }
+          ]
+        },
+        {
+          "id": "COP-scenario-2025-05-19-2025-06-02",
+          "symbol": "COP",
+          "ex_date": "2025-05-19",
+          "payable_date": "2025-06-02",
+          "rate": "0.78",
+          "currency": null,
+          "kind": "ordinary_cash",
+          "amount_basis": "gross",
+          "verified": false,
+          "scenario_assumption": "USD gross source rate",
+          "evidence": [
+            "2026-09-22-cop-dividend-api.json",
+            "2026-09-22-cop-components-confirmed.json"
+          ],
+          "entitlement_rule_assumption": "Treat all components, including VROC, as standard cash rights; not verified legal classification",
+          "components": [
+            {
+              "id": "66909c44-230e-4020-a4c4-b6148eb00ac1",
+              "rate": 0.78,
+              "source_ex_date": "2025-05-19",
+              "issuer_classification": "unverified"
+            }
+          ]
+        },
+        {
+          "id": "COP-scenario-2025-08-18-2025-09-02",
+          "symbol": "COP",
+          "ex_date": "2025-08-18",
+          "payable_date": "2025-09-02",
+          "rate": "0.78",
+          "currency": null,
+          "kind": "ordinary_cash",
+          "amount_basis": "gross",
+          "verified": false,
+          "scenario_assumption": "USD gross source rate",
+          "evidence": [
+            "2026-09-22-cop-dividend-api.json",
+            "2026-09-22-cop-components-confirmed.json"
+          ],
+          "entitlement_rule_assumption": "Treat all components, including VROC, as standard cash rights; not verified legal classification",
+          "components": [
+            {
+              "id": "fefd575f-aa2e-48a6-b078-3e8033462e9e",
+              "rate": 0.78,
+              "source_ex_date": "2025-08-18",
+              "issuer_classification": "unverified"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "start": "2022-09-01",
+      "end": "2025-09-01",
+      "offset": 1,
+      "cost_multiplier": 2,
+      "events": [
+        {
+          "id": "COP-scenario-2022-09-29-2022-10-14",
+          "symbol": "COP",
+          "ex_date": "2022-09-29",
+          "payable_date": "2022-10-14",
+          "rate": "1.4",
+          "currency": null,
+          "kind": "ordinary_cash",
+          "amount_basis": "gross",
+          "verified": false,
+          "scenario_assumption": "USD gross source rate",
+          "evidence": [
+            "2026-09-22-cop-dividend-api.json",
+            "2026-09-22-cop-components-confirmed.json"
+          ],
+          "entitlement_rule_assumption": "Treat all components, including VROC, as standard cash rights; not verified legal classification",
+          "components": [
+            {
+              "id": "d88c086b-11f3-438a-9679-57617013ca50",
+              "rate": 1.4,
+              "source_ex_date": "2022-09-28",
+              "issuer_classification": "unverified"
+            }
+          ]
+        },
+        {
+          "id": "COP-scenario-2022-11-15-2022-12-01",
+          "symbol": "COP",
+          "ex_date": "2022-11-15",
+          "payable_date": "2022-12-01",
+          "rate": "0.51",
+          "currency": null,
+          "kind": "ordinary_cash",
+          "amount_basis": "gross",
+          "verified": false,
+          "scenario_assumption": "USD gross source rate",
+          "evidence": [
+            "2026-09-22-cop-dividend-api.json",
+            "2026-09-22-cop-components-confirmed.json"
+          ],
+          "entitlement_rule_assumption": "Treat all components, including VROC, as standard cash rights; not verified legal classification",
+          "components": [
+            {
+              "id": "fd6e2804-6e1d-4385-9aef-d6d74920ebd6",
+              "rate": 0.51,
+              "source_ex_date": "2022-11-14",
+              "issuer_classification": "unverified"
+            }
+          ]
+        },
+        {
+          "id": "COP-scenario-2022-12-27-2023-01-13",
+          "symbol": "COP",
+          "ex_date": "2022-12-27",
+          "payable_date": "2023-01-13",
+          "rate": "0.7",
+          "currency": null,
+          "kind": "ordinary_cash",
+          "amount_basis": "gross",
+          "verified": false,
+          "scenario_assumption": "USD gross source rate",
+          "evidence": [
+            "2026-09-22-cop-dividend-api.json",
+            "2026-09-22-cop-components-confirmed.json"
+          ],
+          "entitlement_rule_assumption": "Treat all components, including VROC, as standard cash rights; not verified legal classification",
+          "components": [
+            {
+              "id": "a15927b2-6c34-47b3-9ccd-42642fb9e18d",
+              "rate": 0.7,
+              "source_ex_date": "2022-12-23",
+              "issuer_classification": "unverified"
+            }
+          ]
+        },
+        {
+          "id": "COP-scenario-2023-02-14-2023-03-01",
+          "symbol": "COP",
+          "ex_date": "2023-02-14",
+          "payable_date": "2023-03-01",
+          "rate": "0.51",
+          "currency": null,
+          "kind": "ordinary_cash",
+          "amount_basis": "gross",
+          "verified": false,
+          "scenario_assumption": "USD gross source rate",
+          "evidence": [
+            "2026-09-22-cop-dividend-api.json",
+            "2026-09-22-cop-components-confirmed.json"
+          ],
+          "entitlement_rule_assumption": "Treat all components, including VROC, as standard cash rights; not verified legal classification",
+          "components": [
+            {
+              "id": "89c747ba-252b-41ba-b205-86b9a6a9c782",
+              "rate": 0.51,
+              "source_ex_date": "2023-02-13",
+              "issuer_classification": "unverified"
+            }
+          ]
+        },
+        {
+          "id": "COP-scenario-2023-03-29-2023-04-14",
+          "symbol": "COP",
+          "ex_date": "2023-03-29",
+          "payable_date": "2023-04-14",
+          "rate": "0.6",
+          "currency": null,
+          "kind": "ordinary_cash",
+          "amount_basis": "gross",
+          "verified": false,
+          "scenario_assumption": "USD gross source rate",
+          "evidence": [
+            "2026-09-22-cop-dividend-api.json",
+            "2026-09-22-cop-components-confirmed.json"
+          ],
+          "entitlement_rule_assumption": "Treat all components, including VROC, as standard cash rights; not verified legal classification",
+          "components": [
+            {
+              "id": "db90b5c2-474b-4bb1-b32e-ff32b7e6436a",
+              "rate": 0.6,
+              "source_ex_date": "2023-03-28",
+              "issuer_classification": "unverified"
+            }
+          ]
+        },
+        {
+          "id": "COP-scenario-2023-05-16-2023-06-01",
+          "symbol": "COP",
+          "ex_date": "2023-05-16",
+          "payable_date": "2023-06-01",
+          "rate": "0.51",
+          "currency": null,
+          "kind": "ordinary_cash",
+          "amount_basis": "gross",
+          "verified": false,
+          "scenario_assumption": "USD gross source rate",
+          "evidence": [
+            "2026-09-22-cop-dividend-api.json",
+            "2026-09-22-cop-components-confirmed.json"
+          ],
+          "entitlement_rule_assumption": "Treat all components, including VROC, as standard cash rights; not verified legal classification",
+          "components": [
+            {
+              "id": "15417b72-ccc1-43b8-b259-885d434742c2",
+              "rate": 0.51,
+              "source_ex_date": "2023-05-15",
+              "issuer_classification": "unverified"
+            }
+          ]
+        },
+        {
+          "id": "COP-scenario-2023-06-27-2023-07-14",
+          "symbol": "COP",
+          "ex_date": "2023-06-27",
+          "payable_date": "2023-07-14",
+          "rate": "0.6",
+          "currency": null,
+          "kind": "ordinary_cash",
+          "amount_basis": "gross",
+          "verified": false,
+          "scenario_assumption": "USD gross source rate",
+          "evidence": [
+            "2026-09-22-cop-dividend-api.json",
+            "2026-09-22-cop-components-confirmed.json"
+          ],
+          "entitlement_rule_assumption": "Treat all components, including VROC, as standard cash rights; not verified legal classification",
+          "components": [
+            {
+              "id": "de7d244f-3ccd-42f5-b133-bf52feb70479",
+              "rate": 0.6,
+              "source_ex_date": "2023-06-26",
+              "issuer_classification": "unverified"
+            }
+          ]
+        },
+        {
+          "id": "COP-scenario-2023-08-16-2023-09-01",
+          "symbol": "COP",
+          "ex_date": "2023-08-16",
+          "payable_date": "2023-09-01",
+          "rate": "0.51",
+          "currency": null,
+          "kind": "ordinary_cash",
+          "amount_basis": "gross",
+          "verified": false,
+          "scenario_assumption": "USD gross source rate",
+          "evidence": [
+            "2026-09-22-cop-dividend-api.json",
+            "2026-09-22-cop-components-confirmed.json"
+          ],
+          "entitlement_rule_assumption": "Treat all components, including VROC, as standard cash rights; not verified legal classification",
+          "components": [
+            {
+              "id": "48765bff-bef4-4576-98e7-440398d38196",
+              "rate": 0.51,
+              "source_ex_date": "2023-08-15",
+              "issuer_classification": "unverified"
+            }
+          ]
+        },
+        {
+          "id": "COP-scenario-2023-09-28-2023-10-16",
+          "symbol": "COP",
+          "ex_date": "2023-09-28",
+          "payable_date": "2023-10-16",
+          "rate": "0.6",
+          "currency": null,
+          "kind": "ordinary_cash",
+          "amount_basis": "gross",
+          "verified": false,
+          "scenario_assumption": "USD gross source rate",
+          "evidence": [
+            "2026-09-22-cop-dividend-api.json",
+            "2026-09-22-cop-components-confirmed.json"
+          ],
+          "entitlement_rule_assumption": "Treat all components, including VROC, as standard cash rights; not verified legal classification",
+          "components": [
+            {
+              "id": "8286b895-ea21-4767-96e5-e417f35d051d",
+              "rate": 0.6,
+              "source_ex_date": "2023-09-27",
+              "issuer_classification": "unverified"
+            }
+          ]
+        },
+        {
+          "id": "COP-scenario-2023-11-14-2023-12-01",
+          "symbol": "COP",
+          "ex_date": "2023-11-14",
+          "payable_date": "2023-12-01",
+          "rate": "0.58",
+          "currency": null,
+          "kind": "ordinary_cash",
+          "amount_basis": "gross",
+          "verified": false,
+          "scenario_assumption": "USD gross source rate",
+          "evidence": [
+            "2026-09-22-cop-dividend-api.json",
+            "2026-09-22-cop-components-confirmed.json"
+          ],
+          "entitlement_rule_assumption": "Treat all components, including VROC, as standard cash rights; not verified legal classification",
+          "components": [
+            {
+              "id": "91da9730-7fdd-47c2-a36e-f31da4c32850",
+              "rate": 0.58,
+              "source_ex_date": "2023-11-13",
+              "issuer_classification": "unverified"
+            }
+          ]
+        },
+        {
+          "id": "COP-scenario-2024-02-16-2024-03-01",
+          "symbol": "COP",
+          "ex_date": "2024-02-16",
+          "payable_date": "2024-03-01",
+          "rate": "0.78",
+          "currency": null,
+          "kind": "ordinary_cash",
+          "amount_basis": "gross",
+          "verified": false,
+          "scenario_assumption": "USD gross source rate",
+          "evidence": [
+            "2026-09-22-cop-dividend-api.json",
+            "2026-09-22-cop-components-confirmed.json"
+          ],
+          "entitlement_rule_assumption": "Treat all components, including VROC, as standard cash rights; not verified legal classification",
+          "components": [
+            {
+              "id": "70803c87-07f0-44c2-ab95-e66af555e7b1",
+              "rate": 0.58,
+              "source_ex_date": "2024-02-15",
+              "issuer_classification": "ordinary_dividend"
+            },
+            {
+              "id": "b50cc03b-b43f-4635-bb6c-f7cfe4bf842c",
+              "rate": 0.2,
+              "source_ex_date": "2024-02-15",
+              "issuer_classification": "variable_return_of_cash"
+            }
+          ]
+        },
+        {
+          "id": "COP-scenario-2024-05-13-2024-06-03",
+          "symbol": "COP",
+          "ex_date": "2024-05-13",
+          "payable_date": "2024-06-03",
+          "rate": "0.78",
+          "currency": null,
+          "kind": "ordinary_cash",
+          "amount_basis": "gross",
+          "verified": false,
+          "scenario_assumption": "USD gross source rate",
+          "evidence": [
+            "2026-09-22-cop-dividend-api.json",
+            "2026-09-22-cop-components-confirmed.json"
+          ],
+          "entitlement_rule_assumption": "Treat all components, including VROC, as standard cash rights; not verified legal classification",
+          "components": [
+            {
+              "id": "65a7d241-a415-4a4a-b3a7-0e2a9e373420",
+              "rate": 0.2,
+              "source_ex_date": "2024-05-10",
+              "issuer_classification": "variable_return_of_cash"
+            },
+            {
+              "id": "6b3e32c9-4e48-4436-b11d-0b8e6c6ea798",
+              "rate": 0.58,
+              "source_ex_date": "2024-05-10",
+              "issuer_classification": "ordinary_dividend"
+            }
+          ]
+        },
+        {
+          "id": "COP-scenario-2024-08-13-2024-09-03",
+          "symbol": "COP",
+          "ex_date": "2024-08-13",
+          "payable_date": "2024-09-03",
+          "rate": "0.78",
+          "currency": null,
+          "kind": "ordinary_cash",
+          "amount_basis": "gross",
+          "verified": false,
+          "scenario_assumption": "USD gross source rate",
+          "evidence": [
+            "2026-09-22-cop-dividend-api.json",
+            "2026-09-22-cop-components-confirmed.json"
+          ],
+          "entitlement_rule_assumption": "Treat all components, including VROC, as standard cash rights; not verified legal classification",
+          "components": [
+            {
+              "id": "75593cde-60eb-47d4-b28f-dce6cbecf1cf",
+              "rate": 0.2,
+              "source_ex_date": "2024-08-12",
+              "issuer_classification": "variable_return_of_cash"
+            },
+            {
+              "id": "8318b86a-41ff-4573-b009-5242f57efa30",
+              "rate": 0.58,
+              "source_ex_date": "2024-08-12",
+              "issuer_classification": "ordinary_dividend"
+            }
+          ]
+        },
+        {
+          "id": "COP-scenario-2024-11-11-2024-12-02",
+          "symbol": "COP",
+          "ex_date": "2024-11-11",
+          "payable_date": "2024-12-02",
+          "rate": "0.78",
+          "currency": null,
+          "kind": "ordinary_cash",
+          "amount_basis": "gross",
+          "verified": false,
+          "scenario_assumption": "USD gross source rate",
+          "evidence": [
+            "2026-09-22-cop-dividend-api.json",
+            "2026-09-22-cop-components-confirmed.json"
+          ],
+          "entitlement_rule_assumption": "Treat all components, including VROC, as standard cash rights; not verified legal classification",
+          "components": [
+            {
+              "id": "3012c6ac-1b2c-4100-84e2-010bdaf10bb6",
+              "rate": 0.78,
+              "source_ex_date": "2024-11-08",
+              "issuer_classification": "ordinary_dividend"
+            }
+          ]
+        },
+        {
+          "id": "COP-scenario-2025-02-18-2025-03-03",
+          "symbol": "COP",
+          "ex_date": "2025-02-18",
+          "payable_date": "2025-03-03",
+          "rate": "0.78",
+          "currency": null,
+          "kind": "ordinary_cash",
+          "amount_basis": "gross",
+          "verified": false,
+          "scenario_assumption": "USD gross source rate",
+          "evidence": [
+            "2026-09-22-cop-dividend-api.json",
+            "2026-09-22-cop-components-confirmed.json"
+          ],
+          "entitlement_rule_assumption": "Treat all components, including VROC, as standard cash rights; not verified legal classification",
+          "components": [
+            {
+              "id": "c6d42a0e-7659-436a-bf2e-8d1227ce5001",
+              "rate": 0.78,
+              "source_ex_date": "2025-02-14",
+              "issuer_classification": "ordinary_dividend"
+            }
+          ]
+        },
+        {
+          "id": "COP-scenario-2025-05-20-2025-06-02",
+          "symbol": "COP",
+          "ex_date": "2025-05-20",
+          "payable_date": "2025-06-02",
+          "rate": "0.78",
+          "currency": null,
+          "kind": "ordinary_cash",
+          "amount_basis": "gross",
+          "verified": false,
+          "scenario_assumption": "USD gross source rate",
+          "evidence": [
+            "2026-09-22-cop-dividend-api.json",
+            "2026-09-22-cop-components-confirmed.json"
+          ],
+          "entitlement_rule_assumption": "Treat all components, including VROC, as standard cash rights; not verified legal classification",
+          "components": [
+            {
+              "id": "66909c44-230e-4020-a4c4-b6148eb00ac1",
+              "rate": 0.78,
+              "source_ex_date": "2025-05-19",
+              "issuer_classification": "unverified"
+            }
+          ]
+        },
+        {
+          "id": "COP-scenario-2025-08-19-2025-09-02",
+          "symbol": "COP",
+          "ex_date": "2025-08-19",
+          "payable_date": "2025-09-02",
+          "rate": "0.78",
+          "currency": null,
+          "kind": "ordinary_cash",
+          "amount_basis": "gross",
+          "verified": false,
+          "scenario_assumption": "USD gross source rate",
+          "evidence": [
+            "2026-09-22-cop-dividend-api.json",
+            "2026-09-22-cop-components-confirmed.json"
+          ],
+          "entitlement_rule_assumption": "Treat all components, including VROC, as standard cash rights; not verified legal classification",
+          "components": [
+            {
+              "id": "fefd575f-aa2e-48a6-b078-3e8033462e9e",
+              "rate": 0.78,
+              "source_ex_date": "2025-08-18",
+              "issuer_classification": "unverified"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "start": "2025-09-01",
+      "end": "2026-09-01",
+      "offset": null,
+      "cost_multiplier": 1,
+      "events": []
+    },
+    {
+      "start": "2025-09-01",
+      "end": "2026-09-01",
+      "offset": -1,
+      "cost_multiplier": 1,
+      "events": [
+        {
+          "id": "COP-scenario-2025-11-14-2025-12-01",
+          "symbol": "COP",
+          "ex_date": "2025-11-14",
+          "payable_date": "2025-12-01",
+          "rate": "0.84",
+          "currency": null,
+          "kind": "ordinary_cash",
+          "amount_basis": "gross",
+          "verified": false,
+          "scenario_assumption": "USD gross source rate",
+          "evidence": [
+            "2026-09-22-cop-dividend-api.json",
+            "2026-09-22-cop-components-confirmed.json"
+          ],
+          "entitlement_rule_assumption": "Treat all components, including VROC, as standard cash rights; not verified legal classification",
+          "components": [
+            {
+              "id": "31c4a202-1092-40e7-93db-d181b70544d7",
+              "rate": 0.84,
+              "source_ex_date": "2025-11-17",
+              "issuer_classification": "unverified"
+            }
+          ]
+        },
+        {
+          "id": "COP-scenario-2026-02-17-2026-03-02",
+          "symbol": "COP",
+          "ex_date": "2026-02-17",
+          "payable_date": "2026-03-02",
+          "rate": "0.84",
+          "currency": null,
+          "kind": "ordinary_cash",
+          "amount_basis": "gross",
+          "verified": false,
+          "scenario_assumption": "USD gross source rate",
+          "evidence": [
+            "2026-09-22-cop-dividend-api.json",
+            "2026-09-22-cop-components-confirmed.json"
+          ],
+          "entitlement_rule_assumption": "Treat all components, including VROC, as standard cash rights; not verified legal classification",
+          "components": [
+            {
+              "id": "8b647702-56cf-4ace-b717-9b79155ab116",
+              "rate": 0.84,
+              "source_ex_date": "2026-02-18",
+              "issuer_classification": "unverified"
+            }
+          ]
+        },
+        {
+          "id": "COP-scenario-2026-05-08-2026-06-01",
+          "symbol": "COP",
+          "ex_date": "2026-05-08",
+          "payable_date": "2026-06-01",
+          "rate": "0.84",
+          "currency": null,
+          "kind": "ordinary_cash",
+          "amount_basis": "gross",
+          "verified": false,
+          "scenario_assumption": "USD gross source rate",
+          "evidence": [
+            "2026-09-22-cop-dividend-api.json",
+            "2026-09-22-cop-components-confirmed.json"
+          ],
+          "entitlement_rule_assumption": "Treat all components, including VROC, as standard cash rights; not verified legal classification",
+          "components": [
+            {
+              "id": "04da2e82-a968-482a-921f-09363855bdbe",
+              "rate": 0.84,
+              "source_ex_date": "2026-05-11",
+              "issuer_classification": "unverified"
+            }
+          ]
+        },
+        {
+          "id": "COP-scenario-2026-08-14-2026-09-01",
+          "symbol": "COP",
+          "ex_date": "2026-08-14",
+          "payable_date": "2026-09-01",
+          "rate": "0.84",
+          "currency": null,
+          "kind": "ordinary_cash",
+          "amount_basis": "gross",
+          "verified": false,
+          "scenario_assumption": "USD gross source rate",
+          "evidence": [
+            "2026-09-22-cop-dividend-api.json",
+            "2026-09-22-cop-components-confirmed.json"
+          ],
+          "entitlement_rule_assumption": "Treat all components, including VROC, as standard cash rights; not verified legal classification",
+          "components": [
+            {
+              "id": "3ef4f4cb-604c-46d5-973f-34475d67226a",
+              "rate": 0.84,
+              "source_ex_date": "2026-08-17",
+              "issuer_classification": "unverified"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "start": "2025-09-01",
+      "end": "2026-09-01",
+      "offset": 0,
+      "cost_multiplier": 1,
+      "events": [
+        {
+          "id": "COP-scenario-2025-11-17-2025-12-01",
+          "symbol": "COP",
+          "ex_date": "2025-11-17",
+          "payable_date": "2025-12-01",
+          "rate": "0.84",
+          "currency": null,
+          "kind": "ordinary_cash",
+          "amount_basis": "gross",
+          "verified": false,
+          "scenario_assumption": "USD gross source rate",
+          "evidence": [
+            "2026-09-22-cop-dividend-api.json",
+            "2026-09-22-cop-components-confirmed.json"
+          ],
+          "entitlement_rule_assumption": "Treat all components, including VROC, as standard cash rights; not verified legal classification",
+          "components": [
+            {
+              "id": "31c4a202-1092-40e7-93db-d181b70544d7",
+              "rate": 0.84,
+              "source_ex_date": "2025-11-17",
+              "issuer_classification": "unverified"
+            }
+          ]
+        },
+        {
+          "id": "COP-scenario-2026-02-18-2026-03-02",
+          "symbol": "COP",
+          "ex_date": "2026-02-18",
+          "payable_date": "2026-03-02",
+          "rate": "0.84",
+          "currency": null,
+          "kind": "ordinary_cash",
+          "amount_basis": "gross",
+          "verified": false,
+          "scenario_assumption": "USD gross source rate",
+          "evidence": [
+            "2026-09-22-cop-dividend-api.json",
+            "2026-09-22-cop-components-confirmed.json"
+          ],
+          "entitlement_rule_assumption": "Treat all components, including VROC, as standard cash rights; not verified legal classification",
+          "components": [
+            {
+              "id": "8b647702-56cf-4ace-b717-9b79155ab116",
+              "rate": 0.84,
+              "source_ex_date": "2026-02-18",
+              "issuer_classification": "unverified"
+            }
+          ]
+        },
+        {
+          "id": "COP-scenario-2026-05-11-2026-06-01",
+          "symbol": "COP",
+          "ex_date": "2026-05-11",
+          "payable_date": "2026-06-01",
+          "rate": "0.84",
+          "currency": null,
+          "kind": "ordinary_cash",
+          "amount_basis": "gross",
+          "verified": false,
+          "scenario_assumption": "USD gross source rate",
+          "evidence": [
+            "2026-09-22-cop-dividend-api.json",
+            "2026-09-22-cop-components-confirmed.json"
+          ],
+          "entitlement_rule_assumption": "Treat all components, including VROC, as standard cash rights; not verified legal classification",
+          "components": [
+            {
+              "id": "04da2e82-a968-482a-921f-09363855bdbe",
+              "rate": 0.84,
+              "source_ex_date": "2026-05-11",
+              "issuer_classification": "unverified"
+            }
+          ]
+        },
+        {
+          "id": "COP-scenario-2026-08-17-2026-09-01",
+          "symbol": "COP",
+          "ex_date": "2026-08-17",
+          "payable_date": "2026-09-01",
+          "rate": "0.84",
+          "currency": null,
+          "kind": "ordinary_cash",
+          "amount_basis": "gross",
+          "verified": false,
+          "scenario_assumption": "USD gross source rate",
+          "evidence": [
+            "2026-09-22-cop-dividend-api.json",
+            "2026-09-22-cop-components-confirmed.json"
+          ],
+          "entitlement_rule_assumption": "Treat all components, including VROC, as standard cash rights; not verified legal classification",
+          "components": [
+            {
+              "id": "3ef4f4cb-604c-46d5-973f-34475d67226a",
+              "rate": 0.84,
+              "source_ex_date": "2026-08-17",
+              "issuer_classification": "unverified"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "start": "2025-09-01",
+      "end": "2026-09-01",
+      "offset": 1,
+      "cost_multiplier": 1,
+      "events": [
+        {
+          "id": "COP-scenario-2025-11-18-2025-12-01",
+          "symbol": "COP",
+          "ex_date": "2025-11-18",
+          "payable_date": "2025-12-01",
+          "rate": "0.84",
+          "currency": null,
+          "kind": "ordinary_cash",
+          "amount_basis": "gross",
+          "verified": false,
+          "scenario_assumption": "USD gross source rate",
+          "evidence": [
+            "2026-09-22-cop-dividend-api.json",
+            "2026-09-22-cop-components-confirmed.json"
+          ],
+          "entitlement_rule_assumption": "Treat all components, including VROC, as standard cash rights; not verified legal classification",
+          "components": [
+            {
+              "id": "31c4a202-1092-40e7-93db-d181b70544d7",
+              "rate": 0.84,
+              "source_ex_date": "2025-11-17",
+              "issuer_classification": "unverified"
+            }
+          ]
+        },
+        {
+          "id": "COP-scenario-2026-02-19-2026-03-02",
+          "symbol": "COP",
+          "ex_date": "2026-02-19",
+          "payable_date": "2026-03-02",
+          "rate": "0.84",
+          "currency": null,
+          "kind": "ordinary_cash",
+          "amount_basis": "gross",
+          "verified": false,
+          "scenario_assumption": "USD gross source rate",
+          "evidence": [
+            "2026-09-22-cop-dividend-api.json",
+            "2026-09-22-cop-components-confirmed.json"
+          ],
+          "entitlement_rule_assumption": "Treat all components, including VROC, as standard cash rights; not verified legal classification",
+          "components": [
+            {
+              "id": "8b647702-56cf-4ace-b717-9b79155ab116",
+              "rate": 0.84,
+              "source_ex_date": "2026-02-18",
+              "issuer_classification": "unverified"
+            }
+          ]
+        },
+        {
+          "id": "COP-scenario-2026-05-12-2026-06-01",
+          "symbol": "COP",
+          "ex_date": "2026-05-12",
+          "payable_date": "2026-06-01",
+          "rate": "0.84",
+          "currency": null,
+          "kind": "ordinary_cash",
+          "amount_basis": "gross",
+          "verified": false,
+          "scenario_assumption": "USD gross source rate",
+          "evidence": [
+            "2026-09-22-cop-dividend-api.json",
+            "2026-09-22-cop-components-confirmed.json"
+          ],
+          "entitlement_rule_assumption": "Treat all components, including VROC, as standard cash rights; not verified legal classification",
+          "components": [
+            {
+              "id": "04da2e82-a968-482a-921f-09363855bdbe",
+              "rate": 0.84,
+              "source_ex_date": "2026-05-11",
+              "issuer_classification": "unverified"
+            }
+          ]
+        },
+        {
+          "id": "COP-scenario-2026-08-18-2026-09-01",
+          "symbol": "COP",
+          "ex_date": "2026-08-18",
+          "payable_date": "2026-09-01",
+          "rate": "0.84",
+          "currency": null,
+          "kind": "ordinary_cash",
+          "amount_basis": "gross",
+          "verified": false,
+          "scenario_assumption": "USD gross source rate",
+          "evidence": [
+            "2026-09-22-cop-dividend-api.json",
+            "2026-09-22-cop-components-confirmed.json"
+          ],
+          "entitlement_rule_assumption": "Treat all components, including VROC, as standard cash rights; not verified legal classification",
+          "components": [
+            {
+              "id": "3ef4f4cb-604c-46d5-973f-34475d67226a",
+              "rate": 0.84,
+              "source_ex_date": "2026-08-17",
+              "issuer_classification": "unverified"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "start": "2025-09-01",
+      "end": "2026-09-01",
+      "offset": null,
+      "cost_multiplier": 2,
+      "events": []
+    },
+    {
+      "start": "2025-09-01",
+      "end": "2026-09-01",
+      "offset": -1,
+      "cost_multiplier": 2,
+      "events": [
+        {
+          "id": "COP-scenario-2025-11-14-2025-12-01",
+          "symbol": "COP",
+          "ex_date": "2025-11-14",
+          "payable_date": "2025-12-01",
+          "rate": "0.84",
+          "currency": null,
+          "kind": "ordinary_cash",
+          "amount_basis": "gross",
+          "verified": false,
+          "scenario_assumption": "USD gross source rate",
+          "evidence": [
+            "2026-09-22-cop-dividend-api.json",
+            "2026-09-22-cop-components-confirmed.json"
+          ],
+          "entitlement_rule_assumption": "Treat all components, including VROC, as standard cash rights; not verified legal classification",
+          "components": [
+            {
+              "id": "31c4a202-1092-40e7-93db-d181b70544d7",
+              "rate": 0.84,
+              "source_ex_date": "2025-11-17",
+              "issuer_classification": "unverified"
+            }
+          ]
+        },
+        {
+          "id": "COP-scenario-2026-02-17-2026-03-02",
+          "symbol": "COP",
+          "ex_date": "2026-02-17",
+          "payable_date": "2026-03-02",
+          "rate": "0.84",
+          "currency": null,
+          "kind": "ordinary_cash",
+          "amount_basis": "gross",
+          "verified": false,
+          "scenario_assumption": "USD gross source rate",
+          "evidence": [
+            "2026-09-22-cop-dividend-api.json",
+            "2026-09-22-cop-components-confirmed.json"
+          ],
+          "entitlement_rule_assumption": "Treat all components, including VROC, as standard cash rights; not verified legal classification",
+          "components": [
+            {
+              "id": "8b647702-56cf-4ace-b717-9b79155ab116",
+              "rate": 0.84,
+              "source_ex_date": "2026-02-18",
+              "issuer_classification": "unverified"
+            }
+          ]
+        },
+        {
+          "id": "COP-scenario-2026-05-08-2026-06-01",
+          "symbol": "COP",
+          "ex_date": "2026-05-08",
+          "payable_date": "2026-06-01",
+          "rate": "0.84",
+          "currency": null,
+          "kind": "ordinary_cash",
+          "amount_basis": "gross",
+          "verified": false,
+          "scenario_assumption": "USD gross source rate",
+          "evidence": [
+            "2026-09-22-cop-dividend-api.json",
+            "2026-09-22-cop-components-confirmed.json"
+          ],
+          "entitlement_rule_assumption": "Treat all components, including VROC, as standard cash rights; not verified legal classification",
+          "components": [
+            {
+              "id": "04da2e82-a968-482a-921f-09363855bdbe",
+              "rate": 0.84,
+              "source_ex_date": "2026-05-11",
+              "issuer_classification": "unverified"
+            }
+          ]
+        },
+        {
+          "id": "COP-scenario-2026-08-14-2026-09-01",
+          "symbol": "COP",
+          "ex_date": "2026-08-14",
+          "payable_date": "2026-09-01",
+          "rate": "0.84",
+          "currency": null,
+          "kind": "ordinary_cash",
+          "amount_basis": "gross",
+          "verified": false,
+          "scenario_assumption": "USD gross source rate",
+          "evidence": [
+            "2026-09-22-cop-dividend-api.json",
+            "2026-09-22-cop-components-confirmed.json"
+          ],
+          "entitlement_rule_assumption": "Treat all components, including VROC, as standard cash rights; not verified legal classification",
+          "components": [
+            {
+              "id": "3ef4f4cb-604c-46d5-973f-34475d67226a",
+              "rate": 0.84,
+              "source_ex_date": "2026-08-17",
+              "issuer_classification": "unverified"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "start": "2025-09-01",
+      "end": "2026-09-01",
+      "offset": 0,
+      "cost_multiplier": 2,
+      "events": [
+        {
+          "id": "COP-scenario-2025-11-17-2025-12-01",
+          "symbol": "COP",
+          "ex_date": "2025-11-17",
+          "payable_date": "2025-12-01",
+          "rate": "0.84",
+          "currency": null,
+          "kind": "ordinary_cash",
+          "amount_basis": "gross",
+          "verified": false,
+          "scenario_assumption": "USD gross source rate",
+          "evidence": [
+            "2026-09-22-cop-dividend-api.json",
+            "2026-09-22-cop-components-confirmed.json"
+          ],
+          "entitlement_rule_assumption": "Treat all components, including VROC, as standard cash rights; not verified legal classification",
+          "components": [
+            {
+              "id": "31c4a202-1092-40e7-93db-d181b70544d7",
+              "rate": 0.84,
+              "source_ex_date": "2025-11-17",
+              "issuer_classification": "unverified"
+            }
+          ]
+        },
+        {
+          "id": "COP-scenario-2026-02-18-2026-03-02",
+          "symbol": "COP",
+          "ex_date": "2026-02-18",
+          "payable_date": "2026-03-02",
+          "rate": "0.84",
+          "currency": null,
+          "kind": "ordinary_cash",
+          "amount_basis": "gross",
+          "verified": false,
+          "scenario_assumption": "USD gross source rate",
+          "evidence": [
+            "2026-09-22-cop-dividend-api.json",
+            "2026-09-22-cop-components-confirmed.json"
+          ],
+          "entitlement_rule_assumption": "Treat all components, including VROC, as standard cash rights; not verified legal classification",
+          "components": [
+            {
+              "id": "8b647702-56cf-4ace-b717-9b79155ab116",
+              "rate": 0.84,
+              "source_ex_date": "2026-02-18",
+              "issuer_classification": "unverified"
+            }
+          ]
+        },
+        {
+          "id": "COP-scenario-2026-05-11-2026-06-01",
+          "symbol": "COP",
+          "ex_date": "2026-05-11",
+          "payable_date": "2026-06-01",
+          "rate": "0.84",
+          "currency": null,
+          "kind": "ordinary_cash",
+          "amount_basis": "gross",
+          "verified": false,
+          "scenario_assumption": "USD gross source rate",
+          "evidence": [
+            "2026-09-22-cop-dividend-api.json",
+            "2026-09-22-cop-components-confirmed.json"
+          ],
+          "entitlement_rule_assumption": "Treat all components, including VROC, as standard cash rights; not verified legal classification",
+          "components": [
+            {
+              "id": "04da2e82-a968-482a-921f-09363855bdbe",
+              "rate": 0.84,
+              "source_ex_date": "2026-05-11",
+              "issuer_classification": "unverified"
+            }
+          ]
+        },
+        {
+          "id": "COP-scenario-2026-08-17-2026-09-01",
+          "symbol": "COP",
+          "ex_date": "2026-08-17",
+          "payable_date": "2026-09-01",
+          "rate": "0.84",
+          "currency": null,
+          "kind": "ordinary_cash",
+          "amount_basis": "gross",
+          "verified": false,
+          "scenario_assumption": "USD gross source rate",
+          "evidence": [
+            "2026-09-22-cop-dividend-api.json",
+            "2026-09-22-cop-components-confirmed.json"
+          ],
+          "entitlement_rule_assumption": "Treat all components, including VROC, as standard cash rights; not verified legal classification",
+          "components": [
+            {
+              "id": "3ef4f4cb-604c-46d5-973f-34475d67226a",
+              "rate": 0.84,
+              "source_ex_date": "2026-08-17",
+              "issuer_classification": "unverified"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "start": "2025-09-01",
+      "end": "2026-09-01",
+      "offset": 1,
+      "cost_multiplier": 2,
+      "events": [
+        {
+          "id": "COP-scenario-2025-11-18-2025-12-01",
+          "symbol": "COP",
+          "ex_date": "2025-11-18",
+          "payable_date": "2025-12-01",
+          "rate": "0.84",
+          "currency": null,
+          "kind": "ordinary_cash",
+          "amount_basis": "gross",
+          "verified": false,
+          "scenario_assumption": "USD gross source rate",
+          "evidence": [
+            "2026-09-22-cop-dividend-api.json",
+            "2026-09-22-cop-components-confirmed.json"
+          ],
+          "entitlement_rule_assumption": "Treat all components, including VROC, as standard cash rights; not verified legal classification",
+          "components": [
+            {
+              "id": "31c4a202-1092-40e7-93db-d181b70544d7",
+              "rate": 0.84,
+              "source_ex_date": "2025-11-17",
+              "issuer_classification": "unverified"
+            }
+          ]
+        },
+        {
+          "id": "COP-scenario-2026-02-19-2026-03-02",
+          "symbol": "COP",
+          "ex_date": "2026-02-19",
+          "payable_date": "2026-03-02",
+          "rate": "0.84",
+          "currency": null,
+          "kind": "ordinary_cash",
+          "amount_basis": "gross",
+          "verified": false,
+          "scenario_assumption": "USD gross source rate",
+          "evidence": [
+            "2026-09-22-cop-dividend-api.json",
+            "2026-09-22-cop-components-confirmed.json"
+          ],
+          "entitlement_rule_assumption": "Treat all components, including VROC, as standard cash rights; not verified legal classification",
+          "components": [
+            {
+              "id": "8b647702-56cf-4ace-b717-9b79155ab116",
+              "rate": 0.84,
+              "source_ex_date": "2026-02-18",
+              "issuer_classification": "unverified"
+            }
+          ]
+        },
+        {
+          "id": "COP-scenario-2026-05-12-2026-06-01",
+          "symbol": "COP",
+          "ex_date": "2026-05-12",
+          "payable_date": "2026-06-01",
+          "rate": "0.84",
+          "currency": null,
+          "kind": "ordinary_cash",
+          "amount_basis": "gross",
+          "verified": false,
+          "scenario_assumption": "USD gross source rate",
+          "evidence": [
+            "2026-09-22-cop-dividend-api.json",
+            "2026-09-22-cop-components-confirmed.json"
+          ],
+          "entitlement_rule_assumption": "Treat all components, including VROC, as standard cash rights; not verified legal classification",
+          "components": [
+            {
+              "id": "04da2e82-a968-482a-921f-09363855bdbe",
+              "rate": 0.84,
+              "source_ex_date": "2026-05-11",
+              "issuer_classification": "unverified"
+            }
+          ]
+        },
+        {
+          "id": "COP-scenario-2026-08-18-2026-09-01",
+          "symbol": "COP",
+          "ex_date": "2026-08-18",
+          "payable_date": "2026-09-01",
+          "rate": "0.84",
+          "currency": null,
+          "kind": "ordinary_cash",
+          "amount_basis": "gross",
+          "verified": false,
+          "scenario_assumption": "USD gross source rate",
+          "evidence": [
+            "2026-09-22-cop-dividend-api.json",
+            "2026-09-22-cop-components-confirmed.json"
+          ],
+          "entitlement_rule_assumption": "Treat all components, including VROC, as standard cash rights; not verified legal classification",
+          "components": [
+            {
+              "id": "3ef4f4cb-604c-46d5-973f-34475d67226a",
+              "rate": 0.84,
+              "source_ex_date": "2026-08-17",
+              "issuer_classification": "unverified"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "conservation": true,
+  "no_other_holdings": true,
+  "baseline_exact": true
+}
