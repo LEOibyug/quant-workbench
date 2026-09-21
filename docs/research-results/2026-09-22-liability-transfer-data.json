@@ -1,0 +1,22 @@
+{
+  "symbols": [
+    "DE",
+    "HON",
+    "RTX",
+    "TMO",
+    "DHR",
+    "AMGN",
+    "SBUX",
+    "TGT",
+    "CSX",
+    "FDX",
+    "CMCSA",
+    "COP"
+  ],
+  "path": "artifacts/research/liability-transfer/daily.parquet",
+  "rows": 6264,
+  "sha256": "a5d4490ec6d692ba82a78b844e4b4c663bed27220592c1457a40dc62b697fe98",
+  "adjustment": "raw",
+  "feed": "sip",
+  "full_corporate_action_audit": false
+}

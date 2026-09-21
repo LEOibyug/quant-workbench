@@ -1,0 +1,3174 @@
+[
+  {
+    "day": "2025-09-02",
+    "eligible": [
+      "COP",
+      "CSX",
+      "DE",
+      "RTX",
+      "SBUX"
+    ],
+    "selected": {
+      "low_growth": [
+        "COP"
+      ],
+      "high_growth": [
+        "SBUX"
+      ],
+      "eligible": [
+        "COP",
+        "CSX",
+        "DE",
+        "RTX",
+        "SBUX"
+      ]
+    },
+    "budget": 0.2,
+    "judgments": {
+      "AMGN": {
+        "symbol": "AMGN",
+        "asof": "2025-09-02",
+        "status": "证据不足",
+        "validated": false,
+        "computable": false,
+        "reason": "同申报同日缺Liabilities"
+      },
+      "CMCSA": {
+        "symbol": "CMCSA",
+        "asof": "2025-09-02",
+        "status": "证据不足",
+        "validated": false,
+        "computable": false,
+        "reason": "同申报同日缺Liabilities"
+      },
+      "COP": {
+        "symbol": "COP",
+        "asof": "2025-09-02",
+        "status": "证据不足",
+        "validated": false,
+        "computable": true,
+        "burden": 0.47225932562306566,
+        "accession": "0001163165-25-000012",
+        "sources": {
+          "Assets": {
+            "end": "2024-12-31",
+            "val": 122780000000,
+            "accn": "0001163165-25-000012",
+            "fy": 2024,
+            "fp": "FY",
+            "form": "10-K",
+            "filed": "2025-02-18",
+            "tag": "Assets"
+          },
+          "Liabilities": {
+            "end": "2024-12-31",
+            "val": 57984000000,
+            "accn": "0001163165-25-000012",
+            "fy": 2024,
+            "fp": "FY",
+            "form": "10-K",
+            "filed": "2025-02-18",
+            "tag": "Liabilities"
+          }
+        },
+        "reason": "负债负担可计算，非破产概率；排名依赖股票池，策略适用性未验证"
+      },
+      "CSX": {
+        "symbol": "CSX",
+        "asof": "2025-09-02",
+        "status": "证据不足",
+        "validated": false,
+        "computable": true,
+        "burden": 0.7075343747076981,
+        "accession": "0000277948-25-000008",
+        "sources": {
+          "Assets": {
+            "end": "2024-12-31",
+            "val": 42764000000,
+            "accn": "0000277948-25-000008",
+            "fy": 2024,
+            "fp": "FY",
+            "form": "10-K",
+            "filed": "2025-02-27",
+            "tag": "Assets"
+          },
+          "Liabilities": {
+            "end": "2024-12-31",
+            "val": 30257000000,
+            "accn": "0000277948-25-000008",
+            "fy": 2024,
+            "fp": "FY",
+            "form": "10-K",
+            "filed": "2025-02-27",
+            "tag": "Liabilities"
+          }
+        },
+        "reason": "负债负担可计算，非破产概率；排名依赖股票池，策略适用性未验证"
+      },
+      "DE": {
+        "symbol": "DE",
+        "asof": "2025-09-02",
+        "status": "证据不足",
+        "validated": false,
+        "computable": true,
+        "burden": 0.7863865076407007,
+        "accession": "0001558370-24-016169",
+        "sources": {
+          "Assets": {
+            "end": "2024-10-27",
+            "val": 107320000000,
+            "accn": "0001558370-24-016169",
+            "fy": 2024,
+            "fp": "FY",
+            "form": "10-K",
+            "filed": "2024-12-12",
+            "tag": "Assets"
+          },
+          "Liabilities": {
+            "end": "2024-10-27",
+            "val": 84395000000,
+            "accn": "0001558370-24-016169",
+            "fy": 2024,
+            "fp": "FY",
+            "form": "10-K",
+            "filed": "2024-12-12",
+            "tag": "Liabilities"
+          }
+        },
+        "reason": "负债负担可计算，非破产概率；排名依赖股票池，策略适用性未验证"
+      },
+      "DHR": {
+        "symbol": "DHR",
+        "asof": "2025-09-02",
+        "status": "证据不足",
+        "validated": false,
+        "computable": false,
+        "reason": "同申报同日缺Liabilities"
+      },
+      "FDX": {
+        "symbol": "FDX",
+        "asof": "2025-09-02",
+        "status": "证据不足",
+        "validated": false,
+        "computable": false,
+        "reason": "同申报同日缺Liabilities"
+      },
+      "HON": {
+        "symbol": "HON",
+        "asof": "2025-09-02",
+        "status": "证据不足",
+        "validated": false,
+        "computable": false,
+        "reason": "同申报同日缺Liabilities"
+      },
+      "RTX": {
+        "symbol": "RTX",
+        "asof": "2025-09-02",
+        "status": "证据不足",
+        "validated": false,
+        "computable": true,
+        "burden": 0.6195651506499408,
+        "accession": "0000101829-25-000005",
+        "sources": {
+          "Assets": {
+            "end": "2024-12-31",
+            "val": 162861000000,
+            "accn": "0000101829-25-000005",
+            "fy": 2024,
+            "fp": "FY",
+            "form": "10-K",
+            "filed": "2025-02-03",
+            "tag": "Assets"
+          },
+          "Liabilities": {
+            "end": "2024-12-31",
+            "val": 100903000000,
+            "accn": "0000101829-25-000005",
+            "fy": 2024,
+            "fp": "FY",
+            "form": "10-K",
+            "filed": "2025-02-03",
+            "tag": "Liabilities"
+          }
+        },
+        "reason": "负债负担可计算，非破产概率；排名依赖股票池，策略适用性未验证"
+      },
+      "SBUX": {
+        "symbol": "SBUX",
+        "asof": "2025-09-02",
+        "status": "证据不足",
+        "validated": false,
+        "computable": true,
+        "burden": 1.237452655292237,
+        "accession": "0000829224-24-000057",
+        "sources": {
+          "Assets": {
+            "end": "2024-09-29",
+            "val": 31339300000,
+            "accn": "0000829224-24-000057",
+            "fy": 2024,
+            "fp": "FY",
+            "form": "10-K",
+            "filed": "2024-11-20",
+            "tag": "Assets"
+          },
+          "Liabilities": {
+            "end": "2024-09-29",
+            "val": 38780900000,
+            "accn": "0000829224-24-000057",
+            "fy": 2024,
+            "fp": "FY",
+            "form": "10-K",
+            "filed": "2024-11-20",
+            "tag": "Liabilities"
+          }
+        },
+        "reason": "负债负担可计算，非破产概率；排名依赖股票池，策略适用性未验证"
+      },
+      "TGT": {
+        "symbol": "TGT",
+        "asof": "2025-09-02",
+        "status": "证据不足",
+        "validated": false,
+        "computable": false,
+        "reason": "缺直接负债且该申报分项未原表核实"
+      },
+      "TMO": {
+        "symbol": "TMO",
+        "asof": "2025-09-02",
+        "status": "证据不足",
+        "validated": false,
+        "computable": false,
+        "reason": "同申报同日缺Liabilities"
+      }
+    }
+  },
+  {
+    "day": "2025-09-30",
+    "eligible": [
+      "COP",
+      "CSX",
+      "DE",
+      "RTX",
+      "SBUX"
+    ],
+    "selected": {
+      "low_growth": [
+        "COP"
+      ],
+      "high_growth": [
+        "SBUX"
+      ],
+      "eligible": [
+        "COP",
+        "CSX",
+        "DE",
+        "RTX",
+        "SBUX"
+      ]
+    },
+    "budget": 0.2,
+    "judgments": {
+      "AMGN": {
+        "symbol": "AMGN",
+        "asof": "2025-09-30",
+        "status": "证据不足",
+        "validated": false,
+        "computable": false,
+        "reason": "同申报同日缺Liabilities"
+      },
+      "CMCSA": {
+        "symbol": "CMCSA",
+        "asof": "2025-09-30",
+        "status": "证据不足",
+        "validated": false,
+        "computable": false,
+        "reason": "同申报同日缺Liabilities"
+      },
+      "COP": {
+        "symbol": "COP",
+        "asof": "2025-09-30",
+        "status": "证据不足",
+        "validated": false,
+        "computable": true,
+        "burden": 0.47225932562306566,
+        "accession": "0001163165-25-000012",
+        "sources": {
+          "Assets": {
+            "end": "2024-12-31",
+            "val": 122780000000,
+            "accn": "0001163165-25-000012",
+            "fy": 2024,
+            "fp": "FY",
+            "form": "10-K",
+            "filed": "2025-02-18",
+            "tag": "Assets"
+          },
+          "Liabilities": {
+            "end": "2024-12-31",
+            "val": 57984000000,
+            "accn": "0001163165-25-000012",
+            "fy": 2024,
+            "fp": "FY",
+            "form": "10-K",
+            "filed": "2025-02-18",
+            "tag": "Liabilities"
+          }
+        },
+        "reason": "负债负担可计算，非破产概率；排名依赖股票池，策略适用性未验证"
+      },
+      "CSX": {
+        "symbol": "CSX",
+        "asof": "2025-09-30",
+        "status": "证据不足",
+        "validated": false,
+        "computable": true,
+        "burden": 0.7075343747076981,
+        "accession": "0000277948-25-000008",
+        "sources": {
+          "Assets": {
+            "end": "2024-12-31",
+            "val": 42764000000,
+            "accn": "0000277948-25-000008",
+            "fy": 2024,
+            "fp": "FY",
+            "form": "10-K",
+            "filed": "2025-02-27",
+            "tag": "Assets"
+          },
+          "Liabilities": {
+            "end": "2024-12-31",
+            "val": 30257000000,
+            "accn": "0000277948-25-000008",
+            "fy": 2024,
+            "fp": "FY",
+            "form": "10-K",
+            "filed": "2025-02-27",
+            "tag": "Liabilities"
+          }
+        },
+        "reason": "负债负担可计算，非破产概率；排名依赖股票池，策略适用性未验证"
+      },
+      "DE": {
+        "symbol": "DE",
+        "asof": "2025-09-30",
+        "status": "证据不足",
+        "validated": false,
+        "computable": true,
+        "burden": 0.7863865076407007,
+        "accession": "0001558370-24-016169",
+        "sources": {
+          "Assets": {
+            "end": "2024-10-27",
+            "val": 107320000000,
+            "accn": "0001558370-24-016169",
+            "fy": 2024,
+            "fp": "FY",
+            "form": "10-K",
+            "filed": "2024-12-12",
+            "tag": "Assets"
+          },
+          "Liabilities": {
+            "end": "2024-10-27",
+            "val": 84395000000,
+            "accn": "0001558370-24-016169",
+            "fy": 2024,
+            "fp": "FY",
+            "form": "10-K",
+            "filed": "2024-12-12",
+            "tag": "Liabilities"
+          }
+        },
+        "reason": "负债负担可计算，非破产概率；排名依赖股票池，策略适用性未验证"
+      },
+      "DHR": {
+        "symbol": "DHR",
+        "asof": "2025-09-30",
+        "status": "证据不足",
+        "validated": false,
+        "computable": false,
+        "reason": "同申报同日缺Liabilities"
+      },
+      "FDX": {
+        "symbol": "FDX",
+        "asof": "2025-09-30",
+        "status": "证据不足",
+        "validated": false,
+        "computable": false,
+        "reason": "同申报同日缺Liabilities"
+      },
+      "HON": {
+        "symbol": "HON",
+        "asof": "2025-09-30",
+        "status": "证据不足",
+        "validated": false,
+        "computable": false,
+        "reason": "同申报同日缺Liabilities"
+      },
+      "RTX": {
+        "symbol": "RTX",
+        "asof": "2025-09-30",
+        "status": "证据不足",
+        "validated": false,
+        "computable": true,
+        "burden": 0.6195651506499408,
+        "accession": "0000101829-25-000005",
+        "sources": {
+          "Assets": {
+            "end": "2024-12-31",
+            "val": 162861000000,
+            "accn": "0000101829-25-000005",
+            "fy": 2024,
+            "fp": "FY",
+            "form": "10-K",
+            "filed": "2025-02-03",
+            "tag": "Assets"
+          },
+          "Liabilities": {
+            "end": "2024-12-31",
+            "val": 100903000000,
+            "accn": "0000101829-25-000005",
+            "fy": 2024,
+            "fp": "FY",
+            "form": "10-K",
+            "filed": "2025-02-03",
+            "tag": "Liabilities"
+          }
+        },
+        "reason": "负债负担可计算，非破产概率；排名依赖股票池，策略适用性未验证"
+      },
+      "SBUX": {
+        "symbol": "SBUX",
+        "asof": "2025-09-30",
+        "status": "证据不足",
+        "validated": false,
+        "computable": true,
+        "burden": 1.237452655292237,
+        "accession": "0000829224-24-000057",
+        "sources": {
+          "Assets": {
+            "end": "2024-09-29",
+            "val": 31339300000,
+            "accn": "0000829224-24-000057",
+            "fy": 2024,
+            "fp": "FY",
+            "form": "10-K",
+            "filed": "2024-11-20",
+            "tag": "Assets"
+          },
+          "Liabilities": {
+            "end": "2024-09-29",
+            "val": 38780900000,
+            "accn": "0000829224-24-000057",
+            "fy": 2024,
+            "fp": "FY",
+            "form": "10-K",
+            "filed": "2024-11-20",
+            "tag": "Liabilities"
+          }
+        },
+        "reason": "负债负担可计算，非破产概率；排名依赖股票池，策略适用性未验证"
+      },
+      "TGT": {
+        "symbol": "TGT",
+        "asof": "2025-09-30",
+        "status": "证据不足",
+        "validated": false,
+        "computable": false,
+        "reason": "缺直接负债且该申报分项未原表核实"
+      },
+      "TMO": {
+        "symbol": "TMO",
+        "asof": "2025-09-30",
+        "status": "证据不足",
+        "validated": false,
+        "computable": false,
+        "reason": "同申报同日缺Liabilities"
+      }
+    }
+  },
+  {
+    "day": "2025-10-28",
+    "eligible": [
+      "COP",
+      "CSX",
+      "DE",
+      "RTX",
+      "SBUX"
+    ],
+    "selected": {
+      "low_growth": [
+        "COP"
+      ],
+      "high_growth": [
+        "SBUX"
+      ],
+      "eligible": [
+        "COP",
+        "CSX",
+        "DE",
+        "RTX",
+        "SBUX"
+      ]
+    },
+    "budget": 0.2,
+    "judgments": {
+      "AMGN": {
+        "symbol": "AMGN",
+        "asof": "2025-10-28",
+        "status": "证据不足",
+        "validated": false,
+        "computable": false,
+        "reason": "同申报同日缺Liabilities"
+      },
+      "CMCSA": {
+        "symbol": "CMCSA",
+        "asof": "2025-10-28",
+        "status": "证据不足",
+        "validated": false,
+        "computable": false,
+        "reason": "同申报同日缺Liabilities"
+      },
+      "COP": {
+        "symbol": "COP",
+        "asof": "2025-10-28",
+        "status": "证据不足",
+        "validated": false,
+        "computable": true,
+        "burden": 0.47225932562306566,
+        "accession": "0001163165-25-000012",
+        "sources": {
+          "Assets": {
+            "end": "2024-12-31",
+            "val": 122780000000,
+            "accn": "0001163165-25-000012",
+            "fy": 2024,
+            "fp": "FY",
+            "form": "10-K",
+            "filed": "2025-02-18",
+            "tag": "Assets"
+          },
+          "Liabilities": {
+            "end": "2024-12-31",
+            "val": 57984000000,
+            "accn": "0001163165-25-000012",
+            "fy": 2024,
+            "fp": "FY",
+            "form": "10-K",
+            "filed": "2025-02-18",
+            "tag": "Liabilities"
+          }
+        },
+        "reason": "负债负担可计算，非破产概率；排名依赖股票池，策略适用性未验证"
+      },
+      "CSX": {
+        "symbol": "CSX",
+        "asof": "2025-10-28",
+        "status": "证据不足",
+        "validated": false,
+        "computable": true,
+        "burden": 0.7075343747076981,
+        "accession": "0000277948-25-000008",
+        "sources": {
+          "Assets": {
+            "end": "2024-12-31",
+            "val": 42764000000,
+            "accn": "0000277948-25-000008",
+            "fy": 2024,
+            "fp": "FY",
+            "form": "10-K",
+            "filed": "2025-02-27",
+            "tag": "Assets"
+          },
+          "Liabilities": {
+            "end": "2024-12-31",
+            "val": 30257000000,
+            "accn": "0000277948-25-000008",
+            "fy": 2024,
+            "fp": "FY",
+            "form": "10-K",
+            "filed": "2025-02-27",
+            "tag": "Liabilities"
+          }
+        },
+        "reason": "负债负担可计算，非破产概率；排名依赖股票池，策略适用性未验证"
+      },
+      "DE": {
+        "symbol": "DE",
+        "asof": "2025-10-28",
+        "status": "证据不足",
+        "validated": false,
+        "computable": true,
+        "burden": 0.7863865076407007,
+        "accession": "0001558370-24-016169",
+        "sources": {
+          "Assets": {
+            "end": "2024-10-27",
+            "val": 107320000000,
+            "accn": "0001558370-24-016169",
+            "fy": 2024,
+            "fp": "FY",
+            "form": "10-K",
+            "filed": "2024-12-12",
+            "tag": "Assets"
+          },
+          "Liabilities": {
+            "end": "2024-10-27",
+            "val": 84395000000,
+            "accn": "0001558370-24-016169",
+            "fy": 2024,
+            "fp": "FY",
+            "form": "10-K",
+            "filed": "2024-12-12",
+            "tag": "Liabilities"
+          }
+        },
+        "reason": "负债负担可计算，非破产概率；排名依赖股票池，策略适用性未验证"
+      },
+      "DHR": {
+        "symbol": "DHR",
+        "asof": "2025-10-28",
+        "status": "证据不足",
+        "validated": false,
+        "computable": false,
+        "reason": "同申报同日缺Liabilities"
+      },
+      "FDX": {
+        "symbol": "FDX",
+        "asof": "2025-10-28",
+        "status": "证据不足",
+        "validated": false,
+        "computable": false,
+        "reason": "同申报同日缺Liabilities"
+      },
+      "HON": {
+        "symbol": "HON",
+        "asof": "2025-10-28",
+        "status": "证据不足",
+        "validated": false,
+        "computable": false,
+        "reason": "同申报同日缺Liabilities"
+      },
+      "RTX": {
+        "symbol": "RTX",
+        "asof": "2025-10-28",
+        "status": "证据不足",
+        "validated": false,
+        "computable": true,
+        "burden": 0.6195651506499408,
+        "accession": "0000101829-25-000005",
+        "sources": {
+          "Assets": {
+            "end": "2024-12-31",
+            "val": 162861000000,
+            "accn": "0000101829-25-000005",
+            "fy": 2024,
+            "fp": "FY",
+            "form": "10-K",
+            "filed": "2025-02-03",
+            "tag": "Assets"
+          },
+          "Liabilities": {
+            "end": "2024-12-31",
+            "val": 100903000000,
+            "accn": "0000101829-25-000005",
+            "fy": 2024,
+            "fp": "FY",
+            "form": "10-K",
+            "filed": "2025-02-03",
+            "tag": "Liabilities"
+          }
+        },
+        "reason": "负债负担可计算，非破产概率；排名依赖股票池，策略适用性未验证"
+      },
+      "SBUX": {
+        "symbol": "SBUX",
+        "asof": "2025-10-28",
+        "status": "证据不足",
+        "validated": false,
+        "computable": true,
+        "burden": 1.237452655292237,
+        "accession": "0000829224-24-000057",
+        "sources": {
+          "Assets": {
+            "end": "2024-09-29",
+            "val": 31339300000,
+            "accn": "0000829224-24-000057",
+            "fy": 2024,
+            "fp": "FY",
+            "form": "10-K",
+            "filed": "2024-11-20",
+            "tag": "Assets"
+          },
+          "Liabilities": {
+            "end": "2024-09-29",
+            "val": 38780900000,
+            "accn": "0000829224-24-000057",
+            "fy": 2024,
+            "fp": "FY",
+            "form": "10-K",
+            "filed": "2024-11-20",
+            "tag": "Liabilities"
+          }
+        },
+        "reason": "负债负担可计算，非破产概率；排名依赖股票池，策略适用性未验证"
+      },
+      "TGT": {
+        "symbol": "TGT",
+        "asof": "2025-10-28",
+        "status": "证据不足",
+        "validated": false,
+        "computable": false,
+        "reason": "缺直接负债且该申报分项未原表核实"
+      },
+      "TMO": {
+        "symbol": "TMO",
+        "asof": "2025-10-28",
+        "status": "证据不足",
+        "validated": false,
+        "computable": false,
+        "reason": "同申报同日缺Liabilities"
+      }
+    }
+  },
+  {
+    "day": "2025-11-25",
+    "eligible": [
+      "COP",
+      "CSX",
+      "DE",
+      "RTX",
+      "SBUX"
+    ],
+    "selected": {
+      "low_growth": [
+        "COP"
+      ],
+      "high_growth": [
+        "SBUX"
+      ],
+      "eligible": [
+        "COP",
+        "CSX",
+        "DE",
+        "RTX",
+        "SBUX"
+      ]
+    },
+    "budget": 0.2,
+    "judgments": {
+      "AMGN": {
+        "symbol": "AMGN",
+        "asof": "2025-11-25",
+        "status": "证据不足",
+        "validated": false,
+        "computable": false,
+        "reason": "同申报同日缺Liabilities"
+      },
+      "CMCSA": {
+        "symbol": "CMCSA",
+        "asof": "2025-11-25",
+        "status": "证据不足",
+        "validated": false,
+        "computable": false,
+        "reason": "同申报同日缺Liabilities"
+      },
+      "COP": {
+        "symbol": "COP",
+        "asof": "2025-11-25",
+        "status": "证据不足",
+        "validated": false,
+        "computable": true,
+        "burden": 0.47225932562306566,
+        "accession": "0001163165-25-000012",
+        "sources": {
+          "Assets": {
+            "end": "2024-12-31",
+            "val": 122780000000,
+            "accn": "0001163165-25-000012",
+            "fy": 2024,
+            "fp": "FY",
+            "form": "10-K",
+            "filed": "2025-02-18",
+            "tag": "Assets"
+          },
+          "Liabilities": {
+            "end": "2024-12-31",
+            "val": 57984000000,
+            "accn": "0001163165-25-000012",
+            "fy": 2024,
+            "fp": "FY",
+            "form": "10-K",
+            "filed": "2025-02-18",
+            "tag": "Liabilities"
+          }
+        },
+        "reason": "负债负担可计算，非破产概率；排名依赖股票池，策略适用性未验证"
+      },
+      "CSX": {
+        "symbol": "CSX",
+        "asof": "2025-11-25",
+        "status": "证据不足",
+        "validated": false,
+        "computable": true,
+        "burden": 0.7075343747076981,
+        "accession": "0000277948-25-000008",
+        "sources": {
+          "Assets": {
+            "end": "2024-12-31",
+            "val": 42764000000,
+            "accn": "0000277948-25-000008",
+            "fy": 2024,
+            "fp": "FY",
+            "form": "10-K",
+            "filed": "2025-02-27",
+            "tag": "Assets"
+          },
+          "Liabilities": {
+            "end": "2024-12-31",
+            "val": 30257000000,
+            "accn": "0000277948-25-000008",
+            "fy": 2024,
+            "fp": "FY",
+            "form": "10-K",
+            "filed": "2025-02-27",
+            "tag": "Liabilities"
+          }
+        },
+        "reason": "负债负担可计算，非破产概率；排名依赖股票池，策略适用性未验证"
+      },
+      "DE": {
+        "symbol": "DE",
+        "asof": "2025-11-25",
+        "status": "证据不足",
+        "validated": false,
+        "computable": true,
+        "burden": 0.7863865076407007,
+        "accession": "0001558370-24-016169",
+        "sources": {
+          "Assets": {
+            "end": "2024-10-27",
+            "val": 107320000000,
+            "accn": "0001558370-24-016169",
+            "fy": 2024,
+            "fp": "FY",
+            "form": "10-K",
+            "filed": "2024-12-12",
+            "tag": "Assets"
+          },
+          "Liabilities": {
+            "end": "2024-10-27",
+            "val": 84395000000,
+            "accn": "0001558370-24-016169",
+            "fy": 2024,
+            "fp": "FY",
+            "form": "10-K",
+            "filed": "2024-12-12",
+            "tag": "Liabilities"
+          }
+        },
+        "reason": "负债负担可计算，非破产概率；排名依赖股票池，策略适用性未验证"
+      },
+      "DHR": {
+        "symbol": "DHR",
+        "asof": "2025-11-25",
+        "status": "证据不足",
+        "validated": false,
+        "computable": false,
+        "reason": "同申报同日缺Liabilities"
+      },
+      "FDX": {
+        "symbol": "FDX",
+        "asof": "2025-11-25",
+        "status": "证据不足",
+        "validated": false,
+        "computable": false,
+        "reason": "同申报同日缺Liabilities"
+      },
+      "HON": {
+        "symbol": "HON",
+        "asof": "2025-11-25",
+        "status": "证据不足",
+        "validated": false,
+        "computable": false,
+        "reason": "同申报同日缺Liabilities"
+      },
+      "RTX": {
+        "symbol": "RTX",
+        "asof": "2025-11-25",
+        "status": "证据不足",
+        "validated": false,
+        "computable": true,
+        "burden": 0.6195651506499408,
+        "accession": "0000101829-25-000005",
+        "sources": {
+          "Assets": {
+            "end": "2024-12-31",
+            "val": 162861000000,
+            "accn": "0000101829-25-000005",
+            "fy": 2024,
+            "fp": "FY",
+            "form": "10-K",
+            "filed": "2025-02-03",
+            "tag": "Assets"
+          },
+          "Liabilities": {
+            "end": "2024-12-31",
+            "val": 100903000000,
+            "accn": "0000101829-25-000005",
+            "fy": 2024,
+            "fp": "FY",
+            "form": "10-K",
+            "filed": "2025-02-03",
+            "tag": "Liabilities"
+          }
+        },
+        "reason": "负债负担可计算，非破产概率；排名依赖股票池，策略适用性未验证"
+      },
+      "SBUX": {
+        "symbol": "SBUX",
+        "asof": "2025-11-25",
+        "status": "证据不足",
+        "validated": false,
+        "computable": true,
+        "burden": 1.2526319734413502,
+        "accession": "0000829224-25-000114",
+        "sources": {
+          "Assets": {
+            "end": "2025-09-28",
+            "val": 32019700000,
+            "accn": "0000829224-25-000114",
+            "fy": 2025,
+            "fp": "FY",
+            "form": "10-K",
+            "filed": "2025-11-14",
+            "tag": "Assets"
+          },
+          "Liabilities": {
+            "end": "2025-09-28",
+            "val": 40108900000,
+            "accn": "0000829224-25-000114",
+            "fy": 2025,
+            "fp": "FY",
+            "form": "10-K",
+            "filed": "2025-11-14",
+            "tag": "Liabilities"
+          }
+        },
+        "reason": "负债负担可计算，非破产概率；排名依赖股票池，策略适用性未验证"
+      },
+      "TGT": {
+        "symbol": "TGT",
+        "asof": "2025-11-25",
+        "status": "证据不足",
+        "validated": false,
+        "computable": false,
+        "reason": "缺直接负债且该申报分项未原表核实"
+      },
+      "TMO": {
+        "symbol": "TMO",
+        "asof": "2025-11-25",
+        "status": "证据不足",
+        "validated": false,
+        "computable": false,
+        "reason": "同申报同日缺Liabilities"
+      }
+    }
+  },
+  {
+    "day": "2025-12-24",
+    "eligible": [
+      "COP",
+      "CSX",
+      "DE",
+      "RTX",
+      "SBUX"
+    ],
+    "selected": {
+      "low_growth": [
+        "COP"
+      ],
+      "high_growth": [
+        "SBUX"
+      ],
+      "eligible": [
+        "COP",
+        "CSX",
+        "DE",
+        "RTX",
+        "SBUX"
+      ]
+    },
+    "budget": 0.2,
+    "judgments": {
+      "AMGN": {
+        "symbol": "AMGN",
+        "asof": "2025-12-24",
+        "status": "证据不足",
+        "validated": false,
+        "computable": false,
+        "reason": "同申报同日缺Liabilities"
+      },
+      "CMCSA": {
+        "symbol": "CMCSA",
+        "asof": "2025-12-24",
+        "status": "证据不足",
+        "validated": false,
+        "computable": false,
+        "reason": "同申报同日缺Liabilities"
+      },
+      "COP": {
+        "symbol": "COP",
+        "asof": "2025-12-24",
+        "status": "证据不足",
+        "validated": false,
+        "computable": true,
+        "burden": 0.47225932562306566,
+        "accession": "0001163165-25-000012",
+        "sources": {
+          "Assets": {
+            "end": "2024-12-31",
+            "val": 122780000000,
+            "accn": "0001163165-25-000012",
+            "fy": 2024,
+            "fp": "FY",
+            "form": "10-K",
+            "filed": "2025-02-18",
+            "tag": "Assets"
+          },
+          "Liabilities": {
+            "end": "2024-12-31",
+            "val": 57984000000,
+            "accn": "0001163165-25-000012",
+            "fy": 2024,
+            "fp": "FY",
+            "form": "10-K",
+            "filed": "2025-02-18",
+            "tag": "Liabilities"
+          }
+        },
+        "reason": "负债负担可计算，非破产概率；排名依赖股票池，策略适用性未验证"
+      },
+      "CSX": {
+        "symbol": "CSX",
+        "asof": "2025-12-24",
+        "status": "证据不足",
+        "validated": false,
+        "computable": true,
+        "burden": 0.7075343747076981,
+        "accession": "0000277948-25-000008",
+        "sources": {
+          "Assets": {
+            "end": "2024-12-31",
+            "val": 42764000000,
+            "accn": "0000277948-25-000008",
+            "fy": 2024,
+            "fp": "FY",
+            "form": "10-K",
+            "filed": "2025-02-27",
+            "tag": "Assets"
+          },
+          "Liabilities": {
+            "end": "2024-12-31",
+            "val": 30257000000,
+            "accn": "0000277948-25-000008",
+            "fy": 2024,
+            "fp": "FY",
+            "form": "10-K",
+            "filed": "2025-02-27",
+            "tag": "Liabilities"
+          }
+        },
+        "reason": "负债负担可计算，非破产概率；排名依赖股票池，策略适用性未验证"
+      },
+      "DE": {
+        "symbol": "DE",
+        "asof": "2025-12-24",
+        "status": "证据不足",
+        "validated": false,
+        "computable": true,
+        "burden": 0.7546416845918714,
+        "accession": "0001104659-25-122321",
+        "sources": {
+          "Assets": {
+            "end": "2025-11-02",
+            "val": 105996000000,
+            "accn": "0001104659-25-122321",
+            "fy": 2025,
+            "fp": "FY",
+            "form": "10-K",
+            "filed": "2025-12-18",
+            "tag": "Assets"
+          },
+          "Liabilities": {
+            "end": "2025-11-02",
+            "val": 79989000000,
+            "accn": "0001104659-25-122321",
+            "fy": 2025,
+            "fp": "FY",
+            "form": "10-K",
+            "filed": "2025-12-18",
+            "tag": "Liabilities"
+          }
+        },
+        "reason": "负债负担可计算，非破产概率；排名依赖股票池，策略适用性未验证"
+      },
+      "DHR": {
+        "symbol": "DHR",
+        "asof": "2025-12-24",
+        "status": "证据不足",
+        "validated": false,
+        "computable": false,
+        "reason": "同申报同日缺Liabilities"
+      },
+      "FDX": {
+        "symbol": "FDX",
+        "asof": "2025-12-24",
+        "status": "证据不足",
+        "validated": false,
+        "computable": false,
+        "reason": "同申报同日缺Liabilities"
+      },
+      "HON": {
+        "symbol": "HON",
+        "asof": "2025-12-24",
+        "status": "证据不足",
+        "validated": false,
+        "computable": false,
+        "reason": "同申报同日缺Liabilities"
+      },
+      "RTX": {
+        "symbol": "RTX",
+        "asof": "2025-12-24",
+        "status": "证据不足",
+        "validated": false,
+        "computable": true,
+        "burden": 0.6195651506499408,
+        "accession": "0000101829-25-000005",
+        "sources": {
+          "Assets": {
+            "end": "2024-12-31",
+            "val": 162861000000,
+            "accn": "0000101829-25-000005",
+            "fy": 2024,
+            "fp": "FY",
+            "form": "10-K",
+            "filed": "2025-02-03",
+            "tag": "Assets"
+          },
+          "Liabilities": {
+            "end": "2024-12-31",
+            "val": 100903000000,
+            "accn": "0000101829-25-000005",
+            "fy": 2024,
+            "fp": "FY",
+            "form": "10-K",
+            "filed": "2025-02-03",
+            "tag": "Liabilities"
+          }
+        },
+        "reason": "负债负担可计算，非破产概率；排名依赖股票池，策略适用性未验证"
+      },
+      "SBUX": {
+        "symbol": "SBUX",
+        "asof": "2025-12-24",
+        "status": "证据不足",
+        "validated": false,
+        "computable": true,
+        "burden": 1.2526319734413502,
+        "accession": "0000829224-25-000114",
+        "sources": {
+          "Assets": {
+            "end": "2025-09-28",
+            "val": 32019700000,
+            "accn": "0000829224-25-000114",
+            "fy": 2025,
+            "fp": "FY",
+            "form": "10-K",
+            "filed": "2025-11-14",
+            "tag": "Assets"
+          },
+          "Liabilities": {
+            "end": "2025-09-28",
+            "val": 40108900000,
+            "accn": "0000829224-25-000114",
+            "fy": 2025,
+            "fp": "FY",
+            "form": "10-K",
+            "filed": "2025-11-14",
+            "tag": "Liabilities"
+          }
+        },
+        "reason": "负债负担可计算，非破产概率；排名依赖股票池，策略适用性未验证"
+      },
+      "TGT": {
+        "symbol": "TGT",
+        "asof": "2025-12-24",
+        "status": "证据不足",
+        "validated": false,
+        "computable": false,
+        "reason": "缺直接负债且该申报分项未原表核实"
+      },
+      "TMO": {
+        "symbol": "TMO",
+        "asof": "2025-12-24",
+        "status": "证据不足",
+        "validated": false,
+        "computable": false,
+        "reason": "同申报同日缺Liabilities"
+      }
+    }
+  },
+  {
+    "day": "2026-01-26",
+    "eligible": [
+      "COP",
+      "CSX",
+      "DE",
+      "RTX",
+      "SBUX"
+    ],
+    "selected": {
+      "low_growth": [
+        "COP"
+      ],
+      "high_growth": [
+        "SBUX"
+      ],
+      "eligible": [
+        "COP",
+        "CSX",
+        "DE",
+        "RTX",
+        "SBUX"
+      ]
+    },
+    "budget": 0.2,
+    "judgments": {
+      "AMGN": {
+        "symbol": "AMGN",
+        "asof": "2026-01-26",
+        "status": "证据不足",
+        "validated": false,
+        "computable": false,
+        "reason": "同申报同日缺Liabilities"
+      },
+      "CMCSA": {
+        "symbol": "CMCSA",
+        "asof": "2026-01-26",
+        "status": "证据不足",
+        "validated": false,
+        "computable": false,
+        "reason": "同申报同日缺Liabilities"
+      },
+      "COP": {
+        "symbol": "COP",
+        "asof": "2026-01-26",
+        "status": "证据不足",
+        "validated": false,
+        "computable": true,
+        "burden": 0.47225932562306566,
+        "accession": "0001163165-25-000012",
+        "sources": {
+          "Assets": {
+            "end": "2024-12-31",
+            "val": 122780000000,
+            "accn": "0001163165-25-000012",
+            "fy": 2024,
+            "fp": "FY",
+            "form": "10-K",
+            "filed": "2025-02-18",
+            "tag": "Assets"
+          },
+          "Liabilities": {
+            "end": "2024-12-31",
+            "val": 57984000000,
+            "accn": "0001163165-25-000012",
+            "fy": 2024,
+            "fp": "FY",
+            "form": "10-K",
+            "filed": "2025-02-18",
+            "tag": "Liabilities"
+          }
+        },
+        "reason": "负债负担可计算，非破产概率；排名依赖股票池，策略适用性未验证"
+      },
+      "CSX": {
+        "symbol": "CSX",
+        "asof": "2026-01-26",
+        "status": "证据不足",
+        "validated": false,
+        "computable": true,
+        "burden": 0.7075343747076981,
+        "accession": "0000277948-25-000008",
+        "sources": {
+          "Assets": {
+            "end": "2024-12-31",
+            "val": 42764000000,
+            "accn": "0000277948-25-000008",
+            "fy": 2024,
+            "fp": "FY",
+            "form": "10-K",
+            "filed": "2025-02-27",
+            "tag": "Assets"
+          },
+          "Liabilities": {
+            "end": "2024-12-31",
+            "val": 30257000000,
+            "accn": "0000277948-25-000008",
+            "fy": 2024,
+            "fp": "FY",
+            "form": "10-K",
+            "filed": "2025-02-27",
+            "tag": "Liabilities"
+          }
+        },
+        "reason": "负债负担可计算，非破产概率；排名依赖股票池，策略适用性未验证"
+      },
+      "DE": {
+        "symbol": "DE",
+        "asof": "2026-01-26",
+        "status": "证据不足",
+        "validated": false,
+        "computable": true,
+        "burden": 0.7546416845918714,
+        "accession": "0001104659-25-122321",
+        "sources": {
+          "Assets": {
+            "end": "2025-11-02",
+            "val": 105996000000,
+            "accn": "0001104659-25-122321",
+            "fy": 2025,
+            "fp": "FY",
+            "form": "10-K",
+            "filed": "2025-12-18",
+            "tag": "Assets"
+          },
+          "Liabilities": {
+            "end": "2025-11-02",
+            "val": 79989000000,
+            "accn": "0001104659-25-122321",
+            "fy": 2025,
+            "fp": "FY",
+            "form": "10-K",
+            "filed": "2025-12-18",
+            "tag": "Liabilities"
+          }
+        },
+        "reason": "负债负担可计算，非破产概率；排名依赖股票池，策略适用性未验证"
+      },
+      "DHR": {
+        "symbol": "DHR",
+        "asof": "2026-01-26",
+        "status": "证据不足",
+        "validated": false,
+        "computable": false,
+        "reason": "同申报同日缺Liabilities"
+      },
+      "FDX": {
+        "symbol": "FDX",
+        "asof": "2026-01-26",
+        "status": "证据不足",
+        "validated": false,
+        "computable": false,
+        "reason": "同申报同日缺Liabilities"
+      },
+      "HON": {
+        "symbol": "HON",
+        "asof": "2026-01-26",
+        "status": "证据不足",
+        "validated": false,
+        "computable": false,
+        "reason": "同申报同日缺Liabilities"
+      },
+      "RTX": {
+        "symbol": "RTX",
+        "asof": "2026-01-26",
+        "status": "证据不足",
+        "validated": false,
+        "computable": true,
+        "burden": 0.6195651506499408,
+        "accession": "0000101829-25-000005",
+        "sources": {
+          "Assets": {
+            "end": "2024-12-31",
+            "val": 162861000000,
+            "accn": "0000101829-25-000005",
+            "fy": 2024,
+            "fp": "FY",
+            "form": "10-K",
+            "filed": "2025-02-03",
+            "tag": "Assets"
+          },
+          "Liabilities": {
+            "end": "2024-12-31",
+            "val": 100903000000,
+            "accn": "0000101829-25-000005",
+            "fy": 2024,
+            "fp": "FY",
+            "form": "10-K",
+            "filed": "2025-02-03",
+            "tag": "Liabilities"
+          }
+        },
+        "reason": "负债负担可计算，非破产概率；排名依赖股票池，策略适用性未验证"
+      },
+      "SBUX": {
+        "symbol": "SBUX",
+        "asof": "2026-01-26",
+        "status": "证据不足",
+        "validated": false,
+        "computable": true,
+        "burden": 1.2526319734413502,
+        "accession": "0000829224-25-000114",
+        "sources": {
+          "Assets": {
+            "end": "2025-09-28",
+            "val": 32019700000,
+            "accn": "0000829224-25-000114",
+            "fy": 2025,
+            "fp": "FY",
+            "form": "10-K",
+            "filed": "2025-11-14",
+            "tag": "Assets"
+          },
+          "Liabilities": {
+            "end": "2025-09-28",
+            "val": 40108900000,
+            "accn": "0000829224-25-000114",
+            "fy": 2025,
+            "fp": "FY",
+            "form": "10-K",
+            "filed": "2025-11-14",
+            "tag": "Liabilities"
+          }
+        },
+        "reason": "负债负担可计算，非破产概率；排名依赖股票池，策略适用性未验证"
+      },
+      "TGT": {
+        "symbol": "TGT",
+        "asof": "2026-01-26",
+        "status": "证据不足",
+        "validated": false,
+        "computable": false,
+        "reason": "缺直接负债且该申报分项未原表核实"
+      },
+      "TMO": {
+        "symbol": "TMO",
+        "asof": "2026-01-26",
+        "status": "证据不足",
+        "validated": false,
+        "computable": false,
+        "reason": "同申报同日缺Liabilities"
+      }
+    }
+  },
+  {
+    "day": "2026-02-24",
+    "eligible": [
+      "COP",
+      "CSX",
+      "DE",
+      "RTX",
+      "SBUX"
+    ],
+    "selected": {
+      "low_growth": [
+        "COP"
+      ],
+      "high_growth": [
+        "SBUX"
+      ],
+      "eligible": [
+        "COP",
+        "CSX",
+        "DE",
+        "RTX",
+        "SBUX"
+      ]
+    },
+    "budget": 0.2,
+    "judgments": {
+      "AMGN": {
+        "symbol": "AMGN",
+        "asof": "2026-02-24",
+        "status": "证据不足",
+        "validated": false,
+        "computable": false,
+        "reason": "同申报同日缺Liabilities"
+      },
+      "CMCSA": {
+        "symbol": "CMCSA",
+        "asof": "2026-02-24",
+        "status": "证据不足",
+        "validated": false,
+        "computable": false,
+        "reason": "同申报同日缺Liabilities"
+      },
+      "COP": {
+        "symbol": "COP",
+        "asof": "2026-02-24",
+        "status": "证据不足",
+        "validated": false,
+        "computable": true,
+        "burden": 0.47115360959168107,
+        "accession": "0001163165-26-000009",
+        "sources": {
+          "Assets": {
+            "end": "2025-12-31",
+            "val": 121939000000,
+            "accn": "0001163165-26-000009",
+            "fy": 2025,
+            "fp": "FY",
+            "form": "10-K",
+            "filed": "2026-02-17",
+            "tag": "Assets"
+          },
+          "Liabilities": {
+            "end": "2025-12-31",
+            "val": 57452000000,
+            "accn": "0001163165-26-000009",
+            "fy": 2025,
+            "fp": "FY",
+            "form": "10-K",
+            "filed": "2026-02-17",
+            "tag": "Liabilities"
+          }
+        },
+        "reason": "负债负担可计算，非破产概率；排名依赖股票池，策略适用性未验证"
+      },
+      "CSX": {
+        "symbol": "CSX",
+        "asof": "2026-02-24",
+        "status": "证据不足",
+        "validated": false,
+        "computable": true,
+        "burden": 0.6987317430520581,
+        "accession": "0000277948-26-000006",
+        "sources": {
+          "Assets": {
+            "end": "2025-12-31",
+            "val": 43682000000,
+            "accn": "0000277948-26-000006",
+            "fy": 2025,
+            "fp": "FY",
+            "form": "10-K",
+            "filed": "2026-02-12",
+            "tag": "Assets"
+          },
+          "Liabilities": {
+            "end": "2025-12-31",
+            "val": 30522000000,
+            "accn": "0000277948-26-000006",
+            "fy": 2025,
+            "fp": "FY",
+            "form": "10-K",
+            "filed": "2026-02-12",
+            "tag": "Liabilities"
+          }
+        },
+        "reason": "负债负担可计算，非破产概率；排名依赖股票池，策略适用性未验证"
+      },
+      "DE": {
+        "symbol": "DE",
+        "asof": "2026-02-24",
+        "status": "证据不足",
+        "validated": false,
+        "computable": true,
+        "burden": 0.7546416845918714,
+        "accession": "0001104659-25-122321",
+        "sources": {
+          "Assets": {
+            "end": "2025-11-02",
+            "val": 105996000000,
+            "accn": "0001104659-25-122321",
+            "fy": 2025,
+            "fp": "FY",
+            "form": "10-K",
+            "filed": "2025-12-18",
+            "tag": "Assets"
+          },
+          "Liabilities": {
+            "end": "2025-11-02",
+            "val": 79989000000,
+            "accn": "0001104659-25-122321",
+            "fy": 2025,
+            "fp": "FY",
+            "form": "10-K",
+            "filed": "2025-12-18",
+            "tag": "Liabilities"
+          }
+        },
+        "reason": "负债负担可计算，非破产概率；排名依赖股票池，策略适用性未验证"
+      },
+      "DHR": {
+        "symbol": "DHR",
+        "asof": "2026-02-24",
+        "status": "证据不足",
+        "validated": false,
+        "computable": false,
+        "reason": "同申报同日缺Liabilities"
+      },
+      "FDX": {
+        "symbol": "FDX",
+        "asof": "2026-02-24",
+        "status": "证据不足",
+        "validated": false,
+        "computable": false,
+        "reason": "同申报同日缺Liabilities"
+      },
+      "HON": {
+        "symbol": "HON",
+        "asof": "2026-02-24",
+        "status": "证据不足",
+        "validated": false,
+        "computable": false,
+        "reason": "同申报同日缺Liabilities"
+      },
+      "RTX": {
+        "symbol": "RTX",
+        "asof": "2026-02-24",
+        "status": "证据不足",
+        "validated": false,
+        "computable": true,
+        "burden": 0.6075614189935644,
+        "accession": "0000101829-26-000006",
+        "sources": {
+          "Assets": {
+            "end": "2025-12-31",
+            "val": 171079000000,
+            "accn": "0000101829-26-000006",
+            "fy": 2025,
+            "fp": "FY",
+            "form": "10-K",
+            "filed": "2026-02-06",
+            "tag": "Assets"
+          },
+          "Liabilities": {
+            "end": "2025-12-31",
+            "val": 103941000000,
+            "accn": "0000101829-26-000006",
+            "fy": 2025,
+            "fp": "FY",
+            "form": "10-K",
+            "filed": "2026-02-06",
+            "tag": "Liabilities"
+          }
+        },
+        "reason": "负债负担可计算，非破产概率；排名依赖股票池，策略适用性未验证"
+      },
+      "SBUX": {
+        "symbol": "SBUX",
+        "asof": "2026-02-24",
+        "status": "证据不足",
+        "validated": false,
+        "computable": true,
+        "burden": 1.2526319734413502,
+        "accession": "0000829224-25-000114",
+        "sources": {
+          "Assets": {
+            "end": "2025-09-28",
+            "val": 32019700000,
+            "accn": "0000829224-25-000114",
+            "fy": 2025,
+            "fp": "FY",
+            "form": "10-K",
+            "filed": "2025-11-14",
+            "tag": "Assets"
+          },
+          "Liabilities": {
+            "end": "2025-09-28",
+            "val": 40108900000,
+            "accn": "0000829224-25-000114",
+            "fy": 2025,
+            "fp": "FY",
+            "form": "10-K",
+            "filed": "2025-11-14",
+            "tag": "Liabilities"
+          }
+        },
+        "reason": "负债负担可计算，非破产概率；排名依赖股票池，策略适用性未验证"
+      },
+      "TGT": {
+        "symbol": "TGT",
+        "asof": "2026-02-24",
+        "status": "证据不足",
+        "validated": false,
+        "computable": false,
+        "reason": "缺直接负债且该申报分项未原表核实"
+      },
+      "TMO": {
+        "symbol": "TMO",
+        "asof": "2026-02-24",
+        "status": "证据不足",
+        "validated": false,
+        "computable": false,
+        "reason": "同申报同日缺Liabilities"
+      }
+    }
+  },
+  {
+    "day": "2026-03-24",
+    "eligible": [
+      "COP",
+      "CSX",
+      "DE",
+      "RTX",
+      "SBUX"
+    ],
+    "selected": {
+      "low_growth": [
+        "COP"
+      ],
+      "high_growth": [
+        "SBUX"
+      ],
+      "eligible": [
+        "COP",
+        "CSX",
+        "DE",
+        "RTX",
+        "SBUX"
+      ]
+    },
+    "budget": 0.2,
+    "judgments": {
+      "AMGN": {
+        "symbol": "AMGN",
+        "asof": "2026-03-24",
+        "status": "证据不足",
+        "validated": false,
+        "computable": false,
+        "reason": "同申报同日缺Liabilities"
+      },
+      "CMCSA": {
+        "symbol": "CMCSA",
+        "asof": "2026-03-24",
+        "status": "证据不足",
+        "validated": false,
+        "computable": false,
+        "reason": "同申报同日缺Liabilities"
+      },
+      "COP": {
+        "symbol": "COP",
+        "asof": "2026-03-24",
+        "status": "证据不足",
+        "validated": false,
+        "computable": true,
+        "burden": 0.47115360959168107,
+        "accession": "0001163165-26-000009",
+        "sources": {
+          "Assets": {
+            "end": "2025-12-31",
+            "val": 121939000000,
+            "accn": "0001163165-26-000009",
+            "fy": 2025,
+            "fp": "FY",
+            "form": "10-K",
+            "filed": "2026-02-17",
+            "tag": "Assets"
+          },
+          "Liabilities": {
+            "end": "2025-12-31",
+            "val": 57452000000,
+            "accn": "0001163165-26-000009",
+            "fy": 2025,
+            "fp": "FY",
+            "form": "10-K",
+            "filed": "2026-02-17",
+            "tag": "Liabilities"
+          }
+        },
+        "reason": "负债负担可计算，非破产概率；排名依赖股票池，策略适用性未验证"
+      },
+      "CSX": {
+        "symbol": "CSX",
+        "asof": "2026-03-24",
+        "status": "证据不足",
+        "validated": false,
+        "computable": true,
+        "burden": 0.6987317430520581,
+        "accession": "0000277948-26-000006",
+        "sources": {
+          "Assets": {
+            "end": "2025-12-31",
+            "val": 43682000000,
+            "accn": "0000277948-26-000006",
+            "fy": 2025,
+            "fp": "FY",
+            "form": "10-K",
+            "filed": "2026-02-12",
+            "tag": "Assets"
+          },
+          "Liabilities": {
+            "end": "2025-12-31",
+            "val": 30522000000,
+            "accn": "0000277948-26-000006",
+            "fy": 2025,
+            "fp": "FY",
+            "form": "10-K",
+            "filed": "2026-02-12",
+            "tag": "Liabilities"
+          }
+        },
+        "reason": "负债负担可计算，非破产概率；排名依赖股票池，策略适用性未验证"
+      },
+      "DE": {
+        "symbol": "DE",
+        "asof": "2026-03-24",
+        "status": "证据不足",
+        "validated": false,
+        "computable": true,
+        "burden": 0.7546416845918714,
+        "accession": "0001104659-25-122321",
+        "sources": {
+          "Assets": {
+            "end": "2025-11-02",
+            "val": 105996000000,
+            "accn": "0001104659-25-122321",
+            "fy": 2025,
+            "fp": "FY",
+            "form": "10-K",
+            "filed": "2025-12-18",
+            "tag": "Assets"
+          },
+          "Liabilities": {
+            "end": "2025-11-02",
+            "val": 79989000000,
+            "accn": "0001104659-25-122321",
+            "fy": 2025,
+            "fp": "FY",
+            "form": "10-K",
+            "filed": "2025-12-18",
+            "tag": "Liabilities"
+          }
+        },
+        "reason": "负债负担可计算，非破产概率；排名依赖股票池，策略适用性未验证"
+      },
+      "DHR": {
+        "symbol": "DHR",
+        "asof": "2026-03-24",
+        "status": "证据不足",
+        "validated": false,
+        "computable": false,
+        "reason": "同申报同日缺Liabilities"
+      },
+      "FDX": {
+        "symbol": "FDX",
+        "asof": "2026-03-24",
+        "status": "证据不足",
+        "validated": false,
+        "computable": false,
+        "reason": "同申报同日缺Liabilities"
+      },
+      "HON": {
+        "symbol": "HON",
+        "asof": "2026-03-24",
+        "status": "证据不足",
+        "validated": false,
+        "computable": false,
+        "reason": "同申报同日缺Liabilities"
+      },
+      "RTX": {
+        "symbol": "RTX",
+        "asof": "2026-03-24",
+        "status": "证据不足",
+        "validated": false,
+        "computable": true,
+        "burden": 0.6075614189935644,
+        "accession": "0000101829-26-000006",
+        "sources": {
+          "Assets": {
+            "end": "2025-12-31",
+            "val": 171079000000,
+            "accn": "0000101829-26-000006",
+            "fy": 2025,
+            "fp": "FY",
+            "form": "10-K",
+            "filed": "2026-02-06",
+            "tag": "Assets"
+          },
+          "Liabilities": {
+            "end": "2025-12-31",
+            "val": 103941000000,
+            "accn": "0000101829-26-000006",
+            "fy": 2025,
+            "fp": "FY",
+            "form": "10-K",
+            "filed": "2026-02-06",
+            "tag": "Liabilities"
+          }
+        },
+        "reason": "负债负担可计算，非破产概率；排名依赖股票池，策略适用性未验证"
+      },
+      "SBUX": {
+        "symbol": "SBUX",
+        "asof": "2026-03-24",
+        "status": "证据不足",
+        "validated": false,
+        "computable": true,
+        "burden": 1.2526319734413502,
+        "accession": "0000829224-25-000114",
+        "sources": {
+          "Assets": {
+            "end": "2025-09-28",
+            "val": 32019700000,
+            "accn": "0000829224-25-000114",
+            "fy": 2025,
+            "fp": "FY",
+            "form": "10-K",
+            "filed": "2025-11-14",
+            "tag": "Assets"
+          },
+          "Liabilities": {
+            "end": "2025-09-28",
+            "val": 40108900000,
+            "accn": "0000829224-25-000114",
+            "fy": 2025,
+            "fp": "FY",
+            "form": "10-K",
+            "filed": "2025-11-14",
+            "tag": "Liabilities"
+          }
+        },
+        "reason": "负债负担可计算，非破产概率；排名依赖股票池，策略适用性未验证"
+      },
+      "TGT": {
+        "symbol": "TGT",
+        "asof": "2026-03-24",
+        "status": "证据不足",
+        "validated": false,
+        "computable": false,
+        "reason": "缺直接负债且该申报分项未原表核实"
+      },
+      "TMO": {
+        "symbol": "TMO",
+        "asof": "2026-03-24",
+        "status": "证据不足",
+        "validated": false,
+        "computable": false,
+        "reason": "同申报同日缺Liabilities"
+      }
+    }
+  },
+  {
+    "day": "2026-04-22",
+    "eligible": [
+      "COP",
+      "CSX",
+      "DE",
+      "RTX",
+      "SBUX"
+    ],
+    "selected": {
+      "low_growth": [
+        "COP"
+      ],
+      "high_growth": [
+        "SBUX"
+      ],
+      "eligible": [
+        "COP",
+        "CSX",
+        "DE",
+        "RTX",
+        "SBUX"
+      ]
+    },
+    "budget": 0.2,
+    "judgments": {
+      "AMGN": {
+        "symbol": "AMGN",
+        "asof": "2026-04-22",
+        "status": "证据不足",
+        "validated": false,
+        "computable": false,
+        "reason": "同申报同日缺Liabilities"
+      },
+      "CMCSA": {
+        "symbol": "CMCSA",
+        "asof": "2026-04-22",
+        "status": "证据不足",
+        "validated": false,
+        "computable": false,
+        "reason": "同申报同日缺Liabilities"
+      },
+      "COP": {
+        "symbol": "COP",
+        "asof": "2026-04-22",
+        "status": "证据不足",
+        "validated": false,
+        "computable": true,
+        "burden": 0.47115360959168107,
+        "accession": "0001163165-26-000009",
+        "sources": {
+          "Assets": {
+            "end": "2025-12-31",
+            "val": 121939000000,
+            "accn": "0001163165-26-000009",
+            "fy": 2025,
+            "fp": "FY",
+            "form": "10-K",
+            "filed": "2026-02-17",
+            "tag": "Assets"
+          },
+          "Liabilities": {
+            "end": "2025-12-31",
+            "val": 57452000000,
+            "accn": "0001163165-26-000009",
+            "fy": 2025,
+            "fp": "FY",
+            "form": "10-K",
+            "filed": "2026-02-17",
+            "tag": "Liabilities"
+          }
+        },
+        "reason": "负债负担可计算，非破产概率；排名依赖股票池，策略适用性未验证"
+      },
+      "CSX": {
+        "symbol": "CSX",
+        "asof": "2026-04-22",
+        "status": "证据不足",
+        "validated": false,
+        "computable": true,
+        "burden": 0.6987317430520581,
+        "accession": "0000277948-26-000006",
+        "sources": {
+          "Assets": {
+            "end": "2025-12-31",
+            "val": 43682000000,
+            "accn": "0000277948-26-000006",
+            "fy": 2025,
+            "fp": "FY",
+            "form": "10-K",
+            "filed": "2026-02-12",
+            "tag": "Assets"
+          },
+          "Liabilities": {
+            "end": "2025-12-31",
+            "val": 30522000000,
+            "accn": "0000277948-26-000006",
+            "fy": 2025,
+            "fp": "FY",
+            "form": "10-K",
+            "filed": "2026-02-12",
+            "tag": "Liabilities"
+          }
+        },
+        "reason": "负债负担可计算，非破产概率；排名依赖股票池，策略适用性未验证"
+      },
+      "DE": {
+        "symbol": "DE",
+        "asof": "2026-04-22",
+        "status": "证据不足",
+        "validated": false,
+        "computable": true,
+        "burden": 0.7546416845918714,
+        "accession": "0001104659-25-122321",
+        "sources": {
+          "Assets": {
+            "end": "2025-11-02",
+            "val": 105996000000,
+            "accn": "0001104659-25-122321",
+            "fy": 2025,
+            "fp": "FY",
+            "form": "10-K",
+            "filed": "2025-12-18",
+            "tag": "Assets"
+          },
+          "Liabilities": {
+            "end": "2025-11-02",
+            "val": 79989000000,
+            "accn": "0001104659-25-122321",
+            "fy": 2025,
+            "fp": "FY",
+            "form": "10-K",
+            "filed": "2025-12-18",
+            "tag": "Liabilities"
+          }
+        },
+        "reason": "负债负担可计算，非破产概率；排名依赖股票池，策略适用性未验证"
+      },
+      "DHR": {
+        "symbol": "DHR",
+        "asof": "2026-04-22",
+        "status": "证据不足",
+        "validated": false,
+        "computable": false,
+        "reason": "同申报同日缺Liabilities"
+      },
+      "FDX": {
+        "symbol": "FDX",
+        "asof": "2026-04-22",
+        "status": "证据不足",
+        "validated": false,
+        "computable": false,
+        "reason": "同申报同日缺Liabilities"
+      },
+      "HON": {
+        "symbol": "HON",
+        "asof": "2026-04-22",
+        "status": "证据不足",
+        "validated": false,
+        "computable": false,
+        "reason": "同申报同日缺Liabilities"
+      },
+      "RTX": {
+        "symbol": "RTX",
+        "asof": "2026-04-22",
+        "status": "证据不足",
+        "validated": false,
+        "computable": true,
+        "burden": 0.6075614189935644,
+        "accession": "0000101829-26-000006",
+        "sources": {
+          "Assets": {
+            "end": "2025-12-31",
+            "val": 171079000000,
+            "accn": "0000101829-26-000006",
+            "fy": 2025,
+            "fp": "FY",
+            "form": "10-K",
+            "filed": "2026-02-06",
+            "tag": "Assets"
+          },
+          "Liabilities": {
+            "end": "2025-12-31",
+            "val": 103941000000,
+            "accn": "0000101829-26-000006",
+            "fy": 2025,
+            "fp": "FY",
+            "form": "10-K",
+            "filed": "2026-02-06",
+            "tag": "Liabilities"
+          }
+        },
+        "reason": "负债负担可计算，非破产概率；排名依赖股票池，策略适用性未验证"
+      },
+      "SBUX": {
+        "symbol": "SBUX",
+        "asof": "2026-04-22",
+        "status": "证据不足",
+        "validated": false,
+        "computable": true,
+        "burden": 1.2526319734413502,
+        "accession": "0000829224-25-000114",
+        "sources": {
+          "Assets": {
+            "end": "2025-09-28",
+            "val": 32019700000,
+            "accn": "0000829224-25-000114",
+            "fy": 2025,
+            "fp": "FY",
+            "form": "10-K",
+            "filed": "2025-11-14",
+            "tag": "Assets"
+          },
+          "Liabilities": {
+            "end": "2025-09-28",
+            "val": 40108900000,
+            "accn": "0000829224-25-000114",
+            "fy": 2025,
+            "fp": "FY",
+            "form": "10-K",
+            "filed": "2025-11-14",
+            "tag": "Liabilities"
+          }
+        },
+        "reason": "负债负担可计算，非破产概率；排名依赖股票池，策略适用性未验证"
+      },
+      "TGT": {
+        "symbol": "TGT",
+        "asof": "2026-04-22",
+        "status": "证据不足",
+        "validated": false,
+        "computable": false,
+        "reason": "缺直接负债且该申报分项未原表核实"
+      },
+      "TMO": {
+        "symbol": "TMO",
+        "asof": "2026-04-22",
+        "status": "证据不足",
+        "validated": false,
+        "computable": false,
+        "reason": "同申报同日缺Liabilities"
+      }
+    }
+  },
+  {
+    "day": "2026-05-20",
+    "eligible": [
+      "COP",
+      "CSX",
+      "DE",
+      "RTX",
+      "SBUX"
+    ],
+    "selected": {
+      "low_growth": [
+        "COP"
+      ],
+      "high_growth": [
+        "SBUX"
+      ],
+      "eligible": [
+        "COP",
+        "CSX",
+        "DE",
+        "RTX",
+        "SBUX"
+      ]
+    },
+    "budget": 0.2,
+    "judgments": {
+      "AMGN": {
+        "symbol": "AMGN",
+        "asof": "2026-05-20",
+        "status": "证据不足",
+        "validated": false,
+        "computable": false,
+        "reason": "同申报同日缺Liabilities"
+      },
+      "CMCSA": {
+        "symbol": "CMCSA",
+        "asof": "2026-05-20",
+        "status": "证据不足",
+        "validated": false,
+        "computable": false,
+        "reason": "同申报同日缺Liabilities"
+      },
+      "COP": {
+        "symbol": "COP",
+        "asof": "2026-05-20",
+        "status": "证据不足",
+        "validated": false,
+        "computable": true,
+        "burden": 0.47115360959168107,
+        "accession": "0001163165-26-000009",
+        "sources": {
+          "Assets": {
+            "end": "2025-12-31",
+            "val": 121939000000,
+            "accn": "0001163165-26-000009",
+            "fy": 2025,
+            "fp": "FY",
+            "form": "10-K",
+            "filed": "2026-02-17",
+            "tag": "Assets"
+          },
+          "Liabilities": {
+            "end": "2025-12-31",
+            "val": 57452000000,
+            "accn": "0001163165-26-000009",
+            "fy": 2025,
+            "fp": "FY",
+            "form": "10-K",
+            "filed": "2026-02-17",
+            "tag": "Liabilities"
+          }
+        },
+        "reason": "负债负担可计算，非破产概率；排名依赖股票池，策略适用性未验证"
+      },
+      "CSX": {
+        "symbol": "CSX",
+        "asof": "2026-05-20",
+        "status": "证据不足",
+        "validated": false,
+        "computable": true,
+        "burden": 0.6987317430520581,
+        "accession": "0000277948-26-000006",
+        "sources": {
+          "Assets": {
+            "end": "2025-12-31",
+            "val": 43682000000,
+            "accn": "0000277948-26-000006",
+            "fy": 2025,
+            "fp": "FY",
+            "form": "10-K",
+            "filed": "2026-02-12",
+            "tag": "Assets"
+          },
+          "Liabilities": {
+            "end": "2025-12-31",
+            "val": 30522000000,
+            "accn": "0000277948-26-000006",
+            "fy": 2025,
+            "fp": "FY",
+            "form": "10-K",
+            "filed": "2026-02-12",
+            "tag": "Liabilities"
+          }
+        },
+        "reason": "负债负担可计算，非破产概率；排名依赖股票池，策略适用性未验证"
+      },
+      "DE": {
+        "symbol": "DE",
+        "asof": "2026-05-20",
+        "status": "证据不足",
+        "validated": false,
+        "computable": true,
+        "burden": 0.7546416845918714,
+        "accession": "0001104659-25-122321",
+        "sources": {
+          "Assets": {
+            "end": "2025-11-02",
+            "val": 105996000000,
+            "accn": "0001104659-25-122321",
+            "fy": 2025,
+            "fp": "FY",
+            "form": "10-K",
+            "filed": "2025-12-18",
+            "tag": "Assets"
+          },
+          "Liabilities": {
+            "end": "2025-11-02",
+            "val": 79989000000,
+            "accn": "0001104659-25-122321",
+            "fy": 2025,
+            "fp": "FY",
+            "form": "10-K",
+            "filed": "2025-12-18",
+            "tag": "Liabilities"
+          }
+        },
+        "reason": "负债负担可计算，非破产概率；排名依赖股票池，策略适用性未验证"
+      },
+      "DHR": {
+        "symbol": "DHR",
+        "asof": "2026-05-20",
+        "status": "证据不足",
+        "validated": false,
+        "computable": false,
+        "reason": "同申报同日缺Liabilities"
+      },
+      "FDX": {
+        "symbol": "FDX",
+        "asof": "2026-05-20",
+        "status": "证据不足",
+        "validated": false,
+        "computable": false,
+        "reason": "同申报同日缺Liabilities"
+      },
+      "HON": {
+        "symbol": "HON",
+        "asof": "2026-05-20",
+        "status": "证据不足",
+        "validated": false,
+        "computable": false,
+        "reason": "同申报同日缺Liabilities"
+      },
+      "RTX": {
+        "symbol": "RTX",
+        "asof": "2026-05-20",
+        "status": "证据不足",
+        "validated": false,
+        "computable": true,
+        "burden": 0.6075614189935644,
+        "accession": "0000101829-26-000006",
+        "sources": {
+          "Assets": {
+            "end": "2025-12-31",
+            "val": 171079000000,
+            "accn": "0000101829-26-000006",
+            "fy": 2025,
+            "fp": "FY",
+            "form": "10-K",
+            "filed": "2026-02-06",
+            "tag": "Assets"
+          },
+          "Liabilities": {
+            "end": "2025-12-31",
+            "val": 103941000000,
+            "accn": "0000101829-26-000006",
+            "fy": 2025,
+            "fp": "FY",
+            "form": "10-K",
+            "filed": "2026-02-06",
+            "tag": "Liabilities"
+          }
+        },
+        "reason": "负债负担可计算，非破产概率；排名依赖股票池，策略适用性未验证"
+      },
+      "SBUX": {
+        "symbol": "SBUX",
+        "asof": "2026-05-20",
+        "status": "证据不足",
+        "validated": false,
+        "computable": true,
+        "burden": 1.2526319734413502,
+        "accession": "0000829224-25-000114",
+        "sources": {
+          "Assets": {
+            "end": "2025-09-28",
+            "val": 32019700000,
+            "accn": "0000829224-25-000114",
+            "fy": 2025,
+            "fp": "FY",
+            "form": "10-K",
+            "filed": "2025-11-14",
+            "tag": "Assets"
+          },
+          "Liabilities": {
+            "end": "2025-09-28",
+            "val": 40108900000,
+            "accn": "0000829224-25-000114",
+            "fy": 2025,
+            "fp": "FY",
+            "form": "10-K",
+            "filed": "2025-11-14",
+            "tag": "Liabilities"
+          }
+        },
+        "reason": "负债负担可计算，非破产概率；排名依赖股票池，策略适用性未验证"
+      },
+      "TGT": {
+        "symbol": "TGT",
+        "asof": "2026-05-20",
+        "status": "证据不足",
+        "validated": false,
+        "computable": false,
+        "reason": "缺直接负债且该申报分项未原表核实"
+      },
+      "TMO": {
+        "symbol": "TMO",
+        "asof": "2026-05-20",
+        "status": "证据不足",
+        "validated": false,
+        "computable": false,
+        "reason": "同申报同日缺Liabilities"
+      }
+    }
+  },
+  {
+    "day": "2026-06-18",
+    "eligible": [
+      "COP",
+      "CSX",
+      "DE",
+      "RTX",
+      "SBUX"
+    ],
+    "selected": {
+      "low_growth": [
+        "COP"
+      ],
+      "high_growth": [
+        "SBUX"
+      ],
+      "eligible": [
+        "COP",
+        "CSX",
+        "DE",
+        "RTX",
+        "SBUX"
+      ]
+    },
+    "budget": 0.2,
+    "judgments": {
+      "AMGN": {
+        "symbol": "AMGN",
+        "asof": "2026-06-18",
+        "status": "证据不足",
+        "validated": false,
+        "computable": false,
+        "reason": "同申报同日缺Liabilities"
+      },
+      "CMCSA": {
+        "symbol": "CMCSA",
+        "asof": "2026-06-18",
+        "status": "证据不足",
+        "validated": false,
+        "computable": false,
+        "reason": "同申报同日缺Liabilities"
+      },
+      "COP": {
+        "symbol": "COP",
+        "asof": "2026-06-18",
+        "status": "证据不足",
+        "validated": false,
+        "computable": true,
+        "burden": 0.47115360959168107,
+        "accession": "0001163165-26-000009",
+        "sources": {
+          "Assets": {
+            "end": "2025-12-31",
+            "val": 121939000000,
+            "accn": "0001163165-26-000009",
+            "fy": 2025,
+            "fp": "FY",
+            "form": "10-K",
+            "filed": "2026-02-17",
+            "tag": "Assets"
+          },
+          "Liabilities": {
+            "end": "2025-12-31",
+            "val": 57452000000,
+            "accn": "0001163165-26-000009",
+            "fy": 2025,
+            "fp": "FY",
+            "form": "10-K",
+            "filed": "2026-02-17",
+            "tag": "Liabilities"
+          }
+        },
+        "reason": "负债负担可计算，非破产概率；排名依赖股票池，策略适用性未验证"
+      },
+      "CSX": {
+        "symbol": "CSX",
+        "asof": "2026-06-18",
+        "status": "证据不足",
+        "validated": false,
+        "computable": true,
+        "burden": 0.6987317430520581,
+        "accession": "0000277948-26-000006",
+        "sources": {
+          "Assets": {
+            "end": "2025-12-31",
+            "val": 43682000000,
+            "accn": "0000277948-26-000006",
+            "fy": 2025,
+            "fp": "FY",
+            "form": "10-K",
+            "filed": "2026-02-12",
+            "tag": "Assets"
+          },
+          "Liabilities": {
+            "end": "2025-12-31",
+            "val": 30522000000,
+            "accn": "0000277948-26-000006",
+            "fy": 2025,
+            "fp": "FY",
+            "form": "10-K",
+            "filed": "2026-02-12",
+            "tag": "Liabilities"
+          }
+        },
+        "reason": "负债负担可计算，非破产概率；排名依赖股票池，策略适用性未验证"
+      },
+      "DE": {
+        "symbol": "DE",
+        "asof": "2026-06-18",
+        "status": "证据不足",
+        "validated": false,
+        "computable": true,
+        "burden": 0.7546416845918714,
+        "accession": "0001104659-25-122321",
+        "sources": {
+          "Assets": {
+            "end": "2025-11-02",
+            "val": 105996000000,
+            "accn": "0001104659-25-122321",
+            "fy": 2025,
+            "fp": "FY",
+            "form": "10-K",
+            "filed": "2025-12-18",
+            "tag": "Assets"
+          },
+          "Liabilities": {
+            "end": "2025-11-02",
+            "val": 79989000000,
+            "accn": "0001104659-25-122321",
+            "fy": 2025,
+            "fp": "FY",
+            "form": "10-K",
+            "filed": "2025-12-18",
+            "tag": "Liabilities"
+          }
+        },
+        "reason": "负债负担可计算，非破产概率；排名依赖股票池，策略适用性未验证"
+      },
+      "DHR": {
+        "symbol": "DHR",
+        "asof": "2026-06-18",
+        "status": "证据不足",
+        "validated": false,
+        "computable": false,
+        "reason": "同申报同日缺Liabilities"
+      },
+      "FDX": {
+        "symbol": "FDX",
+        "asof": "2026-06-18",
+        "status": "证据不足",
+        "validated": false,
+        "computable": false,
+        "reason": "同申报同日缺Liabilities"
+      },
+      "HON": {
+        "symbol": "HON",
+        "asof": "2026-06-18",
+        "status": "证据不足",
+        "validated": false,
+        "computable": false,
+        "reason": "同申报同日缺Liabilities"
+      },
+      "RTX": {
+        "symbol": "RTX",
+        "asof": "2026-06-18",
+        "status": "证据不足",
+        "validated": false,
+        "computable": true,
+        "burden": 0.6075614189935644,
+        "accession": "0000101829-26-000006",
+        "sources": {
+          "Assets": {
+            "end": "2025-12-31",
+            "val": 171079000000,
+            "accn": "0000101829-26-000006",
+            "fy": 2025,
+            "fp": "FY",
+            "form": "10-K",
+            "filed": "2026-02-06",
+            "tag": "Assets"
+          },
+          "Liabilities": {
+            "end": "2025-12-31",
+            "val": 103941000000,
+            "accn": "0000101829-26-000006",
+            "fy": 2025,
+            "fp": "FY",
+            "form": "10-K",
+            "filed": "2026-02-06",
+            "tag": "Liabilities"
+          }
+        },
+        "reason": "负债负担可计算，非破产概率；排名依赖股票池，策略适用性未验证"
+      },
+      "SBUX": {
+        "symbol": "SBUX",
+        "asof": "2026-06-18",
+        "status": "证据不足",
+        "validated": false,
+        "computable": true,
+        "burden": 1.2526319734413502,
+        "accession": "0000829224-25-000114",
+        "sources": {
+          "Assets": {
+            "end": "2025-09-28",
+            "val": 32019700000,
+            "accn": "0000829224-25-000114",
+            "fy": 2025,
+            "fp": "FY",
+            "form": "10-K",
+            "filed": "2025-11-14",
+            "tag": "Assets"
+          },
+          "Liabilities": {
+            "end": "2025-09-28",
+            "val": 40108900000,
+            "accn": "0000829224-25-000114",
+            "fy": 2025,
+            "fp": "FY",
+            "form": "10-K",
+            "filed": "2025-11-14",
+            "tag": "Liabilities"
+          }
+        },
+        "reason": "负债负担可计算，非破产概率；排名依赖股票池，策略适用性未验证"
+      },
+      "TGT": {
+        "symbol": "TGT",
+        "asof": "2026-06-18",
+        "status": "证据不足",
+        "validated": false,
+        "computable": false,
+        "reason": "缺直接负债且该申报分项未原表核实"
+      },
+      "TMO": {
+        "symbol": "TMO",
+        "asof": "2026-06-18",
+        "status": "证据不足",
+        "validated": false,
+        "computable": false,
+        "reason": "同申报同日缺Liabilities"
+      }
+    }
+  },
+  {
+    "day": "2026-07-20",
+    "eligible": [
+      "COP",
+      "CSX",
+      "DE",
+      "RTX",
+      "SBUX"
+    ],
+    "selected": {
+      "low_growth": [
+        "COP"
+      ],
+      "high_growth": [
+        "SBUX"
+      ],
+      "eligible": [
+        "COP",
+        "CSX",
+        "DE",
+        "RTX",
+        "SBUX"
+      ]
+    },
+    "budget": 0.2,
+    "judgments": {
+      "AMGN": {
+        "symbol": "AMGN",
+        "asof": "2026-07-20",
+        "status": "证据不足",
+        "validated": false,
+        "computable": false,
+        "reason": "同申报同日缺Liabilities"
+      },
+      "CMCSA": {
+        "symbol": "CMCSA",
+        "asof": "2026-07-20",
+        "status": "证据不足",
+        "validated": false,
+        "computable": false,
+        "reason": "同申报同日缺Liabilities"
+      },
+      "COP": {
+        "symbol": "COP",
+        "asof": "2026-07-20",
+        "status": "证据不足",
+        "validated": false,
+        "computable": true,
+        "burden": 0.47115360959168107,
+        "accession": "0001163165-26-000009",
+        "sources": {
+          "Assets": {
+            "end": "2025-12-31",
+            "val": 121939000000,
+            "accn": "0001163165-26-000009",
+            "fy": 2025,
+            "fp": "FY",
+            "form": "10-K",
+            "filed": "2026-02-17",
+            "tag": "Assets"
+          },
+          "Liabilities": {
+            "end": "2025-12-31",
+            "val": 57452000000,
+            "accn": "0001163165-26-000009",
+            "fy": 2025,
+            "fp": "FY",
+            "form": "10-K",
+            "filed": "2026-02-17",
+            "tag": "Liabilities"
+          }
+        },
+        "reason": "负债负担可计算，非破产概率；排名依赖股票池，策略适用性未验证"
+      },
+      "CSX": {
+        "symbol": "CSX",
+        "asof": "2026-07-20",
+        "status": "证据不足",
+        "validated": false,
+        "computable": true,
+        "burden": 0.6987317430520581,
+        "accession": "0000277948-26-000006",
+        "sources": {
+          "Assets": {
+            "end": "2025-12-31",
+            "val": 43682000000,
+            "accn": "0000277948-26-000006",
+            "fy": 2025,
+            "fp": "FY",
+            "form": "10-K",
+            "filed": "2026-02-12",
+            "tag": "Assets"
+          },
+          "Liabilities": {
+            "end": "2025-12-31",
+            "val": 30522000000,
+            "accn": "0000277948-26-000006",
+            "fy": 2025,
+            "fp": "FY",
+            "form": "10-K",
+            "filed": "2026-02-12",
+            "tag": "Liabilities"
+          }
+        },
+        "reason": "负债负担可计算，非破产概率；排名依赖股票池，策略适用性未验证"
+      },
+      "DE": {
+        "symbol": "DE",
+        "asof": "2026-07-20",
+        "status": "证据不足",
+        "validated": false,
+        "computable": true,
+        "burden": 0.7546416845918714,
+        "accession": "0001104659-25-122321",
+        "sources": {
+          "Assets": {
+            "end": "2025-11-02",
+            "val": 105996000000,
+            "accn": "0001104659-25-122321",
+            "fy": 2025,
+            "fp": "FY",
+            "form": "10-K",
+            "filed": "2025-12-18",
+            "tag": "Assets"
+          },
+          "Liabilities": {
+            "end": "2025-11-02",
+            "val": 79989000000,
+            "accn": "0001104659-25-122321",
+            "fy": 2025,
+            "fp": "FY",
+            "form": "10-K",
+            "filed": "2025-12-18",
+            "tag": "Liabilities"
+          }
+        },
+        "reason": "负债负担可计算，非破产概率；排名依赖股票池，策略适用性未验证"
+      },
+      "DHR": {
+        "symbol": "DHR",
+        "asof": "2026-07-20",
+        "status": "证据不足",
+        "validated": false,
+        "computable": false,
+        "reason": "同申报同日缺Liabilities"
+      },
+      "FDX": {
+        "symbol": "FDX",
+        "asof": "2026-07-20",
+        "status": "证据不足",
+        "validated": false,
+        "computable": false,
+        "reason": "同申报同日缺Liabilities"
+      },
+      "HON": {
+        "symbol": "HON",
+        "asof": "2026-07-20",
+        "status": "证据不足",
+        "validated": false,
+        "computable": false,
+        "reason": "同申报同日缺Liabilities"
+      },
+      "RTX": {
+        "symbol": "RTX",
+        "asof": "2026-07-20",
+        "status": "证据不足",
+        "validated": false,
+        "computable": true,
+        "burden": 0.6075614189935644,
+        "accession": "0000101829-26-000006",
+        "sources": {
+          "Assets": {
+            "end": "2025-12-31",
+            "val": 171079000000,
+            "accn": "0000101829-26-000006",
+            "fy": 2025,
+            "fp": "FY",
+            "form": "10-K",
+            "filed": "2026-02-06",
+            "tag": "Assets"
+          },
+          "Liabilities": {
+            "end": "2025-12-31",
+            "val": 103941000000,
+            "accn": "0000101829-26-000006",
+            "fy": 2025,
+            "fp": "FY",
+            "form": "10-K",
+            "filed": "2026-02-06",
+            "tag": "Liabilities"
+          }
+        },
+        "reason": "负债负担可计算，非破产概率；排名依赖股票池，策略适用性未验证"
+      },
+      "SBUX": {
+        "symbol": "SBUX",
+        "asof": "2026-07-20",
+        "status": "证据不足",
+        "validated": false,
+        "computable": true,
+        "burden": 1.2526319734413502,
+        "accession": "0000829224-25-000114",
+        "sources": {
+          "Assets": {
+            "end": "2025-09-28",
+            "val": 32019700000,
+            "accn": "0000829224-25-000114",
+            "fy": 2025,
+            "fp": "FY",
+            "form": "10-K",
+            "filed": "2025-11-14",
+            "tag": "Assets"
+          },
+          "Liabilities": {
+            "end": "2025-09-28",
+            "val": 40108900000,
+            "accn": "0000829224-25-000114",
+            "fy": 2025,
+            "fp": "FY",
+            "form": "10-K",
+            "filed": "2025-11-14",
+            "tag": "Liabilities"
+          }
+        },
+        "reason": "负债负担可计算，非破产概率；排名依赖股票池，策略适用性未验证"
+      },
+      "TGT": {
+        "symbol": "TGT",
+        "asof": "2026-07-20",
+        "status": "证据不足",
+        "validated": false,
+        "computable": false,
+        "reason": "缺直接负债且该申报分项未原表核实"
+      },
+      "TMO": {
+        "symbol": "TMO",
+        "asof": "2026-07-20",
+        "status": "证据不足",
+        "validated": false,
+        "computable": false,
+        "reason": "同申报同日缺Liabilities"
+      }
+    }
+  },
+  {
+    "day": "2026-08-17",
+    "eligible": [
+      "COP",
+      "CSX",
+      "DE",
+      "RTX",
+      "SBUX"
+    ],
+    "selected": {
+      "low_growth": [
+        "COP"
+      ],
+      "high_growth": [
+        "SBUX"
+      ],
+      "eligible": [
+        "COP",
+        "CSX",
+        "DE",
+        "RTX",
+        "SBUX"
+      ]
+    },
+    "budget": 0.2,
+    "judgments": {
+      "AMGN": {
+        "symbol": "AMGN",
+        "asof": "2026-08-17",
+        "status": "证据不足",
+        "validated": false,
+        "computable": false,
+        "reason": "同申报同日缺Liabilities"
+      },
+      "CMCSA": {
+        "symbol": "CMCSA",
+        "asof": "2026-08-17",
+        "status": "证据不足",
+        "validated": false,
+        "computable": false,
+        "reason": "同申报同日缺Liabilities"
+      },
+      "COP": {
+        "symbol": "COP",
+        "asof": "2026-08-17",
+        "status": "证据不足",
+        "validated": false,
+        "computable": true,
+        "burden": 0.47115360959168107,
+        "accession": "0001163165-26-000009",
+        "sources": {
+          "Assets": {
+            "end": "2025-12-31",
+            "val": 121939000000,
+            "accn": "0001163165-26-000009",
+            "fy": 2025,
+            "fp": "FY",
+            "form": "10-K",
+            "filed": "2026-02-17",
+            "tag": "Assets"
+          },
+          "Liabilities": {
+            "end": "2025-12-31",
+            "val": 57452000000,
+            "accn": "0001163165-26-000009",
+            "fy": 2025,
+            "fp": "FY",
+            "form": "10-K",
+            "filed": "2026-02-17",
+            "tag": "Liabilities"
+          }
+        },
+        "reason": "负债负担可计算，非破产概率；排名依赖股票池，策略适用性未验证"
+      },
+      "CSX": {
+        "symbol": "CSX",
+        "asof": "2026-08-17",
+        "status": "证据不足",
+        "validated": false,
+        "computable": true,
+        "burden": 0.6987317430520581,
+        "accession": "0000277948-26-000006",
+        "sources": {
+          "Assets": {
+            "end": "2025-12-31",
+            "val": 43682000000,
+            "accn": "0000277948-26-000006",
+            "fy": 2025,
+            "fp": "FY",
+            "form": "10-K",
+            "filed": "2026-02-12",
+            "tag": "Assets"
+          },
+          "Liabilities": {
+            "end": "2025-12-31",
+            "val": 30522000000,
+            "accn": "0000277948-26-000006",
+            "fy": 2025,
+            "fp": "FY",
+            "form": "10-K",
+            "filed": "2026-02-12",
+            "tag": "Liabilities"
+          }
+        },
+        "reason": "负债负担可计算，非破产概率；排名依赖股票池，策略适用性未验证"
+      },
+      "DE": {
+        "symbol": "DE",
+        "asof": "2026-08-17",
+        "status": "证据不足",
+        "validated": false,
+        "computable": true,
+        "burden": 0.7546416845918714,
+        "accession": "0001104659-25-122321",
+        "sources": {
+          "Assets": {
+            "end": "2025-11-02",
+            "val": 105996000000,
+            "accn": "0001104659-25-122321",
+            "fy": 2025,
+            "fp": "FY",
+            "form": "10-K",
+            "filed": "2025-12-18",
+            "tag": "Assets"
+          },
+          "Liabilities": {
+            "end": "2025-11-02",
+            "val": 79989000000,
+            "accn": "0001104659-25-122321",
+            "fy": 2025,
+            "fp": "FY",
+            "form": "10-K",
+            "filed": "2025-12-18",
+            "tag": "Liabilities"
+          }
+        },
+        "reason": "负债负担可计算，非破产概率；排名依赖股票池，策略适用性未验证"
+      },
+      "DHR": {
+        "symbol": "DHR",
+        "asof": "2026-08-17",
+        "status": "证据不足",
+        "validated": false,
+        "computable": false,
+        "reason": "同申报同日缺Liabilities"
+      },
+      "FDX": {
+        "symbol": "FDX",
+        "asof": "2026-08-17",
+        "status": "证据不足",
+        "validated": false,
+        "computable": false,
+        "reason": "同申报同日缺Liabilities"
+      },
+      "HON": {
+        "symbol": "HON",
+        "asof": "2026-08-17",
+        "status": "证据不足",
+        "validated": false,
+        "computable": false,
+        "reason": "同申报同日缺Liabilities"
+      },
+      "RTX": {
+        "symbol": "RTX",
+        "asof": "2026-08-17",
+        "status": "证据不足",
+        "validated": false,
+        "computable": true,
+        "burden": 0.6075614189935644,
+        "accession": "0000101829-26-000006",
+        "sources": {
+          "Assets": {
+            "end": "2025-12-31",
+            "val": 171079000000,
+            "accn": "0000101829-26-000006",
+            "fy": 2025,
+            "fp": "FY",
+            "form": "10-K",
+            "filed": "2026-02-06",
+            "tag": "Assets"
+          },
+          "Liabilities": {
+            "end": "2025-12-31",
+            "val": 103941000000,
+            "accn": "0000101829-26-000006",
+            "fy": 2025,
+            "fp": "FY",
+            "form": "10-K",
+            "filed": "2026-02-06",
+            "tag": "Liabilities"
+          }
+        },
+        "reason": "负债负担可计算，非破产概率；排名依赖股票池，策略适用性未验证"
+      },
+      "SBUX": {
+        "symbol": "SBUX",
+        "asof": "2026-08-17",
+        "status": "证据不足",
+        "validated": false,
+        "computable": true,
+        "burden": 1.2526319734413502,
+        "accession": "0000829224-25-000114",
+        "sources": {
+          "Assets": {
+            "end": "2025-09-28",
+            "val": 32019700000,
+            "accn": "0000829224-25-000114",
+            "fy": 2025,
+            "fp": "FY",
+            "form": "10-K",
+            "filed": "2025-11-14",
+            "tag": "Assets"
+          },
+          "Liabilities": {
+            "end": "2025-09-28",
+            "val": 40108900000,
+            "accn": "0000829224-25-000114",
+            "fy": 2025,
+            "fp": "FY",
+            "form": "10-K",
+            "filed": "2025-11-14",
+            "tag": "Liabilities"
+          }
+        },
+        "reason": "负债负担可计算，非破产概率；排名依赖股票池，策略适用性未验证"
+      },
+      "TGT": {
+        "symbol": "TGT",
+        "asof": "2026-08-17",
+        "status": "证据不足",
+        "validated": false,
+        "computable": false,
+        "reason": "缺直接负债且该申报分项未原表核实"
+      },
+      "TMO": {
+        "symbol": "TMO",
+        "asof": "2026-08-17",
+        "status": "证据不足",
+        "validated": false,
+        "computable": false,
+        "reason": "同申报同日缺Liabilities"
+      }
+    }
+  }
+]

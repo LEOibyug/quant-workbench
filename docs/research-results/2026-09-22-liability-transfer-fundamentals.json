@@ -1,0 +1,1423 @@
+{
+  "status": "completed",
+  "issuers": {
+    "DE": {
+      "cik": 315189,
+      "current_identity_matched": true,
+      "historical_identity_verified": false,
+      "name": "DEERE & CO",
+      "facts_name": "DEERE & CO",
+      "sic": "3523",
+      "sic_description": "Farm Machinery & Equipment",
+      "excluded_reason": null,
+      "sources": {
+        "submission": {
+          "url": "https://data.sec.gov/submissions/CIK0000315189.json",
+          "path": "artifacts/research/liability-transfer-sec/DE-submission.json",
+          "sha256": "b445aa5de02e06062f124cb1ff3ff0ca8428a1d8584d4225c8dd5c7b8ac527bf"
+        },
+        "facts": {
+          "url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000315189.json",
+          "path": "artifacts/research/liability-transfer-sec/DE-facts.json",
+          "sha256": "acb31f75c22199f4c38369596277b80253da98a9147569b51776fde8f4d7f512"
+        }
+      },
+      "errors": []
+    },
+    "HON": {
+      "cik": 773840,
+      "current_identity_matched": true,
+      "historical_identity_verified": false,
+      "name": "HONEYWELL INTERNATIONAL INC",
+      "facts_name": "Honeywell International Inc",
+      "sic": "3724",
+      "sic_description": "Aircraft Engines & Engine Parts",
+      "excluded_reason": null,
+      "sources": {
+        "submission": {
+          "url": "https://data.sec.gov/submissions/CIK0000773840.json",
+          "path": "artifacts/research/liability-transfer-sec/HON-submission.json",
+          "sha256": "dad2d456925ab982f3e182ba0a358c313cd7a7adb406f73d394d77167c70072b"
+        },
+        "facts": {
+          "url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000773840.json",
+          "path": "artifacts/research/liability-transfer-sec/HON-facts.json",
+          "sha256": "c89fe74aebe6d2781ceaf6a146c45a30f5ed173e6c8b1902145e59cb3ac9fd1d"
+        }
+      },
+      "errors": []
+    },
+    "RTX": {
+      "cik": 101829,
+      "current_identity_matched": true,
+      "historical_identity_verified": false,
+      "name": "RTX Corp",
+      "facts_name": "RTX CORPORATION",
+      "sic": "3724",
+      "sic_description": "Aircraft Engines & Engine Parts",
+      "excluded_reason": null,
+      "sources": {
+        "submission": {
+          "url": "https://data.sec.gov/submissions/CIK0000101829.json",
+          "path": "artifacts/research/liability-transfer-sec/RTX-submission.json",
+          "sha256": "3fc9cdf7f3937e2220bd1044714983b87d8d014d53851f2c10452786befbd8f8"
+        },
+        "facts": {
+          "url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000101829.json",
+          "path": "artifacts/research/liability-transfer-sec/RTX-facts.json",
+          "sha256": "54ba50ba11c69dec3ede0489e8d825a80bb743cee884a3ad1040a697f8066d47"
+        }
+      },
+      "errors": []
+    },
+    "TMO": {
+      "cik": 97745,
+      "current_identity_matched": true,
+      "historical_identity_verified": false,
+      "name": "THERMO FISHER SCIENTIFIC INC.",
+      "facts_name": "THERMO FISHER SCIENTIFIC INC.",
+      "sic": "3829",
+      "sic_description": "Measuring & Controlling Devices, NEC",
+      "excluded_reason": null,
+      "sources": {
+        "submission": {
+          "url": "https://data.sec.gov/submissions/CIK0000097745.json",
+          "path": "artifacts/research/liability-transfer-sec/TMO-submission.json",
+          "sha256": "8461b85028f303b59c33828a18a7f5ba2d22b2737ec7bf769c88278828e8e182"
+        },
+        "facts": {
+          "url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000097745.json",
+          "path": "artifacts/research/liability-transfer-sec/TMO-facts.json",
+          "sha256": "b385db1c4ceda2391698528a617ae824c37fdc088da51be9c47aa20496e38a89"
+        }
+      },
+      "errors": []
+    },
+    "DHR": {
+      "cik": 313616,
+      "current_identity_matched": true,
+      "historical_identity_verified": false,
+      "name": "DANAHER CORP /DE/",
+      "facts_name": "DANAHER CORPORATION",
+      "sic": "3823",
+      "sic_description": "Industrial Instruments For Measurement, Display, and Control",
+      "excluded_reason": null,
+      "sources": {
+        "submission": {
+          "url": "https://data.sec.gov/submissions/CIK0000313616.json",
+          "path": "artifacts/research/liability-transfer-sec/DHR-submission.json",
+          "sha256": "d1691b28f4c12a8bda8cce0e9c154e91b38a98f895669d3ee4814cecd7f4a29f"
+        },
+        "facts": {
+          "url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000313616.json",
+          "path": "artifacts/research/liability-transfer-sec/DHR-facts.json",
+          "sha256": "2e5cb9e70648825685fe682450982a4f945f994968ab03397b6eef760f269428"
+        }
+      },
+      "errors": []
+    },
+    "AMGN": {
+      "cik": 318154,
+      "current_identity_matched": true,
+      "historical_identity_verified": false,
+      "name": "AMGEN INC",
+      "facts_name": "Amgen Inc.",
+      "sic": "2836",
+      "sic_description": "Biological Products, (No Diagnostic Substances)",
+      "excluded_reason": null,
+      "sources": {
+        "submission": {
+          "url": "https://data.sec.gov/submissions/CIK0000318154.json",
+          "path": "artifacts/research/liability-transfer-sec/AMGN-submission.json",
+          "sha256": "5ce97aa22c5dfc8ceff371a07a1e06492a2704725f2b2b9eaec83dac62513a66"
+        },
+        "facts": {
+          "url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000318154.json",
+          "path": "artifacts/research/liability-transfer-sec/AMGN-facts.json",
+          "sha256": "a1a09e6f630ce46326a72d43f279cdcda6d6081a81cfd5c63942551599b3340c"
+        }
+      },
+      "errors": []
+    },
+    "SBUX": {
+      "cik": 829224,
+      "current_identity_matched": true,
+      "historical_identity_verified": false,
+      "name": "STARBUCKS CORP",
+      "facts_name": "Starbucks Corporation",
+      "sic": "5810",
+      "sic_description": "Retail-Eating & Drinking Places",
+      "excluded_reason": null,
+      "sources": {
+        "submission": {
+          "url": "https://data.sec.gov/submissions/CIK0000829224.json",
+          "path": "artifacts/research/liability-transfer-sec/SBUX-submission.json",
+          "sha256": "f75757f0ffe372f7e9225f29e204b7b34efd8044e07f034910dd6b952bb74880"
+        },
+        "facts": {
+          "url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000829224.json",
+          "path": "artifacts/research/liability-transfer-sec/SBUX-facts.json",
+          "sha256": "c6aa14947eb1c4570564e9661d4ad2a17aee426d62745903b8231c222406545e"
+        }
+      },
+      "errors": []
+    },
+    "TGT": {
+      "cik": 27419,
+      "current_identity_matched": true,
+      "historical_identity_verified": false,
+      "name": "TARGET CORP",
+      "facts_name": "Target Corporation",
+      "sic": "5331",
+      "sic_description": "Retail-Variety Stores",
+      "excluded_reason": null,
+      "sources": {
+        "submission": {
+          "url": "https://data.sec.gov/submissions/CIK0000027419.json",
+          "path": "artifacts/research/liability-transfer-sec/TGT-submission.json",
+          "sha256": "5f12434f4264777ae8630e9136f2c165ed46cd23434ea74223c13cf4754a83f7"
+        },
+        "facts": {
+          "url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000027419.json",
+          "path": "artifacts/research/liability-transfer-sec/TGT-facts.json",
+          "sha256": "fdb482fdad6e39541ebdb2f9e01c1223bfbdeb9b7c26a97977c433dc43ca2e02"
+        }
+      },
+      "errors": []
+    },
+    "CSX": {
+      "cik": 277948,
+      "current_identity_matched": true,
+      "historical_identity_verified": false,
+      "name": "CSX CORP",
+      "facts_name": "CSX CORPORATION",
+      "sic": "4011",
+      "sic_description": "Railroads, Line-Haul Operating",
+      "excluded_reason": null,
+      "sources": {
+        "submission": {
+          "url": "https://data.sec.gov/submissions/CIK0000277948.json",
+          "path": "artifacts/research/liability-transfer-sec/CSX-submission.json",
+          "sha256": "2ceee98ff0841c1818752bf08173277d085cd8b0aeaa9545a9da24c563f3e2d6"
+        },
+        "facts": {
+          "url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000277948.json",
+          "path": "artifacts/research/liability-transfer-sec/CSX-facts.json",
+          "sha256": "c9aa6acc8773af8fb74ebf16e851de029a9d6b9dc245f034a1a7ea8652eab56c"
+        }
+      },
+      "errors": []
+    },
+    "FDX": {
+      "cik": 1048911,
+      "current_identity_matched": true,
+      "historical_identity_verified": false,
+      "name": "FEDEX CORP",
+      "facts_name": "FEDEX CORP",
+      "sic": "4513",
+      "sic_description": "Air Courier Services",
+      "excluded_reason": null,
+      "sources": {
+        "submission": {
+          "url": "https://data.sec.gov/submissions/CIK0001048911.json",
+          "path": "artifacts/research/liability-transfer-sec/FDX-submission.json",
+          "sha256": "1a99624226ca2f7824a066a864245edf339edf4a1cb04aa345beb9488ba4fb0b"
+        },
+        "facts": {
+          "url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001048911.json",
+          "path": "artifacts/research/liability-transfer-sec/FDX-facts.json",
+          "sha256": "e38abcef24c8dac575473556cd1f6b9e4944f4e4027a112f9f87df4d2ff8d415"
+        }
+      },
+      "errors": []
+    },
+    "CMCSA": {
+      "cik": 1166691,
+      "current_identity_matched": true,
+      "historical_identity_verified": false,
+      "name": "COMCAST CORP",
+      "facts_name": "COMCAST CORPORATION",
+      "sic": "4841",
+      "sic_description": "Cable & Other Pay Television Services",
+      "excluded_reason": null,
+      "sources": {
+        "submission": {
+          "url": "https://data.sec.gov/submissions/CIK0001166691.json",
+          "path": "artifacts/research/liability-transfer-sec/CMCSA-submission.json",
+          "sha256": "46fa83583d6bb086899895d584a781ab676c81ad47bec2bca599375415f5d2fd"
+        },
+        "facts": {
+          "url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001166691.json",
+          "path": "artifacts/research/liability-transfer-sec/CMCSA-facts.json",
+          "sha256": "2ec8f942324f095e6ab8a565436b8165f3639344b3d1c402d4f39f8448dbd5fd"
+        }
+      },
+      "errors": []
+    },
+    "COP": {
+      "cik": 1163165,
+      "current_identity_matched": true,
+      "historical_identity_verified": false,
+      "name": "CONOCOPHILLIPS",
+      "facts_name": "ConocoPhillips",
+      "sic": "2911",
+      "sic_description": "Petroleum Refining",
+      "excluded_reason": null,
+      "sources": {
+        "submission": {
+          "url": "https://data.sec.gov/submissions/CIK0001163165.json",
+          "path": "artifacts/research/liability-transfer-sec/COP-submission.json",
+          "sha256": "da2af93906c9bb3e556eb29e5136d5f38ad6516af0d1d7f205c74c9912815ec7"
+        },
+        "facts": {
+          "url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001163165.json",
+          "path": "artifacts/research/liability-transfer-sec/COP-facts.json",
+          "sha256": "4677da96b06919df271734311ec9bea2db763a86431493240cb911c7b5ec8658"
+        }
+      },
+      "errors": []
+    }
+  },
+  "results": [
+    {
+      "symbol": "DE",
+      "asof": "2022-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": true,
+      "burden": 0.7808450436312623,
+      "accession": "0001558370-21-016864",
+      "sources": {
+        "Assets": {
+          "end": "2021-10-31",
+          "val": 84114000000,
+          "accn": "0001558370-21-016864",
+          "fy": 2021,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2021-12-16",
+          "tag": "Assets"
+        },
+        "Liabilities": {
+          "end": "2021-10-31",
+          "val": 65680000000,
+          "accn": "0001558370-21-016864",
+          "fy": 2021,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2021-12-16",
+          "tag": "Liabilities"
+        }
+      },
+      "reason": "负债负担可计算，非破产概率；排名依赖股票池，策略适用性未验证",
+      "identity_scope": "current ticker/CIK only; historical continuity not audited"
+    },
+    {
+      "symbol": "DE",
+      "asof": "2023-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": true,
+      "burden": 0.7738864822836832,
+      "accession": "0001558370-22-018703",
+      "sources": {
+        "Assets": {
+          "end": "2022-10-30",
+          "val": 90030000000,
+          "accn": "0001558370-22-018703",
+          "fy": 2022,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2022-12-15",
+          "tag": "Assets"
+        },
+        "Liabilities": {
+          "end": "2022-10-30",
+          "val": 69673000000,
+          "accn": "0001558370-22-018703",
+          "fy": 2022,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2022-12-15",
+          "tag": "Liabilities"
+        }
+      },
+      "reason": "负债负担可计算，非破产概率；排名依赖股票池，策略适用性未验证",
+      "identity_scope": "current ticker/CIK only; historical continuity not audited"
+    },
+    {
+      "symbol": "DE",
+      "asof": "2024-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": true,
+      "burden": 0.7897335882482923,
+      "accession": "0001558370-23-019812",
+      "sources": {
+        "Assets": {
+          "end": "2023-10-29",
+          "val": 104087000000,
+          "accn": "0001558370-23-019812",
+          "fy": 2023,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2023-12-15",
+          "tag": "Assets"
+        },
+        "Liabilities": {
+          "end": "2023-10-29",
+          "val": 82201000000,
+          "accn": "0001558370-23-019812",
+          "fy": 2023,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2023-12-15",
+          "tag": "Liabilities"
+        }
+      },
+      "reason": "负债负担可计算，非破产概率；排名依赖股票池，策略适用性未验证",
+      "identity_scope": "current ticker/CIK only; historical continuity not audited"
+    },
+    {
+      "symbol": "DE",
+      "asof": "2025-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": true,
+      "burden": 0.7863865076407007,
+      "accession": "0001558370-24-016169",
+      "sources": {
+        "Assets": {
+          "end": "2024-10-27",
+          "val": 107320000000,
+          "accn": "0001558370-24-016169",
+          "fy": 2024,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2024-12-12",
+          "tag": "Assets"
+        },
+        "Liabilities": {
+          "end": "2024-10-27",
+          "val": 84395000000,
+          "accn": "0001558370-24-016169",
+          "fy": 2024,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2024-12-12",
+          "tag": "Liabilities"
+        }
+      },
+      "reason": "负债负担可计算，非破产概率；排名依赖股票池，策略适用性未验证",
+      "identity_scope": "current ticker/CIK only; historical continuity not audited"
+    },
+    {
+      "symbol": "DE",
+      "asof": "2026-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": true,
+      "burden": 0.7546416845918714,
+      "accession": "0001104659-25-122321",
+      "sources": {
+        "Assets": {
+          "end": "2025-11-02",
+          "val": 105996000000,
+          "accn": "0001104659-25-122321",
+          "fy": 2025,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2025-12-18",
+          "tag": "Assets"
+        },
+        "Liabilities": {
+          "end": "2025-11-02",
+          "val": 79989000000,
+          "accn": "0001104659-25-122321",
+          "fy": 2025,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2025-12-18",
+          "tag": "Liabilities"
+        }
+      },
+      "reason": "负债负担可计算，非破产概率；排名依赖股票池，策略适用性未验证",
+      "identity_scope": "current ticker/CIK only; historical continuity not audited"
+    },
+    {
+      "symbol": "HON",
+      "asof": "2022-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": false,
+      "reason": "同申报同日缺Liabilities",
+      "identity_scope": "current ticker/CIK only; historical continuity not audited"
+    },
+    {
+      "symbol": "HON",
+      "asof": "2023-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": false,
+      "reason": "同申报同日缺Liabilities",
+      "identity_scope": "current ticker/CIK only; historical continuity not audited"
+    },
+    {
+      "symbol": "HON",
+      "asof": "2024-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": false,
+      "reason": "同申报同日缺Liabilities",
+      "identity_scope": "current ticker/CIK only; historical continuity not audited"
+    },
+    {
+      "symbol": "HON",
+      "asof": "2025-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": false,
+      "reason": "同申报同日缺Liabilities",
+      "identity_scope": "current ticker/CIK only; historical continuity not audited"
+    },
+    {
+      "symbol": "HON",
+      "asof": "2026-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": false,
+      "reason": "同申报同日缺Liabilities",
+      "identity_scope": "current ticker/CIK only; historical continuity not audited"
+    },
+    {
+      "symbol": "RTX",
+      "asof": "2022-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": true,
+      "burden": 0.5371923868057793,
+      "accession": "0000101829-22-000005",
+      "sources": {
+        "Assets": {
+          "end": "2021-12-31",
+          "val": 161404000000,
+          "accn": "0000101829-22-000005",
+          "fy": 2021,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2022-02-11",
+          "tag": "Assets"
+        },
+        "Liabilities": {
+          "end": "2021-12-31",
+          "val": 86705000000,
+          "accn": "0000101829-22-000005",
+          "fy": 2021,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2022-02-11",
+          "tag": "Liabilities"
+        }
+      },
+      "reason": "负债负担可计算，非破产概率；排名依赖股票池，策略适用性未验证",
+      "identity_scope": "current ticker/CIK only; historical continuity not audited"
+    },
+    {
+      "symbol": "RTX",
+      "asof": "2023-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": true,
+      "burden": 0.5328457045019639,
+      "accession": "0000101829-23-000009",
+      "sources": {
+        "Assets": {
+          "end": "2022-12-31",
+          "val": 158864000000,
+          "accn": "0000101829-23-000009",
+          "fy": 2022,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2023-02-07",
+          "tag": "Assets"
+        },
+        "Liabilities": {
+          "end": "2022-12-31",
+          "val": 84650000000,
+          "accn": "0000101829-23-000009",
+          "fy": 2022,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2023-02-07",
+          "tag": "Liabilities"
+        }
+      },
+      "reason": "负债负担可计算，非破产概率；排名依赖股票池，策略适用性未验证",
+      "identity_scope": "current ticker/CIK only; historical continuity not audited"
+    },
+    {
+      "symbol": "RTX",
+      "asof": "2024-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": true,
+      "burden": 0.620402918409331,
+      "accession": "0000101829-24-000008",
+      "sources": {
+        "Assets": {
+          "end": "2023-12-31",
+          "val": 161869000000,
+          "accn": "0000101829-24-000008",
+          "fy": 2023,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2024-02-05",
+          "tag": "Assets"
+        },
+        "Liabilities": {
+          "end": "2023-12-31",
+          "val": 100424000000,
+          "accn": "0000101829-24-000008",
+          "fy": 2023,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2024-02-05",
+          "tag": "Liabilities"
+        }
+      },
+      "reason": "负债负担可计算，非破产概率；排名依赖股票池，策略适用性未验证",
+      "identity_scope": "current ticker/CIK only; historical continuity not audited"
+    },
+    {
+      "symbol": "RTX",
+      "asof": "2025-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": true,
+      "burden": 0.6195651506499408,
+      "accession": "0000101829-25-000005",
+      "sources": {
+        "Assets": {
+          "end": "2024-12-31",
+          "val": 162861000000,
+          "accn": "0000101829-25-000005",
+          "fy": 2024,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2025-02-03",
+          "tag": "Assets"
+        },
+        "Liabilities": {
+          "end": "2024-12-31",
+          "val": 100903000000,
+          "accn": "0000101829-25-000005",
+          "fy": 2024,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2025-02-03",
+          "tag": "Liabilities"
+        }
+      },
+      "reason": "负债负担可计算，非破产概率；排名依赖股票池，策略适用性未验证",
+      "identity_scope": "current ticker/CIK only; historical continuity not audited"
+    },
+    {
+      "symbol": "RTX",
+      "asof": "2026-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": true,
+      "burden": 0.6075614189935644,
+      "accession": "0000101829-26-000006",
+      "sources": {
+        "Assets": {
+          "end": "2025-12-31",
+          "val": 171079000000,
+          "accn": "0000101829-26-000006",
+          "fy": 2025,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2026-02-06",
+          "tag": "Assets"
+        },
+        "Liabilities": {
+          "end": "2025-12-31",
+          "val": 103941000000,
+          "accn": "0000101829-26-000006",
+          "fy": 2025,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2026-02-06",
+          "tag": "Liabilities"
+        }
+      },
+      "reason": "负债负担可计算，非破产概率；排名依赖股票池，策略适用性未验证",
+      "identity_scope": "current ticker/CIK only; historical continuity not audited"
+    },
+    {
+      "symbol": "TMO",
+      "asof": "2022-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": false,
+      "reason": "同申报同日缺Liabilities",
+      "identity_scope": "current ticker/CIK only; historical continuity not audited"
+    },
+    {
+      "symbol": "TMO",
+      "asof": "2023-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": false,
+      "reason": "同申报同日缺Liabilities",
+      "identity_scope": "current ticker/CIK only; historical continuity not audited"
+    },
+    {
+      "symbol": "TMO",
+      "asof": "2024-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": false,
+      "reason": "同申报同日缺Liabilities",
+      "identity_scope": "current ticker/CIK only; historical continuity not audited"
+    },
+    {
+      "symbol": "TMO",
+      "asof": "2025-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": false,
+      "reason": "同申报同日缺Liabilities",
+      "identity_scope": "current ticker/CIK only; historical continuity not audited"
+    },
+    {
+      "symbol": "TMO",
+      "asof": "2026-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": false,
+      "reason": "同申报同日缺Liabilities",
+      "identity_scope": "current ticker/CIK only; historical continuity not audited"
+    },
+    {
+      "symbol": "DHR",
+      "asof": "2022-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": false,
+      "reason": "同申报同日缺Liabilities",
+      "identity_scope": "current ticker/CIK only; historical continuity not audited"
+    },
+    {
+      "symbol": "DHR",
+      "asof": "2023-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": false,
+      "reason": "同申报同日缺Liabilities",
+      "identity_scope": "current ticker/CIK only; historical continuity not audited"
+    },
+    {
+      "symbol": "DHR",
+      "asof": "2024-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": false,
+      "reason": "同申报同日缺Liabilities",
+      "identity_scope": "current ticker/CIK only; historical continuity not audited"
+    },
+    {
+      "symbol": "DHR",
+      "asof": "2025-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": false,
+      "reason": "同申报同日缺Liabilities",
+      "identity_scope": "current ticker/CIK only; historical continuity not audited"
+    },
+    {
+      "symbol": "DHR",
+      "asof": "2026-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": false,
+      "reason": "同申报同日缺Liabilities",
+      "identity_scope": "current ticker/CIK only; historical continuity not audited"
+    },
+    {
+      "symbol": "AMGN",
+      "asof": "2022-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": false,
+      "reason": "同申报同日缺Liabilities",
+      "identity_scope": "current ticker/CIK only; historical continuity not audited"
+    },
+    {
+      "symbol": "AMGN",
+      "asof": "2023-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": false,
+      "reason": "同申报同日缺Liabilities",
+      "identity_scope": "current ticker/CIK only; historical continuity not audited"
+    },
+    {
+      "symbol": "AMGN",
+      "asof": "2024-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": false,
+      "reason": "同申报同日缺Liabilities",
+      "identity_scope": "current ticker/CIK only; historical continuity not audited"
+    },
+    {
+      "symbol": "AMGN",
+      "asof": "2025-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": false,
+      "reason": "同申报同日缺Liabilities",
+      "identity_scope": "current ticker/CIK only; historical continuity not audited"
+    },
+    {
+      "symbol": "AMGN",
+      "asof": "2026-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": false,
+      "reason": "同申报同日缺Liabilities",
+      "identity_scope": "current ticker/CIK only; historical continuity not audited"
+    },
+    {
+      "symbol": "SBUX",
+      "asof": "2022-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": true,
+      "burden": 1.1692914890770436,
+      "accession": "0000829224-21-000086",
+      "sources": {
+        "Assets": {
+          "end": "2021-10-03",
+          "val": 31392600000,
+          "accn": "0000829224-21-000086",
+          "fy": 2021,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2021-11-19",
+          "tag": "Assets"
+        },
+        "Liabilities": {
+          "end": "2021-10-03",
+          "val": 36707100000,
+          "accn": "0000829224-21-000086",
+          "fy": 2021,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2021-11-19",
+          "tag": "Liabilities"
+        }
+      },
+      "reason": "负债负担可计算，非破产概率；排名依赖股票池，策略适用性未验证",
+      "identity_scope": "current ticker/CIK only; historical continuity not audited"
+    },
+    {
+      "symbol": "SBUX",
+      "asof": "2023-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": true,
+      "burden": 1.3109077002258887,
+      "accession": "0000829224-22-000058",
+      "sources": {
+        "Assets": {
+          "end": "2022-10-02",
+          "val": 27978400000,
+          "accn": "0000829224-22-000058",
+          "fy": 2022,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2022-11-18",
+          "tag": "Assets"
+        },
+        "Liabilities": {
+          "end": "2022-10-02",
+          "val": 36677100000,
+          "accn": "0000829224-22-000058",
+          "fy": 2022,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2022-11-18",
+          "tag": "Liabilities"
+        }
+      },
+      "reason": "负债负担可计算，非破产概率；排名依赖股票池，策略适用性未验证",
+      "identity_scope": "current ticker/CIK only; historical continuity not audited"
+    },
+    {
+      "symbol": "SBUX",
+      "asof": "2024-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": true,
+      "burden": 1.27127404866618,
+      "accession": "0000829224-23-000058",
+      "sources": {
+        "Assets": {
+          "end": "2023-10-01",
+          "val": 29445500000,
+          "accn": "0000829224-23-000058",
+          "fy": 2023,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2023-11-17",
+          "tag": "Assets"
+        },
+        "Liabilities": {
+          "end": "2023-10-01",
+          "val": 37433300000,
+          "accn": "0000829224-23-000058",
+          "fy": 2023,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2023-11-17",
+          "tag": "Liabilities"
+        }
+      },
+      "reason": "负债负担可计算，非破产概率；排名依赖股票池，策略适用性未验证",
+      "identity_scope": "current ticker/CIK only; historical continuity not audited"
+    },
+    {
+      "symbol": "SBUX",
+      "asof": "2025-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": true,
+      "burden": 1.237452655292237,
+      "accession": "0000829224-24-000057",
+      "sources": {
+        "Assets": {
+          "end": "2024-09-29",
+          "val": 31339300000,
+          "accn": "0000829224-24-000057",
+          "fy": 2024,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2024-11-20",
+          "tag": "Assets"
+        },
+        "Liabilities": {
+          "end": "2024-09-29",
+          "val": 38780900000,
+          "accn": "0000829224-24-000057",
+          "fy": 2024,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2024-11-20",
+          "tag": "Liabilities"
+        }
+      },
+      "reason": "负债负担可计算，非破产概率；排名依赖股票池，策略适用性未验证",
+      "identity_scope": "current ticker/CIK only; historical continuity not audited"
+    },
+    {
+      "symbol": "SBUX",
+      "asof": "2026-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": true,
+      "burden": 1.2526319734413502,
+      "accession": "0000829224-25-000114",
+      "sources": {
+        "Assets": {
+          "end": "2025-09-28",
+          "val": 32019700000,
+          "accn": "0000829224-25-000114",
+          "fy": 2025,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2025-11-14",
+          "tag": "Assets"
+        },
+        "Liabilities": {
+          "end": "2025-09-28",
+          "val": 40108900000,
+          "accn": "0000829224-25-000114",
+          "fy": 2025,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2025-11-14",
+          "tag": "Liabilities"
+        }
+      },
+      "reason": "负债负担可计算，非破产概率；排名依赖股票池，策略适用性未验证",
+      "identity_scope": "current ticker/CIK only; historical continuity not audited"
+    },
+    {
+      "symbol": "TGT",
+      "asof": "2022-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": false,
+      "reason": "缺直接负债且该申报分项未原表核实",
+      "identity_scope": "current ticker/CIK only; historical continuity not audited"
+    },
+    {
+      "symbol": "TGT",
+      "asof": "2023-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": false,
+      "reason": "缺直接负债且该申报分项未原表核实",
+      "identity_scope": "current ticker/CIK only; historical continuity not audited"
+    },
+    {
+      "symbol": "TGT",
+      "asof": "2024-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": false,
+      "reason": "缺直接负债且该申报分项未原表核实",
+      "identity_scope": "current ticker/CIK only; historical continuity not audited"
+    },
+    {
+      "symbol": "TGT",
+      "asof": "2025-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": false,
+      "reason": "缺直接负债且该申报分项未原表核实",
+      "identity_scope": "current ticker/CIK only; historical continuity not audited"
+    },
+    {
+      "symbol": "TGT",
+      "asof": "2026-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": false,
+      "reason": "缺直接负债且该申报分项未原表核实",
+      "identity_scope": "current ticker/CIK only; historical continuity not audited"
+    },
+    {
+      "symbol": "CSX",
+      "asof": "2022-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": true,
+      "burden": 0.6669216155535269,
+      "accession": "0000277948-22-000009",
+      "sources": {
+        "Assets": {
+          "end": "2021-12-31",
+          "val": 40531000000,
+          "accn": "0000277948-22-000009",
+          "fy": 2021,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2022-02-16",
+          "tag": "Assets"
+        },
+        "Liabilities": {
+          "end": "2021-12-31",
+          "val": 27031000000,
+          "accn": "0000277948-22-000009",
+          "fy": 2021,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2022-02-16",
+          "tag": "Liabilities"
+        }
+      },
+      "reason": "负债负担可计算，非破产概率；排名依赖股票池，策略适用性未验证",
+      "identity_scope": "current ticker/CIK only; historical continuity not audited"
+    },
+    {
+      "symbol": "CSX",
+      "asof": "2023-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": true,
+      "burden": 0.6987736209200229,
+      "accession": "0000277948-23-000006",
+      "sources": {
+        "Assets": {
+          "end": "2022-12-31",
+          "val": 41912000000,
+          "accn": "0000277948-23-000006",
+          "fy": 2022,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2023-02-15",
+          "tag": "Assets"
+        },
+        "Liabilities": {
+          "end": "2022-12-31",
+          "val": 29287000000,
+          "accn": "0000277948-23-000006",
+          "fy": 2022,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2023-02-15",
+          "tag": "Liabilities"
+        }
+      },
+      "reason": "负债负担可计算，非破产概率；排名依赖股票池，策略适用性未验证",
+      "identity_scope": "current ticker/CIK only; historical continuity not audited"
+    },
+    {
+      "symbol": "CSX",
+      "asof": "2024-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": true,
+      "burden": 0.713898321071496,
+      "accession": "0000277948-24-000010",
+      "sources": {
+        "Assets": {
+          "end": "2023-12-31",
+          "val": 42408000000,
+          "accn": "0000277948-24-000010",
+          "fy": 2023,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2024-02-14",
+          "tag": "Assets"
+        },
+        "Liabilities": {
+          "end": "2023-12-31",
+          "val": 30275000000,
+          "accn": "0000277948-24-000010",
+          "fy": 2023,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2024-02-14",
+          "tag": "Liabilities"
+        }
+      },
+      "reason": "负债负担可计算，非破产概率；排名依赖股票池，策略适用性未验证",
+      "identity_scope": "current ticker/CIK only; historical continuity not audited"
+    },
+    {
+      "symbol": "CSX",
+      "asof": "2025-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": true,
+      "burden": 0.7075343747076981,
+      "accession": "0000277948-25-000008",
+      "sources": {
+        "Assets": {
+          "end": "2024-12-31",
+          "val": 42764000000,
+          "accn": "0000277948-25-000008",
+          "fy": 2024,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2025-02-27",
+          "tag": "Assets"
+        },
+        "Liabilities": {
+          "end": "2024-12-31",
+          "val": 30257000000,
+          "accn": "0000277948-25-000008",
+          "fy": 2024,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2025-02-27",
+          "tag": "Liabilities"
+        }
+      },
+      "reason": "负债负担可计算，非破产概率；排名依赖股票池，策略适用性未验证",
+      "identity_scope": "current ticker/CIK only; historical continuity not audited"
+    },
+    {
+      "symbol": "CSX",
+      "asof": "2026-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": true,
+      "burden": 0.6987317430520581,
+      "accession": "0000277948-26-000006",
+      "sources": {
+        "Assets": {
+          "end": "2025-12-31",
+          "val": 43682000000,
+          "accn": "0000277948-26-000006",
+          "fy": 2025,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2026-02-12",
+          "tag": "Assets"
+        },
+        "Liabilities": {
+          "end": "2025-12-31",
+          "val": 30522000000,
+          "accn": "0000277948-26-000006",
+          "fy": 2025,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2026-02-12",
+          "tag": "Liabilities"
+        }
+      },
+      "reason": "负债负担可计算，非破产概率；排名依赖股票池，策略适用性未验证",
+      "identity_scope": "current ticker/CIK only; historical continuity not audited"
+    },
+    {
+      "symbol": "FDX",
+      "asof": "2022-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": false,
+      "reason": "同申报同日缺Liabilities",
+      "identity_scope": "current ticker/CIK only; historical continuity not audited"
+    },
+    {
+      "symbol": "FDX",
+      "asof": "2023-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": false,
+      "reason": "同申报同日缺Liabilities",
+      "identity_scope": "current ticker/CIK only; historical continuity not audited"
+    },
+    {
+      "symbol": "FDX",
+      "asof": "2024-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": false,
+      "reason": "同申报同日缺Liabilities",
+      "identity_scope": "current ticker/CIK only; historical continuity not audited"
+    },
+    {
+      "symbol": "FDX",
+      "asof": "2025-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": false,
+      "reason": "同申报同日缺Liabilities",
+      "identity_scope": "current ticker/CIK only; historical continuity not audited"
+    },
+    {
+      "symbol": "FDX",
+      "asof": "2026-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": false,
+      "reason": "同申报同日缺Liabilities",
+      "identity_scope": "current ticker/CIK only; historical continuity not audited"
+    },
+    {
+      "symbol": "CMCSA",
+      "asof": "2022-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": false,
+      "reason": "同申报同日缺Liabilities",
+      "identity_scope": "current ticker/CIK only; historical continuity not audited"
+    },
+    {
+      "symbol": "CMCSA",
+      "asof": "2023-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": false,
+      "reason": "同申报同日缺Liabilities",
+      "identity_scope": "current ticker/CIK only; historical continuity not audited"
+    },
+    {
+      "symbol": "CMCSA",
+      "asof": "2024-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": false,
+      "reason": "同申报同日缺Liabilities",
+      "identity_scope": "current ticker/CIK only; historical continuity not audited"
+    },
+    {
+      "symbol": "CMCSA",
+      "asof": "2025-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": false,
+      "reason": "同申报同日缺Liabilities",
+      "identity_scope": "current ticker/CIK only; historical continuity not audited"
+    },
+    {
+      "symbol": "CMCSA",
+      "asof": "2026-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": false,
+      "reason": "同申报同日缺Liabilities",
+      "identity_scope": "current ticker/CIK only; historical continuity not audited"
+    },
+    {
+      "symbol": "COP",
+      "asof": "2022-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": true,
+      "burden": 0.4991672273634749,
+      "accession": "0001562762-22-000031",
+      "sources": {
+        "Assets": {
+          "end": "2021-12-31",
+          "val": 90661000000,
+          "accn": "0001562762-22-000031",
+          "fy": 2021,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2022-02-17",
+          "tag": "Assets"
+        },
+        "Liabilities": {
+          "end": "2021-12-31",
+          "val": 45255000000,
+          "accn": "0001562762-22-000031",
+          "fy": 2021,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2022-02-17",
+          "tag": "Liabilities"
+        }
+      },
+      "reason": "负债负担可计算，非破产概率；排名依赖股票池，策略适用性未验证",
+      "identity_scope": "current ticker/CIK only; historical continuity not audited"
+    },
+    {
+      "symbol": "COP",
+      "asof": "2023-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": true,
+      "burden": 0.48839910901746797,
+      "accession": "0001163165-23-000006",
+      "sources": {
+        "Assets": {
+          "end": "2022-12-31",
+          "val": 93829000000,
+          "accn": "0001163165-23-000006",
+          "fy": 2022,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2023-02-16",
+          "tag": "Assets"
+        },
+        "Liabilities": {
+          "end": "2022-12-31",
+          "val": 45826000000,
+          "accn": "0001163165-23-000006",
+          "fy": 2022,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2023-02-16",
+          "tag": "Liabilities"
+        }
+      },
+      "reason": "负债负担可计算，非破产概率；排名依赖股票池，策略适用性未验证",
+      "identity_scope": "current ticker/CIK only; historical continuity not audited"
+    },
+    {
+      "symbol": "COP",
+      "asof": "2024-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": true,
+      "burden": 0.4862703807180685,
+      "accession": "0001163165-24-000010",
+      "sources": {
+        "Assets": {
+          "end": "2023-12-31",
+          "val": 95924000000,
+          "accn": "0001163165-24-000010",
+          "fy": 2023,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2024-02-15",
+          "tag": "Assets"
+        },
+        "Liabilities": {
+          "end": "2023-12-31",
+          "val": 46645000000,
+          "accn": "0001163165-24-000010",
+          "fy": 2023,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2024-02-15",
+          "tag": "Liabilities"
+        }
+      },
+      "reason": "负债负担可计算，非破产概率；排名依赖股票池，策略适用性未验证",
+      "identity_scope": "current ticker/CIK only; historical continuity not audited"
+    },
+    {
+      "symbol": "COP",
+      "asof": "2025-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": true,
+      "burden": 0.47225932562306566,
+      "accession": "0001163165-25-000012",
+      "sources": {
+        "Assets": {
+          "end": "2024-12-31",
+          "val": 122780000000,
+          "accn": "0001163165-25-000012",
+          "fy": 2024,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2025-02-18",
+          "tag": "Assets"
+        },
+        "Liabilities": {
+          "end": "2024-12-31",
+          "val": 57984000000,
+          "accn": "0001163165-25-000012",
+          "fy": 2024,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2025-02-18",
+          "tag": "Liabilities"
+        }
+      },
+      "reason": "负债负担可计算，非破产概率；排名依赖股票池，策略适用性未验证",
+      "identity_scope": "current ticker/CIK only; historical continuity not audited"
+    },
+    {
+      "symbol": "COP",
+      "asof": "2026-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": true,
+      "burden": 0.47115360959168107,
+      "accession": "0001163165-26-000009",
+      "sources": {
+        "Assets": {
+          "end": "2025-12-31",
+          "val": 121939000000,
+          "accn": "0001163165-26-000009",
+          "fy": 2025,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2026-02-17",
+          "tag": "Assets"
+        },
+        "Liabilities": {
+          "end": "2025-12-31",
+          "val": 57452000000,
+          "accn": "0001163165-26-000009",
+          "fy": 2025,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2026-02-17",
+          "tag": "Liabilities"
+        }
+      },
+      "reason": "负债负担可计算，非破产概率；排名依赖股票池，策略适用性未验证",
+      "identity_scope": "current ticker/CIK only; historical continuity not audited"
+    }
+  ]
+}
