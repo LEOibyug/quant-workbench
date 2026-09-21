@@ -1,0 +1,79 @@
+{
+  "original20": {
+    "path": "artifacts/research/annual-momentum/original20.parquet",
+    "sha256": "71f9c93d7cdb5c55385351a0f5a525ca088c2a4533c401a3c90b557167119ea5",
+    "rows": 10440,
+    "start": "2024-08-01",
+    "end": "2026-08-31",
+    "symbols": [
+      "AAPL",
+      "AMD",
+      "AMZN",
+      "AVGO",
+      "BRK.B",
+      "COST",
+      "GOOGL",
+      "JNJ",
+      "JPM",
+      "LLY",
+      "MA",
+      "META",
+      "MSFT",
+      "NVDA",
+      "ORCL",
+      "SOFI",
+      "TSLA",
+      "V",
+      "WMT",
+      "XOM"
+    ]
+  },
+  "alternate20": {
+    "path": "artifacts/research/annual-momentum/alternate20.parquet",
+    "sha256": "9ccde0f6b6ba8d52df76079c376bc6fbace68ec331819e75393a31e52fae1a6c",
+    "rows": 10440,
+    "start": "2024-08-01",
+    "end": "2026-08-31",
+    "symbols": [
+      "ABBV",
+      "ADBE",
+      "BAC",
+      "CAT",
+      "CRM",
+      "CSCO",
+      "CVX",
+      "GE",
+      "GS",
+      "HD",
+      "IBM",
+      "INTC",
+      "KO",
+      "MRK",
+      "MS",
+      "PEP",
+      "PG",
+      "QCOM",
+      "TXN",
+      "UNH"
+    ]
+  },
+  "random10": {
+    "path": "artifacts/research/annual-momentum/random10.parquet",
+    "sha256": "133d28fe39d2687ba7fd266564d6a1a09097cd7ee07a8f16e64883aa526646e7",
+    "rows": 5220,
+    "start": "2024-08-01",
+    "end": "2026-08-31",
+    "symbols": [
+      "ACN",
+      "GILD",
+      "INTU",
+      "LMT",
+      "LOW",
+      "MCD",
+      "NEE",
+      "NKE",
+      "PLD",
+      "SO"
+    ]
+  }
+}
