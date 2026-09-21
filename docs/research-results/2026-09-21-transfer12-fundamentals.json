@@ -1,0 +1,2281 @@
+{
+  "status": "completed",
+  "issuers": {
+    "ABT": {
+      "cik": 1800,
+      "current_identity_matched": true,
+      "historical_identity_verified": false,
+      "name": "ABBOTT LABORATORIES",
+      "facts_name": "ABBOTT LABORATORIES",
+      "sic": "2834",
+      "sic_description": "Pharmaceutical Preparations",
+      "excluded_reason": null,
+      "sources": {
+        "submission": {
+          "url": "https://data.sec.gov/submissions/CIK0000001800.json",
+          "path": "artifacts/research/transfer12-sec/ABT-submission.json",
+          "sha256": "84e2744a6d052c6d1d072d0b99af2db31b8e3434f67a8ad0c3141ec760562386"
+        },
+        "facts": {
+          "url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000001800.json",
+          "path": "artifacts/research/transfer12-sec/ABT-facts.json",
+          "sha256": "8e554cbf0831c28add7dd24fa17fa8b1dc2925d66d9d947a583b91b24a10ac8a"
+        }
+      },
+      "errors": []
+    },
+    "ADP": {
+      "cik": 8670,
+      "current_identity_matched": true,
+      "historical_identity_verified": false,
+      "name": "AUTOMATIC DATA PROCESSING INC",
+      "facts_name": "AUTOMATIC DATA PROCESSING, INC.",
+      "sic": "7374",
+      "sic_description": "Services-Computer Processing & Data Preparation",
+      "excluded_reason": null,
+      "sources": {
+        "submission": {
+          "url": "https://data.sec.gov/submissions/CIK0000008670.json",
+          "path": "artifacts/research/transfer12-sec/ADP-submission.json",
+          "sha256": "80dea475b254c126a19332208f649087e921ec718c733b6e629e6f5109f37e44"
+        },
+        "facts": {
+          "url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000008670.json",
+          "path": "artifacts/research/transfer12-sec/ADP-facts.json",
+          "sha256": "ae98d534a31731ee0a63206c84c10f8ee6071092ba8bd1134d24fb86c19e7e45"
+        }
+      },
+      "errors": []
+    },
+    "AMT": {
+      "cik": 1053507,
+      "current_identity_matched": true,
+      "historical_identity_verified": false,
+      "name": "AMERICAN TOWER CORP /MA/",
+      "facts_name": "AMERICAN TOWER CORP /MA/",
+      "sic": "6798",
+      "sic_description": "Real Estate Investment Trusts",
+      "excluded_reason": "REIT",
+      "sources": {
+        "submission": {
+          "url": "https://data.sec.gov/submissions/CIK0001053507.json",
+          "path": "artifacts/research/transfer12-sec/AMT-submission.json",
+          "sha256": "2ed892a4a57ad7f795c2931b622951901776fcfac94454ae8fa841e8470e4472"
+        },
+        "facts": {
+          "url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001053507.json",
+          "path": "artifacts/research/transfer12-sec/AMT-facts.json",
+          "sha256": "039c994d56102c1aeb4ec2fe2025cd08c142bce3501775ac6a543edfac5c7d5e"
+        }
+      },
+      "errors": []
+    },
+    "BLK": {
+      "cik": 2012383,
+      "current_identity_matched": true,
+      "historical_identity_verified": false,
+      "name": "BlackRock, Inc.",
+      "facts_name": "BlackRock, Inc.",
+      "sic": "6211",
+      "sic_description": "Security Brokers, Dealers & Flotation Companies",
+      "excluded_reason": "asset manager",
+      "sources": {
+        "submission": {
+          "url": "https://data.sec.gov/submissions/CIK0002012383.json",
+          "path": "artifacts/research/transfer12-sec/BLK-submission.json",
+          "sha256": "bbfa7c8b62931388fb97886b0645a4104cafc0eec4be07bff71ca322b090c28e"
+        },
+        "facts": {
+          "url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0002012383.json",
+          "path": "artifacts/research/transfer12-sec/BLK-facts.json",
+          "sha256": "b765eb65f6f9bbfe3fe2ca0acf5d42898dd2e976b78f060054c6329f83974f9d"
+        }
+      },
+      "errors": []
+    },
+    "CME": {
+      "cik": 1156375,
+      "current_identity_matched": true,
+      "historical_identity_verified": false,
+      "name": "CME GROUP INC.",
+      "facts_name": "CME GROUP INC.",
+      "sic": "6200",
+      "sic_description": "Security & Commodity Brokers, Dealers, Exchanges & Services",
+      "excluded_reason": "financial exchange",
+      "sources": {
+        "submission": {
+          "url": "https://data.sec.gov/submissions/CIK0001156375.json",
+          "path": "artifacts/research/transfer12-sec/CME-submission.json",
+          "sha256": "f327350432425f8bd3b4d64c408bf11fb2070da8993d507613ec901140239dea"
+        },
+        "facts": {
+          "url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001156375.json",
+          "path": "artifacts/research/transfer12-sec/CME-facts.json",
+          "sha256": "ca86665155c2d075f86c9045ebd3eaa94217084c19ca95d9bb80620c1778af3a"
+        }
+      },
+      "errors": []
+    },
+    "DUK": {
+      "cik": 1326160,
+      "current_identity_matched": true,
+      "historical_identity_verified": false,
+      "name": "Duke Energy CORP",
+      "facts_name": "Duke Energy CORP",
+      "sic": "4931",
+      "sic_description": "Electric & Other Services Combined",
+      "excluded_reason": "regulated utility",
+      "sources": {
+        "submission": {
+          "url": "https://data.sec.gov/submissions/CIK0001326160.json",
+          "path": "artifacts/research/transfer12-sec/DUK-submission.json",
+          "sha256": "18ce51cdad5756aec0f1a220a745579c5ffbdcf0b9eba7f16afb0fc69b9d8bf8"
+        },
+        "facts": {
+          "url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001326160.json",
+          "path": "artifacts/research/transfer12-sec/DUK-facts.json",
+          "sha256": "31b76f80c4c5e28873730e7fc5470065fd8646da0a0ecdb42db33517ac0d3cf9"
+        }
+      },
+      "errors": []
+    },
+    "LIN": {
+      "cik": 1707925,
+      "current_identity_matched": true,
+      "historical_identity_verified": false,
+      "name": "LINDE PLC",
+      "facts_name": "Linde plc",
+      "sic": "2810",
+      "sic_description": "Industrial Inorganic Chemicals",
+      "excluded_reason": null,
+      "sources": {
+        "submission": {
+          "url": "https://data.sec.gov/submissions/CIK0001707925.json",
+          "path": "artifacts/research/transfer12-sec/LIN-submission.json",
+          "sha256": "c5395275a4cf07bbcedba04e365359662ebe662d676f522144f13f2b9a9f543c"
+        },
+        "facts": {
+          "url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001707925.json",
+          "path": "artifacts/research/transfer12-sec/LIN-facts.json",
+          "sha256": "7e37e23f4aa27c781afce71ced1f6c4486a9a74fd412059dfabb463d767eda6d"
+        }
+      },
+      "errors": []
+    },
+    "MDT": {
+      "cik": 1613103,
+      "current_identity_matched": true,
+      "historical_identity_verified": false,
+      "name": "Medtronic plc",
+      "facts_name": "Medtronic plc",
+      "sic": "3845",
+      "sic_description": "Electromedical & Electrotherapeutic Apparatus",
+      "excluded_reason": null,
+      "sources": {
+        "submission": {
+          "url": "https://data.sec.gov/submissions/CIK0001613103.json",
+          "path": "artifacts/research/transfer12-sec/MDT-submission.json",
+          "sha256": "ea85415d6d8316274e51a544bc380c8e41d887f2440861f8e43187bc56785d4d"
+        },
+        "facts": {
+          "url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001613103.json",
+          "path": "artifacts/research/transfer12-sec/MDT-facts.json",
+          "sha256": "5e3dd12b39fe3a3f08834c09839a1b60d79e489d91ff7c59cb77f4cf784ea1a9"
+        }
+      },
+      "errors": []
+    },
+    "SPGI": {
+      "cik": 64040,
+      "current_identity_matched": true,
+      "historical_identity_verified": false,
+      "name": "S&P Global Inc.",
+      "facts_name": "S&P Global Inc.",
+      "sic": "7320",
+      "sic_description": "Services-Consumer Credit Reporting, Collection Agencies",
+      "excluded_reason": null,
+      "sources": {
+        "submission": {
+          "url": "https://data.sec.gov/submissions/CIK0000064040.json",
+          "path": "artifacts/research/transfer12-sec/SPGI-submission.json",
+          "sha256": "f1e0c8e96b010e89215c6cdf196ee67c1b2d3647803d389d48e636b0f1e5dc47"
+        },
+        "facts": {
+          "url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000064040.json",
+          "path": "artifacts/research/transfer12-sec/SPGI-facts.json",
+          "sha256": "984585a13381a1a1d4bed747caea750f0eef06b3db9aa5d04778472edb1687cf"
+        }
+      },
+      "errors": []
+    },
+    "UPS": {
+      "cik": 1090727,
+      "current_identity_matched": true,
+      "historical_identity_verified": false,
+      "name": "UNITED PARCEL SERVICE INC",
+      "facts_name": "UNITED PARCEL SERVICE INC",
+      "sic": "4210",
+      "sic_description": "Trucking & Courier Services (No Air)",
+      "excluded_reason": null,
+      "sources": {
+        "submission": {
+          "url": "https://data.sec.gov/submissions/CIK0001090727.json",
+          "path": "artifacts/research/transfer12-sec/UPS-submission.json",
+          "sha256": "5a9c8f3109565934c62eb7aecd9ddbd6c10e4473cb0332ee3a9541e3d6628d65"
+        },
+        "facts": {
+          "url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001090727.json",
+          "path": "artifacts/research/transfer12-sec/UPS-facts.json",
+          "sha256": "ed6b009a017cc8e610e177948c8a881e9e6cad769e6dda8ed4929b64b4a47a21"
+        }
+      },
+      "errors": []
+    },
+    "USB": {
+      "cik": 36104,
+      "current_identity_matched": true,
+      "historical_identity_verified": false,
+      "name": "US BANCORP \\DE\\",
+      "facts_name": "US BANCORP \\DE\\",
+      "sic": "6021",
+      "sic_description": "National Commercial Banks",
+      "excluded_reason": "bank",
+      "sources": {
+        "submission": {
+          "url": "https://data.sec.gov/submissions/CIK0000036104.json",
+          "path": "artifacts/research/transfer12-sec/USB-submission.json",
+          "sha256": "d165844f6c891827511a8e89da97f6c1d262736109a22129b8f3a68e00f8e3f8"
+        },
+        "facts": {
+          "url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000036104.json",
+          "path": "artifacts/research/transfer12-sec/USB-facts.json",
+          "sha256": "6eaf2f7c8e0b8cf1abbbf3ef8631197c7783856fb46135c1aa4bb4e87b371702"
+        }
+      },
+      "errors": []
+    },
+    "VZ": {
+      "cik": 732712,
+      "current_identity_matched": true,
+      "historical_identity_verified": false,
+      "name": "VERIZON COMMUNICATIONS INC",
+      "facts_name": "VERIZON COMMUNICATIONS INC",
+      "sic": "4813",
+      "sic_description": "Telephone Communications (No Radiotelephone)",
+      "excluded_reason": null,
+      "sources": {
+        "submission": {
+          "url": "https://data.sec.gov/submissions/CIK0000732712.json",
+          "path": "artifacts/research/transfer12-sec/VZ-submission.json",
+          "sha256": "2d80e061f95ac1a5726cb7f2442a556a39e735f44d9be753c300023f86179481"
+        },
+        "facts": {
+          "url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000732712.json",
+          "path": "artifacts/research/transfer12-sec/VZ-facts.json",
+          "sha256": "cd54401b6e332fab8137d912892d031cbc14fdf43adc624444a8763f2f7b1677"
+        }
+      },
+      "errors": []
+    }
+  },
+  "results": [
+    {
+      "symbol": "ABT",
+      "asof": "2022-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": true,
+      "dsri": 0.8125800551282463,
+      "fiscal_end": "2021-12-31",
+      "accession": "0001104659-22-025141",
+      "sources": {
+        "revenue": {
+          "start": "2021-01-01",
+          "end": "2021-12-31",
+          "val": 43075000000,
+          "accn": "0001104659-22-025141",
+          "fy": 2021,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2022-02-18",
+          "tag": "RevenueFromContractWithCustomerExcludingAssessedTax"
+        },
+        "prior_revenue": {
+          "start": "2020-01-01",
+          "end": "2020-12-31",
+          "val": 34608000000,
+          "accn": "0001104659-22-025141",
+          "fy": 2021,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2022-02-18",
+          "tag": "RevenueFromContractWithCustomerExcludingAssessedTax"
+        },
+        "receivables": {
+          "end": "2021-12-31",
+          "val": 6487000000,
+          "accn": "0001104659-22-025141",
+          "fy": 2021,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2022-02-18",
+          "tag": "AccountsReceivableNetCurrent"
+        },
+        "prior_receivables": {
+          "end": "2020-12-31",
+          "val": 6414000000,
+          "accn": "0001104659-22-025141",
+          "fy": 2021,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2022-02-18",
+          "frame": "CY2020Q4I",
+          "tag": "AccountsReceivableNetCurrent"
+        }
+      },
+      "reason": "同年报可计算的应收/收入代理，不是操纵判定或盈利概率",
+      "identity_scope": "current ticker/CIK only; historical continuity not audited"
+    },
+    {
+      "symbol": "ABT",
+      "asof": "2023-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": true,
+      "dsri": 0.9458407271627003,
+      "fiscal_end": "2022-12-31",
+      "accession": "0001628280-23-004026",
+      "sources": {
+        "revenue": {
+          "start": "2022-01-01",
+          "end": "2022-12-31",
+          "val": 43653000000,
+          "accn": "0001628280-23-004026",
+          "fy": 2022,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2023-02-17",
+          "tag": "RevenueFromContractWithCustomerExcludingAssessedTax"
+        },
+        "prior_revenue": {
+          "start": "2021-01-01",
+          "end": "2021-12-31",
+          "val": 43075000000,
+          "accn": "0001628280-23-004026",
+          "fy": 2022,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2023-02-17",
+          "tag": "RevenueFromContractWithCustomerExcludingAssessedTax"
+        },
+        "receivables": {
+          "end": "2022-12-31",
+          "val": 6218000000,
+          "accn": "0001628280-23-004026",
+          "fy": 2022,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2023-02-17",
+          "tag": "AccountsReceivableNetCurrent"
+        },
+        "prior_receivables": {
+          "end": "2021-12-31",
+          "val": 6487000000,
+          "accn": "0001628280-23-004026",
+          "fy": 2022,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2023-02-17",
+          "frame": "CY2021Q4I",
+          "tag": "AccountsReceivableNetCurrent"
+        }
+      },
+      "reason": "同年报可计算的应收/收入代理，不是操纵判定或盈利概率",
+      "identity_scope": "current ticker/CIK only; historical continuity not audited"
+    },
+    {
+      "symbol": "ABT",
+      "asof": "2024-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": true,
+      "dsri": 1.1490958968589302,
+      "fiscal_end": "2023-12-31",
+      "accession": "0001628280-24-005348",
+      "sources": {
+        "revenue": {
+          "start": "2023-01-01",
+          "end": "2023-12-31",
+          "val": 40109000000,
+          "accn": "0001628280-24-005348",
+          "fy": 2023,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2024-02-16",
+          "tag": "RevenueFromContractWithCustomerExcludingAssessedTax"
+        },
+        "prior_revenue": {
+          "start": "2022-01-01",
+          "end": "2022-12-31",
+          "val": 43653000000,
+          "accn": "0001628280-24-005348",
+          "fy": 2023,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2024-02-16",
+          "tag": "RevenueFromContractWithCustomerExcludingAssessedTax"
+        },
+        "receivables": {
+          "end": "2023-12-31",
+          "val": 6565000000,
+          "accn": "0001628280-24-005348",
+          "fy": 2023,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2024-02-16",
+          "tag": "AccountsReceivableNetCurrent"
+        },
+        "prior_receivables": {
+          "end": "2022-12-31",
+          "val": 6218000000,
+          "accn": "0001628280-24-005348",
+          "fy": 2023,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2024-02-16",
+          "frame": "CY2022Q4I",
+          "tag": "AccountsReceivableNetCurrent"
+        }
+      },
+      "reason": "同年报可计算的应收/收入代理，不是操纵判定或盈利概率",
+      "identity_scope": "current ticker/CIK only; historical continuity not audited"
+    },
+    {
+      "symbol": "ABT",
+      "asof": "2025-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": true,
+      "dsri": 1.0085441541311921,
+      "fiscal_end": "2024-12-31",
+      "accession": "0001628280-25-007110",
+      "sources": {
+        "revenue": {
+          "start": "2024-01-01",
+          "end": "2024-12-31",
+          "val": 41950000000,
+          "accn": "0001628280-25-007110",
+          "fy": 2024,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2025-02-21",
+          "tag": "RevenueFromContractWithCustomerExcludingAssessedTax"
+        },
+        "prior_revenue": {
+          "start": "2023-01-01",
+          "end": "2023-12-31",
+          "val": 40109000000,
+          "accn": "0001628280-25-007110",
+          "fy": 2024,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2025-02-21",
+          "tag": "RevenueFromContractWithCustomerExcludingAssessedTax"
+        },
+        "receivables": {
+          "end": "2024-12-31",
+          "val": 6925000000,
+          "accn": "0001628280-25-007110",
+          "fy": 2024,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2025-02-21",
+          "tag": "AccountsReceivableNetCurrent"
+        },
+        "prior_receivables": {
+          "end": "2023-12-31",
+          "val": 6565000000,
+          "accn": "0001628280-25-007110",
+          "fy": 2024,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2025-02-21",
+          "frame": "CY2023Q4I",
+          "tag": "AccountsReceivableNetCurrent"
+        }
+      },
+      "reason": "同年报可计算的应收/收入代理，不是操纵判定或盈利概率",
+      "identity_scope": "current ticker/CIK only; historical continuity not audited"
+    },
+    {
+      "symbol": "ABT",
+      "asof": "2026-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": true,
+      "dsri": 1.0835587615002569,
+      "fiscal_end": "2025-12-31",
+      "accession": "0001628280-26-010185",
+      "sources": {
+        "revenue": {
+          "start": "2025-01-01",
+          "end": "2025-12-31",
+          "val": 44328000000,
+          "accn": "0001628280-26-010185",
+          "fy": 2025,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2026-02-20",
+          "frame": "CY2025",
+          "tag": "RevenueFromContractWithCustomerExcludingAssessedTax"
+        },
+        "prior_revenue": {
+          "start": "2024-01-01",
+          "end": "2024-12-31",
+          "val": 41950000000,
+          "accn": "0001628280-26-010185",
+          "fy": 2025,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2026-02-20",
+          "frame": "CY2024",
+          "tag": "RevenueFromContractWithCustomerExcludingAssessedTax"
+        },
+        "receivables": {
+          "end": "2025-12-31",
+          "val": 7929000000,
+          "accn": "0001628280-26-010185",
+          "fy": 2025,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2026-02-20",
+          "tag": "AccountsReceivableNetCurrent"
+        },
+        "prior_receivables": {
+          "end": "2024-12-31",
+          "val": 6925000000,
+          "accn": "0001628280-26-010185",
+          "fy": 2025,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2026-02-20",
+          "frame": "CY2024Q4I",
+          "tag": "AccountsReceivableNetCurrent"
+        }
+      },
+      "reason": "同年报可计算的应收/收入代理，不是操纵判定或盈利概率",
+      "identity_scope": "current ticker/CIK only; historical continuity not audited"
+    },
+    {
+      "symbol": "ADP",
+      "asof": "2022-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": true,
+      "dsri": 1.0573067374027547,
+      "fiscal_end": "2022-06-30",
+      "accession": "0000008670-22-000038",
+      "sources": {
+        "revenue": {
+          "start": "2021-07-01",
+          "end": "2022-06-30",
+          "val": 16498300000,
+          "accn": "0000008670-22-000038",
+          "fy": 2022,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2022-08-03",
+          "tag": "RevenueFromContractWithCustomerExcludingAssessedTax"
+        },
+        "prior_revenue": {
+          "start": "2020-07-01",
+          "end": "2021-06-30",
+          "val": 15005400000,
+          "accn": "0000008670-22-000038",
+          "fy": 2022,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2022-08-03",
+          "tag": "RevenueFromContractWithCustomerExcludingAssessedTax"
+        },
+        "receivables": {
+          "end": "2022-06-30",
+          "val": 3170600000,
+          "accn": "0000008670-22-000038",
+          "fy": 2022,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2022-08-03",
+          "tag": "AccountsReceivableNetCurrent"
+        },
+        "prior_receivables": {
+          "end": "2021-06-30",
+          "val": 2727400000,
+          "accn": "0000008670-22-000038",
+          "fy": 2022,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2022-08-03",
+          "frame": "CY2021Q2I",
+          "tag": "AccountsReceivableNetCurrent"
+        }
+      },
+      "reason": "同年报可计算的应收/收入代理，不是操纵判定或盈利概率",
+      "identity_scope": "current ticker/CIK only; historical continuity not audited"
+    },
+    {
+      "symbol": "ADP",
+      "asof": "2023-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": true,
+      "dsri": 0.8694402843860393,
+      "fiscal_end": "2023-06-30",
+      "accession": "0000008670-23-000030",
+      "sources": {
+        "revenue": {
+          "start": "2022-07-01",
+          "end": "2023-06-30",
+          "val": 18012200000,
+          "accn": "0000008670-23-000030",
+          "fy": 2023,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2023-08-03",
+          "tag": "RevenueFromContractWithCustomerExcludingAssessedTax"
+        },
+        "prior_revenue": {
+          "start": "2021-07-01",
+          "end": "2022-06-30",
+          "val": 16498300000,
+          "accn": "0000008670-23-000030",
+          "fy": 2023,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2023-08-03",
+          "tag": "RevenueFromContractWithCustomerExcludingAssessedTax"
+        },
+        "receivables": {
+          "end": "2023-06-30",
+          "val": 3009600000,
+          "accn": "0000008670-23-000030",
+          "fy": 2023,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2023-08-03",
+          "tag": "AccountsReceivableNetCurrent"
+        },
+        "prior_receivables": {
+          "end": "2022-06-30",
+          "val": 3170600000,
+          "accn": "0000008670-23-000030",
+          "fy": 2023,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2023-08-03",
+          "frame": "CY2022Q2I",
+          "tag": "AccountsReceivableNetCurrent"
+        }
+      },
+      "reason": "同年报可计算的应收/收入代理，不是操纵判定或盈利概率",
+      "identity_scope": "current ticker/CIK only; historical continuity not audited"
+    },
+    {
+      "symbol": "ADP",
+      "asof": "2024-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": true,
+      "dsri": 1.0684743416728861,
+      "fiscal_end": "2024-06-30",
+      "accession": "0000008670-24-000024",
+      "sources": {
+        "revenue": {
+          "start": "2023-07-01",
+          "end": "2024-06-30",
+          "val": 19202600000,
+          "accn": "0000008670-24-000024",
+          "fy": 2024,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2024-08-07",
+          "tag": "RevenueFromContractWithCustomerExcludingAssessedTax"
+        },
+        "prior_revenue": {
+          "start": "2022-07-01",
+          "end": "2023-06-30",
+          "val": 18012200000,
+          "accn": "0000008670-24-000024",
+          "fy": 2024,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2024-08-07",
+          "tag": "RevenueFromContractWithCustomerExcludingAssessedTax"
+        },
+        "receivables": {
+          "end": "2024-06-30",
+          "val": 3428200000,
+          "accn": "0000008670-24-000024",
+          "fy": 2024,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2024-08-07",
+          "tag": "AccountsReceivableNetCurrent"
+        },
+        "prior_receivables": {
+          "end": "2023-06-30",
+          "val": 3009600000,
+          "accn": "0000008670-24-000024",
+          "fy": 2024,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2024-08-07",
+          "frame": "CY2023Q2I",
+          "tag": "AccountsReceivableNetCurrent"
+        }
+      },
+      "reason": "同年报可计算的应收/收入代理，不是操纵判定或盈利概率",
+      "identity_scope": "current ticker/CIK only; historical continuity not audited"
+    },
+    {
+      "symbol": "ADP",
+      "asof": "2025-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": true,
+      "dsri": 0.9750471040089079,
+      "fiscal_end": "2025-06-30",
+      "accession": "0000008670-25-000037",
+      "sources": {
+        "revenue": {
+          "start": "2024-07-01",
+          "end": "2025-06-30",
+          "val": 20560900000,
+          "accn": "0000008670-25-000037",
+          "fy": 2025,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2025-08-06",
+          "tag": "RevenueFromContractWithCustomerExcludingAssessedTax"
+        },
+        "prior_revenue": {
+          "start": "2023-07-01",
+          "end": "2024-06-30",
+          "val": 19202600000,
+          "accn": "0000008670-25-000037",
+          "fy": 2025,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2025-08-06",
+          "tag": "RevenueFromContractWithCustomerExcludingAssessedTax"
+        },
+        "receivables": {
+          "end": "2025-06-30",
+          "val": 3579100000,
+          "accn": "0000008670-25-000037",
+          "fy": 2025,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2025-08-06",
+          "tag": "AccountsReceivableNetCurrent"
+        },
+        "prior_receivables": {
+          "end": "2024-06-30",
+          "val": 3428200000,
+          "accn": "0000008670-25-000037",
+          "fy": 2025,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2025-08-06",
+          "frame": "CY2024Q2I",
+          "tag": "AccountsReceivableNetCurrent"
+        }
+      },
+      "reason": "同年报可计算的应收/收入代理，不是操纵判定或盈利概率",
+      "identity_scope": "current ticker/CIK only; historical continuity not audited"
+    },
+    {
+      "symbol": "ADP",
+      "asof": "2026-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": true,
+      "dsri": 0.9216447817620488,
+      "fiscal_end": "2026-06-30",
+      "accession": "0000008670-26-000030",
+      "sources": {
+        "revenue": {
+          "start": "2025-07-01",
+          "end": "2026-06-30",
+          "val": 21947400000,
+          "accn": "0000008670-26-000030",
+          "fy": 2026,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2026-08-05",
+          "frame": "CY2026",
+          "tag": "RevenueFromContractWithCustomerExcludingAssessedTax"
+        },
+        "prior_revenue": {
+          "start": "2024-07-01",
+          "end": "2025-06-30",
+          "val": 20560900000,
+          "accn": "0000008670-26-000030",
+          "fy": 2026,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2026-08-05",
+          "frame": "CY2025",
+          "tag": "RevenueFromContractWithCustomerExcludingAssessedTax"
+        },
+        "receivables": {
+          "end": "2026-06-30",
+          "val": 3521100000,
+          "accn": "0000008670-26-000030",
+          "fy": 2026,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2026-08-05",
+          "frame": "CY2026Q2I",
+          "tag": "AccountsReceivableNetCurrent"
+        },
+        "prior_receivables": {
+          "end": "2025-06-30",
+          "val": 3579100000,
+          "accn": "0000008670-26-000030",
+          "fy": 2026,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2026-08-05",
+          "frame": "CY2025Q2I",
+          "tag": "AccountsReceivableNetCurrent"
+        }
+      },
+      "reason": "同年报可计算的应收/收入代理，不是操纵判定或盈利概率",
+      "identity_scope": "current ticker/CIK only; historical continuity not audited"
+    },
+    {
+      "symbol": "AMT",
+      "asof": "2022-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": false,
+      "reason": "预定不可比业务范围: REIT",
+      "identity_scope": "current ticker/CIK only; historical continuity not audited"
+    },
+    {
+      "symbol": "AMT",
+      "asof": "2023-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": false,
+      "reason": "预定不可比业务范围: REIT",
+      "identity_scope": "current ticker/CIK only; historical continuity not audited"
+    },
+    {
+      "symbol": "AMT",
+      "asof": "2024-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": false,
+      "reason": "预定不可比业务范围: REIT",
+      "identity_scope": "current ticker/CIK only; historical continuity not audited"
+    },
+    {
+      "symbol": "AMT",
+      "asof": "2025-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": false,
+      "reason": "预定不可比业务范围: REIT",
+      "identity_scope": "current ticker/CIK only; historical continuity not audited"
+    },
+    {
+      "symbol": "AMT",
+      "asof": "2026-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": false,
+      "reason": "预定不可比业务范围: REIT",
+      "identity_scope": "current ticker/CIK only; historical continuity not audited"
+    },
+    {
+      "symbol": "BLK",
+      "asof": "2022-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": false,
+      "reason": "预定不可比业务范围: asset manager",
+      "identity_scope": "current ticker/CIK only; historical continuity not audited"
+    },
+    {
+      "symbol": "BLK",
+      "asof": "2023-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": false,
+      "reason": "预定不可比业务范围: asset manager",
+      "identity_scope": "current ticker/CIK only; historical continuity not audited"
+    },
+    {
+      "symbol": "BLK",
+      "asof": "2024-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": false,
+      "reason": "预定不可比业务范围: asset manager",
+      "identity_scope": "current ticker/CIK only; historical continuity not audited"
+    },
+    {
+      "symbol": "BLK",
+      "asof": "2025-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": false,
+      "reason": "预定不可比业务范围: asset manager",
+      "identity_scope": "current ticker/CIK only; historical continuity not audited"
+    },
+    {
+      "symbol": "BLK",
+      "asof": "2026-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": false,
+      "reason": "预定不可比业务范围: asset manager",
+      "identity_scope": "current ticker/CIK only; historical continuity not audited"
+    },
+    {
+      "symbol": "CME",
+      "asof": "2022-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": false,
+      "reason": "预定不可比业务范围: financial exchange",
+      "identity_scope": "current ticker/CIK only; historical continuity not audited"
+    },
+    {
+      "symbol": "CME",
+      "asof": "2023-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": false,
+      "reason": "预定不可比业务范围: financial exchange",
+      "identity_scope": "current ticker/CIK only; historical continuity not audited"
+    },
+    {
+      "symbol": "CME",
+      "asof": "2024-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": false,
+      "reason": "预定不可比业务范围: financial exchange",
+      "identity_scope": "current ticker/CIK only; historical continuity not audited"
+    },
+    {
+      "symbol": "CME",
+      "asof": "2025-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": false,
+      "reason": "预定不可比业务范围: financial exchange",
+      "identity_scope": "current ticker/CIK only; historical continuity not audited"
+    },
+    {
+      "symbol": "CME",
+      "asof": "2026-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": false,
+      "reason": "预定不可比业务范围: financial exchange",
+      "identity_scope": "current ticker/CIK only; historical continuity not audited"
+    },
+    {
+      "symbol": "DUK",
+      "asof": "2022-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": false,
+      "reason": "预定不可比业务范围: regulated utility",
+      "identity_scope": "current ticker/CIK only; historical continuity not audited"
+    },
+    {
+      "symbol": "DUK",
+      "asof": "2023-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": false,
+      "reason": "预定不可比业务范围: regulated utility",
+      "identity_scope": "current ticker/CIK only; historical continuity not audited"
+    },
+    {
+      "symbol": "DUK",
+      "asof": "2024-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": false,
+      "reason": "预定不可比业务范围: regulated utility",
+      "identity_scope": "current ticker/CIK only; historical continuity not audited"
+    },
+    {
+      "symbol": "DUK",
+      "asof": "2025-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": false,
+      "reason": "预定不可比业务范围: regulated utility",
+      "identity_scope": "current ticker/CIK only; historical continuity not audited"
+    },
+    {
+      "symbol": "DUK",
+      "asof": "2026-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": false,
+      "reason": "预定不可比业务范围: regulated utility",
+      "identity_scope": "current ticker/CIK only; historical continuity not audited"
+    },
+    {
+      "symbol": "LIN",
+      "asof": "2022-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": true,
+      "dsri": 0.9552024354922323,
+      "fiscal_end": "2021-12-31",
+      "accession": "0001628280-22-004180",
+      "sources": {
+        "revenue": {
+          "start": "2021-01-01",
+          "end": "2021-12-31",
+          "val": 30793000000,
+          "accn": "0001628280-22-004180",
+          "fy": 2021,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2022-02-28",
+          "tag": "RevenueFromContractWithCustomerExcludingAssessedTax"
+        },
+        "prior_revenue": {
+          "start": "2020-01-01",
+          "end": "2020-12-31",
+          "val": 27243000000,
+          "accn": "0001628280-22-004180",
+          "fy": 2021,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2022-02-28",
+          "tag": "RevenueFromContractWithCustomerExcludingAssessedTax"
+        },
+        "receivables": {
+          "end": "2021-12-31",
+          "val": 4499000000,
+          "accn": "0001628280-22-004180",
+          "fy": 2021,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2022-02-28",
+          "tag": "AccountsReceivableNetCurrent"
+        },
+        "prior_receivables": {
+          "end": "2020-12-31",
+          "val": 4167000000,
+          "accn": "0001628280-22-004180",
+          "fy": 2021,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2022-02-28",
+          "frame": "CY2020Q4I",
+          "tag": "AccountsReceivableNetCurrent"
+        }
+      },
+      "reason": "同年报可计算的应收/收入代理，不是操纵判定或盈利概率",
+      "identity_scope": "current ticker/CIK only; historical continuity not audited"
+    },
+    {
+      "symbol": "LIN",
+      "asof": "2023-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": true,
+      "dsri": 0.9352495082163885,
+      "fiscal_end": "2022-12-31",
+      "accession": "0001628280-23-005434",
+      "sources": {
+        "revenue": {
+          "start": "2022-01-01",
+          "end": "2022-12-31",
+          "val": 33364000000,
+          "accn": "0001628280-23-005434",
+          "fy": 2022,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2023-02-28",
+          "tag": "RevenueFromContractWithCustomerExcludingAssessedTax"
+        },
+        "prior_revenue": {
+          "start": "2021-01-01",
+          "end": "2021-12-31",
+          "val": 30793000000,
+          "accn": "0001628280-23-005434",
+          "fy": 2022,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2023-02-28",
+          "tag": "RevenueFromContractWithCustomerExcludingAssessedTax"
+        },
+        "receivables": {
+          "end": "2022-12-31",
+          "val": 4559000000,
+          "accn": "0001628280-23-005434",
+          "fy": 2022,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2023-02-28",
+          "tag": "AccountsReceivableNetCurrent"
+        },
+        "prior_receivables": {
+          "end": "2021-12-31",
+          "val": 4499000000,
+          "accn": "0001628280-23-005434",
+          "fy": 2022,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2023-02-28",
+          "frame": "CY2021Q4I",
+          "tag": "AccountsReceivableNetCurrent"
+        }
+      },
+      "reason": "同年报可计算的应收/收入代理，不是操纵判定或盈利概率",
+      "identity_scope": "current ticker/CIK only; historical continuity not audited"
+    },
+    {
+      "symbol": "LIN",
+      "asof": "2024-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": true,
+      "dsri": 1.0509406823088152,
+      "fiscal_end": "2023-12-31",
+      "accession": "0001628280-24-007424",
+      "sources": {
+        "revenue": {
+          "start": "2023-01-01",
+          "end": "2023-12-31",
+          "val": 32854000000,
+          "accn": "0001628280-24-007424",
+          "fy": 2023,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2024-02-28",
+          "tag": "RevenueFromContractWithCustomerExcludingAssessedTax"
+        },
+        "prior_revenue": {
+          "start": "2022-01-01",
+          "end": "2022-12-31",
+          "val": 33364000000,
+          "accn": "0001628280-24-007424",
+          "fy": 2023,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2024-02-28",
+          "tag": "RevenueFromContractWithCustomerExcludingAssessedTax"
+        },
+        "receivables": {
+          "end": "2023-12-31",
+          "val": 4718000000,
+          "accn": "0001628280-24-007424",
+          "fy": 2023,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2024-02-28",
+          "tag": "AccountsReceivableNetCurrent"
+        },
+        "prior_receivables": {
+          "end": "2022-12-31",
+          "val": 4559000000,
+          "accn": "0001628280-24-007424",
+          "fy": 2023,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2024-02-28",
+          "frame": "CY2022Q4I",
+          "tag": "AccountsReceivableNetCurrent"
+        }
+      },
+      "reason": "同年报可计算的应收/收入代理，不是操纵判定或盈利概率",
+      "identity_scope": "current ticker/CIK only; historical continuity not audited"
+    },
+    {
+      "symbol": "LIN",
+      "asof": "2025-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": true,
+      "dsri": 0.9751704223010387,
+      "fiscal_end": "2024-12-31",
+      "accession": "0001628280-25-007990",
+      "sources": {
+        "revenue": {
+          "start": "2024-01-01",
+          "end": "2024-12-31",
+          "val": 33005000000,
+          "accn": "0001628280-25-007990",
+          "fy": 2024,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2025-02-26",
+          "tag": "RevenueFromContractWithCustomerExcludingAssessedTax"
+        },
+        "prior_revenue": {
+          "start": "2023-01-01",
+          "end": "2023-12-31",
+          "val": 32854000000,
+          "accn": "0001628280-25-007990",
+          "fy": 2024,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2025-02-26",
+          "tag": "RevenueFromContractWithCustomerExcludingAssessedTax"
+        },
+        "receivables": {
+          "end": "2024-12-31",
+          "val": 4622000000,
+          "accn": "0001628280-25-007990",
+          "fy": 2024,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2025-02-26",
+          "tag": "AccountsReceivableNetCurrent"
+        },
+        "prior_receivables": {
+          "end": "2023-12-31",
+          "val": 4718000000,
+          "accn": "0001628280-25-007990",
+          "fy": 2024,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2025-02-26",
+          "frame": "CY2023Q4I",
+          "tag": "AccountsReceivableNetCurrent"
+        }
+      },
+      "reason": "同年报可计算的应收/收入代理，不是操纵判定或盈利概率",
+      "identity_scope": "current ticker/CIK only; historical continuity not audited"
+    },
+    {
+      "symbol": "LIN",
+      "asof": "2026-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": true,
+      "dsri": 1.0434135159326812,
+      "fiscal_end": "2025-12-31",
+      "accession": "0001628280-26-011430",
+      "sources": {
+        "revenue": {
+          "start": "2025-01-01",
+          "end": "2025-12-31",
+          "val": 33986000000,
+          "accn": "0001628280-26-011430",
+          "fy": 2025,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2026-02-25",
+          "frame": "CY2025",
+          "tag": "RevenueFromContractWithCustomerExcludingAssessedTax"
+        },
+        "prior_revenue": {
+          "start": "2024-01-01",
+          "end": "2024-12-31",
+          "val": 33005000000,
+          "accn": "0001628280-26-011430",
+          "fy": 2025,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2026-02-25",
+          "frame": "CY2024",
+          "tag": "RevenueFromContractWithCustomerExcludingAssessedTax"
+        },
+        "receivables": {
+          "end": "2025-12-31",
+          "val": 4966000000,
+          "accn": "0001628280-26-011430",
+          "fy": 2025,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2026-02-25",
+          "tag": "AccountsReceivableNetCurrent"
+        },
+        "prior_receivables": {
+          "end": "2024-12-31",
+          "val": 4622000000,
+          "accn": "0001628280-26-011430",
+          "fy": 2025,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2026-02-25",
+          "frame": "CY2024Q4I",
+          "tag": "AccountsReceivableNetCurrent"
+        }
+      },
+      "reason": "同年报可计算的应收/收入代理，不是操纵判定或盈利概率",
+      "identity_scope": "current ticker/CIK only; historical continuity not audited"
+    },
+    {
+      "symbol": "MDT",
+      "asof": "2022-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": true,
+      "dsri": 0.9659704088310894,
+      "fiscal_end": "2022-04-29",
+      "accession": "0001613103-22-000023",
+      "sources": {
+        "revenue": {
+          "start": "2021-05-01",
+          "end": "2022-04-29",
+          "val": 31686000000,
+          "accn": "0001613103-22-000023",
+          "fy": 2022,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2022-06-23",
+          "tag": "RevenueFromContractWithCustomerExcludingAssessedTax"
+        },
+        "prior_revenue": {
+          "start": "2020-04-25",
+          "end": "2021-04-30",
+          "val": 30117000000,
+          "accn": "0001613103-22-000023",
+          "fy": 2022,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2022-06-23",
+          "tag": "RevenueFromContractWithCustomerExcludingAssessedTax"
+        },
+        "receivables": {
+          "end": "2022-04-29",
+          "val": 5551000000,
+          "accn": "0001613103-22-000023",
+          "fy": 2022,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2022-06-23",
+          "tag": "AccountsReceivableNetCurrent"
+        },
+        "prior_receivables": {
+          "end": "2021-04-30",
+          "val": 5462000000,
+          "accn": "0001613103-22-000023",
+          "fy": 2022,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2022-06-23",
+          "frame": "CY2021Q1I",
+          "tag": "AccountsReceivableNetCurrent"
+        }
+      },
+      "reason": "同年报可计算的应收/收入代理，不是操纵判定或盈利概率",
+      "identity_scope": "current ticker/CIK only; historical continuity not audited"
+    },
+    {
+      "symbol": "MDT",
+      "asof": "2023-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": true,
+      "dsri": 1.0964084871816042,
+      "fiscal_end": "2023-04-28",
+      "accession": "0001613103-23-000040",
+      "sources": {
+        "revenue": {
+          "start": "2022-04-30",
+          "end": "2023-04-28",
+          "val": 31227000000,
+          "accn": "0001613103-23-000040",
+          "fy": 2023,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2023-06-22",
+          "tag": "RevenueFromContractWithCustomerExcludingAssessedTax"
+        },
+        "prior_revenue": {
+          "start": "2021-05-01",
+          "end": "2022-04-29",
+          "val": 31686000000,
+          "accn": "0001613103-23-000040",
+          "fy": 2023,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2023-06-22",
+          "tag": "RevenueFromContractWithCustomerExcludingAssessedTax"
+        },
+        "receivables": {
+          "end": "2023-04-28",
+          "val": 5998000000,
+          "accn": "0001613103-23-000040",
+          "fy": 2023,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2023-06-22",
+          "tag": "AccountsReceivableNetCurrent"
+        },
+        "prior_receivables": {
+          "end": "2022-04-29",
+          "val": 5551000000,
+          "accn": "0001613103-23-000040",
+          "fy": 2023,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2023-06-22",
+          "frame": "CY2022Q1I",
+          "tag": "AccountsReceivableNetCurrent"
+        }
+      },
+      "reason": "同年报可计算的应收/收入代理，不是操纵判定或盈利概率",
+      "identity_scope": "current ticker/CIK only; historical continuity not audited"
+    },
+    {
+      "symbol": "MDT",
+      "asof": "2024-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": true,
+      "dsri": 0.9857808244819711,
+      "fiscal_end": "2024-04-26",
+      "accession": "0001613103-24-000072",
+      "sources": {
+        "revenue": {
+          "start": "2023-04-29",
+          "end": "2024-04-26",
+          "val": 32364000000,
+          "accn": "0001613103-24-000072",
+          "fy": 2024,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2024-06-20",
+          "tag": "RevenueFromContractWithCustomerExcludingAssessedTax"
+        },
+        "prior_revenue": {
+          "start": "2022-04-30",
+          "end": "2023-04-28",
+          "val": 31227000000,
+          "accn": "0001613103-24-000072",
+          "fy": 2024,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2024-06-20",
+          "tag": "RevenueFromContractWithCustomerExcludingAssessedTax"
+        },
+        "receivables": {
+          "end": "2024-04-26",
+          "val": 6128000000,
+          "accn": "0001613103-24-000072",
+          "fy": 2024,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2024-06-20",
+          "tag": "AccountsReceivableNetCurrent"
+        },
+        "prior_receivables": {
+          "end": "2023-04-28",
+          "val": 5998000000,
+          "accn": "0001613103-24-000072",
+          "fy": 2024,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2024-06-20",
+          "frame": "CY2023Q1I",
+          "tag": "AccountsReceivableNetCurrent"
+        }
+      },
+      "reason": "同年报可计算的应收/收入代理，不是操纵判定或盈利概率",
+      "identity_scope": "current ticker/CIK only; historical continuity not audited"
+    },
+    {
+      "symbol": "MDT",
+      "asof": "2025-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": true,
+      "dsri": 1.0259675977687557,
+      "fiscal_end": "2025-04-25",
+      "accession": "0001613103-25-000091",
+      "sources": {
+        "revenue": {
+          "start": "2024-04-27",
+          "end": "2025-04-25",
+          "val": 33537000000,
+          "accn": "0001613103-25-000091",
+          "fy": 2025,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2025-06-20",
+          "tag": "RevenueFromContractWithCustomerExcludingAssessedTax"
+        },
+        "prior_revenue": {
+          "start": "2023-04-29",
+          "end": "2024-04-26",
+          "val": 32364000000,
+          "accn": "0001613103-25-000091",
+          "fy": 2025,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2025-06-20",
+          "tag": "RevenueFromContractWithCustomerExcludingAssessedTax"
+        },
+        "receivables": {
+          "end": "2025-04-25",
+          "val": 6515000000,
+          "accn": "0001613103-25-000091",
+          "fy": 2025,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2025-06-20",
+          "tag": "AccountsReceivableNetCurrent"
+        },
+        "prior_receivables": {
+          "end": "2024-04-26",
+          "val": 6128000000,
+          "accn": "0001613103-25-000091",
+          "fy": 2025,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2025-06-20",
+          "frame": "CY2024Q1I",
+          "tag": "AccountsReceivableNetCurrent"
+        }
+      },
+      "reason": "同年报可计算的应收/收入代理，不是操纵判定或盈利概率",
+      "identity_scope": "current ticker/CIK only; historical continuity not audited"
+    },
+    {
+      "symbol": "MDT",
+      "asof": "2026-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": true,
+      "dsri": 0.9403778567740031,
+      "fiscal_end": "2026-04-24",
+      "accession": "0001628280-26-044354",
+      "sources": {
+        "revenue": {
+          "start": "2025-04-26",
+          "end": "2026-04-24",
+          "val": 36364000000,
+          "accn": "0001628280-26-044354",
+          "fy": 2026,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2026-06-18",
+          "frame": "CY2025",
+          "tag": "RevenueFromContractWithCustomerExcludingAssessedTax"
+        },
+        "prior_revenue": {
+          "start": "2024-04-27",
+          "end": "2025-04-25",
+          "val": 33537000000,
+          "accn": "0001628280-26-044354",
+          "fy": 2026,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2026-06-18",
+          "frame": "CY2024",
+          "tag": "RevenueFromContractWithCustomerExcludingAssessedTax"
+        },
+        "receivables": {
+          "end": "2026-04-24",
+          "val": 6643000000,
+          "accn": "0001628280-26-044354",
+          "fy": 2026,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2026-06-18",
+          "tag": "AccountsReceivableNetCurrent"
+        },
+        "prior_receivables": {
+          "end": "2025-04-25",
+          "val": 6515000000,
+          "accn": "0001628280-26-044354",
+          "fy": 2026,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2026-06-18",
+          "frame": "CY2025Q1I",
+          "tag": "AccountsReceivableNetCurrent"
+        }
+      },
+      "reason": "同年报可计算的应收/收入代理，不是操纵判定或盈利概率",
+      "identity_scope": "current ticker/CIK only; historical continuity not audited"
+    },
+    {
+      "symbol": "SPGI",
+      "asof": "2022-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": true,
+      "dsri": 0.9290449864232914,
+      "fiscal_end": "2021-12-31",
+      "accession": "0000064040-22-000055",
+      "sources": {
+        "revenue": {
+          "start": "2021-01-01",
+          "end": "2021-12-31",
+          "val": 8297000000,
+          "accn": "0000064040-22-000055",
+          "fy": 2021,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2022-02-08",
+          "tag": "RevenueFromContractWithCustomerExcludingAssessedTax"
+        },
+        "prior_revenue": {
+          "start": "2020-01-01",
+          "end": "2020-12-31",
+          "val": 7442000000,
+          "accn": "0000064040-22-000055",
+          "fy": 2021,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2022-02-08",
+          "tag": "RevenueFromContractWithCustomerExcludingAssessedTax"
+        },
+        "receivables": {
+          "end": "2021-12-31",
+          "val": 1650000000,
+          "accn": "0000064040-22-000055",
+          "fy": 2021,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2022-02-08",
+          "tag": "AccountsReceivableNetCurrent"
+        },
+        "prior_receivables": {
+          "end": "2020-12-31",
+          "val": 1593000000,
+          "accn": "0000064040-22-000055",
+          "fy": 2021,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2022-02-08",
+          "frame": "CY2020Q4I",
+          "tag": "AccountsReceivableNetCurrent"
+        }
+      },
+      "reason": "同年报可计算的应收/收入代理，不是操纵判定或盈利概率",
+      "identity_scope": "current ticker/CIK only; historical continuity not audited"
+    },
+    {
+      "symbol": "SPGI",
+      "asof": "2023-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": true,
+      "dsri": 1.1216386022825517,
+      "fiscal_end": "2022-12-31",
+      "accession": "0000064040-23-000058",
+      "sources": {
+        "revenue": {
+          "start": "2022-01-01",
+          "end": "2022-12-31",
+          "val": 11181000000,
+          "accn": "0000064040-23-000058",
+          "fy": 2022,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2023-02-10",
+          "tag": "RevenueFromContractWithCustomerExcludingAssessedTax"
+        },
+        "prior_revenue": {
+          "start": "2021-01-01",
+          "end": "2021-12-31",
+          "val": 8297000000,
+          "accn": "0000064040-23-000058",
+          "fy": 2022,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2023-02-10",
+          "tag": "RevenueFromContractWithCustomerExcludingAssessedTax"
+        },
+        "receivables": {
+          "end": "2022-12-31",
+          "val": 2494000000,
+          "accn": "0000064040-23-000058",
+          "fy": 2022,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2023-02-10",
+          "tag": "AccountsReceivableNetCurrent"
+        },
+        "prior_receivables": {
+          "end": "2021-12-31",
+          "val": 1650000000,
+          "accn": "0000064040-23-000058",
+          "fy": 2022,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2023-02-10",
+          "frame": "CY2021Q4I",
+          "tag": "AccountsReceivableNetCurrent"
+        }
+      },
+      "reason": "同年报可计算的应收/收入代理，不是操纵判定或盈利概率",
+      "identity_scope": "current ticker/CIK only; historical continuity not audited"
+    },
+    {
+      "symbol": "SPGI",
+      "asof": "2024-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": true,
+      "dsri": 1.0137960295715558,
+      "fiscal_end": "2023-12-31",
+      "accession": "0000064040-24-000071",
+      "sources": {
+        "revenue": {
+          "start": "2023-01-01",
+          "end": "2023-12-31",
+          "val": 12497000000,
+          "accn": "0000064040-24-000071",
+          "fy": 2023,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2024-02-09",
+          "tag": "RevenueFromContractWithCustomerExcludingAssessedTax"
+        },
+        "prior_revenue": {
+          "start": "2022-01-01",
+          "end": "2022-12-31",
+          "val": 11181000000,
+          "accn": "0000064040-24-000071",
+          "fy": 2023,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2024-02-09",
+          "frame": "CY2022",
+          "tag": "RevenueFromContractWithCustomerExcludingAssessedTax"
+        },
+        "receivables": {
+          "end": "2023-12-31",
+          "val": 2826000000,
+          "accn": "0000064040-24-000071",
+          "fy": 2023,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2024-02-09",
+          "tag": "AccountsReceivableNetCurrent"
+        },
+        "prior_receivables": {
+          "end": "2022-12-31",
+          "val": 2494000000,
+          "accn": "0000064040-24-000071",
+          "fy": 2023,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2024-02-09",
+          "frame": "CY2022Q4I",
+          "tag": "AccountsReceivableNetCurrent"
+        }
+      },
+      "reason": "同年报可计算的应收/收入代理，不是操纵判定或盈利概率",
+      "identity_scope": "current ticker/CIK only; historical continuity not audited"
+    },
+    {
+      "symbol": "SPGI",
+      "asof": "2025-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": false,
+      "reason": "最新可用年度陈旧",
+      "identity_scope": "current ticker/CIK only; historical continuity not audited"
+    },
+    {
+      "symbol": "SPGI",
+      "asof": "2026-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": true,
+      "dsri": 1.1119309742889378,
+      "fiscal_end": "2025-12-31",
+      "accession": "0000064040-26-000013",
+      "sources": {
+        "revenue": {
+          "start": "2025-01-01",
+          "end": "2025-12-31",
+          "val": 15336000000,
+          "accn": "0000064040-26-000013",
+          "fy": 2025,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2026-02-11",
+          "frame": "CY2025",
+          "tag": "RevenueFromContractWithCustomerExcludingAssessedTax"
+        },
+        "prior_revenue": {
+          "start": "2024-01-01",
+          "end": "2024-12-31",
+          "val": 14208000000,
+          "accn": "0000064040-26-000013",
+          "fy": 2025,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2026-02-11",
+          "frame": "CY2024",
+          "tag": "RevenueFromContractWithCustomerExcludingAssessedTax"
+        },
+        "receivables": {
+          "end": "2025-12-31",
+          "val": 3441000000,
+          "accn": "0000064040-26-000013",
+          "fy": 2025,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2026-02-11",
+          "tag": "AccountsReceivableNetCurrent"
+        },
+        "prior_receivables": {
+          "end": "2024-12-31",
+          "val": 2867000000,
+          "accn": "0000064040-26-000013",
+          "fy": 2025,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2026-02-11",
+          "frame": "CY2024Q4I",
+          "tag": "AccountsReceivableNetCurrent"
+        }
+      },
+      "reason": "同年报可计算的应收/收入代理，不是操纵判定或盈利概率",
+      "identity_scope": "current ticker/CIK only; historical continuity not audited"
+    },
+    {
+      "symbol": "UPS",
+      "asof": "2022-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": true,
+      "dsri": 1.0148058673677331,
+      "fiscal_end": "2021-12-31",
+      "accession": "0001090727-22-000007",
+      "sources": {
+        "revenue": {
+          "start": "2021-01-01",
+          "end": "2021-12-31",
+          "val": 97287000000,
+          "accn": "0001090727-22-000007",
+          "fy": 2021,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2022-02-22",
+          "tag": "RevenueFromContractWithCustomerExcludingAssessedTax"
+        },
+        "prior_revenue": {
+          "start": "2020-01-01",
+          "end": "2020-12-31",
+          "val": 84628000000,
+          "accn": "0001090727-22-000007",
+          "fy": 2021,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2022-02-22",
+          "tag": "RevenueFromContractWithCustomerExcludingAssessedTax"
+        },
+        "receivables": {
+          "end": "2021-12-31",
+          "val": 12541000000,
+          "accn": "0001090727-22-000007",
+          "fy": 2021,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2022-02-22",
+          "tag": "AccountsReceivableNetCurrent"
+        },
+        "prior_receivables": {
+          "end": "2020-12-31",
+          "val": 10750000000,
+          "accn": "0001090727-22-000007",
+          "fy": 2021,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2022-02-22",
+          "frame": "CY2020Q4I",
+          "tag": "AccountsReceivableNetCurrent"
+        }
+      },
+      "reason": "同年报可计算的应收/收入代理，不是操纵判定或盈利概率",
+      "identity_scope": "current ticker/CIK only; historical continuity not audited"
+    },
+    {
+      "symbol": "UPS",
+      "asof": "2023-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": true,
+      "dsri": 0.9728399573908731,
+      "fiscal_end": "2022-12-31",
+      "accession": "0001090727-23-000006",
+      "sources": {
+        "revenue": {
+          "start": "2022-01-01",
+          "end": "2022-12-31",
+          "val": 100338000000,
+          "accn": "0001090727-23-000006",
+          "fy": 2022,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2023-02-21",
+          "tag": "RevenueFromContractWithCustomerExcludingAssessedTax"
+        },
+        "prior_revenue": {
+          "start": "2021-01-01",
+          "end": "2021-12-31",
+          "val": 97287000000,
+          "accn": "0001090727-23-000006",
+          "fy": 2022,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2023-02-21",
+          "tag": "RevenueFromContractWithCustomerExcludingAssessedTax"
+        },
+        "receivables": {
+          "end": "2022-12-31",
+          "val": 12583000000,
+          "accn": "0001090727-23-000006",
+          "fy": 2022,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2023-02-21",
+          "tag": "AccountsReceivableNetCurrent"
+        },
+        "prior_receivables": {
+          "end": "2021-12-31",
+          "val": 12541000000,
+          "accn": "0001090727-23-000006",
+          "fy": 2022,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2023-02-21",
+          "frame": "CY2021Q4I",
+          "tag": "AccountsReceivableNetCurrent"
+        }
+      },
+      "reason": "同年报可计算的应收/收入代理，不是操纵判定或盈利概率",
+      "identity_scope": "current ticker/CIK only; historical continuity not audited"
+    },
+    {
+      "symbol": "UPS",
+      "asof": "2024-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": true,
+      "dsri": 0.983282572137201,
+      "fiscal_end": "2023-12-31",
+      "accession": "0001090727-24-000008",
+      "sources": {
+        "revenue": {
+          "start": "2023-01-01",
+          "end": "2023-12-31",
+          "val": 90958000000,
+          "accn": "0001090727-24-000008",
+          "fy": 2023,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2024-02-20",
+          "tag": "RevenueFromContractWithCustomerExcludingAssessedTax"
+        },
+        "prior_revenue": {
+          "start": "2022-01-01",
+          "end": "2022-12-31",
+          "val": 100338000000,
+          "accn": "0001090727-24-000008",
+          "fy": 2023,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2024-02-20",
+          "tag": "RevenueFromContractWithCustomerExcludingAssessedTax"
+        },
+        "receivables": {
+          "end": "2023-12-31",
+          "val": 11216000000,
+          "accn": "0001090727-24-000008",
+          "fy": 2023,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2024-02-20",
+          "tag": "AccountsReceivableNetCurrent"
+        },
+        "prior_receivables": {
+          "end": "2022-12-31",
+          "val": 12583000000,
+          "accn": "0001090727-24-000008",
+          "fy": 2023,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2024-02-20",
+          "frame": "CY2022Q4I",
+          "tag": "AccountsReceivableNetCurrent"
+        }
+      },
+      "reason": "同年报可计算的应收/收入代理，不是操纵判定或盈利概率",
+      "identity_scope": "current ticker/CIK only; historical continuity not audited"
+    },
+    {
+      "symbol": "UPS",
+      "asof": "2025-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": true,
+      "dsri": 0.9680483765916923,
+      "fiscal_end": "2024-12-31",
+      "accession": "0001090727-25-000019",
+      "sources": {
+        "revenue": {
+          "start": "2024-01-01",
+          "end": "2024-12-31",
+          "val": 91070000000,
+          "accn": "0001090727-25-000019",
+          "fy": 2024,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2025-02-18",
+          "tag": "RevenueFromContractWithCustomerExcludingAssessedTax"
+        },
+        "prior_revenue": {
+          "start": "2023-01-01",
+          "end": "2023-12-31",
+          "val": 90958000000,
+          "accn": "0001090727-25-000019",
+          "fy": 2024,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2025-02-18",
+          "tag": "RevenueFromContractWithCustomerExcludingAssessedTax"
+        },
+        "receivables": {
+          "end": "2024-12-31",
+          "val": 10871000000,
+          "accn": "0001090727-25-000019",
+          "fy": 2024,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2025-02-18",
+          "tag": "AccountsReceivableNetCurrent"
+        },
+        "prior_receivables": {
+          "end": "2023-12-31",
+          "val": 11216000000,
+          "accn": "0001090727-25-000019",
+          "fy": 2024,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2025-02-18",
+          "frame": "CY2023Q4I",
+          "tag": "AccountsReceivableNetCurrent"
+        }
+      },
+      "reason": "同年报可计算的应收/收入代理，不是操纵判定或盈利概率",
+      "identity_scope": "current ticker/CIK only; historical continuity not audited"
+    },
+    {
+      "symbol": "UPS",
+      "asof": "2026-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": true,
+      "dsri": 1.0591076003751108,
+      "fiscal_end": "2025-12-31",
+      "accession": "0001628280-26-008432",
+      "sources": {
+        "revenue": {
+          "start": "2025-01-01",
+          "end": "2025-12-31",
+          "val": 88661000000,
+          "accn": "0001628280-26-008432",
+          "fy": 2025,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2026-02-17",
+          "frame": "CY2025",
+          "tag": "RevenueFromContractWithCustomerExcludingAssessedTax"
+        },
+        "prior_revenue": {
+          "start": "2024-01-01",
+          "end": "2024-12-31",
+          "val": 91070000000,
+          "accn": "0001628280-26-008432",
+          "fy": 2025,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2026-02-17",
+          "frame": "CY2024",
+          "tag": "RevenueFromContractWithCustomerExcludingAssessedTax"
+        },
+        "receivables": {
+          "end": "2025-12-31",
+          "val": 11209000000,
+          "accn": "0001628280-26-008432",
+          "fy": 2025,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2026-02-17",
+          "tag": "AccountsReceivableNetCurrent"
+        },
+        "prior_receivables": {
+          "end": "2024-12-31",
+          "val": 10871000000,
+          "accn": "0001628280-26-008432",
+          "fy": 2025,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2026-02-17",
+          "frame": "CY2024Q4I",
+          "tag": "AccountsReceivableNetCurrent"
+        }
+      },
+      "reason": "同年报可计算的应收/收入代理，不是操纵判定或盈利概率",
+      "identity_scope": "current ticker/CIK only; historical continuity not audited"
+    },
+    {
+      "symbol": "USB",
+      "asof": "2022-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": false,
+      "reason": "预定不可比业务范围: bank",
+      "identity_scope": "current ticker/CIK only; historical continuity not audited"
+    },
+    {
+      "symbol": "USB",
+      "asof": "2023-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": false,
+      "reason": "预定不可比业务范围: bank",
+      "identity_scope": "current ticker/CIK only; historical continuity not audited"
+    },
+    {
+      "symbol": "USB",
+      "asof": "2024-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": false,
+      "reason": "预定不可比业务范围: bank",
+      "identity_scope": "current ticker/CIK only; historical continuity not audited"
+    },
+    {
+      "symbol": "USB",
+      "asof": "2025-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": false,
+      "reason": "预定不可比业务范围: bank",
+      "identity_scope": "current ticker/CIK only; historical continuity not audited"
+    },
+    {
+      "symbol": "USB",
+      "asof": "2026-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": false,
+      "reason": "预定不可比业务范围: bank",
+      "identity_scope": "current ticker/CIK only; historical continuity not audited"
+    },
+    {
+      "symbol": "VZ",
+      "asof": "2022-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": true,
+      "dsri": 0.9573256524593947,
+      "fiscal_end": "2021-12-31",
+      "accession": "0000732712-22-000008",
+      "sources": {
+        "revenue": {
+          "start": "2021-01-01",
+          "end": "2021-12-31",
+          "val": 133613000000,
+          "accn": "0000732712-22-000008",
+          "fy": 2021,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2022-02-11",
+          "tag": "Revenues"
+        },
+        "prior_revenue": {
+          "start": "2020-01-01",
+          "end": "2020-12-31",
+          "val": 128292000000,
+          "accn": "0000732712-22-000008",
+          "fy": 2021,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2022-02-11",
+          "tag": "Revenues"
+        },
+        "receivables": {
+          "end": "2021-12-31",
+          "val": 23846000000,
+          "accn": "0000732712-22-000008",
+          "fy": 2021,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2022-02-11",
+          "tag": "AccountsReceivableNetCurrent"
+        },
+        "prior_receivables": {
+          "end": "2020-12-31",
+          "val": 23917000000,
+          "accn": "0000732712-22-000008",
+          "fy": 2021,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2022-02-11",
+          "frame": "CY2020Q4I",
+          "tag": "AccountsReceivableNetCurrent"
+        }
+      },
+      "reason": "同年报可计算的应收/收入代理，不是操纵判定或盈利概率",
+      "identity_scope": "current ticker/CIK only; historical continuity not audited"
+    },
+    {
+      "symbol": "VZ",
+      "asof": "2023-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": false,
+      "reason": "最新年报缺少或冲突的净流动应收",
+      "accession": "0000732712-23-000012",
+      "identity_scope": "current ticker/CIK only; historical continuity not audited"
+    },
+    {
+      "symbol": "VZ",
+      "asof": "2024-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": false,
+      "reason": "最新年报缺少或冲突的净流动应收",
+      "accession": "0000732712-24-000010",
+      "identity_scope": "current ticker/CIK only; historical continuity not audited"
+    },
+    {
+      "symbol": "VZ",
+      "asof": "2025-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": false,
+      "reason": "最新年报缺少或冲突的净流动应收",
+      "accession": "0000732712-25-000006",
+      "identity_scope": "current ticker/CIK only; historical continuity not audited"
+    },
+    {
+      "symbol": "VZ",
+      "asof": "2026-09-01",
+      "status": "证据不足",
+      "validated": false,
+      "computable": false,
+      "reason": "最新年报缺少或冲突的净流动应收",
+      "accession": "0000732712-26-000007",
+      "identity_scope": "current ticker/CIK only; historical continuity not audited"
+    }
+  ]
+}

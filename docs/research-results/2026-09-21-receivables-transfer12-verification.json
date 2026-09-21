@@ -1,0 +1,12 @@
+{
+  "source_checks": 542,
+  "scope_exclusion_checked": true,
+  "prior_random10_coverage_reproduced": true,
+  "hashes": {
+    "scripts/prepare_transfer12_fundamentals.py": "f6c32ef47614ed136b5dd4f7d00f1e4541f04c8ea4fa6929cabebfeba3654827",
+    "scripts/study_receivables_strategy.py": "0ec1d3d1497b5cc1bd32efdd87a0f4d1c81adcff47158b5110c20247e9c879ae",
+    "scripts/study_receivables_transfer12.py": "b9e72b3febbf29d707cf57a5bab19ca83fa25caa71deeb7099c1488789597cc1",
+    "artifacts/research/transfer12-2026-09-21/daily.parquet": "2337f56b5d4cada16f9c9d5106ba84a18ce51c921d9a190e3923204859d6b664",
+    "artifacts/research/transfer12-temporal-2026-09-21/combined.parquet": "5877a055761a6915851917051db5b56121f96e9cf027c3e58729b0abe782e4b9"
+  }
+}

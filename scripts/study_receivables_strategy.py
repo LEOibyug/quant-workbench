@@ -14,15 +14,23 @@ from study_covariance_allocation import save_results
 ROOT = Path("docs/research-results")
 
 
-def forecasts(frame, start="2025-09-01", end="2026-09-01"):
+def forecasts(
+    frame,
+    start="2025-09-01",
+    end="2026-09-01",
+    facts_root=Path("artifacts/research/sec-quality"),
+    identities=None,
+    excluded=(),
+):
     p = frame.pivot(index="day", columns="symbol", values="close").sort_index().sort_index(axis=1)
     syms = list(p.columns)
     returns = np.diff(np.log(p.to_numpy()), axis=0)
-    facts = {
-        s: json.loads(Path(f"artifacts/research/sec-quality/{s}-facts.json").read_text())
-        for s in syms
-    }
-    verified = json.loads((ROOT / "2026-09-21-sec-50-issuers.json").read_text())
+    facts = {s: json.loads((facts_root / f"{s}-facts.json").read_text()) for s in syms}
+    verified = (
+        identities
+        if identities is not None
+        else json.loads((ROOT / "2026-09-21-sec-50-issuers.json").read_text())
+    )
     out = {m: {} for m in ("nonincrease", "increase", "eligible")}
     diagnostics = []
     example = None
@@ -32,7 +40,10 @@ def forecasts(frame, start="2025-09-01", end="2026-09-01"):
         day = str(p.index[i])
         if day not in decisions:
             continue
-        judgments = {s: judge(facts[s], s, day, verified[s]["identity_verified"]) for s in syms}
+        judgments = {
+            s: judge(facts[s], s, day, verified[s]["identity_verified"] and s not in excluded)
+            for s in syms
+        }
         eligible = sorted(s for s in syms if judgments[s].get("computable"))
         low = [s for s in eligible if judgments[s]["dsri"] <= 1]
         high = [s for s in eligible if judgments[s]["dsri"] > 1]
