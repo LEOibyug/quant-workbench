@@ -10,7 +10,7 @@ from quant_workbench.repository import Repository
 ROOT = Path("docs/research-results")
 
 
-def main():
+def main(methods=("adaptive_specialist",), output_name="2026-09-21-adaptive-transfer.json"):
     original = json.loads((ROOT / "2026-09-18-pattern-policy-v2.json").read_text())
     cfg = next(
         x["config"]
@@ -23,9 +23,9 @@ def main():
         "random10": pd.read_parquet("artifacts/research/random-universe-2026-09-21/daily.parquet"),
     }
     results = []
-    output = ROOT / "2026-09-21-adaptive-transfer.json"
+    output = ROOT / output_name
     for pool, frame in pools.items():
-        for method in ("adaptive_specialist",):
+        for method in methods:
             for multiplier in (1, 2):
                 costs = dict(cfg["costs"])
                 for key in (

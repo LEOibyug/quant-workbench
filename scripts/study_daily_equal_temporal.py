@@ -12,7 +12,10 @@ from study_olmar import forecasts
 ROOT = Path("docs/research-results")
 
 
-def main():
+def main(
+    output_name="2026-09-21-daily-equal-temporal.json",
+    protocol="2026-09-21-daily-equal-temporal-protocol.md",
+):
     original = json.loads((ROOT / "2026-09-18-pattern-policy-v2.json").read_text())
     cfg = next(
         x["config"]
@@ -29,12 +32,12 @@ def main():
         ("2022-09-01", "2025-09-01"),
     ]
     rows = []
-    dest = ROOT / "2026-09-21-daily-equal-temporal.json"
+    dest = ROOT / output_name
     meta = dict(
         symbols=sample["symbols"],
         sha256=hashlib.sha256(source.read_bytes()).hexdigest(),
         rows=len(frame),
-        protocol="2026-09-21-daily-equal-temporal-protocol.md",
+        protocol=protocol,
     )
     for start, end in windows:
         prior = sorted(frame.loc[frame.day < start, "day"].unique())[-127:]

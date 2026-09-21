@@ -61,7 +61,7 @@ def forecasts(frame):
     return maps
 
 
-def main():
+def main(output_name="2026-09-21-olmar.json"):
     original = json.loads((ROOT / "2026-09-18-pattern-policy-v2.json").read_text())
     cfg = next(
         r["config"]
@@ -74,7 +74,7 @@ def main():
         "random10": pd.read_parquet("artifacts/research/random-universe-2026-09-21/daily.parquet"),
     }
     results = []
-    out = ROOT / "2026-09-21-olmar.json"
+    out = ROOT / output_name
     for pool, frame in pools.items():
         for method, mapping in forecasts(frame).items():
             for frequency in (1, 5):

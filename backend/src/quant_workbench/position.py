@@ -377,6 +377,13 @@ def simulate_positions(frame, config, start, end, progress=None, *, daily_bars=F
         equity = cash + sum(shares[s] * float(prices.loc[s, "close"]) for s in symbols)
         peak = max(peak, equity)
         halted = halted or equity <= peak * (1 - config.max_drawdown_pct / 100)
+        # A stock stop persists until liquidation completes, not until a future
+        # signal happens to be zero. Release it before processing fresh targets
+        # so daily rebalancing cannot turn a completed exit into a permanent ban.
+        # The independent portfolio halt remains latched.
+        for symbol in symbols:
+            if not shares[symbol]:
+                forced_exit[symbol] = False
         if i % config.rebalance_days == 0:
             for symbol in symbols:
                 forecast = forecasts.get((day, symbol))
@@ -497,8 +504,6 @@ def simulate_positions(frame, config, start, end, progress=None, *, daily_bars=F
                 basis[symbol] * (1 - config.stop_loss_pct / 100)
             ):
                 forced_exit[symbol] = True
-            elif not shares[symbol] and targets[symbol] == 0:
-                forced_exit[symbol] = False
             if halted or forced_exit[symbol]:
                 targets[symbol] = 0.0
                 target_shares[symbol] = 0

@@ -1,0 +1,12 @@
+{
+  "engine_revision": "stock-stop-clear-before-target-refresh-v1",
+  "source_sha256": {
+    "backend/src/quant_workbench/position.py": "5e77eac1558a3d3cbc515417c12af2a783aea4756a62db9b7c5f67425952785c",
+    "scripts/study_olmar.py": "8db25e77bc166cb8f8ae7c23de881456b6ee85b6fbbe4eaa5ba150271fc04ca7",
+    "scripts/study_daily_equal_temporal.py": "d5337bdcbd832f89de054ffc0c384c0170ccf310abe80b9869151e8d787f6d41",
+    "scripts/study_adaptive_transfer.py": "89da37d76088214cb6e812c394f56d6cf70224d5dbfc64331d98fbf79798f025"
+  },
+  "protocol": "2026-09-21-stop-state-recheck-protocol.md",
+  "unique_relevant_tests": 31,
+  "legacy_reproduction": "test_completed_stop_allows_new_signal[1] failed before fix; frequency=5 passed"
+}
