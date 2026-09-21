@@ -1,0 +1,22 @@
+{
+  "url": "https://api.crossref.org/works/10.2139/ssrn.1028206",
+  "title": [
+    "Mean-Semivariance Optimization: A Heuristic Approach"
+  ],
+  "abstract": "<jats:p>Academics and practitioners optimize portfolios using far more often the mean-variance approach than the mean-semivariance approach, and that despite the fact that semivariance is often considered a more plausible measure of risk than variance. The popularity of the mean-variance approach follows in part from the fact that mean-variance problems have well-known closed-form solutions, whereas mean-semivariance optimal portfolios cannot be determined without resorting to obscure numerical algorithms. This follows from the fact that, unlike the exogenous covariance matrix, the semicovariance matrix is endogenous. This article proposes a heuristic approach that yields a symmetric and exogenous semicovariance matrix, which enables the determination of mean-semivariance optimal portfolios by using the well-known closed-form solutions of mean-variance problems. The heuristic proposed is shown to be both simple and accurate.</jats:p>",
+  "authors": [
+    {
+      "given": "Javier",
+      "family": "Estrada",
+      "sequence": "first",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    }
+  ],
+  "full_text_read": false
+}
