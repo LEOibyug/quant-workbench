@@ -1,0 +1,7 @@
+{
+  "negative_profit_preserved": true,
+  "unit_invariant": true,
+  "missing_rejected": true,
+  "conflict_rejected": true,
+  "later_comparative_does_not_replace_first_filing": true
+}
