@@ -1,0 +1,16 @@
+{
+  "status": "completed",
+  "symbol": "LIN",
+  "source_exdate": "2023-03-13",
+  "source_exdate_independently_verified": false,
+  "issuer_single_entitlement": 1.275,
+  "raw_previous_close": 341.54,
+  "duplicate_component_factor": 0.9962669087076185,
+  "annual_log_trend_inflation_if_window_crosses_event": 0.0037400766677952594,
+  "nominal_adjustment": "Before source exdate divide adjusted close by extra dividend factor; retains vendor rounding error",
+  "changed_target_records": [],
+  "entire_target_mapping_equal": true,
+  "issuer_evidence_sha256": "2941891272f297962de57efc63a1a7a59b23ad0b7beb7fc0727cfe95aa4f8031",
+  "no_account_rerun_reason": "Exact same targets imply identical deterministic execution under frozen configuration",
+  "limitation": "One identified duplicate only; not full corporate-action corrected history"
+}
