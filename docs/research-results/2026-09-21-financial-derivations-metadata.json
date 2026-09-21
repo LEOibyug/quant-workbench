@@ -1,0 +1,13 @@
+{
+  "source_sha256": {
+    "scripts/audit_financial_derivations.py": "6cb65d0490f1e96af30b53f78ffa9463818e0f41d3ea2746ec8343c24e10e1ac",
+    "scripts/audit_fscore_data.py": "59cd8ccc3b2ec9975e45ef58473e67e93eb75624abd25f99817d8137bb91e9a4"
+  },
+  "asof": "2025-09-01",
+  "audit_counts": {
+    "direct_reconciles": 274,
+    "derived": 184,
+    "direct_not_comparable_or_mismatch": 17,
+    "conflicting_cost_tags": 3
+  }
+}

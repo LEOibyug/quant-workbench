@@ -145,7 +145,16 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--symbol", help="单股查询；省略则生成50股覆盖报告")
     parser.add_argument("--date", default="2025-09-01")
+    parser.add_argument(
+        "--derive-gross-profit",
+        action="store_true",
+        help="仅单股查询：允许同一财报同期间收入减成本推导毛利润",
+    )
     args = parser.parse_args()
+    if args.derive_gross_profit and not args.symbol:
+        parser.error(
+            "--derive-gross-profit 需要 --symbol；全池推导审计使用audit_financial_derivations.py"
+        )
     asof = date.fromisoformat(args.date).isoformat()
     if args.symbol:
         symbol = args.symbol.strip().upper()
@@ -154,11 +163,16 @@ def main():
             (p for p in SEC.glob("*-facts.json") if p.name.removesuffix("-facts.json") == symbol),
             None,
         )
-        result = (
-            judge(json.loads(path.read_text()), asof, symbol, verified=symbol != "XOM")
-            if path
-            else dict(symbol=symbol, asof=asof, status="证据不足", reason="缺少财报缓存")
-        )
+        if path:
+            facts = json.loads(path.read_text())
+            if args.derive_gross_profit:
+                from audit_financial_derivations import enrich
+
+                facts, _audit = enrich(facts, asof)
+            result = judge(facts, asof, symbol, verified=symbol != "XOM")
+            result["gross_profit_derivation_enabled"] = args.derive_gross_profit
+        else:
+            result = dict(symbol=symbol, asof=asof, status="证据不足", reason="缺少财报缓存")
         print(json.dumps(result, ensure_ascii=False, indent=2))
         return
     rows = []
