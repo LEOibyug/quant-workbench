@@ -1,0 +1,13 @@
+{
+  "controls_reproduced": 28,
+  "target_checks": 2396,
+  "max_risk_share_error": 1.1630574281440431e-10,
+  "hashes": {
+    "artifacts/research/annual-momentum/original20.parquet": "71f9c93d7cdb5c55385351a0f5a525ca088c2a4533c401a3c90b557167119ea5",
+    "artifacts/research/annual-momentum/alternate20.parquet": "9ccde0f6b6ba8d52df76079c376bc6fbace68ec331819e75393a31e52fae1a6c",
+    "artifacts/research/annual-momentum/random10.parquet": "133d28fe39d2687ba7fd266564d6a1a09097cd7ee07a8f16e64883aa526646e7",
+    "artifacts/research/annual-momentum/random10-temporal.parquet": "e1f9fee2a0e61ecf4784ba74f29b7fd582a1689d154f8754ca710ade536ea52b",
+    "scripts/study_erc.py": "c9af2d2176a78cf6c2c0bed6fb7db428ad7a1e484289afe1473a76f0dbf44cca",
+    "backend/src/quant_workbench/position.py": "1e6623296d3047befe148eb223908a473eb61c055cdaf6ee609723d658c2cab1"
+  }
+}

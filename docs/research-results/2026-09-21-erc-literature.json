@@ -1,0 +1,46 @@
+{
+  "title": [
+    "The Properties of Equally Weighted Risk Contribution Portfolios"
+  ],
+  "author": [
+    {
+      "given": "S\u00e9bastien",
+      "family": "Maillard",
+      "sequence": "first",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Thierry",
+      "family": "Roncalli",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "J\u00e9r\u00f4me",
+      "family": "Te\u00efletche",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    }
+  ],
+  "DOI": "10.3905/jpm.2010.36.4.060",
+  "abstract": null,
+  "URL": "https://doi.org/10.3905/jpm.2010.36.4.060"
+}
