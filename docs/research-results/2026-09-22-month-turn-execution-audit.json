@@ -1,0 +1,44 @@
+[
+  {
+    "pool": "random10",
+    "cost_multiplier": 1,
+    "off_window_close_positions": 18,
+    "maximum_off_window_close_exposure_pct": 9.61383107927325,
+    "first_halt": null
+  },
+  {
+    "pool": "random10",
+    "cost_multiplier": 2,
+    "off_window_close_positions": 17,
+    "maximum_off_window_close_exposure_pct": 9.415644144713816,
+    "first_halt": null
+  },
+  {
+    "pool": "transfer12",
+    "cost_multiplier": 1,
+    "off_window_close_positions": 17,
+    "maximum_off_window_close_exposure_pct": 8.250017914337635,
+    "first_halt": null
+  },
+  {
+    "pool": "transfer12",
+    "cost_multiplier": 2,
+    "off_window_close_positions": 17,
+    "maximum_off_window_close_exposure_pct": 7.4687675580983965,
+    "first_halt": null
+  },
+  {
+    "pool": "new12",
+    "cost_multiplier": 1,
+    "off_window_close_positions": 9,
+    "maximum_off_window_close_exposure_pct": 3.757702071343777,
+    "first_halt": "2025-04-03"
+  },
+  {
+    "pool": "new12",
+    "cost_multiplier": 2,
+    "off_window_close_positions": 7,
+    "maximum_off_window_close_exposure_pct": 3.4336657056252995,
+    "first_halt": "2024-10-03"
+  }
+]
