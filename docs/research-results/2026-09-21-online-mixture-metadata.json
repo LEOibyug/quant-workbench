@@ -1,0 +1,10 @@
+{
+  "data_sha256": {
+    "artifacts/research/annual-momentum/original20.parquet": "71f9c93d7cdb5c55385351a0f5a525ca088c2a4533c401a3c90b557167119ea5",
+    "artifacts/research/annual-momentum/alternate20.parquet": "9ccde0f6b6ba8d52df76079c376bc6fbace68ec331819e75393a31e52fae1a6c",
+    "artifacts/research/annual-momentum/random10.parquet": "133d28fe39d2687ba7fd266564d6a1a09097cd7ee07a8f16e64883aa526646e7",
+    "artifacts/research/annual-momentum/random10-temporal.parquet": "e1f9fee2a0e61ecf4784ba74f29b7fd582a1689d154f8754ca710ade536ea52b"
+  },
+  "script_sha256": "a18ae64741c3c10559cd6571be81c7d64cdd5f6a825047b9f6365c4ef841614c",
+  "runs": 56
+}
