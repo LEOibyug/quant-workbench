@@ -1,0 +1,18 @@
+[
+  {
+    "symbol": "SPGI",
+    "year": 2022,
+    "url": "https://www.annualreports.com/HostedData/AnnualReportArchive/s/NYSE_SPGI_2022.pdf",
+    "status": "downloaded_and_relevant_sections_read",
+    "path": "artifacts/research/receivables-filings/SPGI-2022.pdf",
+    "sha256": "cff5efb97e53ac4251947e4b57593456467bd6b1dffb3ae11f12c1ea6ee3764b",
+    "evidence": "Overview: merger completed 2022-02-28; 2022 consolidated financial statements include IHS Markit from acquisition date. Balance sheet AR 2022 2494m / 2021 1650m."
+  },
+  {
+    "symbol": "ABT",
+    "year": 2021,
+    "url": "https://www.annualreports.com/HostedData/AnnualReportArchive/a/NYSE_ABT_2021.pdf",
+    "status": "cancelled_during_body_download",
+    "evidence": "No complete local PDF; no annual report narrative claimed read. Cached SEC companyfacts used only for ratios."
+  }
+]

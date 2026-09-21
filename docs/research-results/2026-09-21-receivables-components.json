@@ -1,0 +1,780 @@
+[
+  {
+    "symbol": "ABT",
+    "accession": "0001104659-22-025141",
+    "fiscal_end": "2021-12-31",
+    "filed": "2022-02-18",
+    "dsri": 0.8125800551282463,
+    "ar_growth_pct": 1.138135328967893,
+    "revenue_growth_pct": 24.46544151641239,
+    "receivables": 6487000000,
+    "prior_receivables": 6414000000,
+    "revenue": 43075000000,
+    "prior_revenue": 34608000000,
+    "acquisition_disclosures": [],
+    "scope_comparability_verified": false
+  },
+  {
+    "symbol": "ABT",
+    "accession": "0001628280-23-004026",
+    "fiscal_end": "2022-12-31",
+    "filed": "2023-02-17",
+    "dsri": 0.9458407271627003,
+    "ar_growth_pct": -4.146755048558659,
+    "revenue_growth_pct": 1.3418456181079508,
+    "receivables": 6218000000,
+    "prior_receivables": 6487000000,
+    "revenue": 43653000000,
+    "prior_revenue": 43075000000,
+    "acquisition_disclosures": [],
+    "scope_comparability_verified": false
+  },
+  {
+    "symbol": "ABT",
+    "accession": "0001628280-24-005348",
+    "fiscal_end": "2023-12-31",
+    "filed": "2024-02-16",
+    "dsri": 1.1490958968589302,
+    "ar_growth_pct": 5.5805725313605725,
+    "revenue_growth_pct": -8.11857146129704,
+    "receivables": 6565000000,
+    "prior_receivables": 6218000000,
+    "revenue": 40109000000,
+    "prior_revenue": 43653000000,
+    "acquisition_disclosures": [],
+    "scope_comparability_verified": false
+  },
+  {
+    "symbol": "ABT",
+    "accession": "0001628280-25-007110",
+    "fiscal_end": "2024-12-31",
+    "filed": "2025-02-21",
+    "dsri": 1.0085441541311921,
+    "ar_growth_pct": 5.483625285605487,
+    "revenue_growth_pct": 4.5899922710613605,
+    "receivables": 6925000000,
+    "prior_receivables": 6565000000,
+    "revenue": 41950000000,
+    "prior_revenue": 40109000000,
+    "acquisition_disclosures": [],
+    "scope_comparability_verified": false
+  },
+  {
+    "symbol": "ABT",
+    "accession": "0001628280-26-010185",
+    "fiscal_end": "2025-12-31",
+    "filed": "2026-02-20",
+    "dsri": 1.0835587615002569,
+    "ar_growth_pct": 14.498194945848386,
+    "revenue_growth_pct": 5.668653158522052,
+    "receivables": 7929000000,
+    "prior_receivables": 6925000000,
+    "revenue": 44328000000,
+    "prior_revenue": 41950000000,
+    "acquisition_disclosures": [],
+    "scope_comparability_verified": false
+  },
+  {
+    "symbol": "ADP",
+    "accession": "0000008670-22-000038",
+    "fiscal_end": "2022-06-30",
+    "filed": "2022-08-03",
+    "dsri": 1.0573067374027547,
+    "ar_growth_pct": 16.249908337610908,
+    "revenue_growth_pct": 9.94908499606808,
+    "receivables": 3170600000,
+    "prior_receivables": 2727400000,
+    "revenue": 16498300000,
+    "prior_revenue": 15005400000,
+    "acquisition_disclosures": [
+      {
+        "start": "2021-07-01",
+        "end": "2022-06-30",
+        "val": 11700000,
+        "accn": "0000008670-22-000038",
+        "fy": 2022,
+        "fp": "FY",
+        "form": "10-K",
+        "filed": "2022-08-03",
+        "tag": "PaymentsToAcquireBusinessesNetOfCashAcquired"
+      }
+    ],
+    "scope_comparability_verified": false
+  },
+  {
+    "symbol": "ADP",
+    "accession": "0000008670-23-000030",
+    "fiscal_end": "2023-06-30",
+    "filed": "2023-08-03",
+    "dsri": 0.8694402843860393,
+    "ar_growth_pct": -5.077903235980575,
+    "revenue_growth_pct": 9.176096931198963,
+    "receivables": 3009600000,
+    "prior_receivables": 3170600000,
+    "revenue": 18012200000,
+    "prior_revenue": 16498300000,
+    "acquisition_disclosures": [
+      {
+        "start": "2022-07-01",
+        "end": "2023-06-30",
+        "val": 32400000,
+        "accn": "0000008670-23-000030",
+        "fy": 2023,
+        "fp": "FY",
+        "form": "10-K",
+        "filed": "2023-08-03",
+        "tag": "PaymentsToAcquireBusinessesNetOfCashAcquired"
+      }
+    ],
+    "scope_comparability_verified": false
+  },
+  {
+    "symbol": "ADP",
+    "accession": "0000008670-24-000024",
+    "fiscal_end": "2024-06-30",
+    "filed": "2024-08-07",
+    "dsri": 1.0684743416728861,
+    "ar_growth_pct": 13.908825093035615,
+    "revenue_growth_pct": 6.6088539989562545,
+    "receivables": 3428200000,
+    "prior_receivables": 3009600000,
+    "revenue": 19202600000,
+    "prior_revenue": 18012200000,
+    "acquisition_disclosures": [
+      {
+        "start": "2023-07-01",
+        "end": "2024-06-30",
+        "val": 33600000,
+        "accn": "0000008670-24-000024",
+        "fy": 2024,
+        "fp": "FY",
+        "form": "10-K",
+        "filed": "2024-08-07",
+        "tag": "PaymentsToAcquireBusinessesNetOfCashAcquired"
+      }
+    ],
+    "scope_comparability_verified": false
+  },
+  {
+    "symbol": "ADP",
+    "accession": "0000008670-25-000037",
+    "fiscal_end": "2025-06-30",
+    "filed": "2025-08-06",
+    "dsri": 0.9750471040089079,
+    "ar_growth_pct": 4.401726853742494,
+    "revenue_growth_pct": 7.073521293991436,
+    "receivables": 3579100000,
+    "prior_receivables": 3428200000,
+    "revenue": 20560900000,
+    "prior_revenue": 19202600000,
+    "acquisition_disclosures": [
+      {
+        "start": "2024-07-01",
+        "end": "2025-06-30",
+        "val": 1165100000,
+        "accn": "0000008670-25-000037",
+        "fy": 2025,
+        "fp": "FY",
+        "form": "10-K",
+        "filed": "2025-08-06",
+        "tag": "PaymentsToAcquireBusinessesNetOfCashAcquired"
+      }
+    ],
+    "scope_comparability_verified": false
+  },
+  {
+    "symbol": "ADP",
+    "accession": "0000008670-26-000030",
+    "fiscal_end": "2026-06-30",
+    "filed": "2026-08-05",
+    "dsri": 0.9216447817620488,
+    "ar_growth_pct": -1.6205191249196726,
+    "revenue_growth_pct": 6.743381855852615,
+    "receivables": 3521100000,
+    "prior_receivables": 3579100000,
+    "revenue": 21947400000,
+    "prior_revenue": 20560900000,
+    "acquisition_disclosures": [
+      {
+        "start": "2025-07-01",
+        "end": "2026-06-30",
+        "val": 22800000,
+        "accn": "0000008670-26-000030",
+        "fy": 2026,
+        "fp": "FY",
+        "form": "10-K",
+        "filed": "2026-08-05",
+        "frame": "CY2026",
+        "tag": "PaymentsToAcquireBusinessesNetOfCashAcquired"
+      }
+    ],
+    "scope_comparability_verified": false
+  },
+  {
+    "symbol": "LIN",
+    "accession": "0001628280-22-004180",
+    "fiscal_end": "2021-12-31",
+    "filed": "2022-02-28",
+    "dsri": 0.9552024354922323,
+    "ar_growth_pct": 7.967362610991113,
+    "revenue_growth_pct": 13.030870315310361,
+    "receivables": 4499000000,
+    "prior_receivables": 4167000000,
+    "revenue": 30793000000,
+    "prior_revenue": 27243000000,
+    "acquisition_disclosures": [
+      {
+        "start": "2021-01-01",
+        "end": "2021-12-31",
+        "val": 88000000,
+        "accn": "0001628280-22-004180",
+        "fy": 2021,
+        "fp": "FY",
+        "form": "10-K",
+        "filed": "2022-02-28",
+        "tag": "PaymentsToAcquireBusinessesNetOfCashAcquired"
+      }
+    ],
+    "scope_comparability_verified": false
+  },
+  {
+    "symbol": "LIN",
+    "accession": "0001628280-23-005434",
+    "fiscal_end": "2022-12-31",
+    "filed": "2023-02-28",
+    "dsri": 0.9352495082163885,
+    "ar_growth_pct": 1.3336296954878923,
+    "revenue_growth_pct": 8.349300165622054,
+    "receivables": 4559000000,
+    "prior_receivables": 4499000000,
+    "revenue": 33364000000,
+    "prior_revenue": 30793000000,
+    "acquisition_disclosures": [
+      {
+        "start": "2022-01-01",
+        "end": "2022-12-31",
+        "val": 110000000,
+        "accn": "0001628280-23-005434",
+        "fy": 2022,
+        "fp": "FY",
+        "form": "10-K",
+        "filed": "2023-02-28",
+        "tag": "PaymentsToAcquireBusinessesNetOfCashAcquired"
+      }
+    ],
+    "scope_comparability_verified": false
+  },
+  {
+    "symbol": "LIN",
+    "accession": "0001628280-24-007424",
+    "fiscal_end": "2023-12-31",
+    "filed": "2024-02-28",
+    "dsri": 1.0509406823088152,
+    "ar_growth_pct": 3.4876069313446,
+    "revenue_growth_pct": -1.5285936938017053,
+    "receivables": 4718000000,
+    "prior_receivables": 4559000000,
+    "revenue": 32854000000,
+    "prior_revenue": 33364000000,
+    "acquisition_disclosures": [
+      {
+        "start": "2023-01-01",
+        "end": "2023-12-31",
+        "val": 953000000,
+        "accn": "0001628280-24-007424",
+        "fy": 2023,
+        "fp": "FY",
+        "form": "10-K",
+        "filed": "2024-02-28",
+        "tag": "PaymentsToAcquireBusinessesNetOfCashAcquired"
+      }
+    ],
+    "scope_comparability_verified": false
+  },
+  {
+    "symbol": "LIN",
+    "accession": "0001628280-25-007990",
+    "fiscal_end": "2024-12-31",
+    "filed": "2025-02-26",
+    "dsri": 0.9751704223010387,
+    "ar_growth_pct": -2.034760491733789,
+    "revenue_growth_pct": 0.45960918000851336,
+    "receivables": 4622000000,
+    "prior_receivables": 4718000000,
+    "revenue": 33005000000,
+    "prior_revenue": 32854000000,
+    "acquisition_disclosures": [
+      {
+        "start": "2024-01-01",
+        "end": "2024-12-31",
+        "val": 317000000,
+        "accn": "0001628280-25-007990",
+        "fy": 2024,
+        "fp": "FY",
+        "form": "10-K",
+        "filed": "2025-02-26",
+        "tag": "PaymentsToAcquireBusinessesNetOfCashAcquired"
+      }
+    ],
+    "scope_comparability_verified": false
+  },
+  {
+    "symbol": "LIN",
+    "accession": "0001628280-26-011430",
+    "fiscal_end": "2025-12-31",
+    "filed": "2026-02-25",
+    "dsri": 1.0434135159326812,
+    "ar_growth_pct": 7.442665512765045,
+    "revenue_growth_pct": 2.9722769277382266,
+    "receivables": 4966000000,
+    "prior_receivables": 4622000000,
+    "revenue": 33986000000,
+    "prior_revenue": 33005000000,
+    "acquisition_disclosures": [
+      {
+        "start": "2025-01-01",
+        "end": "2025-12-31",
+        "val": 412000000,
+        "accn": "0001628280-26-011430",
+        "fy": 2025,
+        "fp": "FY",
+        "form": "10-K",
+        "filed": "2026-02-25",
+        "frame": "CY2025",
+        "tag": "PaymentsToAcquireBusinessesNetOfCashAcquired"
+      }
+    ],
+    "scope_comparability_verified": false
+  },
+  {
+    "symbol": "MDT",
+    "accession": "0001613103-22-000023",
+    "fiscal_end": "2022-04-29",
+    "filed": "2022-06-23",
+    "dsri": 0.9659704088310894,
+    "ar_growth_pct": 1.6294397656536175,
+    "revenue_growth_pct": 5.209682239266855,
+    "receivables": 5551000000,
+    "prior_receivables": 5462000000,
+    "revenue": 31686000000,
+    "prior_revenue": 30117000000,
+    "acquisition_disclosures": [
+      {
+        "start": "2021-05-01",
+        "end": "2022-04-29",
+        "val": 91000000,
+        "accn": "0001613103-22-000023",
+        "fy": 2022,
+        "fp": "FY",
+        "form": "10-K",
+        "filed": "2022-06-23",
+        "tag": "PaymentsToAcquireBusinessesNetOfCashAcquired"
+      }
+    ],
+    "scope_comparability_verified": false
+  },
+  {
+    "symbol": "MDT",
+    "accession": "0001613103-23-000040",
+    "fiscal_end": "2023-04-28",
+    "filed": "2023-06-22",
+    "dsri": 1.0964084871816042,
+    "ar_growth_pct": 8.052603134570347,
+    "revenue_growth_pct": -1.4485892823328905,
+    "receivables": 5998000000,
+    "prior_receivables": 5551000000,
+    "revenue": 31227000000,
+    "prior_revenue": 31686000000,
+    "acquisition_disclosures": [
+      {
+        "start": "2022-04-30",
+        "end": "2023-04-28",
+        "val": 1867000000,
+        "accn": "0001613103-23-000040",
+        "fy": 2023,
+        "fp": "FY",
+        "form": "10-K",
+        "filed": "2023-06-22",
+        "tag": "PaymentsToAcquireBusinessesNetOfCashAcquired"
+      }
+    ],
+    "scope_comparability_verified": false
+  },
+  {
+    "symbol": "MDT",
+    "accession": "0001613103-24-000072",
+    "fiscal_end": "2024-04-26",
+    "filed": "2024-06-20",
+    "dsri": 0.9857808244819711,
+    "ar_growth_pct": 2.167389129709907,
+    "revenue_growth_pct": 3.6410798347583873,
+    "receivables": 6128000000,
+    "prior_receivables": 5998000000,
+    "revenue": 32364000000,
+    "prior_revenue": 31227000000,
+    "acquisition_disclosures": [
+      {
+        "start": "2023-04-29",
+        "end": "2024-04-26",
+        "val": 211000000,
+        "accn": "0001613103-24-000072",
+        "fy": 2024,
+        "fp": "FY",
+        "form": "10-K",
+        "filed": "2024-06-20",
+        "tag": "PaymentsToAcquireBusinessesNetOfCashAcquired"
+      }
+    ],
+    "scope_comparability_verified": false
+  },
+  {
+    "symbol": "MDT",
+    "accession": "0001613103-25-000091",
+    "fiscal_end": "2025-04-25",
+    "filed": "2025-06-20",
+    "dsri": 1.0259675977687557,
+    "ar_growth_pct": 6.315274151436023,
+    "revenue_growth_pct": 3.6243974786800193,
+    "receivables": 6515000000,
+    "prior_receivables": 6128000000,
+    "revenue": 33537000000,
+    "prior_revenue": 32364000000,
+    "acquisition_disclosures": [
+      {
+        "start": "2024-04-27",
+        "end": "2025-04-25",
+        "val": 98000000,
+        "accn": "0001613103-25-000091",
+        "fy": 2025,
+        "fp": "FY",
+        "form": "10-K",
+        "filed": "2025-06-20",
+        "tag": "PaymentsToAcquireBusinessesNetOfCashAcquired"
+      }
+    ],
+    "scope_comparability_verified": false
+  },
+  {
+    "symbol": "MDT",
+    "accession": "0001628280-26-044354",
+    "fiscal_end": "2026-04-24",
+    "filed": "2026-06-18",
+    "dsri": 0.9403778567740031,
+    "ar_growth_pct": 1.9646968534152043,
+    "revenue_growth_pct": 8.429495780779428,
+    "receivables": 6643000000,
+    "prior_receivables": 6515000000,
+    "revenue": 36364000000,
+    "prior_revenue": 33537000000,
+    "acquisition_disclosures": [
+      {
+        "start": "2025-04-26",
+        "end": "2026-04-24",
+        "val": 406000000,
+        "accn": "0001628280-26-044354",
+        "fy": 2026,
+        "fp": "FY",
+        "form": "10-K",
+        "filed": "2026-06-18",
+        "frame": "CY2025",
+        "tag": "PaymentsToAcquireBusinessesNetOfCashAcquired"
+      }
+    ],
+    "scope_comparability_verified": false
+  },
+  {
+    "symbol": "SPGI",
+    "accession": "0000064040-22-000055",
+    "fiscal_end": "2021-12-31",
+    "filed": "2022-02-08",
+    "dsri": 0.9290449864232914,
+    "ar_growth_pct": 3.5781544256120457,
+    "revenue_growth_pct": 11.488847084117172,
+    "receivables": 1650000000,
+    "prior_receivables": 1593000000,
+    "revenue": 8297000000,
+    "prior_revenue": 7442000000,
+    "acquisition_disclosures": [
+      {
+        "start": "2021-01-01",
+        "end": "2021-12-31",
+        "val": 99000000,
+        "accn": "0000064040-22-000055",
+        "fy": 2021,
+        "fp": "FY",
+        "form": "10-K",
+        "filed": "2022-02-08",
+        "tag": "PaymentsToAcquireBusinessesNetOfCashAcquired"
+      }
+    ],
+    "scope_comparability_verified": false
+  },
+  {
+    "symbol": "SPGI",
+    "accession": "0000064040-23-000058",
+    "fiscal_end": "2022-12-31",
+    "filed": "2023-02-10",
+    "dsri": 1.1216386022825517,
+    "ar_growth_pct": 51.15151515151515,
+    "revenue_growth_pct": 34.75955164517295,
+    "receivables": 2494000000,
+    "prior_receivables": 1650000000,
+    "revenue": 11181000000,
+    "prior_revenue": 8297000000,
+    "acquisition_disclosures": [
+      {
+        "start": "2022-01-01",
+        "end": "2022-12-31",
+        "val": 43536000000,
+        "accn": "0000064040-23-000058",
+        "fy": 2022,
+        "fp": "FY",
+        "form": "10-K",
+        "filed": "2023-02-10",
+        "tag": "BusinessCombinationConsiderationTransferredEquityInterestsIssuedAndIssuable"
+      },
+      {
+        "start": "2022-01-01",
+        "end": "2022-12-31",
+        "val": -210000000,
+        "accn": "0000064040-23-000058",
+        "fy": 2022,
+        "fp": "FY",
+        "form": "10-K",
+        "filed": "2023-02-10",
+        "tag": "PaymentsToAcquireBusinessesNetOfCashAcquired"
+      }
+    ],
+    "scope_comparability_verified": false
+  },
+  {
+    "symbol": "SPGI",
+    "accession": "0000064040-24-000071",
+    "fiscal_end": "2023-12-31",
+    "filed": "2024-02-09",
+    "dsri": 1.0137960295715558,
+    "ar_growth_pct": 13.31194867682437,
+    "revenue_growth_pct": 11.769966908147754,
+    "receivables": 2826000000,
+    "prior_receivables": 2494000000,
+    "revenue": 12497000000,
+    "prior_revenue": 11181000000,
+    "acquisition_disclosures": [
+      {
+        "start": "2023-01-01",
+        "end": "2023-12-31",
+        "val": 0,
+        "accn": "0000064040-24-000071",
+        "fy": 2023,
+        "fp": "FY",
+        "form": "10-K",
+        "filed": "2024-02-09",
+        "frame": "CY2023",
+        "tag": "BusinessCombinationConsiderationTransferredEquityInterestsIssuedAndIssuable"
+      },
+      {
+        "start": "2023-01-01",
+        "end": "2023-12-31",
+        "val": 296000000,
+        "accn": "0000064040-24-000071",
+        "fy": 2023,
+        "fp": "FY",
+        "form": "10-K",
+        "filed": "2024-02-09",
+        "tag": "PaymentsToAcquireBusinessesNetOfCashAcquired"
+      }
+    ],
+    "scope_comparability_verified": false
+  },
+  {
+    "symbol": "SPGI",
+    "accession": "0000064040-26-000013",
+    "fiscal_end": "2025-12-31",
+    "filed": "2026-02-11",
+    "dsri": 1.1119309742889378,
+    "ar_growth_pct": 20.020927799093123,
+    "revenue_growth_pct": 7.939189189189189,
+    "receivables": 3441000000,
+    "prior_receivables": 2867000000,
+    "revenue": 15336000000,
+    "prior_revenue": 14208000000,
+    "acquisition_disclosures": [
+      {
+        "start": "2025-01-01",
+        "end": "2025-12-31",
+        "val": 2023000000,
+        "accn": "0000064040-26-000013",
+        "fy": 2025,
+        "fp": "FY",
+        "form": "10-K",
+        "filed": "2026-02-11",
+        "frame": "CY2025",
+        "tag": "PaymentsToAcquireBusinessesNetOfCashAcquired"
+      }
+    ],
+    "scope_comparability_verified": false
+  },
+  {
+    "symbol": "UPS",
+    "accession": "0001090727-22-000007",
+    "fiscal_end": "2021-12-31",
+    "filed": "2022-02-22",
+    "dsri": 1.0148058673677331,
+    "ar_growth_pct": 16.660465116279077,
+    "revenue_growth_pct": 14.958406201257258,
+    "receivables": 12541000000,
+    "prior_receivables": 10750000000,
+    "revenue": 97287000000,
+    "prior_revenue": 84628000000,
+    "acquisition_disclosures": [
+      {
+        "start": "2021-01-01",
+        "end": "2021-12-31",
+        "val": 602000000,
+        "accn": "0001090727-22-000007",
+        "fy": 2021,
+        "fp": "FY",
+        "form": "10-K",
+        "filed": "2022-02-22",
+        "tag": "PaymentsToAcquireBusinessesNetOfCashAcquired"
+      }
+    ],
+    "scope_comparability_verified": false
+  },
+  {
+    "symbol": "UPS",
+    "accession": "0001090727-23-000006",
+    "fiscal_end": "2022-12-31",
+    "filed": "2023-02-21",
+    "dsri": 0.9728399573908731,
+    "ar_growth_pct": 0.33490152300454934,
+    "revenue_growth_pct": 3.1360819020012975,
+    "receivables": 12583000000,
+    "prior_receivables": 12541000000,
+    "revenue": 100338000000,
+    "prior_revenue": 97287000000,
+    "acquisition_disclosures": [
+      {
+        "start": "2022-01-01",
+        "end": "2022-12-31",
+        "val": 755000000,
+        "accn": "0001090727-23-000006",
+        "fy": 2022,
+        "fp": "FY",
+        "form": "10-K",
+        "filed": "2023-02-21",
+        "tag": "PaymentsToAcquireBusinessesNetOfCashAcquired"
+      }
+    ],
+    "scope_comparability_verified": false
+  },
+  {
+    "symbol": "UPS",
+    "accession": "0001090727-24-000008",
+    "fiscal_end": "2023-12-31",
+    "filed": "2024-02-20",
+    "dsri": 0.983282572137201,
+    "ar_growth_pct": -10.86386394341572,
+    "revenue_growth_pct": -9.348402399888379,
+    "receivables": 11216000000,
+    "prior_receivables": 12583000000,
+    "revenue": 90958000000,
+    "prior_revenue": 100338000000,
+    "acquisition_disclosures": [
+      {
+        "start": "2023-01-01",
+        "end": "2023-12-31",
+        "val": 1329000000,
+        "accn": "0001090727-24-000008",
+        "fy": 2023,
+        "fp": "FY",
+        "form": "10-K",
+        "filed": "2024-02-20",
+        "tag": "PaymentsToAcquireBusinessesNetOfCashAcquired"
+      }
+    ],
+    "scope_comparability_verified": false
+  },
+  {
+    "symbol": "UPS",
+    "accession": "0001090727-25-000019",
+    "fiscal_end": "2024-12-31",
+    "filed": "2025-02-18",
+    "dsri": 0.9680483765916923,
+    "ar_growth_pct": -3.0759629101283825,
+    "revenue_growth_pct": 0.12313375404031657,
+    "receivables": 10871000000,
+    "prior_receivables": 11216000000,
+    "revenue": 91070000000,
+    "prior_revenue": 90958000000,
+    "acquisition_disclosures": [
+      {
+        "start": "2024-01-01",
+        "end": "2024-12-31",
+        "val": 71000000,
+        "accn": "0001090727-25-000019",
+        "fy": 2024,
+        "fp": "FY",
+        "form": "10-K",
+        "filed": "2025-02-18",
+        "tag": "PaymentsToAcquireBusinessesNetOfCashAcquired"
+      }
+    ],
+    "scope_comparability_verified": false
+  },
+  {
+    "symbol": "UPS",
+    "accession": "0001628280-26-008432",
+    "fiscal_end": "2025-12-31",
+    "filed": "2026-02-17",
+    "dsri": 1.0591076003751108,
+    "ar_growth_pct": 3.1091895869745256,
+    "revenue_growth_pct": -2.6452179642033613,
+    "receivables": 11209000000,
+    "prior_receivables": 10871000000,
+    "revenue": 88661000000,
+    "prior_revenue": 91070000000,
+    "acquisition_disclosures": [
+      {
+        "start": "2025-01-01",
+        "end": "2025-12-31",
+        "val": 1968000000,
+        "accn": "0001628280-26-008432",
+        "fy": 2025,
+        "fp": "FY",
+        "form": "10-K",
+        "filed": "2026-02-17",
+        "frame": "CY2025",
+        "tag": "PaymentsToAcquireBusinessesNetOfCashAcquired"
+      }
+    ],
+    "scope_comparability_verified": false
+  },
+  {
+    "symbol": "VZ",
+    "accession": "0000732712-22-000008",
+    "fiscal_end": "2021-12-31",
+    "filed": "2022-02-11",
+    "dsri": 0.9573256524593947,
+    "ar_growth_pct": -0.2968599740770128,
+    "revenue_growth_pct": 4.1475696068344,
+    "receivables": 23846000000,
+    "prior_receivables": 23917000000,
+    "revenue": 133613000000,
+    "prior_revenue": 128292000000,
+    "acquisition_disclosures": [
+      {
+        "start": "2021-01-01",
+        "end": "2021-12-31",
+        "val": 4065000000,
+        "accn": "0000732712-22-000008",
+        "fy": 2021,
+        "fp": "FY",
+        "form": "10-K",
+        "filed": "2022-02-11",
+        "tag": "PaymentsToAcquireBusinessesNetOfCashAcquired"
+      }
+    ],
+    "scope_comparability_verified": false
+  }
+]
