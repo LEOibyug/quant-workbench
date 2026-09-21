@@ -1,0 +1,50 @@
+[
+  {
+    "document": "AAPL",
+    "url": "https://www.annualreports.com/HostedData/AnnualReportArchive/a/NASDAQ_AAPL_2024.pdf",
+    "accession": "0000320193-24-000123",
+    "sha256": "ec74758cd767465362c641cf2fd5d8fedd477aed2bf7f62117e67610435dcb88",
+    "excerpts": [
+      {
+        "pdf_page": 36,
+        "text": "Financing activities:\n  Payments for taxes related to net share settlement of equity awards                                                (5,441)                 (5,431)                (6,223)\n  Payments for dividends and dividend equivalents                                                                   (15,234)               (15,025)                (14,841)\n  Repurchases of common stock                                                                                       (94,949)               (77,550)                (89,402)"
+      },
+      {
+        "pdf_page": 36,
+        "text": "  Payments for taxes related to net share settlement of equity awards                                                (5,441)                 (5,431)                (6,223)\n  Payments for dividends and dividend equivalents                                                                   (15,234)               (15,025)                (14,841)\n  Repurchases of common stock                                                                                       (94,949)               (77,550)                (89,402)\n  Proceeds from issuance of term debt, net                                                                               —                    5,228                  5,465"
+      },
+      {
+        "pdf_page": 36,
+        "text": "  Payments for dividends and dividend equivalents                                                                   (15,234)               (15,025)                (14,841)\n  Repurchases of common stock                                                                                       (94,949)               (77,550)                (89,402)\n  Proceeds from issuance of term debt, net                                                                               —                    5,228                  5,465\n  Repayments of term debt                                                                                            (9,958)                (11,151)                (9,543)"
+      }
+    ]
+  },
+  {
+    "document": "ORCL-2024",
+    "url": "https://www.annualreports.com/HostedData/AnnualReportArchive/o/NYSE_ORCL_2024.pdf",
+    "accession": "0000950170-24-075605",
+    "sha256": "70241530f3237a198d7bd51abf6d902a0d3afbacfee2698658361ee14fd87388",
+    "excerpts": [
+      {
+        "pdf_page": 70,
+        "text": "Common stock issued under stock-based compensation plans                48             318                —                         —                      318                           —          318\nCommon stock issued under stock purchase plans                             2           164                —                         —                      164                           —          164\nStock-based compensation                                                —             2,613               —                         —                    2,613                           —         2,613\nRepurchases of common stock                                           (186 )         (1,723 )        (14,477 )                      —                  (16,200 )                         —       (16,200 )"
+      },
+      {
+        "pdf_page": 70,
+        "text": "Common stock issued under stock-based compensation plans                79            1,019               —                         —                    1,019                           —         1,019\nCommon stock issued under stock purchase plans                             2           173                —                         —                      173                           —          173\nAssumption of stock-based compensation plan awards in\nconnection with acquisitions                                               —             55               —                         —                       55                           —            55"
+      },
+      {
+        "pdf_page": 70,
+        "text": "Common stock issued under stock-based compensation plans                68             545                —                         —                      545                           —          545\nCommon stock issued under stock purchase plans                             2            197               —                         —                      197                           —           197\nStock-based compensation                                                   —          3,974               —                         —                    3,974                           —         3,974\nRepurchases of common stock                                            (11 )           (117 )         (1,083 )                      —                   (1,200 )                         —        (1,200 )"
+      },
+      {
+        "pdf_page": 71,
+        "text": "    Payments for repurchases of common stock                                                                                (1,202 )                (1,300 )          (16,248 )\n    Proceeds from issuances of common stock                                                                                   742                    1,192                   482\n    Shares repurchased for tax withholdings upon vesting of restricted stock-based awards                                   (2,040 )                (1,203 )              (1,093 )\n    Payments of dividends to stockholders                                                                                   (4,391 )                (3,668 )              (3,457 )"
+      },
+      {
+        "pdf_page": 99,
+        "text": "Tax Benefits from Exercises of Stock Options and Vesting of Restricted Stock-Based Awards\nTotal cash received as a result of stock option exercises was approximately $545 million, $1.0 billion and $319 million for fiscal 2024, 2023 and 2022,\nrespectively. The total aggregate intrinsic value of restricted stock-based awards that vested and were issued and stock options that were exercised was $7.4\nbillion, $5.1 billion and $3.7 billion for fiscal 2024, 2023 and 2022. In connection with the vesting and issuance of restricted stock-based awards and stock"
+      }
+    ]
+  }
+]
