@@ -1,0 +1,46 @@
+{
+  "url": "https://api.crossref.org/works/10.1111/j.1540-6261.2012.01740.x",
+  "title": [
+    "Decoding Inside Information"
+  ],
+  "abstract": "<jats:title>ABSTRACT</jats:title>\n                  <jats:p>Exploiting the fact that insiders trade for a variety of reasons, we show that there is predictable, identifiable \u201croutine\u201d insider trading that is not informative about firms\u2019 futures. A portfolio strategy that focuses solely on the remaining \u201copportunistic\u201d traders yields value\u2010weighted abnormal returns of 82 basis points per month, while abnormal returns associated with routine traders are essentially zero. The most informed opportunistic traders are local, nonexecutive insiders from geographically concentrated, poorly governed firms. Opportunistic traders are significantly more likely to have SEC enforcement action taken against them, and reduce trading following waves of SEC insider trading enforcement.</jats:p>",
+  "authors": [
+    {
+      "given": "LAUREN",
+      "family": "COHEN",
+      "sequence": "first",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "CHRISTOPHER",
+      "family": "MALLOY",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "LUKASZ",
+      "family": "POMORSKI",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    }
+  ],
+  "full_text_read": false
+}
