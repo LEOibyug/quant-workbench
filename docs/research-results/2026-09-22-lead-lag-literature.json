@@ -1,0 +1,245 @@
+[
+  {
+    "query": "Industry Information Diffusion and the Lead-lag Effect in Stock Returns",
+    "results": [
+      {
+        "title": [
+          "Industry Information Diffusion and the Lead-Lag Effect in Stock Returns"
+        ],
+        "DOI": "10.2139/ssrn.463005",
+        "author": [
+          {
+            "given": "Kewei",
+            "family": "Hou",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "published": {
+          "date-parts": [
+            [
+              2003
+            ]
+          ]
+        },
+        "abstract": "<jats:p>This paper argues that slow diffusion of common information is a leading cause of the lead-lag effect in stock returns. I find that the lead-lag effect is predominantly an intra-industry phenomenon: returns on big firms lead returns on small firms within the same industry. Once this effect is accounted for, little evidence of predictability across industries can be found. Furthermore, this effect is largely driven by sluggish adjustment to negative information. Industry leaders lead industry followers; value firms lead growth firms (within the same industry); firms with low idiosyncratic volatility lead their highly volatile industry peers, controlling for firm size. Small, volatile, less competitive and neglected industries experience a more pronounced lead-lag effect. Finally, the intra-industry lead-lag effect drives the industry momentum anomaly.</jats:p>",
+        "URL": "https://doi.org/10.2139/ssrn.463005"
+      },
+      {
+        "title": [
+          "Industry Information Diffusion and the Lead-lag Effect in Stock Returns"
+        ],
+        "DOI": "10.1093/revfin/hhm003",
+        "author": [
+          {
+            "given": "Kewei",
+            "family": "Hou",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "published": {
+          "date-parts": [
+            [
+              2007,
+              1,
+              22
+            ]
+          ]
+        },
+        "abstract": null,
+        "URL": "https://doi.org/10.1093/revfin/hhm003"
+      },
+      {
+        "title": [
+          "Intraday Lead-Lag Relationships in Idiosyncratic Stock Returns"
+        ],
+        "DOI": "10.2139/ssrn.6811380",
+        "author": [
+          {
+            "given": "Danni",
+            "family": "Shi",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Mihai",
+            "family": "Cucuringu",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0002-7426-4645",
+            "authenticated-orcid": true,
+            "given": "Álvaro",
+            "family": "Cartea",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "published": {
+          "date-parts": [
+            [
+              2026
+            ]
+          ]
+        },
+        "abstract": "<jats:p>We examine intraday lead-lag relationships in high-frequency stock returns that arise from firmspecific interactions. After removing systematic variation using common risk factors, we model lagged cross-dependencies in idiosyncratic returns with Kendall's correlation networks. Using S&amp;amp;P 500 constituent stocks, we document that lead-lag effects are both stronger and more persistent at higher sampling frequencies. In contrast to earlier evidence based on lower-frequency data, we find that these effects largely disappear in daily returns but remain pronounced at intraday horizons. A network-based trading strategy further shows that lead-lag signals extracted from high-frequency idiosyncratic returns have substantial predictive power and deliver significantly higher out-of-sample Sharpe ratios than signals based on low-frequency returns or returns unadjusted for systematic risk.</jats:p>",
+        "URL": "https://doi.org/10.2139/ssrn.6811380"
+      }
+    ]
+  },
+  {
+    "query": "Do Industries Lead Stock Markets",
+    "results": [
+      {
+        "title": [
+          "Do industries lead stock markets?"
+        ],
+        "DOI": "10.1016/j.jfineco.2005.09.010",
+        "author": [
+          {
+            "given": "Harrison",
+            "family": "Hong",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Walter",
+            "family": "Torous",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Rossen",
+            "family": "Valkanov",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "published": {
+          "date-parts": [
+            [
+              2007,
+              2
+            ]
+          ]
+        },
+        "abstract": null,
+        "URL": "https://doi.org/10.1016/j.jfineco.2005.09.010"
+      },
+      {
+        "title": [
+          "Do Industries Lead Stock Markets?"
+        ],
+        "DOI": "10.2469/dig.v37.n3.4783",
+        "author": [
+          {
+            "given": "Michael",
+            "family": "Kobal",
+            "sequence": "first",
+            "affiliation": [
+              {
+                "name": "The summary was prepared by Michael Kobal, CFA, Arete Asia Research."
+              }
+            ],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          }
+        ],
+        "published": {
+          "date-parts": [
+            [
+              2007,
+              8
+            ]
+          ]
+        },
+        "abstract": null,
+        "URL": "https://doi.org/10.2469/dig.v37.n3.4783"
+      },
+      {
+        "title": [
+          "Do industries lead stock markets? A reexamination"
+        ],
+        "DOI": "10.1016/j.jempfin.2015.10.003",
+        "author": [
+          {
+            "given": "Yiuman",
+            "family": "Tse",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "published": {
+          "date-parts": [
+            [
+              2015,
+              12
+            ]
+          ]
+        },
+        "abstract": null,
+        "URL": "https://doi.org/10.1016/j.jempfin.2015.10.003"
+      }
+    ]
+  }
+]
