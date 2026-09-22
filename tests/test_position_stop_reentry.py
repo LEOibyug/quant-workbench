@@ -25,12 +25,14 @@ def bars():
 
 
 @pytest.mark.parametrize("frequency", [1, 5])
-def test_completed_stop_allows_new_signal(frequency):
+@pytest.mark.parametrize("buffer", [None, "fixed", "risk", "boundary", "risk_boundary"])
+def test_completed_stop_allows_new_signal(frequency, buffer):
     frame = bars()
     result = simulate_positions(
         frame,
         PositionConfig(
-            model="equal_weight", rebalance_days=frequency, tranche_weight=0.2, max_drawdown_pct=30
+            model="equal_weight", rebalance_days=frequency, tranche_weight=0.2, max_drawdown_pct=30,
+            portfolio_policy="banded" if buffer else "legacy", execution_buffer=buffer or "fixed"
         ),
         "2024-01-02",
         "2024-03-01",

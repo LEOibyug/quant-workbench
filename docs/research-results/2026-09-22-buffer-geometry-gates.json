@@ -1,0 +1,195 @@
+{
+  "gates": [
+    {
+      "candidate": "pooled_only",
+      "control": "legacy",
+      "cost_multiplier": 1,
+      "wins": 0,
+      "pools": 5,
+      "median_difference_pp": 0.0,
+      "passed": false
+    },
+    {
+      "candidate": "pooled_only",
+      "control": "legacy",
+      "cost_multiplier": 2,
+      "wins": 0,
+      "pools": 5,
+      "median_difference_pp": 0.0,
+      "passed": false
+    },
+    {
+      "candidate": "pooled_only",
+      "control": "banded",
+      "cost_multiplier": 1,
+      "wins": 2,
+      "pools": 5,
+      "median_difference_pp": -0.286874543639704,
+      "passed": false
+    },
+    {
+      "candidate": "pooled_only",
+      "control": "banded",
+      "cost_multiplier": 2,
+      "wins": 1,
+      "pools": 5,
+      "median_difference_pp": -0.3714943820030454,
+      "passed": false
+    },
+    {
+      "candidate": "fixed_entry",
+      "control": "legacy",
+      "cost_multiplier": 1,
+      "wins": 0,
+      "pools": 5,
+      "median_difference_pp": 0.0,
+      "passed": false
+    },
+    {
+      "candidate": "fixed_entry",
+      "control": "legacy",
+      "cost_multiplier": 2,
+      "wins": 0,
+      "pools": 5,
+      "median_difference_pp": 0.0,
+      "passed": false
+    },
+    {
+      "candidate": "fixed_entry",
+      "control": "banded",
+      "cost_multiplier": 1,
+      "wins": 2,
+      "pools": 5,
+      "median_difference_pp": -0.286874543639704,
+      "passed": false
+    },
+    {
+      "candidate": "fixed_entry",
+      "control": "banded",
+      "cost_multiplier": 2,
+      "wins": 1,
+      "pools": 5,
+      "median_difference_pp": -0.3714943820030454,
+      "passed": false
+    },
+    {
+      "candidate": "risk",
+      "control": "legacy",
+      "cost_multiplier": 1,
+      "wins": 3,
+      "pools": 5,
+      "median_difference_pp": 0.10064332961887734,
+      "passed": false
+    },
+    {
+      "candidate": "risk",
+      "control": "legacy",
+      "cost_multiplier": 2,
+      "wins": 4,
+      "pools": 5,
+      "median_difference_pp": 0.23021260547846367,
+      "passed": true
+    },
+    {
+      "candidate": "risk",
+      "control": "banded",
+      "cost_multiplier": 1,
+      "wins": 3,
+      "pools": 5,
+      "median_difference_pp": 0.004735258834031697,
+      "passed": false
+    },
+    {
+      "candidate": "risk",
+      "control": "banded",
+      "cost_multiplier": 2,
+      "wins": 3,
+      "pools": 5,
+      "median_difference_pp": 0.007140190263033475,
+      "passed": false
+    },
+    {
+      "candidate": "boundary",
+      "control": "legacy",
+      "cost_multiplier": 1,
+      "wins": 2,
+      "pools": 5,
+      "median_difference_pp": -0.20225365072884394,
+      "passed": false
+    },
+    {
+      "candidate": "boundary",
+      "control": "legacy",
+      "cost_multiplier": 2,
+      "wins": 2,
+      "pools": 5,
+      "median_difference_pp": -0.07129214531402805,
+      "passed": false
+    },
+    {
+      "candidate": "boundary",
+      "control": "banded",
+      "cost_multiplier": 1,
+      "wins": 2,
+      "pools": 5,
+      "median_difference_pp": -0.16116380317197,
+      "passed": false
+    },
+    {
+      "candidate": "boundary",
+      "control": "banded",
+      "cost_multiplier": 2,
+      "wins": 2,
+      "pools": 5,
+      "median_difference_pp": -0.2246321095944026,
+      "passed": false
+    },
+    {
+      "candidate": "risk_boundary",
+      "control": "legacy",
+      "cost_multiplier": 1,
+      "wins": 1,
+      "pools": 5,
+      "median_difference_pp": -0.4786820100239453,
+      "passed": false
+    },
+    {
+      "candidate": "risk_boundary",
+      "control": "legacy",
+      "cost_multiplier": 2,
+      "wins": 1,
+      "pools": 5,
+      "median_difference_pp": -0.4012357664532793,
+      "passed": false
+    },
+    {
+      "candidate": "risk_boundary",
+      "control": "banded",
+      "cost_multiplier": 1,
+      "wins": 2,
+      "pools": 5,
+      "median_difference_pp": -0.24627846925138286,
+      "passed": false
+    },
+    {
+      "candidate": "risk_boundary",
+      "control": "banded",
+      "cost_multiplier": 2,
+      "wins": 1,
+      "pools": 5,
+      "median_difference_pp": -0.5128477916818914,
+      "passed": false
+    }
+  ],
+  "accepted": [],
+  "equivalence": {
+    "pooled_only": {
+      "exact_accounts": 12,
+      "total": 12
+    },
+    "fixed_entry": {
+      "exact_accounts": 12,
+      "total": 12
+    }
+  }
+}

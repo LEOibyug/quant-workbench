@@ -30,8 +30,8 @@ def sample():
 
 
 @pytest.mark.parametrize("method", sorted(MODELS))
-@pytest.mark.parametrize("policy", ["legacy", "banded", "cost_aware"])
-def test_rule_causality_permutation_limits_and_ledger(method, policy):
+@pytest.mark.parametrize("policy,buffer", [("legacy", "fixed"), ("banded", "fixed"), ("cost_aware", "fixed"), ("banded", "risk"), ("banded", "boundary"), ("banded", "risk_boundary")])
+def test_rule_causality_permutation_limits_and_ledger(method, policy, buffer):
     if method == "generated_policy":
         from quant_workbench.generated_policy import ARTIFACT
         if not ARTIFACT.exists():
@@ -41,7 +41,7 @@ def test_rule_causality_permutation_limits_and_ledger(method, policy):
         if not ARTIFACT.exists():
             pytest.skip("Run train_pattern_policy.py to validate trained artifact")
     frame = sample()
-    cfg = PositionConfig(model=method, tranche_weight=0.1, portfolio_policy=policy)
+    cfg = PositionConfig(model=method, tranche_weight=0.1, portfolio_policy=policy, execution_buffer=buffer)
     forecast = rule_forecasts(frame, cfg)
     cutoff = "2024-07-15" if method == "adaptive_specialist" else "2024-06-01"
     prefix = rule_forecasts(frame[frame.day < cutoff], cfg)
@@ -88,14 +88,15 @@ def test_cost_aware_allocator_respects_signal_and_risk_budget():
     )
 
 
-@pytest.mark.parametrize("policy", ["banded", "cost_aware"])
-def test_shared_execution_is_order_invariant_and_budgets_buys(policy):
+@pytest.mark.parametrize("policy,buffer", [("banded", "fixed"), ("cost_aware", "fixed"), ("banded", "risk"), ("banded", "boundary"), ("banded", "risk_boundary")])
+def test_shared_execution_is_order_invariant_and_budgets_buys(policy, buffer):
     from quant_workbench.allocation import AllocationConfig
 
     frame = sample()
     cfg = PositionConfig(
         model="cross_momentum",
         portfolio_policy=policy,
+        execution_buffer=buffer,
         tranche_weight=0.1,
         allocation=AllocationConfig(enabled=False, max_daily_turnover=0.2),
         entry_band=0.005,

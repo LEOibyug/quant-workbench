@@ -50,6 +50,7 @@ class PositionConfig(BaseModel):
     capital_mode: Literal["signal_budget", "risk_budget"] = "signal_budget"
     classifier_sha256: str | None = Field(default=None, pattern=r"^[a-f0-9]{64}$")
     portfolio_policy: Literal["legacy", "banded", "cost_aware"] = "legacy"
+    execution_buffer: Literal["fixed", "risk", "boundary", "risk_boundary"] = "fixed"
     entry_band: float | None = Field(default=None, ge=0, le=0.2)
     daily_vol_target: float = Field(default=0.015, gt=0, le=0.05)
     stop_loss_pct: float = Field(default=10, ge=2, le=30)
@@ -273,6 +274,11 @@ def simulate_positions(
     allocation_returns = daily.pivot(index="day", columns="symbol", values="close").pct_change(
         fill_method=None
     )
+    buffer_volatility = (
+        allocation_returns.rolling(63, min_periods=63).std(ddof=1)
+        if config.portfolio_policy == "banded" and config.execution_buffer in {"risk", "risk_boundary"}
+        else None
+    )
     realized = {s: 0.0 for s in symbols}
     symbol_fees = {s: 0.0 for s in symbols}
     symbol_impact = {s: 0.0 for s in symbols}
@@ -334,8 +340,24 @@ def simulate_positions(
                         if shares[symbol] == 0 and delta > 0 and config.entry_band is not None
                         else config.allocation.rebalance_band
                     )
+                    if shares[symbol] > 0 and buffer_volatility is not None:
+                        # At today's open, only the previous close's history is known.
+                        previous_vol = buffer_volatility.loc[previous]
+                        valid_vol = previous_vol[np.isfinite(previous_vol) & (previous_vol > 0)]
+                        own_vol = float(previous_vol[symbol])
+                        if len(valid_vol) and math.isfinite(own_vol) and own_vol > 0:
+                            band *= float(valid_vol.median()) / own_vol
                     if abs(delta) * price / opening_equity < band:
                         quantity = 0
+                    elif (
+                        shares[symbol] > 0
+                        and config.portfolio_policy == "banded"
+                        and config.execution_buffer in {"boundary", "risk_boundary"}
+                    ):
+                        # Trade only the excess over the band. Initial entries and
+                        # zero-target / forced exits intentionally bypass this rule.
+                        excess = max(0, math.floor(abs(delta) - band * opening_equity / price))
+                        quantity = min(quantity, excess)
                 if quantity:
                     orders.append((delta > 0, symbol, quantity))
             funding_ratio = None
@@ -733,6 +755,11 @@ def simulate_positions(
         + ("-rules-v1" if config.model in DAILY_RULE_MODELS else "")
         + ("-cost-aware-v1" if config.portfolio_policy == "cost_aware" else "")
         + ("-banded-v1" if config.portfolio_policy == "banded" else "")
+        + (
+            f"-buffer-{config.execution_buffer}-v1"
+            if config.portfolio_policy == "banded" and config.execution_buffer != "fixed"
+            else ""
+        )
         + (
             "-budget-v2"
             if config.capital_mode != "signal_budget" or config.entry_band is not None
