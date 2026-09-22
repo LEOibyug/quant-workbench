@@ -30,7 +30,7 @@ def sample():
 
 
 @pytest.mark.parametrize("method", sorted(MODELS))
-@pytest.mark.parametrize("policy", ["legacy", "cost_aware"])
+@pytest.mark.parametrize("policy", ["legacy", "banded", "cost_aware"])
 def test_rule_causality_permutation_limits_and_ledger(method, policy):
     if method == "generated_policy":
         from quant_workbench.generated_policy import ARTIFACT
@@ -88,13 +88,14 @@ def test_cost_aware_allocator_respects_signal_and_risk_budget():
     )
 
 
-def test_shared_execution_is_order_invariant_and_budgets_buys():
+@pytest.mark.parametrize("policy", ["banded", "cost_aware"])
+def test_shared_execution_is_order_invariant_and_budgets_buys(policy):
     from quant_workbench.allocation import AllocationConfig
 
     frame = sample()
     cfg = PositionConfig(
         model="cross_momentum",
-        portfolio_policy="cost_aware",
+        portfolio_policy=policy,
         tranche_weight=0.1,
         allocation=AllocationConfig(enabled=False, max_daily_turnover=0.2),
         entry_band=0.005,

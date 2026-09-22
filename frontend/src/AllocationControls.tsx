@@ -48,7 +48,7 @@ export function AllocationControls({ symbols, initial, long = false, executionEn
       <p className="muted">此处仅选择资金轮换参与范围，不是交易开关：取消勾选仍可能按原策略买卖。要排除股票，请在实验 / 模拟的交易股票选择中取消。全部不勾选表示全部参与。
         {long ? "按上方交易日调仓间隔重新分配。" : "同一分钟先卖后买；尾盘清仓，不隔夜。"}</p>
     </div>
-    {executionEnabled && !enabled && <p className="muted">成本感知执行已启用：下面的最小调仓差额和每日成交总额上限仍生效；其余字段仅供额外轮换优化使用。</p>}
+    {executionEnabled && !enabled && <p className="muted">共享资金执行约束已启用：下面的最小调仓差额和每日成交总额上限仍生效；其余字段仅供额外轮换优化使用。</p>}
     <div className="form-grid" hidden={!enabled && !executionEnabled}>
       {fields.map(([key, label, fallback, min, max, step]) => {
         const percent = ["max_weight", "cash_reserve", "rebalance_band", "max_daily_turnover"].includes(key);

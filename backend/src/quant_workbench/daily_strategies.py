@@ -12,6 +12,8 @@ MODELS = {
     "residual_reversal",
     "minimum_variance",
     "fixed_ensemble",
+    "trend_reversal",
+    "smoothed_ensemble",
     "adaptive_specialist",
     "synthetic_regime",
     "generated_policy",
@@ -35,6 +37,7 @@ def rule_forecasts(daily, config):
     returns = np.diff(logs, axis=0)
     active = np.zeros(len(symbols), dtype=bool)
     forecasts = {}
+    smoothed_target = None
     cap = min(config.max_weight, 0.2)
     gross = 0.95
 
@@ -71,7 +74,21 @@ def rule_forecasts(daily, config):
         reversal_weights = weights(np.where(z < -1, -z, 0), vol)
         method = config.model
         status = "ok"
-        if method == "minimum_variance":
+        if method == "smoothed_ensemble":
+            raw_target = (momentum_weights + channel_weights + reversal_weights) / 3
+            alpha = 1 - 2 ** (-1 / config.rebalance_days)
+            smoothed_target = (
+                raw_target.copy() if smoothed_target is None
+                else (1 - alpha) * smoothed_target + alpha * raw_target
+            )
+            # Apply today's covariance risk limit below, after filtering targets.
+            target = smoothed_target.copy()
+        elif method == "trend_reversal":
+            # Relative weakness is a pullback candidate only inside a nonnegative
+            # medium-term trend. Reuse the existing 63-day estimation horizon.
+            pullback = np.where((z < -1) & (logs[i] >= logs[i - 63]), -z, 0)
+            target = (momentum_weights + weights(pullback, vol)) / 2
+        elif method == "minimum_variance":
             budget = min(gross, len(symbols) * cap)
             result = minimize(
                 lambda w, cov=cov: float(w @ cov @ w) * 10000,

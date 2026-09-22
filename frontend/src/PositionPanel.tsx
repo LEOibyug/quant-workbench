@@ -26,7 +26,7 @@ export interface PositionDeployment {
   symbols: string[];
   position_config: {
     model: string; lookback: number; horizon: number; rebalance_days: number;
-    portfolio_policy?: "legacy" | "cost_aware";
+    portfolio_policy?: "legacy" | "banded" | "cost_aware";
     capital_mode?: "signal_budget" | "risk_budget"; entry_band?: number | null;
     confidence: number; tranche_weight: number; costs: { initial_cash: number };
     allocation?: AllocationConfig;
@@ -199,12 +199,13 @@ export function PositionPanel({ datasets, modelEnabled = true, deployment, selec
         <label>{modelEnabled || deployment ? "长期模型 / 策略" : "规则策略"}<select key={String(modelEnabled)} name="model" defaultValue={config?.model || (modelEnabled ? "trend" : "equal_weight")} required>
           {(modelEnabled || deployment) && <><option value="trend">统计趋势 + 波动率仓位</option>
           <option value="bayesian">贝叶斯多日收益回归</option>
-          {["cross_momentum", "channel_trend", "residual_reversal", "minimum_variance", "fixed_ensemble", "adaptive_specialist", "synthetic_regime", "generated_policy", "pattern_policy", "spectral_rules"].map((model) => <option key={model} value={model}>{strategyNames[model]}（研究候选）</option>)}</>}
+          {["cross_momentum", "channel_trend", "residual_reversal", "minimum_variance", "fixed_ensemble", "trend_reversal", "smoothed_ensemble", "adaptive_specialist", "synthetic_regime", "generated_policy", "pattern_policy", "spectral_rules"].map((model) => <option key={model} value={model}>{strategyNames[model]}（研究候选）</option>)}</>}
           {(!modelEnabled || deployment) && <option value="equal_weight">等权分批再平衡（无预测模型）</option>}
         </select></label>
 
-        <label>共享资金执行政策<select name="portfolio_policy" value={portfolioPolicy} onChange={(e) => setPortfolioPolicy(e.target.value as "legacy" | "cost_aware")}>
+        <label>共享资金执行政策<select name="portfolio_policy" value={portfolioPolicy} onChange={(e) => setPortfolioPolicy(e.target.value as "legacy" | "banded" | "cost_aware")}>
           <option value="legacy">共享资金 · 基础执行</option>
+          <option value="banded">共享资金 · 调仓缓冲执行</option>
           <option value="cost_aware">共享资金 · 成本感知执行</option>
         </select></label>
         <label>组合资金预算<select name="capital_mode" defaultValue={config?.capital_mode || "signal_budget"}>
@@ -219,9 +220,9 @@ export function PositionPanel({ datasets, modelEnabled = true, deployment, selec
         <label>不确定性扣减倍数<input name="confidence" type="number" min={0} max={3} step={0.1} defaultValue={config?.confidence ?? 0.5} required /></label>
         <label>每日单股最大调整 资金%<input name="tranche" type="number" min={0.1} max={20} step={0.1} defaultValue={config ? config.tranche_weight * 100 : 5} required /></label>
       </div>
-      <p className="muted">生成网络分类器已在合成序列上训练，使用64点观察窗口输出现金/趋势/反转权重；它是研究候选，尚未超过等权收益基线。每股专家选择需至少127日历史预热，按63日已揭晓影子净收益选择，每21日更新，不足时持币。研究候选使用固定公式：63 日风险估计、10% 年化目标波动、最多95%总投入与20%单股目标；“历史窗口、预测跨度、置信扣减、组合资金预算”不改变这些公式。调仓间隔和分批执行仍有效。固定方法比较时关闭下方额外轮换优化，避免改变信号定义。成本感知执行政策使用下方换手预算和调仓门槛，即使额外轮换关闭也生效；建议先查看研究报告中的失败结果与风险。</p>
+      <p className="muted">生成网络分类器已在合成序列上训练，使用64点观察窗口输出现金/趋势/反转权重；它是研究候选，尚未超过等权收益基线。每股专家选择需至少127日历史预热，按63日已揭晓影子净收益选择，每21日更新，不足时持币。调仓周期平滑保留三策略，以调仓间隔为半衰期平滑目标仓位，平滑后仍限制组合风险，实际止损继续生效。趋势内回调组合将动量与反转目标各占一半，仅在股价不低于63个交易日前时允许反转建仓；通道不再单独分配资金。研究候选使用固定公式：63 日风险估计、10% 年化目标波动、最多95%总投入与20%单股目标；“历史窗口、预测跨度、置信扣减、组合资金预算”不改变这些公式。调仓间隔和分批执行仍有效。固定方法比较时关闭下方额外轮换优化，避免改变信号定义。调仓缓冲执行保留原信号，对小额调整设缓冲并按比例分配买单资金；缓冲与成本感知执行均使用下方换手预算和调仓门槛，即使额外轮换关闭也生效；建议先查看研究报告中的失败结果与风险。</p>
       <AllocationControls key={dataset?.id || deployment?.id} symbols={deployment?.symbols || researchSymbols}
-        initial={config?.allocation} long executionEnabled={portfolioPolicy === "cost_aware"} />
+        initial={config?.allocation} long executionEnabled={portfolioPolicy !== "legacy"} />
       </fieldset>
       <p className="muted">{tradingSymbols.join(" / ")}。原信号预算按股票池大小限制投入；风险预算提高合格信号资金额度，仅在启用共享资金时生效。首次建仓门槛可独立于已有持仓调仓门槛。默认单股目标上限20%、止损10%、组合回撤10%后熔断。
         价差2bps、滑点2bps，佣金每股$0.005、每次最低$1。模型历史不足时持币；已有数据已参与研究，不能视为新的样本外验证。</p>

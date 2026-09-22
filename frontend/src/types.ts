@@ -14,6 +14,8 @@ export const strategyNames: Record<string, string> = {
   channel_trend: "通道趋势 · 55/20 日",
   residual_reversal: "市场残差反转 · 周度",
   minimum_variance: "收缩最小方差组合",
+  smoothed_ensemble: "三策略组合 · 调仓周期平滑",
+  trend_reversal: "趋势内回调组合 · 动量与残差",
   fixed_ensemble: "固定三策略组合",
   trend: "统计趋势 + 波动率仓位",
   bayesian: "贝叶斯多日收益回归",

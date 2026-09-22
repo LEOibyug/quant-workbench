@@ -33,6 +33,8 @@ class PositionConfig(BaseModel):
         "residual_reversal",
         "minimum_variance",
         "fixed_ensemble",
+        "trend_reversal",
+        "smoothed_ensemble",
         "adaptive_specialist",
         "synthetic_regime",
         "generated_policy",
@@ -47,7 +49,7 @@ class PositionConfig(BaseModel):
     max_weight: float = Field(default=0.2, gt=0, le=0.5)
     capital_mode: Literal["signal_budget", "risk_budget"] = "signal_budget"
     classifier_sha256: str | None = Field(default=None, pattern=r"^[a-f0-9]{64}$")
-    portfolio_policy: Literal["legacy", "cost_aware"] = "legacy"
+    portfolio_policy: Literal["legacy", "banded", "cost_aware"] = "legacy"
     entry_band: float | None = Field(default=None, ge=0, le=0.2)
     daily_vol_target: float = Field(default=0.015, gt=0, le=0.05)
     stop_loss_pct: float = Field(default=10, ge=2, le=30)
@@ -255,7 +257,7 @@ def simulate_positions(
     stop_credit = {s: 0.0 for s in symbols}
     dividend_value = dict(income=0.0, paid=0.0, receivable=0.0, by_symbol={})
     costs = config.costs
-    pooled_execution = config.allocation.enabled or config.portfolio_policy == "cost_aware"
+    pooled_execution = config.allocation.enabled or config.portfolio_policy in {"banded", "cost_aware"}
     cash = peak = costs.initial_cash
     risk_peak = peak
     reentry_events = []
@@ -730,6 +732,7 @@ def simulate_positions(
         + ("-portfolio-v1" if config.allocation.enabled else "")
         + ("-rules-v1" if config.model in DAILY_RULE_MODELS else "")
         + ("-cost-aware-v1" if config.portfolio_policy == "cost_aware" else "")
+        + ("-banded-v1" if config.portfolio_policy == "banded" else "")
         + (
             "-budget-v2"
             if config.capital_mode != "signal_budget" or config.entry_band is not None

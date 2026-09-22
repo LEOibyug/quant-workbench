@@ -1,0 +1,105 @@
+{
+  "gates": [
+    {
+      "method": "fixed_ensemble",
+      "policy": "cost_aware",
+      "cost_multiplier": 1,
+      "pools": 5,
+      "wins": 1,
+      "median_return_difference_pp": -1.4060502475157097,
+      "all_drawdowns_worse": false,
+      "passed": false
+    },
+    {
+      "method": "fixed_ensemble",
+      "policy": "cost_aware",
+      "cost_multiplier": 2,
+      "pools": 5,
+      "wins": 2,
+      "median_return_difference_pp": -0.3536479113329438,
+      "all_drawdowns_worse": false,
+      "passed": false
+    },
+    {
+      "method": "trend_reversal",
+      "policy": "legacy",
+      "cost_multiplier": 1,
+      "pools": 5,
+      "wins": 2,
+      "median_return_difference_pp": -0.1551443106254098,
+      "all_drawdowns_worse": false,
+      "passed": false
+    },
+    {
+      "method": "trend_reversal",
+      "policy": "legacy",
+      "cost_multiplier": 2,
+      "pools": 5,
+      "wins": 3,
+      "median_return_difference_pp": 0.4976329441748524,
+      "all_drawdowns_worse": false,
+      "passed": false
+    },
+    {
+      "method": "trend_reversal",
+      "policy": "cost_aware",
+      "cost_multiplier": 1,
+      "pools": 5,
+      "wins": 2,
+      "median_return_difference_pp": -0.2383179091395835,
+      "all_drawdowns_worse": false,
+      "passed": false
+    },
+    {
+      "method": "trend_reversal",
+      "policy": "cost_aware",
+      "cost_multiplier": 2,
+      "pools": 5,
+      "wins": 2,
+      "median_return_difference_pp": -0.1992143200902916,
+      "all_drawdowns_worse": false,
+      "passed": false
+    },
+    {
+      "method": "smoothed_ensemble",
+      "policy": "legacy",
+      "cost_multiplier": 1,
+      "pools": 5,
+      "wins": 1,
+      "median_return_difference_pp": -1.832327359095265,
+      "all_drawdowns_worse": false,
+      "passed": false
+    },
+    {
+      "method": "smoothed_ensemble",
+      "policy": "legacy",
+      "cost_multiplier": 2,
+      "pools": 5,
+      "wins": 1,
+      "median_return_difference_pp": -0.32936501804935503,
+      "all_drawdowns_worse": false,
+      "passed": false
+    },
+    {
+      "method": "fixed_ensemble",
+      "policy": "banded",
+      "cost_multiplier": 1,
+      "pools": 5,
+      "wins": 3,
+      "median_return_difference_pp": 0.286874543639704,
+      "all_drawdowns_worse": false,
+      "passed": false
+    },
+    {
+      "method": "fixed_ensemble",
+      "policy": "banded",
+      "cost_multiplier": 2,
+      "pools": 5,
+      "wins": 4,
+      "median_return_difference_pp": 0.3714943820030454,
+      "all_drawdowns_worse": false,
+      "passed": true
+    }
+  ],
+  "accepted": []
+}

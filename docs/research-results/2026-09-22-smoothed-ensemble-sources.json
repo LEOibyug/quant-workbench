@@ -1,0 +1,11 @@
+{
+  "artifacts/research/annual-momentum/original20.parquet": "71f9c93d7cdb5c55385351a0f5a525ca088c2a4533c401a3c90b557167119ea5",
+  "artifacts/research/annual-momentum/alternate20.parquet": "9ccde0f6b6ba8d52df76079c376bc6fbace68ec331819e75393a31e52fae1a6c",
+  "artifacts/research/annual-momentum/random10.parquet": "133d28fe39d2687ba7fd266564d6a1a09097cd7ee07a8f16e64883aa526646e7",
+  "artifacts/research/annual-momentum/random10-temporal.parquet": "e1f9fee2a0e61ecf4784ba74f29b7fd582a1689d154f8754ca710ade536ea52b",
+  "artifacts/research/transfer12-temporal-2026-09-21/combined.parquet": "5877a055761a6915851917051db5b56121f96e9cf027c3e58729b0abe782e4b9",
+  "artifacts/research/liability-transfer-temporal/combined.parquet": "b56fac40139435a7c4477e4b886332a06eb889b911a5dac3c043c4c0bf5e32eb",
+  "/home/yangchunyi/quant-workbench/scripts/study_smoothed_ensemble.py": "a3c10a40ba683e7a9ba22b7bbeaa35b26e7a834539feb9f9ea6beb32eb99cbe3",
+  "backend/src/quant_workbench/daily_strategies.py": "543cc391844dc43b6dfc07c8670b476abde30cbc1e5a0405a687bc8e3daff251",
+  "backend/src/quant_workbench/position.py": "44880c5fbc54445becf4296480d6b8b7bf63733232e0884760eb000374b7f06d"
+}
