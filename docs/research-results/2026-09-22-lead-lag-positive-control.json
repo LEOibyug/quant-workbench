@@ -1,0 +1,14 @@
+{
+  "seed": 91,
+  "construction": "H daily log returns equal A log returns delayed exactly five sessions; no overnight gap",
+  "evaluation_days": 124,
+  "follower_mse": {
+    "mean": 0.0005379115176814704,
+    "own_market": 0.0005401301986996212,
+    "network": 9.165078373890712e-06,
+    "shifted": 0.000637122207969258
+  },
+  "checks": {
+    "network_recovers_planted_lead": true
+  }
+}
