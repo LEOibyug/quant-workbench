@@ -3,7 +3,7 @@ import { PortfolioCharts, type PortfolioPoint } from "./PortfolioCharts";
 import { AllocationControls, readAllocation, type AllocationConfig } from "./AllocationControls";
 import { api, post } from "./api";
 import { DownloadButton, observeOperation, ProgressNotice, type ProgressState } from "./ProgressNotice";
-import { strategyNames, type Dataset } from "./types";
+import { MAX_SYMBOLS, parseSymbols, strategyNames, type Dataset } from "./types";
 
 interface PositionResult {
   synthetic?: boolean;
@@ -48,6 +48,8 @@ export function PositionPanel({ datasets, modelEnabled = true, deployment, selec
   const [provider, setProvider] = useState("alpaca");
   const [feed, setFeed] = useState("sip");
   const [selectedSymbols, setSelectedSymbols] = useState(deployment?.symbols || []);
+  const [customSymbols, setCustomSymbols] = useState("");
+  const [symbolError, setSymbolError] = useState("");
   const [jobs, setJobs] = useState<{ id: string; status: string; started_at: string; request: { name?: string; start: string; end: string } }[]>([]);
   const [published, setPublished] = useState("");
   const [publishing, setPublishing] = useState(false);
@@ -56,7 +58,9 @@ export function PositionPanel({ datasets, modelEnabled = true, deployment, selec
   const dataset = dailyDatasets.find((d) => d.id === (selectedDatasetId ?? datasetId)) || dailyDatasets[0];
   const [researchSelections, setResearchSelections] = useState<Record<string, string[]>>({});
   const researchSymbols = dataset ? researchSelections[dataset.id] ?? dataset.symbols : [];
-  const tradingSymbols = deployment ? selectedSymbols : researchSymbols;
+  const parsedCustom = parseSymbols(customSymbols);
+  const deploymentSymbols = [...new Set([...selectedSymbols, ...parsedCustom.symbols])];
+  const tradingSymbols = deployment ? deploymentSymbols : researchSymbols;
   const [busy, setBusy] = useState(false);
   const [progress, setProgress] = useState<ProgressState | null>(null);
   const [result, setResult] = useState<PositionResult | null>(null);
@@ -71,6 +75,7 @@ export function PositionPanel({ datasets, modelEnabled = true, deployment, selec
     localStorage.removeItem(lastKey);
     setJobId(""); setResult(null); setProgress(null); setError(""); setPublished("");
     setResearchSelections({}); setPortfolioPolicy(config?.portfolio_policy || "legacy");
+    setCustomSymbols(""); setSymbolError("");
     setDraftVersion((value) => value + 1);
   }
   async function observe(id: string) {
@@ -94,7 +99,14 @@ export function PositionPanel({ datasets, modelEnabled = true, deployment, selec
   async function launch(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
     if (busy || (!dataset && (!deployment || marketMode === "dataset"))) return;
-    if (!tradingSymbols.length) { setError("请至少选择一支交易股票"); return; }
+    if (deployment && parsedCustom.invalid.length) {
+      setSymbolError(`股票代码格式无效：${parsedCustom.invalid.slice(0, 5).join("、")}`); return;
+    }
+    if (tradingSymbols.length > MAX_SYMBOLS) {
+      setSymbolError(`单次最多 ${MAX_SYMBOLS} 支，当前 ${tradingSymbols.length} 支`); return;
+    }
+    setSymbolError("");
+    if (!tradingSymbols.length) { setError("请至少选择或输入一支交易股票"); return; }
     if (localStorage.getItem(pendingKey)) {
       setError("先恢复尚未确认完成的长期任务"); return;
     }
@@ -105,7 +117,7 @@ export function PositionPanel({ datasets, modelEnabled = true, deployment, selec
       const job = await post<{ id: string }>(deployment
         ? `/position/deployments/${deployment.id}/simulate` : "/position/run", deployment ? {
           dataset_id: marketMode === "dataset" ? dataset?.id : null,
-          symbols: selectedSymbols, provider, feed, start: f.get("start"), end: f.get("end"),
+          symbols: deploymentSymbols, provider, feed, start: f.get("start"), end: f.get("end"),
         } : {
         name: f.get("name"),
         dataset_id: dataset!.id, symbols: researchSymbols,
@@ -155,7 +167,16 @@ export function PositionPanel({ datasets, modelEnabled = true, deployment, selec
           <input type="checkbox" checked={selectedSymbols.includes(symbol)} onChange={(e) => setSelectedSymbols(
             (current) => e.target.checked ? [...current, symbol] : current.filter((s) => s !== symbol),
           )} />{symbol}</label>)}</div>
-        <p className="muted">可选择单股或多股；保留已发布的单股仓位上限，不把单股自动放大为满仓。</p>
+        <div className="replay-buttons">
+          <button type="button" onClick={() => setSelectedSymbols(deployment.symbols)}>全选已发布股票</button>
+          <button type="button" onClick={() => setSelectedSymbols([])}>清空</button>
+        </div>
+        <label>自定义股票代码（逗号或空格分隔，可超出已发布名单）
+          <input name="custom_symbols" value={customSymbols} disabled={busy} placeholder="例如 AAPL, MSFT, SHOP, COIN"
+            onChange={(e) => setCustomSymbols(e.target.value)} /></label>
+        <p className="muted">已发布名单之外的股票按同一冻结参数在线获取日线并测试；策略参数不变，仅股票范围改变。
+          勾选与自定义代码会合并去重，最多 {MAX_SYMBOLS} 支。新代码需供应商有对应历史行情，代码错误或权限不足会明确报错。</p>
+        {symbolError && <p className="notice error" role="alert">{symbolError}</p>}
       </fieldset>
       <div className="form-grid">
         <label>行情获取方式<select value={marketMode} disabled={busy} onChange={(e) => setMarketMode(e.target.value)}>
@@ -199,7 +220,7 @@ export function PositionPanel({ datasets, modelEnabled = true, deployment, selec
         <label>{modelEnabled || deployment ? "长期模型 / 策略" : "规则策略"}<select key={String(modelEnabled)} name="model" defaultValue={config?.model || (modelEnabled ? "trend" : "equal_weight")} required>
           {(modelEnabled || deployment) && <><option value="trend">统计趋势 + 波动率仓位</option>
           <option value="bayesian">贝叶斯多日收益回归</option>
-          {["cross_momentum", "channel_trend", "residual_reversal", "minimum_variance", "fixed_ensemble", "trend_reversal", "smoothed_ensemble", "adaptive_specialist", "synthetic_regime", "generated_policy", "pattern_policy", "spectral_rules"].map((model) => <option key={model} value={model}>{strategyNames[model]}（研究候选）</option>)}</>}
+          {["cross_momentum", "channel_trend", "residual_reversal", "minimum_variance", "fixed_ensemble", "macro_overlay", "trend_reversal", "smoothed_ensemble", "adaptive_specialist", "synthetic_regime", "generated_policy", "pattern_policy", "spectral_rules"].map((model) => <option key={model} value={model}>{strategyNames[model]}（研究候选）</option>)}</>}
           {(!modelEnabled || deployment) && <option value="equal_weight">等权分批再平衡（无预测模型）</option>}
         </select></label>
 
@@ -224,7 +245,7 @@ export function PositionPanel({ datasets, modelEnabled = true, deployment, selec
       <AllocationControls key={dataset?.id || deployment?.id} symbols={deployment?.symbols || researchSymbols}
         initial={config?.allocation} long executionEnabled={portfolioPolicy !== "legacy"} />
       </fieldset>
-      <p className="muted">{tradingSymbols.join(" / ")}。原信号预算按股票池大小限制投入；风险预算提高合格信号资金额度，仅在启用共享资金时生效。首次建仓门槛可独立于已有持仓调仓门槛。默认单股目标上限20%、止损10%、组合回撤10%后熔断。
+      <p className="muted">{tradingSymbols.length} 支：{tradingSymbols.join(" / ")}。原信号预算按股票池大小限制投入；风险预算提高合格信号资金额度，仅在启用共享资金时生效。首次建仓门槛可独立于已有持仓调仓门槛。默认单股目标上限20%、止损10%、组合回撤10%后熔断。
         价差2bps、滑点2bps，佣金每股$0.005、每次最低$1。模型历史不足时持币；已有数据已参与研究，不能视为新的样本外验证。</p>
       <button className="primary" disabled={busy || publishing || !tradingSymbols.length}>{busy ? "计算中…" : deployment ? "运行已发布策略模拟" : "创建并运行长期实验"}</button>
     </form>}

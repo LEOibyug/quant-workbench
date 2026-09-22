@@ -1,0 +1,33 @@
+{
+  "gates": [
+    {
+      "policy": "legacy",
+      "cost_multiplier": 1,
+      "wins": 2,
+      "median_difference_pp": -1.6711214827310954,
+      "passed": false
+    },
+    {
+      "policy": "legacy",
+      "cost_multiplier": 2,
+      "wins": 2,
+      "median_difference_pp": -0.6600834929698758,
+      "passed": false
+    },
+    {
+      "policy": "banded",
+      "cost_multiplier": 1,
+      "wins": 2,
+      "median_difference_pp": -1.8946914430367805,
+      "passed": false
+    },
+    {
+      "policy": "banded",
+      "cost_multiplier": 2,
+      "wins": 2,
+      "median_difference_pp": -0.6301358820799408,
+      "passed": false
+    }
+  ],
+  "accepted": false
+}

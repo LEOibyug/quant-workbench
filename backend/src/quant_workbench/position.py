@@ -33,6 +33,7 @@ class PositionConfig(BaseModel):
         "residual_reversal",
         "minimum_variance",
         "fixed_ensemble",
+        "macro_overlay",
         "trend_reversal",
         "smoothed_ensemble",
         "adaptive_specialist",

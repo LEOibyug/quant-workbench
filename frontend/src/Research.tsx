@@ -11,7 +11,7 @@ import {
   observeOperation,
   type ProgressState,
 } from "./ProgressNotice";
-import { strategyNames } from "./types";
+import { parseSymbols, strategyNames } from "./types";
 import type { Dataset, Experiment } from "./types";
 const tomorrow = (day: string) =>
   new Date(Date.parse(day) + 86400000).toISOString().slice(0, 10);
@@ -348,9 +348,7 @@ export function Research() {
                   {
                     provider,
                     timeframe: downloadTimeframe,
-                    symbols: String(f.get("symbols"))
-                      .split(",")
-                      .map((x) => x.trim().toUpperCase()),
+                    symbols: parseSymbols(String(f.get("symbols") ?? "")).symbols,
                     start: f.get("start"),
                     end: f.get("end"),
                     feed: f.get("feed") || "iex",
@@ -454,7 +452,7 @@ export function Research() {
                 <select name="strategy" defaultValue="regime_adaptive" onChange={(e) => {
                   if (["ou_reversion", "ou_scaling", "kalman_trend", "bayesian_session"].includes(e.target.value)) setEnabled(false);
                 }}>
-                  {Object.entries(strategyNames).filter(([k]) => !["cross_momentum", "channel_trend", "residual_reversal", "minimum_variance", "fixed_ensemble", "trend_reversal", "smoothed_ensemble", "adaptive_specialist", "synthetic_regime", "generated_policy", "pattern_policy", "spectral_rules"].includes(k)).map(([k, v]) => (
+                  {Object.entries(strategyNames).filter(([k]) => !["cross_momentum", "channel_trend", "residual_reversal", "minimum_variance", "fixed_ensemble", "macro_overlay", "trend_reversal", "smoothed_ensemble", "adaptive_specialist", "synthetic_regime", "generated_policy", "pattern_policy", "spectral_rules"].includes(k)).map(([k, v]) => (
                     <option key={k} value={k}>
                       {v}
                     </option>

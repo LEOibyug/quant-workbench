@@ -12,6 +12,7 @@ MODELS = {
     "residual_reversal",
     "minimum_variance",
     "fixed_ensemble",
+    "macro_overlay",
     "trend_reversal",
     "smoothed_ensemble",
     "adaptive_specialist",
@@ -74,7 +75,22 @@ def rule_forecasts(daily, config):
         reversal_weights = weights(np.where(z < -1, -z, 0), vol)
         method = config.model
         status = "ok"
-        if method == "smoothed_ensemble":
+        index_level = float(np.exp(logs[i].mean()))
+        if i >= 200:
+            index_history = np.exp(logs[i - 199 : i + 1].mean(axis=1))
+            trend_state = float(index_level > float(index_history.mean()))
+            stock_ma = np.exp(logs[i - 199 : i + 1].mean(axis=0))
+            breadth = float(np.mean(prices[i] > stock_ma))
+            macro_scale = 0.25 + 0.75 * (trend_state + breadth) / 2
+        else:
+            trend_state = 1.0
+            breadth = 1.0
+            macro_scale = 1.0
+        if method == "macro_overlay":
+            target = (
+                momentum_weights + channel_weights + reversal_weights
+            ) / 3 * macro_scale
+        elif method == "smoothed_ensemble":
             raw_target = (momentum_weights + channel_weights + reversal_weights) / 3
             alpha = 1 - 2 ** (-1 / config.rebalance_days)
             smoothed_target = (
@@ -149,7 +165,7 @@ def rule_forecasts(daily, config):
         scale = min(1, 0.10 / max(annual_vol, 1e-12))
         target = target * scale
         for j, symbol in enumerate(symbols):
-            forecasts[(str(closes.index[i]), symbol)] = dict(
+            forecast = dict(
                 target_weight=float(target[j]),
                 volatility=float(vol[j]),
                 momentum_score=float(momentum[j]),
@@ -158,6 +174,13 @@ def rule_forecasts(daily, config):
                 risk_scale=float(scale),
                 status=status,
             )
+            if method == "macro_overlay":
+                forecast.update(
+                    macro_scale=float(macro_scale),
+                    macro_trend_state=float(trend_state),
+                    macro_breadth=float(breadth),
+                )
+            forecasts[(str(closes.index[i]), symbol)] = forecast
             if method == "generated_policy":
                 forecasts[(str(closes.index[i]), symbol)].update(
                     cash_probability=float(probabilities[j, 0]),

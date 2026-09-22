@@ -1,4 +1,15 @@
 export type Phase = "train" | "validation" | "test";
+/** Must match MAX_SYMBOLS in backend/src/quant_workbench/market_data.py. */
+export const MAX_SYMBOLS = 200;
+export const SYMBOL_PATTERN = /^[A-Z][A-Z0-9.\-]{0,14}$/;
+
+/** Uppercase, de-duplicate and validate a comma/space separated symbol entry. */
+export function parseSymbols(text: string): { symbols: string[]; invalid: string[] } {
+  const tokens = text.split(/[\s,;]+/).map((part) => part.trim().toUpperCase()).filter(Boolean);
+  const symbols = [...new Set(tokens)];
+  return { symbols, invalid: symbols.filter((s) => !SYMBOL_PATTERN.test(s)) };
+}
+
 export const phaseNames = {
   train: "开发",
   validation: "验证",
@@ -17,6 +28,7 @@ export const strategyNames: Record<string, string> = {
   smoothed_ensemble: "三策略组合 · 调仓周期平滑",
   trend_reversal: "趋势内回调组合 · 动量与残差",
   fixed_ensemble: "固定三策略组合",
+  macro_overlay: "宏观状态叠加 · 趋势与市场广度",
   trend: "统计趋势 + 波动率仓位",
   bayesian: "贝叶斯多日收益回归",
   equal_weight: "等权分批再平衡（无预测模型）",
